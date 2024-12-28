@@ -1,0 +1,119 @@
+// import { Container, Heading } from "../feature";
+// import WhatMakeUsSpecial from "../common/WhatMakeUsSpecial";
+
+import { Container } from "@/components/Feature/Container/Container";
+import { Heading } from "@/components/Feature/Heading/Heading";
+import './whatmakeusspecial.css'
+
+const WhatMakeUsSpecialHome = () => {
+  return (
+    <>
+      <Container className="main">
+        <div className="aboutUsSection-background">
+          {/* <img src='/images/home' alt="background" /> */}
+          {/* <img src={assets.home.aboutRightBackground} alt="background" /> */}
+        </div>
+      </Container>
+      <Container className="main margins">
+        <div className="mainSpecialImgs">
+          <div className="specialImgs">
+            <Heading className="primary">Our awards</Heading>
+            <br />
+            <br />
+            <div>
+              <img
+                src='/images/home/clutch.png'
+                alt="heroImage"
+                data-aos="fade-up"
+                data-aos-duration={`600`}
+              />
+              <img
+                src='/images/home/computervision.png'
+                alt="heroImage"
+                data-aos="fade-up"
+                data-aos-duration={`600`}
+              />
+              <img
+                src='/images/home/clutch.png'
+                alt="heroImage"
+                data-aos="fade-up"
+                data-aos-duration={`600`}
+              />
+              <img
+                src='/images/home/aicompany.png'
+                alt="heroImage"
+                data-aos="fade-up"
+                data-aos-duration={`600`}
+              />
+              <img
+                src='/images/home/clutch.png'
+                alt="heroImage"
+                data-aos="fade-up"
+                data-aos-duration={`600`}
+              />
+            </div>
+          </div>
+          <div className="specialImgs1">
+            <Heading className="primary">Our partnerships</Heading>
+            <br />
+            <br />
+            <br />
+            <div>
+              <img
+                src='/images/home/Partnership1.svg'
+                alt="heroImage"
+                data-aos="fade-up"
+                data-aos-duration={`600`}
+              />
+              <img
+                src='/images/home/Partnership2.svg'
+                alt="heroImage"
+                data-aos="fade-up"
+                data-aos-duration={`600`}
+              />
+              <img
+                src='/images/home/Partnership3.svg'
+                alt="heroImage"
+                data-aos="fade-up"
+                data-aos-duration={`600`}
+              />
+              <img
+                src='/images/home/Partnership4.svg'
+                alt="heroImage"
+                data-aos="fade-up"
+                data-aos-duration={`600`}
+              />
+              <img
+                src='/images/home/Partnership5.svg'
+                alt="heroImage"
+                data-aos="fade-up"
+                data-aos-duration={`600`}
+              />
+              <img
+                src='/images/home/Partnership6.svg'
+                alt="heroImage"
+                data-aos="fade-up"
+                data-aos-duration={`600`}
+              />
+              <img
+                style={{ width: "50px" }}
+                src='/images/home/Partnership7.svg'
+                alt="heroImage"
+                data-aos="fade-up"
+                data-aos-duration={`600`}
+              />
+              <img
+                src='/images/home/Partnership8.svg'
+                alt="heroImage"
+                data-aos="fade-up"
+                data-aos-duration={`600`}
+              />
+            </div>
+          </div>
+        </div>
+      </Container>
+    </>
+  );
+};
+
+export default WhatMakeUsSpecialHome;

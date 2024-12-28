@@ -1,0 +1,128 @@
+.forminput {
+  margin-top: 2.4rem;
+}
+.forminput > label {
+  font-size: 1.45rem;
+  font-weight: 500;
+  display: block;
+}
+.forminput > input {
+  margin-top: 0.8rem;
+  font-size: 1.6rem;
+  font-weight: 400;
+  padding-left: 1.2rem;
+  padding-top: 1.4rem;
+  padding-bottom: 1.4rem;
+  border: 1px solid rgba(255, 255, 255, 0.479);
+  background-color: transparent;
+  border-radius: 0.7rem;
+  width: 100%;
+  color: #fff;
+}
+.forminput > input:focus {
+  outline: none;
+}
+.forminput > div {
+  margin-top: 0.6rem;
+  color: #ff000096;
+  font-size: 1.4rem;
+}
+
+.formInputWithDropDown > section {
+  margin-top: 2.4rem;
+}
+.formInputWithDropDown > section > label {
+  font-size: 1.45rem;
+  font-weight: 500;
+  display: block;
+}
+.formInputWithDropDown > section > div {
+  margin-top: 0.8rem;
+  border: 1px solid rgba(255, 255, 255, 0.479);
+  padding: 1.4rem 1.2rem;
+  border-radius: 0.7rem;
+  display: flex;
+  align-items: center;
+}
+.formInputWithDropDown > section > div > input {
+  width: 100%;
+  background-color: transparent;
+  font-size: 1.6rem;
+  border: none;
+  color: #fff;
+}
+.formInputWithDropDown > section > div > input:focus {
+  outline: none;
+}
+.formInputWithDropDown > section > div > div {
+  display: flex;
+  align-items: center;
+}
+.formInputWithDropDown > section > div > div > * {
+  cursor: pointer;
+  font-size: 2rem;
+  color: #ffffff7a;
+}
+.formInputWithDropDown > section > blockquote > div {
+  margin-top: 0.8rem;
+  color: #ff000096;
+  font-size: 1.4rem;
+}
+.formInputWithDropDown > div {
+  background-color: #1b1b1b;
+  border: 1px solid rgba(122, 122, 122, 0.877);
+  width: 100%;
+  border-radius: 0.6rem;
+  margin-top: 0.5rem;
+  position: absolute;
+  z-index: 10000;
+}
+.formInputWithDropDown > div > ul {
+  list-style: none;
+  padding: 1rem 2rem;
+}
+.formInputWithDropDown > div > ul > *:not(:last-child) {
+  margin-bottom: 1rem;
+}
+.formInputWithDropDown > div > ul > li {
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 2.84rem;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+.formInputWithDropDown > div > center {
+  margin: 5rem 0rem;
+}
+
+.formtextArea {
+  margin-top: 2.4rem;
+  z-index: -1000000;
+}
+.formtextArea > label {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+.formtextArea > textarea {
+  margin-top: 0.8rem;
+  font-size: 1.6rem;
+  font-weight: 400;
+  padding-left: 1.2rem;
+  padding-top: 1.4rem;
+  padding-bottom: 1.4rem;
+  border: 1px solid rgba(255, 255, 255, 0.479);
+  background-color: transparent;
+  border-radius: 0.7rem;
+  width: 100%;
+  font-family: Outfit;
+  color: #fff;
+  resize: vertical;
+}
+.formtextArea > textarea:focus {
+  outline: none;
+}
+.formtextArea > div {
+  margin-top: 0.6rem;
+  color: #ff000096;
+  font-size: 1.4rem;
+}

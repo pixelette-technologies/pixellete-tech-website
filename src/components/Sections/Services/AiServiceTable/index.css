@@ -1,0 +1,160 @@
+.AiServiceTable{
+  display: flex;
+  margin-top: 10rem;
+  gap: 1rem;
+}
+
+
+.AiServiceTable table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.AiServiceTable th {
+  padding: 15px;
+  text-align: center;
+  font-size: 19px;
+}
+.AiServiceTable tr {
+  height: 60px;
+}
+.AiServiceTable td {
+  padding: 15px;
+  text-align: center;
+  font-size: 18px;
+}
+.AiServiceTable th {
+  background-color: transparent;
+  /* color: #fff; */
+}
+.AiServiceTable td {
+  background-color: #0F0F0FB2;
+  /* border: 1px solid white; */
+  color: #fff;
+}
+@media screen and (max-width: 900px) {
+  .AiServiceTable table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  .AiServiceTable th {
+    padding: 0px;
+    text-align: center;
+    font-size: 14px;
+  }
+  .AiServiceTable tr {
+    height: 60px;
+  }
+  .AiServiceTable td {
+    padding: 0px;
+    text-align: center;
+    font-size: 12px;
+  }
+  .AiServiceTable th {
+    background-color: transparent;
+    /* color: #fff; */
+  }
+  .AiServiceTable td {
+    background-color: #0F0F0FB2;
+    /* border: 1px solid white; */
+    color: #fff;
+  }
+  .AiServiceTable td button{
+    font-size: 10px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .AiServiceTable table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  .AiServiceTable th {
+    padding: 0px;
+    text-align: center;
+    font-size: 11px;
+  }
+  .AiServiceTable tr {
+    height: 50px;
+  }
+  .AiServiceTable td {
+    padding: 0px;
+    text-align: center;
+    font-size: 10px;
+  }
+  .AiServiceTable th {
+    background-color: transparent;
+    /* color: #fff; */
+  }
+  .AiServiceTable td {
+    background-color: #0F0F0FB2;
+    /* border: 1px solid white; */
+    color: #fff;
+  }
+  .AiServiceTable td button{
+    font-size: 9px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .AiServiceTable table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  .AiServiceTable th {
+    padding: 0px;
+    text-align: center;
+    font-size: 10px;
+  }
+  .AiServiceTable tr {
+    height: 40px;
+  }
+  .AiServiceTable td {
+    padding: 0px;
+    text-align: center;
+    font-size: 8px;
+  }
+  .AiServiceTable th {
+    background-color: transparent;
+    /* color: #fff; */
+  }
+  .AiServiceTable td {
+    background-color: #0F0F0FB2;
+    /* border: 1px solid white; */
+    color: #fff;
+  }
+  .AiServiceTable td button{
+    font-size: 7px;
+  }
+}
+
+.AiServiceTable{
+  display: flex;
+  margin-top: 10rem;
+  gap: 1rem;
+}
+
+
+.AiServiceTable table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.AiServiceTable th {
+  padding: 15px;
+  text-align: center;
+  font-size: 19px;
+}
+.AiServiceTable tr {
+  height: 60px;
+}
+.AiServiceTable td {
+  padding: 15px;
+  text-align: center;
+  font-size: 18px;
+}
+.AiServiceTable th {
+  background-color: transparent;
+  /* color: #fff; */
+}
+.AiServiceTable td {
+  background-color: #0F0F0FB2;
+  /* border: 1px solid white; */
+  color: #fff;
+}

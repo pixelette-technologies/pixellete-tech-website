@@ -1,0 +1,56 @@
+.partners {
+  margin-top: 12rem;
+}
+@media only screen and (max-width: 50em) {
+  .partners {
+    margin-top: 8rem;
+  }
+}
+.partners > div > center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  padding-bottom: 4.8rem;
+}
+.partners > div > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  padding-left: 11rem;
+  padding-right: 11rem;
+}
+.partners-image {
+  margin: 0rem 3rem;
+}
+
+.partners-scroll-container {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+.partners-scroll {
+  display: flex;
+  gap: 20px; /* Space between logos */
+  animation: scroll 20s linear infinite;
+}
+
+.partners-image {
+  flex-shrink: 0;
+  width: 120px; /* Adjust logo size as needed */
+}
+
+.partners-image img {
+  width: 100%;
+  height: auto;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}

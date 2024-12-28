@@ -1,0 +1,16 @@
+@media screen and (max-width: 600px) {
+  /* .teckStackText{
+    font-size: 30px;
+  } */
+  .teckStackText{
+    color: #2181E3;
+    font-size: 6px;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .teckStackText{
+    font-size: 16px;
+    color: #2181E3;
+  }
+}

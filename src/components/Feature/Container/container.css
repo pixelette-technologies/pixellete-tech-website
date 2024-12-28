@@ -1,0 +1,55 @@
+.container {
+  width: 100%;
+}
+@media only screen and (min-width: 87em) {
+  .container-main {
+    max-width: 160rem;
+    margin: auto;
+  }
+}
+.margins {
+  padding: 2rem 12rem;
+}
+@media only screen and (max-width: 78.125em) {
+  .margins {
+    padding: 0rem 10rem;
+  }
+}
+@media only screen and (max-width: 62.6em) {
+  .margins {
+    padding: 0rem 8rem;
+  }
+}
+@media only screen and (max-width: 50em) {
+  .margins {
+    padding: 0rem 5rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .margins {
+    padding: 0rem 2rem;
+  }
+}
+.margins {
+  padding: 2rem 12rem;
+}
+@media only screen and (max-width: 78.125em) {
+  .margins {
+    padding: 0rem 10rem;
+  }
+}
+@media only screen and (max-width: 62.6em) {
+  .margins {
+    padding: 0rem 8rem;
+  }
+}
+@media only screen and (max-width: 50em) {
+  .margins {
+    padding: 0rem 5rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .margins {
+    padding: 0rem 2rem;
+  }
+}

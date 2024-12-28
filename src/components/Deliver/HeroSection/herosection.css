@@ -1,0 +1,164 @@
+.heroSectionAiServices {
+  margin-top: 1rem;
+}
+#heroSectionAiServices {
+  margin-top: -10rem;
+}
+.heroSectionAiServices-background {
+  position: relative;
+}
+.heroSectionAiServices-background > img {
+  position: absolute;
+  margin-top: -12rem;
+  width: 100%;
+  z-index: -100;
+}
+@media only screen and (max-width: 37.5em) {
+  .heroSectionAiServices-background > img {
+    margin-top: -10rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .heroSectionAiServices {
+    margin-top: 9rem;
+    padding: 0rem 1rem;
+  }
+}
+.heroSectionAiServices > div {
+  position: relative;
+}
+.heroSectionAiServices > div > blockquote {
+  width: 100%;
+}
+.heroSectionAiServices > div > blockquote > img {
+  position: absolute;
+  z-index: -100;
+}
+.heroSectionAiServices > div > blockquote > *:first-child {
+  margin-top: 10rem;
+  top: -4rem;
+  margin-left: 7rem;
+  animation: rotateOpposite 18s linear infinite;
+}
+@media only screen and (max-width: 37.5em) {
+  .heroSectionAiServices > div > blockquote > *:first-child {
+    margin-left: 3rem;
+    height: 10rem;
+    margin-top: -3rem;
+  }
+}
+.heroSectionAiServices > div > blockquote > *:nth-child(2) {
+  top: 32rem;
+  margin-left: 6rem;
+  animation: rotateOpposite 15s linear infinite;
+}
+@media only screen and (max-width: 37.5em) {
+  .heroSectionAiServices > div > blockquote > *:nth-child(2) {
+    margin-left: 4rem;
+    height: 8rem;
+  }
+}
+.heroSectionAiServices > div > blockquote > *:nth-child(3) {
+  margin-top: 10rem;
+  right: 15rem;
+  animation: rotateOpposite 28s linear infinite;
+}
+@media only screen and (max-width: 37.5em) {
+  .heroSectionAiServices > div > blockquote > *:nth-child(3) {
+    height: 15rem;
+    right: 8rem;
+    top: -3rem;
+  }
+}
+.heroSectionAiServices > div > blockquote > *:nth-child(4) {
+  top: 37rem;
+  right: 20rem;
+  animation: rotateOpposite 20s linear infinite;
+}
+@media only screen and (max-width: 37.5em) {
+  .heroSectionAiServices > div > blockquote > *:nth-child(4) {
+    right: 7rem;
+  }
+}
+.heroSectionAiServices > div > center {
+  padding-top: 10rem;
+  max-width: 81rem;
+  margin: auto;
+}
+.heroSectionAiServices > div > center > p {
+  margin-top: 2.4rem;
+  margin-bottom: 3.2rem;
+}
+.heroSectionAiServices-background {
+  flex: 1;
+}
+.heroSectionAiServices-background {
+  position: relative;
+}
+.heroSectionAiServices-background > img {
+  position: absolute;
+  margin-top: -12rem;
+  width: 100%;
+  z-index: -100;
+}
+@media only screen and (max-width: 37.5em) {
+  .heroSectionAiServices-background > img {
+    margin-top: -10rem;
+  }
+}
+
+.deliverHeroCard {
+  display: flex;
+  align-items: center;
+  background-color: #1e2b69;
+  padding: 40px 20px 40px 40px;
+  border-radius: 20px;
+  margin-top: 7rem;
+  justify-content: space-between;
+}
+.deliverHeroCard > section {
+  width: 50%;
+}
+.deliverHeroCard > section > h1 {
+  font-size: 45px;
+  font-weight: 600;
+}
+.deliverHeroCard > section > p {
+  font-size: 18px;
+  margin-top: 20px;
+  color: rgb(184, 184, 184);
+}
+.deliverHeroCard > img {
+  width: 450px;
+  height: 450px;
+}
+
+@media only screen and (max-width: 1024px) {
+  .deliverHeroCard > img {
+    width: 50%;
+    height: 50%;
+  }
+  .deliverHeroCard > section > h1 {
+    font-size: 35px;
+  }
+  .deliverHeroCard > section > p {
+    font-size: 15px;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .deliverHeroCard {
+    padding: 10px;
+    flex-direction: column-reverse;
+  }
+  .deliverHeroCard > section > h1 {
+    font-size: 30px;
+  }
+  .deliverHeroCard > section > p {
+    font-size: 15px;
+    margin: 5px 0;
+  }
+  .deliverHeroCard > section {
+    width: 100%;
+  }
+}

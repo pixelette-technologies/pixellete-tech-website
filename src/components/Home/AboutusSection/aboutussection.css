@@ -1,0 +1,205 @@
+.aboutUsSection {
+  margin-bottom: 12rem;
+}
+
+.aboutUsSection-background {
+  position: relative;
+}
+
+.aboutUsSection-background > *:first-child {
+  position: absolute;
+  height: 352.3rem;
+  margin-top: -85rem;
+  z-index: -100;
+  width: 100%;
+}
+
+.aboutUsSection-background > *:last-child {
+  position: absolute;
+  right: 1px;
+  height: 240.3rem;
+  margin-top: -36rem;
+  z-index: -100;
+  width: 100%;
+}
+
+.aboutUsSection > div > center {
+  margin: auto;
+  max-width: 80rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.aboutUsSection > div > center > p {
+  padding: 1.6rem 0rem;
+}
+
+.aboutUsSection > div > center > a > button {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.aboutUsSection > div > section {
+  border-radius: 2rem;
+  padding: 2.9rem 4.1rem;
+  margin-top: 4.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.aboutUsSection > div > section > *:first-child {
+  width: 72rem;
+}
+
+.aboutUsSection > div > section > *:first-child > h1 {
+  margin-bottom: 1rem;
+}
+
+.aboutUsSection > div > section > *:last-child {
+  background-color: #0f0f0fb3;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 20px;
+  width: 50rem;
+  display: grid;
+  margin: 0 auto;
+  justify-content: center;
+  grid-template-columns: auto auto;
+  gap: 5rem;
+}
+
+/* Center the section within the last-child */
+.aboutUsSection > div > section > *:last-child > section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.aboutUsSection > div > section > *:last-child > section > h1,
+.aboutUsSection > div > section > *:last-child > div > h1 {
+  font-size: 4.5rem;
+  line-height: 6.5rem;
+  font-weight: 700;
+  margin-right: 0.8rem;
+}
+
+.aboutUsSection > div > section > *:last-child > section > div > p,
+.aboutUsSection > div > section > *:last-child > div > div > p {
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+.aboutUsSection > div > section > *:last-child > div {
+  width: 17rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 800px) {
+  .aboutUsSection-background > *:first-child {
+    margin-top: -140rem;
+  }
+
+  .aboutUsSection-background > *:last-child {
+    margin-top: -40rem;
+  }
+
+  .aboutUsSection > div > section {
+    flex-direction: column;
+    margin-top: 7rem;
+    margin-bottom: 6rem;
+  }
+
+  .aboutUsSection > div > section > *:first-child {
+    width: 100%;
+    margin-bottom: 4rem;
+  }
+
+  .aboutUsSection > div > section > *:last-child {
+    width: 100%;
+    gap: 1.5rem;
+  }
+
+  .aboutUsSection > div > section > *:last-child > section > h1,
+  .aboutUsSection > div > section > *:last-child > div > h1 {
+    font-size: 4rem; /* Adjust font size for mobile */
+    line-height: 5.2rem;
+  }
+
+  .aboutUsSection > div > section > *:last-child > section > div > p,
+  .aboutUsSection > div > section > *:last-child > div > div > p {
+    font-size: 1.4rem; /* Adjust font size for mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .aboutUsSection > div > section > *:last-child > section > h1,
+  .aboutUsSection > div > section > *:last-child > div > h1 {
+    font-size: 3.5rem; /* Further adjust font size for smaller screens */
+    line-height: 4.5rem;
+  }
+
+  .aboutUsSection > div > section > *:last-child > section > div > p,
+  .aboutUsSection > div > section > *:last-child > div > div > p {
+    font-size: 1.2rem; /* Further adjust font size for smaller screens */
+  }
+}
+
+/* Base container styling */
+.scottland-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1rem;
+}
+
+/* Section layout for larger screens */
+.scottland-section {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 2rem;
+}
+
+/* Responsive text container */
+.scottland-text {
+  width: 40%;
+}
+
+/* Adjustments for smaller screens */
+@media screen and (max-width: 1024px) {
+  .scottland-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .scottland-text {
+    width: 100%;
+  }
+}
+
+/* Additional tweaks for very small screens */
+@media screen and (max-width: 600px) {
+  .scottland-container {
+    gap: 1rem;
+  }
+
+  .scottland-section {
+    gap: 1rem;
+  }
+
+  img {
+    max-width: 80%; /* Ensure images scale well */
+    height: 80px;
+    margin: 0 auto;
+  }
+
+  .scottland-text {
+    font-size: 0.9rem; /* Adjust font size for smaller screens */
+  }
+}

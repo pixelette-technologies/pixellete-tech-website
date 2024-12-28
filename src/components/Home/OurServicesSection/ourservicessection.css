@@ -1,0 +1,100 @@
+/* .ourServices > div {
+  position: relative;
+}
+.ourServices > div > blockquote {
+  width: 100%;
+}
+.ourServices > div > blockquote > img {
+  position: absolute;
+  z-index: -100;
+}
+.ourServices > div > blockquote > *:first-child {
+  right: 2rem;
+  margin-top: 33rem;
+  height: 19.5rem;
+  width: 18rem;
+}
+@media only screen and (max-width: 37.5em) {
+  .ourServices > div > blockquote > *:first-child {
+    right: 5rem;
+    width: 16rem;
+    margin-right: 3rem;
+  }
+}
+.ourServices > div > blockquote > *:last-child {
+  left: -1px;
+  margin-top: 10rem;
+  height: 50rem;
+} */
+
+
+
+
+.technologyStack {
+  margin-top: 12rem;
+}
+@media only screen and (max-width: 37.5em) {
+  .technologyStack {
+    margin-top: 9rem;
+  }
+}
+.technologyStack > center {
+  max-width: 82rem;
+  margin: auto;
+}
+@media only screen and (max-width: 50em) {
+  .technologyStack > center {
+    padding: 0rem 2rem;
+  }
+}
+.technologyStack > center > h1 {
+  padding-bottom: 1.6rem;
+}
+.technologyStack > div > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 4.8rem;
+  justify-content: center;
+  transition: 0.5s ease-in-out;
+}
+.technologyStack > div > div > div {
+  width: 17%;
+  margin: 0rem 0.5rem;
+  background-color: #1f2123b2;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2.5rem 2.2rem;
+  border-radius: 1rem;
+}
+.technologyStack > div > div > div > img {
+  width: 80%;
+  height: 4.5rem;
+  transition: 0.3s ease-in-out;
+}
+.award-section {
+  gap: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+@media only screen and (max-width: 37.5em) {
+  .technologyStack > div > div > div > img {
+    width: 90%;
+  }
+}
+.technologyStack > div > div > div:hover {
+  outline: 0.1rem solid rgba(255, 255, 255, 0.288);
+  transform: scale(1.05) translateY(-0.5rem);
+  box-shadow: 0 0.4rem 7rem #e2e2e233;
+  z-index: 20;
+}
+.technologyStack > div > div > div:hover > img {
+  transform: scale(1.05) translateY(-0.5rem);
+}
+@media only screen and (max-width: 37.5em) {
+  .technologyStack > div > div > div {
+    flex: 1 0 calc(48% - 2rem);
+  }
+}

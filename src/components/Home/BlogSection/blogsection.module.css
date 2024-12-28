@@ -1,0 +1,95 @@
+.blogSection {
+  margin-top: 12rem;
+}
+@media only screen and (max-width: 37.5em) {
+  .blogSection {
+    margin-top: 10rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .blogSection > section > div {
+    padding: 0rem 2rem;
+  }
+}
+.blogSection > section > div > blockquote {
+  position: relative;
+}
+.blogSection > section > div > blockquote > img {
+  z-index: -100;
+  position: absolute;
+}
+.blogSection > section > div > blockquote > *:first-child {
+  margin-top: 40rem;
+}
+.blogSection > section > div > blockquote > *:last-child {
+  margin-top: 35rem;
+  right: 1rem;
+}
+.blogSection > section > div > center {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 70rem;
+  margin: auto;
+  padding-bottom: 10rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .blogSection > section > div > center {
+    width: 90%; /* Adjust width for medium screens */
+    padding-bottom: 8rem;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .blogSection > section > div > center {
+    width: 100%; /* Full width for small screens */
+    padding-bottom: 5rem;
+  }
+}
+
+.blogSection > section > div > center > a > button {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.blogSection > section > div > center > p {
+  margin-top: 1.2rem;
+  margin-bottom: 1.6rem;
+}
+.blogSection > section > div > p {
+  max-width: 75rem;
+  text-align: center;
+  margin: auto;
+  padding-bottom: 10rem;
+}
+@media only screen and (max-width: 50em) {
+  .blogSection > section > div > p {
+    padding-bottom: 4rem;
+  }
+}
+.blogSection-mobile {
+  display: none;
+}
+@media only screen and (max-width: 50em) {
+  .blogSection-mobile {
+    display: block;
+  }
+}
+.blogSection-mobile > section {
+  padding: 0rem 3rem;
+}
+.blogSection-mobile > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3rem;
+  margin-bottom: 4rem;
+}
+.blogSection-mobile > div > img {
+  height: 5.6rem;
+  width: 9.4rem;
+  cursor: pointer;
+}
+.blogSection-mobile > div > *:first-child {
+  margin-right: 1rem;
+}

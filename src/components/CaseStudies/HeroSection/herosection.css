@@ -1,0 +1,89 @@
+.heroSection-mobile > div {
+  position: relative;
+  margin-bottom: 10rem;
+}
+.heroSection-mobile > div > blockquote {
+  width: 100%;
+}
+.heroSection-mobile > div > blockquote > img {
+  position: absolute;
+  z-index: -80;
+}
+.heroSection-mobile > div > blockquote > *:first-child {
+  top: 3rem;
+  left: 18rem;
+  height: 12rem;
+  animation: rotateOpposite 15s linear infinite;
+}
+@media only screen and (max-width: 37.5em) {
+  .heroSection-mobile > div > blockquote > *:first-child {
+    left: 5rem;
+    height: 11rem;
+    margin-top: -3rem;
+  }
+}
+.heroSection-mobile > div > blockquote > *:nth-child(2) {
+  top: 40rem;
+  left: 20rem;
+  height: 9rem;
+  animation: rotateOpposite 13s linear infinite;
+}
+@media only screen and (max-width: 37.5em) {
+  .heroSection-mobile > div > blockquote > *:nth-child(2) {
+    left: 4rem;
+    height: 8rem;
+    top: 50rem;
+  }
+}
+.heroSection-mobile > div > blockquote > *:nth-child(3) {
+  top: 6rem;
+  right: 20rem;
+  height: 10rem;
+  animation: rotateOpposite 35s linear infinite;
+}
+@media only screen and (max-width: 37.5em) {
+  .heroSection-mobile > div > blockquote > *:nth-child(3) {
+    right: 4rem;
+    height: 12rem;
+  }
+}
+.heroSection-mobile > div > blockquote > *:nth-child(4) {
+  top: 42rem;
+  right: 20rem;
+  height: 9rem;
+  animation: rotateOpposite 12s linear infinite;
+}
+@media only screen and (max-width: 37.5em) {
+  .heroSection-mobile > div > blockquote > *:nth-child(4) {
+    right: 4rem;
+    top: 50rem;
+  }
+}
+.heroSection-mobile > div > center {
+  padding-top: 10rem;
+  max-width: 82rem;
+  margin: auto;
+  text-align: center;
+}
+@media only screen and (max-width: 37.5em) {
+  .heroSection-mobile > div > center {
+    padding-top: 9rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+.heroSection-mobile > div > center > h1 {
+  margin-bottom: 2.4rem;
+}
+.heroSection-mobile > div > center > a > button {
+  margin-top: 3.2rem;
+}
+.heroSection-mobile-background {
+  position: relative;
+}
+.heroSection-mobile-background > img {
+  position: absolute;
+  z-index: -70;
+  width: 100%;
+  margin-top: -12rem;
+}

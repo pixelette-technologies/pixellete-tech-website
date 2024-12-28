@@ -1,0 +1,118 @@
+.heroSectionResearch-background > img {
+  position: absolute;
+  margin-top: -12rem;
+  width: 100%;
+  z-index: -100;
+}
+
+.heroSectionResearch > center {
+  padding-top: 10rem;
+  padding-bottom: 8rem;
+  max-width: 81rem;
+  margin: auto;
+  text-align: center;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .heroSectionResearch > center {
+    padding-top: 9rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+.heroSectionResearch > center > h1 {
+  margin-bottom: 1.6rem;
+}
+
+.heroSectionResearch > div > div {
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap to the next line */
+  gap: 2rem;
+}
+
+.heroSectionResearch > div > div > .content {
+  display: flex;
+  flex-direction: column;
+  flex: 1; /* Grow to fill available space */
+  gap: 2rem;
+  z-index: 1;
+  position: relative;
+}
+
+.heroSectionResearch > div > div > .globe-container {
+  flex: 1; /* Take up equal space as the other flex item */
+}
+
+.heroSectionResearch > div > div > .description {
+  flex: 1; /* Take up equal space as the other flex item */
+  /* Other styles for the description section */
+}
+
+.heroSectionResearch > div > div > .content > .description {
+  flex: 1;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  overflow-y: auto;
+  max-height: 500px;
+}
+
+.heroSectionResearch > div > section {
+  margin-top: 14rem;
+}
+
+.heroSectionResearch > div > section > h1 {
+  margin-bottom: 4.8rem;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .heroSectionResearch > div > section {
+    margin-top: 7rem;
+  }
+  .heroSectionResearch > div > section > h1 {
+    margin-bottom: 3rem;
+  }
+}
+
+.heroSectionResearch > div > section > div {
+  max-width: 100%;
+  background-color: #0f0f0fb3;
+  display: flex;
+  align-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1.5rem;
+  overflow: hidden;
+  height: 200px;
+}
+
+.heroSectionResearch > div > section > div > div {
+  width: 70%;
+  padding: 2.4rem;
+}
+
+@media only screen and (max-width: 33.75em) {
+  .heroSectionResearch > div > section > div > div {
+    width: 100%;
+  }
+}
+
+.heroSectionResearch > div > section > div > div > p {
+  margin-bottom: 2.4rem;
+}
+
+.heroSectionResearch > div > section > div > div > button {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.heroSectionResearch > div > section > div > img {
+  display: block;
+  width: 100%;
+}
+
+@media only screen and (max-width: 33.75em) {
+  .heroSectionResearch > div > section > div > img {
+    display: none;
+  }
+}

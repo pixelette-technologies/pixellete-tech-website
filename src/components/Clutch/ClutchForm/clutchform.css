@@ -1,0 +1,59 @@
+.evaluateBussiness {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media screen and (max-width: 760px) {
+  .evaluateBussiness > * {
+    padding: 0 2%;
+  }
+  .evaluateBussiness {
+    margin-top: 2rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+  }
+  .unlockBussiness > div > section {
+    justify-content: center;
+  }
+}
+
+.evaluateBussiness > header {
+  max-width: 61.6rem;
+}
+.evaluateBussiness > header > h1 {
+  margin-bottom: 1.6rem;
+}
+.evaluateBussiness > div > div {
+  width: 55rem;
+}
+
+ul.custom-list {
+  list-style-type: none;
+  padding: 0;
+}
+ul.custom-list li {
+  padding-left: 5rem;
+  position: relative;
+  margin-bottom: 2rem;
+}
+ul.custom-list li::before {
+  content: "\2714"; /* Unicode for straight checkmark */
+  color: red;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 0.3rem;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  font-weight: bold;
+}
+.red-color {
+  color: #c90029;
+}

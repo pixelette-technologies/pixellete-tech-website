@@ -1,0 +1,41 @@
+.text-primary {
+  font-size: 2rem;
+  /* font-weight: 500; */
+  line-height: 3.4rem;
+  letter-spacing: 1px;
+}
+.text-primary--bold {
+  font-size: 2rem;
+  font-weight: 1000;
+  line-height: 2.6rem;
+  letter-spacing: 1px;
+}
+.text-secondry {
+  font-size: 2.2rem;
+  font-weight: 200;
+  line-height: 2.84rem;
+  letter-spacing: 1px;
+}
+.text-titory {
+  font-size: 2rem;
+  font-weight: 200;
+  line-height: 2.56rem;
+  padding: 0 1rem;
+  letter-spacing: 1px;
+  text-align: left;
+}
+.text-titory-link {
+  font-size: 2rem;
+  font-weight: 200;
+  line-height: 2.56rem;
+  padding: 0 1rem;
+  letter-spacing: 1px;
+  margin-top: 15px;
+  text-align: justify;
+}
+.text-titory--bold {
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 2.56rem;
+  letter-spacing: 1px;
+}

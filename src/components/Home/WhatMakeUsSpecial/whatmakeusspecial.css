@@ -1,0 +1,76 @@
+/* .specialHome-background {
+  position: relative;
+}
+.specialHome-background > img {
+  position: absolute;
+  right: 1px;
+  height: 240.3rem;
+  margin-top: -36rem;
+  z-index: -100;
+  width: 100%;
+}
+@media only screen and (max-width: 37.5em) {
+  .specialHome-background > img {
+    margin-top: -40rem;
+  }
+}
+.specialHome > div > blockquote {
+  position: relative;
+}
+.specialHome > div > blockquote > img {
+  position: absolute;
+  right: 0rem;
+  margin-top: 25rem;
+  z-index: -100;
+} */
+
+
+.mainSpecialImgs{
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+
+
+.specialImgs{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.specialImgs div{
+  display: flex;
+  width: 400px;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4rem;
+  /* grid-template-columns: repeat(3, 1fr); */
+
+  /* gap: 5rem; */
+}
+.specialImgs div img{
+  width: 100px;
+  border: 1px solid #FFFFFF33;
+  padding: 0.3rem;
+}
+
+.specialImgs1{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.specialImgs1 div{
+  display: flex;
+  width: 400px;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4rem;
+  /* grid-template-columns: repeat(3, 1fr); */
+  /* gap: 5rem; */
+}
+.specialImgs1 div img{
+  width: 100px;
+  padding: 0.3rem;
+}

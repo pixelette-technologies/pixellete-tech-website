@@ -1,0 +1,26 @@
+.blogsPage > center {
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+  max-width: 71rem;
+  margin: auto;
+  text-align: center;
+}
+@media only screen and (max-width: 50em) {
+  .blogsPage > center {
+    padding-top: 4rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+.blogsPage > center > h1 {
+  margin-bottom: 1.6rem;
+}
+.blogsPage-background {
+  position: relative;
+}
+.blogsPage-background > img {
+  position: absolute;
+  margin-top: -12rem;
+  width: 100%;
+  z-index: -100;
+}

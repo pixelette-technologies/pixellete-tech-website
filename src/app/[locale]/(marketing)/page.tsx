@@ -1,0 +1,68 @@
+import AboutUsSection from '@/components/Home/AboutusSection/AboutUsSection';
+import {CaseStudies} from '@/components/Home/CaseStudies/CaseStudies';
+import { HeroSection } from '@/components/Home/HeroSection/HeroSection';
+import { OurClients } from '@/components/Home/OurClients/OurClients';
+import OurServicesSection from '@/components/Home/OurServicesSection/OurServicesSection';
+import TechnologiesUsed from '@/components/Home/TechnologyUsed/TechnologiesUsed';
+import { Testimonial } from '@/components/Home/Testimonial/Testimonial';
+import WhatMakeUsSpecialHome from '@/components/Home/WhatMakeUsSpecial/WhatMakeUsSpecial';
+import { YourPlan } from '@/components/Home/YourPlan/YourPlan';
+import { EvaluateBusiness } from '@/components/Sections/EvaluateBusiness/EvaluateBusiness';
+import { OurTeam } from '@/components/Sections/OurTeam/OurTeam';
+import { Partner } from '@/components/Sections/Partner/Partner';
+import { UnlockBusinessPotential } from '@/components/Sections/UnlockBusinessPotential/UnlockBusinessPotential';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
+
+type IIndexProps = {
+  params: Promise<{ locale: string }>;
+};
+
+export async function generateMetadata(props: IIndexProps) {
+  const { locale } = await props.params;
+  const t = await getTranslations({
+    locale,
+    namespace: 'Index',
+  });
+
+  return {
+    title: t('meta_title'),
+    description: t('meta_description'),
+  };
+}
+
+export default async function Index(props: IIndexProps) {
+  const { locale } = await props.params;
+  setRequestLocale(locale);
+  const t = await getTranslations({
+    locale,
+    namespace: 'Index',
+  });
+
+  return (
+    <>
+      <HeroSection />
+      <OurClients />
+      <AboutUsSection />
+      <WhatMakeUsSpecialHome />
+      <OurServicesSection />
+      <YourPlan />
+      <TechnologiesUsed/>
+      <CaseStudies/>
+      {/* <CaseStudies /> this is working just need to uncomment */}
+      <Testimonial background='' />
+      <EvaluateBusiness/>
+      {/* <OurTeam /> */}
+      {/* <UnlockBusinessPotential
+        heading="Unlock Your Business Potential"
+        text="Ready to take your business to the next level? Discover how Pixelette Technologies can transform your vision into reality with our innovative tech solutions."
+        btnText="Book a Discovery Call"
+      /> */}
+      {/* <Partner /> */}
+      {/* <BlogSection
+        heading="The Pixelette Post"
+        text="Explore a world of insights through the Pixelette Post. Engage with expert opinions, groundbreaking ideas, and in-depth guides that empower and inspire. Dive into our content today."
+      /> */}
+
+    </>
+  );
+};

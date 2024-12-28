@@ -1,0 +1,32 @@
+.howWeWorkBg{
+  background-image: url('/images/aiServices/HowWeWorkBg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 90vh;
+  padding: 1rem;
+  align-items: center;
+  display: flex;
+}
+
+@media screen and (max-width: 450px) {
+  .howWeWorkTextAlign{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.HowWeWorkCards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+}
+.HowWeWorkCards > div {
+  width: 28rem;
+  padding: 2rem;
+  border-radius: 1.2rem;
+  background-color: #0f0f0fb3;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: 0.5s all;
+}

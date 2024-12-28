@@ -1,0 +1,60 @@
+.benifitsCard {
+  display: flex;
+  width: 85%;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  padding: 16px; /* Adjust padding as needed */
+  box-sizing: border-box;
+}
+
+.benifitsCard > div {
+  flex: 1;
+  min-width: 200px; /* Minimum width of each card item */
+  padding: 16px;
+  border-radius: 8px; /* Rounded corners for a softer look */
+}
+
+/* Styling for headers and paragraphs */
+.benifitsCard h1 {
+  font-size: 2em; /* Adjust font size as needed */
+  margin-bottom: 8px;
+}
+
+.benifitsCard p {
+  font-size: 1.3em; /* Adjust font size as needed */
+  color: #666; /* Text color */
+}
+.deliverBenifits {
+  margin: 100px 0;
+  background-color: #0f0f0fb2;
+  padding: 150px 0;
+}
+.benefit-line {
+  position: relative;
+  display: flex;
+}
+@media only screen and (max-width: 600px) {
+  .benefit-line {
+    position: relative;
+    display: none;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .benifitsCard {
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+    align-items: center;
+    gap: 10px;
+  }
+  .benifitsCard > div > h1 {
+    width: 100%;
+  }
+  .benifitsCard > div > p {
+    width: 100%;
+  }
+  .deliverBenifits {
+    background-color: #0f0f0fb2;
+    padding: 30px 0;
+  }
+}

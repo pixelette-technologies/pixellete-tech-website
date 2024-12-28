@@ -1,0 +1,73 @@
+.heading-primary {
+  font-size: 4rem;
+  font-weight: 600;
+  line-height: 4.6rem;
+  letter-spacing: 1px;
+}
+.heading-secondry {
+  font-size: 4.8rem;
+  font-weight: 700;
+  line-height: 6.2rem;
+  letter-spacing: 1px;
+}
+@media only screen and (max-width: 37.5em) {
+  .heading-secondry {
+    font-size: 4rem;
+    line-height: 4.3rem;
+  }
+}
+.heading-titory {
+  font-size: 3.2rem;
+  font-weight: 500;
+  line-height: 5.1rem;
+  letter-spacing: 1px;
+}
+.heading-titory--bold {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 5.1rem;
+  letter-spacing: 1px;
+}
+
+.heading-primary {
+  font-size: 4rem;
+  font-weight: 600;
+  line-height: 4.6rem;
+  letter-spacing: 1px;
+}
+.heading-secondry {
+  font-size: 4.8rem;
+  font-weight: 700;
+  line-height: 6.2rem;
+  letter-spacing: 1px;
+}
+@media only screen and (max-width: 37.5em) {
+  .heading-secondry {
+    font-size: 4rem;
+    line-height: 4.3rem;
+  }
+}
+.heading-titory {
+  font-size: 3.2rem;
+  font-weight: 500;
+  line-height: 5.1rem;
+  letter-spacing: 1px;
+}
+.heading-titory--bold {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 5.1rem;
+  letter-spacing: 1px;
+}
+.heading-blogCardHeading {
+  font-size: 2.6rem;
+  font-weight: 500;
+  line-height: 4rem;
+  letter-spacing: 1px;
+  /* added */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

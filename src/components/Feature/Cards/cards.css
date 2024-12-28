@@ -1,0 +1,297 @@
+.customerCard {
+  border: 1px solid rgb(255, 236, 199);
+  background-color: #2e2e2e;
+  padding: 2rem;
+  border-radius: 1rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.customerCard > img {
+  margin-bottom: 1.4rem;
+  margin-top: 1.8rem;
+  height: 9.4rem;
+  width: 9.4rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.customerCard > p {
+  line-height: 2.2rem;
+  color: #a2a2a2;
+}
+
+.new-service-top {
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+}
+.service-heading {
+  font-size: 5rem;
+  font-weight: 500;
+  line-height: 2.6rem;
+  letter-spacing: 1px;
+}
+.new-service-img {
+  height: 1.2%;
+}
+.new-servicecard {
+  padding-bottom: 3rem;
+  padding-top: 3rem;
+}
+
+.servicesCard {
+  padding: 2.4rem;
+  border-radius: 2rem;
+  background-color: #0f0f0fb3;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: 0.5s all;
+}
+.servicesCard:hover {
+  box-shadow:
+    0 4px 8px #0003,
+    0 6px 20px #00000030;
+}
+.servicesCard > div > *:nth-child(2) {
+  margin-top: 2.4rem;
+  margin-bottom: 1.6rem;
+}
+#servicesCard_id {
+  transition: 0.3s ease-in-out;
+}
+#servicesCard_id > img {
+  transition: 0.3s ease-in-out;
+}
+#servicesCard_id:hover {
+  transform: translateY(-1.2rem) scale(1.01);
+  outline: 0.1rem solid rgba(255, 255, 255, 0.288);
+  box-shadow: 0 0.4rem 7rem #e2e2e233;
+  z-index: 20;
+}
+#servicesCard_id:hover > img {
+  transform: scale(1.05) translateY(-0.5rem);
+}
+
+.swiperCard {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: #1f1e1e;
+  padding: 2rem;
+  width: 52.6rem;
+  border-radius: 2rem;
+  opacity: 1;
+  margin-left: -9rem;
+}
+@media only screen and (max-width: 62.6em) {
+  .swiperCard {
+    margin-left: -13rem;
+  }
+}
+.swiperCard > figure {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 1.4rem;
+  margin-bottom: 1.5rem;
+}
+.swiperCard > figure > img {
+  width: 100%;
+  height: 35.4rem;
+  transition: 0.5s ease-in-out;
+  transform: scale(1.05);
+}
+.swiperCard > figure:hover img {
+  transform: scale(1);
+}
+.swiperCard > *:last-child {
+  margin-top: 0.8rem;
+}
+
+.teamCard > img {
+  height: 42rem;
+  width: 100%;
+  object-fit: contain;
+  border-radius: 0.8rem;
+  margin-bottom: 2rem;
+}
+.teamCard > h5 {
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+.teamCard > p {
+  margin: 1.6rem 0rem;
+}
+.teamCard > div {
+  display: flex;
+  align-items: center;
+}
+.teamCard > div > * {
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+.teamCard > div > *:not(:last-child) {
+  margin-right: 1.6rem;
+}
+
+.testimonialCard > div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2.4rem;
+}
+.testimonialCard > div > *:first-child {
+  margin-right: 1.2rem;
+}
+.testimonialCard > p {
+  height: 10.3rem;
+}
+.testimonialCard > section {
+  display: flex;
+  align-items: center;
+  margin-top: 4rem;
+}
+.testimonialCard > section > img {
+  margin-right: 2rem;
+  height: 6rem;
+  width: 6rem;
+  transition: 0.5s ease-in-out;
+  border-radius: 50%;
+}
+.testimonialCard > section > div > *:last-child {
+  color: #7dffe8;
+  font-size: 1.4rem;
+}
+
+.cardSectionGrid > div > center {
+  max-width: 82rem;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 9rem;
+}
+.cardSectionGrid > div > center > h1 {
+  padding-bottom: 1.6rem;
+}
+.cardSectionGrid > div > center > p {
+  text-align: center;
+}
+.cardSectionGrid > div > section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2.4rem;
+}
+.cardSectionGrid > div > section > * {
+  width: calc(33.333% - 2.4rem);
+}
+/* .cardSectionGrid > div > section > :nth-child(7) {
+  margin-left: auto;
+  margin-right: auto;
+}
+.cardSectionGrid > div > section > :last-child {
+  margin-left: auto;
+  margin-right: auto;
+} */
+@media only screen and (max-width: 62.6em) {
+  .cardSectionGrid > div > section > * {
+    width: calc(50% - 2.4rem);
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .cardSectionGrid > div > section > * {
+    width: 100%;
+  }
+}
+
+.yourPlanCardGrid > div > left {
+  max-width: 95rem;
+  display: flex;
+  align-items: left;
+  flex-direction: column;
+  margin-top: 100px;
+  padding-bottom: 5rem;
+  padding-left: 20px;
+}
+.yourPlanCardGrid > div > left > h1 {
+  padding-bottom: 1.6rem;
+}
+.yourPlanCardGrid > div > section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2.4rem;
+}
+.yourPlanCardGrid > div > section > * {
+  width: calc(33.333% - 2.4rem);
+}
+/* .cardSectionGrid > div > section > :nth-child(7) {
+  margin-left: auto;
+  margin-right: auto;
+}
+.cardSectionGrid > div > section > :last-child {
+  margin-left: auto;
+  margin-right: auto;
+} */
+@media only screen and (max-width: 62.6em) {
+  .yourPlanCardGrid > div > section > * {
+    width: calc(50% - 2.4rem);
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .yourPlanCardGrid > div > section > * {
+    width: 100%;
+  }
+}
+
+
+
+
+.yourPlanCardGrid > div > h1 {
+  padding-bottom: 1.6rem;
+  text-align: left;
+}
+.yourPlanCardGrid > div > section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2.4rem;
+}
+.yourPlanCardGrid > div > section > * {
+  width: calc(33.333% - 2.4rem);
+}
+@media only screen and (max-width: 62.6em) {
+  .yourPlanCardGrid > div > section > * {
+    width: calc(50% - 2.4rem);
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .yourPlanCardGrid > div > section > * {
+    width: 100%;
+  }
+}
+
+.servicesCard {
+  padding: 2.4rem;
+  border-radius: 2rem;
+  background-color: #0f0f0fb3;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: 0.5s all;
+}
+.servicesCard:hover {
+  box-shadow: 0 4px 8px #0003, 0 6px 20px #00000030;
+}
+.servicesCard > div > *:nth-child(2) {
+  margin-top: 2.4rem;
+  margin-bottom: 1.6rem;
+}
+#servicesCard_id {
+  transition: 0.3s ease-in-out;
+}
+#servicesCard_id > img {
+  transition: 0.3s ease-in-out;
+}
+#servicesCard_id:hover {
+  transform: translateY(-1.2rem) scale(1.01);
+  outline: 0.1rem solid rgba(255, 255, 255, 0.288);
+  box-shadow: 0 0.4rem 7rem #e2e2e233;
+  z-index: 20;
+}

@@ -1,0 +1,92 @@
+export const expertiseAiData = [
+  {
+    name: 'Financial Services',
+    description:
+      'Fintech innovations continually reshape this landscape, offering digital solutions for banking, investment, and insurance.',
+    image: 'images/aiServices/expertiseAi',
+    checkPoints: [
+      'Banking System',
+      'Payment Gateway',
+      'Digital Wallets',
+      'Fraud Detection Software',
+      'Wealth Management Solutions',
+      'Financial Analytics',
+      'Domestic Payment Solutions',
+      'Retail Fintech Solutions',
+      'Financial Risk Management ',
+      'Financial Reporting Software',
+    ],
+  },
+  {
+    name: 'Food & Beverage',
+    description:
+      'Fintech innovations continually reshape this landscape, offering digital solutions for banking, investment, and insurance.',
+    image: 'images/aiServices/expertiseAi',
+    checkPoints: [
+      'Banking System',
+      'Payment Gateway',
+      'Digital Wallets',
+      'Fraud Detection Software',
+      'Wealth Management Solutions',
+      'Financial Analytics',
+      'Domestic Payment Solutions',
+      'Retail Fintech Solutions',
+      'Financial Risk Management ',
+      'Financial Reporting Software',
+    ],
+  },
+  {
+    name: 'Healthcare & Pharmaceutics',
+    description:
+      'Fintech innovations continually reshape this landscape, offering digital solutions for banking, investment, and insurance.',
+    image: 'images/aiServices/expertiseAi',
+    checkPoints: [
+      'Banking System',
+      'Payment Gateway',
+      'Digital Wallets',
+      'Fraud Detection Software',
+      'Wealth Management Solutions',
+      'Financial Analytics',
+      'Domestic Payment Solutions',
+      'Retail Fintech Solutions',
+      'Financial Risk Management ',
+      'Financial Reporting Software',
+    ],
+  },
+  {
+    name: 'Tourism & Hospitality',
+    description:
+      'Fintech innovations continually reshape this landscape, offering digital solutions for banking, investment, and insurance.',
+    image: 'images/aiServices/expertiseAi',
+    checkPoints: [
+      'Banking System',
+      'Payment Gateway',
+      'Digital Wallets',
+      'Fraud Detection Software',
+      'Wealth Management Solutions',
+      'Financial Analytics',
+      'Domestic Payment Solutions',
+      'Retail Fintech Solutions',
+      'Financial Risk Management ',
+      'Financial Reporting Software',
+    ],
+  },
+  {
+    name: 'Entertainm',
+    description:
+      'Fintech innovations continually reshape this landscape, offering digital solutions for banking, investment, and insurance.',
+    image: 'images/aiServices/expertiseAi',
+    checkPoints: [
+      'Banking System',
+      'Payment Gateway',
+      'Digital Wallets',
+      'Fraud Detection Software',
+      'Wealth Management Solutions',
+      'Financial Analytics',
+      'Domestic Payment Solutions',
+      'Retail Fintech Solutions',
+      'Financial Risk Management ',
+      'Financial Reporting Software',
+    ],
+  },
+];
