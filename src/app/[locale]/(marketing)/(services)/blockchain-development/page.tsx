@@ -28,7 +28,7 @@ import {
   tgdescription,
   tgexpertiseAreas,
   tgheading,
-} from '@/data/services/aiServices';
+} from '@/data/services/blockchainDevelopment';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 
 // Use the imported objects as needed in your component

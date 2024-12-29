@@ -1,6 +1,6 @@
 {
-  "name": "next-js-boilerplate",
-  "version": "3.60.1",
+  "name": "pixelette-tech",
+  "version": "1.0.7",
   "author": "Hamid (https://github.com/Hamid-Ayub)",
   "scripts": {
     "dev:spotlight": "spotlight-sidecar",
