@@ -56,6 +56,7 @@ const HowItWorksHeroSection: React.FC<HeroSectionProps> = ({
               </section>
               <Image
                 src={deliverImage}
+
                 alt="Deliver Hero"
                 style={imageStyle}
                 width={450}
