@@ -76,29 +76,29 @@ export default async function BlockchainDevelopment(props: IBlockchainDevelopmen
           {
             title: 'AI Solutions',
             items: [
-              'Generative AI',
-              'AI Security',
-              'AI Design',
-              'AI Ops',
-              'Automation Solutions',
+              'Blockchain Consulting',
+              ' DApp Development',
+              'DeFi Development',
+              'Asset Tokenization Platform',
+              'DAO Development',
             ],
           },
           {
             title: 'AI Applications',
             items: [
-              'Chatbots & Conversational AI',
+              'Crypto Wallet Development',
               'Recommendations Engines',
-              'AI-as-a-Service (AIaaS)',
-              'AI Product Development',
-              'Predictive Modeling',
+              'Cryptocurrency Exchange Development',
+              'Smart Contract Audit and Development',
+              'Layer 1 & Layer 2 Blockchain',
             ],
           },
         ]}
         highlightedService={{
           imageSrc: '/images/aiServices/s_1.svg',
-          title: 'Generative AI',
+          title: 'Blockchain Consulting',
           description:
-      'We are recognized as a leading generative AI development company and bring deep expertise in generative AI tools like GPT-4, GPT-3.5, and DALL-E. Our models provide visual content analysis to aid in brand identity, data analysis, business intelligence, and visualization, offering tailored generative AI development services.',
+      'We offer top-tier blockchain consulting to shape your vision into reality. From fresh builds to system upgrades, our blockchain development services ensure secure, scalable solutions aligned with your goals.',
         }}
       />
 
@@ -112,7 +112,7 @@ export default async function BlockchainDevelopment(props: IBlockchainDevelopmen
         description={tgdescription}
         expertiseAreas={tgexpertiseAreas}
       />
-      <TechStack />
+      <TechStack techStack="blockchain" />
       <AiServiceTable />
       <HowWeWork />
       <OurCommitment

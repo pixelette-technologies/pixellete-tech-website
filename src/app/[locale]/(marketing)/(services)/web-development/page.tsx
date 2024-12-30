@@ -28,7 +28,7 @@ import {
   tgdescription,
   tgexpertiseAreas,
   tgheading,
-} from '@/data/services/aiServices';
+} from '@/data/services/webDevelopment';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 
 // Use the imported objects as needed in your component
@@ -76,29 +76,28 @@ export default async function WebDevelopment(props: IWebDevelopmentProps) {
           {
             title: 'AI Solutions',
             items: [
-              'Generative AI',
-              'AI Security',
-              'AI Design',
-              'AI Ops',
-              'Automation Solutions',
+              'Ecommerce Development',
+              'Custom CMS Development',
+              'Web Portal Development',
             ],
           },
           {
             title: 'AI Applications',
             items: [
-              'Chatbots & Conversational AI',
-              'Recommendations Engines',
-              'AI-as-a-Service (AIaaS)',
-              'AI Product Development',
-              'Predictive Modeling',
+              'Custom Web Development',
+              'Web Application Development',
+              'Website Design & Development',
             ],
           },
         ]}
         highlightedService={{
           imageSrc: '/images/aiServices/s_1.svg',
-          title: 'Generative AI',
+          title: 'Ecommerce Development',
           description:
-      'We are recognized as a leading generative AI development company and bring deep expertise in generative AI tools like GPT-4, GPT-3.5, and DALL-E. Our models provide visual content analysis to aid in brand identity, data analysis, business intelligence, and visualization, offering tailored generative AI development services.',
+      `Our ecommerce website development services are crafted to drive sales and boost user engagement through seamless, intuitive design. 
+
+As a leading web development company, we create custom, scalable platforms with robust functionalities and secure payment options that meet your business needs. 
+Whether you're a startup or an established brand, our ecommerce web development team delivers user-friendly, optimized sites that elevate the customer experience and support growth.`,
         }}
       />
 
@@ -112,7 +111,7 @@ export default async function WebDevelopment(props: IWebDevelopmentProps) {
         description={tgdescription}
         expertiseAreas={tgexpertiseAreas}
       />
-      <TechStack />
+      <TechStack techStack="web" />
       <AiServiceTable />
       <HowWeWork />
       <OurCommitment

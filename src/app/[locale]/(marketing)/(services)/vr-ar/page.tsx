@@ -28,7 +28,7 @@ import {
   tgdescription,
   tgexpertiseAreas,
   tgheading,
-} from '@/data/services/aiServices';
+} from '@/data/services/arVR';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 
 // Use the imported objects as needed in your component
@@ -76,29 +76,28 @@ export default async function ARVR(props: IARVRProps) {
           {
             title: 'AI Solutions',
             items: [
-              'Generative AI',
-              'AI Security',
-              'AI Design',
-              'AI Ops',
-              'Automation Solutions',
+              'AR/VR Game Development',
+              'AR/VR Integration Services',
+              'AR/VR Content Creation',
+              'AR/VR Maintenance and Support',
+              'AR/VR Training and Educational Tools',
             ],
           },
           {
             title: 'AI Applications',
             items: [
-              'Chatbots & Conversational AI',
-              'Recommendations Engines',
-              'AI-as-a-Service (AIaaS)',
-              'AI Product Development',
-              'Predictive Modeling',
+              'AR/VR Consulting Services',
+              'UI/UX Design for AR/VR',
+              'Custom AR/VR Application Development',
+              'AR/VR Simulation Development',
             ],
           },
         ]}
         highlightedService={{
           imageSrc: '/images/aiServices/s_1.svg',
-          title: 'Generative AI',
+          title: 'AR/VR Game Development',
           description:
-      'We are recognized as a leading generative AI development company and bring deep expertise in generative AI tools like GPT-4, GPT-3.5, and DALL-E. Our models provide visual content analysis to aid in brand identity, data analysis, business intelligence, and visualization, offering tailored generative AI development services.',
+      'Our team of capable developers build captivating, interactive AR/VR games that transport users into exciting virtual worlds. Our AR/VR game development solutions create engaging, lifelike environments that resonate with players and enhance brand value.',
         }}
       />
 
@@ -112,7 +111,7 @@ export default async function ARVR(props: IARVRProps) {
         description={tgdescription}
         expertiseAreas={tgexpertiseAreas}
       />
-      <TechStack />
+      <TechStack techStack="AR/VR" />
       <AiServiceTable />
       <HowWeWork />
       <OurCommitment

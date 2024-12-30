@@ -6,21 +6,22 @@ export const header = {
 
 export const backgroundImage = '/images/aiServices/serviceSectionBackground.svg';
 
-export const tgheading = 'Our AI development service expertise';
+export const tgheading = 'Our blockchain development service expertise';
 
 export const tgdescription
-  = 'Pixelette Technologies has been a globally trusted artificial intelligence development company for 6 years. We have top AI development talent that makes use of the latest AI tools and technologies to drive exponential business growth for our clients.';
+  = 'Our solutions are custom-built to push existing technological boundaries and meet the specific needs of every sector we serve.';
 
 export const tgexpertiseAreas = [
-  { title: 'Machine Learning' },
-  { title: 'Deep Learning' },
-  { title: 'Natural Language Processing (NLP)' },
-  { title: 'Robotic Process Automation' },
-  { title: 'Computer Vision' },
+  { title: 'Distributed Ledger Technology' },
+  { title: 'Consensus Algorithms' },
+  { title: 'Smart Contracts' },
+  { title: 'Cross-Chain Technology' },
+  { title: 'Blockchain Security and Audits' },
+  { title: 'Privacy and Confidentiality Solutions' },
   {
-    title: 'Machine Learning',
+    title: 'Distributed Ledger Technology',
     description:
-      'Our machine learning services cover supervised, unsupervised, and reinforcement learning, creating systems that make optimized decisions with minimal human input. As a reputable machine learning development company, we build intelligent, self-improving solutions.',
+      'Our blockchain team specializes in Distributed Ledger Technology, creating secure, transparent systems that decentralize data control. Our expertise in Hype ledger Fabric and Corda ensures scalable solutions across finance and other industries. ',
   },
 ];
 
@@ -31,7 +32,7 @@ export const ocdescription
 
 export const commitmentData = [
   {
-    img: '/images/aiServices/McDonald.svg',
+    img: '/images/blockchainServices/diamond.svg',
     value1: '80%',
     value2: '85%',
     value3: '60%',
@@ -40,7 +41,7 @@ export const commitmentData = [
     desc3: 'Improvement in overall efficiency',
   },
   {
-    img: '/images/aiServices/Lytics.svg',
+    img: '/images/blockchainServices/baldman.svg',
     value1: '200%',
     value2: '70%',
     value3: '3X',
@@ -49,7 +50,7 @@ export const commitmentData = [
     desc3: 'Increase in real-time handling capacity',
   },
   {
-    img: '/images/aiServices/PSA.svg',
+    img: '/images/blockchainServices/graph.svg',
     value1: '90%',
     value2: '95%',
     desc1: 'Satisfaction with speech quality',
@@ -66,13 +67,13 @@ export const aiHeroButtonText = 'Book call to solve your tech challenges';
 
 export const aiHeroButtonLink = '/contactus';
 
-export const aiHeroBackgroundImage = '/images/aiServices/heroSectionBackground.svg';
+export const aiHeroBackgroundImage = '/images/blockchainServices/heroSectionBackground.svg';
 
 export const aiHeroImages = [
-  { src: '/images/aiServices/box_1.svg', alt: 'box 1' },
-  { src: '/images/aiServices/box_2.svg', alt: 'box 2' },
-  { src: '/images/aiServices/box_3.svg', alt: 'box 3' },
-  { src: '/images/aiServices/box_4.svg', alt: 'box 4' },
+  { src: '/images/blockchainServices/box_1.svg', alt: 'box 1' },
+  { src: '/images/blockchainServices/box_2.svg', alt: 'box 2' },
+  { src: '/images/blockchainServices/box_3.svg', alt: 'box 3' },
+  { src: '/images/blockchainServices/box_4.svg', alt: 'box 4' },
 ];
 
 export const aiServicesHeading = 'Our Services';
