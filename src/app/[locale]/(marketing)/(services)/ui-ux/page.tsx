@@ -28,7 +28,7 @@ import {
   tgdescription,
   tgexpertiseAreas,
   tgheading,
-} from '@/data/services/aiServices';
+} from '@/data/services/uiUX';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 
 // Use the imported objects as needed in your component
@@ -76,29 +76,26 @@ export default async function UIUX(props: IUIUXProps) {
           {
             title: 'AI Solutions',
             items: [
-              'Generative AI',
-              'AI Security',
-              'AI Design',
-              'AI Ops',
-              'Automation Solutions',
+              'Web and Mobile UI/UX Design',
+              'App and Website Redesign',
+              'UI/UX Design Audit',
+              'Design Concept Development',
             ],
           },
           {
             title: 'AI Applications',
             items: [
-              'Chatbots & Conversational AI',
-              'Recommendations Engines',
-              'AI-as-a-Service (AIaaS)',
-              'AI Product Development',
-              'Predictive Modeling',
+              'UI/UX Design Research',
+              'Design Strategy Development',
+              'Digital Product Design and Development Consulting',
             ],
           },
         ]}
         highlightedService={{
           imageSrc: '/images/aiServices/s_1.svg',
-          title: 'Generative AI',
+          title: 'Web and Mobile UI/UX Design',
           description:
-      'We are recognized as a leading generative AI development company and bring deep expertise in generative AI tools like GPT-4, GPT-3.5, and DALL-E. Our models provide visual content analysis to aid in brand identity, data analysis, business intelligence, and visualization, offering tailored generative AI development services.',
+      'As a top UI UX design agency, we offer end-to-end digital product strategy consulting that strengthens your app’s value. Our experts assess architecture, understand business dynamics, and provide strategic guidance on complex challenges to set you on a success path.',
         }}
       />
 
@@ -112,7 +109,7 @@ export default async function UIUX(props: IUIUXProps) {
         description={tgdescription}
         expertiseAreas={tgexpertiseAreas}
       />
-      <TechStack />
+      <TechStack techStack="UI/UX design &" />
       <AiServiceTable />
       <HowWeWork />
       <OurCommitment

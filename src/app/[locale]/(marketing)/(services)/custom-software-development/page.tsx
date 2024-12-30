@@ -28,7 +28,7 @@ import {
   tgdescription,
   tgexpertiseAreas,
   tgheading,
-} from '@/data/services/aiServices';
+} from '@/data/services/customSoftwareDevelopment';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 
 // Use the imported objects as needed in your component
@@ -76,29 +76,27 @@ export default async function CustomSoftwareDevelopment(props: ICustomSoftwareDe
           {
             title: 'AI Solutions',
             items: [
-              'Generative AI',
-              'AI Security',
-              'AI Design',
-              'AI Ops',
-              'Automation Solutions',
+              'Software Consulting Services',
+              'API Development Services',
+              'Custom CRM Development Services',
+              'Custom E-Commerce Development',
             ],
           },
           {
             title: 'AI Applications',
             items: [
-              'Chatbots & Conversational AI',
-              'Recommendations Engines',
-              'AI-as-a-Service (AIaaS)',
-              'AI Product Development',
-              'Predictive Modeling',
+              'Custom Software Development Services',
+              ' Enterprise Software Development Services',
+              ' Software Product Development Services',
+              'Software Integration Services',
             ],
           },
         ]}
         highlightedService={{
           imageSrc: '/images/aiServices/s_1.svg',
-          title: 'Generative AI',
+          title: 'Software Consulting Services',
           description:
-      'We are recognized as a leading generative AI development company and bring deep expertise in generative AI tools like GPT-4, GPT-3.5, and DALL-E. Our models provide visual content analysis to aid in brand identity, data analysis, business intelligence, and visualization, offering tailored generative AI development services.',
+      'As a trusted customized software development company, we assess your business needs, design the ideal software structure, and deliver custom software services that maximize value. Our dedicated team uses deep technical expertise to create tailored solutions that enhance productivity and efficiency.',
         }}
       />
 
@@ -112,7 +110,7 @@ export default async function CustomSoftwareDevelopment(props: ICustomSoftwareDe
         description={tgdescription}
         expertiseAreas={tgexpertiseAreas}
       />
-      <TechStack />
+      <TechStack techStack="custom software" />
       <AiServiceTable />
       <HowWeWork />
       <OurCommitment

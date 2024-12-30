@@ -6,9 +6,10 @@ import './techstack.css';
 
 type TechStackProps = {
   // Define any props here if needed in the future
+  techStack: string;
 };
 
-export const TechStack: React.FC<TechStackProps> = () => {
+export const TechStack: React.FC<TechStackProps> = (props: TechStackProps) => {
   return (
     <div>
       <Container className="main">
@@ -25,7 +26,11 @@ export const TechStack: React.FC<TechStackProps> = () => {
           >
             <div>
               <Heading className="primary">
-                Our AI development tech stack
+                Our
+                {' '}
+                {props?.techStack ? props.techStack : 'AI'}
+                {' '}
+                development tech stack
               </Heading>
               <br />
               <Text className="titory--bold">

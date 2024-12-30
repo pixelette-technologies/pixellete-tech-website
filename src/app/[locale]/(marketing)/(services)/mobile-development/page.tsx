@@ -28,7 +28,7 @@ import {
   tgdescription,
   tgexpertiseAreas,
   tgheading,
-} from '@/data/services/aiServices';
+} from '@/data/services/mobilDevelopment';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 
 // Use the imported objects as needed in your component
@@ -76,29 +76,26 @@ export default async function MobileDevelopment(props: IMobileDevelopmentProps) 
           {
             title: 'AI Solutions',
             items: [
-              'Generative AI',
-              'AI Security',
-              'AI Design',
-              'AI Ops',
-              'Automation Solutions',
+              ' iOS App Development',
+              'PWA Development',
+              'Cross Platform App Development',
+              'Native App Development',
             ],
           },
           {
             title: 'AI Applications',
             items: [
-              'Chatbots & Conversational AI',
-              'Recommendations Engines',
-              'AI-as-a-Service (AIaaS)',
-              'AI Product Development',
-              'Predictive Modeling',
+              'Android App Development',
+              'Hybrid App Development',
+              'Wearable & Embedded App Development',
             ],
           },
         ]}
         highlightedService={{
           imageSrc: '/images/aiServices/s_1.svg',
-          title: 'Generative AI',
+          title: ' iOS App Development',
           description:
-      'We are recognized as a leading generative AI development company and bring deep expertise in generative AI tools like GPT-4, GPT-3.5, and DALL-E. Our models provide visual content analysis to aid in brand identity, data analysis, business intelligence, and visualization, offering tailored generative AI development services.',
+      'Bring your ideas to life with scalable, reliable iOS mobile app development that integrates smoothly with the Apple ecosystem. Our mobile app development services use the latest tech and tailored features to create iOS apps that align with your business goals and elevate user satisfaction.',
         }}
       />
 
@@ -112,7 +109,7 @@ export default async function MobileDevelopment(props: IMobileDevelopmentProps) 
         description={tgdescription}
         expertiseAreas={tgexpertiseAreas}
       />
-      <TechStack />
+      <TechStack techStack="mobile app" />
       <AiServiceTable />
       <HowWeWork />
       <OurCommitment

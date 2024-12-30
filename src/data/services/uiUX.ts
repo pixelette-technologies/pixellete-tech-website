@@ -6,21 +6,23 @@ export const header = {
 
 export const backgroundImage = '/images/aiServices/serviceSectionBackground.svg';
 
-export const tgheading = 'Our AI development service expertise';
+export const tgheading = 'Our UI/UX design service guarantees';
 
 export const tgdescription
-  = 'Pixelette Technologies has been a globally trusted artificial intelligence development company for 6 years. We have top AI development talent that makes use of the latest AI tools and technologies to drive exponential business growth for our clients.';
+  = 'As a top UI/UX design company, we specialize in transforming complex ideas into user-friendly, impactful designs that enhance satisfaction and brand loyalty.';
 
 export const tgexpertiseAreas = [
-  { title: 'Machine Learning' },
-  { title: 'Deep Learning' },
-  { title: 'Natural Language Processing (NLP)' },
-  { title: 'Robotic Process Automation' },
-  { title: 'Computer Vision' },
+  { title: 'User-Centric Design' },
+  { title: 'Intuitive Navigation' },
+  { title: 'Brand Consistency' },
+  { title: 'Responsive and Adaptive Layouts' },
+  { title: 'Accessibility Compliance' },
+  { title: 'Interactive Prototyping' },
+  { title: 'Ongoing Design Support' },
   {
-    title: 'Machine Learning',
+    title: 'User-Centric Design',
     description:
-      'Our machine learning services cover supervised, unsupervised, and reinforcement learning, creating systems that make optimized decisions with minimal human input. As a reputable machine learning development company, we build intelligent, self-improving solutions.',
+      'Our team creates user interfaces based on detailed research and user personas, ensuring your platform resonates with and engages your target audience, enhancing satisfaction and retention.',
   },
 ];
 
@@ -31,7 +33,7 @@ export const ocdescription
 
 export const commitmentData = [
   {
-    img: '/images/aiServices/McDonald.svg',
+    img: '/images/uiuxServices/logo.svg',
     value1: '80%',
     value2: '85%',
     value3: '60%',
@@ -40,7 +42,7 @@ export const commitmentData = [
     desc3: 'Improvement in overall efficiency',
   },
   {
-    img: '/images/aiServices/Lytics.svg',
+    img: '/images/uiuxServices/logo.svg',
     value1: '200%',
     value2: '70%',
     value3: '3X',
@@ -49,7 +51,7 @@ export const commitmentData = [
     desc3: 'Increase in real-time handling capacity',
   },
   {
-    img: '/images/aiServices/PSA.svg',
+    img: '/images/uiuxServices/logo.svg',
     value1: '90%',
     value2: '95%',
     desc1: 'Satisfaction with speech quality',
@@ -57,7 +59,7 @@ export const commitmentData = [
   },
 ];
 
-export const aiHeroHeading = 'AI Development Services';
+export const aiHeroHeading = 'UI/UX Design Services';
 
 export const aiHeroDescription
   = 'From concept to deployment, we deliver adaptive, scalable AI solutions that bring your vision of intelligent technology to life.';
@@ -66,16 +68,16 @@ export const aiHeroButtonText = 'AI Development Services';
 
 export const aiHeroButtonLink = 'AI Development Services';
 
-export const aiHeroBackgroundImage = '/images/aiServices/heroSectionBackground.svg';
+export const aiHeroBackgroundImage = '/images/uiuxServices/heroSectionBackground.svg';
 
 export const aiHeroImages = [
-  { src: '/images/aiServices/box_1.svg', alt: 'box 1' },
-  { src: '/images/aiServices/box_2.svg', alt: 'box 2' },
-  { src: '/images/aiServices/box_3.svg', alt: 'box 3' },
-  { src: '/images/aiServices/box_4.svg', alt: 'box 4' },
+  { src: '/images/uiuxServices/box_1.svg', alt: 'box 1' },
+  { src: '/images/uiuxServices/box_2.svg', alt: 'box 2' },
+  { src: '/images/uiuxServices/box_3.svg', alt: 'box 3' },
+  { src: '/images/uiuxServices/box_4.svg', alt: 'box 4' },
 ];
 
 export const aiServicesHeading = 'Our Services';
 
 export const aiServicesDescription
-  = 'Our AI development services empower businesses to tap into extensive data, driving measurable results. As an award-winning AI software development company, we specialize in turning ideas into actionable insights, making efficiency and quick decision-making unavoidable. Let’s collaborate to bring your AI vision to life and to its intended audience!';
+  = 'Our UI/UX design services empower businesses to create intuitive, visually appealing interfaces that elevate user engagement. Let’s work together to bring your design vision to life and set new standards for user experience!';

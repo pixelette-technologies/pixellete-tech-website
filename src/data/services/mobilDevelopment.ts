@@ -6,21 +6,23 @@ export const header = {
 
 export const backgroundImage = '/images/aiServices/serviceSectionBackground.svg';
 
-export const tgheading = 'Our AI development service expertise';
+export const tgheading = 'Our mobile app development service expertise';
 
 export const tgdescription
-  = 'Pixelette Technologies has been a globally trusted artificial intelligence development company for 6 years. We have top AI development talent that makes use of the latest AI tools and technologies to drive exponential business growth for our clients.';
+  = 'Our goal is to drive your success with secure mobile application development services for seamless and engaging user experiences. We’re a globally recognized and trusted mobile app development company focused on transformative digital solutions.';
 
 export const tgexpertiseAreas = [
-  { title: 'Machine Learning' },
-  { title: 'Deep Learning' },
-  { title: 'Natural Language Processing (NLP)' },
-  { title: 'Robotic Process Automation' },
-  { title: 'Computer Vision' },
+  { title: 'Responsive Design' },
+  { title: 'Custom Functionality' },
+  { title: 'Rapid Development' },
+  { title: 'Scalable Architecture' },
+  { title: 'Top Notch Security' },
+  { title: 'Easy Integration' },
+  { title: 'Continued Support' },
   {
-    title: 'Machine Learning',
+    title: 'Responsive Design',
     description:
-      'Our machine learning services cover supervised, unsupervised, and reinforcement learning, creating systems that make optimized decisions with minimal human input. As a reputable machine learning development company, we build intelligent, self-improving solutions.',
+      'Our responsive app designs ensure your mobile app looks and works perfectly on any device, eliminating the frustration of usability issues and enhancing user retention.',
   },
 ];
 
@@ -31,7 +33,7 @@ export const ocdescription
 
 export const commitmentData = [
   {
-    img: '/images/aiServices/McDonald.svg',
+    img: '/images/mobileAppServices/blackHole.svg',
     value1: '80%',
     value2: '85%',
     value3: '60%',
@@ -40,7 +42,7 @@ export const commitmentData = [
     desc3: 'Improvement in overall efficiency',
   },
   {
-    img: '/images/aiServices/Lytics.svg',
+    img: '/images/mobileAppServices/chillow.svg',
     value1: '200%',
     value2: '70%',
     value3: '3X',
@@ -49,7 +51,7 @@ export const commitmentData = [
     desc3: 'Increase in real-time handling capacity',
   },
   {
-    img: '/images/aiServices/PSA.svg',
+    img: '/images/mobileAppServices/logo.svg',
     value1: '90%',
     value2: '95%',
     desc1: 'Satisfaction with speech quality',
@@ -57,7 +59,7 @@ export const commitmentData = [
   },
 ];
 
-export const aiHeroHeading = 'AI Development Services';
+export const aiHeroHeading = 'Mobile App Development Services';
 
 export const aiHeroDescription
   = 'From concept to deployment, we deliver adaptive, scalable AI solutions that bring your vision of intelligent technology to life.';
@@ -66,16 +68,17 @@ export const aiHeroButtonText = 'AI Development Services';
 
 export const aiHeroButtonLink = 'AI Development Services';
 
-export const aiHeroBackgroundImage = '/images/aiServices/heroSectionBackground.svg';
+export const aiHeroBackgroundImage = '/images/mobileAppServices/heroSectionBackground.svg';
 
 export const aiHeroImages = [
-  { src: '/images/aiServices/box_1.svg', alt: 'box 1' },
-  { src: '/images/aiServices/box_2.svg', alt: 'box 2' },
-  { src: '/images/aiServices/box_3.svg', alt: 'box 3' },
-  { src: '/images/aiServices/box_4.svg', alt: 'box 4' },
+  { src: '/images/mobileAppServices/box_1.svg', alt: 'box 1' },
+  { src: '/images/mobileAppServices/box_2.svg', alt: 'box 2' },
+  { src: '/images/mobileAppServices/box_3.svg', alt: 'box 3' },
+  { src: '/images/mobileAppServices/box_4.svg', alt: 'box 4' },
 ];
 
 export const aiServicesHeading = 'Our Services';
 
 export const aiServicesDescription
-  = 'Our AI development services empower businesses to tap into extensive data, driving measurable results. As an award-winning AI software development company, we specialize in turning ideas into actionable insights, making efficiency and quick decision-making unavoidable. Let’s collaborate to bring your AI vision to life and to its intended audience!';
+  = 'The mobile era is reshaping businesses and how they engage with users. To stand out, companies need a powerful, responsive design for mobile apps that boosts visibility and customer connections.'
+  ;
