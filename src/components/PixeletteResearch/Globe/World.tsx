@@ -64,8 +64,8 @@ const World: React.FC = () => {
       height={375}
       enablePointerInteraction={false}
       backgroundColor="rgba(0,0,0,0)"
-      globeImageUrl="//unpkg.com/three-globe/example/img/earth-night.jpg"
-      bumpImageUrl="//unpkg.com/three-globe/example/img/night-sky.png"
+      globeImageUrl="https://unpkg.com/three-globe@2.39.1/example/img/earth-night.jpg"
+      bumpImageUrl="https://unpkg.com/three-globe@2.39.1/example/img/night-sky.png"
       pathsData={gData}
       pathColor={() => ['rgba(0,0,255,0.6)', 'rgba(255,0,0,0.6)']}
       pathDashLength={0.01}
@@ -73,10 +73,10 @@ const World: React.FC = () => {
       pathDashAnimateTime={100000}
       pathPointAlt={rise ? (pnt: any) => pnt[2] : undefined}
       pathTransitionDuration={rise ? 4000 : undefined}
-      controls={{
-        minDistance: 300,
-        maxDistance: 300,
-      }}
+      // controls={{
+      //   minDistance: 300,
+      //   maxDistance: 300,
+      // }}
     />
   );
 };

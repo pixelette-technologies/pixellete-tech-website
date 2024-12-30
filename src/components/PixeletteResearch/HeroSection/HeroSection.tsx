@@ -24,7 +24,7 @@ const HeroSection: React.FC = () => {
       <Container className="main">
         <div className="heroSectionResearch-background">
           <Image
-            src="/images/heroSectionBackground"
+            src="/images/pixelettechResearch/heroSectionBackground.svg"
             alt="Research Background"
             layout="responsive"
             width={1920} // Replace with actual dimensions
@@ -140,7 +140,7 @@ const HeroSection: React.FC = () => {
                 </Link>
               </div>
               <Image
-                src="/images/research/resourceGroup"
+                src="/images/pixelettechResearch/resourceGroup.svg"
                 alt="Resource Group"
                 width={500} // Replace with actual dimensions
                 height={300}

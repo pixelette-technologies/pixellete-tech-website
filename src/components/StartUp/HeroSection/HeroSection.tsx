@@ -11,10 +11,11 @@ export const HeroSection = () => {
       <Container className="main">
         <div className="heroSectionMarketing-background">
           <Image
-            src="/images/startup/heroSectionBackground}"
+            src="/images/startups/heroSectionBackground.svg"
             alt="Research Background"
-            layout="fill" // Ensures responsive background
             objectFit="cover"
+            width={100}
+            height={100}
             priority // Load this image with higher priority
           />
         </div>
