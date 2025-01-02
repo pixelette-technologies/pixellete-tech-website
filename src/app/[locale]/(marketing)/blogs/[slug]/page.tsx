@@ -1,6 +1,8 @@
 import { Container } from '@/components/Feature/Container/Container';
 import { createClient } from 'contentful';
+import Image from 'next/image';
 import React from 'react';
+import './blogdetail.module.css';
 
 // Contentful client
 const client = createClient({
@@ -36,17 +38,42 @@ const BlogPostPage = async ({ params }: { params: { slug: string } }) => {
   const { title, content, bannerImage } = blog ? blog.fields : '';
 
   return (
-    <div className="blog-post">
-      <Container className="main">
-        <div className="blog-banner">
-          <img src={bannerImage && bannerImage.fields.file.url} alt={title} />
-        </div>
-      </Container>
-      <div className="blog-content">
-        <h1>{title && title}</h1>
-        <div dangerouslySetInnerHTML={content && { __html: content }} />
+    <>
+      <div className="blogDetail">
+        <Container className="main">
+          <div className="blogDetail-background">
+            <Image
+              src="/images/blogs/singleBlogBackground.svg"
+              alt="blog"
+              width={100}
+              height={100}
+            />
+          </div>
+        </Container>
+        <section>
+          {/* <Container className="main margins">
+             <Components.Common.DetailsNavigate
+              // data={singleBlogDetail}
+              headingIndex={false}
+              overViewIndex={false}
+              headerSection={true}
+            />
+          </Container> */}
+        </section>
       </div>
-    </div>
+      {/* <Components.Common.LetsTalkSection /> */}
+      <div className="blog-post">
+        <Container className="main">
+          <div className="blog-banner">
+            <img src={bannerImage && bannerImage.fields.file.url} alt={title} />
+          </div>
+        </Container>
+        <div className="blog-content">
+          <h1>{title && title}</h1>
+          <div dangerouslySetInnerHTML={content && { __html: content }} />
+        </div>
+      </div>
+    </>
   );
 };
 

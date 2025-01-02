@@ -17,7 +17,7 @@ export const BlogGridWithBanner = ({ data = [], singleView = false }) => {
   if (!data.length) {
     return <div>No blogs available.</div>;
   }
-
+  console.log(data);
   const blogCardsMain = data[0] || {};
   const blogCardsData = data.slice(1, visibleCount + 1);
 
@@ -44,7 +44,7 @@ export const BlogGridWithBanner = ({ data = [], singleView = false }) => {
         date={el.fields.date || 'No date available'}
         heading={el.fields.name || 'No title available'}
         description={el.fields.shortDescription || 'No description available'}
-        to={`/blog/${el.sys?.id}`}
+        to={`${el.fields.slug}`}
         duration={`${index + 2}00`}
         animation="fade-up"
       />
@@ -92,7 +92,7 @@ export const BlogGridWithBanner = ({ data = [], singleView = false }) => {
                 {blogCardsMain.fields?.shortDescription || 'No description available'}
               </Text>
               <div className={styles.readMoreButton}>
-                <Link href={`/blog/${blogCardsMain.sys?.id}`} passHref>
+                <Link href={`/blogs/${blogCardsMain.fields?.slug}`} passHref>
                   <Button className="primary">
                     Read More
                   </Button>

@@ -2,11 +2,11 @@ import { Blog } from '@/components/Blogging/Blog/Blog';
 import { createClient } from 'contentful';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 
-type IAboutProps = {
+type IBlogProps = {
   params: Promise<{ slug: string; locale: string }>;
 };
 
-export async function generateMetadata(props: IAboutProps) {
+export async function generateMetadata(props: IBlogProps) {
   const { locale } = await props.params;
   const t = await getTranslations({
     locale,
@@ -26,10 +26,36 @@ const getBlogs = async () => {
   });
 
   const response = await client.getEntries({ content_type: 'blogs' });
+  console.log('All Blogs:', response);
   return response.items;
 };
 
-export default async function About(props: IAboutProps) {
+//  Fetch data from Contentful during build time
+// export const getStaticProps: GetStaticProps = async () => {
+//   const client = createClient({
+//     space: 'ggtsbq0gqfii',
+//     accessToken: 'VZvVye8dMIc497wF-1pNt5rdYUG-h4E30uX58AcGVUo',
+//   });
+
+//   try {
+//     const response = await client.getEntries({ content_type: 'blogs' });
+//     return {
+//       props: {
+//         blogdata: response.items,
+//       },
+//       revalidate: 10, // Revalidate every 10 seconds for fresh content
+//     };
+//   } catch (error) {
+//     console.error('Error fetching data:', error);
+//     return {
+//       props: {
+//         blogdata: [],
+//       },
+//     };
+//   }
+// };
+
+export default async function Blogs(props: IBlogProps) {
   const { locale } = await props.params;
   setRequestLocale(locale);
   // const t = await getTranslations({

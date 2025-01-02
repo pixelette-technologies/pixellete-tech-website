@@ -25,6 +25,7 @@ export const BlogCard: FC<BlogCardProps> = ({
   description,
   to,
 }) => {
+  console.log(to);
   return (
     <div className="blogCard" data-aos={animation} data-aos-duration={duration}>
       <figure>
@@ -33,7 +34,7 @@ export const BlogCard: FC<BlogCardProps> = ({
       <Text className="titory--bold">{date}</Text>
       <Heading className="blogCardHeading">{heading}</Heading>
       <Text className="blogCardDescription">{description}</Text>
-      <Link href={`/blog/${to}`}>
+      <Link href={`/blogs/${to}`}>
         <Button className="primary">Read More</Button>
       </Link>
     </div>

@@ -79,7 +79,6 @@ export default async function Deliver(props: IDeliverProps) {
       <ServiceWork />
       <FaqsSection faqs={deliverFaqs} />
       <EvaluateBusiness />
-
     </>
   );
 };

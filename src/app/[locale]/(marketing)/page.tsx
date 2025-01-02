@@ -1,5 +1,5 @@
 import AboutUsSection from '@/components/Home/AboutusSection/AboutUsSection';
-import {CaseStudies} from '@/components/Home/CaseStudies/CaseStudies';
+import { CaseStudies } from '@/components/Home/CaseStudiesSection/CaseStudies';
 import { HeroSection } from '@/components/Home/HeroSection/HeroSection';
 import { OurClients } from '@/components/Home/OurClients/OurClients';
 import OurServicesSection from '@/components/Home/OurServicesSection/OurServicesSection';
@@ -8,9 +8,6 @@ import { Testimonial } from '@/components/Home/Testimonial/Testimonial';
 import WhatMakeUsSpecialHome from '@/components/Home/WhatMakeUsSpecial/WhatMakeUsSpecial';
 import { YourPlan } from '@/components/Home/YourPlan/YourPlan';
 import { EvaluateBusiness } from '@/components/Sections/EvaluateBusiness/EvaluateBusiness';
-import { OurTeam } from '@/components/Sections/OurTeam/OurTeam';
-import { Partner } from '@/components/Sections/Partner/Partner';
-import { UnlockBusinessPotential } from '@/components/Sections/UnlockBusinessPotential/UnlockBusinessPotential';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 
 type IIndexProps = {
@@ -46,11 +43,11 @@ export default async function Index(props: IIndexProps) {
       <WhatMakeUsSpecialHome />
       <OurServicesSection />
       <YourPlan />
-      <TechnologiesUsed/>
-      <CaseStudies/>
+      <TechnologiesUsed />
+      <CaseStudies />
       {/* <CaseStudies /> this is working just need to uncomment */}
-      <Testimonial background='' />
-      <EvaluateBusiness/>
+      <Testimonial background="" />
+      <EvaluateBusiness />
       {/* <OurTeam /> */}
       {/* <UnlockBusinessPotential
         heading="Unlock Your Business Potential"

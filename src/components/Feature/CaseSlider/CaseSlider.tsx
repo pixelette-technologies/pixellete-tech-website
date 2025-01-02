@@ -1,13 +1,11 @@
-"use client"
+'use client';
 import type { FC } from 'react';
 import Image from 'next/image';
 import { useRef } from 'react';
 import Slider from 'react-slick';
+import { v4 as uuidv4 } from 'uuid';
 import { Card } from './Card';
 import './caseslider.css';
-import { v4 as uuidv4 } from 'uuid';
-import { SampleNextArrow, SamplePrevArrow } from '@/components/Home/Testimonial/Testimonial';
-import console from 'console';
 
 type CaseSliderProps = {
   data: {
@@ -25,18 +23,18 @@ export const CaseSlider: FC<CaseSliderProps> = ({ data }) => {
   const slider = useRef<Slider | null>(null);
 
   const settings = {
-      dots: false,
-      infinite: true,
-      arrows: false,
-      speed: 700,
-      slidesToShow: 4,
-      slidesToScroll: 1,
-      responsive: [
-        { breakpoint: 1424, settings: { slidesToShow: 3, slidesToScroll: 1 } },
-        { breakpoint: 1124, settings: { slidesToShow: 2, slidesToScroll: 1 } },
-        { breakpoint: 600, settings: { slidesToShow: 1, slidesToScroll: 1 } },
-      ],
-    };
+    dots: false,
+    infinite: true,
+    arrows: false,
+    speed: 700,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    responsive: [
+      { breakpoint: 1424, settings: { slidesToShow: 3, slidesToScroll: 1 } },
+      { breakpoint: 1124, settings: { slidesToShow: 2, slidesToScroll: 1 } },
+      { breakpoint: 600, settings: { slidesToShow: 1, slidesToScroll: 1 } },
+    ],
+  };
 
   const nextButtonHandler = () => slider.current?.slickNext();
   const previousButtonHandler = () => slider.current?.slickPrev();
@@ -45,15 +43,15 @@ export const CaseSlider: FC<CaseSliderProps> = ({ data }) => {
     <div className="caseSlider">
       <section>
         <Slider ref={slider} {...settings}>
-          {data.map((el)=>(
-          <Card
-            key={uuidv4()}
-            id={uuidv4()}
-            image={el} // Pass the absolute image URL
+          {data && data.map(el => (
+            <Card
+              key={uuidv4()}
+              id={uuidv4()}
+              image={el} // Pass the absolute image URL
             // blockChainLink={el.fields?.tags || ''}
             // name={el.fields?.shortDescription || ''}
             // description={el.fields?.longDescription || ''}
-          />
+            />
           ))}
         </Slider>
 

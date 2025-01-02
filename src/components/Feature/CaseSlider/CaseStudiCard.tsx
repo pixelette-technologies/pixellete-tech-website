@@ -15,7 +15,7 @@ type CaseStudiCardProps = {
 
 export const CaseStudiCard: FC<CaseStudiCardProps> = ({ to, image, tags, name, description }) => {
   return (
-    <Link href={`/case-study/${to}`} data-aos="fade-up" data-aos-duration="500">
+    <Link href={`/case-studies/${to}`} data-aos="fade-up" data-aos-duration="500">
       <div className="caseStudiSectionCard">
         <figure>
           <Image src={image} alt="Case Studies" width={300} height={200} />

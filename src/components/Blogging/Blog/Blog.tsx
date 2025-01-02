@@ -2,7 +2,6 @@ import { Container } from '@/components/Feature/Container/Container';
 import { Heading } from '@/components/Feature/Heading/Heading';
 import Text from '@/components/Feature/Text/Text';
 import { BlogGridWithBanner } from '@/components/Sections/BlogGridWithBanner/BlogGridWithBanner';
-// import BlogGridWithBanner from '@/components/common/BlogGridWithBanner';
 import Image from 'next/image';
 import './blog.css';
 
@@ -43,7 +42,7 @@ export const Blog = ({ blogdata }: BlogProps) => {
         <Container className="main">
           <div className="blogsPage-background">
             <Image
-              src="/images/blogs/blogsMainBackground"
+              src="/images/blogs/blogsMainBackground.svg"
               alt="background"
               layout="fill"
               objectFit="cover"

@@ -103,7 +103,7 @@ export const BlogSection = ({ heading, text }) => {
                 date={blog.fields.date || 'No date available'}
                 heading={blog.fields.name || 'No title'}
                 description={blog.fields.shortDescription || 'No description'}
-                to={`/blog/${blog.sys.id}`}
+                to={`/blogs/${blog.fields.slug}`}
               />
             );
           })}

@@ -10,7 +10,7 @@ import styles from './navbar.module.css';
 type SubMenu = {
   id: string;
   name: string;
-  href?: string; // 'href' is preferred for Next.js instead of 'to'
+  to?: string; // 'href' is preferred for Next.js instead of 'to'
   subMenus?: SubMenu[];
 };
 
@@ -67,7 +67,7 @@ export const NavbarDropDown: FC<NavbarDropDownProps> = ({ name, subMenus }) => {
                   />
                 )
               : (
-                  <Link key={el.id} href={el.href || '#'} onClick={() => setActive(false)}>
+                  <Link key={el.id} href={el.to || '#'} onClick={() => setActive(false)}>
                     {el.name}
                   </Link>
                 ),
