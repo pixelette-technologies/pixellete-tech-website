@@ -2,15 +2,15 @@
   /* .teckStackText{
     font-size: 30px;
   } */
-  .teckStackText{
-    color: #2181E3;
+  .teckStackText {
+    color: #2181e3;
     font-size: 6px;
   }
 }
 
 @media screen and (min-width: 600px) {
-  .teckStackText{
+  .teckStackText {
     font-size: 16px;
-    color: #2181E3;
+    color: #2181e3;
   }
 }

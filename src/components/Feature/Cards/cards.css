@@ -242,9 +242,6 @@
   }
 }
 
-
-
-
 .yourPlanCardGrid > div > h1 {
   padding-bottom: 1.6rem;
   text-align: left;
@@ -277,7 +274,9 @@
   transition: 0.5s all;
 }
 .servicesCard:hover {
-  box-shadow: 0 4px 8px #0003, 0 6px 20px #00000030;
+  box-shadow:
+    0 4px 8px #0003,
+    0 6px 20px #00000030;
 }
 .servicesCard > div > *:nth-child(2) {
   margin-top: 2.4rem;

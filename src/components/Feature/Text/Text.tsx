@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react';
 import React from 'react';
-import './text.css'
+import './text.css';
 
 type TextProps = {
   className?: string;

@@ -4,7 +4,7 @@ import { ErrorMessage, useField } from 'formik';
 import { motion } from 'framer-motion';
 import { useEffect, useRef, useState } from 'react';
 import { IoIosArrowDown } from 'react-icons/io';
-import './form.css'
+import './form.css';
 
 type FormInputWithDropDownProps = {
   label: string;

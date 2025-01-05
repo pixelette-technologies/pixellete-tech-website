@@ -1,7 +1,8 @@
 .specialSection-background,
 .heroSectionAiServices-background {
   flex: 1;
-}.specialSection-background {
+}
+.specialSection-background {
   position: relative;
 }
 .specialSection-background > img {
@@ -9,7 +10,8 @@
   z-index: -90;
   width: 100%;
   margin-top: -45rem;
-}.specialSection {
+}
+.specialSection {
   margin-top: 6rem;
 }
 .specialSection-background {
@@ -84,14 +86,7 @@
 .specialSection > div > section > *:first-child > *:last-child > div {
   display: flex;
 }
-.specialSection
-  > div
-  > section
-  > *:first-child
-  > *:last-child
-  > div
-  > section
-  > img {
+.specialSection > div > section > *:first-child > *:last-child > div > section > img {
   height: 2rem;
   width: 2rem;
   margin-top: 0.5rem;
@@ -99,41 +94,24 @@
 .specialSection > div > section > *:first-child > *:last-child > div > div {
   margin-left: 2.4rem;
 }
-.specialSection
-  > div
-  > section
-  > *:first-child
-  > *:last-child
-  > div
-  > div
-  > *
-  :first-child {
+.specialSection > div > section > *:first-child > *:last-child > div > div > * :first-child {
   margin-bottom: 0.8rem;
 }
-.specialSection
-  > div
-  > section
-  > *:first-child
-  > *:last-child
-  > div
-  > div
-  > *:last-child {
+.specialSection > div > section > *:first-child > *:last-child > div > div > *:last-child {
   color: #fbfbfba1;
 }
-.specialSection
-  > div
-  > section
-  > *:first-child
-  > *:last-child
-  > *:not(:last-child) {
+.specialSection > div > section > *:first-child > *:last-child > *:not(:last-child) {
   margin-bottom: 2.8rem;
-}.specialSectionn div section {
+}
+.specialSectionn div section {
   width: fit-content;
   margin: 0 auto;
-}.award-text {
+}
+.award-text {
   display: flex;
   flex-direction: column;
-}ul.project-deilvered {
+}
+ul.project-deilvered {
   font-size: 1.8rem;
   margin-left: 4rem;
   margin-top: 1rem;

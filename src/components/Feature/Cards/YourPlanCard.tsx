@@ -47,18 +47,18 @@ const YourPlanCard: FC<YourPlanCardProps> = ({ data }) => {
             </div>
             <Text className="primary--bold">{el.name}</Text>
             <Text className="titory">{el.description}</Text>
-            <div style={{display: 'flex', alignItems: 'center'}}>
-            <Text className="titory-link">
-              {el.link}
-              {' '}
-            </Text>
+            <div style={{ display: 'flex', alignItems: 'center' }}>
+              <Text className="titory-link">
+                {el.link}
+                {' '}
+              </Text>
               <div>
-              <Image
-                src={el.linkIcon}
-                alt="link icon"
-                width={20}
-                height={20}
-              />
+                <Image
+                  src={el.linkIcon}
+                  alt="link icon"
+                  width={20}
+                  height={20}
+                />
               </div>
             </div>
           </div>

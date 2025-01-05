@@ -15,9 +15,9 @@ export const AiServiceTable: React.FC<AiServiceTableProps> = () => {
         <center style={{ marginTop: '10rem' }}>
           <Heading className="primary">
             Select a plan that aligns best with
-            
+
             <br />
-            
+
             your project development
             goals
           </Heading>
@@ -25,11 +25,11 @@ export const AiServiceTable: React.FC<AiServiceTableProps> = () => {
           <Text className="titory--bold">
             Every project is unique, and so are our solutions. Our developer
             engagement models are crafted to provide the right level of
-            
+
             <br />
             support for your development needs. All you’ve got to do is select
             whether you want complete outsourcing services, staff
-            
+
             <br />
             augmentation services or dedicated development teams service and
             we’ll help bring your project to life.

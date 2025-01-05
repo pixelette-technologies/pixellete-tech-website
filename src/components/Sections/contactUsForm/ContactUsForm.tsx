@@ -30,13 +30,13 @@ type FormValues = {
 export const ContactUsForm: React.FC<ContactUsProps> = (props) => {
   const [statusMessage, setStatusMessage] = useState<string>('');
 
-  const dummyValues = [
-    'Search Engine',
-    'Clutch',
-    'Social Media',
-    'Referral',
-    'Others',
-  ];
+  // const dummyValues = [
+  //   'Search Engine',
+  //   'Clutch',
+  //   'Social Media',
+  //   'Referral',
+  //   'Others',
+  // ];
 
   const initialValues: FormValues = {
     fullName: '',

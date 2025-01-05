@@ -41,7 +41,7 @@ const detail = [
     title: '',
     lists: [
       {
-        title: `Transfer of Ownership: Smart contracts guarantee safe and open ownership transfers. The contract automatically changes the owner’s data on the blockchain whenever an NFT is sold or transferred. As a result, there is no longer a need for middlemen, and the transaction history is protected against tampering.`,
+        title:`Transfer of Ownership: Smart contracts guarantee safe and open ownership transfers. The contract automatically changes the owner’s data on the blockchain whenever an NFT is sold or transferred. As a result, there is no longer a need for middlemen, and the transaction history is protected against tampering.`,
         subList: [],
       },
     ],

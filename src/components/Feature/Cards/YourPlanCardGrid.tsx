@@ -8,19 +8,19 @@ export const YourPlanCardGrid = ({ heading, text, data }) => {
   return (
     <div className="yourPlanCardGrid">
       <Container className="main margins">
-          <Heading
-            className="secondry"
-            animation="fade-up"
-            duration="300"
-            id="h_ani"
-          >
-            {heading}
-          </Heading>
-          <br />
-          <Text className="secondry" animation="fade-up" duration="500">
-            {text}
-          </Text>
-          <br />
+        <Heading
+          className="secondry"
+          animation="fade-up"
+          duration="300"
+          id="h_ani"
+        >
+          {heading}
+        </Heading>
+        <br />
+        <Text className="secondry" animation="fade-up" duration="500">
+          {text}
+        </Text>
+        <br />
         <br />
         <section>
           <YourPlanCard data={data} />

@@ -112,13 +112,13 @@ const DetailsNavigate = (props) => {
               <Heading className="blogCardHeading">
                 Overview
               </Heading>
-              {/* {data?.map((ls, index) => {
+              {data?.map((ls, index) => {
                 const { title } = ls;
                 return (
                   <>
                     {title && (
                       <div
-                        key={uuidv4()}
+                        key={index}
                         onClick={() => handleOverviewItemClick(title)}
                       >
                         {props.overViewIndex && (
@@ -135,7 +135,7 @@ const DetailsNavigate = (props) => {
                     )}
                   </>
                 );
-              })} */}
+              })}
               {singleBlogDetail.fields?.content && (
                 extractMarkdownHeadings(singleBlogDetail.fields?.content)
                   .map(item => (
@@ -196,11 +196,11 @@ const DetailsNavigate = (props) => {
             </Text>
           )}
           {/* </Element> */}
-          {/* {data?.map((ls, index) => {
+          {data?.map((ls, index) => {
             const { title, lists, description } = ls;
 
             return (
-              <div id={title} key={uuidv4()}>
+              <div id={title} key={index}>
                 {title && (
                   <header>
                     <Heading
@@ -238,7 +238,7 @@ const DetailsNavigate = (props) => {
 
               </div>
             );
-          })} */}
+          })}
         </div>
       </section>
     </div>

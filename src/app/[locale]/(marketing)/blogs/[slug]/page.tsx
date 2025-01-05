@@ -1,11 +1,9 @@
-"use client"
 import { Container } from '@/components/Feature/Container/Container';
-import DetailsNavigate from '@/components/Policies/DetailNavigate/DetailsNavigate';
-import { EvaluateBusiness } from '@/components/Sections/EvaluateBusiness/EvaluateBusiness';
 import { createClient } from 'contentful';
-import React, { useEffect, useState } from 'react';
+import Image from 'next/image';
+import React from 'react';
 import './blogdetail.css';
-import { useParams } from 'next/navigation';
+import { EvaluateBusiness } from '@/components/Sections/EvaluateBusiness/EvaluateBusiness';
 
 // Contentful client
 const client = createClient({
@@ -32,41 +30,13 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 }
 
 const BlogPostPage = async ({ params }: { params: { slug: string } }) => {
-  const [singleBlogDetail, setSingleBlogDetail] = useState([]);
-  const { id } = useParams();
+  const blog = await getBlogPost(params.slug);
+  // console.log(blog);
+  if (!blog) {
+    return <div>Blog post not found</div>;
+  }
 
-  useEffect(() => {
-    const client = createClient({
-      space: "ggtsbq0gqfii",
-      accessToken: "VZvVye8dMIc497wF-1pNt5rdYUG-h4E30uX58AcGVUo",
-    });
-    const getEntryById = async () =>{
-      try {
-        client.getEntry({content_type: 'blogs'}).then((response) => {
-        console.log("response: ", response);
-        setSingleBlogDetail(response);
-        })
-      } catch (error) {
-        console.log(error)
-      }
-    }
-
-    getEntryById()
-}, [])
-  // const blog = await getBlogPost(params.slug);
-
-  // if (!blog) {
-  //   return <div>Blog post not found</div>;
-  // }
-
-  // const { title, content, bannerImage } = blog.fields;
-
-  // Prepare data for DetailsNavigate
-  // const singleBlogDetail = {
-  //   title,
-  //   content,
-  //   bannerImage: bannerImage?.fields?.file?.url,
-  // };
+  const { title, content, bannerImage } = blog ? blog.fields : '';
 
   return (
     <>
@@ -80,20 +50,18 @@ const BlogPostPage = async ({ params }: { params: { slug: string } }) => {
           </div>
         </Container>
         <section>
-          <Container className="main margins">
-            <DetailsNavigate
-              data={singleBlogDetail} // Pass the blog data as props
+          {/* <Container className="main margins">
+             <DetailsNavigate
+              // data={singleBlogDetail}
               headingIndex={false}
               overViewIndex={false}
-              headerSection
+              headerSection={true}
             />
-          </Container>
+          </Container> */}
         </section>
       </div>
-      <EvaluateBusiness />
-      {/* Uncomment if you want to use the blog post content later */}
-      {/*
-      <div className="blog-post">
+      <EvaluateBusiness/>
+      {/* <div className="blog-post">
         <Container className="main">
           <div className="blog-banner">
             <img src={bannerImage && bannerImage.fields.file.url} alt={title} />
@@ -103,8 +71,7 @@ const BlogPostPage = async ({ params }: { params: { slug: string } }) => {
           <h1>{title && title}</h1>
           <div dangerouslySetInnerHTML={content && { __html: content }} />
         </div>
-      </div>
-      */}
+      </div> */}
     </>
   );
 };

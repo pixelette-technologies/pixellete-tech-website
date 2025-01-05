@@ -1,11 +1,11 @@
+import { Button } from '@/components/Feature/Button/Button';
+import { Container } from '@/components/Feature/Container/Container';
+import { Heading } from '@/components/Feature/Heading/Heading';
+import Text from '@/components/Feature/Text/Text';
 import Image from 'next/image';
 import Link from 'next/link'; // Correct usage of Next.js routing
 import React from 'react';
 import './herosection.css';
-import { Container } from '@/components/Feature/Container/Container';
-import { Heading } from '@/components/Feature/Heading/Heading';
-import Text from '@/components/Feature/Text/Text';
-import { Button } from '@/components/Feature/Button/Button';
 // import { Link as ScrollLink } from 'react-scroll';
 
 type HeroSectionProps = object;
@@ -38,7 +38,7 @@ export const HeroSection: React.FC<HeroSectionProps> = () => {
             ))}
           </blockquote>
           <Heading data-aos="zoom-out" data-aos-duration="700">
-          Shaping the future with every line of code
+            Shaping the future with every line of code
           </Heading>
           <Text
             className="primary"
