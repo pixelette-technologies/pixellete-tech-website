@@ -1,9 +1,8 @@
-.AiServiceTable{
+.AiServiceTable {
   display: flex;
   margin-top: 10rem;
   gap: 1rem;
 }
-
 
 .AiServiceTable table {
   width: 100%;
@@ -27,7 +26,7 @@
   /* color: #fff; */
 }
 .AiServiceTable td {
-  background-color: #0F0F0FB2;
+  background-color: #0f0f0fb2;
   /* border: 1px solid white; */
   color: #fff;
 }
@@ -54,11 +53,11 @@
     /* color: #fff; */
   }
   .AiServiceTable td {
-    background-color: #0F0F0FB2;
+    background-color: #0f0f0fb2;
     /* border: 1px solid white; */
     color: #fff;
   }
-  .AiServiceTable td button{
+  .AiServiceTable td button {
     font-size: 10px;
   }
 }
@@ -85,11 +84,11 @@
     /* color: #fff; */
   }
   .AiServiceTable td {
-    background-color: #0F0F0FB2;
+    background-color: #0f0f0fb2;
     /* border: 1px solid white; */
     color: #fff;
   }
-  .AiServiceTable td button{
+  .AiServiceTable td button {
     font-size: 9px;
   }
 }
@@ -116,11 +115,11 @@
     /* color: #fff; */
   }
   .AiServiceTable td {
-    background-color: #0F0F0FB2;
+    background-color: #0f0f0fb2;
     /* border: 1px solid white; */
     color: #fff;
   }
-  .AiServiceTable td button{
+  .AiServiceTable td button {
     font-size: 8px;
     padding: 1px;
   }
@@ -131,7 +130,6 @@
   margin-top: 10rem;
   gap: 1rem;
 } */
-
 
 /* .AiServiceTable table {
   width: 100%;

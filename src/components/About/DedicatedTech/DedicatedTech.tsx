@@ -53,26 +53,26 @@ const DedicatedTech: React.FC = () => {
         </Text>
       </center>
       <Container className="main margins">
-        <div className="margins" style={{ marginBottom: '3rem', display: 'flex', justifyContent: 'space-between'}}>
-        <span
-          className='dedicatedTechLinks'
-        >
-          {cards.map((card, index) => (
-            <a
-              key={index}
-              className={`${
-                selectedCardIndex === index
-                  ? 'selectedDedicatedCard'
-                  : 'linkDedicatedCard'
-              }`}
-              
-              onClick={() => setSelectedCardIndex(index)} // Update the selected card index
-            >
-              {card.title}
-            </a>
-          ))}
-        </span>
-          <div id='dedicatedDataCard' key={uuidv4()} data-aos="fade-up" data-aos-duration="600">
+        <div className="margins" style={{ marginBottom: '3rem', display: 'flex', justifyContent: 'space-between' }}>
+          <span
+            className="dedicatedTechLinks"
+          >
+            {cards.map((card, index) => (
+              <a
+                key={index}
+                className={`${
+                  selectedCardIndex === index
+                    ? 'selectedDedicatedCard'
+                    : 'linkDedicatedCard'
+                }`}
+
+                onClick={() => setSelectedCardIndex(index)} // Update the selected card index
+              >
+                {card.title}
+              </a>
+            ))}
+          </span>
+          <div id="dedicatedDataCard" key={uuidv4()} data-aos="fade-up" data-aos-duration="600">
             <div
               style={{
                 textAlign: 'center',

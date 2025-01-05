@@ -1,9 +1,9 @@
-import { Button } from "@/components/Feature/Button/Button";
-import { Container } from "@/components/Feature/Container/Container";
-import { Heading } from "@/components/Feature/Heading/Heading";
-import Text from "@/components/Feature/Text/Text";
-import Link from "next/link";
-import './index.css'
+import { Button } from '@/components/Feature/Button/Button';
+import { Container } from '@/components/Feature/Container/Container';
+import { Heading } from '@/components/Feature/Heading/Heading';
+import Text from '@/components/Feature/Text/Text';
+import Link from 'next/link';
+import './index.css';
 
 const NoDeveloperReq = (props) => {
   return (

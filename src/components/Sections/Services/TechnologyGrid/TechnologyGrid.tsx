@@ -1,4 +1,4 @@
-"use client"
+'use client';
 import { Container } from '@/components/Feature/Container/Container';
 import { Heading } from '@/components/Feature/Heading/Heading';
 import { Text } from '@/components/Feature/Text/Text';
@@ -82,18 +82,20 @@ export const TechnologyGrid: React.FC<TechnologyGridProps> = ({
               borderRadius: '8px',
             }}
           >
-            {selectedData ? (
-              <div style={{display: 'flex', flexDirection: 'column', textAlign: 'center', gap: '2rem'}}>
-                <Text className="primary">{selectedData.title}</Text>
-                {selectedData.description && (
-                  <Text className="titory--bold">
-                    {selectedData.description}
-                  </Text>
+            {selectedData
+              ? (
+                  <div style={{ display: 'flex', flexDirection: 'column', textAlign: 'center', gap: '2rem' }}>
+                    <Text className="primary">{selectedData.title}</Text>
+                    {selectedData.description && (
+                      <Text className="titory--bold">
+                        {selectedData.description}
+                      </Text>
+                    )}
+                  </div>
+                )
+              : (
+                  <Text className="primary">Click on a card to see more details.</Text>
                 )}
-              </div>
-            ) : (
-              <Text className="primary">Click on a card to see more details.</Text>
-            )}
           </div>
         </div>
       </Container>

@@ -1,5 +1,5 @@
-import { Container } from "@/components/Feature/Container/Container";
-import { Heading } from "@/components/Feature/Heading/Heading";
+import { Container } from '@/components/Feature/Container/Container';
+import { Heading } from '@/components/Feature/Heading/Heading';
 import Image from 'next/image'; // Import Next.js Image component
 import './whatmakeusspecial.css';
 
@@ -20,7 +20,7 @@ const WhatMakeUsSpecialHome: React.FC = () => {
             <br />
             <div>
               <Image
-                src='/images/home/clutch.png'
+                src="/images/home/clutch.png"
                 alt="heroImage"
                 data-aos="fade-up"
                 data-aos-duration="600"
@@ -28,7 +28,7 @@ const WhatMakeUsSpecialHome: React.FC = () => {
                 height={200} // Add a height to the image
               />
               <Image
-                src='/images/home/computervision.png'
+                src="/images/home/computervision.png"
                 alt="heroImage"
                 data-aos="fade-up"
                 data-aos-duration="600"
@@ -36,7 +36,7 @@ const WhatMakeUsSpecialHome: React.FC = () => {
                 height={200}
               />
               <Image
-                src='/images/home/clutch.png'
+                src="/images/home/clutch.png"
                 alt="heroImage"
                 data-aos="fade-up"
                 data-aos-duration="600"
@@ -44,7 +44,7 @@ const WhatMakeUsSpecialHome: React.FC = () => {
                 height={200}
               />
               <Image
-                src='/images/home/aicompany.png'
+                src="/images/home/aicompany.png"
                 alt="heroImage"
                 data-aos="fade-up"
                 data-aos-duration="600"
@@ -52,7 +52,7 @@ const WhatMakeUsSpecialHome: React.FC = () => {
                 height={200}
               />
               <Image
-                src='/images/home/clutch.png'
+                src="/images/home/clutch.png"
                 alt="heroImage"
                 data-aos="fade-up"
                 data-aos-duration="600"
@@ -68,7 +68,7 @@ const WhatMakeUsSpecialHome: React.FC = () => {
             <br />
             <div>
               <Image
-                src='/images/home/Partnership1.svg'
+                src="/images/home/Partnership1.svg"
                 alt="heroImage"
                 data-aos="fade-up"
                 data-aos-duration="600"
@@ -76,7 +76,7 @@ const WhatMakeUsSpecialHome: React.FC = () => {
                 height={200}
               />
               <Image
-                src='/images/home/Partnership2.svg'
+                src="/images/home/Partnership2.svg"
                 alt="heroImage"
                 data-aos="fade-up"
                 data-aos-duration="600"
@@ -84,7 +84,7 @@ const WhatMakeUsSpecialHome: React.FC = () => {
                 height={200}
               />
               <Image
-                src='/images/home/Partnership3.svg'
+                src="/images/home/Partnership3.svg"
                 alt="heroImage"
                 data-aos="fade-up"
                 data-aos-duration="600"
@@ -92,7 +92,7 @@ const WhatMakeUsSpecialHome: React.FC = () => {
                 height={200}
               />
               <Image
-                src='/images/home/Partnership4.svg'
+                src="/images/home/Partnership4.svg"
                 alt="heroImage"
                 data-aos="fade-up"
                 data-aos-duration="600"
@@ -100,7 +100,7 @@ const WhatMakeUsSpecialHome: React.FC = () => {
                 height={200}
               />
               <Image
-                src='/images/home/Partnership5.svg'
+                src="/images/home/Partnership5.svg"
                 alt="heroImage"
                 data-aos="fade-up"
                 data-aos-duration="600"
@@ -108,7 +108,7 @@ const WhatMakeUsSpecialHome: React.FC = () => {
                 height={200}
               />
               <Image
-                src='/images/home/Partnership6.svg'
+                src="/images/home/Partnership6.svg"
                 alt="heroImage"
                 data-aos="fade-up"
                 data-aos-duration="600"
@@ -116,8 +116,8 @@ const WhatMakeUsSpecialHome: React.FC = () => {
                 height={200}
               />
               <Image
-                style={{ width: "50px" }}
-                src='/images/home/Partnership7.svg'
+                style={{ width: '50px' }}
+                src="/images/home/Partnership7.svg"
                 alt="heroImage"
                 data-aos="fade-up"
                 data-aos-duration="600"
@@ -125,7 +125,7 @@ const WhatMakeUsSpecialHome: React.FC = () => {
                 height={50}
               />
               <Image
-                src='/images/home/Partnership8.svg'
+                src="/images/home/Partnership8.svg"
                 alt="heroImage"
                 data-aos="fade-up"
                 data-aos-duration="600"

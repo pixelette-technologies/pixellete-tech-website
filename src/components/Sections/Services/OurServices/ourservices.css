@@ -55,81 +55,86 @@
   margin: 2rem 0;
 }
 
-
-.ourServicesLists{
+.ourServicesLists {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   width: 100%;
 }
 
-
-.ourServicesLists div:nth-child(1), .ourServicesLists div:nth-child(2){
+.ourServicesLists div:nth-child(1),
+.ourServicesLists div:nth-child(2) {
   display: flex;
   flex-direction: column;
   gap: 3rem;
 }
 
-.ourServicesLists div:nth-child(1) p, .ourServicesLists div:nth-child(2) p{
+.ourServicesLists div:nth-child(1) p,
+.ourServicesLists div:nth-child(2) p {
   cursor: pointer;
   position: relative;
 }
 
-.ourServicesLists div:nth-child(1) p::before, .ourServicesLists div:nth-child(2) p::before{
+.ourServicesLists div:nth-child(1) p::before,
+.ourServicesLists div:nth-child(2) p::before {
   content: '';
   position: absolute;
   width: 0;
   height: 4px;
-  background-color: #1F7ADA;
+  background-color: #1f7ada;
   bottom: 0;
   left: 0;
   transition: all ease 1s;
 }
 
-.ourServicesLists div:nth-child(1) p:hover::before, .ourServicesLists div:nth-child(2) p:hover::before{
+.ourServicesLists div:nth-child(1) p:hover::before,
+.ourServicesLists div:nth-child(2) p:hover::before {
   content: '';
   position: absolute;
   width: 100%;
   height: 4px;
-  background-color: #1F7ADA;
+  background-color: #1f7ada;
   bottom: 0;
   left: 0;
 }
 
-.ourServicesLists{
+.ourServicesLists {
   display: flex;
   justify-content: space-between;
 }
 
-
-.ourServicesLists div:nth-child(1), .ourServicesLists div:nth-child(2){
+.ourServicesLists div:nth-child(1),
+.ourServicesLists div:nth-child(2) {
   display: flex;
   flex-direction: column;
   gap: 3rem;
 }
 
-.ourServicesLists div:nth-child(1) p, .ourServicesLists div:nth-child(2) p{
+.ourServicesLists div:nth-child(1) p,
+.ourServicesLists div:nth-child(2) p {
   cursor: pointer;
   position: relative;
 }
 
-.ourServicesLists div:nth-child(1) p::before, .ourServicesLists div:nth-child(2) p::before{
+.ourServicesLists div:nth-child(1) p::before,
+.ourServicesLists div:nth-child(2) p::before {
   content: '';
   position: absolute;
   width: 0;
   height: 4px;
-  background-color: #1F7ADA;
+  background-color: #1f7ada;
   bottom: 0;
   left: 0;
   transition: all ease 1s;
 }
 
-.ourServicesLists div:nth-child(1) p:hover::before, .ourServicesLists div:nth-child(2) p:hover::before{
+.ourServicesLists div:nth-child(1) p:hover::before,
+.ourServicesLists div:nth-child(2) p:hover::before {
   content: '';
   position: absolute;
   width: 100%;
   height: 4px;
-  background-color: #1F7ADA;
+  background-color: #1f7ada;
   bottom: 0;
   left: 0;
 }

@@ -1,6 +1,7 @@
 'use client';
 
-import { FC, useRef } from 'react';
+import type { FC } from 'react';
+import type { Settings } from 'react-slick';
 import { Button } from '@/components/Feature/Button/Button';
 import { TestimonialCard } from '@/components/Feature/Cards/TestimonialCard';
 import { Container } from '@/components/Feature/Container/Container';
@@ -8,16 +9,17 @@ import { Heading } from '@/components/Feature/Heading/Heading';
 import { Text } from '@/components/Feature/Text/Text';
 import data from '@/data';
 import Image from 'next/image';
-import Slider, { Settings } from 'react-slick';
+import { useRef } from 'react';
 import { FiExternalLink } from 'react-icons/fi';
+import Slider from 'react-slick';
 import { v4 as uuidv4 } from 'uuid';
 import styles from './testimonial.module.css';
 
-interface ArrowProps {
+type ArrowProps = {
   className?: string;
   style?: React.CSSProperties;
   onClick?: () => void;
-}
+};
 
 export const SampleNextArrow: FC<ArrowProps> = ({ className, style, onClick }) => (
   <div
@@ -55,9 +57,9 @@ export const SamplePrevArrow: FC<ArrowProps> = ({ className, style, onClick }) =
   </div>
 );
 
-interface TestimonialProps {
+type TestimonialProps = {
   background?: string;
-}
+};
 
 export const Testimonial: FC<TestimonialProps> = ({ background }) => {
   const slider = useRef<Slider | null>(null);

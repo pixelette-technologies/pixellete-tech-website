@@ -1,4 +1,4 @@
-"use client"
+'use client';
 import { Container } from '@/components/Feature/Container/Container';
 import { Heading } from '@/components/Feature/Heading/Heading';
 import Text from '@/components/Feature/Text/Text';
@@ -34,23 +34,23 @@ export const OurServices: React.FC<OurServicesProps> = ({
   const [currentService, setCurrentService] = useState<HighlightedService>(highlightedService);
 
   const handleServiceClick = (item: string) => {
-    console.log("Clicked item:", item);
-  
+    console.log('Clicked item:', item);
+
     if (!serviceMapping) {
-      console.error("Service mapping is undefined.");
+      console.error('Service mapping is undefined.');
       return;
     }
-  
+
     const newService = serviceMapping[item];
     if (newService) {
-      console.log("Setting current service to:", newService);
+      console.log('Setting current service to:', newService);
       setCurrentService(newService);
     } else {
       console.error(`No service found for key: ${item}`);
     }
   };
   useEffect(() => {
-    console.log("Current service updated:", currentService);
+    console.log('Current service updated:', currentService);
   }, [currentService]);
 
   return (
@@ -70,7 +70,7 @@ export const OurServices: React.FC<OurServicesProps> = ({
                   className="primary"
                 >
                   <p onClick={() => handleServiceClick(item)}>
-                  {item}
+                    {item}
                   </p>
                 </Text>
               ))}
@@ -82,7 +82,7 @@ export const OurServices: React.FC<OurServicesProps> = ({
               backgroundColor: '#0F0F0FB2',
               padding: '2rem',
               borderRadius: '13.84px',
-              height: '350px'
+              height: '350px',
             }}
           >
             <img src={currentService.imageSrc} alt={currentService.title} />

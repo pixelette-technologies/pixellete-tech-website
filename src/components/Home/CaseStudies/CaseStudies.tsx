@@ -1,6 +1,7 @@
 'use client';
 
 import { Button } from '@/components/Feature/Button/Button';
+import { Card } from '@/components/Feature/CaseSlider/Card';
 import { Container } from '@/components/Feature/Container/Container';
 import { Heading } from '@/components/Feature/Heading/Heading';
 import { Text } from '@/components/Feature/Text/Text';
@@ -10,11 +11,10 @@ import { FiExternalLink } from 'react-icons/fi';
 import Slider from 'react-slick';
 import { v4 as uuidv4 } from 'uuid';
 import './casestudies.css';
-import { Card } from '@/components/Feature/CaseSlider/Card';
 
-interface CaseStudiesProps {
+type CaseStudiesProps = {
   images: string[];
-}
+};
 
 const images: string[] = [
   '/images/home/CaseSliderImgg.png',
@@ -78,7 +78,7 @@ export const CaseStudies: React.FC<CaseStudiesProps> = () => {
           <section>
             <div className="id">
               <Slider ref={slider} {...settings}>
-                {images.map((el) => (
+                {images.map(el => (
                   <a key={uuidv4()} href={el}>
                     <Card image={el} />
                   </a>

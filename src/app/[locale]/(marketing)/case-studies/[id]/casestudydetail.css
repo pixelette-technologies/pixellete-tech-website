@@ -156,34 +156,13 @@
     flex: 1 0 calc(50% - 20px);
   }
 }
-.caseStudieDetail
-  > section
-  > div
-  > section
-  > section
-  > div
-  > div
-  > *:first-child {
+.caseStudieDetail > section > div > section > section > div > div > *:first-child {
   margin-bottom: 1.6rem;
 }
-.caseStudieDetail
-  > section
-  > div
-  > section
-  > section
-  > div
-  > div
-  > *:not(:first-child) {
+.caseStudieDetail > section > div > section > section > div > div > *:not(:first-child) {
   transition: 0.3s ease-in-out;
 }
-.caseStudieDetail
-  > section
-  > div
-  > section
-  > section
-  > div
-  > div
-  > *:not(:first-child):hover {
+.caseStudieDetail > section > div > section > section > div > div > *:not(:first-child):hover {
   transform: scale(1.03);
   text-shadow: 0.8rem 0.7rem 0.6rem rgba(255, 255, 255, 0.7);
 }

@@ -104,13 +104,13 @@
   }
 } */
 
-.menuButton{
+.menuButton {
   display: none;
 }
 
 @media screen and (max-width: 62.6rem) {
-  .menuButton{
-  display: block;
+  .menuButton {
+    display: block;
   }
 }
 
@@ -155,7 +155,7 @@
   height: 2px;
   left: 0;
   top: 3rem;
-  content: "";
+  content: '';
   position: absolute;
   background-color: #fff;
 }

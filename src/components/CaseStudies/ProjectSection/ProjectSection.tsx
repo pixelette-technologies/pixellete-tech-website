@@ -2,12 +2,11 @@
 
 import type { Entry } from 'contentful';
 // import type { Settings } from 'react-slick';
-import type Slider from 'react-slick';
 import { CaseStudiCard } from '@/components/Feature/CaseSlider/CaseStudiCard';
 import { Container } from '@/components/Feature/Container/Container';
 import { Heading } from '@/components/Feature/Heading/Heading';
 import { createClient } from 'contentful';
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import './projectsection.css';
 

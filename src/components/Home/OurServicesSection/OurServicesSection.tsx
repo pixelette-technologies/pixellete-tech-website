@@ -2,10 +2,10 @@ import { Button } from '@/components/Feature/Button/Button';
 import { Container } from '@/components/Feature/Container/Container';
 import { Heading } from '@/components/Feature/Heading/Heading';
 import Text from '@/components/Feature/Text/Text';
-import { FaExternalLinkAlt } from 'react-icons/fa';
 import { technologyStackAiData } from '@/data/technologyStackAiData';
-import './ourservicessection.css';
 import React from 'react';
+import { FaExternalLinkAlt } from 'react-icons/fa';
+import './ourservicessection.css';
 
 const OurServicesSection: React.FC = () => {
   return (
@@ -19,7 +19,7 @@ const OurServicesSection: React.FC = () => {
           >
             We bring full-stack development services to the table
           </Heading>
-          <Text className="secondry" animation="fade-up" >
+          <Text className="secondry" animation="fade-up">
             Explore our full suite of development services designed to deliver success to businesses across various industries.
           </Text>
         </center>
@@ -52,7 +52,9 @@ const OurServicesSection: React.FC = () => {
                   gap: '0.7rem',
                 }}
               >
-                Explore All Services <FaExternalLinkAlt />
+                Explore All Services
+                {' '}
+                <FaExternalLinkAlt />
               </span>
             </Button>
           </center>

@@ -1,10 +1,9 @@
 import type { FC } from 'react';
-import Image from 'next/image';
 import Link from 'next/link';
-import './caseslider.css';
 import { Button } from '../Button/Button';
-import Text from '../Text/Text';
 import { Heading } from '../Heading/Heading';
+import Text from '../Text/Text';
+import './caseslider.css';
 
 type CardProps = {
   id: string;
@@ -35,7 +34,7 @@ export const Card: FC<CardProps> = ({ id, image, blockChainLink, name, descripti
               <Button className="primary">{blockChainLink}</Button>
             </Link>
           </div>
-          <Heading className='primary'>{truncatedName}</Heading>
+          <Heading className="primary">{truncatedName}</Heading>
           <Text className="titory">{truncatedDescription}</Text>
         </div>
       </div>

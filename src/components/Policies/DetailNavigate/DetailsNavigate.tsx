@@ -1,16 +1,13 @@
-"use client"
-import React, { useState, useRef, useEffect } from "react";
-import { v4 as uuidv4 } from "uuid";
-import { motion } from "framer-motion";
+'use client';
+import { Heading } from '@/components/Feature/Heading/Heading';
+import Text from '@/components/Feature/Text/Text';
+import { createClient } from 'contentful';
+import { motion } from 'framer-motion';
+import Link from 'next/link';
+import { useParams } from 'next/navigation';
+import React, { useEffect, useRef, useState } from 'react';
 import ReactMarkdown from 'react-markdown';
-import { createClient } from "contentful";
-import { useParams } from "next/navigation";
-import { Heading } from "@/components/Feature/Heading/Heading";
-import Text from "@/components/Feature/Text/Text";
-import Link from "next/link";
-import './index.css'
-
-
+import './index.css';
 
 const DetailsNavigate = (props) => {
   const data = props.data;
@@ -23,33 +20,32 @@ const DetailsNavigate = (props) => {
 
   useEffect(() => {
     const client = createClient({
-      space: "ggtsbq0gqfii",
-      accessToken: "VZvVye8dMIc497wF-1pNt5rdYUG-h4E30uX58AcGVUo",
+      space: 'ggtsbq0gqfii',
+      accessToken: 'VZvVye8dMIc497wF-1pNt5rdYUG-h4E30uX58AcGVUo',
     });
-    const getEntryById = async () =>{
+    const getEntryById = async () => {
       try {
         client.getEntry(id).then((response) => {
-        console.log("responseee: ", response);
-        setSingleBlogDetail(response);
-        })
+          console.log('responseee: ', response);
+          setSingleBlogDetail(response);
+        });
       } catch (error) {
-        console.log(error)
+        console.log(error);
       }
-    }
+    };
 
-    getEntryById()
-}, [])
-  console.log('Hello :', singleBlogDetail) 
-
+    getEntryById();
+  }, []);
+  console.log('Hello :', singleBlogDetail);
 
   useEffect(() => {
     const handleResize = () => {
       setIsOpenContent(window.innerWidth > 1000);
     };
-    window.addEventListener("resize", handleResize);
+    window.addEventListener('resize', handleResize);
     handleResize();
     return () => {
-      window.removeEventListener("resize", handleResize);
+      window.removeEventListener('resize', handleResize);
     };
   }, []);
 
@@ -59,9 +55,9 @@ const DetailsNavigate = (props) => {
 
   useEffect(() => {
     if (isScrollDisabled) {
-      document.body.style.overflowY = "hidden";
+      document.body.style.overflowY = 'hidden';
     } else {
-      document.body.style.overflowY = "auto";
+      document.body.style.overflowY = 'auto';
     }
   }, [isScrollDisabled]);
 
@@ -76,11 +72,10 @@ const DetailsNavigate = (props) => {
 
   const widthForDesktop = window.innerWidth <= 1000 ? 30 : 0;
 
-
   const extractMarkdownHeadings = (content) => {
     const headings = [];
     const lines = content.split('\n');
-  
+
     lines.forEach((line) => {
       const headingMatch = line.match(/^(#{1,6})\s+(.*)/);
       if (headingMatch) {
@@ -89,21 +84,21 @@ const DetailsNavigate = (props) => {
         headings.push({ level, text });
       }
     });
-    console.log(headings)
-  
+    console.log(headings);
+
     return headings;
   };
   return (
     <div className="detailNavigate">
       <div>
         <button
-          style={{ right: isOpenContent ? "60rem" : "30rem" }}
+          style={{ right: isOpenContent ? '60rem' : '30rem' }}
           onClick={handleOverviewClick}
         >
           Overview
         </button>
         <motion.div
-          initial={{ x: "0rem", opacity: 0 }}
+          initial={{ x: '0rem', opacity: 0 }}
           animate={{
             x: isOpenContent
               ? `-${widthForDesktop}rem`
@@ -142,14 +137,14 @@ const DetailsNavigate = (props) => {
                 );
               })} */}
               {singleBlogDetail.fields?.content && (
-              extractMarkdownHeadings(singleBlogDetail.fields?.content)
-              .map((item)=>(
-              <Link href="headings" style={{display: 'flex', flexDirection: 'column', gap: '10px', fontSize: '15px'}}>
-                <ReactMarkdown>
-                  {item.text}
-                </ReactMarkdown>
-              </Link>
-              ))
+                extractMarkdownHeadings(singleBlogDetail.fields?.content)
+                  .map(item => (
+                    <Link href="headings" style={{ display: 'flex', flexDirection: 'column', gap: '10px', fontSize: '15px' }}>
+                      <ReactMarkdown>
+                        {item.text}
+                      </ReactMarkdown>
+                    </Link>
+                  ))
               )}
             </>
           )}
@@ -183,24 +178,24 @@ const DetailsNavigate = (props) => {
                   src={singleBlogDetail.fields?.images?.fields?.file?.url}
                   alt="Blog-Hero-Main-Image"
                   data-aos="fade-up"
-                  data-aos-duration={`500`}
+                  data-aos-duration="500"
                 />
               )}
             </header>
           )}
-                  {/* <Element name="headings"> */}
-                  {singleBlogDetail.fields?.content && (
-                  <Text
-                    className="secondry"
-                    animation="fade-up"
-                    duration="600"
-                  >
-                  <ReactMarkdown>
-                  {singleBlogDetail.fields?.content}
-                  </ReactMarkdown>
-                  </Text>
-                )}
-                  {/* </Element> */}
+          {/* <Element name="headings"> */}
+          {singleBlogDetail.fields?.content && (
+            <Text
+              className="secondry"
+              animation="fade-up"
+              duration="600"
+            >
+              <ReactMarkdown>
+                {singleBlogDetail.fields?.content}
+              </ReactMarkdown>
+            </Text>
+          )}
+          {/* </Element> */}
           {/* {data?.map((ls, index) => {
             const { title, lists, description } = ls;
 
@@ -217,7 +212,7 @@ const DetailsNavigate = (props) => {
                     </Heading>
                   </header>
                 )}
-                
+
                 {title === "Contact" && (
                   <blockquote>
                     <div data-aos="fade-up" data-aos-duration={`500`}>
@@ -240,7 +235,7 @@ const DetailsNavigate = (props) => {
                     </div>
                   </blockquote>
                 )}
-                
+
               </div>
             );
           })} */}
@@ -256,6 +251,6 @@ export const scrollToContactUs = (id) => {
   const contactForm = document.getElementById(id);
   if (contactForm) {
     const offset = contactForm.offsetTop - 10;
-    window.scrollTo({ top: offset, behavior: "smooth" });
+    window.scrollTo({ top: offset, behavior: 'smooth' });
   }
 };

@@ -1,11 +1,11 @@
-import awardsData from "../../../data/awardcard/awardcardData";
+import awardsData from '../../../data/awardcard/awardcardData';
 
 const AwardCards = () => {
   return (
     <>
       <div className="award-section">
         <div className="award-cards">
-          {awardsData.map((award) => (
+          {awardsData.map(award => (
             <div key={award.id} className="award-card">
               <img src={award.src} alt={award.alt} />
             </div>
