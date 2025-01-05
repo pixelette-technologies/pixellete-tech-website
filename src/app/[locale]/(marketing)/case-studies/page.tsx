@@ -1,5 +1,5 @@
 import HeroSection from '@/components/CaseStudies/HeroSection/HeroSection';
-import {ProjectSection} from '@/components/CaseStudies/ProjectSection/ProjectSection';
+import { ProjectSection } from '@/components/CaseStudies/ProjectSection/ProjectSection';
 import { EvaluateBusiness } from '@/components/Sections/EvaluateBusiness/EvaluateBusiness';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 
@@ -32,7 +32,7 @@ export default async function About(props: IAboutProps) {
     <>
       <HeroSection />
       <ProjectSection />
-      <EvaluateBusiness/>
+      <EvaluateBusiness />
       {/* <p>{t('about_paragraph')}</p>
 
       <div className="mt-2 text-center text-sm">

@@ -3,8 +3,7 @@ import type { FieldProps } from 'formik';
 import type { FC } from 'react';
 import { ErrorMessage, useField } from 'formik';
 import { useState } from 'react';
-import './form.css'
-
+import './form.css';
 
 type FormInputProps = {
   label: string;

@@ -2,7 +2,6 @@ import { Container } from '@/components/Feature/Container/Container';
 import { Heading } from '@/components/Feature/Heading/Heading';
 import Text from '@/components/Feature/Text/Text';
 import { BlogGridWithBanner } from '@/components/Sections/BlogGridWithBanner/BlogGridWithBanner';
-import Image from 'next/image';
 import './blog.css';
 
 type BlogProps = {

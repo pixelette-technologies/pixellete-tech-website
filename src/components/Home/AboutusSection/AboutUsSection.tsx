@@ -7,9 +7,9 @@ import { Heading } from '../../Feature/Heading/Heading'; // Simplified import
 import { Text } from '../../Feature/Text/Text'; // Simplified import
 import './aboutussection.css';
 
-interface VisibleSections {
+type VisibleSections = {
   [key: string]: boolean;
-}
+};
 
 const AboutUsSection: React.FC = () => {
   const [visibleSections, setVisibleSections] = useState<VisibleSections>({});
@@ -37,7 +37,7 @@ const AboutUsSection: React.FC = () => {
         }
 
         const isIntersecting = entry.isIntersecting;
-        setVisibleSections((prev) => ({
+        setVisibleSections(prev => ({
           ...prev,
           [sectionId]: isIntersecting,
         }));
@@ -64,10 +64,10 @@ const AboutUsSection: React.FC = () => {
 
     const observer = new IntersectionObserver(handleIntersect, options);
     const targets = document.querySelectorAll('.counter-section');
-    targets.forEach((target) => observer.observe(target));
+    targets.forEach(target => observer.observe(target));
 
     return () => {
-      targets.forEach((target) => observer.unobserve(target));
+      targets.forEach(target => observer.unobserve(target));
     };
   }, [visibleSections]);
 
@@ -84,7 +84,11 @@ const AboutUsSection: React.FC = () => {
           <section data-aos="fade-up" data-aos-duration="1000">
             <div>
               <Heading className="secondry">
-                Our passion lies in building <br /> tech solutions that drive real
+                Our passion lies in building
+                {' '}
+                <br />
+                {' '}
+                tech solutions that drive real
                 change across industries
               </Heading>
               <Text className="secondry">
@@ -97,16 +101,18 @@ const AboutUsSection: React.FC = () => {
                 <section className="counter-section" id={`counter-section-${index + 1}`} key={`counter-section-${index + 1}`}>
                   <h1 data-end={index === 4 ? 97 : index === 5 ? 13 : (index + 1) * 100}>0</h1>
                   <div>
-                    <p>{
-                      [
-                        'Projects Completed',
-                        'Global Team Members',
-                        'Hours in Development',
-                        'Happy Clients',
-                        'Customer Satisfaction',
-                        'Global Locations',
-                      ][index]
-                    }</p>
+                    <p>
+                      {
+                        [
+                          'Projects Completed',
+                          'Global Team Members',
+                          'Hours in Development',
+                          'Happy Clients',
+                          'Customer Satisfaction',
+                          'Global Locations',
+                        ][index]
+                      }
+                    </p>
                   </div>
                 </section>
               ))}
@@ -116,7 +122,7 @@ const AboutUsSection: React.FC = () => {
         <Container className="main margins">
           <section data-aos="fade-up" data-aos-duration="1000">
             <div className="scottland-container" style={{ width: '100%' }}>
-              {[...Array(2)].map((_, i) => (
+              {[...Array.from({ length: 2 })].map((_, i) => (
                 <div
                   className="scottland-section"
                   key={i}

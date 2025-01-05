@@ -6,7 +6,7 @@ import { Container } from '@/components/Feature/Container/Container';
 import { Heading } from '@/components/Feature/Heading/Heading';
 import { Text } from '@/components/Feature/Text/Text';
 import { BlogGridWithBanner } from '@/components/Sections/BlogGridWithBanner/BlogGridWithBanner';
-import { createClient, Entry } from 'contentful';
+import { createClient } from 'contentful';
 import Image from 'next/image';
 import Link from 'next/link';
 import React, { useEffect, useRef, useState } from 'react';
@@ -14,12 +14,12 @@ import { FiExternalLink } from 'react-icons/fi';
 import Slider from 'react-slick';
 import styles from './blogsection.module.css';
 
-interface BlogSectionProps {
+type BlogSectionProps = {
   heading?: string;
   text?: string;
-}
+};
 
-interface BlogEntry {
+type BlogEntry = {
   sys: {
     id: string;
   };
@@ -36,7 +36,7 @@ interface BlogEntry {
       };
     };
   };
-}
+};
 
 export const BlogSection: React.FC<BlogSectionProps> = ({ heading, text }) => {
   const [blogData, setBlogData] = useState<BlogEntry[]>([]);
@@ -93,12 +93,14 @@ export const BlogSection: React.FC<BlogSectionProps> = ({ heading, text }) => {
               {heading || 'The Pixelette Post'}
             </Heading>
             <Text className="secondary" id="h_ani">
-              {text ||
-                'Dive into our curated collection of updates and guides to deepen your understanding of diverse technologies.'}
+              {text
+              || 'Dive into our curated collection of updates and guides to deepen your understanding of diverse technologies.'}
             </Text>
             <Link href="/blogs" passHref>
               <Button className="primary" id="h_ani">
-                Explore Blogs <FiExternalLink />
+                Explore Blogs
+                {' '}
+                <FiExternalLink />
               </Button>
             </Link>
           </center>

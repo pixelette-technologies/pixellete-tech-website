@@ -1,4 +1,4 @@
-.howWeWorkBg{
+.howWeWorkBg {
   background-image: url('/images/aiServices/HowWeWorkBg.png');
   background-repeat: no-repeat;
   background-size: cover;
@@ -10,7 +10,7 @@
 }
 
 @media screen and (max-width: 450px) {
-  .howWeWorkTextAlign{
+  .howWeWorkTextAlign {
     text-align: center;
     display: flex;
     flex-direction: column;

@@ -1,6 +1,7 @@
 .SelectPlan {
   padding: 0 10px;
-}.serviceWorkCards {
+}
+.serviceWorkCards {
   display: grid;
   grid-template-columns: 1fr; /* Default: 1 column */
   gap: 10px;

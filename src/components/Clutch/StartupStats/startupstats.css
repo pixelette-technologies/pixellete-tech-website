@@ -6,10 +6,12 @@
   z-index: -90;
   width: 100%;
   margin-top: -45rem;
-}.specialSection-background,
+}
+.specialSection-background,
 .heroSectionAiServices-background {
   flex: 1;
-}.specialSection {
+}
+.specialSection {
   margin-top: 6rem;
 }
 .specialSection-background {
@@ -84,14 +86,7 @@
 .specialSection > div > section > *:first-child > *:last-child > div {
   display: flex;
 }
-.specialSection
-  > div
-  > section
-  > *:first-child
-  > *:last-child
-  > div
-  > section
-  > img {
+.specialSection > div > section > *:first-child > *:last-child > div > section > img {
   height: 2rem;
   width: 2rem;
   margin-top: 0.5rem;
@@ -99,38 +94,20 @@
 .specialSection > div > section > *:first-child > *:last-child > div > div {
   margin-left: 2.4rem;
 }
-.specialSection
-  > div
-  > section
-  > *:first-child
-  > *:last-child
-  > div
-  > div
-  > *
-  :first-child {
+.specialSection > div > section > *:first-child > *:last-child > div > div > * :first-child {
   margin-bottom: 0.8rem;
 }
-.specialSection
-  > div
-  > section
-  > *:first-child
-  > *:last-child
-  > div
-  > div
-  > *:last-child {
+.specialSection > div > section > *:first-child > *:last-child > div > div > *:last-child {
   color: #fbfbfba1;
 }
-.specialSection
-  > div
-  > section
-  > *:first-child
-  > *:last-child
-  > *:not(:last-child) {
+.specialSection > div > section > *:first-child > *:last-child > *:not(:last-child) {
   margin-bottom: 2.8rem;
-}.award-text-wrapper {
+}
+.award-text-wrapper {
   display: flex;
   align-items: center;
-}.vertical-bar {
+}
+.vertical-bar {
   margin-top: -3rem;
   width: 10rem;
   height: 30rem;
@@ -142,19 +119,23 @@
 .award-text {
   display: flex;
   flex-direction: column;
-}.percentage {
+}
+.percentage {
   font-size: 15rem;
 }
 .percentage-center-text {
   padding-bottom: 10rem;
   font-weight: 200;
   font-size: 2rem;
-}.stats-text {
+}
+.stats-text {
   font-size: 2.5rem;
   font-weight: 200;
-}.list-container {
+}
+.list-container {
   padding-left: 3rem;
-}.ul-stats li {
+}
+.ul-stats li {
   font-size: 2rem;
   font-weight: 200;
   list-style: disc;

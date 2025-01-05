@@ -11,40 +11,40 @@ export const tgheading = 'Our AI development service expertise';
 export const tgdescription
   = 'Pixelette Technologies has been a globally trusted artificial intelligence development company for 6 years. We have top AI development talent that makes use of the latest AI tools and technologies to drive exponential business growth for our clients.';
 
-  export const tgexpertiseAreas = [
-    { title: "Machine Learning" },
-    { title: "Deep Learning" },
-    { title: "Natural Language Processing (NLP)" },
-    { title: "Robotic Process Automation" },
-    { title: "Computer Vision" },
-  ];
-  
-  // Define the mapping for additional data
-  export const extraDataMapping = {
-    "Machine Learning": {
-      title: "Machine Learning Insights",
-      description:
-        "Explore advanced algorithms and techniques for supervised and unsupervised learning.",
-    },
-    "Deep Learning": {
-      title: "Deep Learning Revolution",
-      description: "Understand neural networks, CNNs, and RNNs for deep learning systems.",
-    },
-    "Natural Language Processing (NLP)": {
-      title: "NLP Applications",
-      description: "Discover how NLP powers chatbots, sentiment analysis, and more.",
-    },
-    "Robotic Process Automation": {
-      title: "Automation Simplified",
-      description:
-        "Learn about streamlining workflows with RPA for enhanced productivity.",
-    },
-    "Computer Vision": {
-      title: "Vision Beyond Limits",
-      description:
-        "Dive into image recognition, object detection, and real-time vision systems.",
-    },
-  };
+export const tgexpertiseAreas = [
+  { title: 'Machine Learning' },
+  { title: 'Deep Learning' },
+  { title: 'Natural Language Processing (NLP)' },
+  { title: 'Robotic Process Automation' },
+  { title: 'Computer Vision' },
+];
+
+// Define the mapping for additional data
+export const extraDataMapping = {
+  'Machine Learning': {
+    title: 'Machine Learning Insights',
+    description:
+        'Explore advanced algorithms and techniques for supervised and unsupervised learning.',
+  },
+  'Deep Learning': {
+    title: 'Deep Learning Revolution',
+    description: 'Understand neural networks, CNNs, and RNNs for deep learning systems.',
+  },
+  'Natural Language Processing (NLP)': {
+    title: 'NLP Applications',
+    description: 'Discover how NLP powers chatbots, sentiment analysis, and more.',
+  },
+  'Robotic Process Automation': {
+    title: 'Automation Simplified',
+    description:
+        'Learn about streamlining workflows with RPA for enhanced productivity.',
+  },
+  'Computer Vision': {
+    title: 'Vision Beyond Limits',
+    description:
+        'Dive into image recognition, object detection, and real-time vision systems.',
+  },
+};
 
 export const ocheading = 'Our Commitment to Excellence';
 

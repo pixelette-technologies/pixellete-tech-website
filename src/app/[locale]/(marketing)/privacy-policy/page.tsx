@@ -1,11 +1,11 @@
-import { getTranslations, setRequestLocale } from 'next-intl/server';
-import './index.css';
-import { EvaluateBusiness } from '@/components/Sections/EvaluateBusiness/EvaluateBusiness';
-import data from '@/data';
 import { Container } from '@/components/Feature/Container/Container';
 import { Heading } from '@/components/Feature/Heading/Heading';
 import Text from '@/components/Feature/Text/Text';
 import DetailsNavigate from '@/components/Policies/DetailNavigate/DetailsNavigate';
+import { EvaluateBusiness } from '@/components/Sections/EvaluateBusiness/EvaluateBusiness';
+import data from '@/data';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
+import './index.css';
 
 type IAIservicesProps = {
   params: Promise<{ slug: string; locale: string }>;
@@ -30,10 +30,10 @@ export default async function PrivacyPolicy(props: IAIservicesProps) {
 
   return (
     <>
-       <Container className="main">
+      <Container className="main">
         <div className="privacyPolicy-background">
           <img
-            src='/images/policies/privacyPoliciesBackGround.svg'
+            src="/images/policies/privacyPoliciesBackGround.svg"
             alt="background"
           />
         </div>
@@ -44,7 +44,7 @@ export default async function PrivacyPolicy(props: IAIservicesProps) {
             <Heading
               className="heroHeading"
               animation="zoom-out"
-              duration={`2000`}
+              duration="2000"
             >
               Privacy Policy
             </Heading>
@@ -64,13 +64,13 @@ export default async function PrivacyPolicy(props: IAIservicesProps) {
           </center>
           <DetailsNavigate
             data={data.privacyPolicy}
-            headingIndex={true}
-            overViewIndex={true}
+            headingIndex
+            overViewIndex
             headerSection={false}
           />
         </div>
       </Container>
-      <EvaluateBusiness/>
+      <EvaluateBusiness />
     </>
   );
 };

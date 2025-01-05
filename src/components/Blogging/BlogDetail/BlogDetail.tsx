@@ -1,41 +1,41 @@
-"use client"
-import React, { useEffect, useState } from "react";
-import { createClient } from "contentful";
-import { useParams } from "next/navigation";
-import { Container } from "@/components/Feature/Container/Container";
-import { EvaluateBusiness } from "@/components/Sections/EvaluateBusiness/EvaluateBusiness";
+'use client';
+import { Container } from '@/components/Feature/Container/Container';
+import { EvaluateBusiness } from '@/components/Sections/EvaluateBusiness/EvaluateBusiness';
+import { createClient } from 'contentful';
+import { useParams } from 'next/navigation';
+import React, { useEffect, useState } from 'react';
+
 const BlogDetail = () => {
   const [singleBlogDetail, setSingleBlogDetail] = useState([]);
   const { id } = useParams();
 
   useEffect(() => {
     const client = createClient({
-      space: "ggtsbq0gqfii",
-      accessToken: "VZvVye8dMIc497wF-1pNt5rdYUG-h4E30uX58AcGVUo",
+      space: 'ggtsbq0gqfii',
+      accessToken: 'VZvVye8dMIc497wF-1pNt5rdYUG-h4E30uX58AcGVUo',
     });
-    const getEntryById = async () =>{
+    const getEntryById = async () => {
       try {
-        client.getEntry({content_type: 'blogs'}).then((response) => {
-        console.log("response: ", response);
-        setSingleBlogDetail(response);
-        })
+        client.getEntry({ content_type: 'blogs' }).then((response) => {
+          console.log('response: ', response);
+          setSingleBlogDetail(response);
+        });
       } catch (error) {
-        console.log(error)
+        console.log(error);
       }
-    }
+    };
 
-    getEntryById()
-}, [])
-  console.log(singleBlogDetail) 
+    getEntryById();
+  }, []);
+  console.log(singleBlogDetail);
 
-  
   // let el = data.blogsData.find((item) => item.id === id * 1);
   return (
     <>
       <div className="blogDetail">
         <Container className="main">
           <div className="blogDetail-background">
-            <img src='/images/blogs/singleBlogBackground.svg' alt="blog" />
+            <img src="/images/blogs/singleBlogBackground.svg" alt="blog" />
           </div>
         </Container>
         <section>
@@ -49,7 +49,7 @@ const BlogDetail = () => {
           </Container> */}
         </section>
       </div>
-      <EvaluateBusiness/>
+      <EvaluateBusiness />
     </>
   );
 };

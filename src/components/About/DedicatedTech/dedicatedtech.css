@@ -78,39 +78,39 @@
 .technologyStackAi > div > div > div:hover > img {
   transform: scale(1.05) translateY(-0.5rem);
 }
-.dedicatedTechLinks{
-    display: flex;
-    margin-bottom: 2rem;
-    flex-direction: column;
-    text-align: left;
-    gap: 5rem
+.dedicatedTechLinks {
+  display: flex;
+  margin-bottom: 2rem;
+  flex-direction: column;
+  text-align: left;
+  gap: 5rem;
 }
-.dedicatedTechLinks a{
+.dedicatedTechLinks a {
   cursor: pointer;
   font-size: 18px;
   font-weight: semiBold;
-  width: fit-content
+  width: fit-content;
 }
 @media only screen and (max-width: 37.5em) {
   .technologyStackAi > div > div > div {
     /* flex: 1 0 calc(48% - 2rem); */
   }
-  .dedicatedTechLinks{
+  .dedicatedTechLinks {
     display: flex;
     margin-bottom: 2rem;
     flex-direction: row;
     justify-content: space-evenly;
     width: 100%;
     text-align: left;
-    gap: 5rem
-}
-.dedicatedTechLinks a{
+    gap: 5rem;
+  }
+  .dedicatedTechLinks a {
     cursor: pointer;
     font-size: 10px;
     font-weight: semiBold;
     width: fit-content;
     margin: 0 auto;
-}
+  }
   .technologyStackAi > div > div > div {
     width: 100%;
     margin: 0rem 0.5rem;
@@ -124,11 +124,11 @@
   }
 }
 
-.selectedDedicatedCard{
+.selectedDedicatedCard {
   position: relative;
 }
 
-.selectedDedicatedCard::before{
+.selectedDedicatedCard::before {
   position: absolute;
   content: '';
   width: 100%;
@@ -137,10 +137,10 @@
   left: 0;
   background-color: #238264;
 }
-.linkDedicatedCard{
+.linkDedicatedCard {
   position: relative;
 }
-.linkDedicatedCard::before{
+.linkDedicatedCard::before {
   position: absolute;
   content: '';
   width: 0;
@@ -150,7 +150,7 @@
   background-color: #238264;
   transition: all ease 0.3s;
 }
-.linkDedicatedCard:hover::before{
+.linkDedicatedCard:hover::before {
   position: absolute;
   content: '';
   width: 100%;

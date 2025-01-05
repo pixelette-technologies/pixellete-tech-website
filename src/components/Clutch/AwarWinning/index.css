@@ -73,14 +73,7 @@
 .specialSection > div > section > *:first-child > *:last-child > div {
   display: flex;
 }
-.specialSection
-  > div
-  > section
-  > *:first-child
-  > *:last-child
-  > div
-  > section
-  > img {
+.specialSection > div > section > *:first-child > *:last-child > div > section > img {
   height: 2rem;
   width: 2rem;
   margin-top: 0.5rem;
@@ -88,33 +81,13 @@
 .specialSection > div > section > *:first-child > *:last-child > div > div {
   margin-left: 2.4rem;
 }
-.specialSection
-  > div
-  > section
-  > *:first-child
-  > *:last-child
-  > div
-  > div
-  > *
-  :first-child {
+.specialSection > div > section > *:first-child > *:last-child > div > div > * :first-child {
   margin-bottom: 0.8rem;
 }
-.specialSection
-  > div
-  > section
-  > *:first-child
-  > *:last-child
-  > div
-  > div
-  > *:last-child {
+.specialSection > div > section > *:first-child > *:last-child > div > div > *:last-child {
   color: #fbfbfba1;
 }
-.specialSection
-  > div
-  > section
-  > *:first-child
-  > *:last-child
-  > *:not(:last-child) {
+.specialSection > div > section > *:first-child > *:last-child > *:not(:last-child) {
   margin-bottom: 2.8rem;
 }
 
@@ -129,7 +102,8 @@
 .award-text {
   display: flex;
   flex-direction: column;
-}.award-text {
+}
+.award-text {
   display: flex;
   flex-direction: column;
 }

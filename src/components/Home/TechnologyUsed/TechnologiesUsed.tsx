@@ -1,11 +1,11 @@
-"use client";
+'use client';
 
-import { useState } from "react";
-import styles from "./technologiesused.module.css";
-import { Container } from "@/components/Feature/Container/Container";
-import { Heading } from "@/components/Feature/Heading/Heading";
-import Text from "@/components/Feature/Text/Text";
-import technologies from "@/data/technologies";
+import { Container } from '@/components/Feature/Container/Container';
+import { Heading } from '@/components/Feature/Heading/Heading';
+import Text from '@/components/Feature/Text/Text';
+import technologies from '@/data/technologies';
+import { useState } from 'react';
+import styles from './technologiesused.module.css';
 
 type Technology = {
   id: string;
@@ -18,7 +18,7 @@ type Technologies = {
 };
 
 const TechnologiesUsed: React.FC = () => {
-  const [activeTab, setActiveTab] = useState<keyof Technologies>("AI_ML_BI");
+  const [activeTab, setActiveTab] = useState<keyof Technologies>('AI_ML_BI');
 
   return (
     <div className={styles.technologiesMain}>
@@ -30,7 +30,9 @@ const TechnologiesUsed: React.FC = () => {
             duration="600"
             id="h_ani"
           >
-            Benefit from our unmatched tech <br />
+            Benefit from our unmatched tech
+            {' '}
+            <br />
             stack expertise
           </Heading>
           <Text className="secondry" animation="fade-up" duration="700">
@@ -44,20 +46,20 @@ const TechnologiesUsed: React.FC = () => {
 
         <div className={styles.technologiesLayout}>
           <div className={styles.tabsSection}>
-            {["AI_ML_BI", "Software", "Mobile", "Blockchain"].map((tab) => (
+            {['AI_ML_BI', 'Software', 'Mobile', 'Blockchain'].map(tab => (
               <button
                 key={tab}
                 onClick={() => setActiveTab(tab as keyof Technologies)}
-                className={`${styles.tabButton} ${activeTab === tab ? styles.active : ""}`}
+                className={`${styles.tabButton} ${activeTab === tab ? styles.active : ''}`}
               >
-                {tab.replace("_", " ")}
+                {tab.replace('_', ' ')}
               </button>
             ))}
           </div>
 
           <div className={styles.contentSection} key={activeTab}>
             <div className={styles.iconsContainer}>
-              {technologies[activeTab]?.map((tech) => (
+              {technologies[activeTab]?.map(tech => (
                 <div className={styles.iconCard} key={tech.id}>
                   <img src={tech.icon} alt={tech.name} className={styles.iconImg} />
                 </div>

@@ -1,17 +1,17 @@
 import BrilliantIdea from '@/components/BrillientIdeas/BrilliantIdea';
+import AwardWinning from '@/components/Clutch/AwarWinning/AwardWinning';
 import ClutchForm from '@/components/Clutch/ClutchForm/ClutchForm';
+import NoDeveloperReq from '@/components/Clutch/NoDeveloperReq/NoDeveloperReq';
 import StartupStats from '@/components/Clutch/StartupStats/StartupStats';
 import { Container } from '@/components/Feature/Container/Container';
 import { OurClients } from '@/components/Home/OurClients/OurClients';
+import { Testimonial } from '@/components/Home/Testimonial/Testimonial';
+import { EvaluateBusiness } from '@/components/Sections/EvaluateBusiness/EvaluateBusiness';
+import FaqsSection from '@/components/Sections/Services/FAQs/FaqsSection';
+import { clFaqs } from '@/data/faqs/clFaqs';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import Link from 'next/link';
 import './index.css';
-import AwardWinning from '@/components/Clutch/AwarWinning/AwardWinning';
-import NoDeveloperReq from '@/components/Clutch/NoDeveloperReq/NoDeveloperReq';
-import { Testimonial } from '@/components/Home/Testimonial/Testimonial';
-import { clFaqs } from '@/data/faqs/clFaqs';
-import { EvaluateBusiness } from '@/components/Sections/EvaluateBusiness/EvaluateBusiness';
-import FaqsSection from '@/components/Sections/Services/FAQs/FaqsSection';
 
 type IAIservicesProps = {
   params: Promise<{ slug: string; locale: string }>;
@@ -37,7 +37,7 @@ export default async function Clutch(props: IAIservicesProps) {
   return (
     <>
       <div className="clutch-container">
-      <div className="specialSection-backgroundd">
+        <div className="specialSection-backgroundd">
           <img src="/images/Clutch/background.webp" alt="background" />
         </div>
         <div className="heroSectionAiServices-background">
@@ -53,24 +53,24 @@ export default async function Clutch(props: IAIservicesProps) {
           <OurClients />
           <StartupStats />
           <BrilliantIdea />
-          <AwardWinning/>
+          <AwardWinning />
           <NoDeveloperReq
-          heading={<>100+ clients never had to hire tech staff</>}
-          text={
-            <>
-              We handle all the development for you. All you need to do is share
-              your vision, and we turn it into your platform&apos;s Minimum
-              Viable Product. You don&apos;t have to waste months and thousands
-              of dollars assembling a team of in-house developers. Focus on what
-              you do best while we figure out the technical stuff.
-            </>
-          }
-          btnText="Book a discovery call"
-          text2={<></>}
-        />
-        <Testimonial/>
-        <FaqsSection faqs={clFaqs}/>
-        <EvaluateBusiness/>
+            heading={<>100+ clients never had to hire tech staff</>}
+            text={(
+              <>
+                We handle all the development for you. All you need to do is share
+                your vision, and we turn it into your platform&apos;s Minimum
+                Viable Product. You don&apos;t have to waste months and thousands
+                of dollars assembling a team of in-house developers. Focus on what
+                you do best while we figure out the technical stuff.
+              </>
+            )}
+            btnText="Book a discovery call"
+            text2={<></>}
+          />
+          <Testimonial />
+          <FaqsSection faqs={clFaqs} />
+          <EvaluateBusiness />
         </div>
       </div>
     </>

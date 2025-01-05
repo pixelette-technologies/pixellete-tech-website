@@ -54,12 +54,12 @@
     flex-direction: column;
     text-align: center;
   }
-  
+
   .image {
     width: 80%;
     margin-bottom: 1rem;
   }
-  
+
   .content {
     width: 100%;
   }

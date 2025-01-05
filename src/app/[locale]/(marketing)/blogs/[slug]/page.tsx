@@ -1,10 +1,9 @@
 import { Container } from '@/components/Feature/Container/Container';
+import DetailsNavigate from '@/components/Policies/DetailNavigate/DetailsNavigate';
+import { EvaluateBusiness } from '@/components/Sections/EvaluateBusiness/EvaluateBusiness';
 import { createClient } from 'contentful';
-import Image from 'next/image';
 import React from 'react';
 import './blogdetail.css';
-import { EvaluateBusiness } from '@/components/Sections/EvaluateBusiness/EvaluateBusiness';
-import DetailsNavigate from '@/components/Policies/DetailNavigate/DetailsNavigate';
 
 // Contentful client
 const client = createClient({
@@ -15,7 +14,7 @@ const client = createClient({
 // Function to fetch a single blog post by slug
 const getBlogPost = async (slug: string) => {
   const response = await client.getEntries({
-    content_type: 'blogs',
+    'content_type': 'blogs',
     'fields.slug': slug, // Filter by slug field
   });
   return response.items[0]; // Return the first matching item
@@ -63,14 +62,14 @@ const BlogPostPage = async ({ params }: { params: { slug: string } }) => {
               data={singleBlogDetail} // Pass the blog data as props
               headingIndex={false}
               overViewIndex={false}
-              headerSection={true}
+              headerSection
             />
           </Container>
         </section>
       </div>
       <EvaluateBusiness />
       {/* Uncomment if you want to use the blog post content later */}
-      {/* 
+      {/*
       <div className="blog-post">
         <Container className="main">
           <div className="blog-banner">
@@ -81,7 +80,7 @@ const BlogPostPage = async ({ params }: { params: { slug: string } }) => {
           <h1>{title && title}</h1>
           <div dangerouslySetInnerHTML={content && { __html: content }} />
         </div>
-      </div> 
+      </div>
       */}
     </>
   );

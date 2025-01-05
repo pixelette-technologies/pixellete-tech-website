@@ -30,7 +30,9 @@
   }
 }
 .expertiseGrid > section > div:hover {
-  box-shadow: 0 4px 8px #0003, 0 6px 20px #00000030;
+  box-shadow:
+    0 4px 8px #0003,
+    0 6px 20px #00000030;
 }
 .expertiseGrid > section > div > img {
   margin-bottom: 2.4rem;
@@ -52,7 +54,7 @@
   border: 1px solid rgba(255, 255, 255, 0.1);
   transition: 0.5s all;
 }
-.marqueeCardss > div > img{
+.marqueeCardss > div > img {
   width: 40%;
   margin: 0 auto;
 }

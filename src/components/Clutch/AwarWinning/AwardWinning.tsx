@@ -1,9 +1,9 @@
-import PropTypes from "prop-types";
-import AwardCards from "./AwardCards";
-import { Container } from "@/components/Feature/Container/Container";
-import { Heading } from "@/components/Feature/Heading/Heading";
-import Text from "@/components/Feature/Text/Text";
-import './index.css'
+import { Container } from '@/components/Feature/Container/Container';
+import { Heading } from '@/components/Feature/Heading/Heading';
+import Text from '@/components/Feature/Text/Text';
+import PropTypes from 'prop-types';
+import AwardCards from './AwardCards';
+import './index.css';
 
 const AwardWinning = () => {
   return (
@@ -23,22 +23,28 @@ const AwardWinning = () => {
                 duration="400"
                 id="h_ani"
               >
-                  <>
-                    Bagged awards, <br />
-                    accreditations <br />
-                    and partnerships
-                    <p
-                      style={{
-                        marginTop: "1.5rem",
-                        fontSize: "2rem",
-                        lineHeight: "3rem",
-                        fontWeight: "200",
-                      }}
-                    >
-                      Signifying our commitment to client
-                      <br /> satisfaction and quality standards.
-                    </p>
-                  </>
+                <>
+                  Bagged awards,
+                  {' '}
+                  <br />
+                  accreditations
+                  {' '}
+                  <br />
+                  and partnerships
+                  <p
+                    style={{
+                      marginTop: '1.5rem',
+                      fontSize: '2rem',
+                      lineHeight: '3rem',
+                      fontWeight: '200',
+                    }}
+                  >
+                    Signifying our commitment to client
+                    <br />
+                    {' '}
+                    satisfaction and quality standards.
+                  </p>
+                </>
               </Heading>
               {/* <div>
                 {(data || []).map((el, index) => (
@@ -70,7 +76,7 @@ AwardWinning.propTypes = {
     PropTypes.shape({
       heading: PropTypes.string.isRequired,
       text: PropTypes.string.isRequired,
-    })
+    }),
   ),
 };
 
