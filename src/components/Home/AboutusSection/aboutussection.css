@@ -112,7 +112,7 @@
   .aboutUsSection > div > section {
     flex-direction: column;
     margin-top: 7rem;
-    margin-bottom: 6rem;
+    margin-bottom: 0rem;
   }
 
   .aboutUsSection > div > section > *:first-child {
@@ -166,6 +166,13 @@
   gap: 2rem;
 }
 
+.scottland-section div img {
+  max-width: 100%; /* Ensure images scale well */
+  height: 100px;
+  margin: 0 auto;
+}
+
+
 /* Responsive text container */
 .scottland-text {
   width: 40%;
@@ -193,8 +200,8 @@
     gap: 1rem;
   }
 
-  img {
-    max-width: 80%; /* Ensure images scale well */
+  .scottland-section div img {
+    max-width: 100%; /* Ensure images scale well */
     height: 80px;
     margin: 0 auto;
   }

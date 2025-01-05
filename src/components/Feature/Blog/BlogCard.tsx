@@ -29,7 +29,7 @@ export const BlogCard: FC<BlogCardProps> = ({
   return (
     <div className="blogCard" data-aos={animation} data-aos-duration={duration}>
       <figure>
-        <Image src={image} alt="Blog-Profile" width={300} height={200} />
+        <img src={image} alt="Blog-Profile" />
       </figure>
       <Text className="titory--bold">{date}</Text>
       <Heading className="blogCardHeading">{heading}</Heading>

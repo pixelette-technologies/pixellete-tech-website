@@ -41,12 +41,9 @@ export const Blog = ({ blogdata }: BlogProps) => {
       <div className="blogsPage">
         <Container className="main">
           <div className="blogsPage-background">
-            <Image
+            <img
               src="/images/blogs/blogsMainBackground.svg"
               alt="background"
-              layout="fill"
-              objectFit="cover"
-              priority
             />
           </div>
         </Container>
@@ -61,7 +58,7 @@ export const Blog = ({ blogdata }: BlogProps) => {
             The Pixelette Post
           </Heading>
           <Text
-            className="secondary"
+            className="secondry"
             animation="zoom-in"
             duration="2200"
           >

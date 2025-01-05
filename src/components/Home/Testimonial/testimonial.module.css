@@ -1,4 +1,156 @@
-.testimonialSection-background {
+.testimonialSectionBackground {
+  position: relative;
+}
+.testimonialSectionBackground > img {
+  position: absolute;
+  z-index: -1000;
+  width: 100%;
+  margin-top: -60rem;
+}
+.testimonialSection {
+  margin-top: 10rem;
+}
+@media only screen and (max-width: 37.5em) {
+  .testimonialSection {
+    margin-top: 10rem;
+  }
+}
+.testimonialSection > div {
+  position: relative;
+}
+.testimonialSection > div > blockquote > img {
+  position: absolute;
+  margin-top: -7rem;
+  margin-left: 5rem;
+  z-index: -100;
+  animation: rotateOpposite 26s linear infinite;
+}
+.testimonialSection > div > center {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  max-width: 73rem;
+  margin: auto;
+}
+
+@media only screen and (max-width: 768px) {
+  .testimonialSection > div > center {
+    max-width: 55rem;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .testimonialSection > div > center {
+    max-width: 35rem;
+  }
+  .testimonialSection > div > center > h1 {
+    font-size: 3rem;
+  }
+}
+
+.testimonialSection > div > center > h1 {
+  padding-bottom: 1.6rem;
+}
+.testimonialSection > div > center > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.testimonialSection > div > center > div > *:not(:last-child) {
+  margin-right: 1.6rem;
+}
+.testimonialSection > div > center > div > button {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+.testimonialSection > div > section {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(200px, 1fr));
+  width: 100%;
+}
+@media only screen and (max-width: 62.6em) {
+  .testimonialSection > div > section {
+    padding: 0rem 3rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .testimonialSection > div > section {
+    padding: 0rem 2rem;
+  }
+}
+/* .testimonial-card {
+  /* Set a fixed height and width for the testimonial cards
+  width: 250px;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+} */
+
+@media only screen and (max-width: 37.5em) {
+  .testimonialSection > div > section > div {
+    margin: 0rem;
+  }
+}
+.testimonialSection > div > section > div > div > div > div {
+  display: flex;
+  gap: 2.5rem;
+  padding-top: 9rem;
+  padding-bottom: 6.6rem;
+}
+@media only screen and (max-width: 37.5em) {
+  .testimonialSection > div > section > div > div > div > div {
+    gap: 0rem;
+    padding-top: 6rem;
+    padding-bottom: 4rem;
+  }
+}
+.testimonialSection > div > section > div > div > div > div > div {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 3.2rem;
+  border-radius: 1.4rem;
+  background-color: #0f0f0fb3;
+  transition: 0.5s ease-in-out;
+  width: 100%;
+}
+.testimonialSection > div > section > div > div > div > div > div:hover {
+  transform: translateY(-1.2rem) scale(1.01);
+  outline: 0.1rem solid rgba(255, 255, 255, 0.288);
+  box-shadow: 0 0.4rem 7rem #e2e2e233;
+  z-index: 20;
+}
+.testimonialSection
+  > div
+  > section
+  > div
+  > div
+  > div
+  > div
+  > div:hover
+  > div
+  > section
+  > img {
+  transform: scale(1.05) translateY(-0.5rem);
+}
+.testimonialSection > div > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.testimonialSection > div > div > img {
+  height: 5.6rem;
+  width: 9.4rem;
+  cursor: pointer;
+}
+.testimonialSection > div > div > *:first-child {
+  margin-right: 1rem;
+}.testimonialSection-background {
   position: relative;
 }
 .testimonialSection-background > img {
@@ -125,7 +277,17 @@
   box-shadow: 0 0.4rem 7rem #e2e2e233;
   z-index: 20;
 }
-.testimonialSection > div > section > div > div > div > div > div:hover > div > section > img {
+.testimonialSection
+  > div
+  > section
+  > div
+  > div
+  > div
+  > div
+  > div:hover
+  > div
+  > section
+  > img {
   transform: scale(1.05) translateY(-0.5rem);
 }
 .testimonialSection > div > div {

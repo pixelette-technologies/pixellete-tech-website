@@ -1,11 +1,9 @@
-// import { Container, Heading } from "../feature";
-// import WhatMakeUsSpecial from "../common/WhatMakeUsSpecial";
-
 import { Container } from "@/components/Feature/Container/Container";
 import { Heading } from "@/components/Feature/Heading/Heading";
-import './whatmakeusspecial.css'
+import Image from 'next/image'; // Import Next.js Image component
+import './whatmakeusspecial.css';
 
-const WhatMakeUsSpecialHome = () => {
+const WhatMakeUsSpecialHome: React.FC = () => {
   return (
     <>
       <Container className="main">
@@ -21,35 +19,45 @@ const WhatMakeUsSpecialHome = () => {
             <br />
             <br />
             <div>
-              <img
+              <Image
                 src='/images/home/clutch.png'
                 alt="heroImage"
                 data-aos="fade-up"
-                data-aos-duration={`600`}
+                data-aos-duration="600"
+                width={200} // Add a width to the image
+                height={200} // Add a height to the image
               />
-              <img
+              <Image
                 src='/images/home/computervision.png'
                 alt="heroImage"
                 data-aos="fade-up"
-                data-aos-duration={`600`}
+                data-aos-duration="600"
+                width={200}
+                height={200}
               />
-              <img
+              <Image
                 src='/images/home/clutch.png'
                 alt="heroImage"
                 data-aos="fade-up"
-                data-aos-duration={`600`}
+                data-aos-duration="600"
+                width={200}
+                height={200}
               />
-              <img
+              <Image
                 src='/images/home/aicompany.png'
                 alt="heroImage"
                 data-aos="fade-up"
-                data-aos-duration={`600`}
+                data-aos-duration="600"
+                width={200}
+                height={200}
               />
-              <img
+              <Image
                 src='/images/home/clutch.png'
                 alt="heroImage"
                 data-aos="fade-up"
-                data-aos-duration={`600`}
+                data-aos-duration="600"
+                width={200}
+                height={200}
               />
             </div>
           </div>
@@ -59,54 +67,70 @@ const WhatMakeUsSpecialHome = () => {
             <br />
             <br />
             <div>
-              <img
+              <Image
                 src='/images/home/Partnership1.svg'
                 alt="heroImage"
                 data-aos="fade-up"
-                data-aos-duration={`600`}
+                data-aos-duration="600"
+                width={200}
+                height={200}
               />
-              <img
+              <Image
                 src='/images/home/Partnership2.svg'
                 alt="heroImage"
                 data-aos="fade-up"
-                data-aos-duration={`600`}
+                data-aos-duration="600"
+                width={200}
+                height={200}
               />
-              <img
+              <Image
                 src='/images/home/Partnership3.svg'
                 alt="heroImage"
                 data-aos="fade-up"
-                data-aos-duration={`600`}
+                data-aos-duration="600"
+                width={200}
+                height={200}
               />
-              <img
+              <Image
                 src='/images/home/Partnership4.svg'
                 alt="heroImage"
                 data-aos="fade-up"
-                data-aos-duration={`600`}
+                data-aos-duration="600"
+                width={200}
+                height={200}
               />
-              <img
+              <Image
                 src='/images/home/Partnership5.svg'
                 alt="heroImage"
                 data-aos="fade-up"
-                data-aos-duration={`600`}
+                data-aos-duration="600"
+                width={200}
+                height={200}
               />
-              <img
+              <Image
                 src='/images/home/Partnership6.svg'
                 alt="heroImage"
                 data-aos="fade-up"
-                data-aos-duration={`600`}
+                data-aos-duration="600"
+                width={200}
+                height={200}
               />
-              <img
+              <Image
                 style={{ width: "50px" }}
                 src='/images/home/Partnership7.svg'
                 alt="heroImage"
                 data-aos="fade-up"
-                data-aos-duration={`600`}
+                data-aos-duration="600"
+                width={50}
+                height={50}
               />
-              <img
+              <Image
                 src='/images/home/Partnership8.svg'
                 alt="heroImage"
                 data-aos="fade-up"
-                data-aos-duration={`600`}
+                data-aos-duration="600"
+                width={200}
+                height={200}
               />
             </div>
           </div>

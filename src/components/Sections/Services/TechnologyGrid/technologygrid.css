@@ -155,6 +155,6 @@
 }
 @media only screen and (max-width: 37.5em) {
   .technologyStackAi > div > div > div {
-    flex: 1 0 calc(48% - 2rem);
+    flex: 1 0 calc(100% - 2rem);
   }
 }

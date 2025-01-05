@@ -1,0 +1,76 @@
+import { getTranslations, setRequestLocale } from 'next-intl/server';
+import './index.css';
+import { EvaluateBusiness } from '@/components/Sections/EvaluateBusiness/EvaluateBusiness';
+import data from '@/data';
+import { Container } from '@/components/Feature/Container/Container';
+import { Heading } from '@/components/Feature/Heading/Heading';
+import Text from '@/components/Feature/Text/Text';
+import DetailsNavigate from '@/components/Policies/DetailNavigate/DetailsNavigate';
+
+type IAIservicesProps = {
+  params: Promise<{ slug: string; locale: string }>;
+};
+
+export async function generateMetadata(props: IAIservicesProps) {
+  const { locale } = await props.params;
+  const t = await getTranslations({
+    locale,
+    namespace: 'About',
+  });
+
+  return {
+    title: t('meta_title'),
+    description: t('meta_description'),
+  };
+}
+
+export default async function PrivacyPolicy(props: IAIservicesProps) {
+  const { locale } = await props.params;
+  setRequestLocale(locale);
+
+  return (
+    <>
+       <Container className="main">
+        <div className="privacyPolicy-background">
+          <img
+            src='/images/policies/privacyPoliciesBackGround.svg'
+            alt="background"
+          />
+        </div>
+      </Container>
+      <Container className="main margins">
+        <div className="privacyPolicy">
+          <center>
+            <Heading
+              className="heroHeading"
+              animation="zoom-out"
+              duration={`2000`}
+            >
+              Privacy Policy
+            </Heading>
+            <Text
+              className="secondry"
+              animation="zoom-in"
+              duration="2200"
+            >
+              Pixelette Technologies is committed to protecting your personal
+              information and respecting your privacy. This Privacy Policy
+              explains how we collect, use, store and share your personal
+              information when you visit our website or use our services. This
+              policy is compliant with the General Data Protection Regulation
+              (GDPR) of the European Union and the Data Protection Act 2018 of
+              the United Kingdom.
+            </Text>
+          </center>
+          <DetailsNavigate
+            data={data.privacyPolicy}
+            headingIndex={true}
+            overViewIndex={true}
+            headerSection={false}
+          />
+        </div>
+      </Container>
+      <EvaluateBusiness/>
+    </>
+  );
+};

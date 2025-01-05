@@ -13,12 +13,13 @@
 .caseSlider-card {
   display: flex;
   align-items: center;
+  flex-direction: column;
   gap: 2.4rem;
   background-color: #0f0f0fb3;
   object-fit: cover;
   border: 2px solid rgba(255, 255, 255, 0.1);
   border-radius: 1.5rem;
-  padding: 0;
+  padding: 1rem;
 }
 @media only screen and (max-width: 37.5em) {
   .caseSlider-card {

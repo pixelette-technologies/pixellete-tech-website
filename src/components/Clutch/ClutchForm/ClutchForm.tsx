@@ -15,7 +15,6 @@ const ClutchForm: React.FC = () => {
         <header>
           <Heading
             className="secondry"
-            style={{ fontSize: '25rem', color: 'yellow' }}
           >
             We&apos;ll bring your
             <br />

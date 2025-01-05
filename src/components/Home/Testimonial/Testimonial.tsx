@@ -1,5 +1,6 @@
 'use client';
 
+import { FC, useRef } from 'react';
 import { Button } from '@/components/Feature/Button/Button';
 import { TestimonialCard } from '@/components/Feature/Cards/TestimonialCard';
 import { Container } from '@/components/Feature/Container/Container';
@@ -7,51 +8,61 @@ import { Heading } from '@/components/Feature/Heading/Heading';
 import { Text } from '@/components/Feature/Text/Text';
 import data from '@/data';
 import Image from 'next/image';
-import React, { useRef } from 'react';
+import Slider, { Settings } from 'react-slick';
 import { FiExternalLink } from 'react-icons/fi';
-import Slider from 'react-slick';
 import { v4 as uuidv4 } from 'uuid';
-import './testimonial.css';
+import styles from './testimonial.module.css';
 
-export const SampleNextArrow = ({ className, style, onClick }) => (
+interface ArrowProps {
+  className?: string;
+  style?: React.CSSProperties;
+  onClick?: () => void;
+}
+
+export const SampleNextArrow: FC<ArrowProps> = ({ className, style, onClick }) => (
   <div
     className={className}
     style={{ ...style, display: 'block', background: 'red' }}
     onClick={onClick}
-    role="button" // Adds an accessible role
-    tabIndex={0} // Makes it focusable with keyboard
+    role="button"
+    tabIndex={0}
     onKeyDown={(e) => {
       if (e.key === 'Enter' || e.key === ' ') {
-        onClick?.(e); // Calls the onClick handler for Enter or Space key
+        onClick?.();
       }
     }}
-    aria-label="Next Slide" // Improves screen reader accessibility
+    aria-label="Next Slide"
   >
-    <Image src="/images/testimonial/arrowRightSlider.png" alt="Next Arrow" />
+    <Image src="/images/testimonial/arrowRightSlider.png" alt="Next Arrow" width={20} height={20} />
   </div>
 );
-export const SamplePrevArrow = ({ className, style, onClick }) => (
+
+export const SamplePrevArrow: FC<ArrowProps> = ({ className, style, onClick }) => (
   <div
     className={className}
     style={{ ...style, display: 'block', background: 'green' }}
     onClick={onClick}
-    role="button" // Adds an accessible role
-    tabIndex={0} // Makes it focusable with keyboard
+    role="button"
+    tabIndex={0}
     onKeyDown={(e) => {
       if (e.key === 'Enter' || e.key === ' ') {
-        onClick?.(e); // Calls the onClick handler for Enter or Space key
+        onClick?.();
       }
     }}
-    aria-label="Next Slide" // Improves screen reader accessibility
+    aria-label="Previous Slide"
   >
-    <Image src="/images/testimonial/arrowLeftSlider.png" alt="Previous Arrow" />
+    <Image src="/images/testimonial/arrowLeftSlider.png" alt="Previous Arrow" width={20} height={20} />
   </div>
 );
 
-export const Testimonial = ({ background }) => {
-  const slider = useRef(null);
+interface TestimonialProps {
+  background?: string;
+}
 
-  const settings = {
+export const Testimonial: FC<TestimonialProps> = ({ background }) => {
+  const slider = useRef<Slider | null>(null);
+
+  const settings: Settings = {
     dots: false,
     infinite: true,
     arrows: false,
@@ -72,39 +83,50 @@ export const Testimonial = ({ background }) => {
 
   return (
     <>
-        <Container className="main">
-          <div className="testimonialSection-background">
-            <img
-              src="/images/home/testimonials/testimonialBackground.svg"
-              alt="Testimonial Background"
-            />
-          </div>
-        </Container>
+      <Container className={styles.main}>
+        <div className={styles.testimonialSectionBackground}>
+          <Image
+            src="/images/home/testimonials/testimonialBackground.svg"
+            alt="Testimonial Background"
+            fill
+            className={styles.backgroundImage}
+          />
+        </div>
+      </Container>
 
-      <div className="testimonialSection">
-        <Container className="main">
+      <div className={styles.testimonialSection}>
+        <Container className={styles.main}>
           <blockquote>
-            <img src="/images/home/testimonials/box_16.svg" alt="Decorative Box" />
+            <Image
+              src="/images/home/testimonials/box_16.svg"
+              alt="Decorative Box"
+              width={50}
+              height={50}
+            />
           </blockquote>
 
           <center>
             <Heading className="secondry" animation="fade-up" duration="400" id="h_ani">
-            Clients love us
+              Clients love us
             </Heading>
             <div data-aos-duration="500" data-aos="fade-up">
               <Text className="primary">4.9</Text>
-              <Image src="/images/home/stars.svg" alt="Rating Stars" width={100} height={100} />
+              <Image
+                src="/images/home/stars.svg"
+                alt="Rating Stars"
+                width={100}
+                height={100}
+              />
               <Button className="primary">
-                
-                  21 Reviews
-                  <FiExternalLink />
+                21 Reviews
+                <FiExternalLink />
               </Button>
             </div>
           </center>
 
           <section>
-            <div className="id">
-              <Slider ref={slider} {...settings}>
+            <div className={styles.sliderContainer}>
+              <Slider className={styles.slickSlider} ref={slider} {...settings}>
                 {data.testimonialData.map((el, index) => (
                   <a key={uuidv4()} href={el.url}>
                     <TestimonialCard
@@ -121,7 +143,7 @@ export const Testimonial = ({ background }) => {
               </Slider>
             </div>
           </section>
-          <div>
+          <div className={styles.arrows}>
             <Image
               src="/images/home/arrowLeft.svg"
               alt="Previous Arrow"
@@ -146,3 +168,5 @@ export const Testimonial = ({ background }) => {
     </>
   );
 };
+
+export default Testimonial;

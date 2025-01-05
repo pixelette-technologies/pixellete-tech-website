@@ -64,8 +64,8 @@ export const BlogGridWithBanner = ({ data = [], singleView = false }) => {
                   alt={blogCardsMain.fields.name || 'Blog Hero Image'}
                   data-aos="fade-up"
                   data-aos-duration="800"
-                  width={50}
-                  height={50}
+                  width={1000}
+                  height={1000}
                 />
               </figure>
             )}
@@ -85,7 +85,7 @@ export const BlogGridWithBanner = ({ data = [], singleView = false }) => {
                 {blogCardsMain.fields?.name || 'No title available'}
               </Heading>
               <Text
-                className="secondary"
+                className="secondry"
                 animation="fade-up"
                 duration="700"
               >

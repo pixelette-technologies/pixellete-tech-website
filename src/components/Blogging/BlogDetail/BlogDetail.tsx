@@ -1,0 +1,57 @@
+"use client"
+import React, { useEffect, useState } from "react";
+import { createClient } from "contentful";
+import { useParams } from "next/navigation";
+import { Container } from "@/components/Feature/Container/Container";
+import { EvaluateBusiness } from "@/components/Sections/EvaluateBusiness/EvaluateBusiness";
+const BlogDetail = () => {
+  const [singleBlogDetail, setSingleBlogDetail] = useState([]);
+  const { id } = useParams();
+
+  useEffect(() => {
+    const client = createClient({
+      space: "ggtsbq0gqfii",
+      accessToken: "VZvVye8dMIc497wF-1pNt5rdYUG-h4E30uX58AcGVUo",
+    });
+    const getEntryById = async () =>{
+      try {
+        client.getEntry({content_type: 'blogs'}).then((response) => {
+        console.log("response: ", response);
+        setSingleBlogDetail(response);
+        })
+      } catch (error) {
+        console.log(error)
+      }
+    }
+
+    getEntryById()
+}, [])
+  console.log(singleBlogDetail) 
+
+  
+  // let el = data.blogsData.find((item) => item.id === id * 1);
+  return (
+    <>
+      <div className="blogDetail">
+        <Container className="main">
+          <div className="blogDetail-background">
+            <img src='/images/blogs/singleBlogBackground.svg' alt="blog" />
+          </div>
+        </Container>
+        <section>
+          {/* <Container className="main margins">
+            <DetailsNavigate
+              // data={singleBlogDetail}
+              headingIndex={false}
+              overViewIndex={false}
+              headerSection={true}
+            />
+          </Container> */}
+        </section>
+      </div>
+      <EvaluateBusiness/>
+    </>
+  );
+};
+
+export default BlogDetail;

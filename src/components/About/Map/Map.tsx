@@ -20,9 +20,9 @@ const Map: React.FC = () => {
     setHoveredIndex(index);
   };
 
-  const handleMouseLeave = () => {
-    setHoveredIndex(londonIndex); // Revert to London index on mouse leave
-  };
+  // const handleMouseLeave = () => {
+  //   setHoveredIndex(londonIndex); // Revert to London index on mouse leave
+  // };
 
   return (
     <Container className="main margins">

@@ -2,7 +2,9 @@ import { Container } from '@/components/Feature/Container/Container';
 import { createClient } from 'contentful';
 import Image from 'next/image';
 import React from 'react';
-import './blogdetail.module.css';
+import './blogdetail.css';
+import { EvaluateBusiness } from '@/components/Sections/EvaluateBusiness/EvaluateBusiness';
+import DetailsNavigate from '@/components/Policies/DetailNavigate/DetailsNavigate';
 
 // Contentful client
 const client = createClient({
@@ -13,7 +15,7 @@ const client = createClient({
 // Function to fetch a single blog post by slug
 const getBlogPost = async (slug: string) => {
   const response = await client.getEntries({
-    'content_type': 'blogs',
+    content_type: 'blogs',
     'fields.slug': slug, // Filter by slug field
   });
   return response.items[0]; // Return the first matching item
@@ -30,38 +32,45 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 
 const BlogPostPage = async ({ params }: { params: { slug: string } }) => {
   const blog = await getBlogPost(params.slug);
-  // console.log(blog);
+
   if (!blog) {
     return <div>Blog post not found</div>;
   }
 
-  const { title, content, bannerImage } = blog ? blog.fields : '';
+  const { title, content, bannerImage } = blog.fields;
+
+  // Prepare data for DetailsNavigate
+  const singleBlogDetail = {
+    title,
+    content,
+    bannerImage: bannerImage?.fields?.file?.url,
+  };
 
   return (
     <>
       <div className="blogDetail">
         <Container className="main">
           <div className="blogDetail-background">
-            <Image
+            <img
               src="/images/blogs/singleBlogBackground.svg"
               alt="blog"
-              width={100}
-              height={100}
             />
           </div>
         </Container>
         <section>
-          {/* <Container className="main margins">
-             <Components.Common.DetailsNavigate
-              // data={singleBlogDetail}
+          <Container className="main margins">
+            <DetailsNavigate
+              data={singleBlogDetail} // Pass the blog data as props
               headingIndex={false}
               overViewIndex={false}
               headerSection={true}
             />
-          </Container> */}
+          </Container>
         </section>
       </div>
-      {/* <Components.Common.LetsTalkSection /> */}
+      <EvaluateBusiness />
+      {/* Uncomment if you want to use the blog post content later */}
+      {/* 
       <div className="blog-post">
         <Container className="main">
           <div className="blog-banner">
@@ -72,7 +81,8 @@ const BlogPostPage = async ({ params }: { params: { slug: string } }) => {
           <h1>{title && title}</h1>
           <div dangerouslySetInnerHTML={content && { __html: content }} />
         </div>
-      </div>
+      </div> 
+      */}
     </>
   );
 };

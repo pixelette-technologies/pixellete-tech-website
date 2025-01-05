@@ -67,12 +67,13 @@ export const CaseStudies = ({ heading, text, initialData }: CaseStudiesProps) =>
 
           <Link href="/case-studies" passHref>
             <Button className="primary" animation="fade-up" duration="400">
-              View Our Projects
-              <FiExternalLink />
+              <div style={{display: 'flex', alignItems: 'center', gap: '0.4rem'}}>
+              View Our Projects <FiExternalLink />
+              </div>
             </Button>
           </Link>
         </center>
-        <section>
+        <section style={{marginTop: '1rem'}}>
           <CaseSlider data={caseStudyData} />
         </section>
       </Container>

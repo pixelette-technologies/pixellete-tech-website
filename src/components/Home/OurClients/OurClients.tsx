@@ -1,6 +1,5 @@
 import { Container } from '@/components/Feature/Container/Container'; // Import your custom Container component
 import { Heading } from '@/components/Feature/Heading/Heading';
-import Image from 'next/image';
 import React from 'react';
 import './ourclients.css';
 import Marquee from 'react-fast-marquee';

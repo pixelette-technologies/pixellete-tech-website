@@ -53,12 +53,9 @@ const DedicatedTech: React.FC = () => {
         </Text>
       </center>
       <Container className="main margins">
-        <div
-          style={{
-            display: 'flex',
-            justifyContent: 'space-evenly',
-            marginBottom: '2rem',
-          }}
+        <div className="margins" style={{ marginBottom: '3rem', display: 'flex', justifyContent: 'space-between'}}>
+        <span
+          className='dedicatedTechLinks'
         >
           {cards.map((card, index) => (
             <a
@@ -68,19 +65,14 @@ const DedicatedTech: React.FC = () => {
                   ? 'selectedDedicatedCard'
                   : 'linkDedicatedCard'
               }`}
-              style={{
-                cursor: 'pointer',
-                fontSize: '18px',
-                fontWeight: 'semiBold',
-              }}
+              
               onClick={() => setSelectedCardIndex(index)} // Update the selected card index
             >
               {card.title}
             </a>
           ))}
-        </div>
-        <div className="margins" style={{ marginBottom: '3rem' }}>
-          <div key={uuidv4()} data-aos="fade-up" data-aos-duration="600">
+        </span>
+          <div id='dedicatedDataCard' key={uuidv4()} data-aos="fade-up" data-aos-duration="600">
             <div
               style={{
                 textAlign: 'center',

@@ -1,15 +1,27 @@
-"use client"
+"use client";
+
 import { useState } from "react";
-import './technologiesused.css'
+import styles from "./technologiesused.module.css";
 import { Container } from "@/components/Feature/Container/Container";
 import { Heading } from "@/components/Feature/Heading/Heading";
 import Text from "@/components/Feature/Text/Text";
-import technologies from '@/data/technologies'
-const TechnologiesUsed = () => {
-  const [activeTab, setActiveTab] = useState("AI_ML_BI");
+import technologies from "@/data/technologies";
+
+type Technology = {
+  id: string;
+  name: string;
+  icon: string;
+};
+
+type Technologies = {
+  [key: string]: Technology[];
+};
+
+const TechnologiesUsed: React.FC = () => {
+  const [activeTab, setActiveTab] = useState<keyof Technologies>("AI_ML_BI");
 
   return (
-    <div className="technologies-main">
+    <div className={styles.technologiesMain}>
       <Container className="main margins">
         <center>
           <Heading
@@ -29,24 +41,25 @@ const TechnologiesUsed = () => {
             your business forward.
           </Text>
         </center>
-        <div className="technologies-layout">
-          <div className="tabs-section">
+
+        <div className={styles.technologiesLayout}>
+          <div className={styles.tabsSection}>
             {["AI_ML_BI", "Software", "Mobile", "Blockchain"].map((tab) => (
               <button
                 key={tab}
-                onClick={() => setActiveTab(tab)}
-                className={`tab-button ${activeTab === tab ? "active" : ""}`}
+                onClick={() => setActiveTab(tab as keyof Technologies)}
+                className={`${styles.tabButton} ${activeTab === tab ? styles.active : ""}`}
               >
                 {tab.replace("_", " ")}
               </button>
             ))}
           </div>
 
-          <div className="content-section" key={activeTab}>
-            <div className="icons-container">
-              {technologies[activeTab].map((tech) => (
-                <div className="icon-card" key={tech.id}>
-                  <img src={tech.icon} alt={tech.name} className="icon-img" />
+          <div className={styles.contentSection} key={activeTab}>
+            <div className={styles.iconsContainer}>
+              {technologies[activeTab]?.map((tech) => (
+                <div className={styles.iconCard} key={tech.id}>
+                  <img src={tech.icon} alt={tech.name} className={styles.iconImg} />
                 </div>
               ))}
             </div>

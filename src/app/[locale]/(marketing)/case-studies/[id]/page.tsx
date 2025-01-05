@@ -8,7 +8,7 @@ import { createClient } from 'contentful';
 import Image from 'next/image';
 import { notFound } from 'next/navigation'; // For 404 handling
 import React from 'react';
-import './casestudydetail.module.css';
+import './casestudydetail.css';
 
 // Contentful client
 const client = createClient({
@@ -131,12 +131,10 @@ const CaseStudieDetail = async ({ params }: { params: { id: string } }) => {
                 )}
               </div>
               <figure>
-                <Image
+                <img
                   // src={blogData.fields.image?.fields.file.url}
                   src={resolveUrl(blogData.fields.image?.fields.file.url)}
                   alt="cardImage"
-                  width={100}
-                  height={100}
                 />
               </figure>
             </header>

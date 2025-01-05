@@ -1,7 +1,7 @@
 'use client';
 
 import type { Entry } from 'contentful';
-import type { Settings } from 'react-slick';
+// import type { Settings } from 'react-slick';
 import type Slider from 'react-slick';
 import { CaseStudiCard } from '@/components/Feature/CaseSlider/CaseStudiCard';
 import { Container } from '@/components/Feature/Container/Container';
@@ -31,7 +31,7 @@ export const ProjectSection: React.FC = () => {
   const [filteredData, setFilteredData] = useState<CaseStudy[]>([]);
   const [blogData, setBlogData] = useState<CaseStudy[]>([]);
 
-  const slider = useRef<Slider | null>(null);
+  // const slider = useRef<Slider | null>(null);
 
   useEffect(() => {
     const client = createClient({
@@ -61,58 +61,58 @@ export const ProjectSection: React.FC = () => {
     new Set(blogData.flatMap(caseStudy => caseStudy.fields?.tags || [])),
   );
 
-  const settings: Settings = {
-    dots: false,
-    infinite: true,
-    arrows: false,
-    speed: 700,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    responsive: [
-      {
-        breakpoint: 1424,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 1,
-          infinite: true,
-          dots: false,
-        },
-      },
-      {
-        breakpoint: 1124,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          infinite: true,
-          dots: false,
-        },
-      },
-      {
-        breakpoint: 800,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          initialSlide: 1,
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          initialSlide: 1,
-        },
-      },
-      {
-        breakpoint: 400,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          initialSlide: 1,
-        },
-      },
-    ],
-  };
+  // const settings: Settings = {
+  //   dots: false,
+  //   infinite: true,
+  //   arrows: false,
+  //   speed: 700,
+  //   slidesToShow: 3,
+  //   slidesToScroll: 1,
+  //   responsive: [
+  //     {
+  //       breakpoint: 1424,
+  //       settings: {
+  //         slidesToShow: 3,
+  //         slidesToScroll: 1,
+  //         infinite: true,
+  //         dots: false,
+  //       },
+  //     },
+  //     {
+  //       breakpoint: 1124,
+  //       settings: {
+  //         slidesToShow: 2,
+  //         slidesToScroll: 1,
+  //         infinite: true,
+  //         dots: false,
+  //       },
+  //     },
+  //     {
+  //       breakpoint: 800,
+  //       settings: {
+  //         slidesToShow: 2,
+  //         slidesToScroll: 1,
+  //         initialSlide: 1,
+  //       },
+  //     },
+  //     {
+  //       breakpoint: 600,
+  //       settings: {
+  //         slidesToShow: 1,
+  //         slidesToScroll: 1,
+  //         initialSlide: 1,
+  //       },
+  //     },
+  //     {
+  //       breakpoint: 400,
+  //       settings: {
+  //         slidesToShow: 1,
+  //         slidesToScroll: 1,
+  //         initialSlide: 1,
+  //       },
+  //     },
+  //   ],
+  // };
 
   //   const nextButtonHandler = () => {
   //     slider.current?.slickNext();

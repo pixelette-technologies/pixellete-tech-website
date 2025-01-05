@@ -114,34 +114,12 @@
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .navbar > div > section {
   padding: 2.4rem 0rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 10rem;
+  width: 100%;
 }
 .navbar > div > section > a > img {
   width: 16.4rem;

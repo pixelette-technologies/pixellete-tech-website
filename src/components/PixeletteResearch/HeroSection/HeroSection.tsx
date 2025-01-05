@@ -60,7 +60,7 @@ const HeroSection: React.FC = () => {
           <div className="content">
             {/* Globe Section */}
             <div className="globe-container">
-              <GlobeWorld className="globe" />
+              <GlobeWorld  />
             </div>
 
             {/* Description Section */}

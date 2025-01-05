@@ -74,3 +74,33 @@
   width: 100px;
   padding: 0.3rem;
 }
+
+@media screen and (max-width: 800px) {
+  .mainSpecialImgs{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: space-evenly;
+  }
+  .specialImgs div{
+    display: flex;
+    width: 80%;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4rem;
+    /* grid-template-columns: repeat(3, 1fr); */
+  
+    /* gap: 5rem; */
+  }
+  .specialImgs1 div{
+    display: flex;
+    width: 80%;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4rem;
+    /* grid-template-columns: repeat(3, 1fr); */
+  
+    /* gap: 5rem; */
+  }
+}

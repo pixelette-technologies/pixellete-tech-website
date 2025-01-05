@@ -101,10 +101,10 @@
   .AiServiceTable th {
     padding: 0px;
     text-align: center;
-    font-size: 10px;
+    font-size: 9px;
   }
   .AiServiceTable tr {
-    height: 40px;
+    height: 0px;
   }
   .AiServiceTable td {
     padding: 0px;
@@ -121,18 +121,19 @@
     color: #fff;
   }
   .AiServiceTable td button{
-    font-size: 7px;
+    font-size: 8px;
+    padding: 1px;
   }
 }
 
-.AiServiceTable{
+/* .AiServiceTable{
   display: flex;
   margin-top: 10rem;
   gap: 1rem;
-}
+} */
 
 
-.AiServiceTable table {
+/* .AiServiceTable table {
   width: 100%;
   border-collapse: collapse;
 }
@@ -151,10 +152,8 @@
 }
 .AiServiceTable th {
   background-color: transparent;
-  /* color: #fff; */
 }
 .AiServiceTable td {
   background-color: #0F0F0FB2;
-  /* border: 1px solid white; */
   color: #fff;
-}
+} */

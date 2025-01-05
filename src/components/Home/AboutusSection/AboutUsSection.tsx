@@ -1,18 +1,19 @@
 'use client';
 
 import Image from 'next/image';
-import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
-import { FiExternalLink } from 'react-icons/fi';
-import { Button } from '../../Feature/Button/Button'; // Simplified import
 import { Container } from '../../Feature/Container/Container'; // Simplified import
 import { Heading } from '../../Feature/Heading/Heading'; // Simplified import
 import { Text } from '../../Feature/Text/Text'; // Simplified import
 import './aboutussection.css';
 
-const AboutUsSection = () => {
-  const [visibleSections, setVisibleSections] = useState({});
-  const counters = useRef({
+interface VisibleSections {
+  [key: string]: boolean;
+}
+
+const AboutUsSection: React.FC = () => {
+  const [visibleSections, setVisibleSections] = useState<VisibleSections>({});
+  const counters = useRef<{ [key: string]: number }>({
     'counter-section-1': 0,
     'counter-section-2': 0,
     'counter-section-3': 0,
@@ -22,13 +23,13 @@ const AboutUsSection = () => {
   });
 
   useEffect(() => {
-    const options = {
+    const options: IntersectionObserverInit = {
       root: null,
       rootMargin: '0px',
       threshold: 0.5,
     };
 
-    const handleIntersect = (entries) => {
+    const handleIntersect: IntersectionObserverCallback = (entries) => {
       entries.forEach((entry) => {
         const sectionId = entry.target.id;
         if (visibleSections[sectionId]) {
@@ -36,16 +37,15 @@ const AboutUsSection = () => {
         }
 
         const isIntersecting = entry.isIntersecting;
-        setVisibleSections(prev => ({
+        setVisibleSections((prev) => ({
           ...prev,
           [sectionId]: isIntersecting,
         }));
 
-        // Trigger counting effect when section is in view
         if (isIntersecting) {
-          const element = entry.target.querySelector('h1');
+          const element = entry.target.querySelector<HTMLHeadingElement>('h1');
           if (element) {
-            const endValue = Number.parseInt(element.getAttribute('data-end'), 10);
+            const endValue = Number.parseInt(element.getAttribute('data-end') || '0', 10);
             if (!counters.current[sectionId]) {
               let current = 0;
               const interval = setInterval(() => {
@@ -64,10 +64,10 @@ const AboutUsSection = () => {
 
     const observer = new IntersectionObserver(handleIntersect, options);
     const targets = document.querySelectorAll('.counter-section');
-    targets.forEach(target => observer.observe(target));
+    targets.forEach((target) => observer.observe(target));
 
     return () => {
-      targets.forEach(target => observer.unobserve(target));
+      targets.forEach((target) => observer.unobserve(target));
     };
   }, [visibleSections]);
 
@@ -83,113 +83,61 @@ const AboutUsSection = () => {
         <Container className="main margins">
           <section data-aos="fade-up" data-aos-duration="1000">
             <div>
-              <Heading className="secondry">Our passion lies in building <br /> tech solutions that drive real
-              change across industries</Heading>
+              <Heading className="secondry">
+                Our passion lies in building <br /> tech solutions that drive real
+                change across industries
+              </Heading>
               <Text className="secondry">
-              From our beginnings in 2018, Pixelette Technologies has rapidly
-                become a world leading development services company,
-                specializing in AI, blockchain, web, mobile technologies, and
-                more.
+                From our beginnings in 2018, Pixelette Technologies has rapidly become a world-leading development
+                services company, specializing in AI, blockchain, web, mobile technologies, and more.
               </Text>
             </div>
             <div>
-              <section className="counter-section" id="counter-section-1">
-                <h1 data-end="200">0</h1>
-                <div>
-                  <p>Projects Completed</p>
-                </div>
-              </section>
-              <div className="counter-section" id="counter-section-2">
-                <h1 data-end="210">0</h1>
-                <div>
-                  <p>Global Team Members</p>
-                </div>
-              </div>
-              <section className="counter-section" id="counter-section-3">
-                <h1 data-end="30">0</h1>
-                <div>
-                  <p>Hours in Development</p>
-                </div>
-              </section>
-              <div className="counter-section" id="counter-section-4">
-                <h1 data-end="100">0</h1>
-                <div>
-                  <p>Happy Clients</p>
-                </div>
-              </div>
-              <section className="counter-section" id="counter-section-5">
-                <h1 data-end="97">0</h1>
-                <div>
-                  <p>Customer Satisfaction</p>
-                </div>
-              </section>
-              <div className="counter-section" id="counter-section-6">
-                <h1 data-end="13">0</h1>
-                <div>
-                  <p>Global Locations</p>
-                </div>
-              </div>
+              {Array.from({ length: 6 }, (_, index) => (
+                <section className="counter-section" id={`counter-section-${index + 1}`} key={`counter-section-${index + 1}`}>
+                  <h1 data-end={index === 4 ? 97 : index === 5 ? 13 : (index + 1) * 100}>0</h1>
+                  <div>
+                    <p>{
+                      [
+                        'Projects Completed',
+                        'Global Team Members',
+                        'Hours in Development',
+                        'Happy Clients',
+                        'Customer Satisfaction',
+                        'Global Locations',
+                      ][index]
+                    }</p>
+                  </div>
+                </section>
+              ))}
             </div>
           </section>
         </Container>
-      <Container className="main margins">
+        <Container className="main margins">
           <section data-aos="fade-up" data-aos-duration="1000">
-            <div
-              className="scottland-container"
-              style={{
-                width: "100%",
-              }}
-            >
-              {/* First Section */}
-              <div
-                className="scottland-section"
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  width: "100%",
-                  gap: "2rem",
-                }}
-              >
-                <div>
-                  <img
-                    src='/images/home/appg.png'
-                    alt="APPG Logo"
-                    style={{ maxWidth: "100%", height: "auto" }}
-                  />
+            <div className="scottland-container" style={{ width: '100%' }}>
+              {[...Array(2)].map((_, i) => (
+                <div
+                  className="scottland-section"
+                  key={i}
+                  style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    width: '100%',
+                    gap: '2rem',
+                    justifyContent: i === 1 ? 'right' : 'flex-start',
+                  }}
+                >
+                  <div>
+                    <img src={`/images/home/${i === 0 ? 'appg' : 'scotland'}.png`} alt={i === 0 ? 'APPG Logo' : 'Scotland Logo'} />
+                  </div>
+                  <div className="scottland-text" style={{ flex: 1 }}>
+                    <Text className="titory--bold">
+                      Official Secretariat of the British Government’s AI policy body (APPG AI)
+                    </Text>
+                  </div>
                 </div>
-                <div className="scottland-text" style={{ flex: 1 }}>
-                  <Text className="titory--bold">
-                    Official Secretariat of the British Government’s AI policy
-                    body (APPG AI)
-                  </Text>
-                </div>
-              </div>
-
-              {/* Second Section */}
-              <div
-                className="scottland-section"
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  width: "100%",
-                  gap: "2rem",
-                  justifyContent: "right",
-                }}
-              >
-                <div>
-                  <img
-                    src='/images/home/scotland.png'
-                    alt="Scotland Logo"
-                    style={{ maxWidth: "100%", height: "auto" }}
-                  />
-                </div>
-                <div className="scottland-text" style={{ flex: 1 }}>
-                  <Text className="titory--bold">
-                    Official Secretariat of the British Government’s AI policy
-                    body (APPG AI)
-                  </Text>
-                </div>
-              </div>
+              ))}
             </div>
           </section>
         </Container>
