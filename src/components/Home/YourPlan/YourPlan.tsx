@@ -5,7 +5,7 @@ import Image from 'next/image';
 import React from 'react';
 import './yourplan.css';
 
-type OurYourPlanProps = {};
+type OurYourPlanProps = object;
 
 export const YourPlan: React.FC<OurYourPlanProps> = () => {
   return (

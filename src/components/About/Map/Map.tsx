@@ -1,6 +1,5 @@
 'use client';
 import { Container } from '@/components/Feature/Container/Container';
-import Text from '@/components/Feature/Text/Text';
 import { mapIndexData } from '@/data/mapIndexData';
 import { motion } from 'framer-motion';
 import React, { useState } from 'react';

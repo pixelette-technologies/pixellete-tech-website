@@ -4,7 +4,6 @@ import { FaPhone } from 'react-icons/fa6';
 import { HiLocationMarker } from 'react-icons/hi';
 import { MdEmail } from 'react-icons/md';
 import { Container } from '../Feature/Container/Container';
-import Text from '../Feature/Text/Text';
 import styles from './footer.module.css';
 
 export const Footer: React.FC = () => {
@@ -101,8 +100,7 @@ export const Footer: React.FC = () => {
 
           {/* Quick Links */}
           <div>
-            <p
-            >
+            <p>
               Quick Links
             </p>
             {['About-us', 'Case-studies', 'Pixelette-research', 'Start-ups'].map(
@@ -118,8 +116,7 @@ export const Footer: React.FC = () => {
 
           {/* Company Info */}
           <div>
-            <p
-            >
+            <p>
               Company Info
             </p>
             {[
@@ -139,8 +136,7 @@ export const Footer: React.FC = () => {
 
           {/* Contact Info */}
           <div>
-            <p
-            >
+            <p>
               Contact Us
             </p>
             {[

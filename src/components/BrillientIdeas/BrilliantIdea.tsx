@@ -1,6 +1,4 @@
 import { Container } from '../Feature/Container/Container';
-import { Heading } from '../Feature/Heading/Heading';
-import Text from '../Feature/Text/Text';
 import './brillientideas.css';
 
 const BrilliantIdea: React.FC = () => {
@@ -31,16 +29,16 @@ const BrilliantIdea: React.FC = () => {
               <br />
               {' '}
               <br />
-                <>
-                  Not to forget
-                  <ul className="project-deilvered">
-                    <li>35,000+ hours in development</li>
-                    <li>1,000,000,00+ project visitors garnered</li>
-                    <li>100% project completion success rate</li>
-                    <li>Secured over £100M in funding through MVPs</li>
-                  </ul>
-                </>
-              
+              <>
+                Not to forget
+                <ul className="project-deilvered">
+                  <li>35,000+ hours in development</li>
+                  <li>1,000,000,00+ project visitors garnered</li>
+                  <li>100% project completion success rate</li>
+                  <li>Secured over £100M in funding through MVPs</li>
+                </ul>
+              </>
+
             </div>
             <img src="/images/Clutch/mind.png" alt="Mind Map" />
           </section>

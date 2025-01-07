@@ -1,38 +1,37 @@
 .breadcrumb {
-    margin-top: 2rem;
-    font-family: 'Inter', sans-serif;
-    font-size: 1.5rem;
-    color: #fff;
-    display: inline-flex; /* Adjust to content width */
-    align-items: center;
-    border: 0.1rem solid #ddd; /* Light gray border */
-    padding: 1rem; /* Inner spacing */
-    border-radius: 1.5rem; /* Rounded corners */
-    flex-wrap: wrap; /* Wrap items if they overflow */
+  margin-top: 2rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.5rem;
+  color: #fff;
+  display: inline-flex; /* Adjust to content width */
+  align-items: center;
+  border: 0.1rem solid #ddd; /* Light gray border */
+  padding: 1rem; /* Inner spacing */
+  border-radius: 1.5rem; /* Rounded corners */
+  flex-wrap: wrap; /* Wrap items if they overflow */
 }
-  
-  .breadcrumbItem {
-    display: flex;
-    align-items: center;
-  }
-  
-  .breadcrumbLink {
-    text-decoration: none;
-    color: #e5e8ec;
-    transition: color 0.3s;
-  }
-  
-  .breadcrumbLink:hover {
-    color: #0056b3;
-  }
-  
-  .separator {
-    margin: 0 5px;
-    color: #999;
-  }
-  
-  .current {
-    font-weight: bold;
-    color: #fdfdfd;
-  }
-  
+
+.breadcrumbItem {
+  display: flex;
+  align-items: center;
+}
+
+.breadcrumbLink {
+  text-decoration: none;
+  color: #e5e8ec;
+  transition: color 0.3s;
+}
+
+.breadcrumbLink:hover {
+  color: #0056b3;
+}
+
+.separator {
+  margin: 0 5px;
+  color: #999;
+}
+
+.current {
+  font-weight: bold;
+  color: #fdfdfd;
+}

@@ -45,8 +45,8 @@ const DedicatedTech: React.FC = () => {
           development services across artificial intelligence and machine
           learning (AI/ML), crypto and blockchain, AR/VR, web, mobile and
           software development.
-          </p>
-        
+        </p>
+
       </center>
       <Container className="main margins">
         <div className="margins" style={{ marginBottom: '3rem', display: 'flex', justifyContent: 'space-between' }}>
@@ -80,8 +80,8 @@ const DedicatedTech: React.FC = () => {
               <p>{cards[selectedCardIndex].title}</p>
               <p>
                 {cards[selectedCardIndex].content}
-                </p>
-              
+              </p>
+
             </div>
           </div>
         </div>

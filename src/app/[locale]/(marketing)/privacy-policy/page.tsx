@@ -1,5 +1,4 @@
 import { Container } from '@/components/Feature/Container/Container';
-import Text from '@/components/Feature/Text/Text';
 import DetailsNavigate from '@/components/Policies/DetailNavigate/DetailsNavigate';
 import { EvaluateBusiness } from '@/components/Sections/EvaluateBusiness/EvaluateBusiness';
 import data from '@/data';
@@ -40,12 +39,10 @@ export default async function PrivacyPolicy(props: IAIservicesProps) {
       <Container className="main margins">
         <div className="privacyPolicy">
           <center>
-            <h1
-            >
+            <h1>
               Privacy Policy
             </h1>
-            <p
-            >
+            <p>
               Pixelette Technologies is committed to protecting your personal
               information and respecting your privacy. This Privacy Policy
               explains how we collect, use, store and share your personal
@@ -53,7 +50,7 @@ export default async function PrivacyPolicy(props: IAIservicesProps) {
               policy is compliant with the General Data Protection Regulation
               (GDPR) of the European Union and the Data Protection Act 2018 of
               the United Kingdom.
-              </p>
+            </p>
           </center>
           <DetailsNavigate
             data={data.privacyPolicy}

@@ -4,7 +4,6 @@ import type { EntryCollection } from 'contentful';
 import { Button } from '@/components/Feature/Button/Button';
 import { CaseSlider } from '@/components/Feature/CaseSlider/CaseSlider';
 import { Container } from '@/components/Feature/Container/Container';
-import { Text } from '@/components/Feature/Text/Text';
 import { createClient } from 'contentful';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
@@ -60,9 +59,8 @@ export const CaseStudies = ({ heading, text, initialData }: CaseStudiesProps) =>
             {heading || 'Case Studies'}
           </h1>
 
-          
           <p>
-          {text || 'Explore how our cutting-edge solutions have transformed industries and empowered clients.'}
+            {text || 'Explore how our cutting-edge solutions have transformed industries and empowered clients.'}
           </p>
 
           <Link href="/case-studies" passHref>

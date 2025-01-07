@@ -2,9 +2,7 @@ import type { FC } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { v4 as uuidv4 } from 'uuid';
-import Text from '../Text/Text';
 import './cards.css';
-import { p } from 'node_modules/@electric-sql/pglite/dist/pglite-CCwqaSmq';
 
 type PlanData = {
   icon: string;
@@ -46,18 +44,18 @@ const YourPlanCard: FC<YourPlanCardProps> = ({ data }) => {
                 <h3>{el.iconhead}</h3>
               </div>
             </div>
-          <p>{el.name}</p>
-             <p>{el.description}</p>
+            <p>{el.name}</p>
+            <p>{el.description}</p>
             <div style={{ display: 'flex', alignItems: 'center' }}>
-                {el.link}
-                {' '}
+              {el.link}
+              {' '}
               <div>
                 <Image
                   src={el.linkIcon}
                   alt="link icon"
                   width={20}
                   height={20}
-                  />
+                />
               </div>
             </div>
           </div>

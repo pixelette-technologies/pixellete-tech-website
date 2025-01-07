@@ -3,7 +3,6 @@
 import BlogCard from '@/components/Feature/Blog/BlogCard';
 import { Button } from '@/components/Feature/Button/Button';
 import { Container } from '@/components/Feature/Container/Container';
-import { Text } from '@/components/Feature/Text/Text';
 import { BlogGridWithBanner } from '@/components/Sections/BlogGridWithBanner/BlogGridWithBanner';
 import { createClient } from 'contentful';
 import Image from 'next/image';
@@ -91,11 +90,11 @@ export const BlogSection: React.FC<BlogSectionProps> = ({ heading, text }) => {
             <h1 id="h_ani">
               {heading || 'The Pixelette Post'}
             </h1>
-              <p>
+            <p>
               {text
               || 'Dive into our curated collection of updates and guides to deepen your understanding of diverse technologies.'}
-              </p>
-            
+            </p>
+
             <Link href="/blogs" passHref>
               <Button className="primary" id="h_ani">
                 Explore Blogs

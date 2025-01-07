@@ -1,5 +1,4 @@
 'use client';
-import Text from '@/components/Feature/Text/Text';
 import { createClient } from 'contentful';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
@@ -123,13 +122,14 @@ const DetailsNavigate = (props) => {
                         {props.overViewIndex && (
                           <div>
                             <p>
-                              {index + 1}.
-                              </p>
+                              {index + 1}
+                              .
+                            </p>
                           </div>
                         )}
                         <p>
                           {title}
-                          </p>
+                        </p>
                       </div>
                     )}
                   </>
@@ -155,15 +155,14 @@ const DetailsNavigate = (props) => {
           {props.headerSection && (
             <header>
               {singleBlogDetail.fields?.date && (
-                
-                 <p>
+
+                <p>
                   {singleBlogDetail.fields?.date}
-                  </p>
-                
+                </p>
+
               )}
               {singleBlogDetail.fields?.name && (
-                <h1
-                >
+                <h1>
                   {singleBlogDetail.fields?.name}
                 </h1>
               )}
@@ -179,12 +178,12 @@ const DetailsNavigate = (props) => {
           )}
           {/* <Element name="headings"> */}
           {singleBlogDetail.fields?.content && (
-            
-             <p>
+
+            <p>
               <ReactMarkdown>
                 {singleBlogDetail.fields?.content}
               </ReactMarkdown>
-              </p>
+            </p>
           )}
           {/* </Element> */}
           {data?.map((ls, index) => {
@@ -196,30 +195,32 @@ const DetailsNavigate = (props) => {
                     <h3
                       className="policyHeading"
                     >
-                      {props.headingIndex && index + 1 + "."} {title}
+                      {props.headingIndex && `${index + 1}.`}
+                      {' '}
+                      {title}
                     </h3>
                   </header>
                 )}
 
-                {title === "Contact" && (
+                {title === 'Contact' && (
                   <blockquote>
-                    <div data-aos="fade-up" data-aos-duration={`500`}>
+                    <div data-aos="fade-up" data-aos-duration="500">
                       <img src="/images/about/mail.svg" alt="icon" />
                       <p>
                         sales@pixelettetech.com
-                        </p>
+                      </p>
                     </div>
-                    <div data-aos="fade-up" data-aos-duration={`500`}>
+                    <div data-aos="fade-up" data-aos-duration="500">
                       <img src="/images/about/mapIcon.svg" alt="icon" />
                       <p>
                         https://www.pixelettetech.com/contact-us/
-                        </p>
+                      </p>
                     </div>
-                    <div data-aos="fade-up" data-aos-duration={`500`}>
+                    <div data-aos="fade-up" data-aos-duration="500">
                       <img src="/images/about/phone.svg" alt="icon" />
                       <p>
                         +44 2045188226
-                        </p>
+                      </p>
                     </div>
                   </blockquote>
                 )}

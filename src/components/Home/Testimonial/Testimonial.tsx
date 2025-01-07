@@ -5,7 +5,6 @@ import type { Settings } from 'react-slick';
 import { Button } from '@/components/Feature/Button/Button';
 import { TestimonialCard } from '@/components/Feature/Cards/TestimonialCard';
 import { Container } from '@/components/Feature/Container/Container';
-import { Text } from '@/components/Feature/Text/Text';
 import data from '@/data';
 import Image from 'next/image';
 import { useRef } from 'react';
@@ -111,7 +110,7 @@ export const Testimonial: FC<TestimonialProps> = ({ background }) => {
               Clients love us
             </h1>
             <div data-aos-duration="500" data-aos="fade-up">
-               <p>4.9</p>
+              <p>4.9</p>
               <Image
                 src="/images/home/stars.svg"
                 alt="Rating Stars"

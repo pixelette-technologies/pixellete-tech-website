@@ -1,12 +1,9 @@
 import { Button } from '@/components/Feature/Button/Button';
 import { Container } from '@/components/Feature/Container/Container';
-import Text from '@/components/Feature/Text/Text';
 import React from 'react';
 import './index.css';
 
-type AiServiceTableProps = {
-  // Define any props here if needed in the future
-};
+type AiServiceTableProps = object;
 export const AiServiceTable: React.FC<AiServiceTableProps> = () => {
   return (
     <div>
@@ -32,7 +29,7 @@ export const AiServiceTable: React.FC<AiServiceTableProps> = () => {
             <br />
             augmentation services or dedicated development teams service and
             we’ll help bring your project to life.
-            </p>
+          </p>
           <div className="AiServiceTable">
             <table>
               <thead>

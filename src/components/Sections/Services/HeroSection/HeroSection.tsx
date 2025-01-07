@@ -1,6 +1,5 @@
 import { Button } from '@/components/Feature/Button/Button';
 import { Container } from '@/components/Feature/Container/Container';
-import Text from '@/components/Feature/Text/Text';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
@@ -52,8 +51,8 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
           </h1>
           <p>
             {description}
-            </p>
-          
+          </p>
+
           <div>
             <Link href={buttonLink}>
               <Button className="primary" animation="fade-up" duration="1100">

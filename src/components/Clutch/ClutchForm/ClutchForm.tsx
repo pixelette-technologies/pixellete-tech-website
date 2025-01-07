@@ -11,8 +11,7 @@ const ClutchForm: React.FC = () => {
     <Container className="main margins">
       <div className="evaluateBussiness">
         <header>
-          <h1
-          >
+          <h1>
             We&apos;ll bring your
             <br />
             <TypeAnimation
@@ -35,31 +34,31 @@ const ClutchForm: React.FC = () => {
             <br />
             get your money back
           </h1>
-            <p>
+          <p>
             Pixelette Technologies empowers non-technical founders to get
             software solutions to their exact requirements without hiring
             expensive in-house teams
-            </p>
-            <br />
-            <br />
-            <ul className="custom-list">
-              <li>
-                Get on a call to chat about your project scope, or we&apos;ll
-                make it up as we go
-              </li>
-              <li>
-                Focus on your vision while we handle the technical details
-              </li>
-              <li>
-                Stay in the loop to provide feedback for a platform your users
-                will love
-              </li>
-              <li>
-                Receive your completed project ahead of schedule and go to
-                market
-              </li>
-            </ul>
-          
+          </p>
+          <br />
+          <br />
+          <ul className="custom-list">
+            <li>
+              Get on a call to chat about your project scope, or we&apos;ll
+              make it up as we go
+            </li>
+            <li>
+              Focus on your vision while we handle the technical details
+            </li>
+            <li>
+              Stay in the loop to provide feedback for a platform your users
+              will love
+            </li>
+            <li>
+              Receive your completed project ahead of schedule and go to
+              market
+            </li>
+          </ul>
+
         </header>
         <div>
           <ContactUsForm

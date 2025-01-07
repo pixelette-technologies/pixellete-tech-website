@@ -1,8 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
 import { Container } from '../../Feature/Container/Container';
-import { Heading } from '../../Feature/Heading/Heading';
-import Text from '../../Feature/Text/Text';
 import './herosection.css';
 
 type HeroSectionProps = {
@@ -43,8 +41,9 @@ const HowItWorksHeroSection: React.FC<HeroSectionProps> = ({
               {heading}
             </h1>
             <p>
-            {text}</p> 
-            
+              {text}
+            </p>
+
           </center>
           <section>
             <div className="deliverHeroCard">

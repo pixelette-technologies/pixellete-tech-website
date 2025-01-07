@@ -1,8 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
 import { Container } from '../Feature/Container/Container';
-import { Heading } from '../Feature/Heading/Heading';
-import Text from '../Feature/Text/Text';
 import { EvaluateBusiness } from '../Sections/EvaluateBusiness/EvaluateBusiness';
 
 const PrivacyPolicy: React.FC = () => {
@@ -26,7 +24,7 @@ const PrivacyPolicy: React.FC = () => {
             >
               Privacy Policy
             </h1>
-                          
+
             <p>
               Pixelette Technologies is committed to protecting your personal
               information and respecting your privacy. This Privacy Policy
@@ -35,8 +33,8 @@ const PrivacyPolicy: React.FC = () => {
               policy is compliant with the General Data Protection Regulation
               (GDPR) of the European Union and the Data Protection Act 2018 of
               the United Kingdom.
-              </p>
-            
+            </p>
+
           </center>
         </div>
       </Container>

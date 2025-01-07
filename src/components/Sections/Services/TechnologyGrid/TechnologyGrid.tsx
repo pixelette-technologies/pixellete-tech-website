@@ -1,6 +1,5 @@
 'use client';
 import { Container } from '@/components/Feature/Container/Container';
-import { Text } from '@/components/Feature/Text/Text';
 import React, { useState } from 'react';
 import './technologygrid.css';
 
@@ -43,9 +42,9 @@ export const TechnologyGrid: React.FC<TechnologyGridProps> = ({
           {heading}
         </h1>
         <p>
-        {description}
+          {description}
         </p>
-        
+
       </center>
       <Container className="main margins">
         <div className="margins" style={{ marginBottom: '3rem' }}>
@@ -64,7 +63,7 @@ export const TechnologyGrid: React.FC<TechnologyGridProps> = ({
                 gap: '1rem',
               }}
             >
-               <p>{area.title}</p>
+              <p>{area.title}</p>
               {area.description && (
                 <p>{area.description}</p>
               )}
@@ -82,19 +81,19 @@ export const TechnologyGrid: React.FC<TechnologyGridProps> = ({
             {selectedData
               ? (
                   <div style={{ display: 'flex', flexDirection: 'column', textAlign: 'center', gap: '2rem' }}>
-                     <p>{selectedData.title}</p>
+                    <p>{selectedData.title}</p>
                     {selectedData.description && (
                       <p>
                         {selectedData.description}
                       </p>
-                      
+
                     )}
                   </div>
                 )
               : (
-                <p>
-                   Click on a card to see more details.
-                </p>
+                  <p>
+                    Click on a card to see more details.
+                  </p>
                 )}
           </div>
         </div>

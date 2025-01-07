@@ -1,6 +1,5 @@
 import { Button } from '@/components/Feature/Button/Button';
 import { Container } from '@/components/Feature/Container/Container';
-import Text from '@/components/Feature/Text/Text';
 import Image from 'next/image';
 import Link from 'next/link'; // Correct usage of Next.js routing
 import React from 'react';
@@ -39,12 +38,12 @@ export const HeroSection: React.FC<HeroSectionProps> = () => {
           <h1>
             Shaping the future with every line of code
           </h1>
-            <p>
+          <p>
             At Pixelette Technologies, we are committed to crafting
             transformative technology that answers the problems to tomorrow’s
             world.
-            </p>
-          
+          </p>
+
           <div>
             {/* Using React Scroll for smooth scrolling */}
             <Link href="contactUs">

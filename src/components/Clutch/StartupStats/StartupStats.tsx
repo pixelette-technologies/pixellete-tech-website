@@ -1,5 +1,4 @@
 import { Container } from '@/components/Feature/Container/Container';
-import Text from '@/components/Feature/Text/Text';
 import PropTypes from 'prop-types';
 import './startupstats.css';
 
@@ -46,52 +45,52 @@ const StartupStats: React.FC<StartupStatsProps> = () => {
                 </h1>
               </div>
             </div>
-              <>
-                <span className="stats-text">
-                  And it&apos;s a real setback, because these ideas have the
-                  <br />
-                  potential to revolutionise industries and solve real-world
-                  <br />
-                  problems. Here&apos;s why it happens:
-                  <br />
-                  <br />
-                  <div className="list-container">
-                    <ul className="ul-stats">
-                      <li>
-                        <strong>Technical barriers:</strong>
-                        {' '}
-                        Many founders,
-                        while solid on the
-                        <br />
-                        business end, lack the technical expertise needed to
-                        build
-                        {' '}
-                        <br />
-                        their vision
-                      </li>
-                      <li>
-                        <strong>Resource strain:</strong>
-                        {' '}
-                        Hiring and managing
-                        developers can be
-                        <br />
-                        prohibitively expensive and time-consuming.
-                      </li>
-                      <li>
-                        <strong>Quality issues:</strong>
-                        {' '}
-                        Low-cost solutions
-                        often fail to deliver the
-                        <br />
-                        quality and functionality needed for success.
-                      </li>
-                    </ul>
-                  </div>
-                </span>
-              </>
-              <br />
-              <br />
-            
+            <>
+              <span className="stats-text">
+                And it&apos;s a real setback, because these ideas have the
+                <br />
+                potential to revolutionise industries and solve real-world
+                <br />
+                problems. Here&apos;s why it happens:
+                <br />
+                <br />
+                <div className="list-container">
+                  <ul className="ul-stats">
+                    <li>
+                      <strong>Technical barriers:</strong>
+                      {' '}
+                      Many founders,
+                      while solid on the
+                      <br />
+                      business end, lack the technical expertise needed to
+                      build
+                      {' '}
+                      <br />
+                      their vision
+                    </li>
+                    <li>
+                      <strong>Resource strain:</strong>
+                      {' '}
+                      Hiring and managing
+                      developers can be
+                      <br />
+                      prohibitively expensive and time-consuming.
+                    </li>
+                    <li>
+                      <strong>Quality issues:</strong>
+                      {' '}
+                      Low-cost solutions
+                      often fail to deliver the
+                      <br />
+                      quality and functionality needed for success.
+                    </li>
+                  </ul>
+                </div>
+              </span>
+            </>
+            <br />
+            <br />
+
           </section>
           <center className="center-text">
             <p>
@@ -104,7 +103,7 @@ const StartupStats: React.FC<StartupStatsProps> = () => {
               <br />
               {' '}
               setbacks, delaying their path to success.
-              </p>
+            </p>
             <div
               style={{
                 fontSize: '2.5rem',

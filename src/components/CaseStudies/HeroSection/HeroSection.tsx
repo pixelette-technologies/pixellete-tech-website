@@ -1,6 +1,5 @@
 import { Button } from '@/components/Feature/Button/Button';
 import { Container } from '@/components/Feature/Container/Container';
-import Text from '@/components/Feature/Text/Text';
 import Link from 'next/link';
 import './herosection.css';
 
@@ -24,15 +23,14 @@ const HeroSection: React.FC = () => {
             <img src="/images/casestudies/box_4.svg" alt="box 4" />
           </blockquote>
           <center>
-            <h1
-            >
+            <h1>
               Our development legacy in action
             </h1>
-             <p>
-             Witness our strategies, execution and results unfold in our IT and
-             tech development case studies.
-             </p>
-            
+            <p>
+              Witness our strategies, execution and results unfold in our IT and
+              tech development case studies.
+            </p>
+
             <Link href="contactUs">
               <Button className="primary" animation="fade-up" duration="2400">
                 Schedule a Consultation

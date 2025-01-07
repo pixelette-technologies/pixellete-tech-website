@@ -3,7 +3,6 @@
 import { BlogCard } from '@/components/Feature/Blog/BlogCard';
 import { Button } from '@/components/Feature/Button/Button';
 import { Container } from '@/components/Feature/Container/Container';
-import { Text } from '@/components/Feature/Text/Text';
 import Image from 'next/image';
 import Link from 'next/link';
 import React, { useState } from 'react';
@@ -16,7 +15,7 @@ export const BlogGridWithBanner = ({ data = [], singleView = false }) => {
   if (!data.length) {
     return <div>No blogs available.</div>;
   }
-  console.log(data);
+  // console.log(data);
   const blogCardsMain = data[0] || {};
   const blogCardsData = data.slice(1, visibleCount + 1);
 
@@ -69,19 +68,18 @@ export const BlogGridWithBanner = ({ data = [], singleView = false }) => {
               </figure>
             )}
             <div className={styles.heroContent}>
-              
+
               <p>
                 {blogCardsMain.fields?.date || 'No date available'}
-                </p>
-              <h3
-              >
+              </p>
+              <h3>
                 {blogCardsMain.fields?.name || 'No title available'}
               </h3>
-              
-               <p>
+
+              <p>
                 {blogCardsMain.fields?.shortDescription || 'No description available'}
-                </p>
-              
+              </p>
+
               <div className={styles.readMoreButton}>
                 <Link href={`/blogs/${blogCardsMain.fields?.slug}`} passHref>
                   <Button className="primary">

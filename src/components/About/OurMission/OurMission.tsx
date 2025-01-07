@@ -1,6 +1,5 @@
 import { Container } from '@/components/Feature/Container/Container';
 
-import Text from '@/components/Feature/Text/Text';
 import React from 'react';
 import './ourmission.css';
 
@@ -30,7 +29,7 @@ const OurMission: React.FC = () => {
                 driving them to not only achieve but exceed their potential.
                 With each innovation, we aim to create trailblazing digital
                 experiences that make a real-world impact.
-                </p>
+              </p>
             </div>
           </div>
 
@@ -48,7 +47,7 @@ const OurMission: React.FC = () => {
                 We’re not just part of the technology evolution; we’re at its
                 forefront, committed to setting a global standard for
                 responsible and significant advancement.
-                </p>
+              </p>
             </div>
           </div>
 

@@ -1,7 +1,6 @@
 'use client';
 
 import { Container } from '@/components/Feature/Container/Container';
-import Text from '@/components/Feature/Text/Text';
 import technologies from '@/data/technologies';
 import { useState } from 'react';
 import styles from './technologiesused.module.css';
@@ -37,8 +36,8 @@ const TechnologiesUsed: React.FC = () => {
             high-performance applications that set new standards. From ideation
             to deployment, our technology capabilities are designed to drive
             your business forward.
-            </p>
-          
+          </p>
+
         </center>
 
         <div className={styles.technologiesLayout}>

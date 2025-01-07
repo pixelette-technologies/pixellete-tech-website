@@ -1,6 +1,5 @@
 import { Button } from '@/components/Feature/Button/Button';
 import { Container } from '@/components/Feature/Container/Container';
-import Text from '@/components/Feature/Text/Text';
 import Link from 'next/link';
 import './index.css';
 
@@ -11,7 +10,7 @@ const NoDeveloperReq = (props) => {
         <div className="unlockBussiness">
           <div>
             <h1>{props.heading}</h1>
-             <p>{props.text}</p>
+            <p>{props.text}</p>
             <Link href="contactUs">
               <Button
                 className="primary"
@@ -21,7 +20,7 @@ const NoDeveloperReq = (props) => {
             </Link>
           </div>
 
-           <p>{props.text2}</p>
+          <p>{props.text2}</p>
         </div>
       </Container>
     </>

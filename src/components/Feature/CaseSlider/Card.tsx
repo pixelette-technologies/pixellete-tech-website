@@ -1,8 +1,6 @@
 import type { FC } from 'react';
 import Link from 'next/link';
 import { Button } from '../Button/Button';
-import { Heading } from '../Heading/Heading';
-import Text from '../Text/Text';
 import './caseslider.css';
 
 type CardProps = {
@@ -35,7 +33,7 @@ export const Card: FC<CardProps> = ({ id, image, blockChainLink, name, descripti
             </Link>
           </div>
           <h2>{truncatedName}</h2>
-           <p>{truncatedDescription}</p>
+          <p>{truncatedDescription}</p>
         </div>
       </div>
     </Link>

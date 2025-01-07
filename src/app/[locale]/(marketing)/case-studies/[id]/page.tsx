@@ -1,15 +1,13 @@
 import { Button } from '@/components/Feature/Button/Button';
 import TestimonialCard from '@/components/Feature/Cards/TestimonialCard';
 import { Container } from '@/components/Feature/Container/Container';
-import Text from '@/components/Feature/Text/Text';
 import data from '@/data'; // Adjust path based on your project structure
 import { createClient } from 'contentful';
 import Image from 'next/image';
+import Link from 'next/link';
 import { notFound } from 'next/navigation'; // For 404 handling
 import React from 'react';
 import './casestudydetail.css';
-import Link from 'next/link';
-import Link from 'next/link';
 
 // Contentful client
 const client = createClient({
@@ -105,8 +103,7 @@ const CaseStudieDetail = async ({ params }: { params: { id: string } }) => {
           <Container className="main margins">
             <header>
               <div>
-                <h1
-                >
+                <h1>
                   {blogData.fields.name}
                 </h1>
                 <p>
@@ -173,9 +170,9 @@ const CaseStudieDetail = async ({ params }: { params: { id: string } }) => {
                   Conclusion
                 </h2>
                 <p>
-                {blogData.fields.conclusion}
+                  {blogData.fields.conclusion}
                 </p>
-                
+
               </div>
             </section>
             <blockquote>

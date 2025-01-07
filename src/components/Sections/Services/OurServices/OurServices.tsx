@@ -1,6 +1,5 @@
 'use client';
 import { Container } from '@/components/Feature/Container/Container';
-import Text from '@/components/Feature/Text/Text';
 import React, { useEffect, useState } from 'react';
 import './ourservices.css';
 
@@ -33,7 +32,6 @@ export const OurServices: React.FC<OurServicesProps> = ({
   const [currentService, setCurrentService] = useState<HighlightedService>(highlightedService);
 
   const handleServiceClick = (item: string) => {
-
     if (!serviceMapping) {
       console.error('Service mapping is undefined.');
       return;
@@ -41,14 +39,14 @@ export const OurServices: React.FC<OurServicesProps> = ({
 
     const newService = serviceMapping[item];
     if (newService) {
-      console.log('Setting current service to:', newService);
+      // console.log('Setting current service to:', newService);
       setCurrentService(newService);
     } else {
-      console.error(`No service found for key: ${item}`);
+      // console.error(`No service found for key: ${item}`);
     }
   };
   useEffect(() => {
-    console.log('Current service updated:', currentService);
+    // console.log('Current service updated:', currentService);
   }, [currentService]);
 
   return (

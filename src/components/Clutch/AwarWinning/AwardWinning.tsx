@@ -1,5 +1,4 @@
 import { Container } from '@/components/Feature/Container/Container';
-import Text from '@/components/Feature/Text/Text';
 import PropTypes from 'prop-types';
 import AwardCards from './AwardCards';
 import './index.css';
@@ -84,8 +83,8 @@ const Item = ({ heading, text }) => {
           <img src="/images/Clutch/dot.svg" alt="dot" />
         </section>
         <div>
-           <p>{heading}</p>
-           <p>{text}</p>
+          <p>{heading}</p>
+          <p>{text}</p>
         </div>
       </div>
     </>

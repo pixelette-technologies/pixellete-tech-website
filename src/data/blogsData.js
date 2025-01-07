@@ -41,7 +41,7 @@ const detail = [
     title: '',
     lists: [
       {
-        title:`Transfer of Ownership: Smart contracts guarantee safe and open ownership transfers. The contract automatically changes the owner’s data on the blockchain whenever an NFT is sold or transferred. As a result, there is no longer a need for middlemen, and the transaction history is protected against tampering.`,
+        title: `Transfer of Ownership: Smart contracts guarantee safe and open ownership transfers. The contract automatically changes the owner’s data on the blockchain whenever an NFT is sold or transferred. As a result, there is no longer a need for middlemen, and the transaction history is protected against tampering.`,
         subList: [],
       },
     ],
@@ -143,7 +143,7 @@ const detail = [
     title: 'Conclusion',
     lists: [
       {
-        title: `In summary, NFTs and their smart contracts are changing the face of the internet. By granting actual ownership and authenticity in the virtual world, they empower artists, collectors, and users. The potential uses for NFTs and smart contracts are endless as blockchain technology develops, and we may anticipate further breakthroughs and disruptive changes in a variety of sectors. In this intriguing digital era, the world of NFT smart contracts is a space worth investigating whether you’re an artist, gamer, music lover, or tech aficionado.`,
+        title: `In summary, NFTs and their smart contracts are changing the face of the internet. By granting actual ownership and authenticity in the virtual world, they empower artists, collectors, and users. The potential uses for NFTs and smart contracts are endless as blockchain technology develops, and we may anticipate further breakthroughs and disruptive changes in a variety of sectors. In this intriguing digital era, the world of NFT smart contracts is a space worth investigating whether you’re an artist, gamer, music lover, or tech aficionado.`,
         subList: [],
       },
     ],

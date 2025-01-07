@@ -1,6 +1,5 @@
 import { Button } from '@/components/Feature/Button/Button';
 import { Container } from '@/components/Feature/Container/Container';
-import Text from '@/components/Feature/Text/Text';
 import { technologyStackAiData } from '@/data/technologyStackAiData';
 import React from 'react';
 import { FaExternalLinkAlt } from 'react-icons/fa';
@@ -17,9 +16,9 @@ const OurServicesSection: React.FC = () => {
             We bring full-stack development services to the table
           </h1>
           <p>
-          Explore our full suite of development services designed to deliver success to businesses across various industries.
+            Explore our full suite of development services designed to deliver success to businesses across various industries.
           </p>
-          
+
         </center>
         <Container className="main margins">
           <div className="margins" style={{ marginBottom: '3rem' }}>
@@ -38,7 +37,7 @@ const OurServicesSection: React.FC = () => {
               >
                 <img src={item.icon} alt="icon" />
                 <p>
-                 {item.title}
+                  {item.title}
                 </p>
               </div>
             ))}

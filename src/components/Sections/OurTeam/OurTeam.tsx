@@ -2,7 +2,6 @@
 
 import { Button } from '@/components/Feature/Button/Button';
 import { Container } from '@/components/Feature/Container/Container';
-import Text from '@/components/Feature/Text/Text';
 import data from '@/data';
 import Image from 'next/image';
 import { useState } from 'react';
@@ -25,10 +24,10 @@ const TeamCard = ({ image, role, name, animation, duration }: TeamCardProps) => 
       </div>
       <p>
         {name}
-        </p>
-        <p>
+      </p>
+      <p>
         {role}
-        </p>
+      </p>
     </div>
   );
 };
@@ -50,15 +49,15 @@ export const OurTeam = () => {
             Our Team
           </h1>
         </center>
-        
-         <p>
+
+        <p>
           The people behind the work.
           {' '}
           <br />
           {' '}
           90% of our team ranks among the global top 5 in their fields.
-          </p>
-        
+        </p>
+
         <section>
           {data.teamData.slice(0, visibleCards).map((el, index) => (
             <TeamCard

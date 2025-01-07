@@ -3,7 +3,6 @@
 import { Button } from '@/components/Feature/Button/Button';
 import { Card } from '@/components/Feature/CaseSlider/Card';
 import { Container } from '@/components/Feature/Container/Container';
-import { Text } from '@/components/Feature/Text/Text';
 import Image from 'next/image';
 import React, { useRef } from 'react';
 import { FiExternalLink } from 'react-icons/fi';
@@ -65,7 +64,7 @@ export const CaseStudies: React.FC<CaseStudiesProps> = () => {
               Clients love us
             </h1>
             <div data-aos-duration="500" data-aos="fade-up">
-               <p>4.9</p>
+              <p>4.9</p>
               <Image src="/images/home/stars.svg" alt="Rating Stars" width={100} height={100} />
               <Button className="primary">
                 21 Reviews

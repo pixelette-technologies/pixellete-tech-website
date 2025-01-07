@@ -1,6 +1,5 @@
 import { Button } from '@/components/Feature/Button/Button';
 import { Container } from '@/components/Feature/Container/Container';
-import Text from '@/components/Feature/Text/Text';
 import Link from 'next/link';
 import './herosectionabout.css';
 
@@ -17,15 +16,14 @@ const HeroSectionAbout: React.FC = () => {
         <Container className="main margins">
           <center>
             <header>
-              <h1
-              >
+              <h1>
                 Leading Innovation in AI and Blockchain
               </h1>
               <p>
                 We’re on a mission to empower businesses with groundbreaking
                 solutions that reshape the digital world as we know it.
-                </p>
-              
+              </p>
+
               <div className="buttonpad"></div>
               <Link href="contactUs">
                 <Button className="primary">

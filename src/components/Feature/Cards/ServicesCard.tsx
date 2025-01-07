@@ -1,7 +1,6 @@
 import type { FC } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import Text from '../Text/Text';
 import './cards.css';
 
 type ServiceCardData = {
@@ -23,7 +22,7 @@ const ServicesCard: FC<ServicesCardProps> = ({ data }) => {
           <div>
             <Image src={el.icon} alt="icon" width={50} height={50} />
             <p>{el.name}</p>
-             <p>{el.description}</p>
+            <p>{el.description}</p>
           </div>
         );
 

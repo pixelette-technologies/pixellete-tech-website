@@ -1,11 +1,8 @@
 import { Container } from '@/components/Feature/Container/Container';
-import Text from '@/components/Feature/Text/Text';
 import React from 'react';
 import './index.css';
 
-type HowWeWorkProps = {
-  // Define any props here if needed in the future
-};
+type HowWeWorkProps = object;
 
 const data = [
   {
@@ -36,17 +33,19 @@ export const HowWeWork: React.FC<HowWeWorkProps> = () => {
             style={{ display: 'flex', justifyContent: 'space-between' }}
           >
             <h2>How we work</h2>
-            <p>              We understand each client’s needs are unique, and we bring a
+            <p>
+              {' '}
+              We understand each client’s needs are unique, and we bring a
               <br />
               flexible, responsive approach to every project.
-</p>
-            
+            </p>
+
           </div>
           <div className="expertiseGrid">
             <section className="HowWeWorkCards">
               {data.map((el, index) => (
                 <div style={{ margin: '0 1rem' }} key={index}>
-                   <p>{el.title}</p>
+                  <p>{el.title}</p>
                   <br />
                   <p>{el.desc}</p>
                 </div>

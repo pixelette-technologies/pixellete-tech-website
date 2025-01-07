@@ -13,7 +13,7 @@ const Accordian: FC<AccordianProps> = ({ question, answer, isOpen, onClick }) =>
   return (
     <div className="accordian" onClick={onClick}>
       <header className="accordian-header">
-         <p>{question}</p>
+        <p>{question}</p>
         <motion.div
           animate={isOpen ? { rotate: -180 } : { rotate: 0 }}
           className="accordian-toggle-icon"
@@ -32,7 +32,7 @@ const Accordian: FC<AccordianProps> = ({ question, answer, isOpen, onClick }) =>
             exit={{ scaleY: 0, opacity: 0 }}
             className="accordian-answer"
           >
-             <p>{answer}</p>
+            <p>{answer}</p>
           </motion.div>
         )}
       </section>

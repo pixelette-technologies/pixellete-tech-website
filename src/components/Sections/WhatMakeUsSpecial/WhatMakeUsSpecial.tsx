@@ -1,5 +1,4 @@
 import { Container } from '@/components/Feature/Container/Container';
-import { Text } from '@/components/Feature/Text/Text';
 import data from '@/data';
 import Image from 'next/image';
 import { v4 as uuidv4 } from 'uuid';
@@ -22,8 +21,8 @@ const Item = ({ heading, text }: ItemProps) => {
         />
       </section>
       <div>
-         <p>{heading}</p>
-         <p>{text}</p>
+        <p>{heading}</p>
+        <p>{text}</p>
       </div>
     </div>
   );
@@ -55,8 +54,8 @@ export const WhatMakeUsSpecial = ({ heading, text, data: propsData }: WhatMakeUs
           <p>
             {text
             || 'At Pixelette Technologies, our commitment to innovation and excellence sets us apart. Here’s why clients choose us:'}
-            </p>
-          
+          </p>
+
         </center>
         <Container className="main margins">
           <section>

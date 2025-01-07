@@ -4,7 +4,6 @@ import { Container } from '@/components/Feature/Container/Container';
 import { FormInput } from '@/components/Feature/Form/FormInput';
 import FormTextArea from '@/components/Feature/Form/FormTextArea';
 import InputPhoneNo from '@/components/Feature/InputPhoneNo/InputPhoneNo';
-import Text from '@/components/Feature/Text/Text';
 import data from '@/data';
 import emailjs from 'emailjs-com';
 import { Form, Formik } from 'formik';
@@ -74,12 +73,12 @@ export const ContactUsForm: React.FC<ContactUsProps> = (props) => {
             >
               Contact Us
             </h1>
-            
-             <p>
+
+            <p>
               Get in touch to let us know what you’re looking for, and one of
               our solutions architects will get back to you.
-              </p>
-            
+            </p>
+
           </center>
         )}
 

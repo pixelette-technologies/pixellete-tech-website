@@ -1,6 +1,5 @@
 import type { Entry } from 'contentful';
 import type { ReactElement } from 'react';
-import Text from '@/components/Feature/Text/Text';
 import { createClient } from 'contentful';
 import { motion } from 'framer-motion';
 // import { useParams } from 'react-router-dom';
@@ -29,6 +28,14 @@ type BlogDetailFields = {
       };
     };
   };
+};
+
+export const scrollToContactUs = (id: string) => {
+  const contactForm = document.getElementById(id);
+  if (contactForm) {
+    const offset = contactForm.offsetTop - 10;
+    window.scrollTo({ top: offset, behavior: 'smooth' });
+  }
 };
 
 const DetailsNavigate: React.FC<DetailsNavigateProps> = (props): ReactElement => {
@@ -138,14 +145,14 @@ const DetailsNavigate: React.FC<DetailsNavigateProps> = (props): ReactElement =>
                     onClick={() => handleOverviewItemClick(title)}
                   >
                     {props.overViewIndex && (
-                       <p>
+                      <p>
                         {index + 1}
                         .
-                        </p>
+                      </p>
                     )}
                     <p>
                       {title}
-                      </p>
+                    </p>
                   </div>
                 );
               })}
@@ -176,14 +183,13 @@ const DetailsNavigate: React.FC<DetailsNavigateProps> = (props): ReactElement =>
           {props.headerSection && (
             <header>
               {singleBlogDetail?.fields?.date && (
-                
-                  <p>
+
+                <p>
                   {singleBlogDetail.fields.date}
-                  </p>
+                </p>
               )}
               {singleBlogDetail?.fields?.name && (
-                <h1
-                >
+                <h1>
                   {singleBlogDetail.fields.name}
                 </h1>
               )}
@@ -199,12 +205,12 @@ const DetailsNavigate: React.FC<DetailsNavigateProps> = (props): ReactElement =>
           )}
           <Element name="headings">
             {singleBlogDetail?.fields?.content && (
-              
-                <p>
+
+              <p>
                 <ReactMarkdown>
                   {singleBlogDetail.fields.content}
                 </ReactMarkdown>
-                </p>
+              </p>
             )}
           </Element>
         </div>
@@ -214,11 +220,3 @@ const DetailsNavigate: React.FC<DetailsNavigateProps> = (props): ReactElement =>
 };
 
 export default DetailsNavigate;
-
-export const scrollToContactUs = (id: string) => {
-  const contactForm = document.getElementById(id);
-  if (contactForm) {
-    const offset = contactForm.offsetTop - 10;
-    window.scrollTo({ top: offset, behavior: 'smooth' });
-  }
-};

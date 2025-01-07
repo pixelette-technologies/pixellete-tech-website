@@ -1,5 +1,4 @@
 import { Container } from '@/components/Feature/Container/Container';
-import Text from '@/components/Feature/Text/Text';
 import { BlogGridWithBanner } from '@/components/Sections/BlogGridWithBanner/BlogGridWithBanner';
 import './blog.css';
 
@@ -48,16 +47,15 @@ export const Blog = ({ blogdata }: BlogProps) => {
 
         {/* Hero Section */}
         <center>
-          <h1
-          >
+          <h1>
             The Pixelette Post
           </h1>
-          
-            <p>
+
+          <p>
             Dive into our curated collection of updates and guides to deepen
             your understanding of diverse technologies.
-            </p>
-          
+          </p>
+
         </center>
 
         {/* Blog Grid Section */}

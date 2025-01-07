@@ -3,8 +3,8 @@
 import Image from 'next/image';
 import { useEffect, useRef, useState } from 'react';
 import { Container } from '../../Feature/Container/Container'; // Simplified import
-import { Heading } from '../../Feature/Heading/Heading'; // Simplified import
-import { Text } from '../../Feature/Text/Text'; // Simplified import
+// Simplified import
+// Simplified import
 import './aboutussection.css';
 
 type VisibleSections = {
@@ -94,7 +94,7 @@ const AboutUsSection: React.FC = () => {
               <p>
                 From our beginnings in 2018, Pixelette Technologies has rapidly become a world-leading development
                 services company, specializing in AI, blockchain, web, mobile technologies, and more.
-                </p>
+              </p>
             </div>
             <div>
               {Array.from({ length: 6 }, (_, index) => (
@@ -140,7 +140,7 @@ const AboutUsSection: React.FC = () => {
                   <div className="scottland-text" style={{ flex: 1 }}>
                     <p>
                       Official Secretariat of the British Government’s AI policy body (APPG AI)
-                      </p>
+                    </p>
                   </div>
                 </div>
               ))}

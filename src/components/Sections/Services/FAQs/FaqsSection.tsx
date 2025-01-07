@@ -2,7 +2,6 @@
 
 import Accordian from '@/components/Feature/Accordian/Accordian';
 import { Container } from '@/components/Feature/Container/Container';
-import Text from '@/components/Feature/Text/Text';
 import React, { useState } from 'react';
 import './index.css';
 
@@ -31,9 +30,9 @@ const FaqsSection: React.FC<FaqsSectionProps> = ({ heading, text, faqs }) => {
           {heading || 'Have questions? We\'ve got answers! Here are the most frequent ones'}
         </h1>
         <p>
-        {text || 'Ask everything you need to know about our products and services.'}
+          {text || 'Ask everything you need to know about our products and services.'}
         </p>
-        
+
       </center>
       <Container className="main margins">
         <section>

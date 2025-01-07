@@ -1,7 +1,5 @@
 import type { FC } from 'react';
 import { Container } from '../../Feature/Container/Container';
-import { Heading } from '../../Feature/Heading/Heading';
-import { Text } from '../../Feature/Text/Text';
 import ServicesCard from './ServicesCard';
 import './cards.css';
 
@@ -22,9 +20,9 @@ export const CardSectionGrid: FC<CardSectionGridProps> = ({ heading, text, data 
             {heading}
           </h1>
           <p>
-          {text}
+            {text}
           </p>
-          
+
         </center>
         <section>
           <ServicesCard data={data} />

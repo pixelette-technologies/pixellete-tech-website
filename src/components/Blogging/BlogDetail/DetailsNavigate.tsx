@@ -1,13 +1,19 @@
 'use client';
-import Text from '@/components/Feature/Text/Text';
 import { createClient } from 'contentful';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { useParams } from 'next/navigation';
-import { P } from 'pino';
 import React, { useEffect, useRef, useState } from 'react';
 import ReactMarkdown from 'react-markdown';
 import { v4 as uuidv4 } from 'uuid';
+
+export const scrollToContactUs = (id) => {
+  const contactForm = document.getElementById(id);
+  if (contactForm) {
+    const offset = contactForm.offsetTop - 10;
+    window.scrollTo({ top: offset, behavior: 'smooth' });
+  }
+};
 
 const DetailsNavigate = (props) => {
   const data = props.data;
@@ -26,17 +32,17 @@ const DetailsNavigate = (props) => {
     const getEntryById = async () => {
       try {
         client.getEntry(id).then((response) => {
-          console.log('responseee: ', response);
+          // console.log('responseee: ', response);
           setSingleBlogDetail(response);
         });
       } catch (error) {
-        console.log(error);
+        // console.log(error);
       }
     };
 
     getEntryById();
   }, []);
-  console.log('Hello :', singleBlogDetail);
+  // console.log('Hello :', singleBlogDetail);
 
   useEffect(() => {
     const handleResize = () => {
@@ -125,12 +131,12 @@ const DetailsNavigate = (props) => {
                           <div>
                             <p>
                               {index + 1}
-                              </p>                            
+                            </p>
                           </div>
                         )}
                         <p>
                           {title}
-                          </p>
+                        </p>
                       </div>
                     )}
                   </>
@@ -156,14 +162,13 @@ const DetailsNavigate = (props) => {
           {props.headerSection && (
             <header>
               {singleBlogDetail.fields?.date && (
-                
+
                 <p>
                   {singleBlogDetail.fields?.date}
-                  </p>
+                </p>
               )}
               {singleBlogDetail.fields?.name && (
-                <h1
-                >
+                <h1>
                   {singleBlogDetail.fields?.name}
                 </h1>
               )}
@@ -179,12 +184,12 @@ const DetailsNavigate = (props) => {
           )}
           {/* <Element name="headings"> */}
           {singleBlogDetail.fields?.content && (
-            
-              <p>
+
+            <p>
               <ReactMarkdown>
                 {singleBlogDetail.fields?.content}
               </ReactMarkdown>
-              </p>
+            </p>
           )}
           {/* </Element> */}
           {data?.map((ls, index) => {
@@ -208,7 +213,7 @@ const DetailsNavigate = (props) => {
 
                   return (
                     <section key={uuidv4()}>
-                      
+
                         animation="fade-up"
                         duration="500"
                         className="secondry"
@@ -224,7 +229,7 @@ const DetailsNavigate = (props) => {
                               >
                                  className="secondry">
                                   {el}
-                                
+
                               </li>
                             </ul>
                           );
@@ -240,19 +245,19 @@ const DetailsNavigate = (props) => {
                       <img src={assets.commonAssests.mail} alt="icon" />
                       <p>
                         sales@pixelettetech.com
-                        </p>
+                      </p>
                     </div>
                     <div data-aos="fade-up" data-aos-duration="500">
                       <img src={assets.commonAssests.mapIcon} alt="icon" />
                       <p>
                         https://www.pixelettetech.com/contact-us/
-                        </p>
+                      </p>
                     </div>
                     <div data-aos="fade-up" data-aos-duration="500">
                       <img src={assets.commonAssests.phone} alt="icon" />
                       <p>
                         +44 2045188226
-                        </p>
+                      </p>
                     </div>
                   </blockquote>
                 )}
@@ -267,11 +272,3 @@ const DetailsNavigate = (props) => {
 };
 
 export default DetailsNavigate;
-
-export const scrollToContactUs = (id) => {
-  const contactForm = document.getElementById(id);
-  if (contactForm) {
-    const offset = contactForm.offsetTop - 10;
-    window.scrollTo({ top: offset, behavior: 'smooth' });
-  }
-};

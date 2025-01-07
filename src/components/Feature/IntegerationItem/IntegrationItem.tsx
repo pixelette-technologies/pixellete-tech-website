@@ -1,5 +1,4 @@
 import React from 'react';
-import Text from '../Text/Text';
 
 type IntegrationItemProps = {
   icon: string;
@@ -14,7 +13,7 @@ const IntegrationItem: React.FC<IntegrationItemProps> = ({ icon, name }) => {
       data-aos-duration="500"
     >
       <img src={icon} alt="icon" />
-       <p>{name}</p>
+      <p>{name}</p>
     </div>
   );
 };

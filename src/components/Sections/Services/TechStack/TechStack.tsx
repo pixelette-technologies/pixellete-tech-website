@@ -1,5 +1,4 @@
 import { Container } from '@/components/Feature/Container/Container';
-import Text from '@/components/Feature/Text/Text';
 import React from 'react';
 import './techstack.css';
 
@@ -33,9 +32,9 @@ export const TechStack: React.FC<TechStackProps> = (props: TechStackProps) => {
               </h2>
               <br />
               <p>
-              Our go-to tech for unmatched results
+                Our go-to tech for unmatched results
               </p>
-              
+
             </div>
             <div
               style={{

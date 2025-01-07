@@ -1,6 +1,5 @@
 import type { FC } from 'react';
 import Image from 'next/image';
-import Text from '../Text/Text';
 import './cards.css';
 
 type SwiperCardProps = {
@@ -21,8 +20,8 @@ const SwiperCard: FC<SwiperCardProps> = ({ image, name, description, animation, 
       <figure>
         <Image src={image} alt="banner" width={300} height={200} />
       </figure>
-       <p>{name}</p>
-       <p>{description}</p>
+      <p>{name}</p>
+      <p>{description}</p>
     </div>
   );
 };

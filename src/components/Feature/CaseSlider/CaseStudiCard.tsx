@@ -1,8 +1,6 @@
 import type { FC } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Heading } from '../Heading/Heading';
-import Text from '../Text/Text';
 import './caseslider.css';
 
 type CaseStudiCardProps = {
@@ -27,7 +25,7 @@ export const CaseStudiCard: FC<CaseStudiCardProps> = ({ to, image, tags, name, d
             ))}
           </header>
           <h2 className="blogCardHeading">{name}</h2>
-           <p>{description}</p>
+          <p>{description}</p>
         </div>
       </div>
     </Link>

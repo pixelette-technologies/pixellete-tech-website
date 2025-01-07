@@ -1,6 +1,5 @@
 import type { FC } from 'react';
 import Image from 'next/image';
-import Text from '../Text/Text';
 import './cards.css';
 
 type TestimonialCardProps = {
@@ -30,13 +29,12 @@ export const TestimonialCard: FC<TestimonialCardProps> = ({
     >
       <div>
         <Image src="/images/home/stars.svg" alt="Rating Stars" width={100} height={100} />
-         <p>{rating}</p>
+        <p>{rating}</p>
       </div>
       <p>
         {comment}
-        </p>
-        {' '}
-      
+      </p>
+      {' '}
 
       <section>
         <Image
@@ -48,7 +46,7 @@ export const TestimonialCard: FC<TestimonialCardProps> = ({
         />
         <div>
           <p>{userName}</p>
-           <p>{role}</p>
+          <p>{role}</p>
         </div>
       </section>
     </div>
