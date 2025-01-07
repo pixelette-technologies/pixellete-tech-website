@@ -30,14 +30,13 @@ export const TestimonialCard: FC<TestimonialCardProps> = ({
     >
       <div>
         <Image src="/images/home/stars.svg" alt="Rating Stars" width={100} height={100} />
-        <Text className="primary">{rating}</Text>
+         <p>{rating}</p>
       </div>
-      <Text className="primary">
-        “
+      <p>
         {comment}
+        </p>
         {' '}
-        ”
-      </Text>
+      
 
       <section>
         <Image
@@ -48,8 +47,8 @@ export const TestimonialCard: FC<TestimonialCardProps> = ({
           className="profile-img"
         />
         <div>
-          <Text className="primary--bold">{userName}</Text>
-          <Text className="titory">{role}</Text>
+          <p>{userName}</p>
+           <p>{role}</p>
         </div>
       </section>
     </div>

@@ -22,8 +22,8 @@ const ServicesCard: FC<ServicesCardProps> = ({ data }) => {
         const cardContent = (
           <div>
             <Image src={el.icon} alt="icon" width={50} height={50} />
-            <Text className="primary--bold">{el.name}</Text>
-            <Text className="titory">{el.description}</Text>
+            <p>{el.name}</p>
+             <p>{el.description}</p>
           </div>
         );
 

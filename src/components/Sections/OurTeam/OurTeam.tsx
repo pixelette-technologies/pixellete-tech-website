@@ -2,7 +2,6 @@
 
 import { Button } from '@/components/Feature/Button/Button';
 import { Container } from '@/components/Feature/Container/Container';
-import { Heading } from '@/components/Feature/Heading/Heading';
 import Text from '@/components/Feature/Text/Text';
 import data from '@/data';
 import Image from 'next/image';
@@ -24,12 +23,12 @@ const TeamCard = ({ image, role, name, animation, duration }: TeamCardProps) => 
       <div className="image-container">
         <Image src={image} alt="profile" width={100} height={100} />
       </div>
-      <Text className="primary--bold">
+      <p>
         {name}
-      </Text>
-      <Text className="titory">
+        </p>
+        <p>
         {role}
-      </Text>
+        </p>
     </div>
   );
 };
@@ -45,26 +44,21 @@ export const OurTeam = () => {
     <div className="ourTeamSection">
       <Container className="main margins">
         <center>
-          <Heading
-            className="secondry"
-            animation="fade-up"
-            duration="500"
+          <h1
             id="h_ani"
           >
             Our Team
-          </Heading>
+          </h1>
         </center>
-        <Text
-          className="secondry"
-          animation="fade-up"
-          duration="700"
-        >
+        
+         <p>
           The people behind the work.
           {' '}
           <br />
           {' '}
           90% of our team ranks among the global top 5 in their fields.
-        </Text>
+          </p>
+        
         <section>
           {data.teamData.slice(0, visibleCards).map((el, index) => (
             <TeamCard

@@ -4,7 +4,6 @@ import type { Entry } from 'contentful';
 // import type { Settings } from 'react-slick';
 import { CaseStudiCard } from '@/components/Feature/CaseSlider/CaseStudiCard';
 import { Container } from '@/components/Feature/Container/Container';
-import { Heading } from '@/components/Feature/Heading/Heading';
 import { createClient } from 'contentful';
 import React, { useEffect, useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
@@ -130,14 +129,11 @@ export const ProjectSection: React.FC = () => {
     <div className="exploreProjectSections">
       <section>
         <center>
-          <Heading
-            className="secondry"
-            animation="fade-up"
-            duration="400"
+          <h1
             id="h_ani"
           >
             Explore Our Projects
-          </Heading>
+          </h1>
         </center>
       </section>
       <Container className="main margins">

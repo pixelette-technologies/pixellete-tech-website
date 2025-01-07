@@ -1,5 +1,4 @@
 import { Container } from '@/components/Feature/Container/Container';
-import { Heading } from '@/components/Feature/Heading/Heading';
 import Image from 'next/image'; // Import Next.js Image component
 import './whatmakeusspecial.css';
 
@@ -15,7 +14,7 @@ const WhatMakeUsSpecialHome: React.FC = () => {
       <Container className="main margins">
         <div className="mainSpecialImgs">
           <div className="specialImgs">
-            <Heading className="primary">Our awards</Heading>
+            <h2>Our awards</h2>
             <br />
             <br />
             <div>
@@ -62,7 +61,7 @@ const WhatMakeUsSpecialHome: React.FC = () => {
             </div>
           </div>
           <div className="specialImgs1">
-            <Heading className="primary">Our partnerships</Heading>
+            <h2>Our partnerships</h2>
             <br />
             <br />
             <br />

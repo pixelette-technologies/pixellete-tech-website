@@ -1,6 +1,5 @@
 import { Button } from '@/components/Feature/Button/Button';
 import { Container } from '@/components/Feature/Container/Container';
-import { Heading } from '@/components/Feature/Heading/Heading';
 import React from 'react';
 import './servicework.css';
 
@@ -9,9 +8,9 @@ const ServiceWork: React.FC = () => {
     <div className="SelectPlan" style={{ marginTop: '100px' }}>
       <Container className="main">
         <center data-aos-duration="700" data-aos="fade-up">
-          <Heading className="primary" id="h_ani">
+          <h2 id="h_ani">
             Here’s How Our Services Work
-          </Heading>
+          </h2>
           <Button className="primary--light btn-sm mt-2">Book a Free Call</Button>
         </center>
         <div data-aos-duration="500" data-aos="fade-up">

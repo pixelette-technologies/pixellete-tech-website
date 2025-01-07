@@ -1,6 +1,5 @@
 import { Button } from '@/components/Feature/Button/Button';
 import { Container } from '@/components/Feature/Container/Container';
-import { Heading } from '@/components/Feature/Heading/Heading';
 import Text from '@/components/Feature/Text/Text';
 import React from 'react';
 import './index.css';
@@ -13,16 +12,16 @@ export const AiServiceTable: React.FC<AiServiceTableProps> = () => {
     <div>
       <Container className="main margins">
         <center style={{ marginTop: '10rem' }}>
-          <Heading className="primary">
+          <h2>
             Select a plan that aligns best with
 
             <br />
 
             your project development
             goals
-          </Heading>
+          </h2>
           <br />
-          <Text className="titory--bold">
+          <p>
             Every project is unique, and so are our solutions. Our developer
             engagement models are crafted to provide the right level of
 
@@ -33,7 +32,7 @@ export const AiServiceTable: React.FC<AiServiceTableProps> = () => {
             <br />
             augmentation services or dedicated development teams service and
             we’ll help bring your project to life.
-          </Text>
+            </p>
           <div className="AiServiceTable">
             <table>
               <thead>

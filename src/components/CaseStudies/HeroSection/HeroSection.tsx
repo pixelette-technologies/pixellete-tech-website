@@ -1,6 +1,5 @@
 import { Button } from '@/components/Feature/Button/Button';
 import { Container } from '@/components/Feature/Container/Container';
-import { Heading } from '@/components/Feature/Heading/Heading';
 import Text from '@/components/Feature/Text/Text';
 import Link from 'next/link';
 import './herosection.css';
@@ -25,17 +24,15 @@ const HeroSection: React.FC = () => {
             <img src="/images/casestudies/box_4.svg" alt="box 4" />
           </blockquote>
           <center>
-            <Heading
-              className="secondry"
-              animation="zoom-out"
-              duration="2000"
+            <h1
             >
               Our development legacy in action
-            </Heading>
-            <Text className="primary" animation="zoom-in" duration="2200">
-              Witness our strategies, execution and results unfold in our IT and
-              tech development case studies.
-            </Text>
+            </h1>
+             <p>
+             Witness our strategies, execution and results unfold in our IT and
+             tech development case studies.
+             </p>
+            
             <Link href="contactUs">
               <Button className="primary" animation="fade-up" duration="2400">
                 Schedule a Consultation

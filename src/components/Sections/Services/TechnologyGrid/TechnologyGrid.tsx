@@ -1,6 +1,5 @@
 'use client';
 import { Container } from '@/components/Feature/Container/Container';
-import { Heading } from '@/components/Feature/Heading/Heading';
 import { Text } from '@/components/Feature/Text/Text';
 import React, { useState } from 'react';
 import './technologygrid.css';
@@ -38,17 +37,15 @@ export const TechnologyGrid: React.FC<TechnologyGridProps> = ({
   return (
     <div className="technologyStackAi">
       <center>
-        <Heading
-          className="secondry"
-          animation="fade-up"
-          duration="600"
+        <h1
           id="h_ani"
         >
           {heading}
-        </Heading>
-        <Text className="titory--bold" animation="fade-up" duration="700">
-          {description}
-        </Text>
+        </h1>
+        <p>
+        {description}
+        </p>
+        
       </center>
       <Container className="main margins">
         <div className="margins" style={{ marginBottom: '3rem' }}>
@@ -67,9 +64,9 @@ export const TechnologyGrid: React.FC<TechnologyGridProps> = ({
                 gap: '1rem',
               }}
             >
-              <Text className="primary">{area.title}</Text>
+               <p>{area.title}</p>
               {area.description && (
-                <Text className="titory--bold">{area.description}</Text>
+                <p>{area.description}</p>
               )}
             </div>
           ))}
@@ -85,16 +82,19 @@ export const TechnologyGrid: React.FC<TechnologyGridProps> = ({
             {selectedData
               ? (
                   <div style={{ display: 'flex', flexDirection: 'column', textAlign: 'center', gap: '2rem' }}>
-                    <Text className="primary">{selectedData.title}</Text>
+                     <p>{selectedData.title}</p>
                     {selectedData.description && (
-                      <Text className="titory--bold">
+                      <p>
                         {selectedData.description}
-                      </Text>
+                      </p>
+                      
                     )}
                   </div>
                 )
               : (
-                  <Text className="primary">Click on a card to see more details.</Text>
+                <p>
+                   Click on a card to see more details.
+                </p>
                 )}
           </div>
         </div>

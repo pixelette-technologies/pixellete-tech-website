@@ -1,6 +1,5 @@
 import { Button } from '@/components/Feature/Button/Button';
 import { Container } from '@/components/Feature/Container/Container';
-import { Heading } from '@/components/Feature/Heading/Heading';
 import Text from '@/components/Feature/Text/Text';
 import Link from 'next/link';
 import './index.css';
@@ -11,8 +10,8 @@ const NoDeveloperReq = (props) => {
       <Container className="main margins">
         <div className="unlockBussiness">
           <div>
-            <Heading className="primary">{props.heading}</Heading>
-            <Text className="secondry">{props.text}</Text>
+            <h1>{props.heading}</h1>
+             <p>{props.text}</p>
             <Link href="contactUs">
               <Button
                 className="primary"
@@ -22,7 +21,7 @@ const NoDeveloperReq = (props) => {
             </Link>
           </div>
 
-          <Text className="secondry">{props.text2}</Text>
+           <p>{props.text2}</p>
         </div>
       </Container>
     </>

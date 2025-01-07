@@ -34,8 +34,8 @@ export const Card: FC<CardProps> = ({ id, image, blockChainLink, name, descripti
               <Button className="primary">{blockChainLink}</Button>
             </Link>
           </div>
-          <Heading className="primary">{truncatedName}</Heading>
-          <Text className="titory">{truncatedDescription}</Text>
+          <h2>{truncatedName}</h2>
+           <p>{truncatedDescription}</p>
         </div>
       </div>
     </Link>

@@ -1,6 +1,5 @@
 import { Container } from '@/components/Feature/Container/Container';
 
-import { Heading } from '@/components/Feature/Heading/Heading';
 import Text from '@/components/Feature/Text/Text';
 import React from 'react';
 import './ourmission.css';
@@ -25,13 +24,13 @@ const OurMission: React.FC = () => {
               alt="Our mission"
             />
             <div className="content">
-              <Heading className="primary">Our mission</Heading>
-              <Text className="titory--bold">
+              <h2>Our mission</h2>
+              <p>
                 We’re here to revolutionize how businesses use technology,
                 driving them to not only achieve but exceed their potential.
                 With each innovation, we aim to create trailblazing digital
                 experiences that make a real-world impact.
-              </Text>
+                </p>
             </div>
           </div>
 
@@ -42,14 +41,14 @@ const OurMission: React.FC = () => {
               alt="Our vision"
             />
             <div className="content">
-              <Heading className="primary">Our vision</Heading>
-              <Text className="titory--bold">
+              <h2>Our vision</h2>
+              <p>
                 Our vision is simple: to inspire a world where businesses are
                 empowered by powerful, accessible, and sustainable technology.
                 We’re not just part of the technology evolution; we’re at its
                 forefront, committed to setting a global standard for
                 responsible and significant advancement.
-              </Text>
+                </p>
             </div>
           </div>
 
@@ -60,7 +59,7 @@ const OurMission: React.FC = () => {
               alt="Our core values"
             />
             <div className="content">
-              <Heading className="primary">Our core values</Heading>
+              <h2>Our core values</h2>
               <p className="values">
                 <strong>Building what’s next</strong>
                 Innovation is our lifeblood. We’re not waiting for the future;

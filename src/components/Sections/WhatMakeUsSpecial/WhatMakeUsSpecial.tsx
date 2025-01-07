@@ -1,5 +1,4 @@
 import { Container } from '@/components/Feature/Container/Container';
-import { Heading } from '@/components/Feature/Heading/Heading';
 import { Text } from '@/components/Feature/Text/Text';
 import data from '@/data';
 import Image from 'next/image';
@@ -23,8 +22,8 @@ const Item = ({ heading, text }: ItemProps) => {
         />
       </section>
       <div>
-        <Text className="primary--bold">{heading}</Text>
-        <Text className="titory--bold">{text}</Text>
+         <p>{heading}</p>
+         <p>{text}</p>
       </div>
     </div>
   );
@@ -48,18 +47,16 @@ export const WhatMakeUsSpecial = ({ heading, text, data: propsData }: WhatMakeUs
       </Container>
       <div className="specialSection">
         <center>
-          <Heading
-            className="secondry"
-            animation="fade-up"
-            duration="400"
+          <h1
             id="h_ani"
           >
             {heading || 'What Makes Us Special?'}
-          </Heading>
-          <Text className="secondry">
+          </h1>
+          <p>
             {text
             || 'At Pixelette Technologies, our commitment to innovation and excellence sets us apart. Here’s why clients choose us:'}
-          </Text>
+            </p>
+          
         </center>
         <Container className="main margins">
           <section>

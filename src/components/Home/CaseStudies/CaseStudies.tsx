@@ -3,7 +3,6 @@
 import { Button } from '@/components/Feature/Button/Button';
 import { Card } from '@/components/Feature/CaseSlider/Card';
 import { Container } from '@/components/Feature/Container/Container';
-import { Heading } from '@/components/Feature/Heading/Heading';
 import { Text } from '@/components/Feature/Text/Text';
 import Image from 'next/image';
 import React, { useRef } from 'react';
@@ -62,11 +61,11 @@ export const CaseStudies: React.FC<CaseStudiesProps> = () => {
           </blockquote>
 
           <center>
-            <Heading className="secondry" animation="fade-up" duration="400" id="h_ani">
+            <h1 id="h_ani">
               Clients love us
-            </Heading>
+            </h1>
             <div data-aos-duration="500" data-aos="fade-up">
-              <Text className="primary">4.9</Text>
+               <p>4.9</p>
               <Image src="/images/home/stars.svg" alt="Rating Stars" width={100} height={100} />
               <Button className="primary">
                 21 Reviews

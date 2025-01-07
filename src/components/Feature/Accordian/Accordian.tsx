@@ -1,6 +1,5 @@
 import type { FC } from 'react';
 import { motion } from 'framer-motion';
-import Text from '../Text/Text';
 import './accordian.css';
 
 type AccordianProps = {
@@ -14,7 +13,7 @@ const Accordian: FC<AccordianProps> = ({ question, answer, isOpen, onClick }) =>
   return (
     <div className="accordian" onClick={onClick}>
       <header className="accordian-header">
-        <Text className="secondry">{question}</Text>
+         <p>{question}</p>
         <motion.div
           animate={isOpen ? { rotate: -180 } : { rotate: 0 }}
           className="accordian-toggle-icon"
@@ -33,7 +32,7 @@ const Accordian: FC<AccordianProps> = ({ question, answer, isOpen, onClick }) =>
             exit={{ scaleY: 0, opacity: 0 }}
             className="accordian-answer"
           >
-            <Text className="titory">{answer}</Text>
+             <p>{answer}</p>
           </motion.div>
         )}
       </section>

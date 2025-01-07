@@ -1,6 +1,5 @@
 import { Button } from '@/components/Feature/Button/Button';
 import { Container } from '@/components/Feature/Container/Container';
-import { Heading } from '@/components/Feature/Heading/Heading';
 import Text from '@/components/Feature/Text/Text';
 import { technologyStackAiData } from '@/data/technologyStackAiData';
 import React from 'react';
@@ -12,16 +11,15 @@ const OurServicesSection: React.FC = () => {
     <>
       <div className="technologyStack">
         <center>
-          <Heading
-            className="secondry"
-            animation="fade-up"
+          <h1
             id="h_ani"
           >
             We bring full-stack development services to the table
-          </Heading>
-          <Text className="secondry" animation="fade-up">
-            Explore our full suite of development services designed to deliver success to businesses across various industries.
-          </Text>
+          </h1>
+          <p>
+          Explore our full suite of development services designed to deliver success to businesses across various industries.
+          </p>
+          
         </center>
         <Container className="main margins">
           <div className="margins" style={{ marginBottom: '3rem' }}>
@@ -39,7 +37,9 @@ const OurServicesSection: React.FC = () => {
                 data-aos-duration={600}
               >
                 <img src={item.icon} alt="icon" />
-                <Text className="titory--bold">{item.title}</Text>
+                <p>
+                 {item.title}
+                </p>
               </div>
             ))}
           </div>

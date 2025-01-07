@@ -1,7 +1,6 @@
 import { Button } from '@/components/Feature/Button/Button';
 import TestimonialCard from '@/components/Feature/Cards/TestimonialCard';
 import { Container } from '@/components/Feature/Container/Container';
-import { Heading } from '@/components/Feature/Heading/Heading';
 import Text from '@/components/Feature/Text/Text';
 import data from '@/data'; // Adjust path based on your project structure
 import { createClient } from 'contentful';
@@ -9,6 +8,8 @@ import Image from 'next/image';
 import { notFound } from 'next/navigation'; // For 404 handling
 import React from 'react';
 import './casestudydetail.css';
+import Link from 'next/link';
+import Link from 'next/link';
 
 // Contentful client
 const client = createClient({
@@ -104,22 +105,15 @@ const CaseStudieDetail = async ({ params }: { params: { id: string } }) => {
           <Container className="main margins">
             <header>
               <div>
-                <Heading
-                  className="secondry"
-                  animation="zoom-out"
-                  duration="700"
+                <h1
                 >
                   {blogData.fields.name}
-                </Heading>
-                <Text
-                  className="primary"
-                  animation="zoom-in"
-                  duration="1000"
-                >
+                </h1>
+                <p>
                   {blogData.fields.longDescription}
-                </Text>
+                </p>
                 {blogData.fields.projectLink && (
-                  <a href={blogData.fields.projectLink} target="_blank" rel="noopener noreferrer">
+                  <Link href={blogData.fields.projectLink} target="_blank" rel="noopener noreferrer">
                     <Button
                       className="primary"
                       animation="fade-up"
@@ -127,7 +121,7 @@ const CaseStudieDetail = async ({ params }: { params: { id: string } }) => {
                     >
                       View Project
                     </Button>
-                  </a>
+                  </Link>
                 )}
               </div>
               <figure>
@@ -141,26 +135,26 @@ const CaseStudieDetail = async ({ params }: { params: { id: string } }) => {
             <section>
               <header data-aos="fade-up" data-aos-duration="900">
                 <div>
-                  <Heading className="primary">
+                  <h2>
                     Problem Statement
-                  </Heading>
-                  <Text className="titory--bold">
+                  </h2>
+                  <p>
                     {blogData.fields.problemStatement}
-                  </Text>
+                  </p>
                 </div>
                 <div>
-                  <Heading className="primary">
+                  <h2>
                     Solution
-                  </Heading>
-                  <Text className="titory--bold">
+                  </h2>
+                  <p>
                     {blogData.fields.solutions}
-                  </Text>
+                  </p>
                 </div>
               </header>
               <section data-aos="fade-up" data-aos-duration="900">
-                <Heading className="primary">
+                <h2>
                   Tech Stack
-                </Heading>
+                </h2>
                 <div>
                   {/* Add the tech stack content here */}
                 </div>
@@ -175,20 +169,21 @@ const CaseStudieDetail = async ({ params }: { params: { id: string } }) => {
                 />
               </figure>
               <div>
-                <Heading className="primary">
+                <h2>
                   Conclusion
-                </Heading>
-                <Text className="titory--bold">
-                  {blogData.fields.conclusion}
-                </Text>
+                </h2>
+                <p>
+                {blogData.fields.conclusion}
+                </p>
+                
               </div>
             </section>
             <blockquote>
               <header>
                 <center data-aos-duration="700" data-aos="fade-up">
-                  <Heading className="secondry" id="h_ani">
+                  <h1 id="h_ani">
                     Conclusion
-                  </Heading>
+                  </h1>
                 </center>
                 <TestimonialCard
                   comment={el.comment}

@@ -21,7 +21,7 @@ export default withSentryConfig(
       serverExternalPackages: ['@electric-sql/pglite'],
       images: {
         loader: 'default', // Default loader
-        domains: ['images.ctfassets.net'], // Add domains you're using images from
+        domains: ['images.ctfassets.net', 'ui-avatars.com'], // Add domains you're using images from
         deviceSizes: [320, 420, 768, 1024, 1200], // Define appropriate device sizes
         imageSizes: [16, 32, 48, 64, 128, 256, 512], // Image sizes for optimization
       },

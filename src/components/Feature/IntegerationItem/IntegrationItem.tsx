@@ -14,7 +14,7 @@ const IntegrationItem: React.FC<IntegrationItemProps> = ({ icon, name }) => {
       data-aos-duration="500"
     >
       <img src={icon} alt="icon" />
-      <Text className="primary">{name}</Text>
+       <p>{name}</p>
     </div>
   );
 };

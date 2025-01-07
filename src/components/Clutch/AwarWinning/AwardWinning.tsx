@@ -1,5 +1,4 @@
 import { Container } from '@/components/Feature/Container/Container';
-import { Heading } from '@/components/Feature/Heading/Heading';
 import Text from '@/components/Feature/Text/Text';
 import PropTypes from 'prop-types';
 import AwardCards from './AwardCards';
@@ -17,10 +16,7 @@ const AwardWinning = () => {
         <Container className="main margins">
           <section>
             <div className="award-text">
-              <Heading
-                className="secondry"
-                animation="fade-up"
-                duration="400"
+              <h1
                 id="h_ani"
               >
                 <>
@@ -45,7 +41,7 @@ const AwardWinning = () => {
                     satisfaction and quality standards.
                   </p>
                 </>
-              </Heading>
+              </h1>
               {/* <div>
                 {(data || []).map((el, index) => (
                   <Item key={index} heading={el.heading} text={el.text} />
@@ -88,8 +84,8 @@ const Item = ({ heading, text }) => {
           <img src="/images/Clutch/dot.svg" alt="dot" />
         </section>
         <div>
-          <Text className="primary--bold">{heading}</Text>
-          <Text className="titory--bold">{text}</Text>
+           <p>{heading}</p>
+           <p>{text}</p>
         </div>
       </div>
     </>

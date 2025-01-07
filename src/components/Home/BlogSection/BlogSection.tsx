@@ -3,7 +3,6 @@
 import BlogCard from '@/components/Feature/Blog/BlogCard';
 import { Button } from '@/components/Feature/Button/Button';
 import { Container } from '@/components/Feature/Container/Container';
-import { Heading } from '@/components/Feature/Heading/Heading';
 import { Text } from '@/components/Feature/Text/Text';
 import { BlogGridWithBanner } from '@/components/Sections/BlogGridWithBanner/BlogGridWithBanner';
 import { createClient } from 'contentful';
@@ -89,13 +88,14 @@ export const BlogSection: React.FC<BlogSectionProps> = ({ heading, text }) => {
             <Image src="/images/blog/box_29.png" alt="Decorative box" width={20} height={20} />
           </blockquote>
           <center>
-            <Heading className="secondary" id="h_ani">
+            <h1 id="h_ani">
               {heading || 'The Pixelette Post'}
-            </Heading>
-            <Text className="secondary" id="h_ani">
+            </h1>
+              <p>
               {text
               || 'Dive into our curated collection of updates and guides to deepen your understanding of diverse technologies.'}
-            </Text>
+              </p>
+            
             <Link href="/blogs" passHref>
               <Button className="primary" id="h_ani">
                 Explore Blogs

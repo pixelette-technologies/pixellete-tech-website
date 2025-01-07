@@ -1,7 +1,6 @@
 'use client';
 
 import { Container } from '@/components/Feature/Container/Container';
-import { Heading } from '@/components/Feature/Heading/Heading';
 import Text from '@/components/Feature/Text/Text';
 import technologies from '@/data/technologies';
 import { useState } from 'react';
@@ -24,24 +23,22 @@ const TechnologiesUsed: React.FC = () => {
     <div className={styles.technologiesMain}>
       <Container className="main margins">
         <center>
-          <Heading
-            className="secondry"
-            animation="fade-up"
-            duration="600"
+          <h1
             id="h_ani"
           >
             Benefit from our unmatched tech
             {' '}
             <br />
             stack expertise
-          </Heading>
-          <Text className="secondry" animation="fade-up" duration="700">
+          </h1>
+          <p>
             With our team&apos;s deep mastery in the latest frameworks,
             languages, and tools, we build scalable, secure, and
             high-performance applications that set new standards. From ideation
             to deployment, our technology capabilities are designed to drive
             your business forward.
-          </Text>
+            </p>
+          
         </center>
 
         <div className={styles.technologiesLayout}>

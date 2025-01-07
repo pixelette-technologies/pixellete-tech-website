@@ -1,5 +1,4 @@
 'use client';
-import { Heading } from '@/components/Feature/Heading/Heading';
 import Text from '@/components/Feature/Text/Text';
 import { createClient } from 'contentful';
 import { motion } from 'framer-motion';
@@ -109,9 +108,9 @@ const DetailsNavigate = (props) => {
         >
           {isOpenContent && (
             <>
-              <Heading className="blogCardHeading">
+              <h3 className="blogCardHeading">
                 Overview
-              </Heading>
+              </h3>
               {data?.map((ls, index) => {
                 const { title } = ls;
                 return (
@@ -123,14 +122,14 @@ const DetailsNavigate = (props) => {
                       >
                         {props.overViewIndex && (
                           <div>
-                            <Text className="secondry">
+                            <p>
                               {index + 1}.
-                            </Text>
+                              </p>
                           </div>
                         )}
-                        <Text className="secondry">
+                        <p>
                           {title}
-                        </Text>
+                          </p>
                       </div>
                     )}
                   </>
@@ -156,22 +155,17 @@ const DetailsNavigate = (props) => {
           {props.headerSection && (
             <header>
               {singleBlogDetail.fields?.date && (
-                <Text
-                  className="titory--bold"
-                  animation="fade-up"
-                  duration="400"
-                >
+                
+                 <p>
                   {singleBlogDetail.fields?.date}
-                </Text>
+                  </p>
+                
               )}
               {singleBlogDetail.fields?.name && (
-                <Heading
-                  className="secondry"
-                  animation="fade-up"
-                  duration="500"
+                <h1
                 >
                   {singleBlogDetail.fields?.name}
-                </Heading>
+                </h1>
               )}
               {singleBlogDetail.fields?.images?.fields?.file?.url && (
                 <img
@@ -185,31 +179,25 @@ const DetailsNavigate = (props) => {
           )}
           {/* <Element name="headings"> */}
           {singleBlogDetail.fields?.content && (
-            <Text
-              className="secondry"
-              animation="fade-up"
-              duration="600"
-            >
+            
+             <p>
               <ReactMarkdown>
                 {singleBlogDetail.fields?.content}
               </ReactMarkdown>
-            </Text>
+              </p>
           )}
           {/* </Element> */}
           {data?.map((ls, index) => {
             const { title, lists, description } = ls;
-
             return (
               <div id={title} key={index}>
                 {title && (
                   <header>
-                    <Heading
+                    <h3
                       className="policyHeading"
-                      animation="fade-up"
-                      duration="400"
                     >
                       {props.headingIndex && index + 1 + "."} {title}
-                    </Heading>
+                    </h3>
                   </header>
                 )}
 
@@ -217,21 +205,21 @@ const DetailsNavigate = (props) => {
                   <blockquote>
                     <div data-aos="fade-up" data-aos-duration={`500`}>
                       <img src="/images/about/mail.svg" alt="icon" />
-                      <Text className="secondry">
+                      <p>
                         sales@pixelettetech.com
-                      </Text>
+                        </p>
                     </div>
                     <div data-aos="fade-up" data-aos-duration={`500`}>
                       <img src="/images/about/mapIcon.svg" alt="icon" />
-                      <Text className="secondry">
+                      <p>
                         https://www.pixelettetech.com/contact-us/
-                      </Text>
+                        </p>
                     </div>
                     <div data-aos="fade-up" data-aos-duration={`500`}>
                       <img src="/images/about/phone.svg" alt="icon" />
-                      <Text className="secondry">
+                      <p>
                         +44 2045188226
-                      </Text>
+                        </p>
                     </div>
                   </blockquote>
                 )}

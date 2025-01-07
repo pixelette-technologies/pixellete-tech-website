@@ -30,9 +30,9 @@ export const BlogCard: FC<BlogCardProps> = ({
       <figure>
         <img src={image} alt="Blog-Profile" />
       </figure>
-      <Text className="titory--bold">{date}</Text>
-      <Heading className="blogCardHeading">{heading}</Heading>
-      <Text className="blogCardDescription">{description}</Text>
+       <p>{date}</p>
+      <h2 className="blogCardHeading">{heading}</h2>
+       <p className="blogCardDescription">{description}</p>
       <Link href={`/blogs/${to}`}>
         <Button className="primary">Read More</Button>
       </Link>

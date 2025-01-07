@@ -21,18 +21,13 @@ const PrivacyPolicy: React.FC = () => {
       <Container className="main margins">
         <div className="privacyPolicy">
           <center>
-            <Heading
+            <h1
               className="heroHeading"
-              animation="zoom-out"
-              duration="2000"
             >
               Privacy Policy
-            </Heading>
-            <Text
-              className="secondry"
-              animation="zoom-in"
-              duration="2200"
-            >
+            </h1>
+                          
+            <p>
               Pixelette Technologies is committed to protecting your personal
               information and respecting your privacy. This Privacy Policy
               explains how we collect, use, store, and share your personal
@@ -40,7 +35,8 @@ const PrivacyPolicy: React.FC = () => {
               policy is compliant with the General Data Protection Regulation
               (GDPR) of the European Union and the Data Protection Act 2018 of
               the United Kingdom.
-            </Text>
+              </p>
+            
           </center>
         </div>
       </Container>

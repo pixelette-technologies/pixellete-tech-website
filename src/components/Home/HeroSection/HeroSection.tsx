@@ -1,6 +1,5 @@
 import { Button } from '@/components/Feature/Button/Button';
 import { Container } from '@/components/Feature/Container/Container';
-import { Heading } from '@/components/Feature/Heading/Heading';
 import Text from '@/components/Feature/Text/Text';
 import Image from 'next/image';
 import Link from 'next/link'; // Correct usage of Next.js routing
@@ -37,18 +36,15 @@ export const HeroSection: React.FC<HeroSectionProps> = () => {
               />
             ))}
           </blockquote>
-          <Heading data-aos="zoom-out" data-aos-duration="700">
+          <h1>
             Shaping the future with every line of code
-          </Heading>
-          <Text
-            className="primary"
-            data-aos="zoom-in"
-            data-aos-duration="1000"
-          >
+          </h1>
+            <p>
             At Pixelette Technologies, we are committed to crafting
             transformative technology that answers the problems to tomorrow’s
             world.
-          </Text>
+            </p>
+          
           <div>
             {/* Using React Scroll for smooth scrolling */}
             <Link href="contactUs">

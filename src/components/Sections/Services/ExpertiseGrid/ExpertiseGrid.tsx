@@ -1,5 +1,4 @@
 import { Container } from '@/components/Feature/Container/Container';
-import { Heading } from '@/components/Feature/Heading/Heading';
 import Text from '@/components/Feature/Text/Text';
 import React from 'react';
 import Marquee from 'react-fast-marquee';
@@ -34,15 +33,15 @@ const ExpertiseGrid: React.FC<ExpertiseGridProps> = ({
       <Container className="main">
         <div className="expertiseGrid">
           <header>
-            <Heading className="secondry">{header.title}</Heading>
-            <Text className="secondry">{header.description}</Text>
+            <h1>{header.title}</h1>
+             <p>{header.description}</p>
           </header>
           <Marquee>
             <section className="marqueeCardss">
               {marqueeData.map((el, index) => (
                 <div style={{ margin: '0 1rem' }} key={index}>
                   <img src={el.image} alt={el.text} />
-                  <Text className="titory--bold">{el.text}</Text>
+                   <p>{el.text}</p>
                 </div>
               ))}
             </section>
@@ -53,7 +52,7 @@ const ExpertiseGrid: React.FC<ExpertiseGridProps> = ({
               {marqueeData.map((el, index) => (
                 <div style={{ margin: '0 1rem' }} key={index}>
                   <img src={el.image} alt={el.text} />
-                  <Text className="titory--bold">{el.text}</Text>
+                  <p>{el.text}</p>
                 </div>
               ))}
             </section>

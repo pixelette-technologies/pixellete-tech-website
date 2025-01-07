@@ -18,7 +18,7 @@ const CustomerCard: FC<CustomerCardProps> = ({ image, review, name }) => {
         <Image src="/home/stars.svg" alt="stars" width={120} height={24} />
       </div>
 
-      <Text className="titory">
+      <p>
         “
         {' '}
         {review}
@@ -26,7 +26,8 @@ const CustomerCard: FC<CustomerCardProps> = ({ image, review, name }) => {
         ”
         <br />
         {name}
-      </Text>
+      </p>
+
     </div>
   );
 };

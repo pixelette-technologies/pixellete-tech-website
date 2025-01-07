@@ -101,36 +101,27 @@ export const Footer: React.FC = () => {
 
           {/* Quick Links */}
           <div>
-            <Text
-              duration="800"
-              animation="fade-up"
-              className="primary--bold"
+            <p
             >
               Quick Links
-            </Text>
+            </p>
             {['About-us', 'Case-studies', 'Pixelette-research', 'Start-ups'].map(
               (link, index) => (
-                <Text
+                <p
                   key={index}
-                  duration="800"
-                  animation="fade-up"
-                  className="titory--bold"
                 >
                   <Link href={`/${link}`}>{link.replace('-', ' ')}</Link>
-                </Text>
+                </p>
               ),
             )}
           </div>
 
           {/* Company Info */}
           <div>
-            <Text
-              duration="800"
-              animation="fade-up"
-              className="primary--bold"
+            <p
             >
               Company Info
-            </Text>
+            </p>
             {[
               { href: 'blogs', text: 'Blogs' },
               { href: 'privacy-policy', text: 'Privacy Policy' },
@@ -138,26 +129,20 @@ export const Footer: React.FC = () => {
               { href: 'refund-policy', text: 'Cancellation & Refund Policy' },
               { href: 'careers', text: 'Careers' },
             ].map((item, index) => (
-              <Text
+              <p
                 key={index}
-                duration="800"
-                animation="fade-up"
-                className="titory--bold"
               >
                 <Link href={`/${item.href}`}>{item.text}</Link>
-              </Text>
+              </p>
             ))}
           </div>
 
           {/* Contact Info */}
           <div>
-            <Text
-              duration="800"
-              animation="fade-up"
-              className="primary--bold"
+            <p
             >
               Contact Us
-            </Text>
+            </p>
             {[
               { Icon: MdEmail, text: 'sales@pixelettetech.com' },
               { Icon: FaPhone, text: '+44 2045188226' },
@@ -171,22 +156,19 @@ export const Footer: React.FC = () => {
                 text: '2335. W. Devon, Ave, IL 6065, Chicago, USA (Headquarter)',
               },
             ].map((contact, index) => (
-              <Text
+              <p
                 key={index}
-                duration="800"
-                animation="fade-up"
-                className="titory--bold"
               >
                 <contact.Icon />
                 {contact.text}
-              </Text>
+              </p>
             ))}
           </div>
         </section>
         <center>
-          <Text className="titory--bold">
+          <p>
             Copyright © 2023 Pixelette Technologies | All Rights Reserved
-          </Text>
+          </p>
         </center>
       </Container>
     </div>

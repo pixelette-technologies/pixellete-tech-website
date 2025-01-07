@@ -1,7 +1,5 @@
 'use client';
 import { Container } from '@/components/Feature/Container/Container';
-import { Heading } from '@/components/Feature/Heading/Heading';
-import Text from '@/components/Feature/Text/Text';
 import React, { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import './dedicatedtech.css';
@@ -35,22 +33,20 @@ const DedicatedTech: React.FC = () => {
   return (
     <div className="technologyStackAi">
       <center>
-        <Heading
-          className="primary"
-          animation="fade-up"
-          duration="600"
+        <h2
           id="h_ani"
         >
           Your dedicated tech ally for growth at every stage — startups, SMEs
           and beyond
-        </Heading>
-        <Text className="titory--bold" animation="fade-up" duration="700">
+        </h2>
+        <p>
           Since our founding in 2018 by Asif Ashiq Rana, we’ve transformed from
           a specialized agency to a global tech partner, leading in providing
           development services across artificial intelligence and machine
           learning (AI/ML), crypto and blockchain, AR/VR, web, mobile and
           software development.
-        </Text>
+          </p>
+        
       </center>
       <Container className="main margins">
         <div className="margins" style={{ marginBottom: '3rem', display: 'flex', justifyContent: 'space-between' }}>
@@ -81,10 +77,11 @@ const DedicatedTech: React.FC = () => {
                 gap: '1rem',
               }}
             >
-              <Text className="primary">{cards[selectedCardIndex].title}</Text>
-              <Text className="titory--bold">
+              <p>{cards[selectedCardIndex].title}</p>
+              <p>
                 {cards[selectedCardIndex].content}
-              </Text>
+                </p>
+              
             </div>
           </div>
         </div>

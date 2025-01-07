@@ -1,6 +1,5 @@
 import { Button } from '@/components/Feature/Button/Button';
 import { Container } from '@/components/Feature/Container/Container';
-import { Heading } from '@/components/Feature/Heading/Heading';
 import React from 'react';
 import './selectplan.css';
 
@@ -9,13 +8,13 @@ const SelectPlan: React.FC = () => {
     <div className="SelectPlan">
       <Container className="main">
         <center data-aos-duration="700" data-aos="fade-up">
-          <Heading className="primary" id="h_ani">
+          <h2 id="h_ani">
             Select a Plan That Aligns Best with
             {' '}
             <br />
             {' '}
             Your Project Goals
-          </Heading>
+          </h2>
         </center>
         <div data-aos-duration="500" data-aos="fade-up">
           <PlanTable />

@@ -3,7 +3,6 @@
 import { BlogCard } from '@/components/Feature/Blog/BlogCard';
 import { Button } from '@/components/Feature/Button/Button';
 import { Container } from '@/components/Feature/Container/Container';
-import { Heading } from '@/components/Feature/Heading/Heading';
 import { Text } from '@/components/Feature/Text/Text';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -70,27 +69,19 @@ export const BlogGridWithBanner = ({ data = [], singleView = false }) => {
               </figure>
             )}
             <div className={styles.heroContent}>
-              <Text
-                className="titory--bold"
-                animation="fade-up"
-                duration="500"
-              >
+              
+              <p>
                 {blogCardsMain.fields?.date || 'No date available'}
-              </Text>
-              <Heading
-                className="titory"
-                animation="fade-up"
-                duration="600"
+                </p>
+              <h3
               >
                 {blogCardsMain.fields?.name || 'No title available'}
-              </Heading>
-              <Text
-                className="secondry"
-                animation="fade-up"
-                duration="700"
-              >
+              </h3>
+              
+               <p>
                 {blogCardsMain.fields?.shortDescription || 'No description available'}
-              </Text>
+                </p>
+              
               <div className={styles.readMoreButton}>
                 <Link href={`/blogs/${blogCardsMain.fields?.slug}`} passHref>
                   <Button className="primary">

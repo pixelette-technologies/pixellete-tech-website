@@ -39,12 +39,12 @@ const HowItWorksHeroSection: React.FC<HeroSectionProps> = ({
       <div id="heroSectionAiServices" className="heroSectionAiServices">
         <Container className="main margins">
           <center>
-            <Heading className="secondry" animation="zoom-out" duration="2000">
+            <h1>
               {heading}
-            </Heading>
-            <Text className="primary" animation="zoom-in" duration="2200">
-              {text}
-            </Text>
+            </h1>
+            <p>
+            {text}</p> 
+            
           </center>
           <section>
             <div className="deliverHeroCard">

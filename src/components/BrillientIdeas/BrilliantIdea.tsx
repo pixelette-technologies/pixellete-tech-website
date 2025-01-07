@@ -15,10 +15,7 @@ const BrilliantIdea: React.FC = () => {
         <Container className="main margins">
           <section>
             <div className="award-text">
-              <Heading
-                className="secondry"
-                animation="fade-up"
-                duration="400"
+              <h1
                 id="h_ani"
               >
                 <>
@@ -30,11 +27,10 @@ const BrilliantIdea: React.FC = () => {
                   {' '}
                   counting
                 </>
-              </Heading>
+              </h1>
               <br />
               {' '}
               <br />
-              <Text className="secondry">
                 <>
                   Not to forget
                   <ul className="project-deilvered">
@@ -44,7 +40,7 @@ const BrilliantIdea: React.FC = () => {
                     <li>Secured over £100M in funding through MVPs</li>
                   </ul>
                 </>
-              </Text>
+              
             </div>
             <img src="/images/Clutch/mind.png" alt="Mind Map" />
           </section>

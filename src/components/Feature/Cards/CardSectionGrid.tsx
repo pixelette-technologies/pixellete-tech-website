@@ -16,17 +16,15 @@ export const CardSectionGrid: FC<CardSectionGridProps> = ({ heading, text, data 
     <div className="cardSectionGrid">
       <Container className="main margins">
         <center>
-          <Heading
-            className="secondry"
-            animation="fade-up"
-            duration="300"
+          <h1
             id="h_ani"
           >
             {heading}
-          </Heading>
-          <Text className="secondry" animation="fade-up" duration="500">
-            {text}
-          </Text>
+          </h1>
+          <p>
+          {text}
+          </p>
+          
         </center>
         <section>
           <ServicesCard data={data} />

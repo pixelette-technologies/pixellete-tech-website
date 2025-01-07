@@ -83,18 +83,18 @@ const AboutUsSection: React.FC = () => {
         <Container className="main margins">
           <section data-aos="fade-up" data-aos-duration="1000">
             <div>
-              <Heading className="secondry">
+              <h1>
                 Our passion lies in building
                 {' '}
                 <br />
                 {' '}
                 tech solutions that drive real
                 change across industries
-              </Heading>
-              <Text className="secondry">
+              </h1>
+              <p>
                 From our beginnings in 2018, Pixelette Technologies has rapidly become a world-leading development
                 services company, specializing in AI, blockchain, web, mobile technologies, and more.
-              </Text>
+                </p>
             </div>
             <div>
               {Array.from({ length: 6 }, (_, index) => (
@@ -138,9 +138,9 @@ const AboutUsSection: React.FC = () => {
                     <img src={`/images/home/${i === 0 ? 'appg' : 'scotland'}.png`} alt={i === 0 ? 'APPG Logo' : 'Scotland Logo'} />
                   </div>
                   <div className="scottland-text" style={{ flex: 1 }}>
-                    <Text className="titory--bold">
+                    <p>
                       Official Secretariat of the British Government’s AI policy body (APPG AI)
-                    </Text>
+                      </p>
                   </div>
                 </div>
               ))}

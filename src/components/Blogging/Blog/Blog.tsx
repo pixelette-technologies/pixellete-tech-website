@@ -1,5 +1,4 @@
 import { Container } from '@/components/Feature/Container/Container';
-import { Heading } from '@/components/Feature/Heading/Heading';
 import Text from '@/components/Feature/Text/Text';
 import { BlogGridWithBanner } from '@/components/Sections/BlogGridWithBanner/BlogGridWithBanner';
 import './blog.css';
@@ -49,21 +48,16 @@ export const Blog = ({ blogdata }: BlogProps) => {
 
         {/* Hero Section */}
         <center>
-          <Heading
-            className="heroHeading"
-            animation="zoom-out"
-            duration="2000"
+          <h1
           >
             The Pixelette Post
-          </Heading>
-          <Text
-            className="secondry"
-            animation="zoom-in"
-            duration="2200"
-          >
+          </h1>
+          
+            <p>
             Dive into our curated collection of updates and guides to deepen
             your understanding of diverse technologies.
-          </Text>
+            </p>
+          
         </center>
 
         {/* Blog Grid Section */}

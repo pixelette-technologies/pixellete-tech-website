@@ -43,7 +43,7 @@ const FileInput: React.FC<FileInputProps> = ({ name }) => {
             width={40}
             height={40}
           />
-          <p className="titory">
+          <p>
             You can drag or
             {' '}
             <span onClick={handleUpload}>upload a file</span>

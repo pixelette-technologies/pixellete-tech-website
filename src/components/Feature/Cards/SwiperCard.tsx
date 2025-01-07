@@ -21,8 +21,8 @@ const SwiperCard: FC<SwiperCardProps> = ({ image, name, description, animation, 
       <figure>
         <Image src={image} alt="banner" width={300} height={200} />
       </figure>
-      <Text className="primary--bold">{name}</Text>
-      <Text className="titory--bold">{description}</Text>
+       <p>{name}</p>
+       <p>{description}</p>
     </div>
   );
 };

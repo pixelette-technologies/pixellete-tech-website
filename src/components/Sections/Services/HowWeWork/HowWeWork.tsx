@@ -1,5 +1,4 @@
 import { Container } from '@/components/Feature/Container/Container';
-import { Heading } from '@/components/Feature/Heading/Heading';
 import Text from '@/components/Feature/Text/Text';
 import React from 'react';
 import './index.css';
@@ -36,20 +35,20 @@ export const HowWeWork: React.FC<HowWeWorkProps> = () => {
             className="howWeWorkTextAlign"
             style={{ display: 'flex', justifyContent: 'space-between' }}
           >
-            <Heading className="primary">How we work</Heading>
-            <Text className="titory--bold">
-              We understand each client’s needs are unique, and we bring a
+            <h2>How we work</h2>
+            <p>              We understand each client’s needs are unique, and we bring a
               <br />
               flexible, responsive approach to every project.
-            </Text>
+</p>
+            
           </div>
           <div className="expertiseGrid">
             <section className="HowWeWorkCards">
               {data.map((el, index) => (
                 <div style={{ margin: '0 1rem' }} key={index}>
-                  <Text className="primary">{el.title}</Text>
+                   <p>{el.title}</p>
                   <br />
-                  <Text className="titory--bold">{el.desc}</Text>
+                  <p>{el.desc}</p>
                 </div>
               ))}
             </section>

@@ -3,7 +3,6 @@ import { Button } from '@/components/Feature/Button/Button';
 import { Container } from '@/components/Feature/Container/Container';
 import { FormInput } from '@/components/Feature/Form/FormInput';
 import FormTextArea from '@/components/Feature/Form/FormTextArea';
-import { Heading } from '@/components/Feature/Heading/Heading';
 import InputPhoneNo from '@/components/Feature/InputPhoneNo/InputPhoneNo';
 import Text from '@/components/Feature/Text/Text';
 import data from '@/data';
@@ -70,31 +69,26 @@ export const ContactUsForm: React.FC<ContactUsProps> = (props) => {
       <div className="contactUs">
         {!props.header && (
           <center>
-            <Heading
-              className="secondry"
+            <h1
               id="h_ani"
-              animation="fade-up"
-              duration="500"
             >
               Contact Us
-            </Heading>
-            <Text
-              className="secondry"
-              animation="fade-up"
-              duration="600"
-            >
+            </h1>
+            
+             <p>
               Get in touch to let us know what you’re looking for, and one of
               our solutions architects will get back to you.
-            </Text>
+              </p>
+            
           </center>
         )}
 
         <section>
           <div>
             {props.insideHeading && (
-              <Heading className="titory">
+              <h3>
                 {props.insideHeading}
-              </Heading>
+              </h3>
             )}
 
             <Formik
@@ -104,7 +98,7 @@ export const ContactUsForm: React.FC<ContactUsProps> = (props) => {
               onSubmit={(values, { resetForm }) => {
                 if (window.lintrk) {
                   window.lintrk('track', { conversion_id: 19141409 });
-                  console.log('conversion');
+                  // console.log('conversion');
                 } else {
                   console.error('LinkedIn tracking not initialized.');
                 }
@@ -125,8 +119,8 @@ export const ContactUsForm: React.FC<ContactUsProps> = (props) => {
                     'LYS_0H8byHSkeaSrz',
                   )
                   .then((response) => {
-                    console.log(values);
-                    console.log(response);
+                    // console.log(values);
+                    // console.log(response);
 
                     setStatusMessage('Email sent successfully!');
                   })

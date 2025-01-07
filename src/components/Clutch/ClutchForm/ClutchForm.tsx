@@ -1,8 +1,6 @@
 'use client';
 
 import { Container } from '@/components/Feature/Container/Container';
-import { Heading } from '@/components/Feature/Heading/Heading';
-import Text from '@/components/Feature/Text/Text';
 import { ContactUsForm } from '@/components/Sections/contactUsForm/ContactUsForm';
 import { TypeAnimation } from 'react-type-animation';
 
@@ -13,8 +11,7 @@ const ClutchForm: React.FC = () => {
     <Container className="main margins">
       <div className="evaluateBussiness">
         <header>
-          <Heading
-            className="secondry"
+          <h1
           >
             We&apos;ll bring your
             <br />
@@ -37,11 +34,12 @@ const ClutchForm: React.FC = () => {
             idea to life or you
             <br />
             get your money back
-          </Heading>
-          <Text className="secondry" animation="fade-up" duration="700">
+          </h1>
+            <p>
             Pixelette Technologies empowers non-technical founders to get
             software solutions to their exact requirements without hiring
             expensive in-house teams
+            </p>
             <br />
             <br />
             <ul className="custom-list">
@@ -61,7 +59,7 @@ const ClutchForm: React.FC = () => {
                 market
               </li>
             </ul>
-          </Text>
+          
         </header>
         <div>
           <ContactUsForm

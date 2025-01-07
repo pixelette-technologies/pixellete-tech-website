@@ -1,6 +1,5 @@
 'use client';
 import { Container } from '@/components/Feature/Container/Container';
-import { Heading } from '@/components/Feature/Heading/Heading';
 import Text from '@/components/Feature/Text/Text';
 import React, { useEffect, useState } from 'react';
 import './ourservices.css';
@@ -34,7 +33,6 @@ export const OurServices: React.FC<OurServicesProps> = ({
   const [currentService, setCurrentService] = useState<HighlightedService>(highlightedService);
 
   const handleServiceClick = (item: string) => {
-    console.log('Clicked item:', item);
 
     if (!serviceMapping) {
       console.error('Service mapping is undefined.');
@@ -57,22 +55,21 @@ export const OurServices: React.FC<OurServicesProps> = ({
     <div style={{ marginTop: '5rem' }} className="OurServicesBg">
       <Container className="main margins">
         <center>
-          <Heading className="primary">{heading}</Heading>
+          <h2>{heading}</h2>
           <br />
-          <Text className="titory--bold">{description}</Text>
+          <p>{description}</p>
         </center>
         <div className="ourServicesLists">
           {serviceLists.map((list, idx) => (
             <div key={idx}>
               {list.items.map((item, index) => (
-                <Text
+                <p
                   key={index}
-                  className="primary"
                 >
                   <p onClick={() => handleServiceClick(item)}>
                     {item}
                   </p>
-                </Text>
+                </p>
               ))}
             </div>
           ))}
@@ -82,14 +79,14 @@ export const OurServices: React.FC<OurServicesProps> = ({
               backgroundColor: '#0F0F0FB2',
               padding: '2rem',
               borderRadius: '13.84px',
-              height: '350px',
+              minHeight: '350px',
             }}
           >
             <img src={currentService.imageSrc} alt={currentService.title} />
             <br />
-            <Text className="primary">{currentService.title}</Text>
+            <p>{currentService.title}</p>
             <br />
-            <Text className="titory--bold">{currentService.description}</Text>
+            <p>{currentService.description}</p>
           </div>
         </div>
       </Container>

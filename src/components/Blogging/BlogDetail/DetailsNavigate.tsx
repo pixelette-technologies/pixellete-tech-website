@@ -1,10 +1,10 @@
 'use client';
-import { Heading } from '@/components/Feature/Heading/Heading';
 import Text from '@/components/Feature/Text/Text';
 import { createClient } from 'contentful';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { useParams } from 'next/navigation';
+import { P } from 'pino';
 import React, { useEffect, useRef, useState } from 'react';
 import ReactMarkdown from 'react-markdown';
 import { v4 as uuidv4 } from 'uuid';
@@ -109,9 +109,9 @@ const DetailsNavigate = (props) => {
         >
           {isOpenContent && (
             <>
-              <Heading className="blogCardHeading">
+              <h3 className="blogCardHeading">
                 Overview
-              </Heading>
+              </h3>
               {data?.map((ls, index) => {
                 const { title } = ls;
                 return (
@@ -123,15 +123,14 @@ const DetailsNavigate = (props) => {
                       >
                         {props.overViewIndex && (
                           <div>
-                            <Text className="secondry">
+                            <p>
                               {index + 1}
-                              .
-                            </Text>
+                              </p>                            
                           </div>
                         )}
-                        <Text className="secondry">
+                        <p>
                           {title}
-                        </Text>
+                          </p>
                       </div>
                     )}
                   </>
@@ -157,22 +156,16 @@ const DetailsNavigate = (props) => {
           {props.headerSection && (
             <header>
               {singleBlogDetail.fields?.date && (
-                <Text
-                  className="titory--bold"
-                  animation="fade-up"
-                  duration="400"
-                >
+                
+                <p>
                   {singleBlogDetail.fields?.date}
-                </Text>
+                  </p>
               )}
               {singleBlogDetail.fields?.name && (
-                <Heading
-                  className="secondry"
-                  animation="fade-up"
-                  duration="500"
+                <h1
                 >
                   {singleBlogDetail.fields?.name}
-                </Heading>
+                </h1>
               )}
               {singleBlogDetail.fields?.images?.fields?.file?.url && (
                 <img
@@ -186,15 +179,12 @@ const DetailsNavigate = (props) => {
           )}
           {/* <Element name="headings"> */}
           {singleBlogDetail.fields?.content && (
-            <Text
-              className="secondry"
-              animation="fade-up"
-              duration="600"
-            >
+            
+              <p>
               <ReactMarkdown>
                 {singleBlogDetail.fields?.content}
               </ReactMarkdown>
-            </Text>
+              </p>
           )}
           {/* </Element> */}
           {data?.map((ls, index) => {
@@ -204,15 +194,13 @@ const DetailsNavigate = (props) => {
               <div id={title} key={uuidv4()}>
                 {title && (
                   <header>
-                    <Heading
+                    <h1
                       className="policyHeading"
-                      animation="fade-up"
-                      duration="400"
                     >
                       {props.headingIndex && `${index + 1}.`}
                       {' '}
                       {title}
-                    </Heading>
+                    </h1>
                   </header>
                 )}
                 {/* {lists?.map((lst) => {
@@ -220,12 +208,12 @@ const DetailsNavigate = (props) => {
 
                   return (
                     <section key={uuidv4()}>
-                      <Text
+                      
                         animation="fade-up"
                         duration="500"
                         className="secondry"
                         dangerouslySetInnerHTML={{ __html: title }}
-                      ></Text>
+                      >
                       <div>
                         {lst?.subList?.map((el, index) => {
                           return (
@@ -234,9 +222,9 @@ const DetailsNavigate = (props) => {
                                 data-aos="fade-up"
                                 data-aos-duration={`${index}00`}
                               >
-                                <Text className="secondry">
+                                 className="secondry">
                                   {el}
-                                </Text>
+                                
                               </li>
                             </ul>
                           );
@@ -250,21 +238,21 @@ const DetailsNavigate = (props) => {
                   <blockquote>
                     <div data-aos="fade-up" data-aos-duration="500">
                       <img src={assets.commonAssests.mail} alt="icon" />
-                      <Text className="secondry">
+                      <p>
                         sales@pixelettetech.com
-                      </Text>
+                        </p>
                     </div>
                     <div data-aos="fade-up" data-aos-duration="500">
                       <img src={assets.commonAssests.mapIcon} alt="icon" />
-                      <Text className="secondry">
+                      <p>
                         https://www.pixelettetech.com/contact-us/
-                      </Text>
+                        </p>
                     </div>
                     <div data-aos="fade-up" data-aos-duration="500">
                       <img src={assets.commonAssests.phone} alt="icon" />
-                      <Text className="secondry">
+                      <p>
                         +44 2045188226
-                      </Text>
+                        </p>
                     </div>
                   </blockquote>
                 )}

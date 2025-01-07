@@ -1,6 +1,5 @@
 import type { Entry } from 'contentful';
 import type { ReactElement } from 'react';
-import { Heading } from '@/components/Feature/Heading/Heading';
 import Text from '@/components/Feature/Text/Text';
 import { createClient } from 'contentful';
 import { motion } from 'framer-motion';
@@ -128,9 +127,9 @@ const DetailsNavigate: React.FC<DetailsNavigateProps> = (props): ReactElement =>
         >
           {isOpenContent && (
             <>
-              <Heading className="blogCardHeading">
+              <h3 className="blogCardHeading">
                 Overview
-              </Heading>
+              </h3>
               {data?.map((ls, index) => {
                 const { title } = ls;
                 return (
@@ -139,14 +138,14 @@ const DetailsNavigate: React.FC<DetailsNavigateProps> = (props): ReactElement =>
                     onClick={() => handleOverviewItemClick(title)}
                   >
                     {props.overViewIndex && (
-                      <Text className="secondry">
+                       <p>
                         {index + 1}
                         .
-                      </Text>
+                        </p>
                     )}
-                    <Text className="secondry">
+                    <p>
                       {title}
-                    </Text>
+                      </p>
                   </div>
                 );
               })}
@@ -177,22 +176,16 @@ const DetailsNavigate: React.FC<DetailsNavigateProps> = (props): ReactElement =>
           {props.headerSection && (
             <header>
               {singleBlogDetail?.fields?.date && (
-                <Text
-                  className="titory--bold"
-                  animation="fade-up"
-                  duration="400"
-                >
+                
+                  <p>
                   {singleBlogDetail.fields.date}
-                </Text>
+                  </p>
               )}
               {singleBlogDetail?.fields?.name && (
-                <Heading
-                  className="secondry"
-                  animation="fade-up"
-                  duration="500"
+                <h1
                 >
                   {singleBlogDetail.fields.name}
-                </Heading>
+                </h1>
               )}
               {singleBlogDetail?.fields?.images?.fields?.file?.url && (
                 <img
@@ -206,15 +199,12 @@ const DetailsNavigate: React.FC<DetailsNavigateProps> = (props): ReactElement =>
           )}
           <Element name="headings">
             {singleBlogDetail?.fields?.content && (
-              <Text
-                className="secondry"
-                animation="fade-up"
-                duration="600"
-              >
+              
+                <p>
                 <ReactMarkdown>
                   {singleBlogDetail.fields.content}
                 </ReactMarkdown>
-              </Text>
+                </p>
             )}
           </Element>
         </div>

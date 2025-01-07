@@ -1,5 +1,4 @@
 import { Container } from '@/components/Feature/Container/Container'; // Import your custom Container component
-import { Heading } from '@/components/Feature/Heading/Heading';
 import React from 'react';
 import Marquee from 'react-fast-marquee';
 import './ourclients.css';
@@ -50,9 +49,9 @@ export const OurClients: React.FC<OurClientsProps> = () => {
     <div className="ourClients">
       <Container className="main">
         <center>
-          <Heading className="primary" id="h_ani">
+          <h2 id="h_ani">
             Trusted By Leading Innovators
-          </Heading>
+          </h2>
         </center>
         <div data-aos="fade-up" data-aos-duration="500">
           <Marqueee />
