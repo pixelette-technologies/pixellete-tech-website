@@ -8,11 +8,12 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useParams } from 'next/navigation';
 import { useEffect, useState } from 'react';
-import { Col, Container, Row } from 'react-bootstrap';
 import { FaGithub, FaGlobe, FaLinkedin, FaTwitter } from 'react-icons/fa';
 import { FaFacebook } from 'react-icons/fa6';
 import useContentful from '../../api/usecontentful/usecontentful';
 // import './blogdetail.module.css';
+import './blogdetail.scss'
+import { Container } from '@/components/Feature/Container/Container';
 
 const page = (props: any) => {
   const params = useParams();
@@ -38,7 +39,7 @@ const page = (props: any) => {
   type Params = { id: string };
 
   useEffect(() => {
-    if (params?.id) {
+    if (params?.slug) {
       getOneAssest({ id: params.id }).then((response) => {
         if (response !== undefined) {
           const { blogData, includes } = response;
@@ -157,7 +158,7 @@ const page = (props: any) => {
       </Head> */}
       <div className="blog_detail">
 
-        <Container>
+        <Container className='main margins'>
           <div id="blog-top" className="blog_detail_inner">
             {/* Blog image or video */}
             {selectedData?.fields?.thumbnailImage?.fields?.file?.contentType?.split('/')[0]
@@ -210,9 +211,9 @@ const page = (props: any) => {
                   )}
             <Breadcrumb items={breadcrumbItems} />
             {/* Blog content and TOC */}
-            <Row className="blog_detail_inner_content">
+            <div style={{display: 'flex', justifyContent: 'space-between'}} className="blog_detail_inner_content">
               {/* Blog Content */}
-              <Col md={8}>
+              <div className='custom-col'>
                 <h1>{selectedData?.fields?.title}</h1>
                 {/* <p>{selectedData?.fields?.description}</p> */}
 
@@ -364,10 +365,10 @@ const page = (props: any) => {
                     </Link>
                   </div>
                 </div>
-              </Col>
+              </div>
 
               {/* TOC */}
-              <Col md={4}>
+              <div className='custom-col'>
                 <div className="toc">
                   <h5>In this article</h5>
                   <ul>
@@ -449,8 +450,8 @@ const page = (props: any) => {
                     </Link>
                   </div>
                 </div>
-              </Col>
-            </Row>
+              </div>
+            </div>
           </div>
         </Container>
       </div>

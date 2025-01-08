@@ -39,11 +39,11 @@ const useContentful = () => {
     }
   };
 
-  // const getOneAssest = async (param: { id: string }) => {
+  // const getOneAssest = async (param: { slug: string }) => {
   //   try {
   //     const asset = await client.getEntries({
   //       content_type: "blogPage",
-  //       "fields.slug": param.id,
+  //       "fields.slug": param.slug,
   //     });
   //     return asset.items[0]; // Returns the first matching entry
   //   } catch (error) {
@@ -52,12 +52,12 @@ const useContentful = () => {
   //   }
   // };
 
-  const getOneAssest = async (params: { id: any }) => {
+  const getOneAssest = async (params: { slug: any }) => {
     try {
-      const { id } = params;
+      const { slug } = params;
       const response = await client.getEntries({
         'content_type': 'blogPage',
-        'fields.slug': id,
+        'fields.slug': slug,
         'include': 10,
       }) as any;
 

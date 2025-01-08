@@ -1,5 +1,5 @@
 .blog_detail {
-  background-color: #fff;
+  background-color: #000;
   padding-top: 16rem;
   padding-bottom: 10rem;
   z-index: 0;
@@ -482,4 +482,30 @@
 
 .social-link:hover {
   color: #0073e6; /* Highlight color on hover */
+}
+
+
+// .bootstrap-container {
+//   max-width: 1400px; /* Set your own width */
+//   margin: 0 auto;    /* Center-align like Bootstrap container */
+//   padding: 20px;     /* Add padding */
+//   background-color: #f8f9fa; /* Background color */
+// }
+
+// #bootstrap-row {
+//   margin-bottom: 20px; /* Add space between rows */
+//   background-color: #e9ecef; /* Background color for rows */
+// }
+
+// #bootstrap-col {
+//   padding: 20px; /* Increase padding inside columns */
+//   border: 1px solid #ddd; /* Add a border around columns */
+//   background-color: #ffffff; /* Background color for columns */
+// }
+
+.custom-col {
+  flex: 0 0 auto; /* Allows it to shrink and grow */
+  width: 33.3333%; /* Equal to 4 columns in a 12-column grid */
+  padding: 15px; /* Default Bootstrap padding */
+  box-sizing: border-box; /* Ensures padding doesn't affect width */
 }
