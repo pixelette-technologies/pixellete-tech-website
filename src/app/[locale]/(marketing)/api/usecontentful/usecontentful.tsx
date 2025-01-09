@@ -5,8 +5,8 @@ const useContentful = () => {
   const client = createClient({
   //  space: process.env.CONTENTFUL_SPACE_ID,
   //  accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
-    space: 'ggtsbq0gqfii',
-    accessToken: 'VZvVye8dMIc497wF-1pNt5rdYUG-h4E30uX58AcGVUo',
+  space: 'iu40d70qrkjm',
+  accessToken: 'sa3kKcmFZSSGZEHw9FylVx0eOIuJordTBaMWfOeRf1Y',
     host: 'cdn.contentful.com',
   });
 
@@ -52,7 +52,7 @@ const useContentful = () => {
   //   }
   // };
 
-  const getOneAssest = async (params: { slug: any }) => {
+  const getOneAssest = async (params: { slug: string }) => {
     try {
       const { slug } = params;
       const response = await client.getEntries({

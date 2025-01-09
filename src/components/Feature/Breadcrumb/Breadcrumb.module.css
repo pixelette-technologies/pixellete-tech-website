@@ -3,12 +3,12 @@
   font-family: 'Inter', sans-serif;
   font-size: 1.5rem;
   color: #fff;
-  display: inline-flex; /* Adjust to content width */
+  display: inline-flex;
   align-items: center;
-  border: 0.1rem solid #ddd; /* Light gray border */
-  padding: 1rem; /* Inner spacing */
-  border-radius: 1.5rem; /* Rounded corners */
-  flex-wrap: wrap; /* Wrap items if they overflow */
+  border: 0.1rem solid #ddd;
+  padding: 1rem;
+  border-radius: 1rem;
+  flex-wrap: wrap;
 }
 
 .breadcrumbItem {
