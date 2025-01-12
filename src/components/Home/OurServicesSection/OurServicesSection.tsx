@@ -10,11 +10,10 @@ const OurServicesSection: React.FC = () => {
     <>
       <div className="technologyStack">
         <center>
-          <h1
-            id="h_ani"
+          <h2
           >
             We bring full-stack development services to the table
-          </h1>
+          </h2>
           <p>
             Explore our full suite of development services designed to deliver success to businesses across various industries.
           </p>
@@ -30,15 +29,15 @@ const OurServicesSection: React.FC = () => {
                   alignItems: 'center',
                   gap: '1rem',
                   padding: '2rem 3rem',
-                  width: '18rem',
+                  width: '23rem',
                 }}
                 data-aos="fade-up"
                 data-aos-duration={600}
               >
                 <img src={item.icon} alt="icon" />
-                <p>
+                <h3>
                   {item.title}
-                </p>
+                </h3>
               </div>
             ))}
           </div>

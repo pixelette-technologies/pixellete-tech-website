@@ -73,7 +73,7 @@ const Map: React.FC = () => {
                   className="image-for-hover"
                   whileHover={{ scale: 1.1 }}
                   onMouseEnter={() => handleMouseEnter(index)}
-                  style={{ width: '100%', height: '100%' }}
+                  style={{width: '100px'}}
                   // onMouseLeave={handleMouseLeave}
                 />
               </div>

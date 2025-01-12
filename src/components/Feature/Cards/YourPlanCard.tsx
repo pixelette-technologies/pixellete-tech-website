@@ -41,20 +41,22 @@ const YourPlanCard: FC<YourPlanCardProps> = ({ data }) => {
                   width={20}
                   height={20}
                 />
-                <h3>{el.iconhead}</h3>
+                <h4>{el.iconhead}</h4>
               </div>
             </div>
             <p>{el.name}</p>
             <p>{el.description}</p>
-            <div style={{ display: 'flex', alignItems: 'center' }}>
-              {el.link}
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.3rem', marginTop:'1rem' }}>
+              <div>
+              <p>{el.link}</p>
+              </div>
               {' '}
               <div>
                 <Image
                   src={el.linkIcon}
                   alt="link icon"
-                  width={20}
-                  height={20}
+                  width={10}
+                  height={10}
                 />
               </div>
             </div>

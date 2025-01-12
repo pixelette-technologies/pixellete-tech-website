@@ -216,7 +216,6 @@ const DetailsNavigate = (props) => {
 
                         animation="fade-up"
                         duration="500"
-                        className="secondry"
                         dangerouslySetInnerHTML={{ __html: title }}
                       >
                       <div>
@@ -227,7 +226,7 @@ const DetailsNavigate = (props) => {
                                 data-aos="fade-up"
                                 data-aos-duration={`${index}00`}
                               >
-                                 className="secondry">
+                                 >
                                   {el}
 
                               </li>

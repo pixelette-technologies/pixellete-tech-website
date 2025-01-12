@@ -60,9 +60,9 @@ export const CaseStudies: React.FC<CaseStudiesProps> = () => {
           </blockquote>
 
           <center>
-            <h1 id="h_ani">
+            <h2>
               Clients love us
-            </h1>
+            </h2>
             <div data-aos-duration="500" data-aos="fade-up">
               <p>4.9</p>
               <Image src="/images/home/stars.svg" alt="Rating Stars" width={100} height={100} />

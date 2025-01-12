@@ -15,6 +15,7 @@ import useContentful from '../../api/usecontentful/usecontentful';
 import './blogdetail.scss'
 import { Container } from '@/components/Feature/Container/Container';
 import { backgroundImage } from '@/data/services/aiServices';
+import { IoIosArrowDown, IoIosArrowUp } from 'react-icons/io';
 
 const page = (props: any) => {
   const params = useParams();
@@ -30,12 +31,25 @@ const page = (props: any) => {
   const blogTitle = selectedData?.fields?.title || 'Blockchain Experts';
   const blogDescription = selectedData?.fields?.description || 'Read more about blockchain topics.';
   const blogSlug = selectedData?.fields?.slug;
+  const [isCollapsed, setIsCollapsed] = useState<boolean>(false);
+
+  const toggleCollapse = () => {
+    setIsCollapsed((prev) => !prev);
+  };
 
   type BlogResponse = {
     blogData: any;
     assets: any;
     includes: any;
   };
+  interface TOCItem {
+    id: string;
+    text: string;
+  }
+  
+  interface CollapsibleTocProps {
+    tableOfContents: TOCItem[];
+  }
 
   type Params = { id: string };
 
@@ -163,7 +177,7 @@ const page = (props: any) => {
             <img src="/images/aiServices/serviceSectionBackground.svg" alt="Background" />
           </div>
         </Container>
-        <Container className='main margins'>
+        <div style={{padding: '0 5rem'}} className='main margins'>
           <div style={{ marginBottom: '2rem' }}>
             <Breadcrumb items={breadcrumbItems} />
           </div>
@@ -172,6 +186,16 @@ const page = (props: any) => {
             {/* Blog image or video */}
             <div style={{ display: 'flex', justifyContent: 'space-between', gap: '1rem' }}>
               <div>
+          <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
+          <div style={{display: 'flex', gap: '1rem', alignItems: 'center'}}>
+            <p>Written by</p>
+            <img src="" alt="Auther" />
+            <p>John Brigham</p>
+          </div>
+          <div>
+            <p>Last Updated: Dec 27, 2024 | 10 mins read</p>
+          </div>
+          </div>
                 {selectedData?.fields?.thumbnailImage?.fields?.file?.contentType?.split('/')[0]
                   === 'video'
                   ? (
@@ -224,50 +248,34 @@ const page = (props: any) => {
                   {/* Blog Content */}
 
                   <div>
-                    <div style={{
-                      width: '100%',
-                      backgroundColor: '#0F0F0FB2',
-                      padding: '1rem',
-                      borderRadius: '13.84px',
-                      height: '350px',
-                      marginBottom: '2rem'
-                    }}>
-                      <div className="toc">
-                        <h5>In this article</h5>
-                        <ul>
-                          {tableOfContents.map((item, index) => (
-                            <li key={index}>
-                              <a href={`#${item.id}`}>{item.text}</a>
-                            </li>
-                          ))}
-                        </ul>
+                    <div
+                      style={{
+                        width: 'fit-content',
+                        backgroundColor: '#0F0F0FB2',
+                        padding: '1rem',
+                        borderRadius: '13.84px',
+                        marginBottom: '2rem',
+                      }}
+                    >
+                        <div className="toc">
+                          <div style={{display: 'flex', justifyContent: 'space-between', width: '100%', cursor: 'pointer', gap: '1rem'}} onClick={toggleCollapse}>
+                            <div>
+                          <h5>In this article</h5>
+                            </div>
+                          {isCollapsed ? <IoIosArrowDown size={20} /> : <IoIosArrowUp size={20} />}
+                          </div>
+                      {!isCollapsed && (
+                          <ul>
+                            {tableOfContents.map((item, index) => (
+                              <li key={index}>
+                                <a href={`#${item.id}`} style={{ color: 'white' }}>
+                                  {item.text}
+                                </a>
+                              </li>
+                            ))}
+                          </ul>
+                      )}
                       </div>
-                      {/* <div className="share-containerToc">
-                  <p>Share with your community.</p>
-                  <div className="social-links">
-                    <Link
-                      target="_blank"
-                      href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(currentURL)}`}
-                      aria-label="Share article on Facebok"
-                    >
-                      <FaFacebook />
-                    </Link>
-                    <Link
-                      target="_blank"
-                      href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(currentURL)}`}
-                      aria-label="Share article on X.com"
-                    >
-                      <FaTwitter />
-                    </Link>
-                    <Link
-                      target="_blank"
-                      href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(currentURL)}`}
-                      aria-label="Share article on Linkedin"
-                    >
-                      <FaLinkedin />
-                    </Link>
-                  </div>
-                </div> */}
                     </div>
                     <div style={{
                       width: '100%',
@@ -566,7 +574,7 @@ const page = (props: any) => {
             {/* Blog content and TOC */}
 
           </div>
-        </Container>
+        </div>
       </div>
     </>
   );

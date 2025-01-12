@@ -118,7 +118,7 @@ const FormInputWithDropDown: FC<FormInputWithDropDownProps> = ({
               )
             : (
                 <center>
-                  <span className="secondry">No match found</span>
+                  <span>No match found</span>
                 </center>
               )}
         </motion.div>

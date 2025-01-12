@@ -24,7 +24,7 @@ export const CaseStudiCard: FC<CaseStudiCardProps> = ({ to, image, tags, name, d
               <span key={index}>{tag}</span>
             ))}
           </header>
-          <h2 className="blogCardHeading">{name}</h2>
+          <h3 className="blogCardHeading">{name}</h3>
           <p>{description}</p>
         </div>
       </div>

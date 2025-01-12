@@ -6,11 +6,10 @@ export const YourPlanCardGrid = ({ heading, text, data }) => {
   return (
     <div className="yourPlanCardGrid">
       <Container className="main margins">
-        <h1
-          id="h_ani"
+        <h2
         >
           {heading}
-        </h1>
+        </h2>
         <br />
         <p>
           {text}

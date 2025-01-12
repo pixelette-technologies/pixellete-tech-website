@@ -106,9 +106,9 @@ export const Testimonial: FC<TestimonialProps> = ({ background }) => {
           </blockquote>
 
           <center>
-            <h1 id="h_ani">
+            <h2>
               Clients love us
-            </h1>
+            </h2>
             <div data-aos-duration="500" data-aos="fade-up">
               <p>4.9</p>
               <Image

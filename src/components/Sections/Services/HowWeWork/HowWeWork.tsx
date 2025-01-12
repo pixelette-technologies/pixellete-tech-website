@@ -26,8 +26,8 @@ const data = [
 export const HowWeWork: React.FC<HowWeWorkProps> = () => {
   return (
     <div style={{ margin: '5rem 0' }} className="howWeWorkBg">
-      <Container className="main margins">
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '5rem' }}>
+      <div style={{display: 'flex', justifyContent: 'center', width:"100%"}}>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '5rem', justifyContent: 'center' }}>
           <div
             className="howWeWorkTextAlign"
             style={{ display: 'flex', justifyContent: 'space-between' }}
@@ -53,7 +53,7 @@ export const HowWeWork: React.FC<HowWeWorkProps> = () => {
             </section>
           </div>
         </div>
-      </Container>
+      </div>
     </div>
   );
 };

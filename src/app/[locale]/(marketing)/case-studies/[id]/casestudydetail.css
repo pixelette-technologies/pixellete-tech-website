@@ -16,6 +16,7 @@
 }
 .caseStudieDetail > section > div {
   padding-top: 8rem;
+  padding: 0 5rem;
 }
 @media only screen and (max-width: 37.5em) {
   .caseStudieDetail > section > div {

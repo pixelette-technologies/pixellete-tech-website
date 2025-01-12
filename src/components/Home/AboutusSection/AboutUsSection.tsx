@@ -83,14 +83,14 @@ const AboutUsSection: React.FC = () => {
         <Container className="main margins">
           <section data-aos="fade-up" data-aos-duration="1000">
             <div>
-              <h1>
+              <h2>
                 Our passion lies in building
                 {' '}
                 <br />
                 {' '}
                 tech solutions that drive real
                 change across industries
-              </h1>
+              </h2>
               <p>
                 From our beginnings in 2018, Pixelette Technologies has rapidly become a world-leading development
                 services company, specializing in AI, blockchain, web, mobile technologies, and more.

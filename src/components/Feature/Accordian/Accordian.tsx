@@ -1,6 +1,7 @@
 import type { FC } from 'react';
 import { motion } from 'framer-motion';
 import './accordian.css';
+import Image from 'next/image';
 
 type AccordianProps = {
   question: string;
@@ -14,15 +15,19 @@ const Accordian: FC<AccordianProps> = ({ question, answer, isOpen, onClick }) =>
     <div className="accordian" onClick={onClick}>
       <header className="accordian-header">
         <p>{question}</p>
+        <div>
         <motion.div
           animate={isOpen ? { rotate: -180 } : { rotate: 0 }}
           className="accordian-toggle-icon"
         >
-          <img
+          <Image
             src={isOpen ? '/images/aiServices/minus.svg' : '/images/aiServices/plus.svg'}
             alt={isOpen ? 'Collapse' : 'Expand'}
+            width={20}
+            height={20}
           />
         </motion.div>
+        </div>
       </header>
       <section className="accordian-content">
         {isOpen && (

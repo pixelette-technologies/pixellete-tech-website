@@ -95,6 +95,8 @@
   position: absolute;
   display: flex;
   align-items: center;
+  top: -17rem;
+  left: 35%;
 }
 
 @media (max-width: 768px) {
@@ -136,4 +138,8 @@
   .map {
     display: none;
   }
+}
+
+.image-for-hover{
+  width: 100px;
 }

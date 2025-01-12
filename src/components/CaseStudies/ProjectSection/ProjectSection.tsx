@@ -130,7 +130,6 @@ export const ProjectSection: React.FC = () => {
       <section>
         <center>
           <h1
-            id="h_ani"
           >
             Explore Our Projects
           </h1>

@@ -25,6 +25,7 @@
   color: white; /* Add a color to make text readable */
   height: 100%;
   margin: 2rem 0;
+  padding: 0 5rem;
 }
 .OurServicesBg {
   /* background: url('../../../../public/images/ai-services/aiServiceBg.png'); */

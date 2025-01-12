@@ -1,5 +1,6 @@
 .blogGridWithBanner > div > div {
   position: relative;
+  padding: 0 5rem;
 }
 @media only screen and (max-width: 50em) {
   .blogGridWithBanner > div > div {

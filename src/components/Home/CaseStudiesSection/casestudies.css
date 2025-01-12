@@ -1,5 +1,6 @@
 .caseStudySection > div {
   margin-top: 1rem;
+  padding: 0 5rem;
 }
 .caseStudySection > div > center {
   display: flex;
