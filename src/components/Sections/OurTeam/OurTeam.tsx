@@ -20,7 +20,7 @@ const TeamCard = ({ image, role, name, animation, duration }: TeamCardProps) => 
   return (
     <div data-aos={animation} data-aos-duration={duration}>
       <div className="image-container">
-        <Image src={image} alt="profile" width={100} height={100} />
+        <Image src={image} alt="team-image" width={100} height={100} quality={100} />
       </div>
       <p>
         {name}

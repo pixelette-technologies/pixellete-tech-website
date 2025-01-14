@@ -107,7 +107,7 @@ export const Testimonial: FC<TestimonialProps> = ({ background }) => {
 
           <center>
             <h2>
-              Clients love us
+              Clients ♥️ us
             </h2>
             <div data-aos-duration="500" data-aos="fade-up">
               <p>4.9</p>

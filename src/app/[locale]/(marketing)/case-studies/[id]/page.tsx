@@ -52,9 +52,11 @@ type BlogData = {
 };
 
 const CaseStudieDetail = async ({ params }: { params: { id: string } }) => {
-  // const [blogData, setBlogData] = useState<Entry<BlogData> | null>(null);
-  const blogData = await getBlogPost(params.id);
+  const { id } = await params;
+  const blogData = await getBlogPost(id);
+  // const blogData = await getBlogPost(params.id);
   const el = data.testimonialData[0]; // Adjust based on the structure of your data
+  // const [blogData, setBlogData] = useState<Entry<BlogData> | null>(null);
   // useEffect(() => {
   //   const client = createClient({
   //     space: 'ggtsbq0gqfii',
@@ -71,7 +73,7 @@ const CaseStudieDetail = async ({ params }: { params: { id: string } }) => {
   //     });
   // }, [id]);
 
-  if (!blogData || blogData.sys.id !== params.id) {
+  if (!blogData || blogData.sys.id !== id) {
     notFound();
   }
   const resolveUrl = (url) => {

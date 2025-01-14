@@ -11,7 +11,7 @@ export async function generateMetadata(props: IAboutProps) {
   const { locale } = await props.params;
   const t = await getTranslations({
     locale,
-    namespace: 'About',
+    namespace: 'CaseStudies',
   });
 
   return {

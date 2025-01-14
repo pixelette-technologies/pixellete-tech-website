@@ -29,13 +29,13 @@ const HowItWorksHeroSection: React.FC<HeroSectionProps> = ({
 
   return (
     <>
-      <Container className="main margins">
+      <Container>
         <div className="heroSectionAiServices-background">
           <Image src={backgroundImage} alt="background" width={100} height={100} />
         </div>
       </Container>
       <div id="heroSectionAiServices" className="heroSectionAiServices">
-        <Container className="main margins">
+        <Container>
           <center>
             <h1>
               {heading}

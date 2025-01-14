@@ -4,9 +4,9 @@
 #heroSectionAiServices {
   margin-top: -10rem;
 }
-.heroSectionAiServices-background {
+/* .heroSectionAiServices-background {
   position: relative;
-}
+} */
 .heroSectionAiServices-background > img {
   position: absolute;
   margin-top: -12rem;

@@ -2,20 +2,17 @@
 import type { Text } from '@contentful/rich-text-types';
 import type { Entry } from 'contentful';
 import Breadcrumb from '@/components/Feature/Breadcrumb/Breadcrumb';
+import { Container } from '@/components/Feature/Container/Container';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { BLOCKS } from '@contentful/rich-text-types';
 import Image from 'next/image';
-import Link from 'next/link';
 import { useParams } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import { FaGithub, FaGlobe, FaLinkedin, FaTwitter } from 'react-icons/fa';
-import { FaFacebook } from 'react-icons/fa6';
+import { IoIosArrowDown, IoIosArrowUp } from 'react-icons/io';
 import useContentful from '../../api/usecontentful/usecontentful';
 // import './blogdetail.module.css';
-import './blogdetail.scss'
-import { Container } from '@/components/Feature/Container/Container';
-import { backgroundImage } from '@/data/services/aiServices';
-import { IoIosArrowDown, IoIosArrowUp } from 'react-icons/io';
+import './blogdetail.scss';
 
 const page = (props: any) => {
   const params = useParams();
@@ -34,7 +31,7 @@ const page = (props: any) => {
   const [isCollapsed, setIsCollapsed] = useState<boolean>(false);
 
   const toggleCollapse = () => {
-    setIsCollapsed((prev) => !prev);
+    setIsCollapsed(prev => !prev);
   };
 
   type BlogResponse = {
@@ -42,14 +39,14 @@ const page = (props: any) => {
     assets: any;
     includes: any;
   };
-  interface TOCItem {
+  type TOCItem = {
     id: string;
     text: string;
-  }
-  
-  interface CollapsibleTocProps {
+  };
+
+  type CollapsibleTocProps = {
     tableOfContents: TOCItem[];
-  }
+  };
 
   type Params = { id: string };
 
@@ -177,7 +174,7 @@ const page = (props: any) => {
             <img src="/images/aiServices/serviceSectionBackground.svg" alt="Background" />
           </div>
         </Container>
-        <div style={{padding: '0 5rem'}} className='main margins'>
+        <div style={{ padding: '0 5rem' }} className="main margins">
           <div style={{ marginBottom: '2rem' }}>
             <Breadcrumb items={breadcrumbItems} />
           </div>
@@ -186,64 +183,64 @@ const page = (props: any) => {
             {/* Blog image or video */}
             <div style={{ display: 'flex', justifyContent: 'space-between', gap: '1rem' }}>
               <div>
-          <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
-          <div style={{display: 'flex', gap: '1rem', alignItems: 'center'}}>
-            <p>Written by</p>
-            <img src="" alt="Auther" />
-            <p>John Brigham</p>
-          </div>
-          <div>
-            <p>Last Updated: Dec 27, 2024 | 10 mins read</p>
-          </div>
-          </div>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                  <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
+                    <p>Written by</p>
+                    <img src="" alt="Auther" />
+                    <p>John Brigham</p>
+                  </div>
+                  <div>
+                    <p>Last Updated: Dec 27, 2024 | 10 mins read</p>
+                  </div>
+                </div>
                 {selectedData?.fields?.thumbnailImage?.fields?.file?.contentType?.split('/')[0]
-                  === 'video'
+                === 'video'
                   ? (
-                    <div>
-                      {playVideo && playVideo
-                        ? (
-                          <div className="videoCard">
-                            <video
-                              width="320"
-                              height="240"
-                              controls
-                              preload="none"
-                              autoPlay
-                              onEnded={() => setPlayVideo(false)}
-                            >
-                              <source src={`https:${selectedData.fields.thumbnailImage.fields.file.url}`} type="video/mp4" />
-                            </video>
-                          </div>
-                        )
-                        : (
-                          <div className="videoCard">
-                            <button
-                              type="button"
-                              className="playBtn"
-                              onClick={() => setPlayVideo(true)}
-                            >
-                              <Image src="/images/playIcon.svg" width="30" height="30" alt="Play" />
-                            </button>
-                          </div>
-                        )}
-                    </div>
-                  )
+                      <div>
+                        {playVideo && playVideo
+                          ? (
+                              <div className="videoCard">
+                                <video
+                                  width="320"
+                                  height="240"
+                                  controls
+                                  preload="none"
+                                  autoPlay
+                                  onEnded={() => setPlayVideo(false)}
+                                >
+                                  <source src={`https:${selectedData.fields.thumbnailImage.fields.file.url}`} type="video/mp4" />
+                                </video>
+                              </div>
+                            )
+                          : (
+                              <div className="videoCard">
+                                <button
+                                  type="button"
+                                  className="playBtn"
+                                  onClick={() => setPlayVideo(true)}
+                                >
+                                  <Image src="/images/playIcon.svg" width="30" height="30" alt="Play" />
+                                </button>
+                              </div>
+                            )}
+                      </div>
+                    )
                   : selectedData?.fields?.thumbnailImage?.fields?.file?.contentType?.split('/')[0]
                     === 'image'
                     ? (
-                      <div className="blogDetailBanner">
-                        <Image
-                          src={`https:${selectedData.fields.thumbnailImage.fields.file.url}`}
-                          quality={100}
-                          width={1000}
-                          height={250}
-                          alt="blog-img"
-                        />
-                      </div>
-                    )
+                        <div className="blogDetailBanner">
+                          <Image
+                            src={`https:${selectedData.fields.thumbnailImage.fields.file.url}`}
+                            quality={100}
+                            width={1000}
+                            height={250}
+                            alt="blog-img"
+                          />
+                        </div>
+                      )
                     : (
-                      ''
-                    )}
+                        ''
+                      )}
                 <div style={{ display: 'flex', justifyContent: 'space-between', gap: '1rem' }} className="blog_detail_inner_content">
                   {/* Blog Content */}
 
@@ -257,14 +254,14 @@ const page = (props: any) => {
                         marginBottom: '2rem',
                       }}
                     >
-                        <div className="toc">
-                          <div style={{display: 'flex', justifyContent: 'space-between', width: '100%', cursor: 'pointer', gap: '1rem'}} onClick={toggleCollapse}>
-                            <div>
-                          <h5>In this article</h5>
-                            </div>
-                          {isCollapsed ? <IoIosArrowDown size={20} /> : <IoIosArrowUp size={20} />}
+                      <div className="toc">
+                        <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%', cursor: 'pointer', gap: '1rem' }} onClick={toggleCollapse}>
+                          <div>
+                            <h5>In this article</h5>
                           </div>
-                      {!isCollapsed && (
+                          {isCollapsed ? <IoIosArrowDown size={20} /> : <IoIosArrowUp size={20} />}
+                        </div>
+                        {!isCollapsed && (
                           <ul>
                             {tableOfContents.map((item, index) => (
                               <li key={index}>
@@ -274,7 +271,7 @@ const page = (props: any) => {
                               </li>
                             ))}
                           </ul>
-                      )}
+                        )}
                       </div>
                     </div>
                     <div style={{
@@ -283,8 +280,9 @@ const page = (props: any) => {
                       padding: '1rem',
                       borderRadius: '13.84px',
                       height: '200px',
-                      marginBottom: '2rem'
-                    }}>
+                      marginBottom: '2rem',
+                    }}
+                    >
                       <div className="toc">
                         <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, quos!</h5>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae debitis quia placeat sed illo reprehenderit quis nesciunt quasi mollitia dignissimos. Dolorem quidem neque ratione necessitatibus culpa nemo eos ea placeat.</p>
@@ -295,124 +293,124 @@ const page = (props: any) => {
 
                     <div className="rich-text-container">
                       {content
-                        && documentToReactComponents(content, {
-                          renderNode: {
-                            [BLOCKS.HEADING_2]: (node: any, children: React.ReactNode) => {
-                              const textContent = getTextContent(node);
-                              const id = textContent.replace(/\s+/g, '-').toLowerCase();
-                              return <h2 id={id}>{children}</h2>;
-                            },
-                            [BLOCKS.HEADING_3]: (node: any, children: React.ReactNode) => {
-                              const textContent = getTextContent(node);
-                              const id = textContent.replace(/\s+/g, '-').toLowerCase();
-                              return <h3 id={id}>{children}</h3>;
-                            },
-
-                            [BLOCKS.EMBEDDED_ASSET]: (node: any) => {
-                              const assetId = node.data.target.sys.id;
-                              const asset = resolvedAssets.find((item: any) => item.sys.id === assetId);
-
-                              if (!asset) {
-                                return null;
-                              } // Handle missing asset gracefully
-
-                              const { file, title } = asset.fields;
-                              const contentType = file.contentType.split('/')[0];
-
-                              // Handle images and videos based on contentType
-                              if (contentType === 'image') {
-                                return (
-                                  <img
-                                    src={`https:${file.url}`}
-                                    alt={title}
-                                    style={{ maxWidth: '100%', height: 'auto' }}
-                                    className="contentImage"
-                                  />
-                                );
-                              }
-
-                              if (contentType === 'video') {
-                                return (
-                                  <video controls style={{ maxWidth: '100%' }}>
-                                    <source src={`https:${file.url}`} type={file.contentType} />
-                                  </video>
-                                );
-                              }
-
-                              // Fallback for unsupported types
-                              return <span>Unsupported asset type</span>;
-                            },
-                            [BLOCKS.TABLE]: (node: any) => {
-                              return (
-                                <table style={{ width: '100%', borderCollapse: 'collapse', margin: '1em 0' }}>
-                                  <thead>
-                                    {node.content
-                                      .filter((rowNode: any) => rowNode.nodeType === 'table-row') // Filter for table rows
-                                      .map((rowNode: any, rowIndex: number) => (
-                                        <tr key={rowIndex}>
-                                          {rowNode.content
-                                            .filter((cellNode: any) => cellNode.nodeType === 'table-header-cell') // Filter for table header cells
-                                            .map((headerNode: any, headerIndex: number) => (
-                                              <th
-                                                key={headerIndex}
-                                                style={{
-                                                  padding: '8px',
-                                                  textAlign: 'left',
-                                                  border: '1px solid #ddd',
-                                                  backgroundColor: '#f4f4f4',
-                                                }}
-                                              >
-                                                {headerNode.content.map((paragraphNode: any, paragraphIndex: number) =>
-                                                  paragraphNode.nodeType === 'paragraph'
-                                                    ? (
-                                                      paragraphNode.content.map((textNode: any) =>
-                                                        textNode.nodeType === 'text' ? textNode.value : null,
-                                                      )
-                                                    )
-                                                    : null,
-                                                )}
-                                              </th>
-                                            ))}
-                                        </tr>
-                                      ))}
-                                  </thead>
-                                  <tbody>
-                                    {node.content
-                                      .filter((rowNode: any) => rowNode.nodeType === 'table-row') // Filter for table rows
-                                      .map((rowNode: any, rowIndex: number) => (
-                                        <tr key={rowIndex}>
-                                          {rowNode.content
-                                            .filter((cellNode: any) => cellNode.nodeType === 'table-cell') // Filter for table body cells
-                                            .map((cellNode: any, cellIndex: number) => (
-                                              <td
-                                                key={cellIndex}
-                                                style={{
-                                                  padding: '8px',
-                                                  textAlign: 'left',
-                                                  color: '#fff',
-                                                  border: '1px solid #ddd',
-                                                }}
-                                              >
-                                                {cellNode.content.map((paragraphNode: any, paragraphIndex: number) =>
-                                                  paragraphNode.nodeType === 'paragraph'
-                                                    ? (
-                                                      paragraphNode.content.map((textNode: any) =>
-                                                        textNode.nodeType === 'text' ? textNode.value : null,
-                                                      )
-                                                    )
-                                                    : null,
-                                                )}
-                                              </td>
-                                            ))}
-                                        </tr>
-                                      ))}
-                                  </tbody>
-                                </table>
-                              );
-                            },
-
+                      && documentToReactComponents(content, {
+                        renderNode: {
+                          [BLOCKS.HEADING_2]: (node: any, children: React.ReactNode) => {
+                            const textContent = getTextContent(node);
+                            const id = textContent.replace(/\s+/g, '-').toLowerCase();
+                            return <h2 id={id}>{children}</h2>;
                           },
-                        })}
+                          [BLOCKS.HEADING_3]: (node: any, children: React.ReactNode) => {
+                            const textContent = getTextContent(node);
+                            const id = textContent.replace(/\s+/g, '-').toLowerCase();
+                            return <h3 id={id}>{children}</h3>;
+                          },
+
+                          [BLOCKS.EMBEDDED_ASSET]: (node: any) => {
+                            const assetId = node.data.target.sys.id;
+                            const asset = resolvedAssets.find((item: any) => item.sys.id === assetId);
+
+                            if (!asset) {
+                              return null;
+                            } // Handle missing asset gracefully
+
+                            const { file, title } = asset.fields;
+                            const contentType = file.contentType.split('/')[0];
+
+                            // Handle images and videos based on contentType
+                            if (contentType === 'image') {
+                              return (
+                                <img
+                                  src={`https:${file.url}`}
+                                  alt={title}
+                                  style={{ maxWidth: '100%', height: 'auto' }}
+                                  className="contentImage"
+                                />
+                              );
+                            }
+
+                            if (contentType === 'video') {
+                              return (
+                                <video controls style={{ maxWidth: '100%' }}>
+                                  <source src={`https:${file.url}`} type={file.contentType} />
+                                </video>
+                              );
+                            }
+
+                            // Fallback for unsupported types
+                            return <span>Unsupported asset type</span>;
+                          },
+                          [BLOCKS.TABLE]: (node: any) => {
+                            return (
+                              <table style={{ width: '100%', borderCollapse: 'collapse', margin: '1em 0' }}>
+                                <thead>
+                                  {node.content
+                                    .filter((rowNode: any) => rowNode.nodeType === 'table-row') // Filter for table rows
+                                    .map((rowNode: any, rowIndex: number) => (
+                                      <tr key={rowIndex}>
+                                        {rowNode.content
+                                          .filter((cellNode: any) => cellNode.nodeType === 'table-header-cell') // Filter for table header cells
+                                          .map((headerNode: any, headerIndex: number) => (
+                                            <th
+                                              key={headerIndex}
+                                              style={{
+                                                padding: '8px',
+                                                textAlign: 'left',
+                                                border: '1px solid #ddd',
+                                                backgroundColor: '#f4f4f4',
+                                              }}
+                                            >
+                                              {headerNode.content.map((paragraphNode: any, paragraphIndex: number) =>
+                                                paragraphNode.nodeType === 'paragraph'
+                                                  ? (
+                                                      paragraphNode.content.map((textNode: any) =>
+                                                        textNode.nodeType === 'text' ? textNode.value : null,
+                                                      )
+                                                    )
+                                                  : null,
+                                              )}
+                                            </th>
+                                          ))}
+                                      </tr>
+                                    ))}
+                                </thead>
+                                <tbody>
+                                  {node.content
+                                    .filter((rowNode: any) => rowNode.nodeType === 'table-row') // Filter for table rows
+                                    .map((rowNode: any, rowIndex: number) => (
+                                      <tr key={rowIndex}>
+                                        {rowNode.content
+                                          .filter((cellNode: any) => cellNode.nodeType === 'table-cell') // Filter for table body cells
+                                          .map((cellNode: any, cellIndex: number) => (
+                                            <td
+                                              key={cellIndex}
+                                              style={{
+                                                padding: '8px',
+                                                textAlign: 'left',
+                                                color: '#fff',
+                                                border: '1px solid #ddd',
+                                              }}
+                                            >
+                                              {cellNode.content.map((paragraphNode: any, paragraphIndex: number) =>
+                                                paragraphNode.nodeType === 'paragraph'
+                                                  ? (
+                                                      paragraphNode.content.map((textNode: any) =>
+                                                        textNode.nodeType === 'text' ? textNode.value : null,
+                                                      )
+                                                    )
+                                                  : null,
+                                              )}
+                                            </td>
+                                          ))}
+                                      </tr>
+                                    ))}
+                                </tbody>
+                              </table>
+                            );
+                          },
+
+                        },
+                      })}
                     </div>
                     <div style={{
                       width: '100%',
@@ -420,8 +418,9 @@ const page = (props: any) => {
                       padding: '1rem',
                       borderRadius: '13.84px',
                       height: '200px',
-                      marginBottom: '2rem'
-                    }}>
+                      marginBottom: '2rem',
+                    }}
+                    >
                       <div className="toc">
                         <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, quos!</h5>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae debitis quia placeat sed illo reprehenderit quis nesciunt quasi mollitia dignissimos. Dolorem quidem neque ratione necessitatibus culpa nemo eos ea placeat.</p>
@@ -516,14 +515,17 @@ const page = (props: any) => {
                 </div>
               </div>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-                <div className='custom-col' style={{
-                  width: '450px',
-                  backgroundColor: '#0F0F0FB2',
-                  padding: '2rem',
-                  borderRadius: '13.84px',
-                  height: '350px',
+                <div
+                  className="custom-col"
+                  style={{
+                    width: '450px',
+                    backgroundColor: '#0F0F0FB2',
+                    padding: '2rem',
+                    borderRadius: '13.84px',
+                    height: '350px',
 
-                }}>
+                  }}
+                >
                   <div className="toc">
                     <h5>In this article</h5>
                     <ul>
@@ -567,8 +569,10 @@ const page = (props: any) => {
                   padding: '1rem',
                   borderRadius: '13.84px',
                   height: '200px',
-                  marginBottom: '2rem'
-                }}></div>
+                  marginBottom: '2rem',
+                }}
+                >
+                </div>
               </div>
             </div>
             {/* Blog content and TOC */}

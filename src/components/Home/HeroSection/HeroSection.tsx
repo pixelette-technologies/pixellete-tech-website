@@ -52,7 +52,7 @@ export const HeroSection: React.FC<HeroSectionProps> = () => {
                 data-aos="fade-up"
                 data-aos-duration="1100"
               >
-                Explore Funding Options
+                Consult our development experts
               </Button>
             </Link>
           </div>

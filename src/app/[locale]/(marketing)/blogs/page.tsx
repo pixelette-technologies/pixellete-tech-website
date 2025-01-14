@@ -10,7 +10,7 @@ export async function generateMetadata(props: IBlogProps) {
   const { locale } = await props.params;
   const t = await getTranslations({
     locale,
-    namespace: 'About',
+    namespace: 'Blogs',
   });
 
   return {
