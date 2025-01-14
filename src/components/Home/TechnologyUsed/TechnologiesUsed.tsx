@@ -53,7 +53,7 @@ const TechnologiesUsed: React.FC = () => {
             ))}
           </div>
 
-          <div className={styles.contentSection} key={activeTab}>
+          <div className={`${styles.contentSection} ${activeTab ? styles.active : ''}`} key={activeTab}>
             <div className={styles.iconsContainer}>
               {technologies[activeTab]?.map(tech => (
                 <div className={styles.iconCard} key={tech.id}>

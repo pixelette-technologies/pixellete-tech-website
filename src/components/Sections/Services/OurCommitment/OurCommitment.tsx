@@ -29,30 +29,31 @@ export const OurCommitment: React.FC<OurCommitmentProps> = ({
         <div className="expertiseGrid">
           <header>
             <h1>{heading}</h1>
+            <p>
+              {description}
+            </p>
           </header>
-          <p>
-            {description}
-          </p>
+
           <section className="OurCommitmentCards">
             {commitmentData.map((el, index) => (
               <div style={{ margin: '0 1rem' }} key={index}>
                 <img src={el.img} alt={`Commitment ${index + 1}`} />
                 <div style={{ display: 'flex' }}>
                   <div>
-                    <p>{el.value1}</p>
-                    <p>{el.desc1}</p>
+                    <p className="valueText">{el.value1}</p>
+                    <p className="descText">{el.desc1}</p>
                   </div>
-                  <hr style={{ margin: '0 1rem' }} />
+                  <hr className="verticalDivider" />
                   <div>
-                    <p>{el.value2}</p>
-                    <p>{el.desc2}</p>
+                    <p className="valueText">{el.value2}</p>
+                    <p className="descText">{el.desc2}</p>
                   </div>
                   {el.desc3 && (
                     <>
-                      <hr style={{ margin: '0 1rem' }} />
+                      <hr className="verticalDivider" />
                       <div>
-                        <p>{el.value3}</p>
-                        <p>{el.desc3}</p>
+                        <p className="valueText">{el.value3}</p>
+                        <p className="descText">{el.desc3}</p>
                       </div>
                     </>
                   )}

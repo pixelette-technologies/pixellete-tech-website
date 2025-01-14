@@ -1,4 +1,3 @@
-import { Container } from '@/components/Feature/Container/Container';
 import React from 'react';
 import './index.css';
 
@@ -26,7 +25,7 @@ const data = [
 export const HowWeWork: React.FC<HowWeWorkProps> = () => {
   return (
     <div style={{ margin: '5rem 0' }} className="howWeWorkBg">
-      <div style={{display: 'flex', justifyContent: 'center', width:"100%"}}>
+      <div style={{ display: 'flex', justifyContent: 'center', width: '100%' }}>
         <div style={{ display: 'flex', flexDirection: 'column', gap: '5rem', justifyContent: 'center' }}>
           <div
             className="howWeWorkTextAlign"

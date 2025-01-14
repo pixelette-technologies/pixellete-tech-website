@@ -19,3 +19,23 @@
   width: 40%;
   margin: 0 auto;
 }
+
+/* Value Text (bigger font size) */
+.valueText {
+  font-size: 3rem; /* Adjust to your preference */
+  font-weight: bold;
+}
+
+/* Description Text (smaller font size) */
+.descText {
+  font-size: 1rem; /* Smaller font size for description */
+  line-height: 1.5rem;
+}
+
+/* Vertical Divider */
+.verticalDivider {
+  border: 0;
+  border-left: 2px solid #ccc; /* Adjust color and thickness */
+  height: auto;
+  margin: 0 1rem;
+}
