@@ -104,11 +104,11 @@ export default async function UIUX(props: IUIUXProps) {
         marqueeData={expertiseAiChangeData}
         backgroundImage={backgroundImage}
       />
-      <TechnologyGrid
+      {/* <TechnologyGrid
         heading={tgheading}
         description={tgdescription}
         expertiseAreas={tgexpertiseAreas}
-      />
+      /> */}
       <TechStack techStack="UI/UX design &" />
       <AiServiceTable />
       <HowWeWork />

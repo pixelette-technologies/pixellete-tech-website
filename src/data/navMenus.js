@@ -37,7 +37,7 @@ export const navMenus = [
   },
   {
     id: 10,
-    name: 'How it works',
+    name: 'How we work',
     subMenus: [
       {
         id: 11,
