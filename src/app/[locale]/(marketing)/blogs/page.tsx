@@ -25,7 +25,7 @@ const getBlogs = async () => {
     accessToken: 'VZvVye8dMIc497wF-1pNt5rdYUG-h4E30uX58AcGVUo',
   });
 
-  const response = await client.getEntries({ content_type: 'blogs' });
+  const response = await client.getEntries({ content_type: 'blogsPage' });
   console.log('All Blogs:', response);
   return response.items;
 };

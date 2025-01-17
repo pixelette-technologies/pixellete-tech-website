@@ -23,6 +23,7 @@ const page = (props: any) => {
   const [resolvedAssets, setResolvedAssets] = useState<any[]>([]);
   const [resolvedAuthor, setResolvedAuthor] = useState<any>({});
   const [content, setContent] = useState<any>();
+  const [preContent, setPreContent] = useState<any>();
   const [tableOfContents, setTableOfContents] = useState<any[]>([]);
 
   const blogTitle = selectedData?.fields?.title || 'Blockchain Experts';
@@ -54,19 +55,21 @@ const page = (props: any) => {
     if (params?.slug) {
       getOneAssest({ id: params.slug }).then((response) => {
         if (response !== undefined) {
-          const { blogData, includes } = response;
-          setSelectedData(blogData);
-          setContent(blogData.fields.body);
-          extractTOC(blogData.fields.body);
+          const { blogsPage, includes } = response;
+          setSelectedData(blogsPage);
+          setContent(blogsPage.fields.body);
+          setPreContent(includes?.Entry?.find((entry: Entry<any>) => entry.sys.id === blogsPage?.fields.preBlogBanner?.sys.id));
+          console.log('precontent: ', blogsPage?.fields.preBlogBanner?.sys.id, preContent?.fields?.heading);
+          extractTOC(blogsPage.fields.body);
           setResolvedAssets(includes?.Asset); // Save linked assets
-          const blogAuthorId = blogData?.fields.blogAuthor?.sys.id;
+          const blogAuthorId = blogsPage?.fields.author?.sys.id;
           // console.log("blogauthor id: ",blogAuthorId);
           setResolvedAuthor(includes?.Entry?.find((entry: Entry<any>) => entry.sys.id === blogAuthorId));
           // console.log("blogauthor data: ",resolvedAuthor);
         }
       });
     }
-  }, [params?.id]);
+  }, [params?.slug]);
 
   useEffect(() => {
     document.title = blogTitle;
@@ -186,11 +189,45 @@ const page = (props: any) => {
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                   <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
                     <p>Written by</p>
-                    <img src="" alt="Auther" />
-                    <p>John Brigham</p>
+                    <Image
+                      src={
+                        resolvedAssets && resolvedAssets.find((item: any) => item.sys.id === resolvedAuthor?.fields?.profilePicture?.sys?.id)
+                          ?.fields
+                          ?.file
+                          ?.url
+                          ? `https:${resolvedAssets.find((item: any) => item.sys.id === resolvedAuthor?.fields?.profilePicture?.sys?.id)?.fields?.file?.url}`
+                          : `https://ui-avatars.com/api/?name=${resolvedAuthor ? resolvedAuthor?.fields?.name : ''}`
+                      }
+                      width={100}
+                      height={100}
+                      alt="Author Image"
+                      className="author-image"
+                      quality={100}
+                    />
+                    <p>{resolvedAuthor ? resolvedAuthor?.fields?.name : ''}</p>
+                    <p>{preContent ? preContent?.fields?.heading : ''}</p>
                   </div>
                   <div>
-                    <p>Last Updated: Dec 27, 2024 | 10 mins read</p>
+                    <p>
+                      Last Updated:
+                      {selectedData && selectedData?.sys?.updatedAt
+                        ? (
+                            new Date(selectedData.sys.updatedAt).toLocaleString('en-US', {
+                              year: 'numeric',
+                              month: 'long',
+                              day: 'numeric',
+                              // hour: '2-digit',
+                              // minute: '2-digit',
+                            })
+                          )
+                        : 'Unknown'}
+                      {' '}
+                      |
+                      {' '}
+                      {selectedData && selectedData?.fields?.readTime}
+                      {' '}
+                      mins read
+                    </p>
                   </div>
                 </div>
                 {selectedData?.fields?.thumbnailImage?.fields?.file?.contentType?.split('/')[0]
@@ -279,14 +316,66 @@ const page = (props: any) => {
                       backgroundColor: '#0F0F0FB2',
                       padding: '1rem',
                       borderRadius: '13.84px',
-                      height: '200px',
+                      height: 'auto',
                       marginBottom: '2rem',
                     }}
                     >
-                      <div className="toc">
+                      <div>
+                        {selectedData?.fields?.preBlogBanner
+                        && documentToReactComponents(selectedData.fields.preBlogBanner.fields.blogBanner, {
+                          renderNode: {
+                            [BLOCKS.HEADING_2]: (node: any, children: React.ReactNode) => {
+                              const textContent = getTextContent(node);
+                              const id = textContent.replace(/\s+/g, '-').toLowerCase();
+                              return <h2 id={id}>{children}</h2>;
+                            },
+                            [BLOCKS.HEADING_3]: (node: any, children: React.ReactNode) => {
+                              const textContent = getTextContent(node);
+                              const id = textContent.replace(/\s+/g, '-').toLowerCase();
+                              return <h3 id={id}>{children}</h3>;
+                            },
+
+                            [BLOCKS.EMBEDDED_ASSET]: (node: any) => {
+                              const assetId = node.data.target.sys.id;
+                              const asset = resolvedAssets.find((item: any) => item.sys.id === assetId);
+
+                              if (!asset) {
+                                return null;
+                              } // Handle missing asset gracefully
+
+                              const { file, title } = asset.fields;
+                              const contentType = file.contentType.split('/')[0];
+
+                              // Handle images and videos based on contentType
+                              if (contentType === 'image') {
+                                return (
+                                  <img
+                                    src={`https:${file.url}`}
+                                    alt={title}
+                                    style={{ maxWidth: '100%', height: '180px' }}
+                                    // className="contentImage"
+                                  />
+                                );
+                              }
+
+                              if (contentType === 'video') {
+                                return (
+                                  <video controls style={{ maxWidth: '100%' }}>
+                                    <source src={`https:${file.url}`} type={file.contentType} />
+                                  </video>
+                                );
+                              }
+
+                              // Fallback for unsupported types
+                              return <span>Unsupported asset type</span>;
+                            },
+                          },
+                        })}
+                      </div>
+                      {/* <div className="toc">
                         <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, quos!</h5>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae debitis quia placeat sed illo reprehenderit quis nesciunt quasi mollitia dignissimos. Dolorem quidem neque ratione necessitatibus culpa nemo eos ea placeat.</p>
-                      </div>
+                      </div> */}
                     </div>
                     {/* <h1>{selectedData?.fields?.title}</h1> */}
                     {/* <p>{selectedData?.fields?.description}</p> */}
