@@ -1,0 +1,156 @@
+.millstoneList > header {
+  width: 80rem;
+  margin: auto;
+  padding-top: 12rem;
+  padding-bottom: 4.8rem;
+  text-align: center;
+}
+
+.millstoneList > section {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+.millstoneList > section > div {
+  border: 1px solid white;
+  z-index: -100;
+}
+
+.millstoneList > section > header {
+  margin-right: -2.1rem;
+}
+
+.millstoneList > section > header > *:first-child {
+  margin-top: 23.4rem;
+}
+
+.millstoneList > section > header > *:not(:last-child) {
+  margin-bottom: 20.4rem;
+}
+
+.millstoneList > section > section {
+  margin-left: -2.1rem;
+}
+
+.millstoneList > section > section > *:not(:last-child) {
+  margin-bottom: 20.4rem;
+}
+
+.millstoneList-itemLeft,
+.millstoneList-itemRight {
+  display: flex;
+  gap: 4.5rem;
+  transition: 0.3s;
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+.millstoneList-itemLeft > header > img,
+.millstoneList-itemRight > header > img {
+  height: 4rem;
+  width: 4rem;
+  margin-top: 2.9rem;
+}
+
+.millstoneList-itemLeft > section,
+.millstoneList-itemRight > section {
+  position: relative;
+  display: flex;
+}
+
+.millstoneList-itemLeft > section > img,
+.millstoneList-itemRight > section > img {
+  position: absolute;
+  top: 2.8rem;
+}
+
+.millstoneList-itemLeft > section > img {
+  right: -2rem;
+}
+
+.millstoneList-itemRight > section > img {
+  left: -2rem;
+}
+
+.millstoneList-itemLeft > section > div,
+.millstoneList-itemRight > section > div {
+  background: #0f0f0fb2;
+  border: 1px solid rgba(255, 255, 255, 0.1019607843);
+  border-radius: 0.8rem;
+  padding: 2rem;
+  width: 50rem;
+}
+
+.millstoneList-itemLeft > section > div > h1,
+.millstoneList-itemRight > section > div > h1 {
+  margin-bottom: 2.4rem;
+}
+
+/* Adjust layout for medium screens (tablets) */
+@media (max-width: 1024px) {
+  .millstoneList > header {
+    display: none;
+    width: 90%;
+    padding-top: 10rem;
+    padding-bottom: 4rem;
+  }
+
+  .millstoneList-itemLeft > section > div,
+  .millstoneList-itemRight > section > div {
+    display: none;
+    width: 80%;
+  }
+}
+@media (max-width: 1024px) {
+  .millstoneList > header {
+    display: none;
+    width: 90%;
+    padding-top: 10rem;
+    padding-bottom: 4rem;
+  }
+
+  .millstoneList > section {
+    display: none;
+    width: 80%;
+  }
+}
+
+/* Adjust layout for small screens (mobile) */
+@media (max-width: 600px) {
+  .millstoneList > header {
+    width: 100%;
+    padding-top: 8rem;
+    padding-bottom: 3.2rem;
+  }
+
+  .millstoneList-itemLeft,
+  .millstoneList-itemRight {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center align items */
+    gap: 2rem; /* Adjust gap for smaller screens */
+  }
+
+  .millstoneList-itemLeft > section,
+  .millstoneList-itemRight > section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .millstoneList-itemLeft > section > div,
+  .millstoneList-itemRight > section > div {
+    width: 90%;
+    padding: 1.6rem;
+  }
+
+  .millstoneList > section > header > *:first-child,
+  .millstoneList > section > header > *:not(:last-child) {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+}
+
+.blur {
+  filter: blur(5px);
+}
