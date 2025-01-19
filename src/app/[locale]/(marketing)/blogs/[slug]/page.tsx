@@ -205,7 +205,7 @@ const page = (props: any) => {
                       quality={100}
                     />
                     <p>{resolvedAuthor ? resolvedAuthor?.fields?.name : ''}</p>
-                    <p>{preContent ? preContent?.fields?.heading : ''}</p>
+
                   </div>
                   <div>
                     <p>
@@ -510,9 +510,57 @@ const page = (props: any) => {
                       marginBottom: '2rem',
                     }}
                     >
-                      <div className="toc">
-                        <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, quos!</h5>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae debitis quia placeat sed illo reprehenderit quis nesciunt quasi mollitia dignissimos. Dolorem quidem neque ratione necessitatibus culpa nemo eos ea placeat.</p>
+                      <div>
+                        {selectedData?.fields?.preBlogBanner
+                        && documentToReactComponents(selectedData.fields.preBlogBanner.fields.blogBanner, {
+                          renderNode: {
+                            [BLOCKS.HEADING_2]: (node: any, children: React.ReactNode) => {
+                              const textContent = getTextContent(node);
+                              const id = textContent.replace(/\s+/g, '-').toLowerCase();
+                              return <h2 id={id}>{children}</h2>;
+                            },
+                            [BLOCKS.HEADING_3]: (node: any, children: React.ReactNode) => {
+                              const textContent = getTextContent(node);
+                              const id = textContent.replace(/\s+/g, '-').toLowerCase();
+                              return <h3 id={id}>{children}</h3>;
+                            },
+
+                            [BLOCKS.EMBEDDED_ASSET]: (node: any) => {
+                              const assetId = node.data.target.sys.id;
+                              const asset = resolvedAssets.find((item: any) => item.sys.id === assetId);
+
+                              if (!asset) {
+                                return null;
+                              } // Handle missing asset gracefully
+
+                              const { file, title } = asset.fields;
+                              const contentType = file.contentType.split('/')[0];
+
+                              // Handle images and videos based on contentType
+                              if (contentType === 'image') {
+                                return (
+                                  <img
+                                    src={`https:${file.url}`}
+                                    alt={title}
+                                    style={{ maxWidth: '100%', height: '180px' }}
+                                    // className="contentImage"
+                                  />
+                                );
+                              }
+
+                              if (contentType === 'video') {
+                                return (
+                                  <video controls style={{ maxWidth: '100%' }}>
+                                    <source src={`https:${file.url}`} type={file.contentType} />
+                                  </video>
+                                );
+                              }
+
+                              // Fallback for unsupported types
+                              return <span>Unsupported asset type</span>;
+                            },
+                          },
+                        })}
                       </div>
                     </div>
                   </div>
@@ -615,15 +663,57 @@ const page = (props: any) => {
 
                   }}
                 >
-                  <div className="toc">
-                    <h5>In this article</h5>
-                    <ul>
-                      {tableOfContents.map((item, index) => (
-                        <li key={index}>
-                          <a href={`#${item.id}`}>{item.text}</a>
-                        </li>
-                      ))}
-                    </ul>
+                  <div>
+                    {selectedData?.fields?.preBlogBanner
+                    && documentToReactComponents(selectedData.fields.preBlogBanner.fields.blogBanner, {
+                      renderNode: {
+                        [BLOCKS.HEADING_2]: (node: any, children: React.ReactNode) => {
+                          const textContent = getTextContent(node);
+                          const id = textContent.replace(/\s+/g, '-').toLowerCase();
+                          return <h2 id={id}>{children}</h2>;
+                        },
+                        [BLOCKS.HEADING_3]: (node: any, children: React.ReactNode) => {
+                          const textContent = getTextContent(node);
+                          const id = textContent.replace(/\s+/g, '-').toLowerCase();
+                          return <h3 id={id}>{children}</h3>;
+                        },
+
+                        [BLOCKS.EMBEDDED_ASSET]: (node: any) => {
+                          const assetId = node.data.target.sys.id;
+                          const asset = resolvedAssets.find((item: any) => item.sys.id === assetId);
+
+                          if (!asset) {
+                            return null;
+                          } // Handle missing asset gracefully
+
+                          const { file, title } = asset.fields;
+                          const contentType = file.contentType.split('/')[0];
+
+                          // Handle images and videos based on contentType
+                          if (contentType === 'image') {
+                            return (
+                              <img
+                                src={`https:${file.url}`}
+                                alt={title}
+                                style={{ maxWidth: '100%', height: '180px' }}
+                                // className="contentImage"
+                              />
+                            );
+                          }
+
+                          if (contentType === 'video') {
+                            return (
+                              <video controls style={{ maxWidth: '100%' }}>
+                                <source src={`https:${file.url}`} type={file.contentType} />
+                              </video>
+                            );
+                          }
+
+                          // Fallback for unsupported types
+                          return <span>Unsupported asset type</span>;
+                        },
+                      },
+                    })}
                   </div>
                   {/* <div className="share-containerToc">
                   <p>Share with your community.</p>
@@ -652,7 +742,7 @@ const page = (props: any) => {
                   </div>
                 </div> */}
                 </div>
-                <div style={{
+                {/* <div style={{
                   width: '100%',
                   backgroundColor: '#0F0F0FB2',
                   padding: '1rem',
@@ -661,7 +751,7 @@ const page = (props: any) => {
                   marginBottom: '2rem',
                 }}
                 >
-                </div>
+                </div> */}
               </div>
             </div>
             {/* Blog content and TOC */}

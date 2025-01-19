@@ -8,7 +8,7 @@ import { HowWeWork } from '@/components/Sections/Services/HowWeWork/HowWeWork';
 import { OurCommitment } from '@/components/Sections/Services/OurCommitment/OurCommitment';
 import { OurServices } from '@/components/Sections/Services/OurServices/OurServices';
 import { TechnologyGrid } from '@/components/Sections/Services/TechnologyGrid/TechnologyGrid';
-import { TechStack } from '@/components/Sections/Services/TechStack/TechStack';
+import TechnologiesUsed from '@/components/Sections/TechnologyUsed/TechnologiesUsed';
 import { expertiseAiChangeData } from '@/data/expertise/expertiseAiChangeData';
 import { aiFaq } from '@/data/faqs/aiFaqs';
 import {
@@ -22,6 +22,7 @@ import {
   aiServices,
   aiServicesDescription,
   aiServicesHeading,
+  aiTechnologies,
   backgroundImage,
   commitmentData,
   extraDataMapping,
@@ -90,7 +91,11 @@ export default async function AIservices(props: IAIservicesProps) {
         expertiseAreas={tgexpertiseAreas}
         extraDataMapping={extraDataMapping}
       />
-      <TechStack />
+      <TechnologiesUsed
+        technologies={aiTechnologies}
+        title="Our AI development tech stack "
+        subtitle="Our go-to tech for unmatched results"
+      />
       <AiServiceTable />
       <HowWeWork />
       <OurCommitment

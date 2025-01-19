@@ -38,10 +38,11 @@
   margin-bottom: 2.4rem;
 }
 
+
 .marqueeCardss {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: left;
+  align-items: center;
+  justify-content: space-between;
 }
 .marqueeCardss > div {
   width: 28rem;
@@ -58,7 +59,6 @@
   width: 40%;
   margin: 0 auto;
 }
-
 
 .flipCard {
   width: 200px;
@@ -101,5 +101,6 @@
 
 .flipCardBack {
   /* background: #f0f0f0; */
+  font-size: 1.5rem;
   transform: rotateY(180deg);
 }

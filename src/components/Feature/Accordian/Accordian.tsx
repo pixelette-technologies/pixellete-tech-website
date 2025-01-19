@@ -1,7 +1,7 @@
 import type { FC } from 'react';
 import { motion } from 'framer-motion';
-import './accordian.css';
 import Image from 'next/image';
+import styles from './accordian.module.css'; // Import CSS module
 
 type AccordianProps = {
   question: string;
@@ -12,30 +12,30 @@ type AccordianProps = {
 
 const Accordian: FC<AccordianProps> = ({ question, answer, isOpen, onClick }) => {
   return (
-    <div className="accordian" onClick={onClick}>
-      <header className="accordian-header">
+    <div className={styles.accordian} onClick={onClick}>
+      <header className={styles.accordianHeader}>
         <p>{question}</p>
         <div>
-        <motion.div
-          animate={isOpen ? { rotate: -180 } : { rotate: 0 }}
-          className="accordian-toggle-icon"
-        >
-          <Image
-            src={isOpen ? '/images/aiServices/minus.svg' : '/images/aiServices/plus.svg'}
-            alt={isOpen ? 'Collapse' : 'Expand'}
-            width={20}
-            height={20}
-          />
-        </motion.div>
+          <motion.div
+            animate={isOpen ? { rotate: -180 } : { rotate: 0 }}
+            className={styles.accordianToggleIcon}
+          >
+            <Image
+              src={isOpen ? '/images/aiServices/minus.svg' : '/images/aiServices/plus.svg'}
+              alt={isOpen ? 'Collapse' : 'Expand'}
+              width={20}
+              height={20}
+            />
+          </motion.div>
         </div>
       </header>
-      <section className="accordian-content">
+      <section className={styles.accordianContent}>
         {isOpen && (
           <motion.div
             initial={{ scaleY: 0, opacity: 0 }}
             animate={{ scaleY: 1, opacity: 1 }}
             exit={{ scaleY: 0, opacity: 0 }}
-            className="accordian-answer"
+            className={styles.accordianAnswer}
           >
             <p>{answer}</p>
           </motion.div>

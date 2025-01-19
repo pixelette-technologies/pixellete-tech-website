@@ -1,7 +1,7 @@
 import { Container } from '@/components/Feature/Container/Container';
 import React from 'react';
 import Marquee from 'react-fast-marquee';
-import './expertisegrid.css';
+import styles from './expertisegrid.module.css';
 
 type ExpertiseItem = {
   image: string;
@@ -24,50 +24,51 @@ const ExpertiseGrid: React.FC<ExpertiseGridProps> = ({
 }) => {
   return (
     <>
-      <Container className="main">
-        <div className="cardSectionBackground">
+      <Container className={styles.main}>
+        <div className={styles.cardSectionBackground}>
           <img src={backgroundImage} alt="Background" />
         </div>
       </Container>
-      <Container className="main">
-        <div className="expertiseGrid">
+      <Container className={styles.main}>
+        <div className={styles.expertiseGrid}>
           <header>
             <h1>{header.title}</h1>
             <p>{header.description}</p>
           </header>
 
           {/* First Marquee with first half of marqueeData */}
-          <Marquee pauseOnHover loop={0}>
-            <section className="marqueeCardss">
-              {marqueeData.slice(0, Math.ceil(marqueeData.length / 2)).map((el, index) => (
-                <div className="flipCard" key={index}>
-                  <div className="flipCardInner">
-                    <div className="flipCardFront">
-                      <img src={el.image} alt={el.text} />
-                      <p>{el.text}</p>
-                    </div>
-                    <div className="flipCardBack">
-                      <p>{el.description}</p>
+          <div className="marquee-container">
+            <Marquee pauseOnHover loop={0}>
+              <section className={styles.marqueeCardss}>
+                {marqueeData.slice(0, Math.ceil(marqueeData.length / 2)).map((el, index) => (
+                  <div className={styles.flipCard} key={index}>
+                    <div className={styles.flipCardInner}>
+                      <div className={styles.flipCardFront}>
+                        <img src={el.image} alt={el.text} />
+                        <p><b>{el.text}</b></p>
+                      </div>
+                      <div className={styles.flipCardBack}>
+                        {el.description}
+                      </div>
                     </div>
                   </div>
-                </div>
-              ))}
-            </section>
-          </Marquee>
-
+                ))}
+              </section>
+            </Marquee>
+          </div>
           <br />
 
           {/* Second Marquee with second half of marqueeData */}
           <Marquee direction="right" pauseOnHover loop={0}>
-            <section className="marqueeCardss">
+            <section className={styles.marqueeCardss}>
               {marqueeData.slice(Math.ceil(marqueeData.length / 2)).map((el, index) => (
-                <div className="flipCard" key={index}>
-                  <div className="flipCardInner">
-                    <div className="flipCardFront">
+                <div className={styles.flipCard} key={index}>
+                  <div className={styles.flipCardInner}>
+                    <div className={styles.flipCardFront}>
                       <img src={el.image} alt={el.text} />
                       <p>{el.text}</p>
                     </div>
-                    <div className="flipCardBack">
+                    <div className={styles.flipCardBack}>
                       <p>{el.description}</p>
                     </div>
                   </div>
@@ -77,36 +78,6 @@ const ExpertiseGrid: React.FC<ExpertiseGridProps> = ({
           </Marquee>
         </div>
       </Container>
-
-      {/* <Container className="main">
-        <div className="expertiseGrid">
-          <header>
-            <h1>{header.title}</h1>
-            <p>{header.description}</p>
-          </header>
-          <Marquee>
-            <section className="marqueeCardss">
-              {marqueeData.slice(0, Math.ceil(marqueeData.length / 2)).map((el, index) => (
-                <div style={{ margin: '0 1rem' }} key={index}>
-                  <img src={el.image} alt={el.text} />
-                  <p>{el.text}</p>
-                </div>
-              ))}
-            </section>
-          </Marquee>
-          <br />
-          <Marquee direction="right">
-            <section className="marqueeCardss">
-              {marqueeData.slice(Math.ceil(marqueeData.length / 2)).map((el, index) => (
-                <div style={{ margin: '0 1rem' }} key={index}>
-                  <img src={el.image} alt={el.text} />
-                  <p>{el.text}</p>
-                </div>
-              ))}
-            </section>
-          </Marquee>
-        </div>
-      </Container> */}
     </>
   );
 };

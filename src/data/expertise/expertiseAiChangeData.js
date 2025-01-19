@@ -2,12 +2,12 @@ export const expertiseAiChangeData = [
   {
     image: 'images/aiServices/e_1.svg',
     text: 'Financial Services',
-    description: 'Lorem ipsome Lorem ipsome Lorem ipsome Lorem ipsome Lorem ipsome ',
+    description: 'Revolutionize financial operations with secure, efficient, and scalable digital solutions tailored to your needs',
   },
   {
     image: 'images/aiServices/e_2.svg',
     text: 'Food & Beverage',
-    description: 'Lorem ipsome Lorem ipsome Lorem ipsome Lorem ipsome Lorem ipsome ',
+    description: 'Increase customer engagement and streamline your supply chain with innovative, industry-specific tech',
   },
   {
     image: 'images/aiServices/e_3.svg',
