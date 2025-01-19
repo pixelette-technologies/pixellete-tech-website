@@ -15,16 +15,17 @@ export async function generateMetadata(props: IDeliverProps) {
   const { locale } = await props.params;
   const t = await getTranslations({
     locale,
-    namespace: 'About',
+    namespace: 'dedicatedTeamPage',
   });
 
   return {
     title: t('meta_title'),
     description: t('meta_description'),
+    keywords: t('meta_keywords'),
   };
 }
 
-export default async function Deliver(props: IDeliverProps) {
+export default async function DedicatedTeamServices(props: IDeliverProps) {
   const { locale } = await props.params;
   setRequestLocale(locale);
   // const t = await getTranslations({

@@ -1,0 +1,65 @@
+type SubMenu = {
+  id: number;
+  name: string;
+  to: string;
+};
+
+type NavMenu = {
+  id: number;
+  name: string;
+  to?: string;
+  subMenus?: SubMenu[];
+};
+
+export const navMenus: NavMenu[] = [
+  {
+    id: 1,
+    name: 'Home',
+    to: '/',
+  },
+  {
+    id: 2,
+    name: 'Services',
+    subMenus: [
+      {
+        id: 3,
+        name: 'Artificial Intelligence',
+        to: '/ai-development-services',
+      },
+      {
+        id: 4,
+        name: 'Blockchain Development',
+        to: '/blockchain-development-services',
+      },
+      { id: 5, name: 'Virtual/Augmented Reality', to: '/ar-vr-development-services' },
+      { id: 6, name: 'Web Development', to: '/web-development-services' },
+      { id: 7, name: 'Mobile Application Development', to: '/mobile-app-development-services' },
+      { id: 8, name: 'Custom Software Development', to: '/custom-software-development-services' },
+      { id: 9, name: 'User Interface (UI) and User Experience (UX) Design', to: '/ui-ux-design-services' },
+    ],
+  },
+  {
+    id: 10,
+    name: 'How we work',
+    subMenus: [
+      {
+        id: 11,
+        name: 'Complete Outsourcing',
+        to: '/it-outsourcing-services',
+      },
+      {
+        id: 12,
+        name: 'Staff Augmentation',
+        to: '/staff-augmentation-services',
+      },
+      { id: 13, name: 'Dedicated Teams', to: '/dedicated-team-services' },
+    ],
+  },
+  {
+    id: 14,
+    name: 'About Us',
+    to: '/about-us',
+  },
+  { id: 15, name: 'Case Studies', to: '/case-studies' },
+  { id: 16, name: 'Blogs', to: '/blog' },
+];

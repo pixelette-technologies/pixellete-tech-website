@@ -1,6 +1,4 @@
-import { Button } from '@/components/Feature/Button/Button';
 import { Container } from '@/components/Feature/Container/Container';
-import Link from 'next/link';
 import './herosection.css';
 
 const HeroSection: React.FC = () => {
@@ -27,15 +25,14 @@ const HeroSection: React.FC = () => {
               Our development legacy in action
             </h1>
             <p>
-              Witness our strategies, execution and results unfold in our IT and
-              tech development case studies.
+              97% customer satisfaction rating  |  4.8 overall Clutch rating  |  30,000+ hours in development
             </p>
 
-            <Link href="contactUs">
+            {/* <Link href="contactUs">
               <Button className="primary" animation="fade-up" duration="2400">
                 Schedule a Consultation
               </Button>
-            </Link>
+            </Link> */}
           </center>
         </Container>
       </div>

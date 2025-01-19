@@ -81,7 +81,7 @@ export const BlogGridWithBanner = ({ data, singleView = false }) => {
               </p>
 
               <div className={styles.readMoreButton}>
-                <Link href={`/blogs/${blogCardsMain.fields?.slug}`} passHref>
+                <Link href={`/blog/${blogCardsMain.fields?.slug}`} passHref>
                   <Button className="primary">
                     Read More
                   </Button>

@@ -31,7 +31,7 @@ export const BlogCard: FC<BlogCardProps> = ({
       <p>{date}</p>
       <h3 className="blogCardHeading">{heading}</h3>
       <p className="blogCardDescription">{description}</p>
-      <Link href={`/blogs/${to}`}>
+      <Link href={`/blog/${to}`}>
         <Button className="primary">Read More</Button>
       </Link>
     </div>
