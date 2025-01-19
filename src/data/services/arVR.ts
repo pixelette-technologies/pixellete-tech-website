@@ -18,12 +18,39 @@ export const tgexpertiseAreas = [
   { title: 'Real-Time Interactivity' },
   { title: 'Secure Data Management' },
   { title: 'Continuous Improvement' },
-  {
+  { title: 'Immersive Experiences' },
+];
+
+export const tgExpertiseData = {
+  'Immersive Experiences': {
     title: 'Immersive Experiences',
     description:
-      'We specialize in developing immersive AR/VR environments that captivate users and elevate engagement, offering unforgettable, interactive experiences.',
+        'We specialize in developing immersive AR/VR environments that captivate users and elevate engagement, offering unforgettable, interactive experiences.',
   },
-];
+  'High-Quality 3D Assets': {
+    title: 'High-Quality 3D Assets',
+    description: 'Our AR/VR solutions incorporate high-resolution 3D assets and realistic animations, providing a visually impressive experience that feels true-to-life and engaging.',
+  },
+  'Cross-Platform Compatibility': {
+    title: 'Cross-Platform Compatibility',
+    description: 'Our AR/VR application development team ensures that apps are compatible with leading platforms and devices ensuring a wide reach for your experiences.',
+  },
+  'Real-Time Interactivity': {
+    title: 'Real-Time Interactivity',
+    description:
+        'We develop AR/VR solutions with real-time interactivity, enabling users to interact intuitively with the virtual environment and experience a dynamic, responsive interface.',
+  },
+  'Secure Data Management': {
+    title: 'Secure Data Management',
+    description:
+        'We incorporate strong data protection measures within our AR/VR applications service to safeguard user information and maintain security in sensitive interactions.',
+  },
+  'Continuous Improvement': {
+    title: 'Continuous Improvement',
+    description:
+        'We offer ongoing updates and optimizations to keep your AR/VR experiences adapting to advancements or changes in technology, as well as user feedback, for maximum impact.',
+  },
+};
 
 export const ocheading = 'Our Commitment to Excellence';
 
@@ -86,84 +113,77 @@ export const vrServicelist
   {
     title: 'AI Solutions',
     items: [
-      'Generative AI',
-      'AI Security',
-      'AI Design',
-      'AI Ops',
-      'Automation Solutions',
+      'UI/UX Design for AR/VR',
+      'AR/VR Consulting Services',
+      'Custom AR/VR Application Development',
+      'AR/VR Integration Services',
+      'AR/VR Game Development Services',
     ],
   },
   {
     title: 'AI Applications',
     items: [
-      'Chatbots & Conversational AI',
-      'Recommendations Engines',
-      'AI-as-a-Service (AIaaS)',
-      'AI Product Development',
-      'Predictive Modeling',
+      'AR/VR Content Creation',
+      'AR/VR Simulation Development',
+      'AR/VR Training and Educational Tools',
+      'AR/VR Maintenance and Support',
     ],
   },
 ];
 export const vrServices = {
-  'Generative AI': {
+  'UI/UX Design for AR/VR': {
     imageSrc: '/images/aiServices/s_1.svg',
-    title: 'Generative AI',
+    title: 'UI/UX Design for AR/VR',
     description:
-    'We are recognized as a leading generative AI development company and bring deep expertise in generative AI tools like GPT-4, GPT-3.5, and DALL-E. Our models provide visual content analysis to aid in brand identity, data analysis, business intelligence, and visualization, offering tailored generative AI development services.',
+    'We specialize in immersive UI/UX design for AR and VR environments, ensuring intuitive interfaces and user experiences. Our design approach prioritizes interactivity and ease of use, making digital spaces feel both accessible and engaging.',
   },
-  'AI Security': {
+  'AR/VR Consulting Services': {
     imageSrc: '/images/aiServices/s_2.svg',
-    title: 'AI Security',
+    title: 'AR/VR Consulting Services',
     description:
-    'Our AI security solutions leverage advanced machine learning algorithms to detect and prevent cyber threats in real time, ensuring robust and reliable system protection.',
+    'We’re a well-known AR/VR app development company providing expert consulting to help you navigate the AR/VR landscape and use immersive technology. We assess your needs, offer insights and guide you through technology selection, strategy and implementation. This helps set a strong foundation for successful project deployment.',
   },
-  'AI Design': {
+  'Custom AR/VR Application Development': {
     imageSrc: '/images/aiServices/s_3.svg',
-    title: 'AI Design',
+    title: 'Custom AR/VR Application Development',
     description:
-    'We provide cutting-edge AI-powered design solutions that enhance user experiences, optimize workflows, and drive creative innovation.',
+    'Our custom AR/VR app development services enhance user experiences and drive engagement. With a focus on delivering immersive, high-performance applications, our team combines augmented reality development and virtual reality development with advanced technology to make your vision a reality.',
   },
-  'AI Ops': {
+  'AR/VR Integration Services': {
     imageSrc: '/images/aiServices/s_4.svg',
-    title: 'AI Ops',
+    title: 'AR/VR Integration Services',
     description:
-    'Streamline your operations with AI-driven automation and insights that improve efficiency, reduce downtime, and maximize productivity.',
+    'We help integrate AR and VR developed solutions into existing platforms and applications, transforming standard processes into interactive experiences. Our years of expertise allows us to create streamlined, efficient solutions that align with your business goals.',
   },
-  'Automation Solutions': {
+  'AR/VR Game Development Services': {
     imageSrc: '/images/aiServices/s_5.svg',
-    title: 'Automation Solutions',
+    title: 'AR/VR Game Development Services',
     description:
-    'Implement intelligent automation solutions that empower businesses to achieve greater accuracy, speed, and scalability in their operations.',
+    'Our team of capable developers build captivating, interactive AR/VR games that transport users into exciting virtual worlds. Our AR/VR game development solutions create engaging, lifelike environments that resonate with players and enhance brand value.',
   },
-  'Chatbots & Conversational AI': {
+  'AR/VR Content Creation': {
     imageSrc: '/images/aiServices/s_6.svg',
-    title: 'Chatbots & Conversational AI',
+    title: 'AR/VR Content Creation',
     description:
-    'Develop interactive chatbots and conversational AI tools that deliver personalized customer engagement and support.',
+    'We produce dynamic AR and VR content specialized to enhance user engagement and experience. Our AR/VR content creation services bring ideas to life, whether for training, marketing, healthcare or entertainment, ensuring immersive, memorable interactions that leave a lasting impact on your users.',
   },
-  'Recommendations Engines': {
+  'AR/VR Simulation Development': {
     imageSrc: '/images/aiServices/s_1.svg',
-    title: 'Recommendations Engines',
+    title: 'AR/VR Simulation Development',
     description:
-    'Build recommendation systems that provide users with highly relevant suggestions, enhancing user satisfaction and retention.',
+    'Our simulations offer lifelike experiences across various industries. As a trusted AR VR development company, we create realistic simulations that mimic real-world scenarios, allowing users to learn, practice, and engage in a safe, controlled digital environment.',
   },
-  'AI-as-a-Service (AIaaS)': {
+  'AR/VR Training and Educational Tools': {
     imageSrc: '/images/aiServices/s_2.svg',
-    title: 'AI-as-a-Service (AIaaS)',
+    title: 'AR/VR Training and Educational Tools',
     description:
-    'Deliver scalable AI capabilities on-demand, enabling businesses to quickly integrate AI into their processes.',
+    'We help develop interactive AR/VR training and educational tools to empower learning through 3D experiences. Our AR/VR team delivers solutions that make complex concepts easy to understand, offering a hands-on approach to education.',
   },
-  'AI Product Development': {
+  'AR/VR Maintenance and Support': {
     imageSrc: '/images/aiServices/s_3.svg',
-    title: 'AI Product Development',
+    title: 'AR/VR Maintenance and Support',
     description:
-    'Create innovative AI-driven products that cater to specific business needs, leveraging advanced AI technologies.',
-  },
-  'Predictive Modeling': {
-    imageSrc: '/images/aiServices/s_4.svg',
-    title: 'Predictive Modeling',
-    description:
-    'Harness the power of predictive analytics to forecast trends, identify opportunities, and make data-driven decisions.',
+    'Pixelette Technologies offers end-to-end maintenance and support, ensuring your AR/VR applications stay optimized and up-to-date even after they have been delivered. We provide ongoing assistance to address any issues you may face, maximize performance, and support your long-term business success in the digital space.',
   },
 };
 

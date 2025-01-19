@@ -22,28 +22,38 @@ export const tgexpertiseAreas = [
   { title: 'Responsive Design' },
 ];
 export const tgExpertiseData = {
-  'Machine Learning': {
-    title: 'Machine Learning Insights',
+  'Responsive Design': {
+    title: 'Responsive Design',
     description:
-        'Explore advanced algorithms and techniques for supervised and unsupervised learning.',
+        'Our responsive app designs ensure your mobile app looks and works perfectly on any device, eliminating the frustration of usability issues and enhancing user retention.',
   },
-  'Deep Learning': {
-    title: 'Deep Learning Revolution',
-    description: 'Understand neural networks, CNNs, and RNNs for deep learning systems.',
+  'Custom Functionality': {
+    title: 'Custom Functionality',
+    description: 'We develop custom mobile app functionalities that solve specific business challenges, enhancing your operational efficiency and providing a seamless user experience that drives conversions.',
   },
-  'Natural Language Processing (NLP)': {
-    title: 'NLP Applications',
-    description: 'Discover how NLP powers chatbots, sentiment analysis, and more.',
+  'Rapid Development': {
+    title: 'Rapid Development',
+    description: 'Our agile development processes ensure that your app is developed not just quickly but also correctly, reducing time-to-market and allowing you to capitalise on opportunities faster.',
   },
-  'Robotic Process Automation': {
-    title: 'Automation Simplified',
+  'Scalable Architecture': {
+    title: 'Scalable Architecture',
     description:
-        'Learn about streamlining workflows with RPA for enhanced productivity.',
+        'We develop scalable mobile applications that can handle an increasing load of users and data, ensuring your app supports your business growth without performance hitches.',
   },
-  'Computer Vision': {
-    title: 'Vision Beyond Limits',
+  'Top Notch Security': {
+    title: 'Top Notch Security',
     description:
-        'Dive into image recognition, object detection, and real-time vision systems.',
+        'We embed strong security protocols from the ground up to protect your data and maintain user trust, addressing the critical pain point of vulnerability to data breaches.',
+  },
+  'Easy Integration': {
+    title: 'Easy Integration',
+    description:
+        'Our solutions ensure that your app integrates smoothly with existing systems and third-party services, enhancing functionality and user experience without disrupting your ecosystem.',
+  },
+  'Continued Support': {
+    title: 'Continued Support',
+    description:
+        'We provide continuous monitoring, updates, and optimizations based on user feedback and evolving technology trends, ensuring your mobile app stays relevant and performs optimally.',
   },
 };
 
@@ -109,66 +119,63 @@ export const mobileDevelopmentServicelist
   {
     title: 'AI Solutions',
     items: [
-      'Generative AI',
-      'AI Security',
-      'AI Design',
-      'AI Ops',
-      'Automation Solutions',
+      'iOS App Development',
+      'Android App Development',
+      'Wearable and Embedded Software App Development',
+      'PWA Development',
+      'Hybrid App Development',
     ],
   },
   {
     title: 'AI Applications',
     items: [
-      'Chatbots & Conversational AI',
-      'Recommendations Engines',
-      'AI-as-a-Service (AIaaS)',
-      'AI Product Development',
-      'Predictive Modeling',
+      'Native Mobile App Development',
+      'Cross Platform App Development',
     ],
   },
 ];
 export const mobileDevelopmentServices = {
-  'Generative AI': {
+  'iOS App Development': {
     imageSrc: '/images/aiServices/s_1.svg',
-    title: 'Generative AI',
+    title: 'iOS App Development',
     description:
-    'We are recognized as a leading generative AI development company and bring deep expertise in generative AI tools like GPT-4, GPT-3.5, and DALL-E. Our models provide visual content analysis to aid in brand identity, data analysis, business intelligence, and visualization, offering tailored generative AI development services.',
+    'Bring your ideas to life with scalable, reliable iOS mobile app development that integrates smoothly with the Apple ecosystem. Our mobile app development services use the latest tech and tailored features to create iOS apps that align with your business goals and elevate user satisfaction.',
   },
-  'AI Security': {
+  'Android App Development': {
     imageSrc: '/images/aiServices/s_2.svg',
-    title: 'AI Security',
+    title: 'Android App Development',
     description:
-    'Our AI security solutions leverage advanced machine learning algorithms to detect and prevent cyber threats in real time, ensuring robust and reliable system protection.',
+    'We offer Android mobile app development solutions that put your brand on the map. With our app development services, we deliver user-friendly Android apps from concept to launch, ensuring they stand out and deliver a joyful user experience.',
   },
-  'AI Design': {
+  'Wearable and Embedded Software App Development': {
     imageSrc: '/images/aiServices/s_3.svg',
-    title: 'AI Design',
+    title: 'Wearable and Embedded Software App Development',
     description:
-    'We provide cutting-edge AI-powered design solutions that enhance user experiences, optimize workflows, and drive creative innovation.',
+    'Today, companion apps are essential. We develop wearables that connect with smart gadgets and custom peripherals, enhancing functionality and building brand loyalty. From fitness trackers to smartwatches, our mobile app development company specializes in wearable tech that keeps users engaged.',
   },
-  'AI Ops': {
+  'PWA Development': {
     imageSrc: '/images/aiServices/s_4.svg',
-    title: 'AI Ops',
+    title: 'PWA Development',
     description:
-    'Streamline your operations with AI-driven automation and insights that improve efficiency, reduce downtime, and maximize productivity.',
+    'Our mobile app solutions include Progressive Web App Development (PWAs) that offer fast, reliable, and engaging experiences. With the best of both native and web app features, PWAs built by our mobile application developers ensure exceptional digital engagement on any device.',
   },
-  'Automation Solutions': {
+  'Hybrid App Development': {
     imageSrc: '/images/aiServices/s_5.svg',
-    title: 'Automation Solutions',
+    title: 'Hybrid App Development',
     description:
-    'Implement intelligent automation solutions that empower businesses to achieve greater accuracy, speed, and scalability in their operations.',
+    'Our hybrid mobile app development services combine the best of both worlds—native and web app technologies—to create powerful, versatile apps that work flawlessly across platforms.',
   },
-  'Chatbots & Conversational AI': {
+  'Native Mobile App Development': {
     imageSrc: '/images/aiServices/s_6.svg',
-    title: 'Chatbots & Conversational AI',
+    title: 'Native Mobile App Development',
     description:
-    'Develop interactive chatbots and conversational AI tools that deliver personalized customer engagement and support.',
+    'We deliver native app development services across iOS and Android platforms. By using each platform\'s unique strengths, our mobile app developers create secure, scalable apps that align with your goals and captivate your audience.',
   },
-  'Recommendations Engines': {
+  'Cross Platform App Development': {
     imageSrc: '/images/aiServices/s_1.svg',
-    title: 'Recommendations Engines',
+    title: 'Cross Platform App Development',
     description:
-    'Build recommendation systems that provide users with highly relevant suggestions, enhancing user satisfaction and retention.',
+    'Cross-platform development is cost-effective and easy to maintain, providing a unified experience across devices. Our cross-platform mobile app development approach combines the best of native and web technologies, expanding your reach without compromising on quality or functionality.',
   },
   'AI-as-a-Service (AIaaS)': {
     imageSrc: '/images/aiServices/s_2.svg',

@@ -19,13 +19,33 @@ export const tgexpertiseAreas = [
   { title: 'Accessibility Compliance' },
   { title: 'Interactive Prototyping' },
   { title: 'Ongoing Design Support' },
-  {
-    title: 'User-Centric Design',
-    description:
-      'Our team creates user interfaces based on detailed research and user personas, ensuring your platform resonates with and engages your target audience, enhancing satisfaction and retention.',
-  },
+  { title: 'User-Centric Design' },
 ];
-
+export const tgExpertiseData = {
+  'Machine Learning': {
+    title: 'Machine Learning Insights',
+    description:
+        'Explore advanced algorithms and techniques for supervised and unsupervised learning.',
+  },
+  'Deep Learning': {
+    title: 'Deep Learning Revolution',
+    description: 'Understand neural networks, CNNs, and RNNs for deep learning systems.',
+  },
+  'Natural Language Processing (NLP)': {
+    title: 'NLP Applications',
+    description: 'Discover how NLP powers chatbots, sentiment analysis, and more.',
+  },
+  'Robotic Process Automation': {
+    title: 'Automation Simplified',
+    description:
+        'Learn about streamlining workflows with RPA for enhanced productivity.',
+  },
+  'Computer Vision': {
+    title: 'Vision Beyond Limits',
+    description:
+        'Dive into image recognition, object detection, and real-time vision systems.',
+  },
+};
 export const ocheading = 'Our Commitment to Excellence';
 
 export const ocdescription

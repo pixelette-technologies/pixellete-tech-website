@@ -19,12 +19,33 @@ export const tgexpertiseAreas = [
   { title: 'Advanced Security Protocols' },
   { title: 'Smooth System Integration' },
   { title: 'Ongoing Maintenance and Support' },
-  {
-    title: 'Fully Responsive Design',
-    description:
-      'Our developers deliver responsive websites that look and perform seamlessly across devices, ensuring accessibility and a consistent experience for all users.',
-  },
+  { title: 'Fully Responsive Design' },
 ];
+export const tgExpertiseData = {
+  'Machine Learning': {
+    title: 'Machine Learning Insights',
+    description:
+        'Explore advanced algorithms and techniques for supervised and unsupervised learning.',
+  },
+  'Deep Learning': {
+    title: 'Deep Learning Revolution',
+    description: 'Understand neural networks, CNNs, and RNNs for deep learning systems.',
+  },
+  'Natural Language Processing (NLP)': {
+    title: 'NLP Applications',
+    description: 'Discover how NLP powers chatbots, sentiment analysis, and more.',
+  },
+  'Robotic Process Automation': {
+    title: 'Automation Simplified',
+    description:
+        'Learn about streamlining workflows with RPA for enhanced productivity.',
+  },
+  'Computer Vision': {
+    title: 'Vision Beyond Limits',
+    description:
+        'Dive into image recognition, object detection, and real-time vision systems.',
+  },
+};
 
 export const ocheading = 'Our Commitment to Excellence';
 

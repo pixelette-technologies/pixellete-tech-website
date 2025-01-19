@@ -18,13 +18,39 @@ export const tgexpertiseAreas = [
   { title: 'Cross-Chain Technology' },
   { title: 'Blockchain Security and Audits' },
   { title: 'Privacy and Confidentiality Solutions' },
-  {
-    title: 'Distributed Ledger Technology',
-    description:
-      'Our blockchain team specializes in Distributed Ledger Technology, creating secure, transparent systems that decentralize data control. Our expertise in Hype ledger Fabric and Corda ensures scalable solutions across finance and other industries. ',
-  },
+  { title: 'Distributed Ledger Technology' },
 ];
 
+export const tgExpertiseData = {
+  'Distributed Ledger Technology': {
+    title: 'Distributed Ledger Technology',
+    description:
+        'Our blockchain team specializes in Distributed Ledger Technology, creating secure, transparent systems that decentralize data control. Our expertise in Hyperledger Fabric and Corda ensures scalable solutions across finance and other industries.',
+  },
+  'Consensus Algorithms': {
+    title: 'Consensus Algorithms',
+    description: 'Our blockchain proficiency includes consensus mechanisms like Proof of Work (PoW), Proof of Stake (PoS), and Delegated Proof of Stake (DPoS), which support network integrity and secure transaction processing.',
+  },
+  'Smart Contracts': {
+    title: 'Smart Contracts',
+    description: 'The Pixelette Technologies Blockchain Team has years of smart contract expertise which allows us to design secure, automated contracts that facilitate trust and transparency. Using Solidity, Rust, Vyper and so many other languages, our team of developers build smart contracts that power blockchain solutions with precision.',
+  },
+  'Cross-Chain Technology': {
+    title: 'Cross-Chain Technology',
+    description:
+        'We provide cross-chain technology services by facilitating interoperability between blockchain networks. Using Cosmos SDK and Polkadot’s Substrate, our team delivers interconnected systems that enhance scalability and user flexibility.',
+  },
+  'Blockchain Security and Audits': {
+    title: 'Blockchain Security and Audits',
+    description:
+        'Our blockchain security services include comprehensive audits to identify vulnerabilities and ensure regulatory compliance. Using MythX, CertiK, and OpenZeppelin frameworks, we fortify smart contracts and blockchain networks against risks and exploits.',
+  },
+  'Privacy and Confidentiality Solutions': {
+    title: 'Privacy and Confidentiality Solutions',
+    description:
+        'We specialize in privacy-centric blockchain services, incorporating zk-SNARKs and MPC (Multi-Party Computation) to protect user data in transactions and communications. Our expertise ensures data privacy without sacrificing the transparency of blockchain.',
+  },
+};
 export const ocheading = 'Our Commitment to Excellence';
 
 export const ocdescription
@@ -86,84 +112,84 @@ export const blockchainServicelist
   {
     title: 'AI Solutions',
     items: [
-      'Generative AI',
-      'AI Security',
-      'AI Design',
-      'AI Ops',
-      'Automation Solutions',
+      'Blockchain Consulting',
+      'DApp Development',
+      'Crypto Wallet Development',
+      'Cryptocurrency Exchange Development',
+      'Asset Tokenization Platform',
     ],
   },
   {
     title: 'AI Applications',
     items: [
-      'Chatbots & Conversational AI',
-      'Recommendations Engines',
-      'AI-as-a-Service (AIaaS)',
-      'AI Product Development',
-      'Predictive Modeling',
+      'Layer 1 & Layer 2 Blockchain',
+      'Smart Contract Audit and Development',
+      'DeFi Development',
+      'DAO Development',
+      'Crypto Token Development',
     ],
   },
 ];
 export const blockchainServices = {
-  'Generative AI': {
+  'Blockchain Consulting': {
     imageSrc: '/images/aiServices/s_1.svg',
-    title: 'Generative AI',
+    title: 'Blockchain Consulting',
     description:
-    'We are recognized as a leading generative AI development company and bring deep expertise in generative AI tools like GPT-4, GPT-3.5, and DALL-E. Our models provide visual content analysis to aid in brand identity, data analysis, business intelligence, and visualization, offering tailored generative AI development services.',
+    'We offer top-tier blockchain consulting to shape your vision into reality. From fresh builds to system upgrades, our blockchain development services ensure secure, scalable solutions aligned with your goals.',
   },
-  'AI Security': {
+  'DApp Development': {
     imageSrc: '/images/aiServices/s_2.svg',
-    title: 'AI Security',
+    title: 'DApp Development',
     description:
-    'Our AI security solutions leverage advanced machine learning algorithms to detect and prevent cyber threats in real time, ensuring robust and reliable system protection.',
+    'Our dApp development services deliver high-performing, scalable decentralized applications for any industry. With custom dApps, we help businesses thrive in the competitive crypto ecosystem.',
   },
-  'AI Design': {
+  'Crypto Wallet Development': {
     imageSrc: '/images/aiServices/s_3.svg',
-    title: 'AI Design',
+    title: 'Crypto Wallet Development',
     description:
-    'We provide cutting-edge AI-powered design solutions that enhance user experiences, optimize workflows, and drive creative innovation.',
+    'Our cryptocurrency wallet development services empower your DeFi portfolio with secure, user-friendly wallets. We deliver decentralized wallets that feature QR scanners,biometrics, and cross-platform compatibility for fast, secure transactions.',
   },
-  'AI Ops': {
+  'Cryptocurrency Exchange Development': {
     imageSrc: '/images/aiServices/s_4.svg',
-    title: 'AI Ops',
+    title: 'Cryptocurrency Exchange Development',
     description:
-    'Streamline your operations with AI-driven automation and insights that improve efficiency, reduce downtime, and maximize productivity.',
+    'As a leading decentralized exchange solutions provider, we design scalable, secure DEX platforms where users can buy, sell, and trade cryptocurrency easily and transparently.',
   },
-  'Automation Solutions': {
+  'Asset Tokenization Platform': {
     imageSrc: '/images/aiServices/s_5.svg',
-    title: 'Automation Solutions',
+    title: 'Asset Tokenization Platform',
     description:
-    'Implement intelligent automation solutions that empower businesses to achieve greater accuracy, speed, and scalability in their operations.',
+    'Our tokenization services make asset digitization easy. We create robust platforms to unlock new financial assets and make them tradable on blockchain public platforms.',
   },
-  'Chatbots & Conversational AI': {
+  'Layer 1 & Layer 2 Blockchain': {
     imageSrc: '/images/aiServices/s_6.svg',
-    title: 'Chatbots & Conversational AI',
+    title: 'Layer 1 & Layer 2 Blockchain',
     description:
-    'Develop interactive chatbots and conversational AI tools that deliver personalized customer engagement and support.',
+    'We deliver Layer 1 blockchain development to empower startups and enterprises. Our Layer 2 blockchain solutions boost network performance with state channels and sidechains, enhancing scalability and reducing costs.',
   },
-  'Recommendations Engines': {
+  'Smart Contract Audit and Development': {
     imageSrc: '/images/aiServices/s_1.svg',
-    title: 'Recommendations Engines',
+    title: 'Smart Contract Audit and Development',
     description:
-    'Build recommendation systems that provide users with highly relevant suggestions, enhancing user satisfaction and retention.',
+    'Our smart contract development services cover coding, testing, and deployment, helping you automate workflows and cut costs securely. As a top smart contract development company, we ensure every contract is fully secure and ready for action.',
   },
-  'AI-as-a-Service (AIaaS)': {
+  'DeFi Development': {
     imageSrc: '/images/aiServices/s_2.svg',
-    title: 'AI-as-a-Service (AIaaS)',
+    title: 'DeFi Development',
     description:
-    'Deliver scalable AI capabilities on-demand, enabling businesses to quickly integrate AI into their processes.',
+    'Our DeFi development services create decentralized solutions that eliminate intermediaries, empowering businesses to handle digital assets seamlessly with high-quality dApps.',
   },
-  'AI Product Development': {
+  'DAO Development': {
     imageSrc: '/images/aiServices/s_3.svg',
-    title: 'AI Product Development',
+    title: 'DAO Development',
     description:
-    'Create innovative AI-driven products that cater to specific business needs, leveraging advanced AI technologies.',
+    'As a forward-thinking DAO development company, we offer secure DAO development services that redefine centralized business models, bringing efficiency and autonomy.',
   },
-  'Predictive Modeling': {
+  'Crypto Token Development': {
     imageSrc: '/images/aiServices/s_4.svg',
-    title: 'Predictive Modeling',
+    title: 'Crypto Token Development',
     description:
-    'Harness the power of predictive analytics to forecast trends, identify opportunities, and make data-driven decisions.',
+    'Our crypto token development services deliver custom, secure tokens with tamper-proof protection, ideal for safe trading in today’s digital space.',
   },
 };
 

@@ -8,7 +8,7 @@ import { HowWeWork } from '@/components/Sections/Services/HowWeWork/HowWeWork';
 import { OurCommitment } from '@/components/Sections/Services/OurCommitment/OurCommitment';
 import { OurServices } from '@/components/Sections/Services/OurServices/OurServices';
 import { TechnologyGrid } from '@/components/Sections/Services/TechnologyGrid/TechnologyGrid';
-import { TechStack } from '@/components/Sections/Services/TechStack/TechStack';
+import TechnologiesUsed from '@/components/Sections/TechnologyUsed/TechnologiesUsed';
 import { expertiseAiChangeData } from '@/data/expertise/expertiseAiChangeData';
 import { aiFaq } from '@/data/faqs/aiFaqs';
 import {
@@ -27,7 +27,11 @@ import {
   ocheading,
   tgdescription,
   tgexpertiseAreas,
+  tgExpertiseData,
   tgheading,
+  vrServicelist,
+  vrServices,
+  vrTechnologies,
 } from '@/data/services/arVR';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 
@@ -72,33 +76,8 @@ export default async function ARVR(props: IARVRProps) {
       <OurServices
         heading={aiServicesHeading}
         description={aiServicesDescription}
-        serviceLists={[
-          {
-            title: 'AI Solutions',
-            items: [
-              'AR/VR Game Development',
-              'AR/VR Integration Services',
-              'AR/VR Content Creation',
-              'AR/VR Maintenance and Support',
-              'AR/VR Training and Educational Tools',
-            ],
-          },
-          {
-            title: 'AI Applications',
-            items: [
-              'AR/VR Consulting Services',
-              'UI/UX Design for AR/VR',
-              'Custom AR/VR Application Development',
-              'AR/VR Simulation Development',
-            ],
-          },
-        ]}
-        highlightedService={{
-          imageSrc: '/images/aiServices/s_1.svg',
-          title: 'AR/VR Game Development',
-          description:
-      'Our team of capable developers build captivating, interactive AR/VR games that transport users into exciting virtual worlds. Our AR/VR game development solutions create engaging, lifelike environments that resonate with players and enhance brand value.',
-        }}
+        serviceLists={vrServicelist}
+        serviceMapping={vrServices}
       />
 
       <ExpertiseGrid
@@ -110,8 +89,13 @@ export default async function ARVR(props: IARVRProps) {
         heading={tgheading}
         description={tgdescription}
         expertiseAreas={tgexpertiseAreas}
+        extraDataMapping={tgExpertiseData}
       />
-      <TechStack techStack="AR/VR" />
+      <TechnologiesUsed
+        technologies={vrTechnologies}
+        title="Our AI development tech stack "
+        subtitle="Our go-to tech for unmatched results"
+      />
       <AiServiceTable />
       <HowWeWork />
       <OurCommitment
