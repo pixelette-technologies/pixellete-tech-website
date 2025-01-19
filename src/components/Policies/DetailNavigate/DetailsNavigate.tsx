@@ -11,18 +11,22 @@ const DetailsNavigate = (props) => {
   const componentRef = useRef();
 
   useEffect(() => {
-    const handleResize = () => {
-      setIsOpenContent(window.innerWidth > 1000);
-    };
-    window.addEventListener('resize', handleResize);
-    handleResize();
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
+    if (typeof window !== 'undefined') {
+      const handleResize = () => {
+        setIsOpenContent(window.innerWidth > 1000);
+      };
+      window.addEventListener('resize', handleResize);
+      handleResize();
+      return () => {
+        window.removeEventListener('resize', handleResize);
+      };
+    }
   }, []);
 
   useEffect(() => {
-    setIsScrollDisabled(window.innerWidth <= 1000 && isOpenContent);
+    if (typeof window !== 'undefined') {
+      setIsScrollDisabled(window.innerWidth <= 1000 && isOpenContent);
+    }
   }, [isOpenContent]);
 
   useEffect(() => {
@@ -38,11 +42,14 @@ const DetailsNavigate = (props) => {
   };
 
   const handleOverviewItemClick = (title) => {
-    window.innerWidth <= 1000 && setIsOpenContent(false);
+    if (typeof window !== 'undefined' && window.innerWidth <= 1000) {
+      setIsOpenContent(false);
+    }
     scrollToContactUs(title);
   };
 
-  const widthForDesktop = window.innerWidth <= 1000 ? 30 : 0;
+  const widthForDesktop
+    = typeof window !== 'undefined' && window.innerWidth <= 1000 ? 30 : 0;
 
   return (
     <div className="detailNavigate">
@@ -159,9 +166,11 @@ const DetailsNavigate = (props) => {
 export default DetailsNavigate;
 
 export const scrollToContactUs = (id) => {
-  const contactForm = document.getElementById(id);
-  if (contactForm) {
-    const offset = contactForm.offsetTop - 10;
-    window.scrollTo({ top: offset, behavior: 'smooth' });
+  if (typeof window !== 'undefined') {
+    const contactForm = document.getElementById(id);
+    if (contactForm) {
+      const offset = contactForm.offsetTop - 10;
+      window.scrollTo({ top: offset, behavior: 'smooth' });
+    }
   }
 };
