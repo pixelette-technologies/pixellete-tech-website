@@ -12,6 +12,8 @@ import TechnologiesUsed from '@/components/Sections/TechnologyUsed/TechnologiesU
 import { expertiseAiChangeData } from '@/data/expertise/expertiseAiChangeData';
 import { aiFaq } from '@/data/faqs/aiFaqs';
 import {
+  aiExpertiseData,
+
   aiHeroBackgroundImage,
   aiHeroButtonLink,
   aiHeroButtonText,
@@ -25,7 +27,6 @@ import {
   aiTechnologies,
   backgroundImage,
   commitmentData,
-  extraDataMapping,
   header,
   ocdescription,
   ocheading,
@@ -89,7 +90,7 @@ export default async function AIservices(props: IAIservicesProps) {
         heading={tgheading}
         description={tgdescription}
         expertiseAreas={tgexpertiseAreas}
-        extraDataMapping={extraDataMapping}
+        extraDataMapping={aiExpertiseData}
       />
       <TechnologiesUsed
         technologies={aiTechnologies}

@@ -71,11 +71,11 @@ export const OurServices: React.FC<OurServicesProps> = ({
                   key={index}
                 >
                   <p onClick={() => handleServiceClick(item)}>
-                    <b>
+                    <h3>
                       {' '}
                       {item}
                       {' '}
-                    </b>
+                    </h3>
                   </p>
                 </p>
               ))}
@@ -92,7 +92,7 @@ export const OurServices: React.FC<OurServicesProps> = ({
           >
             <Image src={currentService.imageSrc} alt={currentService.title} width={100} height={100} />
             <br />
-            <p><b>{currentService.title}</b></p>
+            <h3>{currentService.title}</h3>
             <br />
             <p>{currentService.description}</p>
           </div>

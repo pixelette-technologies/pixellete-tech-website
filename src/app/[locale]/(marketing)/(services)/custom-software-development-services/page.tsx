@@ -1,28 +1,28 @@
 import { OurClients } from '@/components/Home/OurClients/OurClients';
 import { EvaluateBusiness } from '@/components/Sections/EvaluateBusiness/EvaluateBusiness';
 import { AiServiceTable } from '@/components/Sections/Services/AiServiceTable/AiServiceTable';
-import ExpertiseGrid from '@/components/Sections/Services/ExpertiseGrid/ExpertiseGrid';
 import FaqsSection from '@/components/Sections/Services/FAQs/FaqsSection';
 import { HeroSection } from '@/components/Sections/Services/HeroSection/HeroSection';
 import { HowWeWork } from '@/components/Sections/Services/HowWeWork/HowWeWork';
 import { OurCommitment } from '@/components/Sections/Services/OurCommitment/OurCommitment';
 import { OurServices } from '@/components/Sections/Services/OurServices/OurServices';
 import { TechnologyGrid } from '@/components/Sections/Services/TechnologyGrid/TechnologyGrid';
-import { TechStack } from '@/components/Sections/Services/TechStack/TechStack';
-import { expertiseAiChangeData } from '@/data/expertise/expertiseAiChangeData';
+import TechnologiesUsed from '@/components/Sections/TechnologyUsed/TechnologiesUsed';
 import { aiFaq } from '@/data/faqs/aiFaqs';
 import {
-  aiHeroBackgroundImage,
-  aiHeroButtonLink,
-  aiHeroButtonText,
-  aiHeroDescription,
-  aiHeroHeading,
-  aiHeroImages,
-  aiServicesDescription,
-  aiServicesHeading,
-  backgroundImage,
   commitmentData,
-  header,
+  customDevelopmentExpertiseData,
+  customDevelopmentHeroBackgroundImage,
+  customDevelopmentHeroButtonLink,
+  customDevelopmentHeroButtonText,
+  customDevelopmentHeroDescription,
+  customDevelopmentHeroHeading,
+  customDevelopmentHeroImages,
+  customDevelopmentServicelist,
+  customDevelopmentServices,
+  customDevelopmentServicesDescription,
+  customDevelopmentServicesHeading,
+  customDevelopmentTechnologies,
   ocdescription,
   ocheading,
   tgdescription,
@@ -41,12 +41,14 @@ export async function generateMetadata(props: ICustomSoftwareDevelopmentProps) {
   const { locale } = await props.params;
   const t = await getTranslations({
     locale,
-    namespace: 'About',
+    namespace: 'CustomSoftwareDevelopment',
+
   });
 
   return {
     title: t('meta_title'),
     description: t('meta_description'),
+    keywords: t('meta_keywords'),
   };
 }
 
@@ -61,56 +63,31 @@ export default async function CustomSoftwareDevelopment(props: ICustomSoftwareDe
   return (
     <>
       <HeroSection
-        heading={aiHeroHeading}
-        description={aiHeroDescription}
-        buttonText={aiHeroButtonText}
-        buttonLink={aiHeroButtonLink}
-        backgroundImage={aiHeroBackgroundImage}
-        images={aiHeroImages}
+        heading={customDevelopmentHeroHeading}
+        description={customDevelopmentHeroDescription}
+        buttonText={customDevelopmentHeroButtonText}
+        buttonLink={customDevelopmentHeroButtonLink}
+        backgroundImage={customDevelopmentHeroBackgroundImage}
+        images={customDevelopmentHeroImages}
       />
       <OurClients />
       <OurServices
-        heading={aiServicesHeading}
-        description={aiServicesDescription}
-        serviceLists={[
-          {
-            title: 'AI Solutions',
-            items: [
-              'Software Consulting Services',
-              'API Development Services',
-              'Custom CRM Development Services',
-              'Custom E-Commerce Development',
-            ],
-          },
-          {
-            title: 'AI Applications',
-            items: [
-              'Custom Software Development Services',
-              ' Enterprise Software Development Services',
-              ' Software Product Development Services',
-              'Software Integration Services',
-            ],
-          },
-        ]}
-        highlightedService={{
-          imageSrc: '/images/aiServices/s_1.svg',
-          title: 'Software Consulting Services',
-          description:
-      'As a trusted customized software development company, we assess your business needs, design the ideal software structure, and deliver custom software services that maximize value. Our dedicated team uses deep technical expertise to create tailored solutions that enhance productivity and efficiency.',
-        }}
-      />
-
-      <ExpertiseGrid
-        header={header}
-        marqueeData={expertiseAiChangeData}
-        backgroundImage={backgroundImage}
+        heading={customDevelopmentServicesHeading}
+        description={customDevelopmentServicesDescription}
+        serviceLists={customDevelopmentServicelist}
+        serviceMapping={customDevelopmentServices}
       />
       <TechnologyGrid
         heading={tgheading}
         description={tgdescription}
         expertiseAreas={tgexpertiseAreas}
+        extraDataMapping={customDevelopmentExpertiseData}
       />
-      <TechStack techStack="custom software" />
+      <TechnologiesUsed
+        technologies={customDevelopmentTechnologies}
+        title="Our custom software development tech stack"
+        subtitle="Our go-to tech for unmatched results"
+      />
       <AiServiceTable />
       <HowWeWork />
       <OurCommitment

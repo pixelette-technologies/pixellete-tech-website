@@ -20,7 +20,7 @@ export const tgexpertiseAreas = [
 ];
 
 // Define the mapping for additional data
-export const extraDataMapping = {
+export const aiExpertiseData = {
   'Machine Learning': {
     title: 'Machine Learning Insights',
     description:

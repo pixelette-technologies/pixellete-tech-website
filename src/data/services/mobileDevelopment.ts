@@ -6,55 +6,44 @@ export const header = {
 
 export const backgroundImage = '/images/aiServices/serviceSectionBackground.svg';
 
-export const tgheading = 'Our software development service guarantees';
+export const tgheading = 'Our mobile app development service expertise';
 
 export const tgdescription
-  = 'We’re a globally recognized and trusted software development company focused on providing custom digital solutions.';
+  = 'Our goal is to drive your success with secure mobile application development services for seamless and engaging user experiences. We’re a globally recognized and trusted mobile app development company focused on transformative digital solutions.';
 
 export const tgexpertiseAreas = [
-  { title: 'Reliable Performance' },
+  { title: 'Responsive Design' },
   { title: 'Custom Functionality' },
-  { title: 'Agile Delivery' },
-  { title: 'Scalable Solutions' },
-  { title: 'Fully Secure' },
+  { title: 'Rapid Development' },
+  { title: 'Scalable Architecture' },
+  { title: 'Top Notch Security' },
   { title: 'Easy Integration' },
-  { title: 'Support and Maintenance' },
-  { title: 'Reliable Performance' },
+  { title: 'Continued Support' },
+  { title: 'Responsive Design' },
 ];
-
-export const customDevelopmentExpertiseData = {
-  'Reliable Performance': {
-    title: 'Reliable Performance',
+export const tgExpertiseData = {
+  'Machine Learning': {
+    title: 'Machine Learning Insights',
     description:
-          'We develop software solutions with rigorous performance standards, ensuring your applications run efficiently under varying loads and usage patterns for a smooth user experience.',
+        'Explore advanced algorithms and techniques for supervised and unsupervised learning.',
   },
-  'Custom Functionality': {
-    title: 'Custom Functionality',
-    description: 'Our team designs software with custom features suited to your business needs, improving workflow efficiency and delivering a user experience that drives productivity.',
+  'Deep Learning': {
+    title: 'Deep Learning Revolution',
+    description: 'Understand neural networks, CNNs, and RNNs for deep learning systems.',
   },
-  'Agile Delivery': {
-    title: 'Agile Delivery',
-    description: 'With agile methodologies, we ensure timely project completion without compromising quality, allowing you to adapt to market demands quickly and effectively.',
+  'Natural Language Processing (NLP)': {
+    title: 'NLP Applications',
+    description: 'Discover how NLP powers chatbots, sentiment analysis, and more.',
   },
-  'Scalable Solutions': {
-    title: 'Scalable Solutions',
+  'Robotic Process Automation': {
+    title: 'Automation Simplified',
     description:
-          'We develop scalable software architecture that support your growth, ready to accommodate more users, data, and features as your business expands.',
+        'Learn about streamlining workflows with RPA for enhanced productivity.',
   },
-  'Fully Secure': {
-    title: 'Fully Secure',
+  'Computer Vision': {
+    title: 'Vision Beyond Limits',
     description:
-          'Our software development service integrates best-in-class security measures, minimizing risks and protecting your data from threats to maintain user trust and regulatory compliance.',
-  },
-  'Easy Integration': {
-    title: 'Easy Integration',
-    description:
-          'We develop software that is built to integrate smoothly with your existing systems, third-party applications, and data sources, enhancing functionality while preserving your current workflows.',
-  },
-  'Support and Maintenance': {
-    title: 'Support and Maintenance',
-    description:
-          'We provide ongoing maintenance and updates, ensuring that your software adapts to technological changes and continues delivering value.',
+        'Dive into image recognition, object detection, and real-time vision systems.',
   },
 };
 
@@ -65,7 +54,7 @@ export const ocdescription
 
 export const commitmentData = [
   {
-    img: '/images/customDevelopmentServices/MOTV.svg',
+    img: '/images/mobileAppServices/blackHole.svg',
     value1: '80%',
     value2: '85%',
     value3: '60%',
@@ -74,7 +63,7 @@ export const commitmentData = [
     desc3: 'Improvement in overall efficiency',
   },
   {
-    img: '/images/customDevelopmentServices/YOGO.svg',
+    img: '/images/mobileAppServices/chillow.svg',
     value1: '200%',
     value2: '70%',
     value3: '3X',
@@ -83,7 +72,7 @@ export const commitmentData = [
     desc3: 'Increase in real-time handling capacity',
   },
   {
-    img: '/images/customDevelopmentServices/FIAT.svg',
+    img: '/images/mobileAppServices/logo.svg',
     value1: '90%',
     value2: '95%',
     desc1: 'Satisfaction with speech quality',
@@ -91,98 +80,113 @@ export const commitmentData = [
   },
 ];
 
-export const customDevelopmentHeroHeading = 'Custom Software Development Services';
+export const mobileDevelopmentHeroHeading = 'Mobile App Development Services';
 
-export const customDevelopmentHeroDescription
+export const mobileDevelopmentHeroDescription
   = 'From concept to deployment, we deliver adaptive, scalable AI solutions that bring your vision of intelligent technology to life.';
 
-export const customDevelopmentHeroButtonText = 'AI Development Services';
+export const mobileDevelopmentHeroButtonText = 'AI Development Services';
 
-export const customDevelopmentHeroButtonLink = 'AI Development Services';
+export const mobileDevelopmentHeroButtonLink = 'AI Development Services';
 
-export const customDevelopmentHeroBackgroundImage = '/images/customDevelopmentServices/heroSectionBackground.svg';
+export const mobileDevelopmentHeroBackgroundImage = '/images/mobileAppServices/heroSectionBackground.svg';
 
-export const customDevelopmentHeroImages = [
-  { src: '/images/customDevelopmentServices/box_1.svg', alt: 'box 1' },
-  { src: '/images/customDevelopmentServices/box_2.svg', alt: 'box 2' },
-  { src: '/images/customDevelopmentServices/box_3.svg', alt: 'box 3' },
-  { src: '/images/customDevelopmentServices/box_4.svg', alt: 'box 4' },
+export const mobileDevelopmentHeroImages = [
+  { src: '/images/mobileAppServices/box_1.svg', alt: 'box 1' },
+  { src: '/images/mobileAppServices/box_2.svg', alt: 'box 2' },
+  { src: '/images/mobileAppServices/box_3.svg', alt: 'box 3' },
+  { src: '/images/mobileAppServices/box_4.svg', alt: 'box 4' },
 ];
 
-export const customDevelopmentServicesHeading = 'Our Services';
+export const mobileDevelopmentServicesHeading = 'Our Services';
 
-export const customDevelopmentServicesDescription
-  = 'Our custom software development service focuses on creating efficient, user-centric solutions. With our services, we provide a transparent partnership that ensures impactful, innovative results in custom software solutions.';
+export const mobileDevelopmentServicesDescription
+  = 'The mobile era is reshaping businesses and how they engage with users. To stand out, companies need a powerful, responsive design for mobile apps that boosts visibility and customer connections.'
+  ;
 
-export const customDevelopmentServicelist
+export const mobileDevelopmentServicelist
 = [
   {
     title: 'AI Solutions',
     items: [
-      'Software Consulting Services',
-      'Custom Software Development Services',
-      'Enterprise Software Development Services',
-      'Software Product Development Services',
+      'Generative AI',
+      'AI Security',
+      'AI Design',
+      'AI Ops',
+      'Automation Solutions',
     ],
   },
   {
     title: 'AI Applications',
     items: [
-      'Software Integration Services',
-      'Custom CRM Development Services',
-      'API Development Services',
-      'Custom E-Commerce Development',
+      'Chatbots & Conversational AI',
+      'Recommendations Engines',
+      'AI-as-a-Service (AIaaS)',
+      'AI Product Development',
+      'Predictive Modeling',
     ],
   },
 ];
-export const customDevelopmentServices = {
-  'Software Consulting Services': {
+export const mobileDevelopmentServices = {
+  'Generative AI': {
     imageSrc: '/images/aiServices/s_1.svg',
-    title: 'Software Consulting Services',
+    title: 'Generative AI',
     description:
-    'As a trusted customized software development company, we assess your business needs, design the ideal software structure, and deliver custom software services that maximize value. Our dedicated team uses deep technical expertise to create tailored solutions that enhance productivity and efficiency.',
+    'We are recognized as a leading generative AI development company and bring deep expertise in generative AI tools like GPT-4, GPT-3.5, and DALL-E. Our models provide visual content analysis to aid in brand identity, data analysis, business intelligence, and visualization, offering tailored generative AI development services.',
   },
-  'Custom Software Development Services': {
+  'AI Security': {
     imageSrc: '/images/aiServices/s_2.svg',
-    title: 'Custom Software Development Services',
+    title: 'AI Security',
     description:
-    'In today’s fast-paced market, custom software development gives businesses a competitive edge. As a leading software development agency, we provide specialized software development tailored to your business goals and designed to drive results.',
+    'Our AI security solutions leverage advanced machine learning algorithms to detect and prevent cyber threats in real time, ensuring robust and reliable system protection.',
   },
-  'Enterprise Software Development Services': {
+  'AI Design': {
     imageSrc: '/images/aiServices/s_3.svg',
-    title: 'Enterprise Software Development Services',
+    title: 'AI Design',
     description:
-    'We develop custom enterprise software development solutions to help large businesses scale and optimize key functions. Our offerings improve business infrastructure while driving sustainable growth.',
+    'We provide cutting-edge AI-powered design solutions that enhance user experiences, optimize workflows, and drive creative innovation.',
   },
-  'Software Product Development Services': {
+  'AI Ops': {
     imageSrc: '/images/aiServices/s_4.svg',
-    title: 'Software Product Development Services',
+    title: 'AI Ops',
     description:
-    'We are a comprehensive software product development company that manages every stage of your project—from analysis and development to launch and maintenance. With our software development as a service, we provide secure, compliant, and innovative products tailored to each client\'s needs',
+    'Streamline your operations with AI-driven automation and insights that improve efficiency, reduce downtime, and maximize productivity.',
   },
-  'Software Integration Services': {
+  'Automation Solutions': {
     imageSrc: '/images/aiServices/s_5.svg',
-    title: 'Software Integration Services',
+    title: 'Automation Solutions',
     description:
-    'Adopting new technologies can challenge your existing systems. Our software developers handle implementation and integration with best practices in architectural design, testing, and optimization for smooth transitions.',
+    'Implement intelligent automation solutions that empower businesses to achieve greater accuracy, speed, and scalability in their operations.',
   },
-  'Custom CRM Development Services': {
+  'Chatbots & Conversational AI': {
     imageSrc: '/images/aiServices/s_6.svg',
-    title: 'Custom CRM Development Services',
+    title: 'Chatbots & Conversational AI',
     description:
-    'We specialize in custom CRM software development services that automate workflows, strengthen customer relationships, and enhance operational efficiency.',
+    'Develop interactive chatbots and conversational AI tools that deliver personalized customer engagement and support.',
   },
-  'API Development Services': {
+  'Recommendations Engines': {
     imageSrc: '/images/aiServices/s_1.svg',
-    title: 'API Development Services',
+    title: 'Recommendations Engines',
     description:
-    'Our team provides sturdy API development and integration solutions that connect your software with customers and vendors, enhancing your business’s reach and revenue opportunities.',
+    'Build recommendation systems that provide users with highly relevant suggestions, enhancing user satisfaction and retention.',
   },
-  'Custom E-Commerce Development': {
+  'AI-as-a-Service (AIaaS)': {
     imageSrc: '/images/aiServices/s_2.svg',
-    title: 'Custom E-Commerce Development',
+    title: 'AI-as-a-Service (AIaaS)',
     description:
-    'Our e-commerce development services create tailored platforms that elevate online shopping experiences, seamlessly integrating with your current operations to support your sales strategy.',
+    'Deliver scalable AI capabilities on-demand, enabling businesses to quickly integrate AI into their processes.',
+  },
+  'AI Product Development': {
+    imageSrc: '/images/aiServices/s_3.svg',
+    title: 'AI Product Development',
+    description:
+    'Create innovative AI-driven products that cater to specific business needs, leveraging advanced AI technologies.',
+  },
+  'Predictive Modeling': {
+    imageSrc: '/images/aiServices/s_4.svg',
+    title: 'Predictive Modeling',
+    description:
+    'Harness the power of predictive analytics to forecast trends, identify opportunities, and make data-driven decisions.',
   },
 };
 
@@ -196,7 +200,7 @@ type Technologies = {
   [key: string]: Technology[];
 };
 
-export const customDevelopmentTechnologies: Technologies = {
+export const mobileDevelomentTechnologies: Technologies = {
   AI_ML_BI: [
     { id: 1, name: 'Python', icon: '/images/tech/aws.svg' },
     { id: 2, name: 'PyTorch', icon: '/images/tech/kotlin.svg' },
