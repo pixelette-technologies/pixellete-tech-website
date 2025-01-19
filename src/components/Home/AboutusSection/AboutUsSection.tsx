@@ -79,7 +79,7 @@ const AboutUsSection: React.FC = () => {
           <Image src="/images/aboutSection/aboutRightBackground.svg" alt="background" width={100} height={100} />
         </div>
       </Container>
-      <div className="aboutUsSection">
+      <div className="aboutUsSection" id='sideMargin'>
         <Container className="main margins">
           <section data-aos="fade-up" data-aos-duration="1000">
             <div>

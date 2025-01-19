@@ -49,7 +49,7 @@
 .millstoneList-itemRight > header > img {
   height: 4rem;
   width: 4rem;
-  margin-top: 2.9rem;
+  /* margin-top: 2.9rem; */
 }
 
 .millstoneList-itemLeft > section,
@@ -61,7 +61,7 @@
 .millstoneList-itemLeft > section > img,
 .millstoneList-itemRight > section > img {
   position: absolute;
-  top: 2.8rem;
+  /* top: 2.8rem; */
 }
 
 .millstoneList-itemLeft > section > img {
@@ -152,5 +152,5 @@
 }
 
 .blur {
-  filter: blur(5px);
+  filter: blur(0);
 }

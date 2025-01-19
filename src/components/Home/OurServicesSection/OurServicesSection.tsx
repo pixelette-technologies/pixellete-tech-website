@@ -7,7 +7,7 @@ import './ourservicessection.css';
 
 const OurServicesSection: React.FC = () => {
   return (
-    <div className="technologyStack">
+    <div className="technologyStack" id='sideMargin'>
       <center>
         <h2>
           We bring full-stack development services to the table
@@ -39,7 +39,7 @@ const OurServicesSection: React.FC = () => {
             </div>
           ))}
         </div>
-        <center>
+        {/* <center>
           <Button className="primary" animation="fade-up">
             <span
               style={{
@@ -53,7 +53,7 @@ const OurServicesSection: React.FC = () => {
               <FaExternalLinkAlt />
             </span>
           </Button>
-        </center>
+        </center> */}
       </Container>
     </div>
   );

@@ -4,7 +4,7 @@ import './cards.css';
 
 export const YourPlanCardGrid = ({ heading, text, data }) => {
   return (
-    <div className="yourPlanCardGrid">
+    <div className="yourPlanCardGrid" id='sideMargin'>
       <Container className="main margins">
         <h2
         >

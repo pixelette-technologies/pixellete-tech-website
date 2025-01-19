@@ -386,3 +386,9 @@ p {
   opacity: 0.75;
   color: #000;
 }
+
+
+
+#sideMargin{
+  padding: 0 10rem;
+}

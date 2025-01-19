@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { Container } from "@/components/Feature/Container/Container";
 import data from "@/data";
 import './index.css'
+import type { ref } from "yup";
 const MillstoneList = () => {
   return (
     <div
@@ -51,34 +52,13 @@ const MillstoneList = () => {
 
 export default MillstoneList;
 
-const useBlurEffect = () => {
-  const { ref, inView, entry } = useInView({
-    threshold: [0, 0.5, 1],
-    rootMargin: "-30% 0px -30% 0px",
-  });
 
-  const [isBlurred, setIsBlurred] = useState(true);
-
-  useEffect(() => {
-    if (entry) {
-      if (entry.intersectionRatio >= 0.5) {
-        setIsBlurred(false);
-      } else {
-        setIsBlurred(true);
-      }
-    }
-  }, [entry]);
-
-  return { ref, isBlurred };
-};
 
 const ItemLeft = (props) => {
-  const { ref, isBlurred } = useBlurEffect();
 
   return (
     <div
-      className={`millstoneList-itemLeft ${isBlurred ? "blur" : ""}`}
-      ref={ref}
+      className={`millstoneList-itemLeft`}
     >
       <section>
         <div>
@@ -99,12 +79,10 @@ const ItemLeft = (props) => {
 };
 
 const ItemRight = (props) => {
-  const { ref, isBlurred } = useBlurEffect();
 
   return (
     <div
-      className={`millstoneList-itemRight ${isBlurred ? "blur" : ""}`}
-      ref={ref}
+      className={`millstoneList-itemRight`}
     >
       <header>
         <img src="/images/casestudies/dot.svg" alt="icon" />

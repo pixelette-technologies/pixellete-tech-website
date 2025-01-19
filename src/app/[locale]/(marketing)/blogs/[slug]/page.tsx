@@ -352,7 +352,7 @@ const page = (props: any) => {
                                   <img
                                     src={`https:${file.url}`}
                                     alt={title}
-                                    style={{ maxWidth: '100%', height: '180px' }}
+                                    style={{ maxWidth: '100%' }}
                                     // className="contentImage"
                                   />
                                 );
