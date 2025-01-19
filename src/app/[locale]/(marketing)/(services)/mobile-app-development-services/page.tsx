@@ -9,26 +9,31 @@ import { OurCommitment } from '@/components/Sections/Services/OurCommitment/OurC
 import { OurServices } from '@/components/Sections/Services/OurServices/OurServices';
 import { TechnologyGrid } from '@/components/Sections/Services/TechnologyGrid/TechnologyGrid';
 import { TechStack } from '@/components/Sections/Services/TechStack/TechStack';
+import TechnologiesUsed from '@/components/Sections/TechnologyUsed/TechnologiesUsed';
 import { expertiseAiChangeData } from '@/data/expertise/expertiseAiChangeData';
 import { aiFaq } from '@/data/faqs/aiFaqs';
 import {
-  aiHeroBackgroundImage,
-  aiHeroButtonLink,
-  aiHeroButtonText,
-  aiHeroDescription,
-  aiHeroHeading,
-  aiHeroImages,
-  aiServicesDescription,
-  aiServicesHeading,
   backgroundImage,
   commitmentData,
   header,
+  mobileDevelomentTechnologies,
+  mobileDevelopmentHeroBackgroundImage,
+  mobileDevelopmentHeroButtonLink,
+  mobileDevelopmentHeroButtonText,
+  mobileDevelopmentHeroDescription,
+  mobileDevelopmentHeroHeading,
+  mobileDevelopmentHeroImages,
+  mobileDevelopmentServicelist,
+  mobileDevelopmentServices,
+  mobileDevelopmentServicesDescription,
+  mobileDevelopmentServicesHeading,
   ocdescription,
   ocheading,
   tgdescription,
   tgexpertiseAreas,
+  tgExpertiseData,
   tgheading,
-} from '@/data/services/mobilDevelopment';
+} from '@/data/services/mobileDevelopment';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 
 // Use the imported objects as needed in your component
@@ -41,12 +46,13 @@ export async function generateMetadata(props: IMobileDevelopmentProps) {
   const { locale } = await props.params;
   const t = await getTranslations({
     locale,
-    namespace: 'About',
+    namespace: 'MobileDevelopment',
   });
 
   return {
     title: t('meta_title'),
     description: t('meta_description'),
+    keywords: t('meta_keywords'),
   };
 }
 
@@ -61,42 +67,19 @@ export default async function MobileDevelopment(props: IMobileDevelopmentProps) 
   return (
     <>
       <HeroSection
-        heading={aiHeroHeading}
-        description={aiHeroDescription}
-        buttonText={aiHeroButtonText}
-        buttonLink={aiHeroButtonLink}
-        backgroundImage={aiHeroBackgroundImage}
-        images={aiHeroImages}
+        heading={mobileDevelopmentHeroHeading}
+        description={mobileDevelopmentHeroDescription}
+        buttonText={mobileDevelopmentHeroButtonText}
+        buttonLink={mobileDevelopmentHeroButtonLink}
+        backgroundImage={mobileDevelopmentHeroBackgroundImage}
+        images={mobileDevelopmentHeroImages}
       />
       <OurClients />
       <OurServices
-        heading={aiServicesHeading}
-        description={aiServicesDescription}
-        serviceLists={[
-          {
-            title: 'AI Solutions',
-            items: [
-              ' iOS App Development',
-              'PWA Development',
-              'Cross Platform App Development',
-              'Native App Development',
-            ],
-          },
-          {
-            title: 'AI Applications',
-            items: [
-              'Android App Development',
-              'Hybrid App Development',
-              'Wearable & Embedded App Development',
-            ],
-          },
-        ]}
-        highlightedService={{
-          imageSrc: '/images/aiServices/s_1.svg',
-          title: ' iOS App Development',
-          description:
-      'Bring your ideas to life with scalable, reliable iOS mobile app development that integrates smoothly with the Apple ecosystem. Our mobile app development services use the latest tech and tailored features to create iOS apps that align with your business goals and elevate user satisfaction.',
-        }}
+        heading={mobileDevelopmentServicesHeading}
+        description={mobileDevelopmentServicesDescription}
+        serviceLists={mobileDevelopmentServicelist}
+        serviceMapping={mobileDevelopmentServices}
       />
 
       <ExpertiseGrid
@@ -108,6 +91,12 @@ export default async function MobileDevelopment(props: IMobileDevelopmentProps) 
         heading={tgheading}
         description={tgdescription}
         expertiseAreas={tgexpertiseAreas}
+        extraDataMapping={tgExpertiseData}
+      />
+      <TechnologiesUsed
+        technologies={mobileDevelomentTechnologies}
+        title="Our AI development tech stack "
+        subtitle="Our go-to tech for unmatched results"
       />
       <TechStack techStack="mobile app" />
       <AiServiceTable />

@@ -1,6 +1,7 @@
 import type { FC } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { FaExternalLinkAlt } from 'react-icons/fa';
 import { v4 as uuidv4 } from 'uuid';
 import './cards.css';
 
@@ -46,9 +47,14 @@ const YourPlanCard: FC<YourPlanCardProps> = ({ data }) => {
             </div>
             <p>{el.name}</p>
             <p>{el.description}</p>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '0.3rem', marginTop:'1rem' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.3rem', marginTop: '1rem' }}>
+              <Link href={el.path}>
+                {el.link}
+                {' '}
+                <FaExternalLinkAlt />
+              </Link>
               <div>
-              <p>{el.link}</p>
+                <p>{el.link}</p>
               </div>
               {' '}
               <div>

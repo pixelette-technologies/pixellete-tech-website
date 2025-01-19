@@ -8,7 +8,7 @@ import { HowWeWork } from '@/components/Sections/Services/HowWeWork/HowWeWork';
 import { OurCommitment } from '@/components/Sections/Services/OurCommitment/OurCommitment';
 import { OurServices } from '@/components/Sections/Services/OurServices/OurServices';
 import { TechnologyGrid } from '@/components/Sections/Services/TechnologyGrid/TechnologyGrid';
-import { TechStack } from '@/components/Sections/Services/TechStack/TechStack';
+import TechnologiesUsed from '@/components/Sections/TechnologyUsed/TechnologiesUsed';
 import { expertiseAiChangeData } from '@/data/expertise/expertiseAiChangeData';
 import { aiFaq } from '@/data/faqs/aiFaqs';
 import {
@@ -27,17 +27,21 @@ import {
   ocheading,
   tgdescription,
   tgexpertiseAreas,
+  tgExpertiseData,
   tgheading,
-} from '@/data/services/uiUX';
+  webDevelopmentServicelist,
+  webDevelopmentServices,
+  webDevelopmentTechnologies,
+} from '@/data/services/webDevelopment';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 
 // Use the imported objects as needed in your component
 
-type IUIUXProps = {
+type IWebDevelopmentProps = {
   params: Promise<{ slug: string; locale: string }>;
 };
 
-export async function generateMetadata(props: IUIUXProps) {
+export async function generateMetadata(props: IWebDevelopmentProps) {
   const { locale } = await props.params;
   const t = await getTranslations({
     locale,
@@ -50,7 +54,7 @@ export async function generateMetadata(props: IUIUXProps) {
   };
 }
 
-export default async function UIUX(props: IUIUXProps) {
+export default async function WebDevelopment(props: IWebDevelopmentProps) {
   const { locale } = await props.params;
   setRequestLocale(locale);
   // const t = await getTranslations({
@@ -72,31 +76,8 @@ export default async function UIUX(props: IUIUXProps) {
       <OurServices
         heading={aiServicesHeading}
         description={aiServicesDescription}
-        serviceLists={[
-          {
-            title: 'AI Solutions',
-            items: [
-              'Web and Mobile UI/UX Design',
-              'App and Website Redesign',
-              'UI/UX Design Audit',
-              'Design Concept Development',
-            ],
-          },
-          {
-            title: 'AI Applications',
-            items: [
-              'UI/UX Design Research',
-              'Design Strategy Development',
-              'Digital Product Design and Development Consulting',
-            ],
-          },
-        ]}
-        highlightedService={{
-          imageSrc: '/images/aiServices/s_1.svg',
-          title: 'Web and Mobile UI/UX Design',
-          description:
-      'As a top UI UX design agency, we offer end-to-end digital product strategy consulting that strengthens your app’s value. Our experts assess architecture, understand business dynamics, and provide strategic guidance on complex challenges to set you on a success path.',
-        }}
+        serviceLists={webDevelopmentServicelist}
+        serviceMapping={webDevelopmentServices}
       />
 
       <ExpertiseGrid
@@ -108,8 +89,14 @@ export default async function UIUX(props: IUIUXProps) {
         heading={tgheading}
         description={tgdescription}
         expertiseAreas={tgexpertiseAreas}
+        extraDataMapping={tgExpertiseData}
       />
-      <TechStack techStack="UI/UX design &" />
+      <TechnologiesUsed
+        technologies={webDevelopmentTechnologies}
+        title="Our custom software development tech stack"
+        subtitle="Our go-to tech for unmatched results"
+      />
+      {/* <TechStack techStack="web" /> */}
       <AiServiceTable />
       <HowWeWork />
       <OurCommitment

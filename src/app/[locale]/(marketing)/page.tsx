@@ -3,11 +3,12 @@ import { CaseStudies } from '@/components/Home/CaseStudiesSection/CaseStudies';
 import { HeroSection } from '@/components/Home/HeroSection/HeroSection';
 import { OurClients } from '@/components/Home/OurClients/OurClients';
 import OurServicesSection from '@/components/Home/OurServicesSection/OurServicesSection';
-import TechnologiesUsed from '@/components/Home/TechnologyUsed/TechnologiesUsed';
 import { Testimonial } from '@/components/Home/Testimonial/Testimonial';
 import WhatMakeUsSpecialHome from '@/components/Home/WhatMakeUsSpecial/WhatMakeUsSpecial';
 import { YourPlan } from '@/components/Home/YourPlan/YourPlan';
 import { EvaluateBusiness } from '@/components/Sections/EvaluateBusiness/EvaluateBusiness';
+import TechnologiesUsed from '@/components/Sections/TechnologyUsed/TechnologiesUsed';
+import { homeTechnologies } from '@/data/technology/homeTechnologies';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 
 type IIndexProps = {
@@ -43,7 +44,11 @@ export default async function Index(props: IIndexProps) {
       <WhatMakeUsSpecialHome />
       <OurServicesSection />
       <YourPlan />
-      <TechnologiesUsed />
+      <TechnologiesUsed
+        technologies={homeTechnologies}
+        title="Benefit from our unmatched tech stack expertise"
+        subtitle="With our team's deep mastery in the latest frameworks, languages, and tools, we build scalable, secure, and high-performance applications that set new standards. From ideation to deployment, our technology capabilities are designed to drive your business forward."
+      />
       <CaseStudies />
       {/* <CaseStudies /> this is working just need to uncomment */}
       <Testimonial background="" />

@@ -8,7 +8,7 @@ import { HowWeWork } from '@/components/Sections/Services/HowWeWork/HowWeWork';
 import { OurCommitment } from '@/components/Sections/Services/OurCommitment/OurCommitment';
 import { OurServices } from '@/components/Sections/Services/OurServices/OurServices';
 import { TechnologyGrid } from '@/components/Sections/Services/TechnologyGrid/TechnologyGrid';
-import { TechStack } from '@/components/Sections/Services/TechStack/TechStack';
+import TechnologiesUsed from '@/components/Sections/TechnologyUsed/TechnologiesUsed';
 import { expertiseAiChangeData } from '@/data/expertise/expertiseAiChangeData';
 import { aiFaq } from '@/data/faqs/aiFaqs';
 import {
@@ -21,23 +21,27 @@ import {
   aiServicesDescription,
   aiServicesHeading,
   backgroundImage,
+  blockchainServicelist,
+  blockchainServices,
+  blockchainTechnologies,
   commitmentData,
   header,
   ocdescription,
   ocheading,
   tgdescription,
   tgexpertiseAreas,
+  tgExpertiseData,
   tgheading,
-} from '@/data/services/webDevelopment';
+} from '@/data/services/blockchainDevelopment';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 
 // Use the imported objects as needed in your component
 
-type IWebDevelopmentProps = {
+type IBlockchainDevelopmentProps = {
   params: Promise<{ slug: string; locale: string }>;
 };
 
-export async function generateMetadata(props: IWebDevelopmentProps) {
+export async function generateMetadata(props: IBlockchainDevelopmentProps) {
   const { locale } = await props.params;
   const t = await getTranslations({
     locale,
@@ -50,7 +54,7 @@ export async function generateMetadata(props: IWebDevelopmentProps) {
   };
 }
 
-export default async function WebDevelopment(props: IWebDevelopmentProps) {
+export default async function BlockchainDevelopment(props: IBlockchainDevelopmentProps) {
   const { locale } = await props.params;
   setRequestLocale(locale);
   // const t = await getTranslations({
@@ -72,33 +76,8 @@ export default async function WebDevelopment(props: IWebDevelopmentProps) {
       <OurServices
         heading={aiServicesHeading}
         description={aiServicesDescription}
-        serviceLists={[
-          {
-            title: 'AI Solutions',
-            items: [
-              'Ecommerce Development',
-              'Custom CMS Development',
-              'Web Portal Development',
-            ],
-          },
-          {
-            title: 'AI Applications',
-            items: [
-              'Custom Web Development',
-              'Web Application Development',
-              'Website Design & Development',
-            ],
-          },
-        ]}
-        highlightedService={{
-          imageSrc: '/images/aiServices/s_1.svg',
-          title: 'Ecommerce Development',
-          description:
-      `Our ecommerce website development services are crafted to drive sales and boost user engagement through seamless, intuitive design. 
-
-As a leading web development company, we create custom, scalable platforms with robust functionalities and secure payment options that meet your business needs. 
-Whether you're a startup or an established brand, our ecommerce web development team delivers user-friendly, optimized sites that elevate the customer experience and support growth.`,
-        }}
+        serviceLists={blockchainServicelist}
+        serviceMapping={blockchainServices}
       />
 
       <ExpertiseGrid
@@ -110,8 +89,14 @@ Whether you're a startup or an established brand, our ecommerce web development 
         heading={tgheading}
         description={tgdescription}
         expertiseAreas={tgexpertiseAreas}
+        extraDataMapping={tgExpertiseData}
       />
-      <TechStack techStack="web" />
+      <TechnologiesUsed
+        technologies={blockchainTechnologies}
+        title="Our AI development tech stack "
+        subtitle="Our go-to tech for unmatched results"
+      />
+      {/* <TechStack techStack="blockchain" /> */}
       <AiServiceTable />
       <HowWeWork />
       <OurCommitment

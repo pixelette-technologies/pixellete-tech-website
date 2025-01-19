@@ -1,12 +1,11 @@
 'use client';
 
 import { Container } from '@/components/Feature/Container/Container';
-import technologies from '@/data/technologies';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import styles from './technologiesused.module.css';
 
 type Technology = {
-  id: string;
+  id: number;
   name: string;
   icon: string;
 };
@@ -15,34 +14,27 @@ type Technologies = {
   [key: string]: Technology[];
 };
 
-const TechnologiesUsed: React.FC = () => {
-  const [activeTab, setActiveTab] = useState<keyof Technologies>('AI_ML_BI');
+type TechnologiesUsedProps = {
+  technologies: Technologies;
+  title: string;
+  subtitle: string;
+};
+
+const TechnologiesUsed: React.FC<TechnologiesUsedProps> = ({ technologies, title, subtitle }) => {
+  const [activeTab, setActiveTab] = useState<keyof Technologies>(Object.keys(technologies)[0] as keyof Technologies);
 
   return (
     <div className={styles.technologiesMain}>
       <Container className="main margins">
         <center>
-          <h1
-            id="h_ani"
-          >
-            Benefit from our unmatched tech
-            {' '}
-            <br />
-            stack expertise
-          </h1>
-          <p>
-            With our team&apos;s deep mastery in the latest frameworks,
-            languages, and tools, we build scalable, secure, and
-            high-performance applications that set new standards. From ideation
-            to deployment, our technology capabilities are designed to drive
-            your business forward.
-          </p>
-
+          <h1 id="h_ani">{title}</h1>
+          <p>{subtitle}</p>
         </center>
 
         <div className={styles.technologiesLayout}>
+          {/* Dynamic Tabs */}
           <div className={styles.tabsSection}>
-            {['AI_ML_BI', 'Software', 'Mobile', 'Blockchain'].map(tab => (
+            {Object.keys(technologies).map(tab => (
               <button
                 key={tab}
                 onClick={() => setActiveTab(tab as keyof Technologies)}
@@ -53,6 +45,7 @@ const TechnologiesUsed: React.FC = () => {
             ))}
           </div>
 
+          {/* Content Section */}
           <div className={`${styles.contentSection} ${activeTab ? styles.active : ''}`} key={activeTab}>
             <div className={styles.iconsContainer}>
               {technologies[activeTab]?.map(tech => (

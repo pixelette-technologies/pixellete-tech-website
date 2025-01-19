@@ -95,7 +95,7 @@ export const BlogSection: React.FC<BlogSectionProps> = ({ heading, text }) => {
               || 'Dive into our curated collection of updates and guides to deepen your understanding of diverse technologies.'}
             </p>
 
-            <Link href="/blogs" passHref>
+            <Link href="/blog" passHref>
               <Button className="primary" id="h_ani">
                 Explore Blogs
                 {' '}
@@ -123,7 +123,7 @@ export const BlogSection: React.FC<BlogSectionProps> = ({ heading, text }) => {
                 date={blog.fields.date || 'No date available'}
                 heading={blog.fields.name || 'No title'}
                 description={blog.fields.shortDescription || 'No description'}
-                to={`/blogs/${blog.fields.slug}`}
+                to={`/blog/${blog.fields.slug}`}
               />
             );
           })}

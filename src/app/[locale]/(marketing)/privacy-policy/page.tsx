@@ -1,5 +1,7 @@
 import { Container } from '@/components/Feature/Container/Container';
+import DetailsNavigate from '@/components/Policies/DetailNavigate/DetailsNavigate';
 import { EvaluateBusiness } from '@/components/Sections/EvaluateBusiness/EvaluateBusiness';
+import { privacyPolicy } from '@/data/policies/privacyPolicy';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import './index.css';
 
@@ -50,12 +52,12 @@ export default async function PrivacyPolicy(props: IAIservicesProps) {
               the United Kingdom.
             </p>
           </center>
-          {/* <DetailsNavigate
-            data={data.privacyPolicy}
+          <DetailsNavigate
+            data={privacyPolicy}
             headingIndex
             overViewIndex
             headerSection={false}
-          /> */}
+          />
         </div>
       </Container>
       <EvaluateBusiness />

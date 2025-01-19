@@ -8,18 +8,23 @@ import { HowWeWork } from '@/components/Sections/Services/HowWeWork/HowWeWork';
 import { OurCommitment } from '@/components/Sections/Services/OurCommitment/OurCommitment';
 import { OurServices } from '@/components/Sections/Services/OurServices/OurServices';
 import { TechnologyGrid } from '@/components/Sections/Services/TechnologyGrid/TechnologyGrid';
-import { TechStack } from '@/components/Sections/Services/TechStack/TechStack';
+import TechnologiesUsed from '@/components/Sections/TechnologyUsed/TechnologiesUsed';
 import { expertiseAiChangeData } from '@/data/expertise/expertiseAiChangeData';
 import { aiFaq } from '@/data/faqs/aiFaqs';
 import {
+  aiExpertiseData,
+
   aiHeroBackgroundImage,
   aiHeroButtonLink,
   aiHeroButtonText,
   aiHeroDescription,
   aiHeroHeading,
   aiHeroImages,
+  aiServicelist,
+  aiServices,
   aiServicesDescription,
   aiServicesHeading,
+  aiTechnologies,
   backgroundImage,
   commitmentData,
   header,
@@ -28,16 +33,16 @@ import {
   tgdescription,
   tgexpertiseAreas,
   tgheading,
-} from '@/data/services/blockchainDevelopment';
+} from '@/data/services/aiServices';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 
 // Use the imported objects as needed in your component
 
-type IBlockchainDevelopmentProps = {
+type IAIservicesProps = {
   params: Promise<{ slug: string; locale: string }>;
 };
 
-export async function generateMetadata(props: IBlockchainDevelopmentProps) {
+export async function generateMetadata(props: IAIservicesProps) {
   const { locale } = await props.params;
   const t = await getTranslations({
     locale,
@@ -50,7 +55,7 @@ export async function generateMetadata(props: IBlockchainDevelopmentProps) {
   };
 }
 
-export default async function BlockchainDevelopment(props: IBlockchainDevelopmentProps) {
+export default async function AIservices(props: IAIservicesProps) {
   const { locale } = await props.params;
   setRequestLocale(locale);
   // const t = await getTranslations({
@@ -72,34 +77,8 @@ export default async function BlockchainDevelopment(props: IBlockchainDevelopmen
       <OurServices
         heading={aiServicesHeading}
         description={aiServicesDescription}
-        serviceLists={[
-          {
-            title: 'AI Solutions',
-            items: [
-              'Blockchain Consulting',
-              ' DApp Development',
-              'DeFi Development',
-              'Asset Tokenization Platform',
-              'DAO Development',
-            ],
-          },
-          {
-            title: 'AI Applications',
-            items: [
-              'Crypto Wallet Development',
-              'Recommendations Engines',
-              'Cryptocurrency Exchange Development',
-              'Smart Contract Audit and Development',
-              'Layer 1 & Layer 2 Blockchain',
-            ],
-          },
-        ]}
-        highlightedService={{
-          imageSrc: '/images/aiServices/s_1.svg',
-          title: 'Blockchain Consulting',
-          description:
-      'We offer top-tier blockchain consulting to shape your vision into reality. From fresh builds to system upgrades, our blockchain development services ensure secure, scalable solutions aligned with your goals.',
-        }}
+        serviceLists={aiServicelist}
+        serviceMapping={aiServices}
       />
 
       <ExpertiseGrid
@@ -111,8 +90,13 @@ export default async function BlockchainDevelopment(props: IBlockchainDevelopmen
         heading={tgheading}
         description={tgdescription}
         expertiseAreas={tgexpertiseAreas}
+        extraDataMapping={aiExpertiseData}
       />
-      <TechStack techStack="blockchain" />
+      <TechnologiesUsed
+        technologies={aiTechnologies}
+        title="Our AI development tech stack "
+        subtitle="Our go-to tech for unmatched results"
+      />
       <AiServiceTable />
       <HowWeWork />
       <OurCommitment

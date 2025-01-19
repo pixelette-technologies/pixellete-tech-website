@@ -19,8 +19,8 @@ export const Button: FC<ButtonProps> = ({
   duration,
   children,
 }) => {
+  // const buttonClass = `${styles.btn} ${styles['glow-on-hover']} ${styles[`btn--${className}`] || ''}`.trim();
   const buttonClass = `${styles['glow-on-hover']} || ''}`.trim();
-
   return (
     <button
       onClick={onClick}

@@ -1,5 +1,6 @@
 'use client';
 import { Container } from '@/components/Feature/Container/Container';
+import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
 import './ourservices.css';
 
@@ -14,23 +15,28 @@ type HighlightedService = {
   description: string;
 };
 
+type ServiceMapping = {
+  [key: string]: HighlightedService;
+};
+
 type OurServicesProps = {
   heading: string;
   description: string;
   serviceLists: ServiceList[];
-  highlightedService: HighlightedService;
-  serviceMapping: Record<string, HighlightedService>; // Add this prop
+  serviceMapping: ServiceMapping; // Add this prop
 };
 
 export const OurServices: React.FC<OurServicesProps> = ({
   heading,
   description,
   serviceLists,
-  highlightedService,
   serviceMapping, // Accept mapping as a prop
 }) => {
-  const [currentService, setCurrentService] = useState<HighlightedService>(highlightedService);
+  const initialService = Object.values(serviceMapping)[0] || null;
 
+  const [currentService, setCurrentService] = useState<HighlightedService | null>(
+    initialService,
+  );
   const handleServiceClick = (item: string) => {
     if (!serviceMapping) {
       console.error('Service mapping is undefined.');
@@ -65,7 +71,11 @@ export const OurServices: React.FC<OurServicesProps> = ({
                   key={index}
                 >
                   <p onClick={() => handleServiceClick(item)}>
-                    {item}
+                    <h3>
+                      {' '}
+                      {item}
+                      {' '}
+                    </h3>
                   </p>
                 </p>
               ))}
@@ -80,9 +90,9 @@ export const OurServices: React.FC<OurServicesProps> = ({
               minHeight: '350px',
             }}
           >
-            <img src={currentService.imageSrc} alt={currentService.title} />
+            <Image src={currentService.imageSrc} alt={currentService.title} width={100} height={100} />
             <br />
-            <p>{currentService.title}</p>
+            <h3>{currentService.title}</h3>
             <br />
             <p>{currentService.description}</p>
           </div>

@@ -2,11 +2,11 @@
 
 import { Button } from '@/components/Feature/Button/Button';
 import { Container } from '@/components/Feature/Container/Container';
+import { navMenus } from '@/data/menu/navMenu';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { IoMenuOutline } from 'react-icons/io5';
-import data from '../../../data';
 import { MobileNav } from './Mobile/MobileNav';
 import styles from './navbar.module.css';
 import { NavbarDropDown } from './NavbarDropDown';
@@ -40,7 +40,7 @@ export const Navbar = () => {
 
           {/* Navigation Links */}
           <div className={styles.navLinks}>
-            {data.navMenus.map((el, index) =>
+            {navMenus.map((el, index) =>
               el.subMenus
                 ? (
                     <NavbarDropDown

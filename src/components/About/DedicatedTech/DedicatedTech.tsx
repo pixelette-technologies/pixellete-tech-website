@@ -13,17 +13,17 @@ const cards: Card[] = [
   {
     title: 'Promise of Quality',
     content:
-      '97% customer satisfaction rating 2. 4.8 overall Clutch rating 3. £100M+ in funding secured for client startups 4. 30,000+ hours in development across diverse industries',
+      '97% customer satisfaction rating\n4.8 overall Clutch rating\n£100M+ in funding secured for client startups\n30,000+ hours in development across diverse industries',
   },
   {
     title: 'Global Reach',
     content:
-      'Operating in 15+ countries, delivering innovative solutions globally.',
+      '200+ team members across 13 countries, with 15+ locations and expanding\nRanked among the top 30 software development companies globally (Clutch)',
   },
   {
     title: 'Impact Creation',
     content:
-      'Empowering clients with transformational technology for sustainable impact.',
+      'Official Secretariat of the British Government’s AI policy body (APPG AI)\nAwarded ‘Best AI Agency UK’ three times by the Scotland Business Awards\n200+ successful projects with over 100+ million project views',
   },
 ];
 
@@ -77,7 +77,7 @@ const DedicatedTech: React.FC = () => {
                 gap: '1rem',
               }}
             >
-              <p>{cards[selectedCardIndex].title}</p>
+              <h3>{cards[selectedCardIndex].title}</h3>
               <p>
                 {cards[selectedCardIndex].content}
               </p>
