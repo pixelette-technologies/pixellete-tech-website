@@ -49,7 +49,7 @@ export default async function Index(props: IIndexProps) {
         title="Benefit from our unmatched tech stack expertise"
         subtitle="With our team's deep mastery in the latest frameworks, languages, and tools, we build scalable, secure, and high-performance applications that set new standards. From ideation to deployment, our technology capabilities are designed to drive your business forward."
       />
-      <CaseStudies />
+      <CaseStudies heading='Our past work speaks volumes '/>
       {/* <CaseStudies /> this is working just need to uncomment */}
       <Testimonial background="" />
       <EvaluateBusiness />

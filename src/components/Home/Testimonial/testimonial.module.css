@@ -3,7 +3,7 @@
 }
 .testimonialSectionBackground > img {
   position: absolute;
-  z-index: -1000;
+  z-index: -1;
   width: 100%;
   margin-top: -60rem;
 }
@@ -21,9 +21,10 @@
 .testimonialSection > div > blockquote > img {
   position: absolute;
   margin-top: -7rem;
-  margin-left: 5rem;
   z-index: -100;
+  left: -14rem;
   animation: rotateOpposite 26s linear infinite;
+  width: 300px;
 }
 .testimonialSection > div > center {
   display: flex;

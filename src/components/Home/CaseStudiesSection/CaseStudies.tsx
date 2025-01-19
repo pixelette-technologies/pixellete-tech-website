@@ -8,6 +8,7 @@ import { createClient } from 'contentful';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { FiExternalLink } from 'react-icons/fi';
+import styles from  './casestudies.module.css'
 
 type CaseStudy = {
   fields: {
@@ -23,7 +24,7 @@ type CaseStudiesProps = {
   initialData: CaseStudy[];
 };
 
-export const CaseStudies = ({ heading, text, initialData }: CaseStudiesProps) => {
+export const CaseStudies = ({ heading, initialData }: CaseStudiesProps) => {
   const [caseStudyData, setCaseStudyData] = useState<CaseStudy[]>(initialData);
 
   useEffect(() => {
@@ -52,18 +53,24 @@ export const CaseStudies = ({ heading, text, initialData }: CaseStudiesProps) =>
   }, [initialData]);
 
   return (
-    <div className="caseStudySection">
+  <>
+  <Container className={styles.main}>
+        <div className={styles.testimonialSectionBackground}>
+          <img
+            src="/images/home/testimonials/testimonialBackground.svg"
+            alt="Testimonial Background"
+            className={styles.backgroundImage}
+          />
+        </div>
+      </Container>
+  <div className={styles.caseStudySection} id='sideMargin'>
       <Container className="main margins">
         <center>
-          <h1 id="h_ani">
+          <h1 style={{marginBottom: '5rem'}}>
             {heading || 'Case Studies'}
           </h1>
 
-          <p>
-            {text || 'Explore how our cutting-edge solutions have transformed industries and empowered clients.'}
-          </p>
-
-          <Link href="/case-studies" passHref>
+          <Link  href="/case-studies" passHref>
             <Button className="primary" animation="fade-up" duration="400">
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
                 View Our Projects
@@ -73,11 +80,11 @@ export const CaseStudies = ({ heading, text, initialData }: CaseStudiesProps) =>
             </Button>
           </Link>
         </center>
-        <section style={{ marginTop: '1rem' }}>
+        <section style={{ marginTop: '5rem' }}>
           <CaseSlider data={caseStudyData} />
         </section>
       </Container>
-    </div>
+    </div></>
   );
 };
 

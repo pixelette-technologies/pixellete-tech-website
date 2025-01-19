@@ -6,7 +6,7 @@ import './evaluatebusiness.css';
 export const EvaluateBusiness: React.FC = () => {
   return (
     <Container className="main margins">
-      <div className="evaluateBussiness">
+      <div className="evaluateBussiness" id='sideMargin'>
         <header>
           <h1>
             Elevate Your Business Today

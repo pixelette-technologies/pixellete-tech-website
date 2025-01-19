@@ -146,7 +146,7 @@
 .testimonialCard > section {
   display: flex;
   align-items: center;
-  margin-top: 4rem;
+  margin-top: 2rem;
 }
 .testimonialCard > section > img {
   margin-right: 2rem;
@@ -202,17 +202,23 @@
   }
 }
 
+.yourPlanCardGrid{
+  padding: 0 15rem;
+  margin: 10rem 3rem;
+}
+
 .yourPlanCardGrid > div > left {
   max-width: 95rem;
   display: flex;
   align-items: left;
   flex-direction: column;
-  margin-top: 10rem;
-  padding-bottom: 10rem;
+  margin-top: 100px;
+  padding-bottom: 5rem;
   padding-left: 20px;
 }
 .yourPlanCardGrid > div > left > h1 {
   padding-bottom: 1.6rem;
+  
 }
 .yourPlanCardGrid > div > section {
   display: flex;
@@ -242,9 +248,11 @@
   }
 }
 
-.yourPlanCardGrid > div > h1 {
-  padding-bottom: 1.6rem;
-  text-align: left;
+.yourPlanCardGrid > div > h2 {
+  max-width: 30ch;
+}
+.yourPlanCardGrid > div > p {
+  max-width: 60ch;
 }
 .yourPlanCardGrid > div > section {
   display: flex;

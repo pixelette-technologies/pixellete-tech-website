@@ -3,7 +3,7 @@ import { Container } from '@/components/Feature/Container/Container';
 import Image from 'next/image';
 import Link from 'next/link'; // Correct usage of Next.js routing
 import React from 'react';
-import './herosection.css';
+import styles from './herosection.module.css';
 // import { Link as ScrollLink } from 'react-scroll';
 
 type HeroSectionProps = object;
@@ -11,7 +11,7 @@ type HeroSectionProps = object;
 export const HeroSection: React.FC<HeroSectionProps> = () => {
   return (
     <>
-      <div className="heroSection-background">
+      <div className={styles.heroSectionBackground}>
         {/* Use Next.js Image component for better optimization */}
         <Image
           src="/images/home/hero/homeHeroBackground.svg"
@@ -19,10 +19,10 @@ export const HeroSection: React.FC<HeroSectionProps> = () => {
           layout="responsive" // Makes the image responsive
           width={1200} // Set the width of the image
           height={800} // Set the height of the image
-          className="hero-background-img"
+          className={styles.heroBackgroundImg}
         />
       </div>
-      <div className="heroSection">
+      <div className={styles.heroSection}>
         <Container className="main margins">
           <blockquote>
             {/* Loop through images using static paths in the public directory */}

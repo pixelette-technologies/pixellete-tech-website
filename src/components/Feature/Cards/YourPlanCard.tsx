@@ -45,16 +45,16 @@ const YourPlanCard: FC<YourPlanCardProps> = ({ data }) => {
                 <h4>{el.iconhead}</h4>
               </div>
             </div>
-            <p>{el.name}</p>
+            <h3>{el.name}</h3>
             <p>{el.description}</p>
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.3rem', marginTop: '1rem' }}>
-              <Link href={el.path}>
-                {el.link}
+                {/* {el.link}
                 {' '}
-                <FaExternalLinkAlt />
-              </Link>
+                <FaExternalLinkAlt /> */}
               <div>
+              <Link href={el.path}>
                 <p>{el.link}</p>
+              </Link>
               </div>
               {' '}
               <div>

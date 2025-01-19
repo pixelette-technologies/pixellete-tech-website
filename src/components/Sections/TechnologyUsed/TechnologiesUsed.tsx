@@ -24,7 +24,7 @@ const TechnologiesUsed: React.FC<TechnologiesUsedProps> = ({ technologies, title
   const [activeTab, setActiveTab] = useState<keyof Technologies>(Object.keys(technologies)[0] as keyof Technologies);
 
   return (
-    <div className={styles.technologiesMain}>
+    <div className={styles.technologiesMain} id='sideMargin'>
       <Container className="main margins">
         <center>
           <h1 id="h_ani">{title}</h1>

@@ -83,12 +83,11 @@ export const Testimonial: FC<TestimonialProps> = ({ background }) => {
 
   return (
     <>
-      <Container className={styles.main}>
+      <Container>
         <div className={styles.testimonialSectionBackground}>
-          <Image
+          <img
             src="/images/home/testimonials/testimonialBackground.svg"
             alt="Testimonial Background"
-            fill
             className={styles.backgroundImage}
           />
         </div>
@@ -106,7 +105,7 @@ export const Testimonial: FC<TestimonialProps> = ({ background }) => {
           </blockquote>
 
           <center>
-            <h2>
+            <h2 style={{marginBottom: '2rem'}}>
               Clients ♥️ us
             </h2>
             <div data-aos-duration="500" data-aos="fade-up">

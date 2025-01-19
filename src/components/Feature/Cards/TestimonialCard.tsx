@@ -31,10 +31,9 @@ export const TestimonialCard: FC<TestimonialCardProps> = ({
         <Image src="/images/home/stars.svg" alt="Rating Stars" width={100} height={100} />
         <p>{rating}</p>
       </div>
-      <p>
-        {comment}
+      <p style={{fontWeight: "700"}}>
+        "{comment}"
       </p>
-      {' '}
 
       <section>
         <Image

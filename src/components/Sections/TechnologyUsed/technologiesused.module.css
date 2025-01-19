@@ -4,6 +4,14 @@
   margin-bottom: 5rem;
 }
 
+.technologiesMain > div > center > h1{
+  max-width: 24ch;
+}
+
+.technologiesMain > div > center > p{
+  max-width: 60ch;
+}
+
 .main {
   display: flex;
   flex-direction: column;

@@ -1,8 +1,8 @@
-.heroSection-background {
+.heroSectionBackground {
   position: relative;
   background: black;
 }
-.heroSection-background > img {
+.heroSectionBackground > img {
   z-index: -1000;
   position: absolute;
   margin-left: -7rem;
@@ -15,7 +15,7 @@
   height: 80vh;
 } */
 @media only screen and (max-width: 37.5em) {
-  .heroSection-background > img {
+  .heroSectionBackground > img {
     margin-top: -30rem;
     width: 180rem;
     margin-left: -55rem;

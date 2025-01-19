@@ -5,7 +5,7 @@ export const yourPlanData = [
     name: 'Complete Outsourcing',
     path: '/it-outsourcing-services',
     description:
-      'Entrust us with the entire process, from concept to completion, through our comprehensive outsourcing services.',
+      <>Entrust us with the entire process, from concept to completion, through our comprehensive <strong>outsourcing services</strong>.</>,
     link: 'Learn more',
     linkIcon: '/images/home/plan/arrow_top_right.png',
   },
@@ -15,7 +15,7 @@ export const yourPlanData = [
     name: 'Staff Augmentation',
     path: '/staff-augmentation-services',
     description:
-      'Enhance your team effortlessly by utilising our talent pool, cutting down on the time spent on sourcing, recruiting, and training.',
+      <>Enhance your team by utilizing our talent pool via <strong>staff augmentation</strong>. Cut down on the time spent on sourcing, recruiting, and training.</>,
     link: 'Learn more',
     linkIcon: '/images/home/plan/arrow_top_right.png',
   },
@@ -25,7 +25,7 @@ export const yourPlanData = [
     name: 'Dedicated Teams',
     path: '/dedicated-team-services',
     description:
-      'Boost your development timeline by hiring our fully functional and expert teams, fitting into your current workflow.',
+      <>Boost your development timeline by hiring our fully functional and <strong>dedicated teams</strong>, fitting into your current workflow.</>,
     link: 'Learn more',
     linkIcon: '/images/home/plan/arrow_top_right.png',
   },
