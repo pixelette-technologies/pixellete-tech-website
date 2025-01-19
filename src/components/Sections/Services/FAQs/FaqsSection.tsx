@@ -35,7 +35,7 @@ const FaqsSection: React.FC<FaqsSectionProps> = ({ heading, text, faqs }) => {
 
       </center>
       <Container className="main margins">
-        <section>
+        <section id='sideMargin'>
           <div>
             {faqsLeft.map((el, index) => (
               <Accordian

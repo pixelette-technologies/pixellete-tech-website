@@ -518,3 +518,31 @@
   padding: 15px; /* Default Bootstrap padding */
   box-sizing: border-box; /* Ensures padding doesn't affect width */
 }
+
+@media screen and (max-width: 1024px) {
+  #hiddenSectionBlog{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .blogAuthor{
+    display: flex;
+    flex-direction: column;
+
+    div{
+      img{
+        width: 30px;
+        height: 30px;
+      }
+      p{
+        font-size: 14px;
+      }
+    }
+    div:nth-child(2){
+      p{
+        margin-bottom: 2rem;
+      }
+    }
+  }
+}

@@ -34,7 +34,7 @@ export const TechnologyGrid: React.FC<TechnologyGridProps> = ({
   };
 
   return (
-    <div className="technologyStackAi">
+    <div className="technologyStackAi" id='sideMargin'>
       <center>
         <h1
           id="h_ani"

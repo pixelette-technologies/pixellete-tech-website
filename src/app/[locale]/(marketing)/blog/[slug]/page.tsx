@@ -186,8 +186,8 @@ const page = (props: any) => {
             {/* Blog image or video */}
             <div style={{ display: 'flex', justifyContent: 'space-between', gap: '1rem' }}>
               <div>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                  <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }} className='blogAuthor'>
+                  <div style={{ display: 'flex', gap: '1rem', alignItems: 'center', margin: '1rem' }}>
                     <p>Written by</p>
                     <Image
                       src={
@@ -198,8 +198,8 @@ const page = (props: any) => {
                           ? `https:${resolvedAssets.find((item: any) => item.sys.id === resolvedAuthor?.fields?.profilePicture?.sys?.id)?.fields?.file?.url}`
                           : `https://ui-avatars.com/api/?name=${resolvedAuthor ? resolvedAuthor?.fields?.name : ''}`
                       }
-                      width={100}
-                      height={100}
+                      width={50}
+                      height={50}
                       alt="Author Image"
                       className="author-image"
                       quality={100}
@@ -651,8 +651,9 @@ const page = (props: any) => {
               </div> */}
                 </div>
               </div>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }} id='hiddenSectionBlog'>
                 <div
+                id='hiddenSectionBlog'
                   className="custom-col"
                   style={{
                     width: '450px',

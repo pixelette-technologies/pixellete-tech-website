@@ -1,6 +1,6 @@
 .footer {
-  padding-top: 8rem;
-  max-width: 160rem;
+  padding: 8rem 0 0 0;
+  /* max-width: 160rem; */
   position: relative;
   margin: auto;
 }

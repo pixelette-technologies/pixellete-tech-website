@@ -45,7 +45,7 @@ const HowItWorksHeroSection: React.FC<HeroSectionProps> = ({
             </p>
 
           </center>
-          <section>
+          <section id='sideMargin'>
             <div className="deliverHeroCard">
               <section>
                 <h1>{deliverTitle}</h1>

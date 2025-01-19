@@ -1,6 +1,6 @@
 import { Container } from '@/components/Feature/Container/Container';
 import React from 'react';
-import './index.css';
+import styles from './index.module.css';
 
 type CommitmentData = {
   img: string;
@@ -24,36 +24,35 @@ export const OurCommitment: React.FC<OurCommitmentProps> = ({
   commitmentData,
 }) => {
   return (
-    <div>
+    <div id='sideMargin'>
       <Container className="main margins">
-        <div className="expertiseGrid">
-          <header>
+        <div className={styles.expertiseGrid}>
+          <center style={{margin: '3rem 0'}}>
             <h1>{heading}</h1>
-            <p>
+            <p> 
               {description}
             </p>
-          </header>
-
-          <section className="OurCommitmentCards">
+          </center>
+          <section className={styles.OurCommitmentCards}>
             {commitmentData.map((el, index) => (
               <div style={{ margin: '0 1rem' }} key={index}>
                 <img src={el.img} alt={`Commitment ${index + 1}`} />
                 <div style={{ display: 'flex' }}>
                   <div>
-                    <p className="valueText">{el.value1}</p>
-                    <p className="descText">{el.desc1}</p>
+                    <p className={styles.valueText}>{el.value1}</p>
+                    <p className={styles.descText}>{el.desc1}</p>
                   </div>
-                  <hr className="verticalDivider" />
+                  <hr className={styles.verticalDivider} />
                   <div>
-                    <p className="valueText">{el.value2}</p>
-                    <p className="descText">{el.desc2}</p>
+                    <p className={styles.valueText}>{el.value2}</p>
+                    <p className={styles.descText}>{el.desc2}</p>
                   </div>
                   {el.desc3 && (
                     <>
-                      <hr className="verticalDivider" />
+                      <hr className={styles.verticalDivider} />
                       <div>
-                        <p className="valueText">{el.value3}</p>
-                        <p className="descText">{el.desc3}</p>
+                        <p className={styles.valueText}>{el.value3}</p>
+                        <p className={styles.descText}>{el.desc3}</p>
                       </div>
                     </>
                   )}

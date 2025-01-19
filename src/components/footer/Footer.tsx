@@ -13,8 +13,8 @@ export const Footer: React.FC = () => {
         src="/images/footer/footerbackground.svg"
         alt="background"
         layout="responsive"
-        width={1920}
-        height={600}
+        width={100}
+        height={100}
         className="img"
       />
       <Container className="main margins">
@@ -22,7 +22,7 @@ export const Footer: React.FC = () => {
           <Image src="/images/footer/box_21.svg" alt="box 21" width={100} height={100} className="img" />
           <Image src="/images/footer/box_22.svg" alt="box 22" width={100} height={100} className="img" />
         </blockquote>
-        <section>
+        <section id='sideMargin'>
           {/* Logo and Social Links */}
           <div>
             <Image
@@ -124,7 +124,7 @@ export const Footer: React.FC = () => {
               { href: 'privacy-policy', text: 'Privacy Policy' },
               { href: 'term-conditions', text: 'Terms & Conditions' },
               { href: 'refund-policy', text: 'Cancellation & Refund Policy' },
-              { href: 'careers', text: 'Careers' },
+              // { href: 'careers', text: 'Careers' },
             ].map((item, index) => (
               <p
                 key={index}

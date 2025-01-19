@@ -104,7 +104,7 @@ const CaseStudieDetail = async ({ params }: { params: { id: string } }) => {
             />
           </div>
         </Container>
-        <section>
+        <section id='sideMargin'>
           <Container className="main margins">
             {/* <header>
               <div>
