@@ -135,7 +135,7 @@ const AboutUsSection: React.FC = () => {
                   }}
                 >
                   <div>
-                    <img src={`/images/home/${i === 0 ? 'appg' : 'scotland'}.png`} alt={i === 0 ? 'APPG Logo' : 'Scotland Logo'} />
+                    <img src={`/images/home/${i === 0 ? 'appg' : 'Scotland'}.png`} alt={i === 0 ? 'APPG Logo' : 'Scotland Logo'} />
                   </div>
                   <div className="scottland-text" style={{ flex: 1 }}>
                     <p>

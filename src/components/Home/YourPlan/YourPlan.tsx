@@ -1,6 +1,6 @@
 import { YourPlanCardGrid } from '@/components/Feature/Cards/YourPlanCardGrid'; // Simplified import for the CardSectionGrid component
 import { Container } from '@/components/Feature/Container/Container'; // Simplified import for the Container component
-import data from '@/data'; // Centralized data import
+import { yourPlanData } from '@/data/yourPlanData'; // Centralized data import
 import Image from 'next/image';
 import React from 'react';
 import './yourplan.css';
@@ -19,7 +19,7 @@ export const YourPlan: React.FC<OurYourPlanProps> = () => {
       <YourPlanCardGrid
         heading="Your Plan, Your Way"
         text="Every project is unique, and so are our solutions. All you’ve got to do is select a plan that best aligns with your goals, let us know and we’ll help bring your project to life."
-        data={data.yourPlanData}
+        data={yourPlanData}
       />
     </div>
   );
