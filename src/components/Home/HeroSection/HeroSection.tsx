@@ -31,7 +31,7 @@ export const HeroSection: React.FC<HeroSectionProps> = () => {
                 key={idx}
                 src={`/images/home/hero/box_${idx + 1}.svg`} // Static path for box images
                 alt={`box ${idx + 1}`}
-                className={`box-image box-${idx + 1}`}
+                // className={`${styles.boxImage} ${styles[`.box${idx + 1}`]}`}
               />
             ))}
           </blockquote>

@@ -71,12 +71,26 @@ cd PixeletteTech
 npm install
 ```
 
+or
+
+```shell
+git clone --depth=1 https://github.com/Hamid-Ayub/pixeletteTech-nextjs.git PixeletteTech
+cd PixeletteTech
+yarn
+```
+
 For your information, all dependencies are updated every month.
 
 Then, you can run the project locally in development mode with live reload by executing:
 
 ```shell
 npm run dev
+```
+
+or
+
+```shell
+yarn dev
 ```
 
 Open http://localhost:3000 with your favorite browser to see your project.

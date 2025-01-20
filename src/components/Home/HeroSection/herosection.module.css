@@ -49,6 +49,14 @@
   padding-left: 1rem;
   animation: rotateOpposite 20s linear infinite;
 }
+@keyframes rotateOpposite {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg); /* Smooth rotation */
+  }
+}
 @media only screen and (max-width: 37.5em) {
   .heroSection > div > blockquote > *:first-child {
     max-width: 14rem;

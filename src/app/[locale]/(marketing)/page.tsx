@@ -1,19 +1,21 @@
-import AboutUsSection from '@/components/Home/AboutusSection/AboutUsSection';
-import { CaseStudies } from '@/components/Home/CaseStudiesSection/CaseStudies';
-import { HeroSection } from '@/components/Home/HeroSection/HeroSection';
-import { OurClients } from '@/components/Home/OurClients/OurClients';
-import OurServicesSection from '@/components/Home/OurServicesSection/OurServicesSection';
-import { Testimonial } from '@/components/Home/Testimonial/Testimonial';
-import WhatMakeUsSpecialHome from '@/components/Home/WhatMakeUsSpecial/WhatMakeUsSpecial';
-import { YourPlan } from '@/components/Home/YourPlan/YourPlan';
-import { EvaluateBusiness } from '@/components/Sections/EvaluateBusiness/EvaluateBusiness';
-import TechnologiesUsed from '@/components/Sections/TechnologyUsed/TechnologiesUsed';
 import { homeTechnologies } from '@/data/technology/homeTechnologies';
-import { getTranslations, setRequestLocale } from 'next-intl/server';
+import { getTranslations } from 'next-intl/server';
+import dynamic from 'next/dynamic';
 
 type IIndexProps = {
   params: Promise<{ locale: string }>;
 };
+
+const HeroSection = dynamic(() => import('@/components/Home/HeroSection/HeroSection').then(mod => mod.HeroSection));
+const OurClients = dynamic(() => import('@/components/Home/OurClients/OurClients').then(mod => mod.OurClients));
+const AboutUsSection = dynamic(() => import('@/components/Home/AboutusSection/AboutUsSection'));
+const WhatMakeUsSpecialHome = dynamic(() => import('@/components/Home/WhatMakeUsSpecial/WhatMakeUsSpecial').then(mod => mod.default));
+const OurServicesSection = dynamic(() => import('@/components/Home/OurServicesSection/OurServicesSection').then(mod => mod.default));
+const YourPlan = dynamic(() => import('@/components/Home/YourPlan/YourPlan').then(mod => mod.YourPlan));
+const TechnologiesUsed = dynamic(() => import('@/components/Sections/TechnologyUsed/TechnologiesUsed').then(mod => mod.default));
+const CaseStudies = dynamic(() => import('@/components/Home/CaseStudiesSection/CaseStudies').then(mod => mod.default));
+const Testimonial = dynamic(() => import('@/components/Home/Testimonial/Testimonial').then(mod => mod.default));
+const EvaluateBusiness = dynamic(() => import('@/components/Sections/EvaluateBusiness/EvaluateBusiness').then(mod => mod.EvaluateBusiness));
 
 export async function generateMetadata(props: IIndexProps) {
   const { locale } = await props.params;
@@ -29,12 +31,12 @@ export async function generateMetadata(props: IIndexProps) {
 }
 
 export default async function Index(props: IIndexProps) {
-  const { locale } = await props.params;
-  setRequestLocale(locale);
-  const t = await getTranslations({
-    locale,
-    namespace: 'Index',
-  });
+  // const { locale } = await props.params;
+  // setRequestLocale(locale);
+  // const t = await getTranslations({
+  //   locale,
+  //   namespace: 'Index',
+  // });
 
   return (
     <>
@@ -49,10 +51,10 @@ export default async function Index(props: IIndexProps) {
         title="Benefit from our unmatched tech stack expertise"
         subtitle="With our team's deep mastery in the latest frameworks, languages, and tools, we build scalable, secure, and high-performance applications that set new standards. From ideation to deployment, our technology capabilities are designed to drive your business forward."
       />
-      <CaseStudies heading='Our past work speaks volumes '/>
-      {/* <CaseStudies /> this is working just need to uncomment */}
+      <CaseStudies heading="Our past work speaks volumes" />
       <Testimonial background="" />
       <EvaluateBusiness />
+      {/* Uncomment these components when needed */}
       {/* <OurTeam /> */}
       {/* <UnlockBusinessPotential
         heading="Unlock Your Business Potential"
@@ -64,7 +66,6 @@ export default async function Index(props: IIndexProps) {
         heading="The Pixelette Post"
         text="Explore a world of insights through the Pixelette Post. Engage with expert opinions, groundbreaking ideas, and in-depth guides that empower and inspire. Dive into our content today."
       /> */}
-
     </>
   );
-};
+}
