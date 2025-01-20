@@ -22,6 +22,62 @@ const AboutUsSection: React.FC = () => {
     'counter-section-6': 0,
   });
 
+  // useEffect(() => {
+  //   const options: IntersectionObserverInit = {
+  //     root: null,
+  //     rootMargin: '0px',
+  //     threshold: 0.5,
+  //   };
+
+  //   const handleIntersect: IntersectionObserverCallback = (entries) => {
+  //     entries.forEach((entry) => {
+  //       const sectionId = entry.target.id;
+  //       if (visibleSections[sectionId]) {
+  //         return;
+  //       }
+
+  //       const isIntersecting = entry.isIntersecting;
+  //       setVisibleSections(prev => ({
+  //         ...prev,
+  //         [sectionId]: isIntersecting,
+  //       }));
+
+  //       if (isIntersecting) {
+  //         const element = entry.target.querySelector<HTMLHeadingElement>('h1');
+  //         if (element) {
+  //           const targetValue = element.getAttribute('data-end') || '0';
+
+  //           // Directly set non-numeric values (e.g., 'Top 30', '£100M+')
+  //           if (isNaN(Number(targetValue.replace(/\D/g, '')))) {
+  //             element.innerText = targetValue; // Set non-numeric values directly
+  //           } else {
+  //             const numericValue = Number.parseInt(targetValue.replace(/\D/g, ''), 10); // Extract numeric part
+  //             const suffix = targetValue.replace(/\d/g, ''); // Extract suffix (e.g., '+', '%', 'M', etc.)
+
+  //             let current = 0;
+  //             const interval = setInterval(() => {
+  //               if (current < numericValue) {
+  //                 current += Math.ceil(numericValue / 100); // Increment value dynamically
+  //                 element.innerText = `${Math.min(current, numericValue)}${suffix}`;
+  //               } else {
+  //                 clearInterval(interval);
+  //                 element.innerText = `${numericValue}${suffix}`; // Ensure final formatting
+  //               }
+  //             }, 10);
+  //           }
+  //         }
+  //       }
+  //     });
+  //   };
+
+  //   const observer = new IntersectionObserver(handleIntersect, options);
+  //   const targets = document.querySelectorAll('.counter-section');
+  //   targets.forEach(target => observer.observe(target));
+
+  //   return () => {
+  //     targets.forEach(target => observer.unobserve(target));
+  //   };
+  // }, [visibleSections]);
   useEffect(() => {
     const options: IntersectionObserverInit = {
       root: null,
@@ -32,6 +88,7 @@ const AboutUsSection: React.FC = () => {
     const handleIntersect: IntersectionObserverCallback = (entries) => {
       entries.forEach((entry) => {
         const sectionId = entry.target.id;
+
         if (visibleSections[sectionId]) {
           return;
         }
@@ -45,18 +102,23 @@ const AboutUsSection: React.FC = () => {
         if (isIntersecting) {
           const element = entry.target.querySelector<HTMLHeadingElement>('h1');
           if (element) {
-            const endValue = Number.parseInt(element.getAttribute('data-end') || '0', 10);
-            if (!counters.current[sectionId]) {
-              let current = 0;
-              const interval = setInterval(() => {
-                if (current < endValue) {
-                  current++;
-                  element.innerText = `${current}${sectionId.includes('%') ? '%' : '+'}`;
-                } else {
-                  clearInterval(interval);
-                }
-              }, 10);
-            }
+            const prefix = element.getAttribute('data-prefix') || '';
+            const midfix = element.getAttribute('data-midfix') || '';
+            const suffix = element.getAttribute('data-suffix') || '';
+            const numericValue = Number.parseFloat(element.getAttribute('data-end') || '0');
+
+            let current = 0;
+            const increment = numericValue < 10 ? 0.1 : Math.ceil(numericValue / 50); // Small increments for decimals
+
+            const interval = setInterval(() => {
+              current = Math.min(current + increment, numericValue); // Increment value
+              element.innerText = `${prefix}${current.toFixed(numericValue < 10 ? 1 : 0)}${midfix}${suffix}`; // Proper decimal formatting
+
+              if (current >= numericValue) {
+                clearInterval(interval);
+                element.innerText = `${prefix}${numericValue}${midfix}${suffix}`; // Final value
+              }
+            }, 10);
           }
         }
       });
@@ -79,7 +141,7 @@ const AboutUsSection: React.FC = () => {
           <Image src="/images/aboutSection/aboutRightBackground.svg" alt="background" width={100} height={100} />
         </div>
       </Container>
-      <div className="aboutUsSection" id='sideMargin'>
+      <div className="aboutUsSection" id="sideMargin">
         <Container className="main margins">
           <section data-aos="fade-up" data-aos-duration="1000">
             <div>
@@ -97,25 +159,40 @@ const AboutUsSection: React.FC = () => {
               </p>
             </div>
             <div>
-              {Array.from({ length: 6 }, (_, index) => (
+              {[
+                { end: 97, prefix: '', midfix: '', suffix: '%' },
+                { end: 30000, prefix: '', midfix: '', suffix: '+' },
+                { end: 4.8, prefix: '', midfix: '', suffix: '' },
+                { end: 200, prefix: '', midfix: '', suffix: '+' },
+                { end: 100, prefix: '£', midfix: '', suffix: 'M+' },
+                { end: 30, prefix: 'Top ', midfix: '', suffix: '' },
+              ].map((value, index) => (
                 <section className="counter-section" id={`counter-section-${index + 1}`} key={`counter-section-${index + 1}`}>
-                  <h1 data-end={index === 4 ? 97 : index === 5 ? 13 : (index + 1) * 100}>0</h1>
+                  <h1
+                    data-end={value.end}
+                    data-prefix={value.prefix}
+                    data-midfix={value.midfix}
+                    data-suffix={value.suffix}
+                  >
+                    0
+                  </h1>
                   <div>
                     <p>
                       {
                         [
-                          'Projects Completed',
-                          'Global Team Members',
-                          'Hours in Development',
-                          'Happy Clients',
-                          'Customer Satisfaction',
-                          'Global Locations',
+                          'customer satisfaction rating',
+                          'hours in development across diverse industries',
+                          'overall Clutch rating',
+                          'team members across 13 countries, with 15+ locations and expanding',
+                          ' in funding secured for client startups',
+                          'among the software development companies globally (Clutch)',
                         ][index]
                       }
                     </p>
                   </div>
                 </section>
               ))}
+
             </div>
           </section>
         </Container>
