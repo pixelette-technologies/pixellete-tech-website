@@ -21,10 +21,16 @@
   .exploreProjectSections > div > header > div > div {
     width: 75%;
   }
+  .exploreProjectSections > div > header > div > div {
+    width: 100%;
+  }
 }
 @media only screen and (max-width: 37.5em) {
   .exploreProjectSections > div > header > div > div {
     width: 65%;
+  }
+  .exploreProjectSections > div > header > div > div {
+    width: 100%;
   }
 }
 .exploreProjectSections > div > header > div > img {
@@ -53,9 +59,15 @@
   .exploreProjectSections > div > section > * {
     width: calc(50% - 2.4rem);
   }
+  .exploreProjectSections > div > section {
+    padding: 0 5rem;
+  }
 }
 @media only screen and (max-width: 37.5em) {
   .exploreProjectSections > div > section > * {
     width: 100%;
+  }
+  .exploreProjectSections > div > section {
+    padding: 0 2rem;
   }
 }

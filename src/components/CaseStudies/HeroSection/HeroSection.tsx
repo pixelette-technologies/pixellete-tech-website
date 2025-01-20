@@ -1,25 +1,34 @@
 import { Container } from '@/components/Feature/Container/Container';
-import './herosection.css';
+import styles from './herosection.module.css';
 
 const HeroSection: React.FC = () => {
   return (
     <>
-      <Container className="main">
+      {/* <Container className="main">
         <div className="heroSection-mobile-background">
           <img
             src="/images/casestudies/heroSectionBackground.svg"
             alt="background"
           />
         </div>
+      </Container> */}
+      <Container>
+        <div className={styles.testimonialSectionBackground}>
+          <img
+            src="/images/home/testimonials/testimonialBackground.svg"
+            alt="Testimonial Background"
+            className={styles.backgroundImage}
+          />
+        </div>
       </Container>
-      <div className="heroSection-mobile">
+      <div className={styles.heroSectionMobile}>
         <Container className="main">
-          <blockquote>
+          {/* <blockquote>
             <img src="/images/casestudies/box_1.svg" alt="box 1" />
             <img src="/images/casestudies/box_2.svg" alt="box 2" />
             <img src="/images/casestudies/box_3.svg" alt="box 3" />
             <img src="/images/casestudies/box_4.svg" alt="box 4" />
-          </blockquote>
+          </blockquote> */}
           <center>
             <h1>
               Our development legacy in action

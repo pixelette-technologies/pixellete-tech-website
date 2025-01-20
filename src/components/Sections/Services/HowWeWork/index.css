@@ -17,11 +17,6 @@
   }
 }
 
-.HowWeWorkCards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: left;
-}
 .HowWeWorkCards > div {
   width: 28rem;
   padding: 2rem;
@@ -30,3 +25,21 @@
   border: 1px solid rgba(255, 255, 255, 0.1);
   transition: 0.5s all;
 }
+
+@media screen and (max-width: 768px) {
+  .HowWeWorkCards > div {
+    width: 100%;
+    padding: 2rem;
+    border-radius: 1.2rem;
+    background-color: #0f0f0fb3;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: 0.5s all;
+  }
+}
+
+.HowWeWorkCards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+}
+

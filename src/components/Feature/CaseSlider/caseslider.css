@@ -45,11 +45,11 @@
 .caseSlider-card > *:first-child:hover img {
   transform: scale(1);
 }
-@media only screen and (max-width: 50em) {
+/* @media only screen and (max-width: 50em) {
   .caseSlider-card > *:first-child {
-    display: none;
+    display: block;
   }
-}
+} */
 .caseSlider-card > *:last-child > div > button {
   margin-right: 1.5rem;
   margin-top: 1.5rem;

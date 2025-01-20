@@ -20,6 +20,10 @@
   .unlockBussiness > div > section {
     justify-content: center;
   }
+  .evaluateBussiness > div > div {
+    width: 100%;
+  }
+  
 }
 
 .evaluateBussiness > header {
@@ -29,5 +33,5 @@
   margin-bottom: 1.6rem;
 }
 .evaluateBussiness > div > div {
-  width: 55rem;
+  /* width: 55rem; */
 }
