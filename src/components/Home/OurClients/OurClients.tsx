@@ -15,7 +15,7 @@ const Marqueee: React.FC = () => {
     '/images/trustedclients/ec_5.svg',
     '/images/trustedclients/ec_6.svg',
     '/images/trustedclients/ec_7.svg',
-    '/images/trustedclients/ec_8.svg',
+    // '/images/trustedclients/ec_8.svg',
   ];
   return (
     // <div className="marquee-container">
