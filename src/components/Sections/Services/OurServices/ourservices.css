@@ -26,6 +26,13 @@
   height: 100%;
   margin: 2rem 0;
   padding: 0 5rem;
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .OurServicesBg div {
+    padding: 0 1rem;
+  }
 }
 .OurServicesBg {
   /* background: url('../../../../public/images/ai-services/aiServiceBg.png'); */
