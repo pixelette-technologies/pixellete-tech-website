@@ -4,15 +4,8 @@ import { Env } from '@/libs/Env';
 import { routing } from '@/libs/i18nNavigation';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, setRequestLocale } from 'next-intl/server';
-import { Outfit } from 'next/font/google';
 import { notFound } from 'next/navigation';
 import '@/styles/global.css';
-
-// Load the Outfit font with specific weights and subsets
-const outfit = Outfit({
-  weight: ['100', '300', '400', '500', '700', '900'],
-  subsets: ['latin'],
-});
 
 export const metadata: Metadata = {
   icons: [
@@ -47,7 +40,9 @@ export function generateStaticParams() {
 const aj = arcjet.withRule(
   detectBot({
     mode: 'LIVE',
+    // Block all bots except the following
     allow: [
+      // See https://docs.arcjet.com/bot-protection/identifying-bots
       'CATEGORY:SEARCH_ENGINE', // Allow search engines
       'CATEGORY:PREVIEW', // Allow preview links to show OG images
       'CATEGORY:MONITOR', // Allow uptime monitoring services
@@ -72,6 +67,8 @@ export default async function RootLayout(props: {
     const req = await request();
     const decision = await aj.protect(req);
 
+    // These errors are handled by the global error boundary, but you could also
+    // redirect or show a custom error page
     if (decision.isDenied()) {
       if (decision.reason.isBot()) {
         throw new Error('No bots allowed');
@@ -84,15 +81,22 @@ export default async function RootLayout(props: {
   // Using internationalization in Client Components
   const messages = await getMessages();
 
+  // The `suppressHydrationWarning` attribute in <body> is used to prevent hydration errors caused by Sentry Overlay,
+  // which dynamically adds a `style` attribute to the body tag.
+
   return (
     <html lang={locale} data-theme="dark">
-      <body suppressHydrationWarning className={outfit.className}>
+      <body suppressHydrationWarning>
+        {/* <ThemeProvider attribute="class"> */}
         <NextIntlClientProvider
           locale={locale}
           messages={messages}
         >
           {props.children}
+
+          {/* <DemoBadge /> */}
         </NextIntlClientProvider>
+        {/* </ThemeProvider> */}
       </body>
     </html>
   );

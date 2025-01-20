@@ -1,10 +1,10 @@
 import { Button } from '@/components/Feature/Button/Button';
 import { Container } from '@/components/Feature/Container/Container';
 import Image from 'next/image';
-// Correct usage of Next.js routing
+import Link from 'next/link'; // Correct usage of Next.js routing
 import React from 'react';
-import { Link as ScrollLink } from 'react-scroll';
 import styles from './herosection.module.css';
+// import { Link as ScrollLink } from 'react-scroll';
 
 type HeroSectionProps = object;
 
@@ -46,7 +46,7 @@ export const HeroSection: React.FC<HeroSectionProps> = () => {
 
           <div>
             {/* Using React Scroll for smooth scrolling */}
-            <ScrollLink to="contactUs" smooth>
+            <Link href="contactUs">
               <Button
                 className="primary"
                 data-aos="fade-up"
@@ -54,7 +54,7 @@ export const HeroSection: React.FC<HeroSectionProps> = () => {
               >
                 Consult our experts
               </Button>
-            </ScrollLink>
+            </Link>
           </div>
         </Container>
       </div>
