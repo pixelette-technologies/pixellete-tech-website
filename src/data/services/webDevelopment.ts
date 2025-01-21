@@ -22,28 +22,43 @@ export const tgexpertiseAreas = [
   { title: 'Fully Responsive Design' },
 ];
 export const tgExpertiseData = {
-  'Machine Learning': {
-    title: 'Machine Learning Insights',
+  'Fully Responsive Design': {
+    title: 'Fully Responsive Design',
     description:
-        'Explore advanced algorithms and techniques for supervised and unsupervised learning.',
+        'Our developers deliver responsive websites that look and perform seamlessly across devices, ensuring accessibility and a consistent experience for all users.',
   },
-  'Deep Learning': {
-    title: 'Deep Learning Revolution',
-    description: 'Understand neural networks, CNNs, and RNNs for deep learning systems.',
+  'Customized User Experience': {
+    title: 'Customized User Experience',
+    description: 'Web features are developed to enhance usability and engagement, delivering a unique user experience that aligns with your brand and business goals.',
   },
   'Natural Language Processing (NLP)': {
     title: 'NLP Applications',
     description: 'Discover how NLP powers chatbots, sentiment analysis, and more.',
   },
-  'Robotic Process Automation': {
-    title: 'Automation Simplified',
+  'Fast and Agile Development': {
+    title: 'Fast and Agile Development',
     description:
-        'Learn about streamlining workflows with RPA for enhanced productivity.',
+        'With agile web development processes, we expedite project timelines without sacrificing quality, helping you establish a strong online presence swiftly.',
   },
-  'Computer Vision': {
-    title: 'Vision Beyond Limits',
+  'Scalable Web Architecture': {
+    title: 'Scalable Web Architecture',
     description:
-        'Dive into image recognition, object detection, and real-time vision systems.',
+        'We provide scalable web solutions that can accommodate increasing traffic and functionality demands, so your site grows effortlessly as your audience expands.',
+  },
+  'Advanced Security Protocols': {
+    title: 'Advanced Security Protocols',
+    description:
+        'Our team makes sure to embed advanced security protocols into every layer of your website, protecting against data breaches, malware, and other vulnerabilities to keep your data secure.',
+  },
+  'Smooth System Integration': {
+    title: 'Smooth System Integration',
+    description:
+        'We ensure your website integrates effectively with existing systems, APIs, and external services, allowing for a cohesive ecosystem that enhances functionality.',
+  },
+  'Ongoing Maintenance and Support': {
+    title: 'Ongoing Maintenance and Support',
+    description:
+        'We offer continuous updates, monitoring, and support to keep your website current and performing optimally, adapting to new web standards and user expectations.',
   },
 };
 
@@ -108,11 +123,11 @@ export const webDevelopmentServicelist
   {
     title: 'AI Solutions',
     items: [
-      'Generative AI',
-      'AI Security',
-      'AI Design',
-      'AI Ops',
-      'Automation Solutions',
+      'Ecommerce Development',
+      'Custom Web Development',
+      'Custom CMS Development',
+      'Web Application Development',
+      'Web Portal Development',
     ],
   },
   {
@@ -127,65 +142,41 @@ export const webDevelopmentServicelist
   },
 ];
 export const webDevelopmentServices = {
-  'Generative AI': {
+  'Ecommerce Development': {
     imageSrc: '/images/aiServices/s_1.svg',
-    title: 'Generative AI',
+    title: 'Ecommerce Development',
     description:
-    'We are recognized as a leading generative AI development company and bring deep expertise in generative AI tools like GPT-4, GPT-3.5, and DALL-E. Our models provide visual content analysis to aid in brand identity, data analysis, business intelligence, and visualization, offering tailored generative AI development services.',
+    'Our ecommerce website development services are crafted to drive sales and boost user engagement through seamless, intuitive design.\nAs a leading web development company, we create custom, scalable platforms with robust functionalities and secure payment options that meet your business needs.\nWhether you\'re a startup or an established brand, our ecommerce web development team delivers user-friendly, optimized sites that elevate the customer experience and support growth.',
   },
-  'AI Security': {
+  'Custom Web Development': {
     imageSrc: '/images/aiServices/s_2.svg',
-    title: 'AI Security',
+    title: 'Custom Web Development',
     description:
-    'Our AI security solutions leverage advanced machine learning algorithms to detect and prevent cyber threats in real time, ensuring robust and reliable system protection.',
+    'For businesses that need custom solutions, our custom web development services provide an edge through fully personalized websites designed to captivate and convert.\nWe blend innovative designs with functionality, resulting in efficient, responsive sites that reflect your unique brand.\nOur custom website design focuses on adaptability, ensuring your site grows alongside your business while maintaining superior performance and security.',
   },
-  'AI Design': {
+  'Custom CMS Development': {
     imageSrc: '/images/aiServices/s_3.svg',
-    title: 'AI Design',
+    title: 'Custom CMS Development',
     description:
-    'We provide cutting-edge AI-powered design solutions that enhance user experiences, optimize workflows, and drive creative innovation.',
+    'Our custom CMS development services empower you to control and manage your website with ease.\nDesigned for scalability and simplicity, our CMS solutions help streamline content updates and user engagement without sacrificing security or design flexibility.',
   },
-  'AI Ops': {
+  'Web Application Development': {
     imageSrc: '/images/aiServices/s_4.svg',
-    title: 'AI Ops',
+    title: 'Web Application Development',
     description:
-    'Streamline your operations with AI-driven automation and insights that improve efficiency, reduce downtime, and maximize productivity.',
+    'Our web application development services focus on building scalable, secure, and efficient web applications that enhance user engagement and drive digital transformation.\nBeing one of the best web development companies in the western hemisphere, we specialize in custom applications that cater to your specific requirements, ensuring they are adaptable and scalable for long-term success.\nFrom concept to deployment, our team guarantees a flawless user experience across all platforms and devices.',
   },
-  'Automation Solutions': {
+  'Web Portal Development': {
     imageSrc: '/images/aiServices/s_5.svg',
-    title: 'Automation Solutions',
+    title: 'Web Portal Development',
     description:
-    'Implement intelligent automation solutions that empower businesses to achieve greater accuracy, speed, and scalability in their operations.',
+    'Our web portal development services provide innovative, user-friendly portals tailored to your business needs.\nFrom employee portals to customer interfaces, our web portal solutions offer streamlined access, secure data management, and efficient workflows to enhance your digital ecosystem.\nPartnering with our award-winning website development company, you’ll get a portal that’s not only functional but also aligns easily with your brand and enhances overall user satisfaction.',
   },
-  'Chatbots & Conversational AI': {
+  'Website Design & Development': {
     imageSrc: '/images/aiServices/s_6.svg',
     title: 'Chatbots & Conversational AI',
     description:
-    'Develop interactive chatbots and conversational AI tools that deliver personalized customer engagement and support.',
-  },
-  'Recommendations Engines': {
-    imageSrc: '/images/aiServices/s_1.svg',
-    title: 'Recommendations Engines',
-    description:
-    'Build recommendation systems that provide users with highly relevant suggestions, enhancing user satisfaction and retention.',
-  },
-  'AI-as-a-Service (AIaaS)': {
-    imageSrc: '/images/aiServices/s_2.svg',
-    title: 'AI-as-a-Service (AIaaS)',
-    description:
-    'Deliver scalable AI capabilities on-demand, enabling businesses to quickly integrate AI into their processes.',
-  },
-  'AI Product Development': {
-    imageSrc: '/images/aiServices/s_3.svg',
-    title: 'AI Product Development',
-    description:
-    'Create innovative AI-driven products that cater to specific business needs, leveraging advanced AI technologies.',
-  },
-  'Predictive Modeling': {
-    imageSrc: '/images/aiServices/s_4.svg',
-    title: 'Predictive Modeling',
-    description:
-    'Harness the power of predictive analytics to forecast trends, identify opportunities, and make data-driven decisions.',
+    'Our website design and development services offer the perfect blend of aesthetics and functionality, delivering a powerful online presence that captures your brand essence.\nWe specialize in responsive, user-friendly sites that drive engagement and conversions. Our custom website design services prioritize adaptability, security, and performance to ensure your website remains relevant and impactful as your business grows.',
   },
 };
 

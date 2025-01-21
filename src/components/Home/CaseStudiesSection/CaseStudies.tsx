@@ -8,7 +8,7 @@ import { createClient } from 'contentful';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { FiExternalLink } from 'react-icons/fi';
-import styles from  './casestudies.module.css'
+import styles from './casestudies.module.css';
 
 type CaseStudy = {
   fields: {
@@ -53,8 +53,8 @@ export const CaseStudies = ({ heading, initialData }: CaseStudiesProps) => {
   }, [initialData]);
 
   return (
-  <>
-  <Container className={styles.main}>
+    <>
+      <Container className={styles.main}>
         <div className={styles.testimonialSectionBackground}>
           <img
             src="/images/home/testimonials/testimonialBackground.svg"
@@ -63,28 +63,29 @@ export const CaseStudies = ({ heading, initialData }: CaseStudiesProps) => {
           />
         </div>
       </Container>
-  <div className={styles.caseStudySection} id='sideMargin'>
-      <Container className="main margins">
-        <center>
-          <h1 style={{marginBottom: '5rem'}}>
-            {heading || 'Case Studies'}
-          </h1>
+      <div className={styles.caseStudySection} id="sideMargin">
+        <Container className="main margins">
+          <center>
+            <h2 style={{ marginBottom: '5rem' }}>
+              {heading || 'Case Studies'}
+            </h2>
 
-          <Link  href="/case-studies" passHref>
-            <Button className="primary" animation="fade-up" duration="400">
-              <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
-                View Our Projects
-                {' '}
-                <FiExternalLink />
-              </div>
-            </Button>
-          </Link>
-        </center>
-        <section style={{ marginTop: '5rem' }}>
-          <CaseSlider data={caseStudyData} />
-        </section>
-      </Container>
-    </div></>
+            <Link href="/case-studies" passHref>
+              <Button className="primary" animation="fade-up" duration="400">
+                <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
+                  View Our Projects
+                  {' '}
+                  <FiExternalLink />
+                </div>
+              </Button>
+            </Link>
+          </center>
+          <section style={{ marginTop: '5rem' }}>
+            <CaseSlider data={caseStudyData} />
+          </section>
+        </Container>
+      </div>
+    </>
   );
 };
 

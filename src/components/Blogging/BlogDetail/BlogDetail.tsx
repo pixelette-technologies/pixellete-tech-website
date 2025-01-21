@@ -49,7 +49,10 @@ const BlogDetail = () => {
           </Container> */}
         </section>
       </div>
-      <EvaluateBusiness />
+      <EvaluateBusiness
+        heading="Ready to become a tech success story?"
+        description="Don’t let technical hurdles stand in the way of building powerful tech solutions. Let us help you bring your vision to life with innovative, cost-effective and reliable services. Get in touch!"
+      />
     </>
   );
 };

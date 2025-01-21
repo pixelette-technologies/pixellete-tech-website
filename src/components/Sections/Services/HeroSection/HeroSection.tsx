@@ -46,9 +46,9 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
               />
             ))}
           </blockquote>
-          <h1>
+          <h2>
             {heading}
-          </h1>
+          </h2>
           <p>
             {description}
           </p>

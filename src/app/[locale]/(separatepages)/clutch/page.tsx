@@ -70,7 +70,10 @@ export default async function Clutch(props: IAIservicesProps) {
           />
           <Testimonial />
           <FaqsSection faqs={clFaqs} />
-          <EvaluateBusiness />
+          <EvaluateBusiness
+            heading="Ready to become a tech success story?"
+            description="Don’t let technical hurdles stand in the way of building powerful tech solutions. Let us help you bring your vision to life with innovative, cost-effective and reliable services. Get in touch!"
+          />
         </div>
       </div>
     </>

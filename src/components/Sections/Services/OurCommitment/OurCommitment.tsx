@@ -24,12 +24,12 @@ export const OurCommitment: React.FC<OurCommitmentProps> = ({
   commitmentData,
 }) => {
   return (
-    <div id='sideMargin'>
+    <div id="sideMargin">
       <Container className="main margins">
         <div className={styles.expertiseGrid}>
-          <center style={{margin: '3rem 0'}}>
-            <h1>{heading}</h1>
-            <p> 
+          <center style={{ margin: '3rem 0' }}>
+            <h2>{heading}</h2>
+            <p>
               {description}
             </p>
           </center>

@@ -26,6 +26,26 @@
   transition: 0.5s all;
 }
 
+.HowWeWorkCards > div > h4 {
+  position: relative;
+  top: -4rem; /* Adjust the value to position the circle as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #000000; /* Circle background color */
+  color: #fff; /* Text color */
+  width: 50px; /* Diameter of the circle */
+  height: 50px; /* Diameter of the circle */
+  border-radius: 50%; /* Makes the background circular */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px; /* Adjust font size as needed */
+  font-weight: bold; /* Optional: makes the text bold */
+  z-index: 1; /* Ensure it appears above the border */
+  border: 2px solid #ccc; /* Optional: add a border to the circle */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: adds a subtle shadow */
+}
+
 @media screen and (max-width: 768px) {
   .HowWeWorkCards > div {
     width: 100%;
@@ -42,4 +62,3 @@
   flex-wrap: wrap;
   justify-content: left;
 }
-

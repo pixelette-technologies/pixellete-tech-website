@@ -26,15 +26,11 @@ const Map: React.FC = () => {
     <Container className="main margins">
       <div className="map">
         <center>
-          <h1>
-            Global Reach, Local Impact: Pixelette Technologies Around the World
-          </h1>
+          <h2>
+            Our global hubs
+          </h2>
           <p>
-            Discover how Pixelette Technologies spans across continents, with
-            dedicated teams in 13 countries ensuring we are both globally
-            connected and locally present. Each location is strategically chosen
-            to foster close relationships with local markets, offering tailored
-            solutions that respect regional nuances and requirements.
+            Our presence spans across continents, with dedicated teams in 13 countries ensuring we are, both, globally connected and locally present.
           </p>
         </center>
 
@@ -73,7 +69,7 @@ const Map: React.FC = () => {
                   className="image-for-hover"
                   whileHover={{ scale: 1.1 }}
                   onMouseEnter={() => handleMouseEnter(index)}
-                  style={{width: '100px'}}
+                  style={{ width: '100px' }}
                   // onMouseLeave={handleMouseLeave}
                 />
               </div>

@@ -29,9 +29,9 @@ const ServiceCards: React.FC = () => {
     <div className="serviceWorkCards">
       {cardData.map((card, index) => (
         <section key={index}>
-          <h1>{card.step}</h1>
-          <h3>{card.title}</h3>
-          <h5>{card.description}</h5>
+          <h3>{card.step}</h3>
+          <h2>{card.title}</h2>
+          <p>{card.description}</p>
         </section>
       ))}
     </div>

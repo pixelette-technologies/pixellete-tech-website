@@ -3,19 +3,18 @@ import React from 'react';
 import { ContactUsForm } from '../contactUsForm/ContactUsForm';
 import './evaluatebusiness.css';
 
-export const EvaluateBusiness: React.FC = () => {
+type EvaluateBusinessProps = {
+  heading: string;
+  description: string;
+};
+
+export const EvaluateBusiness: React.FC<EvaluateBusinessProps> = ({ heading, description }) => {
   return (
     <Container className="main margins">
-      <div className="evaluateBussiness" id='sideMargin'>
+      <div className="evaluateBussiness" id="sideMargin">
         <header>
-          <h1>
-            Elevate Your Business Today
-          </h1>
-          <p>
-            Complete the form to collaborate with our specialists and develop a
-            customised solution that brings your vision alive.
-          </p>
-
+          <h2>{heading}</h2>
+          <p>{description}</p>
         </header>
         <div>
           <ContactUsForm

@@ -45,10 +45,10 @@ const HowItWorksHeroSection: React.FC<HeroSectionProps> = ({
             </p>
 
           </center>
-          <section id='sideMargin'>
+          <section id="sideMargin">
             <div className="deliverHeroCard">
               <section>
-                <h1>{deliverTitle}</h1>
+                <h2>{deliverTitle}</h2>
                 {deliverDescription.map((desc, index) => (
                   <p key={index}>{desc}</p>
                 ))}

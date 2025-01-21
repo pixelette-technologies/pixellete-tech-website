@@ -32,19 +32,30 @@ export const HowWeWork: React.FC<HowWeWorkProps> = () => {
             style={{ display: 'flex', justifyContent: 'space-between' }}
           >
             <h2>How we work</h2>
-            <p>
+            {/* <p>
               {' '}
               We understand each client’s needs are unique, and we bring a
               <br />
               flexible, responsive approach to every project.
+            </p> */}
+            <p>
+              We understand each client’s needs are unique, and we bring a
+              <br />
+              flexible, responsive approach to every project. With structured
+              <br />
+              methodologies and the agility to adapt, we stay on the pulse
+              <br />
+              of trends, providing you with tech and IT services that are not
+              <br />
+              just relevant today but remain future-proof.
             </p>
-
           </div>
           <div className="expertiseGrid">
             <section className="HowWeWorkCards">
               {data.map((el, index) => (
                 <div style={{ margin: '0 1rem' }} key={index}>
-                  <p>{el.title}</p>
+                  <h4>{index + 1}</h4>
+                  <h3>{el.title}</h3>
                   <br />
                   <p>{el.desc}</p>
                 </div>

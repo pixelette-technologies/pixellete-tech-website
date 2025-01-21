@@ -129,10 +129,9 @@ export const ProjectSection: React.FC = () => {
     <div className="exploreProjectSections">
       <section>
         <center>
-          <h1
-          >
+          {/* <h1>
             Explore Our Projects
-          </h1>
+          </h1> */}
         </center>
       </section>
       <Container className="main margins">

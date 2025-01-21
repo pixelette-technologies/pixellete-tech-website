@@ -79,7 +79,10 @@ export default async function DedicatedTeamServices(props: IDeliverProps) {
       <SelectPlan />
       <ServiceWork />
       <FaqsSection faqs={deliverFaqs} />
-      <EvaluateBusiness />
+      <EvaluateBusiness
+        heading="Ready to become a tech success story?"
+        description="Don’t let technical hurdles stand in the way of building tech solutions that shake up the world as we know it. Let us help you bring your vision to life with innovative, cost-effective and reliable services. Get in touch!"
+      />
     </>
   );
 };

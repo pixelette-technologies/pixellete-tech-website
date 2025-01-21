@@ -96,7 +96,10 @@ export default async function CustomSoftwareDevelopment(props: ICustomSoftwareDe
         commitmentData={commitmentData}
       />
       <FaqsSection faqs={aiFaq} />
-      <EvaluateBusiness />
+      <EvaluateBusiness
+        heading="We’re not waiting for the future; we’re actively building with businesses"
+        description="Start your transformation today and promote your development goals with a top-tier global team that pushes the boundaries of innovation every single day."
+      />
     </>
   );
 };

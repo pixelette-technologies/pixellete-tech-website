@@ -1,7 +1,7 @@
 export const expertiseAiChangeData = [
   {
     image: 'images/aiServices/e_1.svg',
-    text: 'Financial Services',
+    text: 'Financial',
     description: 'Revolutionize financial operations with secure, efficient, and scalable digital solutions tailored to your needs',
   },
   {
@@ -11,32 +11,52 @@ export const expertiseAiChangeData = [
   },
   {
     image: 'images/aiServices/e_3.svg',
-    text: 'Healthcare & Pharmaceutics',
-    description: 'Lorem ipsome Lorem ipsome Lorem ipsome Lorem ipsome Lorem ipsome ',
+    text: 'Healthcare',
+    description: 'Boost patient care and operational efficiency with advanced, secure healthcare technology.',
   },
   {
     image: 'images/aiServices/e_4.svg',
-    text: 'Tourism & Hospitality',
-    description: 'Lorem ipsome Lorem ipsome Lorem ipsome Lorem ipsome Lorem ipsome ',
+    text: 'Hospitality',
+    description: 'Enhance guest experiences and streamline bookings with transformative, customer-centered technology.',
   },
   {
     image: 'images/aiServices/e_5.svg',
-    text: 'Entertainment & Leisure',
-    description: 'Lorem ipsome Lorem ipsome Lorem ipsome Lorem ipsome Lorem ipsome ',
+    text: 'Entertainment',
+    description: 'Transform how audiences experience entertainment with immersive, futuristic digital solutions.',
   },
   {
     image: 'images/aiServices/e_6.svg',
-    text: 'Media & Telecommunications',
-    description: 'Lorem ipsome Lorem ipsome Lorem ipsome Lorem ipsome Lorem ipsome ',
+    text: 'Telecom',
+    description: 'Connect audiences and drive engagement with innovative communication solutions.',
   },
   {
     image: 'images/aiServices/e_7.svg',
     text: 'Public Sector',
-    description: 'Lorem ipsome Lorem ipsome Lorem ipsome Lorem ipsome Lorem ipsome ',
+    description: 'Modernize public services and enhance security with scalable, efficient technology solutions.',
   },
   {
     image: 'images/aiServices/e_8.svg',
     text: 'Retail',
-    description: 'Lorem ipsome Lorem ipsome Lorem ipsome Lorem ipsome Lorem ipsome ',
+    description: 'Boost sales and personalize shopping journeys with smart, data-driven retail tech services.',
+  },
+  {
+    image: 'images/aiServices/e_8.svg',
+    text: 'Energy',
+    description: 'Power the future with smart, sustainable digital solutions designed for the energy sector.',
+  },
+  {
+    image: 'images/aiServices/e_8.svg',
+    text: 'Logistics',
+    description: 'Simplify operations and increase efficiency with custom logistics technology built for your needs.',
+  },
+  {
+    image: 'images/aiServices/e_8.svg',
+    text: 'Insurance',
+    description: 'Modernize claims and client management with secure, data-driven solutions for insurance.',
+  },
+  {
+    image: 'images/aiServices/e_8.svg',
+    text: 'Manufacturing',
+    description: 'Transform manufacturing with innovative, scalable tech that optimizes production.',
   },
 ];

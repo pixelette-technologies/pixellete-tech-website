@@ -12,8 +12,9 @@
     "made_with": "Made with <author></author>."
   },
   "Index": {
-    "meta_title": "Pixelette Technologies",
-    "meta_description": "Next js Boilerplate is the perfect starter code for your project. Build your React application with the Next.js framework.",
+    "meta_title": "Pixelette Technologies | Shaping Future Tech",
+    "meta_description": "We're a leading company with offices in the UK and USA for development services in AI, blockchain, software, mobile & web platforms. Get in touch today.",
+    "meta_keywords": "offshore software development company, nearshore development services, blockchain development services, ai development services, software development services, software outsourcing company",
     "sponsors_title": "Sponsors"
   },
   "Counter": {
@@ -62,8 +63,9 @@
   },
   "PixeletteResearch": {
     "_comment": "Add Pixelette Research content here",
-    "meta_title": "Pixelette Research",
-    "meta_description": "About page description",
+    "meta_title": "Pixelette Research | Actionable Intelligence, Delivered",
+    "meta_description": "Pixelette Research offers expert insights, predictive modeling and comprehensive data analysis. Transform your data into actionable strategies.",
+    "meta_keywords": "robotic process automation, natural language processing, predictive modeling, data analysis services, research services, research projects",
     "about_paragraph": "Welcome to our About page! We are a team of passionate individuals dedicated to creating amazing software.",
     "translation_powered_by": "Translation powered by"
   },

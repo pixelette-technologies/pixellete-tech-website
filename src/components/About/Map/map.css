@@ -12,7 +12,7 @@
   justify-content: center;
   flex-direction: column;
 }
-.map > center > h1 {
+.map > center > h2 {
   margin: 1.7rem;
 }
 .map > div > *:first-child {

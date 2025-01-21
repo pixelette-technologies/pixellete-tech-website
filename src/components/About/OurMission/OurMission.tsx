@@ -60,19 +60,19 @@ const OurMission: React.FC = () => {
             <div className="content">
               <h2>Our core values</h2>
               <p className="values">
-                <strong>Building what’s next</strong>
+                <h3>Building what’s next</h3>
                 Innovation is our lifeblood. We’re not waiting for the future;
                 we’re actively building it, creating cutting-edge solutions that
                 redefine industries.
-                <strong>Raising the bar</strong>
+                <h3>Raising the bar</h3>
                 Excellence is our baseline. We aim for results that inspire,
                 setting the gold standard for technology solutions in every
                 industry we serve.
-                <strong>Trust in every step</strong>
+                <h3>Trust in every step</h3>
                 We believe in transparency and accountability, ensuring every
                 interaction and project builds trust and confidence with our
                 clients.
-                <strong>Creating together</strong>
+                <h3>Creating together</h3>
                 Success is a team sport. Whether it’s our clients, partners, or
                 team, we work collaboratively to achieve powerful outcomes that
                 drive shared success.

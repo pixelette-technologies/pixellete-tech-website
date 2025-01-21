@@ -26,16 +26,16 @@ const FaqsSection: React.FC<FaqsSectionProps> = ({ heading, text, faqs }) => {
   return (
     <div className="faqsSection">
       <center>
-        <h1 id="h_ani">
+        <h2 id="h_ani">
           {heading || 'Have questions? We\'ve got answers! Here are the most frequent ones'}
-        </h1>
+        </h2>
         <p>
           {text || 'Ask everything you need to know about our products and services.'}
         </p>
 
       </center>
       <Container className="main margins">
-        <section id='sideMargin'>
+        <section id="sideMargin">
           <div>
             {faqsLeft.map((el, index) => (
               <Accordian

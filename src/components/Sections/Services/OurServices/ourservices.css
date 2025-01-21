@@ -23,10 +23,10 @@
 .OurServicesBg div {
   z-index: 2; /* Ensure content is on top */
   color: white; /* Add a color to make text readable */
-  height: 100%;
+  /* height: 100%; */
   margin: 2rem 0;
-  padding: 0 5rem;
-  width: 100%;
+  padding: 0 4rem;
+  /* width: 100%; */
 }
 
 @media screen and (max-width: 768px) {
@@ -56,6 +56,9 @@
   z-index: 1; /* Keep this lower than the z-index of the content */
 }
 
+.OurServicesBg > div > center > p {
+  max-width: 72ch;
+}
 .OurServicesBg div {
   z-index: 2; /* Ensure content is on top */
   color: white; /* Add a color to make text readable */
@@ -67,7 +70,7 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  width: 100%;
+  /* width: 100%; */
 }
 
 .ourServicesLists div:nth-child(1),

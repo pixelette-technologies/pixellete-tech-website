@@ -45,12 +45,13 @@ export async function generateMetadata(props: IUIUXProps) {
   const { locale } = await props.params;
   const t = await getTranslations({
     locale,
-    namespace: 'About',
+    namespace: 'UiUx',
   });
 
   return {
     title: t('meta_title'),
     description: t('meta_description'),
+    keywords: t('meta_keywords'),
   };
 }
 
@@ -105,7 +106,10 @@ export default async function UIUX(props: IUIUXProps) {
         commitmentData={commitmentData}
       />
       <FaqsSection faqs={aiFaq} />
-      <EvaluateBusiness />
+      <EvaluateBusiness
+        heading="We’re not waiting for the future; we’re actively building with businesses"
+        description="Start your transformation today and promote your development goals with a top-tier global team that pushes the boundaries of innovation every single day."
+      />
     </>
   );
 };

@@ -34,13 +34,13 @@ export const TechnologyGrid: React.FC<TechnologyGridProps> = ({
   };
 
   return (
-    <div className="technologyStackAi" id='sideMargin'>
+    <div className="technologyStackAi" id="sideMargin">
       <center>
-        <h1
+        <h2
           id="h_ani"
         >
           {heading}
-        </h1>
+        </h2>
         <p>
           {description}
         </p>
@@ -81,7 +81,7 @@ export const TechnologyGrid: React.FC<TechnologyGridProps> = ({
             {selectedData
               ? (
                   <div style={{ display: 'flex', flexDirection: 'column', textAlign: 'center', gap: '2rem' }}>
-                    <h3>{selectedData.title}</h3>
+                    <strong>{selectedData.title}</strong>
                     {selectedData.description && (
                       <p>
                         {selectedData.description}
@@ -92,9 +92,9 @@ export const TechnologyGrid: React.FC<TechnologyGridProps> = ({
                 )
               : (
                   <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '2rem' }}>
-                    <p>
+                    <strong>
                       {extraDataMapping[expertiseAreas[0]?.title]?.title}
-                    </p>
+                    </strong>
                     <p>
                       {extraDataMapping[expertiseAreas[0]?.title]?.description}
                     </p>

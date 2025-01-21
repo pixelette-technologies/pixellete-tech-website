@@ -71,11 +71,11 @@ export const OurServices: React.FC<OurServicesProps> = ({
                   key={index}
                 >
                   <p onClick={() => handleServiceClick(item)}>
-                    <h3>
+                    <h4>
                       {' '}
                       {item}
                       {' '}
-                    </h3>
+                    </h4>
                   </p>
                 </p>
               ))}
