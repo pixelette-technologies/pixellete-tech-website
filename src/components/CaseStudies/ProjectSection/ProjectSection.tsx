@@ -1,63 +1,61 @@
 'use client';
 
-import type { Entry } from 'contentful';
+import { CaseStudyCard } from '@/components/Feature/CaseSlider/CaseStudyCard';
 // import type { Settings } from 'react-slick';
-import { CaseStudiCard } from '@/components/Feature/CaseSlider/CaseStudiCard';
 import { Container } from '@/components/Feature/Container/Container';
-import { createClient } from 'contentful';
-import React, { useEffect, useState } from 'react';
-import { v4 as uuidv4 } from 'uuid';
+import { caseStudies } from '@/data/caseStudies/caseStudies';
+import React from 'react';
 import './projectsection.css';
 
-type CaseStudyFields = {
-  tags?: string[];
-  image?: {
-    fields: {
-      file: {
-        url: string;
-      };
-    };
-  };
-  shortDescription?: string;
-  longDescription?: string;
-};
+// type CaseStudyFields = {
+//   tags?: string[];
+//   image?: {
+//     fields: {
+//       file: {
+//         url: string;
+//       };
+//     };
+//   };
+//   shortDescription?: string;
+//   longDescription?: string;
+// };
 
-type CaseStudy = Entry<CaseStudyFields>;
+// type CaseStudy = Entry<CaseStudyFields>;
 
 export const ProjectSection: React.FC = () => {
-  const [active, setActive] = useState<string>('Blockchain');
-  const [filteredData, setFilteredData] = useState<CaseStudy[]>([]);
-  const [blogData, setBlogData] = useState<CaseStudy[]>([]);
+  // const [active, setActive] = useState<string>('Blockchain');
+  // const [filteredData, setFilteredData] = useState<CaseStudy[]>([]);
+  // const [blogData, setBlogData] = useState<CaseStudy[]>([]);
 
   // const slider = useRef<Slider | null>(null);
 
-  useEffect(() => {
-    const client = createClient({
-      space: 'ggtsbq0gqfii',
-      accessToken: 'VZvVye8dMIc497wF-1pNt5rdYUG-h4E30uX58AcGVUo',
-    });
+  // useEffect(() => {
+  //   const client = createClient({
+  //     space: 'ggtsbq0gqfii',
+  //     accessToken: 'VZvVye8dMIc497wF-1pNt5rdYUG-h4E30uX58AcGVUo',
+  //   });
 
-    client
-      .getEntries<CaseStudyFields>({ content_type: 'caseStudies' })
-      .then((response) => {
-        setBlogData(response.items);
-      })
-      .catch(error => console.error('Error fetching data:', error));
-  }, []);
+  //   client
+  //     .getEntries<CaseStudyFields>({ content_type: 'caseStudies' })
+  //     .then((response) => {
+  //       setBlogData(response.items);
+  //     })
+  //     .catch(error => console.error('Error fetching data:', error));
+  // }, []);
 
-  useEffect(() => {
-    if (blogData.length > 0) {
-      setFilteredData(
-        blogData.filter(caseStudy =>
-          caseStudy.fields?.tags?.includes(active),
-        ),
-      );
-    }
-  }, [active, blogData]);
+  // useEffect(() => {
+  //   if (blogData.length > 0) {
+  //     setFilteredData(
+  //       blogData.filter(caseStudy =>
+  //         caseStudy.fields?.tags?.includes(active),
+  //       ),
+  //     );
+  //   }
+  // }, [active, blogData]);
 
-  const sliderData = Array.from(
-    new Set(blogData.flatMap(caseStudy => caseStudy.fields?.tags || [])),
-  );
+  // const sliderData = Array.from(
+  //   new Set(blogData.flatMap(caseStudy => caseStudy.fields?.tags || [])),
+  // );
 
   // const settings: Settings = {
   //   dots: false,
@@ -121,9 +119,9 @@ export const ProjectSection: React.FC = () => {
   //     slider.current?.slickPrev();
   //   };
 
-  const handleActiveBtn = (element: string) => {
-    setActive(element);
-  };
+  // const handleActiveBtn = (element: string) => {
+  //   setActive(element);
+  // };
 
   return (
     <div className="exploreProjectSections">
@@ -135,7 +133,7 @@ export const ProjectSection: React.FC = () => {
         </center>
       </section>
       <Container className="main margins">
-        <header>
+        {/* <header>
           <div data-aos="fade-up" data-aos-duration="500">
             <div
               style={{
@@ -156,23 +154,48 @@ export const ProjectSection: React.FC = () => {
               ))}
             </div>
           </div>
-        </header>
+        </header> */}
         <section>
-          {filteredData.map((el) => {
+          {/* {filteredData.map((el) => {
             const imageUrl = el.fields?.image?.fields?.file?.url?.startsWith('//')
               ? `https:${el.fields.image.fields.file.url}`
               : el.fields?.image?.fields?.file?.url || '';
-            return (
-              <CaseStudiCard
+            return ( */}
+          {/* <CaseStudyCard
+            to="/to"
+            frontImageSrc="/images/casestudies/CaseSliderCardBanner.svg"
+            backImageSrc="/images/casestudies/CaseSliderCardHeader.svg"
+            description="APIs and launch solutions like Prepaid cards, Multi-currency, Charge and Credit cards, and Buy Now Pay Later."
+            title="Smart Contracter"
+            tags={['Banking', 'Financial Service', 'Fintech', 'Payments']}
+            buttonText="Learn More"
+            onButtonClick={() => console.log('Button Clicked!')}
+          /> */}
+
+          {caseStudies.map(study => (
+            <CaseStudyCard
+              key={study.id}
+              to={study.id}
+              frontImageSrc={study.frontImageSrc}
+              backImageSrc={study.backImageSrc}
+              description={study.description}
+              title={study.title}
+              tags={study.tags}
+              buttonText={study.buttonText}
+              onButtonClick={() => console.log(`${study.title} button clicked`)}
+            />
+          ))}
+
+          {/* <CaseStudiCard
                 key={el.sys?.id}
                 to={el.sys?.id}
                 image={imageUrl}
                 name={el.fields?.shortDescription || ''}
                 tags={el.fields?.tags || []}
                 description={el.fields?.longDescription || ''}
-              />
-            );
-          })}
+              /> */}
+          {/* ); */}
+          {/* })} */}
         </section>
       </Container>
     </div>

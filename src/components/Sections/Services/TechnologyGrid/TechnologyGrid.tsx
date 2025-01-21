@@ -63,7 +63,7 @@ export const TechnologyGrid: React.FC<TechnologyGridProps> = ({
                 gap: '1rem',
               }}
             >
-              <h3>{area.title}</h3>
+              <h5>{area.title}</h5>
               {area.description && (
                 <p>{area.description}</p>
               )}
@@ -92,9 +92,9 @@ export const TechnologyGrid: React.FC<TechnologyGridProps> = ({
                 )
               : (
                   <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '2rem' }}>
-                    <strong>
+                    <h5>
                       {extraDataMapping[expertiseAreas[0]?.title]?.title}
-                    </strong>
+                    </h5>
                     <p>
                       {extraDataMapping[expertiseAreas[0]?.title]?.description}
                     </p>

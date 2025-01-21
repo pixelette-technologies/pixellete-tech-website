@@ -1,13 +1,11 @@
-import { Button } from '@/components/Feature/Button/Button';
 import { Container } from '@/components/Feature/Container/Container';
 import { technologyStackAiData } from '@/data/technologyStackAiData';
 import React from 'react';
-import { FaExternalLinkAlt } from 'react-icons/fa';
 import './ourservicessection.css';
 
 const OurServicesSection: React.FC = () => {
   return (
-    <div className="technologyStack" id='sideMargin'>
+    <div className="technologyStack" id="sideMargin">
       <center>
         <h2>
           We bring full-stack development services to the table
@@ -33,9 +31,9 @@ const OurServicesSection: React.FC = () => {
               data-aos-duration={600}
             >
               <img src={item.icon} alt="icon" />
-              <h3>
+              <h4>
                 {item.title}
-              </h3>
+              </h4>
             </div>
           ))}
         </div>
