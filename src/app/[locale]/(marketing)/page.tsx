@@ -42,6 +42,7 @@ export default async function Index(props: IIndexProps) {
     <>
       <HeroSection />
       <OurClients />
+
       <AboutUsSection />
       <WhatMakeUsSpecialHome />
       <OurServicesSection />

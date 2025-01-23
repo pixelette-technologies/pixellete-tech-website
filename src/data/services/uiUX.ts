@@ -107,85 +107,85 @@ export const uiuxServicelist
   {
     title: 'AI Solutions',
     items: [
-      'Generative AI',
-      'AI Security',
-      'AI Design',
-      'AI Ops',
-      'Automation Solutions',
+      'Digital Product Design and Development Consulting',
+      'Web and Mobile UI/UX Design',
+      'App and Website Redesign',
+      'UI/UX Design Audit',
+      'UI/UX Design Research',
     ],
   },
   {
     title: 'AI Applications',
     items: [
-      'Chatbots & Conversational AI',
-      'Recommendations Engines',
-      'AI-as-a-Service (AIaaS)',
-      'AI Product Development',
-      'Predictive Modeling',
+      'Design Strategy Development',
+      'Design Concept Development',
+      // 'AI-as-a-Service (AIaaS)',
+      // 'AI Product Development',
+      // 'Predictive Modeling',
     ],
   },
 ];
 export const uiuxServices = {
-  'Generative AI': {
+  'Digital Product Design and Development Consulting': {
     imageSrc: '/images/aiServices/s_1.svg',
-    title: 'Generative AI',
+    title: 'Digital Product Design and Development Consulting',
     description:
-    'We are recognized as a leading generative AI development company and bring deep expertise in generative AI tools like GPT-4, GPT-3.5, and DALL-E. Our models provide visual content analysis to aid in brand identity, data analysis, business intelligence, and visualization, offering tailored generative AI development services.',
+    'As a top UI UX design agency, we offer end-to-end digital product strategy consulting that strengthens your app’s value. Our experts assess architecture, understand business dynamics, and provide strategic guidance on complex challenges to set you on a success path.',
   },
-  'AI Security': {
+  'Web and Mobile UI/UX Design': {
     imageSrc: '/images/aiServices/s_2.svg',
-    title: 'AI Security',
+    title: 'Web and Mobile UI/UX Design',
     description:
-    'Our AI security solutions leverage advanced machine learning algorithms to detect and prevent cyber threats in real time, ensuring robust and reliable system protection.',
+    'We provide responsive web design, adaptive mobile design, and user experience design services that enhance user satisfaction and engagement.',
   },
-  'AI Design': {
+  'App and Website Redesign': {
     imageSrc: '/images/aiServices/s_3.svg',
-    title: 'AI Design',
+    title: 'App and Website Redesign',
     description:
-    'We provide cutting-edge AI-powered design solutions that enhance user experiences, optimize workflows, and drive creative innovation.',
+    'Transform outdated projects with a fresh, impactful interface while keeping the backend intact if desired, using our UI UX design and development services.',
   },
-  'AI Ops': {
+  'UI/UX Design Audit': {
     imageSrc: '/images/aiServices/s_4.svg',
-    title: 'AI Ops',
+    title: 'UI/UX Design Audit',
     description:
-    'Streamline your operations with AI-driven automation and insights that improve efficiency, reduce downtime, and maximize productivity.',
+    'Our team conducts comprehensive UI/UX design audits to identify improvement areas and offer targeted recommendations for achieving your design goals.',
   },
-  'Automation Solutions': {
+  'UI/UX Design Research': {
     imageSrc: '/images/aiServices/s_5.svg',
-    title: 'Automation Solutions',
+    title: 'UI/UX Design Research',
     description:
-    'Implement intelligent automation solutions that empower businesses to achieve greater accuracy, speed, and scalability in their operations.',
+    'Our design team provides personalized user experience design services to answer key questions about your web or mobile project’s user experience.',
   },
-  'Chatbots & Conversational AI': {
+  'Design Strategy Development': {
     imageSrc: '/images/aiServices/s_6.svg',
-    title: 'Chatbots & Conversational AI',
+    title: 'Design Strategy Development',
     description:
-    'Develop interactive chatbots and conversational AI tools that deliver personalized customer engagement and support.',
+    'We help clients grasp the importance of strategic design and build effective operational strategies that enhance brand value through UI/UX design.',
   },
-  'Recommendations Engines': {
+  'Design Concept Development': {
     imageSrc: '/images/aiServices/s_1.svg',
-    title: 'Recommendations Engines',
+    title: 'Design Concept Development',
     description:
-    'Build recommendation systems that provide users with highly relevant suggestions, enhancing user satisfaction and retention.',
+    'With advanced UI & UX development techniques, our team supports you in wireframing and prototyping, combining user insights, your vision, and cutting-edge technology for optimal results.',
   },
-  'AI-as-a-Service (AIaaS)': {
-    imageSrc: '/images/aiServices/s_2.svg',
-    title: 'AI-as-a-Service (AIaaS)',
-    description:
-    'Deliver scalable AI capabilities on-demand, enabling businesses to quickly integrate AI into their processes.',
-  },
-  'AI Product Development': {
-    imageSrc: '/images/aiServices/s_3.svg',
-    title: 'AI Product Development',
-    description:
-    'Create innovative AI-driven products that cater to specific business needs, leveraging advanced AI technologies.',
-  },
-  'Predictive Modeling': {
-    imageSrc: '/images/aiServices/s_4.svg',
-    title: 'Predictive Modeling',
-    description:
-    'Harness the power of predictive analytics to forecast trends, identify opportunities, and make data-driven decisions.',
-  },
+  // 'AI-as-a-Service (AIaaS)': {
+  //   imageSrc: '/images/aiServices/s_2.svg',
+  //   title: 'AI-as-a-Service (AIaaS)',
+  //   description:
+  //   'Deliver scalable AI capabilities on-demand, enabling businesses to quickly integrate AI into their processes.',
+  // },
+  // 'AI Product Development': {
+  //   imageSrc: '/images/aiServices/s_3.svg',
+  //   title: 'AI Product Development',
+  //   description:
+  //   'Create innovative AI-driven products that cater to specific business needs, leveraging advanced AI technologies.',
+  // },
+  // 'Predictive Modeling': {
+  //   imageSrc: '/images/aiServices/s_4.svg',
+  //   title: 'Predictive Modeling',
+  //   description:
+  //   'Harness the power of predictive analytics to forecast trends, identify opportunities, and make data-driven decisions.',
+  // },
 };
 
 type Technology = {

@@ -2,7 +2,7 @@
 
 import { Button } from '@/components/Feature/Button/Button';
 import { Container } from '@/components/Feature/Container/Container';
-import data from '@/data';
+import { teamData } from '@/data/teamData';
 import Image from 'next/image';
 import { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
@@ -38,7 +38,21 @@ export const OurTeam = () => {
   const handleLoadMore = () => {
     setVisibleCards(prev => prev + 8);
   };
+  const generateSchema = () => {
+    const peopleSchema = teamData.map(el => ({
+      '@type': 'Person',
+      'name': el.name,
+      'jobTitle': el.role,
+      'image': el.image,
+    }));
 
+    return {
+      '@context': 'https://schema.org',
+      '@type': 'Organization',
+      'name': 'Your Organization Name', // Replace with your organization name
+      'member': peopleSchema,
+    };
+  };
   return (
     <div className="ourTeamSection">
       <Container className="main margins">
@@ -59,7 +73,7 @@ export const OurTeam = () => {
         </p>
 
         <section>
-          {data.teamData.slice(0, visibleCards).map((el, index) => (
+          {teamData.slice(0, visibleCards).map((el, index) => (
             <TeamCard
               image={el.image}
               role={el.role}
@@ -70,7 +84,7 @@ export const OurTeam = () => {
             />
           ))}
         </section>
-        {visibleCards < data.teamData.length && (
+        {visibleCards < teamData.length && (
           <div>
             <center style={{ marginTop: '4.8rem' }}>
               <Button className="primary" onClick={handleLoadMore}>
@@ -80,6 +94,10 @@ export const OurTeam = () => {
           </div>
         )}
       </Container>
+      {/* JSON-LD Script for People Schema */}
+      <script type="application/ld+json">
+        {JSON.stringify(generateSchema())}
+      </script>
     </div>
   );
 };
