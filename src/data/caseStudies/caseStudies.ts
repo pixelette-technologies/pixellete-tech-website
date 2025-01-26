@@ -17,5 +17,14 @@ export const caseStudies = [
     tags: ['Wallet', 'Payments', 'E-commerce'],
     buttonText: 'Explore Now',
   },
+  {
+    id: 'smart-contracter',
+    frontImageSrc: '/images/casestudies/CaseSliderCardBanne.svg',
+    backImageSrc: '/images/casestudies/CaseSliderCardHeade.svg',
+    description: 'APIs and launch solutions like Prepaid cards, Multi-currency, Charge and Credit cards, and Buy Now Pay Later.',
+    title: 'Smart Contracter',
+    tags: ['Banking', 'Financial Service', 'Fintech', 'Payments'],
+    buttonText: 'Learn More',
+  },
   // Add more case studies as needed
 ];

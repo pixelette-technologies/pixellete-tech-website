@@ -76,12 +76,12 @@ const CaseStudieDetail = async ({ params }: { params: { slug: string } }) => {
               <p style={{ fontSize: '15px' }}>{blocker}</p>
             </span>
             <header data-aos="fade-up" data-aos-duration="900">
-              <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%', marginTop: '2rem', gap: '3rem' }}>
-                <div>
+              <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%', marginTop: '2rem', gap: '3rem' }} className='BlockerGrid'>
+                <div style={{width: '50%'}}>
                   <h2>The goal</h2>
                   <p style={{ fontSize: '15px' }}>{goal}</p>
                 </div>
-                <div>
+                <div style={{width: '50%'}}>
                   <h2>The proposed solution</h2>
                   <p style={{ fontSize: '15px' }}>{solution}</p>
                 </div>
@@ -89,7 +89,7 @@ const CaseStudieDetail = async ({ params }: { params: { slug: string } }) => {
             </header>
           </section>
           <MillstoneList />
-          <section>
+          <section style={{margin: '10rem 0'}}>
             <header style={{ textAlign: 'center', display: 'flex', flexDirection: 'column' }}>
               <h1>The chosen tech stack</h1>
               <p>The strategic IT staff augmentation led to significant improvements and achievements:</p>
@@ -97,7 +97,7 @@ const CaseStudieDetail = async ({ params }: { params: { slug: string } }) => {
             <span
               style={{
                 display: 'grid',
-                gridTemplateColumns: 'repeat(5, 1fr)',
+                gridTemplateColumns: 'repeat(3, 1fr)',
                 width: '70%',
                 margin: '0 auto',
                 gap: '2rem',
@@ -111,14 +111,14 @@ const CaseStudieDetail = async ({ params }: { params: { slug: string } }) => {
             </span>
           </section>
           <span style={{ display: 'flex', marginTop: '5rem' }}>
-            <span>
+            <span style={{width: '30%'}}>
               <h2>Our impact</h2>
               <p style={{ fontSize: '15px' }}>{impactStats.description}</p>
-              <h1>{impactStats.percentage}</h1>
-              <p>{impactStats.details}</p>
+              {/* <h1>{impactStats.percentage}</h1> */}
+              {/* <p>{impactStats.details}</p> */}
             </span>
             <section style={{ width: '100%' }}>
-              <span style={{ display: 'flex', flexDirection: 'column', gap: '1rem', width: '100%' }} className="boxTick">
+              <span style={{ display: 'flex', flexDirection: 'column', gap: '1rem', width: '70%', margin: '0 0 0 auto' }} className="boxTick">
                 {impactBoxes.map((box, index) => (
                   <div
                     key={index}

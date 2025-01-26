@@ -25,6 +25,34 @@ const caseStudiesData = [
       { title: 'Praised User Interfaces', description: 'The users greatly...' },
     ],
   },
+  {
+    slug: 'Contract',
+    title: 'How AIA is Shaping the Future of Inclusive Hiring',
+    description: 'AIA or Accessible Intelligence Assessment is a specialized assessment tool that helps organizations with achieving their hiring quotes for individuals who have auditory, visual or dual impairments. The tool is backed by a pioneering consultancy, DiverSCInnova, that specializes in creating gamified, science-backed solutions for the support and development of individuals, particularly those who are differently abled. They collaborated with Pixelette Technologies for the technological development and maintenance of AIA. ',
+    businessType: 'Software-as-a-Service (SaaS)',
+    industry: 'Artificial Intelligence',
+    blocker: 'Many organizations around the world struggle to meet mandated hiring quotas for individuals with disabilities, facing challenges in identifying and assessing candidates with sensory, physical or intellectual impairments. This difficulty is compounded by the need to comply with legal and regulatory requirements for diversity hiring all the while making sure that candidates are effectively matched to roles that align with their abilities. Without an efficient and inclusive assessment solution, companies risk non-compliance, higher recruitment costs and missed opportunities to foster a truly diverse workforce.',
+    goal: 'DiverSCInnova aimed to develop a solution to support differently-abled individuals. The goal was to design a tool that enables inclusive hiring, professional development, and role alignment for companies, while also aiding educational planning and vocational guidance. By addressing these needs, DiverSCInnova sought to promote inclusivity and help organizations and educators effectively align talent with opportunities.',
+    solution: "Pixelette Technologies developed AIA, a gamified cognitive mapping tool designed to help organizations meet diversity hiring quotas and support inclusive talent development. Made for individuals with sensory, physical or intellectual disabilities, AIA assesses up to 10 cognitive skills such as focus, attention and logical reasoning. It provides detailed reports highlighting candidates' strengths, suitable roles and tips for skill enhancement. AIA also supports educational planning and vocational guidance, enabling educators and organizations to match skills with opportunities, comply with regulations and create inclusive work an learning environments.",
+    bannerImage: '/images/casestudies/CaseSliderCardBanne.svg',
+    techStack: [
+      { name: 'Reactjs', icon: '/images/tech/logos/reactjs.png' },
+      { name: 'Node.js', icon: '/images/tech/node.svg' },
+      { name: 'MongoDB', icon: '/images/tech/logos/mongodb.png' },
+      {name: 'Stripe API', icon: '/images/tech/logos/stripe-api.png' },
+      { name:'Openai', icon: '/images/tech/logos/openai.png'},
+    ],
+    impactStats: {
+      description: 'The idea of Non-Fungible Tokens (NFTs)...',
+      percentage: '60%',
+      details: 'The idea of Non-Fungible Tokens...',
+    },
+    impactBoxes: [
+      { title: 'Cost efficiency', description: 'Estimated average savings of $20,000 per organization in recruitment costs due to better candidate matching.' },
+      { title: 'Integration success', description: '98% successful integration with existing recruitment tools (e.g., ATS systems)' },
+      { title: 'Improved hiring', description: '4.7/5 customer satisfaction rating based on post-assessment surveys meaning organizations experience faster hiring decisions with advanced assessment capabilities.' },
+    ],
+  },
   // Add more case studies here
 ];
 
