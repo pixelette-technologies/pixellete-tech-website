@@ -29,7 +29,7 @@
   align-items: center;
   padding: 2rem;
   border-radius: 1.5rem;
-  background-color: #0F0F0FB2;
+  background-color: #0f0f0fb2;
 }
 @media only screen and (max-width: 50em) {
   .caseStudieDetail > section > div > header {
@@ -37,7 +37,7 @@
   }
 }
 .caseStudieDetail > section > div > header > div {
-  max-width: 67rem;
+  max-width: 50%;
   margin-left: 3rem;
 }
 @media only screen and (max-width: 78.125em) {
@@ -250,12 +250,11 @@
   }
 }
 
-
-.boxTick div{
+.boxTick div {
   position: relative;
   cursor: pointer;
 }
-.boxTick div::after{
+.boxTick div::after {
   content: '\2713';
   position: absolute;
   right: 2rem;
@@ -263,12 +262,10 @@
   background-color: green;
   padding: 0.2rem 0.5rem;
   border-radius: 10000px;
-  
 }
 
 @media screen and (max-width: 700px) {
-  .BlockerGrid{
-  flex-wrap: wrap;
+  .BlockerGrid {
+    flex-wrap: wrap;
   }
-  
 }

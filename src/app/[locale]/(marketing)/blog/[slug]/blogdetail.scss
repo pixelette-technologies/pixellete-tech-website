@@ -493,7 +493,6 @@
   color: #0073e6; /* Highlight color on hover */
 }
 
-
 // .bootstrap-container {
 //   max-width: 1400px; /* Set your own width */
 //   margin: 0 auto;    /* Center-align like Bootstrap container */
@@ -520,29 +519,44 @@
 }
 
 @media screen and (max-width: 1024px) {
-  #hiddenSectionBlog{
+  #hiddenSectionBlog {
     display: none;
   }
 }
 
 @media screen and (max-width: 600px) {
-  .blogAuthor{
+  .blogAuthor {
     display: flex;
     flex-direction: column;
 
-    div{
-      img{
+    div {
+      img {
         width: 30px;
         height: 30px;
       }
-      p{
+      p {
         font-size: 14px;
       }
     }
-    div:nth-child(2){
-      p{
+    div:nth-child(2) {
+      p {
         margin-bottom: 2rem;
       }
     }
   }
+}
+
+/* Add underline and color to links */
+.custom-link {
+  text-decoration: underline;
+  color: #007bff; /* Change this to your desired color */
+  transition:
+    color 0.3s ease,
+    text-decoration-color 0.3s ease;
+}
+
+/* Hover effect on links */
+.custom-link:hover {
+  color: #0056b3; /* Change to a darker shade or any hover color */
+  text-decoration-color: #0056b3; /* Change underline color on hover */
 }

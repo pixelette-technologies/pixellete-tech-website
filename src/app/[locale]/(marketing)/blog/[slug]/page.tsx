@@ -181,12 +181,12 @@ const page = (props: any) => {
           <div style={{ marginBottom: '2rem' }}>
             <Breadcrumb items={breadcrumbItems} />
           </div>
-          <h1 style={{ marginBottom: '1rem' }}>{selectedData?.fields?.title}</h1>
+          <h1 style={{ marginBottom: '1rem', maxWidth: '18ch' }}>{selectedData?.fields?.title}</h1>
           <div id="blog-top" className="blog_detail_inner">
             {/* Blog image or video */}
             <div style={{ display: 'flex', justifyContent: 'space-between', gap: '1rem' }}>
               <div>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }} className='blogAuthor'>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }} className="blogAuthor">
                   <div style={{ display: 'flex', gap: '1rem', alignItems: 'center', margin: '1rem' }}>
                     <p>Written by</p>
                     <Image
@@ -369,6 +369,20 @@ const page = (props: any) => {
                               // Fallback for unsupported types
                               return <span>Unsupported asset type</span>;
                             },
+                            [BLOCKS.PARAGRAPH]: (node: any, children: React.ReactNode) => {
+                              // Example of rendering a link
+                              const textContent = getTextContent(node);
+                              if (textContent.includes('http')) {
+                                return (
+                                  <p>
+                                    <a href={textContent} className="custom-link">
+                                      {children}
+                                    </a>
+                                  </p>
+                                );
+                              }
+                              return <p>{children}</p>;
+                            },
                           },
                         })}
                       </div>
@@ -506,7 +520,7 @@ const page = (props: any) => {
                       backgroundColor: '#0F0F0FB2',
                       padding: '1rem',
                       borderRadius: '13.84px',
-                      height: '200px',
+                      // height: '200px',
                       marginBottom: '2rem',
                     }}
                     >
@@ -651,16 +665,16 @@ const page = (props: any) => {
               </div> */}
                 </div>
               </div>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }} id='hiddenSectionBlog'>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }} id="hiddenSectionBlog">
                 <div
-                id='hiddenSectionBlog'
+                  id="hiddenSectionBlog"
                   className="custom-col"
                   style={{
                     width: '450px',
                     backgroundColor: '#0F0F0FB2',
                     padding: '2rem',
                     borderRadius: '13.84px',
-                    height: '350px',
+                    // height: '350px',
 
                   }}
                 >

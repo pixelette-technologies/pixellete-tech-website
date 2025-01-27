@@ -26,6 +26,7 @@ const CaseStudieDetail = async ({ params }: { params: { slug: string } }) => {
     techStack,
     impactStats,
     impactBoxes,
+    milestones,
   } = caseStudy;
 
   return (
@@ -51,7 +52,7 @@ const CaseStudieDetail = async ({ params }: { params: { slug: string } }) => {
           <header>
             <div>
               <Image
-                src={caseStudy.bannerImage || '/images/casestudies/CaseSliderCardBanner.svg'}
+                src={caseStudy.logo || '/images/casestudies/CaseSliderCardBanner.svg'}
                 alt="logo"
                 width={100}
                 height={100}
@@ -69,6 +70,14 @@ const CaseStudieDetail = async ({ params }: { params: { slug: string } }) => {
                 </div>
               </div>
             </div>
+            <figure>
+              <img
+                // src={blogData.fields.image?.fields.file.url}
+                src={caseStudy.bannerImage || '/images/casestudies/aia/aia-header-image.svg'}
+                alt="Cover Image"
+              />
+            </figure>
+
           </header>
           <section>
             <span style={{ display: 'flex', flexDirection: 'column', gap: '1rem', textAlign: 'center' }}>
@@ -76,20 +85,20 @@ const CaseStudieDetail = async ({ params }: { params: { slug: string } }) => {
               <p style={{ fontSize: '15px' }}>{blocker}</p>
             </span>
             <header data-aos="fade-up" data-aos-duration="900">
-              <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%', marginTop: '2rem', gap: '3rem' }} className='BlockerGrid'>
-                <div style={{width: '50%'}}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%', marginTop: '2rem', gap: '3rem' }} className="BlockerGrid">
+                <div style={{ width: '50%' }}>
                   <h2>The goal</h2>
                   <p style={{ fontSize: '15px' }}>{goal}</p>
                 </div>
-                <div style={{width: '50%'}}>
-                  <h2>The proposed solution</h2>
+                <div style={{ width: '50%' }}>
+                  <h2>The Solution</h2>
                   <p style={{ fontSize: '15px' }}>{solution}</p>
                 </div>
               </div>
             </header>
           </section>
-          <MillstoneList />
-          <section style={{margin: '10rem 0'}}>
+          <MillstoneList data={milestones} />
+          <section style={{ margin: '10rem 0' }}>
             <header style={{ textAlign: 'center', display: 'flex', flexDirection: 'column' }}>
               <h1>The chosen tech stack</h1>
               <p>The strategic IT staff augmentation led to significant improvements and achievements:</p>
@@ -111,7 +120,7 @@ const CaseStudieDetail = async ({ params }: { params: { slug: string } }) => {
             </span>
           </section>
           <span style={{ display: 'flex', marginTop: '5rem' }}>
-            <span style={{width: '30%'}}>
+            <span style={{ width: '70%' }}>
               <h2>Our impact</h2>
               <p style={{ fontSize: '15px' }}>{impactStats.description}</p>
               {/* <h1>{impactStats.percentage}</h1> */}

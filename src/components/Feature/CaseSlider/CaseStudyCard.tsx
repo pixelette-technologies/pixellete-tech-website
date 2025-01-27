@@ -57,7 +57,7 @@ export const CaseStudyCard: FC<CaseStudiCardProps> = ({
                 height={200}
               />
             </figure>
-            <div style={{ margin: '1rem 0', textAlign: 'center', display: 'flex', flexDirection: 'column', gap: '5rem' }}>
+            <div style={{ margin: '1rem 0', textAlign: 'center', display: 'flex', flexDirection: 'column', gap: '2rem' }}>
               <h3 className="blogCardHeading">{title}</h3>
               <div className="cardBackTags">
                 {tags.map((tag, index) => (
