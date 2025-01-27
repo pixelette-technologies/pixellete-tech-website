@@ -52,12 +52,6 @@
   width: 4rem;
   /* margin-top: 2.9rem; */
 }
-.millstoneList-itemLeft > header,
-.millstoneList-itemRight > header {
-  display: flex;
-  align-items: center;
-  /* margin-top: 2.9rem; */
-}
 
 .millstoneList-itemLeft > section,
 .millstoneList-itemRight > section {
@@ -67,7 +61,7 @@
 
 .millstoneList-itemLeft > section > img,
 .millstoneList-itemRight > section > img {
-  /* position: absolute; */
+  position: absolute;
   /* top: 2.8rem; */
 }
 
