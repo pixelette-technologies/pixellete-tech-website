@@ -1,6 +1,7 @@
 'use client';
 
 import { Container } from '@/components/Feature/Container/Container';
+import Image from 'next/image';
 import React, { useState } from 'react';
 import styles from './technologiesused.module.css';
 
@@ -50,7 +51,7 @@ const TechnologiesUsed: React.FC<TechnologiesUsedProps> = ({ technologies, title
             <div className={styles.iconsContainer}>
               {technologies[activeTab]?.map(tech => (
                 <div className={styles.iconCard} key={tech.id}>
-                  <img src={tech.icon} alt={tech.name} className={styles.iconImg} />
+                  <Image src={tech.icon} alt={tech.name} width={100} height={60} className={styles.iconImg} />
                 </div>
               ))}
             </div>

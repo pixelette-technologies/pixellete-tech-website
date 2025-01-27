@@ -9,7 +9,7 @@ type Technologies = {
 };
 
 export const homeTechnologies: Technologies = {
-  ArtificialIntelligence: [
+  'Artificial Intelligence': [
     { id: 1, name: 'Python', icon: '/images/tech/logos/python.png' },
     { id: 2, name: 'R', icon: '/images/tech/logos/r.png' },
     { id: 3, name: 'Julia', icon: '/images/tech/logos/julia.png' },
@@ -47,7 +47,7 @@ export const homeTechnologies: Technologies = {
     { id: 35, name: 'Chroma', icon: '/images/tech/logos/chroma.png' },
     { id: 36, name: 'HNSWlib', icon: '/images/tech/logos/hnswlib.png' },
   ],
-  Blockchain: [
+  'Blockchain': [
     { id: 1, name: 'Ethereum', icon: '/images/tech/logos/ethereum.png' },
     { id: 2, name: 'Solana', icon: '/images/tech/logos/solana.png' },
     { id: 3, name: 'Avalanche', icon: '/images/tech/logos/avalanche.png' },
@@ -85,7 +85,7 @@ export const homeTechnologies: Technologies = {
     { id: 35, name: 'Chainalysis', icon: '/images/tech/logos/chainalysis.png' },
     { id: 36, name: 'OpenZeppelin Contracts', icon: '/images/tech/logos/openzeppelin-contracts.png' },
   ],
-  Mobile: [
+  'Mobile': [
     { id: 1, name: 'Swift', icon: '/images/tech/logos/swift.png' },
     { id: 2, name: 'Objective-C', icon: '/images/tech/logos/objective-c.png' },
     { id: 3, name: 'Kotlin', icon: '/images/tech/logos/kotlin.png' },
@@ -123,7 +123,7 @@ export const homeTechnologies: Technologies = {
     { id: 35, name: 'Razorpay SDK', icon: '/images/tech/logos/razorpay-sdk.png' },
     { id: 36, name: 'Twilio API', icon: '/images/tech/logos/twilio-api.png' },
   ],
-  Web: [
+  'Web': [
     { id: 1, name: 'Reactjs', icon: '/images/tech/logos/reactjs.png' },
     { id: 2, name: 'Angular', icon: '/images/tech/logos/angular.png' },
     { id: 3, name: 'Vuejs', icon: '/images/tech/logos/vuejs.png' },
@@ -161,7 +161,7 @@ export const homeTechnologies: Technologies = {
     { id: 35, name: 'Kubernetes', icon: '/images/tech/logos/kubernetes.png' },
     { id: 36, name: 'Git', icon: '/images/tech/logos/git.png' },
   ],
-  CustomSoftware: [
+  'Custom Software': [
     { id: 1, name: 'Python', icon: '/images/tech/logos/python.png' },
     { id: 2, name: 'Java', icon: '/images/tech/logos/java.png' },
     { id: 3, name: 'C#', icon: '/images/tech/logos/c#.png' },
@@ -213,7 +213,7 @@ export const homeTechnologies: Technologies = {
     // { id: 28, name: 'Heroku', icon: '/images/tech/logos/heroku.png' },
     // { id: 36, name: 'Git', icon: '/images/tech/logos/git.png' },
   ],
-  AugmentedVirtualReality: [
+  'Augmented Virtual Reality': [
     { id: 443, name: 'Unity', icon: '/images/tech/logos/unity.png' },
     { id: 444, name: 'Unreal Engine', icon: '/images/tech/logos/unreal-engine.png' },
     { id: 70, name: 'Blender', icon: '/images/tech/logos/blender.png' },
