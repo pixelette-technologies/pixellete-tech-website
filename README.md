@@ -405,7 +405,7 @@ See [LICENSE](LICENSE) for more information.
   </tr>
   <tr height="187px">
     <td align="center" width="33%">
-      <a href="mailto:contact@HamidAyub.com">
+      <a href="mailto:hamidgujjar33@gmail.com">
         Add your logo here
       </a>
     </td>
