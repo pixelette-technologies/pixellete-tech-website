@@ -28,14 +28,14 @@
   transition: 0.5s ease-in-out;
 }
 .technologyStackAi > div > div > div {
-  width: 30%;
+  /* width: 30%; */
   margin: 0rem 0.5rem;
-  background-color: #1f2123b2;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  /* background-color: #1f2123b2; */
+  /* border: 1px solid rgba(255, 255, 255, 0.1); */
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 2.5rem 2.2rem;
+  /* padding: 2.5rem 2.2rem; */
   border-radius: 1rem;
 }
 .technologyStackAi > div > div > div:nth-last-child(1) {
@@ -60,9 +60,10 @@
   }
 }
 .technologyStackAi > div > div > div:hover {
-  outline: 0.1rem solid rgba(255, 255, 255, 0.288);
+  /* outline: 0.1rem solid rgba(255, 255, 255, 0.288); */
   transform: scale(1.05) translateY(-0.5rem);
-  box-shadow: 0 0.4rem 7rem #e2e2e233;
+  /* color: blue; */
+  /* box-shadow: 0 0.4rem 7rem #e2e2e233; */
   z-index: 20;
 }
 .technologyStackAi > div > div > div:hover > img {
@@ -114,20 +115,20 @@
   transition: 0.5s ease-in-out;
 }
 .technologyStackAi > div > div > div {
-  width: 30%;
+  /* width: 30%; */
   margin: 0rem 0.5rem;
-  background-color: #1f2123b2;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  /* background-color: #1f2123b2; */
+  /* border: 1px solid rgba(255, 255, 255, 0.1); */
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 2.5rem 2.2rem;
+  /* padding: 2.5rem 2.2rem; */
   border-radius: 1rem;
 }
 .technologyStackAi > div > div > div:nth-last-child(1) {
   width: 100%;
   margin: 0rem 0.5rem;
-  background-color: #1f2123b2;
+  background-color: #0f0f0fb2;
   border: 1px solid rgba(255, 255, 255, 0.1);
   display: flex;
   align-items: center;
@@ -146,9 +147,10 @@
   }
 }
 .technologyStackAi > div > div > div:hover {
-  outline: 0.1rem solid rgba(255, 255, 255, 0.288);
+  /* outline: 0.1rem solid rgba(255, 255, 255, 0.288); */
   transform: scale(1.05) translateY(-0.5rem);
-  box-shadow: 0 0.4rem 7rem #e2e2e233;
+  /* color: blue; */
+  /* box-shadow: 0 0.4rem 7rem #e2e2e233; */
   z-index: 20;
 }
 .technologyStackAi > div > div > div:hover > img {

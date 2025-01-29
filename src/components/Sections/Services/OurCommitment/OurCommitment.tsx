@@ -26,7 +26,7 @@ export const OurCommitment: React.FC<OurCommitmentProps> = ({
   return (
     <div id="sideMargin">
       <Container className="main margins">
-        <div className={styles.expertiseGrid}>
+        <div className={styles.expertiseGrid} style={{ padding: '10rem 0' }}>
           <center style={{ margin: '3rem 0' }}>
             <h2>{heading}</h2>
             <p>

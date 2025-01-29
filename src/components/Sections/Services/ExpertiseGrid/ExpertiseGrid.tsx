@@ -1,4 +1,5 @@
 import { Container } from '@/components/Feature/Container/Container';
+import Image from 'next/image';
 import React from 'react';
 import Marquee from 'react-fast-marquee';
 import styles from './expertisegrid.module.css';
@@ -44,7 +45,7 @@ const ExpertiseGrid: React.FC<ExpertiseGridProps> = ({
                   <div className={styles.flipCard} key={index}>
                     <div className={styles.flipCardInner}>
                       <div className={styles.flipCardFront}>
-                        <img src={el.image} alt={el.text} />
+                        <Image src={el.image} alt={el.text} width={44} height={44} />
                         <p><b>{el.text}</b></p>
                       </div>
                       <div className={styles.flipCardBack}>

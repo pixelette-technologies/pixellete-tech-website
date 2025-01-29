@@ -1,6 +1,5 @@
 'use client';
 
-import Image from 'next/image';
 import { useEffect, useRef, useState } from 'react';
 import { Container } from '../../Feature/Container/Container'; // Simplified import
 // Simplified import
@@ -136,10 +135,10 @@ const AboutUsSection: React.FC = () => {
   return (
     <>
       <Container className="main">
-        <div className="aboutUsSection-background">
+        {/* <div className="aboutUsSection-background">
           <Image src="/images/aboutSection/aboutLeftBackground.svg" alt="background" width={100} height={100} />
           <Image src="/images/aboutSection/aboutRightBackground.svg" alt="background" width={100} height={100} />
-        </div>
+        </div> */}
       </Container>
       <div className="aboutUsSection" id="sideMargin">
         <Container className="main margins">

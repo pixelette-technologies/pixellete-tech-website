@@ -40,22 +40,22 @@ export const expertiseAiChangeData = [
     description: 'Boost sales and personalize shopping journeys with smart, data-driven retail tech services.',
   },
   {
-    image: 'images/aiServices/e_8.svg',
+    image: 'images/aiServices/energy.svg',
     text: 'Energy',
     description: 'Power the future with smart, sustainable digital solutions designed for the energy sector.',
   },
   {
-    image: 'images/aiServices/e_8.svg',
+    image: 'images/aiServices/logistics.svg',
     text: 'Logistics',
     description: 'Simplify operations and increase efficiency with custom logistics technology built for your needs.',
   },
   {
-    image: 'images/aiServices/e_8.svg',
+    image: 'images/aiServices/insurance.svg',
     text: 'Insurance',
     description: 'Modernize claims and client management with secure, data-driven solutions for insurance.',
   },
   {
-    image: 'images/aiServices/e_8.svg',
+    image: 'images/aiServices/manufacturing.svg',
     text: 'Manufacturing',
     description: 'Transform manufacturing with innovative, scalable tech that optimizes production.',
   },

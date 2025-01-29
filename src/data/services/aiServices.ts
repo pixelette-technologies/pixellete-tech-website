@@ -22,27 +22,27 @@ export const tgexpertiseAreas = [
 // Define the mapping for additional data
 export const aiExpertiseData = {
   'Machine Learning': {
-    title: 'Machine Learning Insights',
+    title: 'Machine Learning',
     description:
-        'Explore advanced algorithms and techniques for supervised and unsupervised learning.',
+        'Our machine learning services cover supervised, unsupervised, and reinforcement learning, creating systems that make optimized decisions with minimal human input. As a reputable machine learning development company, we build intelligent, self-improving solutions.',
   },
   'Deep Learning': {
-    title: 'Deep Learning Revolution',
-    description: 'Understand neural networks, CNNs, and RNNs for deep learning systems.',
+    title: 'Deep Learning',
+    description: 'Our expertise in AI deep learning enables us to design custom AI solutions using neural networks that mimic human cognition and excel in complex operations.',
   },
   'Natural Language Processing (NLP)': {
-    title: 'NLP Applications',
-    description: 'Discover how NLP powers chatbots, sentiment analysis, and more.',
+    title: 'Natural Language Processing (NLP)',
+    description: 'We develop natural language processing tools that support real-time speech recognition and conversational AI, transforming user experiences.',
   },
   'Robotic Process Automation': {
-    title: 'Automation Simplified',
+    title: 'Robotic Process Automation',
     description:
-        'Learn about streamlining workflows with RPA for enhanced productivity.',
+        'Our RPA-based AI application development services drive business efficiency, cut errors, and enhance productivity through robust robotic process automation.',
   },
   'Computer Vision': {
-    title: 'Vision Beyond Limits',
+    title: 'Computer Vision',
     description:
-        'Dive into image recognition, object detection, and real-time vision systems.',
+        'Specializing in computer vision development services, we provide solutions for biometric authentication, video monitoring, and AI object detection. Our reliable computer vision object recognition capabilities guarantee security and operational accuracy.',
   },
 };
 
@@ -204,14 +204,14 @@ export const aiTechnologies: Technologies = {
     { id: 2, name: 'R', icon: '/images/tech/logos/r.png' },
     { id: 3, name: 'Julia', icon: '/images/tech/logos/julia.png' },
     { id: 4, name: 'Java', icon: '/images/tech/logos/Java.png' },
-    { id: 4, name: 'C++', icon: '/images/tech/logos/c++.png' },
+    { id: 4, name: 'C++', icon: '/images/tech/logos/c-plus.png' },
     { id: 387, name: 'Scala', icon: '/images/tech/logos/scala.png' },
     { id: 18, name: 'JavaScript', icon: '/images/tech/logos/javascript.png' },
     { id: 19, name: 'TypeScript', icon: '/images/tech/logos/typescript.png' },
     { id: 383, name: 'Ruby', icon: '/images/tech/logos/ruby.png' },
     { id: 5, name: 'PHP', icon: '/images/tech/logos/php.png' },
     { id: 421, name: 'Swift', icon: '/images/tech/logos/swift.png' },
-    { id: 20, name: 'Go (Golang)', icon: '/images/tech/logos/go.png' },
+    { id: 20, name: 'Go (Golang)', icon: '/images/tech/logos/golang.png' },
     { id: 19, name: 'Rust', icon: '/images/tech/logos/rust.png' },
     { id: 5, name: 'Dart', icon: '/images/tech/logos/dart.png' },
     { id: 2, name: 'Objective-C', icon: '/images/tech/logos/objective-c.png' },
@@ -223,7 +223,7 @@ export const aiTechnologies: Technologies = {
     { id: 329, name: 'Perl', icon: '/images/tech/logos/perl.png' },
     { id: 255, name: 'Matlab', icon: '/images/tech/logos/matlab.png' },
     { id: 245, name: 'Lua', icon: '/images/tech/logos/lua.png' },
-    { id: 3, name: 'C#', icon: '/images/tech/logos/c#.png' },
+    { id: 3, name: 'C#', icon: '/images/tech/logos/csharp.png' },
 
     // { id: 4, name: 'TensorFlow', icon: '/images/tech/logos/tensorflow.png' },
     // { id: 5, name: 'PyTorch', icon: '/images/tech/logos/pytorch.png' },
@@ -263,7 +263,7 @@ export const aiTechnologies: Technologies = {
     { id: 1, name: 'TensorFlow', icon: '/images/tech/logos/tensorflow.png' },
     { id: 2, name: 'PyTorch', icon: '/images/tech/logos/pytorch.png' },
     { id: 3, name: 'Keras', icon: '/images/tech/logos/keras.png' },
-    { id: 4, name: 'Scikit-learn', icon: '/images/tech/logos/scikit-learn.png' },
+    { id: 4, name: 'Scikit-learn', icon: '/images/tech/logos/sci-kit-learn.png' },
     { id: 5, name: 'Hugging Face Transformers', icon: '/images/tech/logos/hugging-face-transformers.png' },
     { id: 6, name: 'NLTK', icon: '/images/tech/logos/nltk.png' },
     { id: 7, name: 'spaCy', icon: '/images/tech/logos/spacy.png' },
@@ -287,7 +287,7 @@ export const aiTechnologies: Technologies = {
   ],
   'Cloud, Platforms, & Databases': [
     { id: 1, name: 'AWS SageMaker', icon: '/images/tech/logos/aws-sagemaker.png' },
-    { id: 2, name: 'Google AI Platform', icon: '/images/tech/logos/google-ai-platform.png' },
+    { id: 2, name: 'Google AI Platform', icon: '/images/tech/logos/google-ai.png' },
     { id: 3, name: 'Microsoft Azure AI', icon: '/images/tech/logos/microsoft-azure-ai.png' },
     { id: 4, name: 'IBM Watson', icon: '/images/tech/logos/ibm-watson.png' },
     { id: 5, name: 'Firebase ML', icon: '/images/tech/logos/firebase-ml.png' },
@@ -315,12 +315,12 @@ export const aiTechnologies: Technologies = {
     { id: 1, name: 'Pinecone', icon: '/images/tech/logos/pinecone.png' },
     { id: 2, name: 'Weaviate', icon: '/images/tech/logos/weaviate.png' },
     { id: 3, name: 'Milvus', icon: '/images/tech/logos/milvus.png' },
-    { id: 4, name: 'OpenAI API', icon: '/images/tech/logos/openai-api.png' },
+    { id: 4, name: 'OpenAI API', icon: '/images/tech/logos/openai.png' },
     { id: 5, name: 'Google Cloud Vision', icon: '/images/tech/logos/google-cloud-vision.png' },
     { id: 6, name: 'Amazon Rekognition', icon: '/images/tech/logos/amazon-rekognition.png' },
     { id: 7, name: 'IBM Watson Assistant', icon: '/images/tech/logos/ibm-watson-assistant.png' },
     { id: 8, name: 'Dialogflow', icon: '/images/tech/logos/dialogflow.png' },
-    { id: 9, name: 'Wit.ai', icon: '/images/tech/logos/wit-ai.png' },
+    { id: 9, name: 'Wit.ai', icon: '/images/tech/logos/witai.png' },
     { id: 10, name: 'Rasa', icon: '/images/tech/logos/rasa.png' },
     { id: 11, name: 'H2O.ai', icon: '/images/tech/logos/h2o-ai.png' },
     { id: 12, name: 'DataRobot', icon: '/images/tech/logos/datarobot.png' },
@@ -331,7 +331,7 @@ export const aiTechnologies: Technologies = {
     { id: 17, name: 'Gradio', icon: '/images/tech/logos/gradio.png' },
     { id: 18, name: 'TensorRT', icon: '/images/tech/logos/tensorrt.png' },
     { id: 19, name: 'NVIDIA DeepStream SDK', icon: '/images/tech/logos/nvidia-deepstream-sdk.png' },
-    { id: 20, name: 'Ray', icon: '/images/tech/logos/ray.png' },
+    { id: 20, name: 'Ray', icon: '/images/tech/logos/ray-rllib.png' },
     { id: 21, name: 'LangChain', icon: '/images/tech/logos/langchain.png' },
     { id: 22, name: 'Apache Kafka', icon: '/images/tech/logos/apache-kafka.png' },
     { id: 23, name: 'RabbitMQ', icon: '/images/tech/logos/rabbitmq.png' },

@@ -1,7 +1,7 @@
 .technologiesMain {
-  margin-top: 5rem;
+  margin: 10rem 0rem;
   padding: 0 5rem;
-  margin-bottom: 5rem;
+  /* margin-bottom: 5rem; */
 }
 
 .technologiesMain > div > center > h2 {
@@ -22,7 +22,7 @@
   display: flex;
   gap: 2rem;
   margin-top: 5rem;
-  align-items: flex-start;
+  /* align-items: flex-start; */
   width: 100%;
 }
 
@@ -33,7 +33,8 @@
   border: 1px solid #232323;
   padding: 1rem;
   border-radius: 1rem;
-  width: 20rem;
+  background: black;
+  /* width: 20rem; */
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
