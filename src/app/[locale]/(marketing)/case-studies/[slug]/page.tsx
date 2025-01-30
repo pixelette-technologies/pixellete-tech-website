@@ -34,17 +34,17 @@ const CaseStudieDetail = async ({ params }: { params: { slug: string } }) => {
       <Container className="main">
         <div className="caseStudieDetail-background">
           <Image
-            src="/images/casestudies/heroSectionBackgroundLeft.svg"
+            src="/images/casestudies/casestudybackground.svg"
             alt="background"
             width={100}
             height={100}
           />
-          <Image
+          {/* <Image
             src="/images/casestudies/heroSectionBackgroundRight.svg"
             alt="backgroundImage"
             width={100}
             height={100}
-          />
+          /> */}
         </div>
       </Container>
       <section id="sideMargin">

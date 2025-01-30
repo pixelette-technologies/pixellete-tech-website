@@ -46,7 +46,7 @@ export const HeroSection: React.FC<HeroSectionProps> = () => {
 
           <div>
             {/* Using React Scroll for smooth scrolling */}
-            <Link href="contactUs">
+            <Link href="/contact-us">
               <Button
                 className="primary"
                 data-aos="fade-up"

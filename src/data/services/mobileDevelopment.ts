@@ -95,9 +95,9 @@ export const mobileDevelopmentHeroHeading = 'Mobile App Development Services';
 export const mobileDevelopmentHeroDescription
   = 'From concept to deployment, we deliver adaptive, scalable AI solutions that bring your vision of intelligent technology to life.';
 
-export const mobileDevelopmentHeroButtonText = 'AI Development Services';
+export const mobileDevelopmentHeroButtonText = 'consult our experts';
 
-export const mobileDevelopmentHeroButtonLink = 'AI Development Services';
+export const mobileDevelopmentHeroButtonLink = '/contact-us';
 
 export const mobileDevelopmentHeroBackgroundImage = '/images/mobileAppServices/heroSectionBackground.svg';
 

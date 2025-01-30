@@ -96,9 +96,9 @@ export const customDevelopmentHeroHeading = 'Custom Software Development Service
 export const customDevelopmentHeroDescription
   = 'From concept to deployment, we deliver adaptive, scalable AI solutions that bring your vision of intelligent technology to life.';
 
-export const customDevelopmentHeroButtonText = 'AI Development Services';
+export const customDevelopmentHeroButtonText = 'consult our experts';
 
-export const customDevelopmentHeroButtonLink = 'AI Development Services';
+export const customDevelopmentHeroButtonLink = '/contact-us';
 
 export const customDevelopmentHeroBackgroundImage = '/images/customDevelopmentServices/heroSectionBackground.svg';
 

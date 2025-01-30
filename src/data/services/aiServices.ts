@@ -84,9 +84,9 @@ export const aiHeroHeading = 'AI Development Services';
 export const aiHeroDescription
   = 'From concept to deployment, we deliver adaptive, scalable AI solutions that bring your vision of intelligent technology to life.';
 
-export const aiHeroButtonText = 'AI Development Services';
+export const aiHeroButtonText = 'consult our experts';
 
-export const aiHeroButtonLink = 'AI Development Services';
+export const aiHeroButtonLink = '/contact-us';
 
 export const aiHeroBackgroundImage = '/images/aiServices/heroSectionBackground.svg';
 
