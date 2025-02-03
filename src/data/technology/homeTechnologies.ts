@@ -67,6 +67,8 @@ export const homeTechnologies: Technologies = {
     { id: 17, name: 'Ripple (XRP Ledger)', icon: '/images/tech/logos/Ripple.png' },
     { id: 18, name: 'Solidity', icon: '/images/tech/logos/solidity.png' },
     { id: 19, name: 'Rust', icon: '/images/tech/logos/rust.png' },
+    { id: 31, name: 'PyTorch', icon: '/images/tech/kotlin.svg' },
+
     { id: 20, name: 'Go (Golang)', icon: '/images/tech/logos/go.png' },
     { id: 21, name: 'Web3 js', icon: '/images/tech/logos/web3js.png' },
     { id: 22, name: 'Ethers.js', icon: '/images/tech/logos/ethersjs.png' },
