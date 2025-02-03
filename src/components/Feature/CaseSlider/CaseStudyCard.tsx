@@ -30,18 +30,28 @@ export const CaseStudyCard: FC<CaseStudiCardProps> = ({
       <div className="cardContainer">
         <div className="flipCard">
           {/* Front Side */}
-          <div className="cardFront">
-            <figure style={{ marginTop: '4rem' }}>
+          <div
+            className="cardFront"
+            style={{
+              display: 'flex',
+              flexDirection: 'column',
+              justifyItems: 'center',
+              alignItems: 'center',
+              justifyContent: 'center',
+            }}
+          >
+            <figure>
               <Image
-                style={{ width: '50%', margin: '0 auto' }}
+                style={{ margin: '0 auto' }}
                 src={frontImageSrc}
                 alt="Case Studies Front"
-                width={100}
-                height={100}
+                width={256}
+                height={90}
+                quality={100}
               />
             </figure>
-            <div style={{ alignItems: 'center', display: 'flex', height: '50%' }}>
-              <p style={{ fontSize: '1.3rem', width: '80%', margin: '0 auto' }}>
+            <div style={{ alignItems: 'center', display: 'flex', justifyContent: 'center', paddingTop: '5rem' }}>
+              <p style={{ fontSize: '1.3rem', width: '80%', margin: '0 auto', textAlign: 'center' }}>
                 {description}
               </p>
             </div>
@@ -57,7 +67,7 @@ export const CaseStudyCard: FC<CaseStudiCardProps> = ({
                 height={200}
               />
             </figure>
-            <div style={{ margin: '1rem 0', textAlign: 'center', display: 'flex', flexDirection: 'column', gap: '5rem' }}>
+            <div style={{ margin: '1rem 0', textAlign: 'center', display: 'flex', flexDirection: 'column', gap: '2rem' }}>
               <h3 className="blogCardHeading">{title}</h3>
               <div className="cardBackTags">
                 {tags.map((tag, index) => (

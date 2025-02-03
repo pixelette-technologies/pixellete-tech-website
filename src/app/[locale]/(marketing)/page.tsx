@@ -1,6 +1,7 @@
 import { homeTechnologies } from '@/data/technology/homeTechnologies';
 import { getTranslations } from 'next-intl/server';
 import dynamic from 'next/dynamic';
+import Image from 'next/image';
 
 type IIndexProps = {
   params: Promise<{ locale: string }>;
@@ -42,18 +43,34 @@ export default async function Index(props: IIndexProps) {
     <>
       <HeroSection />
       <OurClients />
+      <div style={{ position: 'relative' }}>
+        <Image
+          src="/images/home/bodybackground.svg"
+          fill
+          alt="body background"
+          style={{
+            position: 'absolute',
+            zIndex: -1,
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            objectFit: 'cover',
+          }}
+        />
 
-      <AboutUsSection />
-      <WhatMakeUsSpecialHome />
-      <OurServicesSection />
-      <YourPlan />
-      <TechnologiesUsed
-        technologies={homeTechnologies}
-        title="Benefit from our unmatched tech stack expertise"
-        subtitle="With our team's deep mastery in the latest frameworks, languages, and tools, we build scalable, secure, and high-performance applications that set new standards. From ideation to deployment, our technology capabilities are designed to drive your business forward."
-      />
-      <CaseStudies heading="Our past work speaks volumes" />
-      <Testimonial background="" />
+        <AboutUsSection />
+        <WhatMakeUsSpecialHome />
+        <OurServicesSection />
+        <YourPlan />
+        <TechnologiesUsed
+          technologies={homeTechnologies}
+          title="Benefit from our unmatched tech stack expertise"
+          subtitle="With our team's deep mastery in the latest frameworks, languages, and tools, we build scalable, secure, and high-performance applications that set new standards. From ideation to deployment, our technology capabilities are designed to drive your business forward."
+        />
+        <CaseStudies heading="Our past work speaks volumes" />
+        <Testimonial background="" />
+      </div>
       <EvaluateBusiness
         heading="Ready to become a tech success story?"
         description="Don’t let technical hurdles stand in the way of building tech solutions that shake up the world as we know it. Let us help you bring your vision to life with innovative, cost-effective and reliable services. Get in touch!"

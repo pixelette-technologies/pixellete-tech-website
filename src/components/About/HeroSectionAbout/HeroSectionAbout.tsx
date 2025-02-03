@@ -25,7 +25,7 @@ const HeroSectionAbout: React.FC = () => {
               </p>
 
               <div className="buttonpad"></div>
-              <Link href="contactUs">
+              <Link href="/contact-us">
                 <Button className="primary">
                   Get in Touch and Explore Our Journey
                 </Button>

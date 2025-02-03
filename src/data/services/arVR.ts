@@ -90,9 +90,9 @@ export const aiHeroHeading = 'AR/VR Development Services';
 export const aiHeroDescription
   = 'From concept to deployment, we deliver adaptive, scalable AI solutions that bring your vision of intelligent technology to life.';
 
-export const aiHeroButtonText = 'AI Development Services';
+export const aiHeroButtonText = 'consult our experts';
 
-export const aiHeroButtonLink = 'AI Development Services';
+export const aiHeroButtonLink = '/contact-us';
 
 export const aiHeroBackgroundImage = '/images/arvrServices/heroSectionBackground.svg';
 
@@ -113,73 +113,73 @@ export const vrServicelist
   {
     title: 'AI Solutions',
     items: [
-      'UI/UX Design for AR/VR',
-      'AR/VR Consulting Services',
-      'Custom AR/VR Application Development',
-      'AR/VR Integration Services',
-      'AR/VR Game Development Services',
+      'UI/UX Design',
+      'Consulting Services',
+      'Custom Application Development',
+      'Integration Services',
+      'Game Development Services',
     ],
   },
   {
     title: 'AI Applications',
     items: [
-      'AR/VR Content Creation',
-      'AR/VR Simulation Development',
-      'AR/VR Training and Educational Tools',
-      'AR/VR Maintenance and Support',
+      'Content Creation',
+      'Simulation Development',
+      'Training and Educational Tools',
+      'Maintenance and Support',
     ],
   },
 ];
 export const vrServices = {
-  'UI/UX Design for AR/VR': {
+  'UI/UX Design': {
     imageSrc: '/images/aiServices/s_1.svg',
     title: 'UI/UX Design for AR/VR',
     description:
     'We specialize in immersive UI/UX design for AR and VR environments, ensuring intuitive interfaces and user experiences. Our design approach prioritizes interactivity and ease of use, making digital spaces feel both accessible and engaging.',
   },
-  'AR/VR Consulting Services': {
+  'Consulting Services': {
     imageSrc: '/images/aiServices/s_2.svg',
     title: 'AR/VR Consulting Services',
     description:
     'We’re a well-known AR/VR app development company providing expert consulting to help you navigate the AR/VR landscape and use immersive technology. We assess your needs, offer insights and guide you through technology selection, strategy and implementation. This helps set a strong foundation for successful project deployment.',
   },
-  'Custom AR/VR Application Development': {
+  'Custom Application Development': {
     imageSrc: '/images/aiServices/s_3.svg',
     title: 'Custom AR/VR Application Development',
     description:
     'Our custom AR/VR app development services enhance user experiences and drive engagement. With a focus on delivering immersive, high-performance applications, our team combines augmented reality development and virtual reality development with advanced technology to make your vision a reality.',
   },
-  'AR/VR Integration Services': {
+  'Integration Services': {
     imageSrc: '/images/aiServices/s_4.svg',
     title: 'AR/VR Integration Services',
     description:
     'We help integrate AR and VR developed solutions into existing platforms and applications, transforming standard processes into interactive experiences. Our years of expertise allows us to create streamlined, efficient solutions that align with your business goals.',
   },
-  'AR/VR Game Development Services': {
+  'Game Development Services': {
     imageSrc: '/images/aiServices/s_5.svg',
     title: 'AR/VR Game Development Services',
     description:
     'Our team of capable developers build captivating, interactive AR/VR games that transport users into exciting virtual worlds. Our AR/VR game development solutions create engaging, lifelike environments that resonate with players and enhance brand value.',
   },
-  'AR/VR Content Creation': {
+  'Content Creation': {
     imageSrc: '/images/aiServices/s_6.svg',
     title: 'AR/VR Content Creation',
     description:
     'We produce dynamic AR and VR content specialized to enhance user engagement and experience. Our AR/VR content creation services bring ideas to life, whether for training, marketing, healthcare or entertainment, ensuring immersive, memorable interactions that leave a lasting impact on your users.',
   },
-  'AR/VR Simulation Development': {
+  'Simulation Development': {
     imageSrc: '/images/aiServices/s_1.svg',
     title: 'AR/VR Simulation Development',
     description:
     'Our simulations offer lifelike experiences across various industries. As a trusted AR VR development company, we create realistic simulations that mimic real-world scenarios, allowing users to learn, practice, and engage in a safe, controlled digital environment.',
   },
-  'AR/VR Training and Educational Tools': {
+  'Training and Educational Tools': {
     imageSrc: '/images/aiServices/s_2.svg',
     title: 'AR/VR Training and Educational Tools',
     description:
     'We help develop interactive AR/VR training and educational tools to empower learning through 3D experiences. Our AR/VR team delivers solutions that make complex concepts easy to understand, offering a hands-on approach to education.',
   },
-  'AR/VR Maintenance and Support': {
+  'Maintenance and Support': {
     imageSrc: '/images/aiServices/s_3.svg',
     title: 'AR/VR Maintenance and Support',
     description:
@@ -198,76 +198,108 @@ type Technologies = {
 };
 
 export const vrTechnologies: Technologies = {
-  AI_ML_BI: [
-    { id: 1, name: 'Python', icon: '/images/tech/aws.svg' },
-    { id: 2, name: 'PyTorch', icon: '/images/tech/kotlin.svg' },
-    { id: 3, name: 'Python', icon: '/images/tech/aws.svg' },
-    { id: 4, name: 'TensorFlow', icon: '/images/tech/flutter.svg' },
-    { id: 5, name: 'Qlik', icon: '/images/tech/mongodb.svg' },
-    { id: 6, name: 'Tableau', icon: '/images/tech/node.svg' },
-    { id: 7, name: 'Qlik', icon: '/images/tech/mongodb.svg' },
-    { id: 8, name: 'PyTorch', icon: '/images/tech/kotlin.svg' },
-    { id: 9, name: 'TensorFlow', icon: '/images/tech/flutter.svg' },
-    { id: 10, name: 'Keras', icon: '/images/tech/firebase.svg' },
-    { id: 11, name: 'Keras', icon: '/images/tech/firebase.svg' },
-    { id: 12, name: 'Python', icon: '/images/tech/aws.svg' },
-    { id: 13, name: 'Keras', icon: '/images/tech/firebase.svg' },
-    { id: 14, name: 'TensorFlow', icon: '/images/tech/flutter.svg' },
-    { id: 15, name: 'PyTorch', icon: '/images/tech/kotlin.svg' },
-    { id: 16, name: 'Tableau', icon: '/images/tech/node.svg' },
-    { id: 17, name: 'Python', icon: '/images/tech/aws.svg' },
-    { id: 18, name: 'Qlik', icon: '/images/tech/mongodb.svg' },
-    { id: 19, name: 'TensorFlow', icon: '/images/tech/flutter.svg' },
-    { id: 29, name: 'Tableau', icon: '/images/tech/node.svg' },
-    { id: 21, name: 'Keras', icon: '/images/tech/firebase.svg' },
-    { id: 22, name: 'PyTorch', icon: '/images/tech/kotlin.svg' },
-    { id: 23, name: 'Tableau', icon: '/images/tech/node.svg' },
-    { id: 24, name: 'Qlik', icon: '/images/tech/mongodb.svg' },
+  'AR/VR Development Platforms & Frameworks': [
+    { id: 1, name: 'Unity', icon: '/images/tech/logos/unity.png' },
+    { id: 2, name: 'Unreal Engine', icon: '/images/tech/logos/unreal-engine.png' },
+    { id: 3, name: 'Amazon Sumerian', icon: '/images/tech/logos/amazon-sumerian.png' },
+    { id: 4, name: 'CryEngine', icon: '/images/tech/logos/cryengine.png' },
+    { id: 5, name: 'A-Frame', icon: '/images/tech/logos/a-frame.png' },
+    { id: 6, name: 'PlayCanvas', icon: '/images/tech/logos/playcanvas.png' },
+    { id: 7, name: 'Babylon.js', icon: '/images/tech/logos/babylonjs.png' },
+    { id: 8, name: 'Three.js', icon: '/images/tech/logos/threejs.png' },
+    { id: 9, name: 'ARKit', icon: '/images/tech/logos/arkit.png' },
+    { id: 10, name: 'ARCore', icon: '/images/tech/logos/arcore.png' },
+    { id: 11, name: 'Vuforia', icon: '/images/tech/logos/vuforia.png' },
+    { id: 12, name: 'Wikitude', icon: '/images/tech/logos/wikitude.png' },
+    { id: 13, name: 'Apple RealityKit', icon: '/images/tech/logos/apple-realitykit.png' },
+    { id: 14, name: 'Microsoft Mixed Reality Toolkit (MRTK)', icon: '/images/tech/logos/microsoft-mixed-reality-toolkit.png' },
+    { id: 15, name: 'Google VR SDK', icon: '/images/tech/logos/google-vr-sdk.png' },
+    { id: 16, name: 'Magic Leap SDK', icon: '/images/tech/logos/magic-leap-sdk.png' },
+    { id: 17, name: 'WebXR', icon: '/images/tech/logos/webxr.png' },
+    { id: 18, name: 'XR Interaction Toolkit', icon: '/images/tech/logos/xr-interaction-toolkit.png' },
+    { id: 19, name: 'Oculus Integration SDK', icon: '/images/tech/logos/oculus-sdk.png' },
+    { id: 20, name: 'SceneKit', icon: '/images/tech/logos/scenekit.png' },
+    { id: 21, name: 'Flutter for AR', icon: '/images/tech/logos/flutter-for-ar.png' },
+    { id: 22, name: 'Lens Studio', icon: '/images/tech/logos/lens-studio.png' },
+    { id: 23, name: 'Spark AR', icon: '/images/tech/logos/spark-ar.png' },
+    { id: 24, name: 'OpenXR', icon: '/images/tech/logos/openxr.png' },
   ],
-  Software: [
-    { id: 25, name: 'PyTorch', icon: '/images/tech/kotlin.svg' },
-    { id: 26, name: 'TensorFlow', icon: '/images/tech/flutter.svg' },
-    { id: 27, name: 'TensorFlow', icon: '/images/tech/flutter.svg' },
-    { id: 28, name: 'Keras', icon: '/images/tech/firebase.svg' },
-    { id: 29, name: 'Tableau', icon: '/images/tech/node.svg' },
-    { id: 30, name: 'Qlik', icon: '/images/tech/mongodb.svg' },
-    { id: 31, name: 'PyTorch', icon: '/images/tech/kotlin.svg' },
-    { id: 32, name: 'TensorFlow', icon: '/images/tech/flutter.svg' },
-    { id: 33, name: 'Qlik', icon: '/images/tech/mongodb.svg' },
-    { id: 34, name: 'Python', icon: '/images/tech/aws.svg' },
-    { id: 35, name: 'Keras', icon: '/images/tech/firebase.svg' },
-    { id: 36, name: 'Keras', icon: '/images/tech/firebase.svg' },
-    { id: 37, name: 'Python', icon: '/images/tech/aws.svg' },
-    { id: 38, name: 'Python', icon: '/images/tech/aws.svg' },
-    { id: 39, name: 'Qlik', icon: '/images/tech/mongodb.svg' },
-    { id: 40, name: 'Tableau', icon: '/images/tech/node.svg' },
-    { id: 41, name: 'Tableau', icon: '/images/tech/node.svg' },
-    { id: 42, name: 'PyTorch', icon: '/images/tech/kotlin.svg' },
-    { id: 43, name: 'TensorFlow', icon: '/images/tech/flutter.svg' },
-    { id: 44, name: 'Keras', icon: '/images/tech/firebase.svg' },
-    { id: 45, name: 'Python', icon: '/images/tech/aws.svg' },
-    { id: 46, name: 'PyTorch', icon: '/images/tech/kotlin.svg' },
-    { id: 47, name: 'Tableau', icon: '/images/tech/node.svg' },
-    { id: 48, name: 'Qlik', icon: '/images/tech/mongodb.svg' },
+  '3D Modelling & Graphics Tools': [
+    { id: 1, name: 'Blender', icon: '/images/tech/logos/blender.png' },
+    { id: 2, name: 'Autodesk Maya', icon: '/images/tech/logos/autodesk-maya.png' },
+    { id: 3, name: '3ds Max', icon: '/images/tech/logos/3ds-max.png' },
+    { id: 4, name: 'ZBrush', icon: '/images/tech/logos/zbrush.png' },
+    { id: 5, name: 'Cinema 4D', icon: '/images/tech/logos/cinema-4d.png' },
+    { id: 6, name: 'Houdini', icon: '/images/tech/logos/houdini.png' },
+    { id: 7, name: 'Substance Painter', icon: '/images/tech/logos/substance-painter.png' },
+    { id: 8, name: 'Substance Designer', icon: '/images/tech/logos/substance-designer.png' },
+    { id: 9, name: 'SketchUp', icon: '/images/tech/logos/sketchup.png' },
+    { id: 10, name: 'Marvelous Designer', icon: '/images/tech/logos/marvelous-designer.png' },
+    { id: 11, name: 'MagicaVoxel', icon: '/images/tech/logos/magicavoxel.png' },
+    { id: 12, name: 'Pixologic Sculptris', icon: '/images/tech/logos/pixologic-sculptris.png' },
+    { id: 13, name: 'MeshLab', icon: '/images/tech/logos/meshlab.png' },
+    { id: 14, name: 'Clara.io', icon: '/images/tech/logos/claraio.png' },
+    { id: 15, name: 'Wings 3D', icon: '/images/tech/logos/wings-3d.png' },
+    { id: 16, name: 'Rhino', icon: '/images/tech/logos/rhino.png' },
+    { id: 17, name: 'OpenCV', icon: '/images/tech/logos/opencv.png' },
+    { id: 18, name: 'OpenGL', icon: '/images/tech/logos/opengl.png' },
+    { id: 19, name: 'NVIDIA Omniverse', icon: '/images/tech/logos/nvidia-omniverse.png' },
+    { id: 20, name: 'Vulkan', icon: '/images/tech/logos/vulkan.png' },
+    { id: 21, name: 'DirectX', icon: '/images/tech/logos/directx.png' },
+    { id: 22, name: 'SideFX Houdini Engine', icon: '/images/tech/logos/sidefx-houdini-engine.png' },
+    { id: 23, name: 'Adobe Dimension', icon: '/images/tech/logos/adobe-dimension.png' },
+    { id: 24, name: 'Instant Meshes', icon: '/images/tech/logos/instant-meshes.png' },
   ],
-  Mobile: [
-    { id: 39, name: 'Qlik', icon: '/images/tech/mongodb.svg' },
-    { id: 40, name: 'Tableau', icon: '/images/tech/node.svg' },
-    { id: 41, name: 'Tableau', icon: '/images/tech/node.svg' },
-    { id: 42, name: 'PyTorch', icon: '/images/tech/kotlin.svg' },
-    { id: 43, name: 'TensorFlow', icon: '/images/tech/flutter.svg' },
-    { id: 44, name: 'Keras', icon: '/images/tech/firebase.svg' },
-    { id: 45, name: 'Python', icon: '/images/tech/aws.svg' },
-    { id: 46, name: 'PyTorch', icon: '/images/tech/kotlin.svg' },
-    { id: 47, name: 'Tableau', icon: '/images/tech/node.svg' },
-    { id: 48, name: 'Qlik', icon: '/images/tech/mongodb.svg' },
+  'APIs, SDKs & Engines': [
+    { id: 1, name: 'OpenXR API', icon: '/images/tech/logos/openxr-api.png' },
+    { id: 2, name: 'Vulkan API', icon: '/images/tech/logos/vulkan-api.png' },
+    { id: 3, name: 'WebRTC', icon: '/images/tech/logos/webrtc.png' },
+    { id: 4, name: 'DirectX Raytracing (DXR)', icon: '/images/tech/logos/directx-raytracing.png' },
+    { id: 5, name: 'NVIDIA PhysX', icon: '/images/tech/logos/nvidia-physx.png' },
+    { id: 6, name: 'SteamVR SDK', icon: '/images/tech/logos/steamvr.png' },
+    { id: 7, name: 'HTC Vive SDK', icon: '/images/tech/logos/htc-vive-sdk.png' },
+    { id: 8, name: 'Leap Motion SDK', icon: '/images/tech/logos/leap-motion.png' },
+    { id: 9, name: 'ZED SDK', icon: '/images/tech/logos/zed-sdk.png' },
+    { id: 10, name: 'Niantic Lightship ARDK', icon: '/images/tech/logos/niantic-lightship-ardk.png' },
+    { id: 11, name: 'Apple SceneKit API', icon: '/images/tech/logos/apple-scenekit.png' },
+    { id: 12, name: 'Reality Composer API', icon: '/images/tech/logos/reality-composer-api.png' },
+    { id: 13, name: 'AR.js', icon: '/images/tech/logos/arjs.png' },
+    { id: 14, name: 'CesiumJS', icon: '/images/tech/logos/cesiumjs.png' },
+    { id: 15, name: 'Pix4D SDK', icon: '/images/tech/logos/pix4d-sdk.png' },
+    { id: 16, name: 'Photon Engine', icon: '/images/tech/logos/photon-engine.png' },
+    { id: 17, name: 'Agora SDK', icon: '/images/tech/logos/agora-sdk.png' },
+    { id: 18, name: 'OpenVR SDK', icon: '/images/tech/logos/openvr-sdk.png' },
+    { id: 19, name: 'XR Toolkit API', icon: '/images/tech/logos/xr-interaction-toolkit.png' },
+    { id: 20, name: 'Intel RealSense SDK', icon: '/images/tech/logos/intel-realsense-sdk.png' },
+    { id: 21, name: 'Qualcomm Snapdragon Spaces', icon: '/images/tech/logos/qualcomm-snapdragon-spaces.png' },
+    { id: 22, name: 'Azure Spatial Anchors API', icon: '/images/tech/logos/microsoft-azure-spatial-anchors.png' },
+    { id: 23, name: 'Scandy Core SDK', icon: '/images/tech/logos/scandy-core-sdk.png' },
+    { id: 24, name: 'EasyAR', icon: '/images/tech/logos/easyar.png' },
   ],
-  Blockchain: [
-    { id: 31, name: 'PyTorch', icon: '/images/tech/kotlin.svg' },
-    { id: 32, name: 'TensorFlow', icon: '/images/tech/flutter.svg' },
-    { id: 33, name: 'Qlik', icon: '/images/tech/mongodb.svg' },
-    { id: 34, name: 'Python', icon: '/images/tech/aws.svg' },
-    { id: 35, name: 'Keras', icon: '/images/tech/firebase.svg' },
-    { id: 36, name: 'Keras', icon: '/images/tech/firebase.svg' },
+  'Hardware, Cloud & Tools': [
+    { id: 1, name: 'Oculus Quest', icon: '/images/tech/logos/oculus-quest.png' },
+    { id: 2, name: 'Microsoft HoloLens', icon: '/images/tech/logos/microsoft-hololens.png' },
+    { id: 3, name: 'Magic Leap', icon: '/images/tech/logos/magic-leap-sdk.png' },
+    { id: 4, name: 'HTC Vive', icon: '/images/tech/logos/htc-vive.png' },
+    { id: 5, name: 'Samsung Gear VR', icon: '/images/tech/logos/samsung-gear-vr.png' },
+    { id: 6, name: 'Google Cardboard', icon: '/images/tech/logos/google-cardboard.png' },
+    { id: 7, name: 'Meta Spark AR Studio', icon: '/images/tech/logos/spark-ar.png' },
+    { id: 8, name: 'Adobe Aero', icon: '/images/tech/logos/adobe-aero.png' },
+    { id: 9, name: 'Reality Composer', icon: '/images/tech/logos/reality-composer-api.png' },
+    { id: 10, name: 'CloudXR by NVIDIA', icon: '/images/tech/logos/cloudxr-by-nvidia.png' },
+    { id: 11, name: 'AWS Sumerian Hosting', icon: '/images/tech/logos/aws-sumerian-hosting.png' },
+    { id: 12, name: 'Google Cloud for XR', icon: '/images/tech/logos/google-cloud-for-xr.png' },
+    { id: 13, name: 'Microsoft Azure Spatial Anchors', icon: '/images/tech/logos/microsoft-azure-spatial-anchors.png' },
+    { id: 14, name: 'IBM Watson XR Solutions', icon: '/images/tech/logos/ibm-watson-xr-solutions.png' },
+    { id: 15, name: 'Cloudflare XR Services', icon: '/images/tech/logos/cloudflare.png' },
+    { id: 16, name: 'ARCore Cloud Anchors', icon: '/images/tech/logos/arcore-cloud-anchors.png' },
+    { id: 17, name: 'Vuforia Spatial Toolbox', icon: '/images/tech/logos/vuforia-spatial-toolbox.png' },
+    { id: 18, name: 'Varjo Headsets', icon: '/images/tech/logos/varjo-headsets.png' },
+    { id: 19, name: 'Apple Vision Pro', icon: '/images/tech/logos/apple-vision-pro.png' },
+    { id: 20, name: 'Pico Neo', icon: '/images/tech/logos/pico-neo.png' },
+    { id: 21, name: 'Lenovo Mirage', icon: '/images/tech/logos/lenovo-mirage.png' },
+    { id: 22, name: 'Figma for XR Design', icon: '/images/tech/logos/figma.png' },
+    { id: 23, name: 'Jira for AR/VR Project Management', icon: '/images/tech/logos/jira.png' },
+    { id: 24, name: 'Confluence for XR Documentation', icon: '/images/tech/logos/confluence.png' },
   ],
 };

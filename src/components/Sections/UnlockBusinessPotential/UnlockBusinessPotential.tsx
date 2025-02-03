@@ -74,7 +74,7 @@ export const UnlockBusinessPotential = ({ heading, text, btnText }) => {
           </section>
         </div>
 
-        <Link href="#contactUs" scroll={false} passHref>
+        <Link href="/contact-us" scroll={false} passHref>
           <Button className="primary">{btnText}</Button>
         </Link>
       </div>

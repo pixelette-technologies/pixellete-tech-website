@@ -56,7 +56,7 @@ export const OurServices: React.FC<OurServicesProps> = ({
   }, [currentService]);
 
   return (
-    <div style={{ marginTop: '5rem' }} className="OurServicesBg">
+    <div style={{ padding: '10rem 0' }} className="OurServicesBg">
       <Container className="main margins">
         <center>
           <h2>{heading}</h2>
@@ -71,11 +71,11 @@ export const OurServices: React.FC<OurServicesProps> = ({
                   key={index}
                 >
                   <p onClick={() => handleServiceClick(item)}>
-                    <h4>
+                    <strong>
                       {' '}
                       {item}
                       {' '}
-                    </h4>
+                    </strong>
                   </p>
                 </p>
               ))}

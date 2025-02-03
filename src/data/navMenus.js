@@ -11,18 +11,18 @@ export const navMenus = [
       {
         id: 3,
         name: 'Artificial Intelligence',
-        to: '/ai-services',
+        to: '/ai-development-services',
       },
       {
         id: 4,
         name: 'Blockchain Development',
-        to: '/blockchain-development',
+        to: '/blockchain-development-services',
       },
-      { id: 5, name: 'Virtual/Augmented Reality', to: '/vr-ar' },
-      { id: 6, name: 'Web Development', to: '/web-development' },
-      { id: 7, name: 'Mobile Application Development', to: '/mobile-development' },
-      { id: 8, name: 'Custom Software Development', to: '/custom-software-development' },
-      { id: 9, name: 'User Interface (UI) and User Experience (UX) Design', to: '/ui-ux' },
+      { id: 5, name: 'Virtual/Augmented Reality', to: '/vr-ar-development-services' },
+      { id: 6, name: 'Web Development', to: '/web-development-services' },
+      { id: 7, name: 'Mobile Application Development', to: '/mobile-app-development-services' },
+      { id: 8, name: 'Custom Software Development', to: '/custom-software-development-services' },
+      { id: 9, name: 'User Interface (UI) and User Experience (UX) Design', to: '/ui-ux-design-services' },
 
       // {
       //   name: "Digital Marketing",
@@ -42,15 +42,15 @@ export const navMenus = [
       {
         id: 11,
         name: 'Complete Outsourcing',
-        to: '/deliver',
+        to: '/it-outsourcing-services',
 
       },
       {
         id: 12,
         name: 'Staff Augmentation',
-        to: '/supplement',
+        to: '/staff-augmentation-services',
       },
-      { id: 13, name: 'Dedicated Teams', to: '/deploy' },
+      { id: 13, name: 'Dedicated Teams', to: '/dedicated-team-services' },
     ],
   },
   {
@@ -59,5 +59,5 @@ export const navMenus = [
     to: '/about-us',
   },
   { id: 15, name: 'Case Studies', to: '/case-studies' },
-  { id: 16, name: 'Blogs', to: '/blogs' },
+  { id: 16, name: 'Blogs', to: '/blog' },
 ];

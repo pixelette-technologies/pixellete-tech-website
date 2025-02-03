@@ -26,7 +26,11 @@ export const TechnologyGrid: React.FC<TechnologyGridProps> = ({
   expertiseAreas,
   extraDataMapping,
 }) => {
-  const [selectedData, setSelectedData] = useState<ExtraData | null>(null);
+  // const [selectedData, setSelectedData] = useState<ExtraData | null>(null);
+
+  const [selectedData, setSelectedData] = useState<ExtraData | null>(
+    Object.values(extraDataMapping)[0] || null,
+  );
 
   const handleCardClick = (title: string) => {
     const data = extraDataMapping[title];
@@ -59,14 +63,41 @@ export const TechnologyGrid: React.FC<TechnologyGridProps> = ({
                 cursor: 'pointer',
                 textAlign: 'center',
                 display: 'flex',
-                flexDirection: 'column',
+                alignItems: 'center',
+                // flexDirection: 'column',
                 gap: '1rem',
               }}
             >
-              <h5>{area.title}</h5>
-              {area.description && (
-                <p>{area.description}</p>
+              <h5
+                style={{
+                  color:
+                  selectedData?.title === area.title ? '#4292FA' : '#fff',
+                  transition: 'color 0.3s ease-in-out, transform 0.3s ease-in-out',
+                }}
+                // onMouseEnter={(e) => {
+                //   e.currentTarget.style.transform = 'scale(1.05)';
+                //   // e.currentTarget.style.color = '#4292FA'; // Change to your preferred hover color
+                // }}
+                // onMouseLeave={(e) => {
+                //   e.currentTarget.style.transform = 'scale(1)';
+                //   // e.currentTarget.style.color = '#fff'; // Reset to default
+                // }}
+              >
+                {area.title}
+              </h5>
+              {index !== expertiseAreas.length - 1 && (
+                <hr
+                  style={{
+                    border: '0',
+                    borderLeft: '2px solid #ccc',
+                    height: '100%',
+                    margin: '0',
+                  }}
+                />
               )}
+              {/* {area.description && (
+                <p>{area.description}</p>
+              )} */}
             </div>
           ))}
 
@@ -81,9 +112,9 @@ export const TechnologyGrid: React.FC<TechnologyGridProps> = ({
             {selectedData
               ? (
                   <div style={{ display: 'flex', flexDirection: 'column', textAlign: 'center', gap: '2rem' }}>
-                    <strong>{selectedData.title}</strong>
+                    <h5>{selectedData.title}</h5>
                     {selectedData.description && (
-                      <p>
+                      <p style={{ maxWidth: '55ch' }}>
                         {selectedData.description}
                       </p>
 

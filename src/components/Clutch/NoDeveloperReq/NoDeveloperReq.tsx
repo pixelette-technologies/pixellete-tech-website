@@ -11,7 +11,7 @@ const NoDeveloperReq = (props) => {
           <div>
             <h1>{props.heading}</h1>
             <p>{props.text}</p>
-            <Link href="contactUs">
+            <Link href="/contact-us">
               <Button
                 className="primary"
               >

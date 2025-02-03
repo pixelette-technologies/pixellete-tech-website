@@ -22,7 +22,7 @@ export const Footer: React.FC = () => {
           <Image src="/images/footer/box_21.svg" alt="box 21" width={100} height={100} className="img" />
           <Image src="/images/footer/box_22.svg" alt="box 22" width={100} height={100} className="img" />
         </blockquote>
-        <section id='sideMargin'>
+        <section id="sideMargin">
           {/* Logo and Social Links */}
           <div>
             <Image
@@ -103,7 +103,7 @@ export const Footer: React.FC = () => {
             <p>
               Quick Links
             </p>
-            {['About-us', 'Case-studies', 'Pixelette-research', 'Start-ups'].map(
+            {['about-us', 'case-studies', 'pixelette-research', 'start-ups'].map(
               (link, index) => (
                 <p
                   key={index}
@@ -120,10 +120,10 @@ export const Footer: React.FC = () => {
               Company Info
             </p>
             {[
-              { href: 'blogs', text: 'Blogs' },
+              { href: 'blog', text: 'Blog' },
               { href: 'privacy-policy', text: 'Privacy Policy' },
-              { href: 'term-conditions', text: 'Terms & Conditions' },
-              { href: 'refund-policy', text: 'Cancellation & Refund Policy' },
+              { href: 'terms-condition', text: 'Terms & Conditions' },
+              { href: 'cancelation-refund-policy', text: 'Cancellation & Refund Policy' },
               // { href: 'careers', text: 'Careers' },
             ].map((item, index) => (
               <p
