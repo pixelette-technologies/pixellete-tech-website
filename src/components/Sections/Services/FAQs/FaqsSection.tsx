@@ -8,6 +8,7 @@ import './index.css';
 type FaqItem = {
   question: string;
   answer: string;
+  list: string[];
 };
 
 type FaqsSectionProps = {
@@ -42,6 +43,7 @@ const FaqsSection: React.FC<FaqsSectionProps> = ({ heading, text, faqs }) => {
                 key={`faq-left-${index}`}
                 question={el.question}
                 answer={el.answer}
+                list={el.list}
                 isOpen={openAccordion === index}
                 onClick={() => setOpenAccordion(openAccordion === index ? null : index)}
               />
@@ -53,6 +55,7 @@ const FaqsSection: React.FC<FaqsSectionProps> = ({ heading, text, faqs }) => {
                 key={`faq-right-${index}`}
                 question={el.question}
                 answer={el.answer}
+                list={el.list}
                 isOpen={openAccordion === splitIndex + index}
                 onClick={() => setOpenAccordion(openAccordion === splitIndex + index ? null : splitIndex + index)}
               />

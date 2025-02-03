@@ -9,12 +9,12 @@ const data = [
     desc: 'We start with a deep-dive discovery call to understand your unique goals, challenges, and vision.',
   },
   {
-    title: 'Execution',
-    desc: 'With a well-defined plan in place, our expert team moves into action. Using agile methods, we build, test, and refine, keeping you engaged every step of the way.',
-  },
-  {
     title: 'Proposal',
     desc: 'Next, we craft a tailored strategy and proposal. Every step, from tech stack to timelines, is mapped out.',
+  },
+  {
+    title: 'Execution',
+    desc: 'With a well-defined plan in place, our expert team moves into action. Using agile methods, we build, test, and refine, keeping you engaged every step of the way.',
   },
   {
     title: 'Evaluation and Maintenance',

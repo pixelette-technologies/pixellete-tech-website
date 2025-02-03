@@ -8,9 +8,10 @@ type AccordianProps = {
   answer: string;
   isOpen: boolean;
   onClick: () => void;
+  list: string[];
 };
 
-const Accordian: FC<AccordianProps> = ({ question, answer, isOpen, onClick }) => {
+const Accordian: FC<AccordianProps> = ({ question, answer, isOpen, onClick, list }) => {
   return (
     <div className={styles.accordian} onClick={onClick}>
       <header className={styles.accordianHeader}>
@@ -38,6 +39,11 @@ const Accordian: FC<AccordianProps> = ({ question, answer, isOpen, onClick }) =>
             className={styles.accordianAnswer}
           >
             <p>{answer}</p>
+            {list && <ul>
+              {list.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>}
           </motion.div>
         )}
       </section>

@@ -2,6 +2,7 @@ import { OurClients } from '@/components/Home/OurClients/OurClients';
 import { EvaluateBusiness } from '@/components/Sections/EvaluateBusiness/EvaluateBusiness';
 import { AiServiceTable } from '@/components/Sections/Services/AiServiceTable/AiServiceTable';
 import ExpertiseGrid from '@/components/Sections/Services/ExpertiseGrid/ExpertiseGrid';
+// import FaqsSection from '@/components/Sections/Services/FAQs/FaqsSection';
 import FaqsSection from '@/components/Sections/Services/FAQs/FaqsSection';
 import { HeroSection } from '@/components/Sections/Services/HeroSection/HeroSection';
 import { HowWeWork } from '@/components/Sections/Services/HowWeWork/HowWeWork';
@@ -11,6 +12,7 @@ import { TechnologyGrid } from '@/components/Sections/Services/TechnologyGrid/Te
 import TechnologiesUsed from '@/components/Sections/TechnologyUsed/TechnologiesUsed';
 import { expertiseAiChangeData } from '@/data/expertise/expertiseAiChangeData';
 import { aiFaq } from '@/data/faqs/aiFaqs';
+import { uiFaqs } from '@/data/faqs/uiFaqs';
 import {
   aiHeroBackgroundImage,
   aiHeroButtonLink,
@@ -105,7 +107,7 @@ export default async function UIUX(props: IUIUXProps) {
         description={ocdescription}
         commitmentData={commitmentData}
       />
-      <FaqsSection faqs={aiFaq} />
+      <FaqsSection faqs={uiFaqs} />
       <EvaluateBusiness
         heading="We’re not waiting for the future; we’re actively building with businesses"
         description="Start your transformation today and promote your development goals with a top-tier global team that pushes the boundaries of innovation every single day."

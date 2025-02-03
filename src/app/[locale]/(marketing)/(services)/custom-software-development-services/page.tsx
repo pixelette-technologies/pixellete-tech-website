@@ -9,6 +9,7 @@ import { OurServices } from '@/components/Sections/Services/OurServices/OurServi
 import { TechnologyGrid } from '@/components/Sections/Services/TechnologyGrid/TechnologyGrid';
 import TechnologiesUsed from '@/components/Sections/TechnologyUsed/TechnologiesUsed';
 import { aiFaq } from '@/data/faqs/aiFaqs';
+import { softwareFaqs } from '@/data/faqs/softwareFaqs';
 import {
   commitmentData,
   customDevelopmentExpertiseData,
@@ -95,7 +96,7 @@ export default async function CustomSoftwareDevelopment(props: ICustomSoftwareDe
         description={ocdescription}
         commitmentData={commitmentData}
       />
-      <FaqsSection faqs={aiFaq} />
+      <FaqsSection faqs={softwareFaqs} />
       <EvaluateBusiness
         heading="We’re not waiting for the future; we’re actively building with businesses"
         description="Start your transformation today and promote your development goals with a top-tier global team that pushes the boundaries of innovation every single day."

@@ -11,6 +11,7 @@ import { TechnologyGrid } from '@/components/Sections/Services/TechnologyGrid/Te
 import TechnologiesUsed from '@/components/Sections/TechnologyUsed/TechnologiesUsed';
 import { expertiseAiChangeData } from '@/data/expertise/expertiseAiChangeData';
 import { aiFaq } from '@/data/faqs/aiFaqs';
+import { webFaqs } from '@/data/faqs/webFaqs';
 import {
   aiHeroBackgroundImage,
   aiHeroButtonLink,
@@ -105,7 +106,7 @@ export default async function WebDevelopment(props: IWebDevelopmentProps) {
         description={ocdescription}
         commitmentData={commitmentData}
       />
-      <FaqsSection faqs={aiFaq} />
+      <FaqsSection faqs={webFaqs} />
       <EvaluateBusiness
         heading="We’re not waiting for the future; we’re actively building with businesses"
         description="Start your transformation today and promote your development goals with a top-tier global team that pushes the boundaries of innovation every single day."
