@@ -132,61 +132,61 @@ export const blockchainServicelist
 ];
 export const blockchainServices = {
   'Blockchain Consulting': {
-    imageSrc: '/images/aiServices/s_1.svg',
+    imageSrc: '/images/aiServices/s_13.svg',
     title: 'Blockchain Consulting',
     description:
     'We offer top-tier blockchain consulting to shape your vision into reality. From fresh builds to system upgrades, our blockchain development services ensure secure, scalable solutions aligned with your goals.',
   },
   'DApp Development': {
-    imageSrc: '/images/aiServices/s_2.svg',
+    imageSrc: '/images/aiServices/s_14.svg',
     title: 'DApp Development',
     description:
     'Our dApp development services deliver high-performing, scalable decentralized applications for any industry. With custom dApps, we help businesses thrive in the competitive crypto ecosystem.',
   },
   'Crypto Wallet Development': {
-    imageSrc: '/images/aiServices/s_3.svg',
+    imageSrc: '/images/aiServices/s_15.svg',
     title: 'Crypto Wallet Development',
     description:
     'Our cryptocurrency wallet development services empower your DeFi portfolio with secure, user-friendly wallets. We deliver decentralized wallets that feature QR scanners,biometrics, and cross-platform compatibility for fast, secure transactions.',
   },
   'Cryptocurrency Exchange Development': {
-    imageSrc: '/images/aiServices/s_4.svg',
+    imageSrc: '/images/aiServices/s_16.svg',
     title: 'Cryptocurrency Exchange Development',
     description:
     'As a leading decentralized exchange solutions provider, we design scalable, secure DEX platforms where users can buy, sell, and trade cryptocurrency easily and transparently.',
   },
   'Asset Tokenization Platform': {
-    imageSrc: '/images/aiServices/s_5.svg',
+    imageSrc: '/images/aiServices/s_17.svg',
     title: 'Asset Tokenization Platform',
     description:
     'Our tokenization services make asset digitization easy. We create robust platforms to unlock new financial assets and make them tradable on blockchain public platforms.',
   },
   'Layer 1 & Layer 2 Blockchain': {
-    imageSrc: '/images/aiServices/s_6.svg',
+    imageSrc: '/images/aiServices/s_18.svg',
     title: 'Layer 1 & Layer 2 Blockchain',
     description:
     'We deliver Layer 1 blockchain development to empower startups and enterprises. Our Layer 2 blockchain solutions boost network performance with state channels and sidechains, enhancing scalability and reducing costs.',
   },
   'Smart Contract Audit and Development': {
-    imageSrc: '/images/aiServices/s_1.svg',
+    imageSrc: '/images/aiServices/s_19.svg',
     title: 'Smart Contract Audit and Development',
     description:
     'Our smart contract development services cover coding, testing, and deployment, helping you automate workflows and cut costs securely. As a top smart contract development company, we ensure every contract is fully secure and ready for action.',
   },
   'DeFi Development': {
-    imageSrc: '/images/aiServices/s_2.svg',
+    imageSrc: '/images/aiServices/s_20.svg',
     title: 'DeFi Development',
     description:
     'Our DeFi development services create decentralized solutions that eliminate intermediaries, empowering businesses to handle digital assets seamlessly with high-quality dApps.',
   },
   'DAO Development': {
-    imageSrc: '/images/aiServices/s_3.svg',
+    imageSrc: '/images/aiServices/s_21.svg',
     title: 'DAO Development',
     description:
     'As a forward-thinking DAO development company, we offer secure DAO development services that redefine centralized business models, bringing efficiency and autonomy.',
   },
   'Crypto Token Development': {
-    imageSrc: '/images/aiServices/s_4.svg',
+    imageSrc: '/images/aiServices/s_21.svg',
     title: 'Crypto Token Development',
     description:
     'Our crypto token development services deliver custom, secure tokens with tamper-proof protection, ideal for safe trading in today’s digital space.',

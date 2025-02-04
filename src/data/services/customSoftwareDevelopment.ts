@@ -137,49 +137,49 @@ export const customDevelopmentServicelist
 ];
 export const customDevelopmentServices = {
   'Software Consulting Services': {
-    imageSrc: '/images/aiServices/s_1.svg',
+    imageSrc: '/images/aiServices/s_29.svg',
     title: 'Software Consulting Services',
     description:
     'As a trusted customized software development company, we assess your business needs, design the ideal software structure, and deliver custom software services that maximize value. Our dedicated team uses deep technical expertise to create tailored solutions that enhance productivity and efficiency.',
   },
   'Custom Software Development Services': {
-    imageSrc: '/images/aiServices/s_2.svg',
+    imageSrc: '/images/aiServices/s_30.svg',
     title: 'Custom Software Development Services',
     description:
     'In today’s fast-paced market, custom software development gives businesses a competitive edge. As a leading software development agency, we provide specialized software development tailored to your business goals and designed to drive results.',
   },
   'Enterprise Software Development Services': {
-    imageSrc: '/images/aiServices/s_3.svg',
+    imageSrc: '/images/aiServices/s_32.svg',
     title: 'Enterprise Software Development Services',
     description:
     'We develop custom enterprise software development solutions to help large businesses scale and optimize key functions. Our offerings improve business infrastructure while driving sustainable growth.',
   },
   'Software Product Development Services': {
-    imageSrc: '/images/aiServices/s_4.svg',
+    imageSrc: '/images/aiServices/s_34.svg',
     title: 'Software Product Development Services',
     description:
     'We are a comprehensive software product development company that manages every stage of your project—from analysis and development to launch and maintenance. With our software development as a service, we provide secure, compliant, and innovative products tailored to each client\'s needs',
   },
   'Software Integration Services': {
-    imageSrc: '/images/aiServices/s_5.svg',
+    imageSrc: '/images/aiServices/s_36.svg',
     title: 'Software Integration Services',
     description:
     'Adopting new technologies can challenge your existing systems. Our software developers handle implementation and integration with best practices in architectural design, testing, and optimization for smooth transitions.',
   },
   'Custom CRM Development Services': {
-    imageSrc: '/images/aiServices/s_6.svg',
+    imageSrc: '/images/aiServices/s_33.svg',
     title: 'Custom CRM Development Services',
     description:
     'We specialize in custom CRM software development services that automate workflows, strengthen customer relationships, and enhance operational efficiency.',
   },
   'API Development Services': {
-    imageSrc: '/images/aiServices/s_1.svg',
+    imageSrc: '/images/aiServices/s_31.svg',
     title: 'API Development Services',
     description:
     'Our team provides sturdy API development and integration solutions that connect your software with customers and vendors, enhancing your business’s reach and revenue opportunities.',
   },
   'Custom E-Commerce Development': {
-    imageSrc: '/images/aiServices/s_2.svg',
+    imageSrc: '/images/aiServices/s_35.svg',
     title: 'Custom E-Commerce Development',
     description:
     'Our e-commerce development services create tailored platforms that elevate online shopping experiences, seamlessly integrating with your current operations to support your sales strategy.',

@@ -127,43 +127,43 @@ export const uiuxServicelist
 ];
 export const uiuxServices = {
   'Digital Product Design and Development Consulting': {
-    imageSrc: '/images/aiServices/s_1.svg',
+    imageSrc: '/images/aiServices/s_43.svg',
     title: 'Digital Product Design and Development Consulting',
     description:
     'As a top UI UX design agency, we offer end-to-end digital product strategy consulting that strengthens your app’s value. Our experts assess architecture, understand business dynamics, and provide strategic guidance on complex challenges to set you on a success path.',
   },
   'Web and Mobile UI/UX Design': {
-    imageSrc: '/images/aiServices/s_2.svg',
+    imageSrc: '/images/aiServices/s_37.svg',
     title: 'Web and Mobile UI/UX Design',
     description:
     'We provide responsive web design, adaptive mobile design, and user experience design services that enhance user satisfaction and engagement.',
   },
   'App and Website Redesign': {
-    imageSrc: '/images/aiServices/s_3.svg',
+    imageSrc: '/images/aiServices/s_39.svg',
     title: 'App and Website Redesign',
     description:
     'Transform outdated projects with a fresh, impactful interface while keeping the backend intact if desired, using our UI UX design and development services.',
   },
   'UI/UX Design Audit': {
-    imageSrc: '/images/aiServices/s_4.svg',
+    imageSrc: '/images/aiServices/s_40.svg',
     title: 'UI/UX Design Audit',
     description:
     'Our team conducts comprehensive UI/UX design audits to identify improvement areas and offer targeted recommendations for achieving your design goals.',
   },
   'UI/UX Design Research': {
-    imageSrc: '/images/aiServices/s_5.svg',
+    imageSrc: '/images/aiServices/s_38.svg',
     title: 'UI/UX Design Research',
     description:
     'Our design team provides personalized user experience design services to answer key questions about your web or mobile project’s user experience.',
   },
   'Design Strategy Development': {
-    imageSrc: '/images/aiServices/s_6.svg',
+    imageSrc: '/images/aiServices/s_42.svg',
     title: 'Design Strategy Development',
     description:
     'We help clients grasp the importance of strategic design and build effective operational strategies that enhance brand value through UI/UX design.',
   },
   'Design Concept Development': {
-    imageSrc: '/images/aiServices/s_1.svg',
+    imageSrc: '/images/aiServices/s_41.svg',
     title: 'Design Concept Development',
     description:
     'With advanced UI & UX development techniques, our team supports you in wireframing and prototyping, combining user insights, your vision, and cutting-edge technology for optimal results.',

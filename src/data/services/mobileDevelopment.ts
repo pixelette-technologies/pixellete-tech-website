@@ -136,43 +136,43 @@ export const mobileDevelopmentServicelist
 ];
 export const mobileDevelopmentServices = {
   'iOS App Development': {
-    imageSrc: '/images/aiServices/s_1.svg',
+    imageSrc: '/images/aiServices/s_22.svg',
     title: 'iOS App Development',
     description:
     'Bring your ideas to life with scalable, reliable iOS mobile app development that integrates smoothly with the Apple ecosystem. Our mobile app development services use the latest tech and tailored features to create iOS apps that align with your business goals and elevate user satisfaction.',
   },
   'Android App Development': {
-    imageSrc: '/images/aiServices/s_2.svg',
+    imageSrc: '/images/aiServices/s_23.svg',
     title: 'Android App Development',
     description:
     'We offer Android mobile app development solutions that put your brand on the map. With our app development services, we deliver user-friendly Android apps from concept to launch, ensuring they stand out and deliver a joyful user experience.',
   },
   'Wearable and Embedded Software App Development': {
-    imageSrc: '/images/aiServices/s_3.svg',
+    imageSrc: '/images/aiServices/s_24.svg',
     title: 'Wearable and Embedded Software App Development',
     description:
     'Today, companion apps are essential. We develop wearables that connect with smart gadgets and custom peripherals, enhancing functionality and building brand loyalty. From fitness trackers to smartwatches, our mobile app development company specializes in wearable tech that keeps users engaged.',
   },
   'PWA Development': {
-    imageSrc: '/images/aiServices/s_4.svg',
+    imageSrc: '/images/aiServices/s_25.svg',
     title: 'PWA Development',
     description:
     'Our mobile app solutions include Progressive Web App Development (PWAs) that offer fast, reliable, and engaging experiences. With the best of both native and web app features, PWAs built by our mobile application developers ensure exceptional digital engagement on any device.',
   },
   'Hybrid App Development': {
-    imageSrc: '/images/aiServices/s_5.svg',
+    imageSrc: '/images/aiServices/s_26.svg',
     title: 'Hybrid App Development',
     description:
     'Our hybrid mobile app development services combine the best of both worlds—native and web app technologies—to create powerful, versatile apps that work flawlessly across platforms.',
   },
   'Native Mobile App Development': {
-    imageSrc: '/images/aiServices/s_6.svg',
+    imageSrc: '/images/aiServices/s_27.svg',
     title: 'Native Mobile App Development',
     description:
     'We deliver native app development services across iOS and Android platforms. By using each platform\'s unique strengths, our mobile app developers create secure, scalable apps that align with your goals and captivate your audience.',
   },
   'Cross Platform App Development': {
-    imageSrc: '/images/aiServices/s_1.svg',
+    imageSrc: '/images/aiServices/s_28.svg',
     title: 'Cross Platform App Development',
     description:
     'Cross-platform development is cost-effective and easy to maintain, providing a unified experience across devices. Our cross-platform mobile app development approach combines the best of native and web technologies, expanding your reach without compromising on quality or functionality.',

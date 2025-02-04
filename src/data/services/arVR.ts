@@ -132,55 +132,55 @@ export const vrServicelist
 ];
 export const vrServices = {
   'UI/UX Design': {
-    imageSrc: '/images/aiServices/s_1.svg',
+    imageSrc: '/images/aiServices/s_58.svg',
     title: 'UI/UX Design for AR/VR',
     description:
     'We specialize in immersive UI/UX design for AR and VR environments, ensuring intuitive interfaces and user experiences. Our design approach prioritizes interactivity and ease of use, making digital spaces feel both accessible and engaging.',
   },
   'Consulting Services': {
-    imageSrc: '/images/aiServices/s_2.svg',
+    imageSrc: '/images/aiServices/s_57.svg',
     title: 'AR/VR Consulting Services',
     description:
     'We’re a well-known AR/VR app development company providing expert consulting to help you navigate the AR/VR landscape and use immersive technology. We assess your needs, offer insights and guide you through technology selection, strategy and implementation. This helps set a strong foundation for successful project deployment.',
   },
   'Custom Application Development': {
-    imageSrc: '/images/aiServices/s_3.svg',
+    imageSrc: '/images/aiServices/s_59.svg',
     title: 'Custom AR/VR Application Development',
     description:
     'Our custom AR/VR app development services enhance user experiences and drive engagement. With a focus on delivering immersive, high-performance applications, our team combines augmented reality development and virtual reality development with advanced technology to make your vision a reality.',
   },
   'Integration Services': {
-    imageSrc: '/images/aiServices/s_4.svg',
+    imageSrc: '/images/aiServices/s_52.svg',
     title: 'AR/VR Integration Services',
     description:
     'We help integrate AR and VR developed solutions into existing platforms and applications, transforming standard processes into interactive experiences. Our years of expertise allows us to create streamlined, efficient solutions that align with your business goals.',
   },
   'Game Development Services': {
-    imageSrc: '/images/aiServices/s_5.svg',
+    imageSrc: '/images/aiServices/s_51.svg',
     title: 'AR/VR Game Development Services',
     description:
     'Our team of capable developers build captivating, interactive AR/VR games that transport users into exciting virtual worlds. Our AR/VR game development solutions create engaging, lifelike environments that resonate with players and enhance brand value.',
   },
   'Content Creation': {
-    imageSrc: '/images/aiServices/s_6.svg',
+    imageSrc: '/images/aiServices/s_53.svg',
     title: 'AR/VR Content Creation',
     description:
     'We produce dynamic AR and VR content specialized to enhance user engagement and experience. Our AR/VR content creation services bring ideas to life, whether for training, marketing, healthcare or entertainment, ensuring immersive, memorable interactions that leave a lasting impact on your users.',
   },
   'Simulation Development': {
-    imageSrc: '/images/aiServices/s_1.svg',
+    imageSrc: '/images/aiServices/s_60.svg',
     title: 'AR/VR Simulation Development',
     description:
     'Our simulations offer lifelike experiences across various industries. As a trusted AR VR development company, we create realistic simulations that mimic real-world scenarios, allowing users to learn, practice, and engage in a safe, controlled digital environment.',
   },
   'Training and Educational Tools': {
-    imageSrc: '/images/aiServices/s_2.svg',
+    imageSrc: '/images/aiServices/s_55.svg',
     title: 'AR/VR Training and Educational Tools',
     description:
     'We help develop interactive AR/VR training and educational tools to empower learning through 3D experiences. Our AR/VR team delivers solutions that make complex concepts easy to understand, offering a hands-on approach to education.',
   },
   'Maintenance and Support': {
-    imageSrc: '/images/aiServices/s_3.svg',
+    imageSrc: '/images/aiServices/s_54.svg',
     title: 'AR/VR Maintenance and Support',
     description:
     'Pixelette Technologies offers end-to-end maintenance and support, ensuring your AR/VR applications stay optimized and up-to-date even after they have been delivered. We provide ongoing assistance to address any issues you may face, maximize performance, and support your long-term business success in the digital space.',
