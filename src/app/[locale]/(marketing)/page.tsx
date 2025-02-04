@@ -45,7 +45,7 @@ export default async function Index(props: IIndexProps) {
       <OurClients />
       <div style={{ position: 'relative' }}>
         <Image
-          src="/images/home/bodybackground.svg"
+          src="/images/home/bodyBackground.svg"
           fill
           alt="body background"
           style={{
