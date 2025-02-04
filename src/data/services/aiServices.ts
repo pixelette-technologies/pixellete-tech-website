@@ -46,7 +46,7 @@ export const aiExpertiseData = {
   },
 };
 
-export const ocheading = 'Our Commitment to Excellence';
+export const ocheading = 'Our commitment to excellence';
 
 export const ocdescription
   = 'Excellence serves as our starting point. We work tirelessly towards achieving remarkable results that elevate the bar for technological advancements everywhere.';
@@ -97,7 +97,7 @@ export const aiHeroImages = [
   { src: '/images/aiServices/box_4.svg', alt: 'box 4' },
 ];
 
-export const aiServicesHeading = 'Our Services';
+export const aiServicesHeading = 'Our services';
 
 export const aiServicesDescription
   = 'Our AI development services empower businesses to tap into extensive data, driving measurable results. As an award-winning AI software development company, we specialize in turning ideas into actionable insights, making efficiency and quick decision-making unavoidable. Let’s collaborate to bring your AI vision to life and to its intended audience!';

@@ -17,7 +17,7 @@ const HeroSectionAbout: React.FC = () => {
           <center>
             <header>
               <h1>
-                Leading Innovation in AI and Blockchain
+              A league of builders, set on shaping future tech
               </h1>
               <p>
                 We’re on a mission to empower businesses with groundbreaking

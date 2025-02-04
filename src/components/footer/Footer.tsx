@@ -106,6 +106,7 @@ export const Footer: React.FC = () => {
             {['about-us', 'case-studies', 'pixelette-research', 'start-ups'].map(
               (link, index) => (
                 <p
+                style={{fontWeight: '700'}}
                   key={index}
                 >
                   <Link href={`/${link}`}>{link.replace('-', ' ')}</Link>

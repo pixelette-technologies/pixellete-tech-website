@@ -46,7 +46,7 @@ export const tgExpertiseData = {
         'Dive into image recognition, object detection, and real-time vision systems.',
   },
 };
-export const ocheading = 'Our Commitment to Excellence';
+export const ocheading = 'Our commitment to excellence';
 
 export const ocdescription
   = 'Excellence serves as our starting point. We work tirelessly towards achieving remarkable results that elevate the bar for technological advancements everywhere.';

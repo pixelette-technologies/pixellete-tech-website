@@ -50,7 +50,7 @@ export const OurClients: React.FC<OurClientsProps> = () => {
       <Container className="main">
         <center>
           <h2 id="h_ani">
-            Trusted By Leading Innovators
+            Trusted by leading innovators
           </h2>
         </center>
         <div data-aos="fade-up" data-aos-duration="500">

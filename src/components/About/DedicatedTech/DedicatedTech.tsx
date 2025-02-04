@@ -6,24 +6,33 @@ import './dedicatedtech.css';
 
 type Card = {
   title: string;
-  content: string;
+  content: string[];
 };
 
 const cards: Card[] = [
   {
     title: 'Promise of Quality',
-    content:
-      '97% customer satisfaction rating\n4.8 overall Clutch rating\n£100M+ in funding secured for client startups\n30,000+ hours in development across diverse industries',
+    content:[
+      '97% customer satisfaction rating',
+      '4.8 overall Clutch rating',
+      '£100M+ in funding secured for client startups',
+      '30,000+ hours in development across diverse industries',
+    ],
   },
   {
     title: 'Global Reach',
-    content:
-      '200+ team members across 13 countries, with 15+ locations and expanding\nRanked among the top 30 software development companies globally (Clutch)',
+    content:[
+      '200+ team members across 13 countries, with 15+ locations and expanding',
+      'Ranked among the top 30 software development companies globally (Clutch)',
+    ],
   },
   {
     title: 'Impact Creation',
-    content:
-      'Official Secretariat of the British Government’s AI policy body (APPG AI)\nAwarded ‘Best AI Agency UK’ three times by the Scotland Business Awards\n200+ successful projects with over 100+ million project views',
+    content:[
+      'Official Secretariat of the British Government’s AI policy body (APPG AI)',
+      'Awarded ‘Best AI Agency UK’ three times by the Scotland Business Awards',
+      '200+ successful projects with over 100+ million project views',
+    ],
   },
 ];
 
@@ -31,7 +40,7 @@ const DedicatedTech: React.FC = () => {
   const [selectedCardIndex, setSelectedCardIndex] = useState<number>(0); // Default to first card
 
   return (
-    <div className="technologyStackAi">
+    <div className="technologyStackAi" style={{marginBottom: '10rem'}}>
       <center>
         <h2
           id="h_ani"
@@ -75,11 +84,17 @@ const DedicatedTech: React.FC = () => {
                 display: 'flex',
                 flexDirection: 'column',
                 gap: '1rem',
+                justifyContent: 'center',
+                alignItems: 'center',
               }}
             >
               <h3>{cards[selectedCardIndex].title}</h3>
               <p>
-                {cards[selectedCardIndex].content}
+                {cards[selectedCardIndex].content.map((x)=>(
+                  <ul>
+                    <li style={{textAlign: 'left', listStyle: 'circle'}}>{x}</li>
+                  </ul>
+                ))}
               </p>
 
             </div>

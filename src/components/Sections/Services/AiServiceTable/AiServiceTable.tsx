@@ -144,7 +144,7 @@ export const AiServiceTable: React.FC<AiServiceTableProps> = () => {
                   <td>✔️</td>
                 </tr>
                 <tr>
-                  <td>✔️</td>
+                  <td></td>
                 </tr>
                 <tr>
                   <td></td>
@@ -156,7 +156,7 @@ export const AiServiceTable: React.FC<AiServiceTableProps> = () => {
                   <td>✔️</td>
                 </tr>
                 <tr>
-                  <td>✔️</td>
+                  <td>✔️🏆</td>
                 </tr>
                 <tr>
                   <td
@@ -200,16 +200,16 @@ export const AiServiceTable: React.FC<AiServiceTableProps> = () => {
                   <td>✔️</td>
                 </tr>
                 <tr>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td></td>
-                </tr>
-                <tr>
                   <td>✔️</td>
+                </tr>
+                <tr>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>✔️🏆</td>
                 </tr>
                 <tr>
                   <td
@@ -250,19 +250,19 @@ export const AiServiceTable: React.FC<AiServiceTableProps> = () => {
                   <td>✔️</td>
                 </tr>
                 <tr>
-                  <td>✔️</td>
-                </tr>
-                <tr>
-                  <td>✔️</td>
-                </tr>
-                <tr>
-                  <td></td>
-                </tr>
-                <tr>
                   <td></td>
                 </tr>
                 <tr>
                   <td>✔️</td>
+                </tr>
+                <tr>
+                  <td>✔️</td>
+                </tr>
+                <tr>
+                  <td>✔️</td>
+                </tr>
+                <tr>
+                  <td>✔️🏆</td>
                 </tr>
                 <tr>
                   <td

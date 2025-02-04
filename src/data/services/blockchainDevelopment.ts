@@ -51,7 +51,7 @@ export const tgExpertiseData = {
         'We specialize in privacy-centric blockchain services, incorporating zk-SNARKs and MPC (Multi-Party Computation) to protect user data in transactions and communications. Our expertise ensures data privacy without sacrificing the transparency of blockchain.',
   },
 };
-export const ocheading = 'Our Commitment to Excellence';
+export const ocheading = 'Our commitment to excellence';
 
 export const ocdescription
   = 'Excellence serves as our starting point. We work tirelessly towards achieving remarkable results that elevate the bar for technological advancements everywhere.';

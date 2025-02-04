@@ -91,7 +91,8 @@
 
 .aboutUsSection > div > section > *:last-child > section > div > p,
 .aboutUsSection > div > section > *:last-child > div > div > p {
-  font-size: 1.2rem;
+  font-size: 1.6rem;
+  text-align: center;
   font-weight: 300;
 }
 

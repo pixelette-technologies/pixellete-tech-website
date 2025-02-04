@@ -28,7 +28,7 @@ const FaqsSection: React.FC<FaqsSectionProps> = ({ heading, text, faqs }) => {
     <div className="faqsSection">
       <center>
         <h2 id="h_ani">
-          {heading || 'Have questions? We\'ve got answers! Here are the most frequent ones'}
+          {heading || 'FAQs'}
         </h2>
         <p>
           {text || 'Ask everything you need to know about our products and services.'}

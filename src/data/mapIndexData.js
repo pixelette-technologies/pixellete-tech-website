@@ -9,7 +9,7 @@ export const mapIndexData = [
     city: 'Chicago, USA',
     phone: '+1 7732709034',
     mail: 'sales@pixelettetech.com',
-    address: '2335. W. Devon, Ave, IL 6065',
+    address: '2335. W. Devon, Ave, IL 6065, Chicago, USA',
   },
 
   {
@@ -112,7 +112,7 @@ export const mapIndexData = [
     city: 'London, UK',
     phone: '+44 2045188226',
     mail: 'sales@pixelettetech.com',
-    address: '71-75 Shelton Street, WC2H9J',
+    address: '71-75 Shelton Street, WC2 H9J, London, UK',
   },
 
 ];

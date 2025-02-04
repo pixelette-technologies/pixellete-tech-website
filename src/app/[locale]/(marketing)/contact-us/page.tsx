@@ -1,3 +1,4 @@
+import HeroSection from '@/components/CaseStudies/HeroSection/HeroSection';
 import { EvaluateBusiness } from '@/components/Sections/EvaluateBusiness/EvaluateBusiness';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 
@@ -28,7 +29,7 @@ export default async function About(props: IAboutProps) {
 
   return (
     <>
-
+    <HeroSection heading="Let’s turn your ideas into successful outcomes" description={<>Have a project in mind? You couldn’t have come to a better place. We’re a global team with 200+ successful projects that pushes the boundaries of innovation every single day. <br/> Connect with our team to a free-of-cost, 30 minute discovery call to see how we can turn your ideas into reality, or turn around a project gone bad.</>}/>
       <EvaluateBusiness
         heading="Ready to become a tech success story?"
         description="Don’t let technical hurdles stand in the way of building powerful tech solutions. Let us help you bring your vision to life with innovative, cost-effective and reliable services. Get in touch!"

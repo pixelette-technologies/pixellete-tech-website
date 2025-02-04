@@ -10,7 +10,7 @@ export const navMenus = [
     subMenus: [
       {
         id: 3,
-        name: 'Artificial Intelligence',
+        name: 'AI Development',
         to: '/ai-development-services',
       },
       {
@@ -18,11 +18,11 @@ export const navMenus = [
         name: 'Blockchain Development',
         to: '/blockchain-development-services',
       },
-      { id: 5, name: 'Virtual/Augmented Reality', to: '/vr-ar-development-services' },
+      { id: 5, name: 'AR/VR Development ', to: '/vr-ar-development-services' },
       { id: 6, name: 'Web Development', to: '/web-development-services' },
       { id: 7, name: 'Mobile Application Development', to: '/mobile-app-development-services' },
       { id: 8, name: 'Custom Software Development', to: '/custom-software-development-services' },
-      { id: 9, name: 'User Interface (UI) and User Experience (UX) Design', to: '/ui-ux-design-services' },
+      { id: 9, name: 'UI/UX Design', to: '/ui-ux-design-services' },
 
       // {
       //   name: "Digital Marketing",

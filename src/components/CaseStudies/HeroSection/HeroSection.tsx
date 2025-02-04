@@ -1,7 +1,7 @@
 import { Container } from '@/components/Feature/Container/Container';
 import styles from './herosection.module.css';
 
-const HeroSection: React.FC = () => {
+const HeroSection: React.FC = ({heading, description}) => {
   return (
     <>
       {/* <Container className="main">
@@ -31,10 +31,10 @@ const HeroSection: React.FC = () => {
           </blockquote> */}
           <center>
             <h1>
-              Our development legacy in action
+              {heading || 'Our development legacy in action'}
             </h1>
             <p>
-              97% customer satisfaction rating  |  4.8 overall Clutch rating  |  30,000+ hours in development
+              {description || '97% customer satisfaction rating  |  4.8 overall Clutch rating  |  30,000+ hours in development'}
             </p>
 
             {/* <Link href="contactUs">

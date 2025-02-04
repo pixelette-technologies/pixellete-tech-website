@@ -184,7 +184,7 @@ const AboutUsSection: React.FC = () => {
                           'overall Clutch rating',
                           'team members across 13 countries, with 15+ locations and expanding',
                           ' in funding secured for client startups',
-                          'among the software development companies globally (Clutch)',
+                          'Top 30 globally among the software development companies globally (Clutch)',
                         ][index]
                       }
                     </p>
