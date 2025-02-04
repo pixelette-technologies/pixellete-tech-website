@@ -101,12 +101,12 @@ export const Footer: React.FC = () => {
           {/* Quick Links */}
           <div>
             <p>
-              Quick Links
+              <strong>Quick Links</strong>
             </p>
             {['about-us', 'case-studies', 'pixelette-research', 'start-ups'].map(
               (link, index) => (
                 <p
-                style={{fontWeight: '700'}}
+                  // style={{ fontWeight: '700' }}
                   key={index}
                 >
                   <Link href={`/${link}`}>{link.replace('-', ' ')}</Link>
@@ -118,7 +118,7 @@ export const Footer: React.FC = () => {
           {/* Company Info */}
           <div>
             <p>
-              Company Info
+              <strong>Company Info</strong>
             </p>
             {[
               { href: 'blog', text: 'Blog' },
@@ -138,7 +138,7 @@ export const Footer: React.FC = () => {
           {/* Contact Info */}
           <div>
             <p>
-              Contact Us
+              <strong>Contact Us</strong>
             </p>
             {[
               { Icon: MdEmail, text: 'sales@pixelettetech.com' },
