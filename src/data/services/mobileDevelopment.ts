@@ -298,7 +298,7 @@ export const mobileDevelomentTechnologies: Technologies = {
     { id: 9, name: 'PostgreSQL', icon: '/images/tech/logos/postgresql.png' },
     { id: 10, name: 'MongoDB', icon: '/images/tech/logos/mongodb.png' },
     { id: 11, name: 'Couchbase Lite', icon: '/images/tech/logos/couchbase-lite.png' },
-    { id: 12, name: 'Jenkins', icon: '/images/tech/logos/jenkins.png' },
+    { id: 12, name: 'Jenkins', icon: '/images/tech/logos/Jenkins/jenkins.png' },
     { id: 13, name: 'GitLab CI/CD', icon: '/images/tech/logos/git.png' },
     { id: 14, name: 'Fastlane', icon: '/images/tech/logos/fastlane.png' },
     { id: 15, name: 'Bitrise', icon: '/images/tech/logos/bitrise.png' },

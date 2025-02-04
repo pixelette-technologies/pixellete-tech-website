@@ -278,7 +278,7 @@ export const customDevelopmentTechnologies: Technologies = {
   'DevOps, Testing & Tools': [
     { id: 1, name: 'Docker', icon: '/images/tech/logos/docker.png' },
     { id: 2, name: 'Kubernetes', icon: '/images/tech/logos/kubernetes.png' },
-    { id: 3, name: 'Jenkins', icon: '/images/tech/logos/jenkins.png' },
+    { id: 3, name: 'Jenkins', icon: '/images/tech/logos/Jenkins/jenkins.png' },
     { id: 4, name: 'GitLab CI/CD', icon: '/images/tech/logos/git.png' },
     { id: 5, name: 'CircleCI', icon: '/images/tech/logos/circleci.png' },
     { id: 6, name: 'Travis CI', icon: '/images/tech/logos/travis-ci.png' },
