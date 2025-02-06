@@ -1,7 +1,7 @@
 'use client';
 import { Button } from '@/components/Feature/Button/Button';
 import { Container } from '@/components/Feature/Container/Container';
-import { } from '@/components/Feature/Text/Text';
+// import { } from '@/components/Feature/Text/Text';
 import dynamic from 'next/dynamic';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -51,7 +51,7 @@ const HeroSection: React.FC = () => {
         </center>
 
         {/* Main Content */}
-        <Container className="main margins" id="sideMargin">
+        <Container className="main margins" id="sidemargin">
           <div className="content">
             {/* Globe Section */}
             <div className="globe-container">

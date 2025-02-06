@@ -1,5 +1,4 @@
 import { Container } from '@/components/Feature/Container/Container';
-import Text from '@/components/Feature/Text/Text';
 import Image from 'next/image';
 import './herosection.css';
 
@@ -28,19 +27,20 @@ export const HeroSection = () => {
           >
             Ready to scale? Partner with Pixelette Technologies
           </h1>
-          
+          {/* <div
             className="secondary"
             animation="zoom-in"
             duration="600"
-          >
+          > */}
+          <p>
             At Pixelette Technologies, we're passionate about startups and
             innovation, committed to turning your ideas into reality. With our
             expert support, we guide you from ideation to execution, ensuring
             your project receives the attention and dedication it deserves.
-          
+          </p>
         </center>
 
-        <Container className="main margins">
+        <Container className="main margins" id="sideMargin">
           <section data-aos="fade-up" data-aos-duration="500">
             {/* Section 1 */}
             <div>
@@ -57,7 +57,7 @@ export const HeroSection = () => {
                 ventures see the light of day. Join us to navigate the hurdles
                 hindering your startup's success and turn your vision into
                 reality.
-                </p>
+              </p>
             </div>
 
             {/* Section 2 */}
@@ -74,7 +74,7 @@ export const HeroSection = () => {
                 minimal control relinquished, we prioritise your start-up's
                 growth and prosperity, ensuring unparalleled support on your
                 journey to success.
-                </p>
+              </p>
             </div>
           </section>
         </Container>
