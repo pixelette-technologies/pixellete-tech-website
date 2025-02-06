@@ -47,7 +47,7 @@ export const homeTechnologies: Technologies = {
     { id: 35, name: 'Chroma', icon: '/images/tech/logos/chroma.png' },
     { id: 36, name: 'HNSWlib', icon: '/images/tech/logos/hnswlib.png' },
   ],
-  'Blockchain': [
+  'Blockchain Development': [
     { id: 1, name: 'Ethereum', icon: '/images/tech/logos/ethereum.png' },
     { id: 2, name: 'Solana', icon: '/images/tech/logos/solana.png' },
     { id: 3, name: 'Avalanche', icon: '/images/tech/logos/avalanche.png' },
@@ -69,7 +69,7 @@ export const homeTechnologies: Technologies = {
     { id: 19, name: 'Rust', icon: '/images/tech/logos/rust.png' },
     { id: 31, name: 'PyTorch', icon: '/images/tech/kotlin.svg' },
 
-    { id: 20, name: 'Go (Golang)', icon: '/images/tech/logos/go.png' },
+    { id: 20, name: 'Go (Golang)', icon: '/images/tech/logos/golang.png' },
     { id: 21, name: 'Web3 js', icon: '/images/tech/logos/web3js.png' },
     { id: 22, name: 'Ethers.js', icon: '/images/tech/logos/ethersjs.png' },
     { id: 23, name: 'Hardhat', icon: '/images/tech/logos/hardhat.png' },
@@ -87,7 +87,7 @@ export const homeTechnologies: Technologies = {
     { id: 35, name: 'Chainalysis', icon: '/images/tech/logos/chainalysis.png' },
     { id: 36, name: 'OpenZeppelin Contracts', icon: '/images/tech/logos/openzeppelin-contracts.png' },
   ],
-  'Mobile': [
+  'Mobile App Development': [
     { id: 1, name: 'Swift', icon: '/images/tech/logos/swift.png' },
     { id: 2, name: 'Objective-C', icon: '/images/tech/logos/objective-c.png' },
     { id: 3, name: 'Kotlin', icon: '/images/tech/logos/kotlin.png' },
@@ -125,7 +125,7 @@ export const homeTechnologies: Technologies = {
     { id: 35, name: 'Razorpay SDK', icon: '/images/tech/logos/razorpay-sdk.png' },
     { id: 36, name: 'Twilio API', icon: '/images/tech/logos/twilio-api.png' },
   ],
-  'Web': [
+  'Web Development': [
     { id: 1, name: 'Reactjs', icon: '/images/tech/logos/reactjs.png' },
     { id: 2, name: 'Angular', icon: '/images/tech/logos/angular.png' },
     { id: 3, name: 'Vuejs', icon: '/images/tech/logos/vuejs.png' },
@@ -163,7 +163,7 @@ export const homeTechnologies: Technologies = {
     { id: 35, name: 'Kubernetes', icon: '/images/tech/logos/kubernetes.png' },
     { id: 36, name: 'Git', icon: '/images/tech/logos/git.png' },
   ],
-  'Custom Software': [
+  'Custom Software  Development': [
     { id: 1, name: 'Python', icon: '/images/tech/logos/python.png' },
     { id: 2, name: 'Java', icon: '/images/tech/logos/java.png' },
     { id: 3, name: 'C#', icon: '/images/tech/logos/csharp.png' },
