@@ -55,12 +55,14 @@ const DeliverBenefits: React.FC<DeliverBenefitsProps> = ({ heading, cards }) => 
   return (
     <div className="deliverBenifits">
       <Container className="main">
-        <center data-aos-duration="700" data-aos="fade-up">
+        <center // data-aos-duration="700" data-aos="fade-up"
+        >
           <h1 id="h_ani">
             {heading}
           </h1>
         </center>
-        <div data-aos-duration="500" data-aos="fade-up">
+        <div // data-aos-duration="500" data-aos="fade-up"
+        >
           <Cards cards={cards} />
         </div>
       </Container>

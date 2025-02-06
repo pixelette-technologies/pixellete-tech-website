@@ -21,40 +21,40 @@ const WhatMakeUsSpecialHome: React.FC = () => {
               <Image
                 src="/images/home/clutch.png"
                 alt="heroImage"
-                data-aos="fade-up"
-                data-aos-duration="600"
+                // data-aos="fade-up"
+                // data-aos-duration="600"
                 width={200} // Add a width to the image
                 height={200} // Add a height to the image
               />
               <Image
                 src="/images/home/computervision.png"
                 alt="heroImage"
-                data-aos="fade-up"
-                data-aos-duration="600"
+                // data-aos="fade-up"
+                // data-aos-duration="600"
                 width={200}
                 height={200}
               />
               <Image
                 src="/images/home/clutch.png"
                 alt="heroImage"
-                data-aos="fade-up"
-                data-aos-duration="600"
+                // data-aos="fade-up"
+                // data-aos-duration="600"
                 width={200}
                 height={200}
               />
               <Image
                 src="/images/home/aicompany.png"
                 alt="heroImage"
-                data-aos="fade-up"
-                data-aos-duration="600"
+                // data-aos="fade-up"
+                // data-aos-duration="600"
                 width={200}
                 height={200}
               />
               <Image
                 src="/images/home/clutch.png"
                 alt="heroImage"
-                data-aos="fade-up"
-                data-aos-duration="600"
+                // data-aos="fade-up"
+                // data-aos-duration="600"
                 width={200}
                 height={200}
               />
@@ -69,48 +69,48 @@ const WhatMakeUsSpecialHome: React.FC = () => {
               <Image
                 src="/images/home/Partnership1.svg"
                 alt="heroImage"
-                data-aos="fade-up"
-                data-aos-duration="600"
+                // data-aos="fade-up"
+                // data-aos-duration="600"
                 width={200}
                 height={200}
               />
               <Image
                 src="/images/home/Partnership2.svg"
                 alt="heroImage"
-                data-aos="fade-up"
-                data-aos-duration="600"
+                // data-aos="fade-up"
+                // data-aos-duration="600"
                 width={200}
                 height={200}
               />
               <Image
                 src="/images/home/Partnership3.svg"
                 alt="heroImage"
-                data-aos="fade-up"
-                data-aos-duration="600"
+                // data-aos="fade-up"
+                // data-aos-duration="600"
                 width={200}
                 height={200}
               />
               <Image
                 src="/images/home/Partnership4.svg"
                 alt="heroImage"
-                data-aos="fade-up"
-                data-aos-duration="600"
+                // data-aos="fade-up"
+                // data-aos-duration="600"
                 width={200}
                 height={200}
               />
               <Image
                 src="/images/home/Partnership5.svg"
                 alt="heroImage"
-                data-aos="fade-up"
-                data-aos-duration="600"
+                // data-aos="fade-up"
+                // data-aos-duration="600"
                 width={200}
                 height={200}
               />
               <Image
                 src="/images/home/Partnership6.svg"
                 alt="heroImage"
-                data-aos="fade-up"
-                data-aos-duration="600"
+                // data-aos="fade-up"
+                // data-aos-duration="600"
                 width={200}
                 height={200}
               />
@@ -118,16 +118,16 @@ const WhatMakeUsSpecialHome: React.FC = () => {
                 style={{ width: '50px' }}
                 src="/images/home/Partnership7.svg"
                 alt="heroImage"
-                data-aos="fade-up"
-                data-aos-duration="600"
+                // data-aos="fade-up"
+                // data-aos-duration="600"
                 width={50}
                 height={50}
               />
               <Image
                 src="/images/home/Partnership8.svg"
                 alt="heroImage"
-                data-aos="fade-up"
-                data-aos-duration="600"
+                // data-aos="fade-up"
+                // data-aos-duration="600"
                 width={200}
                 height={200}
               />

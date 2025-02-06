@@ -5,6 +5,7 @@ import { Env } from '@/libs/Env';
 import { routing } from '@/libs/i18nNavigation';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, setRequestLocale } from 'next-intl/server';
+import { Outfit } from 'next/font/google';
 import { notFound } from 'next/navigation';
 import '@/styles/global.css';
 
@@ -51,6 +52,12 @@ const aj = arcjet.withRule(
   }),
 );
 
+const outfit = Outfit({
+  weight: ['100', '300', '400', '600', '900'],
+  subsets: ['latin'],
+  variable: '--font-outfit',
+});
+
 export default async function RootLayout(props: {
   children: React.ReactNode;
   params: Promise<{ locale: string }>;
@@ -84,7 +91,7 @@ export default async function RootLayout(props: {
 
   return (
     <html lang={locale} data-theme="dark">
-      <body suppressHydrationWarning>
+      <body suppressHydrationWarning className={`${outfit.className}`}>
         {/* <ThemeProvider attribute="class"> */}
         <NextIntlClientProvider
           locale={locale}

@@ -84,7 +84,8 @@ const CaseStudieDetail = async ({ params }: { params: { slug: string } }) => {
               <h1>The blocker</h1>
               <p style={{ fontSize: '15px' }}>{blocker}</p>
             </span>
-            <header data-aos="fade-up" data-aos-duration="900">
+            <header // data-aos="fade-up" data-aos-duration="900"
+            >
               <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%', marginTop: '2rem', gap: '3rem' }} className="BlockerGrid">
                 <div style={{ width: '50%' }}>
                   <h2>The goal</h2>

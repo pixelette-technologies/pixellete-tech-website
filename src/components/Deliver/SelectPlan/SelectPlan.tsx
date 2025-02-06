@@ -93,7 +93,8 @@ const SelectPlan: React.FC = () => {
   return (
     <div className="SelectPlan">
       <Container className="main">
-        <center data-aos-duration="700" data-aos="fade-up">
+        <center // data-aos-duration="700" data-aos="fade-up"
+        >
           <h2 id="h_ani">
             Select a Plan That Aligns Best with
             {' '}
@@ -102,7 +103,8 @@ const SelectPlan: React.FC = () => {
             Your Project Goals
           </h2>
         </center>
-        <div data-aos-duration="500" data-aos="fade-up">
+        <div // data-aos-duration="500" data-aos="fade-up"
+        >
           <PlanTable />
         </div>
       </Container>

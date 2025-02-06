@@ -49,8 +49,8 @@ export const HeroSection: React.FC<HeroSectionProps> = () => {
             <Link href="/contact-us">
               <Button
                 className="primary"
-                data-aos="fade-up"
-                data-aos-duration="1100"
+                // data-aos="fade-up"
+                // data-aos-duration="1100"
               >
                 Consult our experts
               </Button>

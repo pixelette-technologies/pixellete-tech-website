@@ -176,8 +176,8 @@ const DetailsNavigate = (props) => {
                 <img
                   src={singleBlogDetail.fields?.images?.fields?.file?.url}
                   alt="Blog-Hero-Main-Image"
-                  data-aos="fade-up"
-                  data-aos-duration="500"
+                  // data-aos="fade-up"
+                  // data-aos-duration="500"
                 />
               )}
             </header>
@@ -240,19 +240,22 @@ const DetailsNavigate = (props) => {
 
                 {title === 'Contact' && (
                   <blockquote>
-                    <div data-aos="fade-up" data-aos-duration="500">
+                    <div // data-aos="fade-up" data-aos-duration="500"
+                    >
                       <img src={assets.commonAssests.mail} alt="icon" />
                       <p>
                         sales@pixelettetech.com
                       </p>
                     </div>
-                    <div data-aos="fade-up" data-aos-duration="500">
+                    <div // data-aos="fade-up" data-aos-duration="500"
+                    >
                       <img src={assets.commonAssests.mapIcon} alt="icon" />
                       <p>
                         https://www.pixelettetech.com/contact-us/
                       </p>
                     </div>
-                    <div data-aos="fade-up" data-aos-duration="500">
+                    <div // data-aos="fade-up" data-aos-duration="500"
+                    >
                       <img src={assets.commonAssests.phone} alt="icon" />
                       <p>
                         +44 2045188226

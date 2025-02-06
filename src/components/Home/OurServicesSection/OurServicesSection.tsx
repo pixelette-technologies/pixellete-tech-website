@@ -27,8 +27,8 @@ const OurServicesSection: React.FC = () => {
                 padding: '2rem 3rem',
                 width: '23rem',
               }}
-              data-aos="fade-up"
-              data-aos-duration={600}
+              // data-aos="fade-up"
+              // data-aos-duration={600}
             >
               <img src={item.icon} alt="icon" />
               <h4>

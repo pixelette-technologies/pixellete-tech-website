@@ -53,7 +53,8 @@ export const OurClients: React.FC<OurClientsProps> = () => {
             Trusted by leading innovators
           </h2>
         </center>
-        <div data-aos="fade-up" data-aos-duration="500">
+        <div // data-aos="fade-up" data-aos-duration="500"
+        >
           <Marqueee />
         </div>
       </Container>

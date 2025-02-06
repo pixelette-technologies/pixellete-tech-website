@@ -105,10 +105,11 @@ export const Testimonial: FC<TestimonialProps> = ({ background }) => {
           </blockquote>
 
           <center>
-            <h2 style={{marginBottom: '2rem'}}>
+            <h2 style={{ marginBottom: '2rem' }}>
               Clients ♥️ us
             </h2>
-            <div data-aos-duration="500" data-aos="fade-up">
+            <div // data-aos-duration="500" data-aos="fade-up"
+            >
               <p>4.9</p>
               <Image
                 src="/images/home/stars.svg"
@@ -149,8 +150,8 @@ export const Testimonial: FC<TestimonialProps> = ({ background }) => {
               width={20}
               height={20}
               onClick={previousButtonHandler}
-              data-aos="fade-right"
-              data-aos-duration="700"
+              // data-aos="fade-right"
+              // data-aos-duration="700"
             />
             <Image
               src="/images/home/arrowRight.svg"
@@ -158,8 +159,8 @@ export const Testimonial: FC<TestimonialProps> = ({ background }) => {
               width={20}
               height={20}
               onClick={nextButtonHandler}
-              data-aos="fade-left"
-              data-aos-duration="700"
+              // data-aos="fade-left"
+              // data-aos-duration="700"
             />
           </div>
         </Container>

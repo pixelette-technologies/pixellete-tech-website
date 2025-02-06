@@ -142,7 +142,8 @@ const AboutUsSection: React.FC = () => {
       </Container>
       <div className="aboutUsSection" id="sideMargin">
         <Container className="main margins">
-          <section data-aos="fade-up" data-aos-duration="1000">
+          <section // data-aos="fade-up" data-aos-duration="1000"
+          >
             <div>
               <h2>
                 Our passion lies in building
@@ -184,7 +185,7 @@ const AboutUsSection: React.FC = () => {
                           'overall Clutch rating',
                           'team members across 13 countries, with 15+ locations and expanding',
                           ' in funding secured for client startups',
-                          'Top 30 globally among the software development companies globally (Clutch)',
+                          'globally among the software development companies (Clutch)',
                         ][index]
                       }
                     </p>
@@ -196,7 +197,8 @@ const AboutUsSection: React.FC = () => {
           </section>
         </Container>
         <Container className="main margins">
-          <section data-aos="fade-up" data-aos-duration="1000">
+          <section // data-aos="fade-up" data-aos-duration="1000"
+          >
             <div className="scottland-container" style={{ width: '100%' }}>
               {[...Array.from({ length: 2 })].map((_, i) => (
                 <div
@@ -215,7 +217,9 @@ const AboutUsSection: React.FC = () => {
                   </div>
                   <div className="scottland-text" style={{ flex: 1 }}>
                     <p>
-                      Official Secretariat of the British Government’s AI policy body (APPG AI)
+                      {i === 0
+                        ? 'Official Secretariat of the British Government’s AI policy body (APPG AI)'
+                        : 'Awarded ‘Best AI Agency UK’ three times by the Scotland Business Awards'}
                     </p>
                   </div>
                 </div>

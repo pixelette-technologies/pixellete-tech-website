@@ -1,7 +1,7 @@
 'use client';
 import { Button } from '@/components/Feature/Button/Button';
 import { Container } from '@/components/Feature/Container/Container';
-import Text, { type Text } from '@/components/Feature/Text/Text';
+import { } from '@/components/Feature/Text/Text';
 import dynamic from 'next/dynamic';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -40,18 +40,18 @@ const HeroSection: React.FC = () => {
           >
             Pixelette Research
           </h1>
-          
-            <p>
+
+          <p>
             Pixelette Research empowers the realm of emerging tech through
             pioneering research and cutting-edge innovation. Our team of experts
             pushes the boundaries, driving transformative solutions that shape
             the future and revolutionise industries.
-            </p>
-          
+          </p>
+
         </center>
 
         {/* Main Content */}
-        <Container className="main margins">
+        <Container className="main margins" id="sideMargin">
           <div className="content">
             {/* Globe Section */}
             <div className="globe-container">
@@ -61,8 +61,7 @@ const HeroSection: React.FC = () => {
             {/* Description Section */}
             <div className="description">
               <section>
-                <h1
-                >
+                <h1>
                   About Pixelette Research
                 </h1>
                 <p>
@@ -92,19 +91,17 @@ const HeroSection: React.FC = () => {
 
           {/* Featured Whitepapers */}
           <section>
-            <h1
-            >
+            <h1>
               Featured Whitepapers
             </h1>
 
             <div data-aos="fade-up" data-aos-duration="2500">
-              <div>
-                 className="primary--bold">
-                  Unlocking the Power of
-                  {' '}
-                  <br />
-                  Machine Learning
-                
+              <div className="primary--bold">
+                Unlocking the Power of
+                {' '}
+                <br />
+                Machine Learning
+
                 <Link
                   href="https://drive.google.com/file/d/1eZkyxHc8SuLETYRSO6vkK4nc71fGqIlc/view?usp=sharing"
                   target="_blank"

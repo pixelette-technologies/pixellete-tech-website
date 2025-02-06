@@ -12,7 +12,7 @@ type Card = {
 const cards: Card[] = [
   {
     title: 'Promise of Quality',
-    content:[
+    content: [
       '97% customer satisfaction rating',
       '4.8 overall Clutch rating',
       '£100M+ in funding secured for client startups',
@@ -21,14 +21,14 @@ const cards: Card[] = [
   },
   {
     title: 'Global Reach',
-    content:[
+    content: [
       '200+ team members across 13 countries, with 15+ locations and expanding',
       'Ranked among the top 30 software development companies globally (Clutch)',
     ],
   },
   {
     title: 'Impact Creation',
-    content:[
+    content: [
       'Official Secretariat of the British Government’s AI policy body (APPG AI)',
       'Awarded ‘Best AI Agency UK’ three times by the Scotland Business Awards',
       '200+ successful projects with over 100+ million project views',
@@ -40,7 +40,7 @@ const DedicatedTech: React.FC = () => {
   const [selectedCardIndex, setSelectedCardIndex] = useState<number>(0); // Default to first card
 
   return (
-    <div className="technologyStackAi" style={{marginBottom: '10rem'}}>
+    <div className="technologyStackAi" style={{ marginBottom: '10rem' }}>
       <center>
         <h2
           id="h_ani"
@@ -77,7 +77,10 @@ const DedicatedTech: React.FC = () => {
               </a>
             ))}
           </span>
-          <div id="dedicatedDataCard" key={uuidv4()} data-aos="fade-up" data-aos-duration="600">
+          <div
+            id="dedicatedDataCard"
+            key={uuidv4()} // data-aos="fade-up" data-aos-duration="600"
+          >
             <div
               style={{
                 textAlign: 'center',
@@ -90,9 +93,9 @@ const DedicatedTech: React.FC = () => {
             >
               <h3>{cards[selectedCardIndex].title}</h3>
               <p>
-                {cards[selectedCardIndex].content.map((x)=>(
+                {cards[selectedCardIndex].content.map(x => (
                   <ul>
-                    <li style={{textAlign: 'left', listStyle: 'circle'}}>{x}</li>
+                    <li style={{ textAlign: 'left', listStyle: 'circle' }}>{x}</li>
                   </ul>
                 ))}
               </p>

@@ -3,7 +3,7 @@ import { Container } from '@/components/Feature/Container/Container'; // Simplif
 import { yourPlanData } from '@/data/yourPlanData'; // Centralized data import
 import Image from 'next/image';
 import React from 'react';
-import styles from  './yourplan.module.css';
+import styles from './yourplan.module.css';
 
 type OurYourPlanProps = object;
 
