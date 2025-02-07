@@ -19,4 +19,12 @@ export const technologyStackAiData = [
     icon: '/images/home/s_5.svg',
     title: 'Mobile App Development',
   },
+  {
+    icon: '/images/home/s_5.svg',
+    title: 'Custom Software Development',
+  },
+  {
+    icon: '/images/home/s_5.svg',
+    title: 'UI/UX Design',
+  },
 ];

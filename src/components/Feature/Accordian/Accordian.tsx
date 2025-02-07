@@ -39,11 +39,13 @@ const Accordian: FC<AccordianProps> = ({ question, answer, isOpen, onClick, list
             className={styles.accordianAnswer}
           >
             <p>{answer}</p>
-            {list && <ul>
-              {list.map((item, index) => (
-                <li key={index}>{item}</li>
-              ))}
-            </ul>}
+            {list && (
+              <ul style={{ paddingLeft: '20px', listStyleType: 'circle' }}>
+                {list.map((item, index) => (
+                  <li key={index}><p>{item}</p></li>
+                ))}
+              </ul>
+            )}
           </motion.div>
         )}
       </section>

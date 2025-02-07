@@ -10,7 +10,6 @@ import { OurServices } from '@/components/Sections/Services/OurServices/OurServi
 import { TechnologyGrid } from '@/components/Sections/Services/TechnologyGrid/TechnologyGrid';
 import TechnologiesUsed from '@/components/Sections/TechnologyUsed/TechnologiesUsed';
 import { expertiseAiChangeData } from '@/data/expertise/expertiseAiChangeData';
-import { aiFaq } from '@/data/faqs/aiFaqs';
 import { arFaqs } from '@/data/faqs/arFaqs';
 import {
   aiHeroBackgroundImage,

@@ -112,7 +112,7 @@ export const TechnologyGrid: React.FC<TechnologyGridProps> = ({
             {selectedData
               ? (
                   <div style={{ display: 'flex', flexDirection: 'column', textAlign: 'center', gap: '2rem' }}>
-                    <h5>{selectedData.title}</h5>
+                    {/* <h5>{selectedData.title}</h5> */}
                     {selectedData.description && (
                       <p style={{ maxWidth: '55ch' }}>
                         {selectedData.description}

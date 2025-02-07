@@ -20,30 +20,42 @@ export const tgexpertiseAreas = [
   { title: 'Interactive Prototyping' },
   { title: 'Ongoing Design Support' },
   { title: 'User-Centric Design' },
+  { title: 'User-Centric Design' },
+  { title: 'User-Centric Design' },
 ];
 export const tgExpertiseData = {
-  'Machine Learning': {
-    title: 'Machine Learning Insights',
+  'User-Centric Design': {
+    title: 'User-Centric Design',
     description:
-        'Explore advanced algorithms and techniques for supervised and unsupervised learning.',
+        'Our team creates user interfaces based on detailed research and user personas, ensuring your platform resonates with and engages your target audience, enhancing satisfaction and retention',
   },
-  'Deep Learning': {
-    title: 'Deep Learning Revolution',
-    description: 'Understand neural networks, CNNs, and RNNs for deep learning systems.',
+  'Intuitive Navigation': {
+    title: 'Intuitive Navigation',
+    description: 'Our designs prioritize ease of navigation, allowing users to find what they need effortlessly, reducing friction and boosting interaction with your digital products.',
   },
-  'Natural Language Processing (NLP)': {
-    title: 'NLP Applications',
-    description: 'Discover how NLP powers chatbots, sentiment analysis, and more.',
+  'Brand Consistency': {
+    title: 'Brand Consistency',
+    description: 'We ensure that every element aligns with your brand identity, creating a cohesive, recognizable experience that builds trust and reinforces your brand’s presence.',
   },
-  'Robotic Process Automation': {
-    title: 'Automation Simplified',
+  'Responsive and Adaptive Layouts': {
+    title: 'Responsive and Adaptive Layouts',
     description:
-        'Learn about streamlining workflows with RPA for enhanced productivity.',
+        'Our UI/UX designs easily adapt to different devices and screen sizes, providing a consistent, accessible experience across desktop, mobile, and tablet interfaces.',
   },
-  'Computer Vision': {
-    title: 'Vision Beyond Limits',
+  'Accessibility Compliance': {
+    title: 'Accessibility Compliance',
     description:
-        'Dive into image recognition, object detection, and real-time vision systems.',
+        'We design with accessibility in mind, incorporating standards like WCAG to make sure your digital products are inclusive and accessible to all users.',
+  },
+  'Interactive Prototyping': {
+    title: 'Interactive Prototyping',
+    description:
+        'Our prototyping process allows for interactive previews, giving you an early look at the final product and enabling timely adjustments that enhance functionality and satisfaction',
+  },
+  'Ongoing Design Support': {
+    title: 'Ongoing Design Support',
+    description:
+        'We provide continuous design support, making iterative updates to keep your product visually relevant and aligned with changing user expectations and market trends.',
   },
 };
 export const ocheading = 'Our commitment to excellence';

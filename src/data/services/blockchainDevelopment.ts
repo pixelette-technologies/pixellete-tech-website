@@ -18,7 +18,7 @@ export const tgexpertiseAreas = [
   { title: 'Cross-Chain Technology' },
   { title: 'Blockchain Security and Audits' },
   { title: 'Privacy and Confidentiality Solutions' },
-  { title: 'Distributed Ledger Technology' },
+  // { title: 'Distributed Ledger Technology' },
 ];
 
 export const tgExpertiseData = {

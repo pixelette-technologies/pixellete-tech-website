@@ -18,7 +18,7 @@ export const tgexpertiseAreas = [
   { title: 'Real-Time Interactivity' },
   { title: 'Secure Data Management' },
   { title: 'Continuous Improvement' },
-  { title: 'Immersive Experiences' },
+  // { title: 'Immersive Experiences' },
 ];
 
 export const tgExpertiseData = {

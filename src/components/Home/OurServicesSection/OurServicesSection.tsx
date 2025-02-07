@@ -31,7 +31,12 @@ const OurServicesSection: React.FC = () => {
               // data-aos-duration={600}
             >
               <img src={item.icon} alt="icon" />
-              <h4>
+              <h4
+                style={{
+                  fontSize: '2rem',
+                  lineHeight: '2.5rem',
+                }}
+              >
                 {item.title}
               </h4>
             </div>

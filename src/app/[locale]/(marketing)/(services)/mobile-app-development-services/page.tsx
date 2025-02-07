@@ -8,10 +8,8 @@ import { HowWeWork } from '@/components/Sections/Services/HowWeWork/HowWeWork';
 import { OurCommitment } from '@/components/Sections/Services/OurCommitment/OurCommitment';
 import { OurServices } from '@/components/Sections/Services/OurServices/OurServices';
 import { TechnologyGrid } from '@/components/Sections/Services/TechnologyGrid/TechnologyGrid';
-import { TechStack } from '@/components/Sections/Services/TechStack/TechStack';
 import TechnologiesUsed from '@/components/Sections/TechnologyUsed/TechnologiesUsed';
 import { expertiseAiChangeData } from '@/data/expertise/expertiseAiChangeData';
-import { aiFaq } from '@/data/faqs/aiFaqs';
 import { mobileFaqs } from '@/data/faqs/mobileFaqs';
 import {
   backgroundImage,
@@ -99,7 +97,7 @@ export default async function MobileDevelopment(props: IMobileDevelopmentProps) 
         title="Our AI development tech stack "
         subtitle="Our go-to tech for unmatched results"
       />
-      <TechStack techStack="mobile app" />
+      {/* <TechStack techStack="mobile app" /> */}
       <AiServiceTable />
       <HowWeWork />
       <OurCommitment
