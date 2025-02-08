@@ -54,11 +54,12 @@ export const TechnologyGrid: React.FC<TechnologyGridProps> = ({
         <div className="margins" style={{ marginBottom: '3rem' }}>
           {/* Render expertise areas */}
           {expertiseAreas?.map((area, index) => (
+            <div>
             <div
               key={index}
               data-aos="fade-up"
               data-aos-duration="600"
-              onClick={() => handleCardClick(area.title)} // Handle click
+              onMouseEnter={() => handleCardClick(area.title)} // Handle click
               style={{
                 cursor: 'pointer',
                 textAlign: 'center',
@@ -67,6 +68,7 @@ export const TechnologyGrid: React.FC<TechnologyGridProps> = ({
                 // flexDirection: 'column',
                 gap: '1rem',
               }}
+              className='mockButton'
             >
               <h5
                 style={{
@@ -85,19 +87,24 @@ export const TechnologyGrid: React.FC<TechnologyGridProps> = ({
               >
                 {area.title}
               </h5>
-              {index !== expertiseAreas.length - 1 && (
-                <hr
-                  style={{
-                    border: '0',
-                    borderLeft: '2px solid #ccc',
-                    height: '100%',
-                    margin: '0',
-                  }}
-                />
-              )}
               {/* {area.description && (
                 <p>{area.description}</p>
-              )} */}
+                )} */}
+                
+            </div>
+            {index !== expertiseAreas.length - 1 && (
+                  <hr
+                    style={{
+                      border: '0',
+                      borderLeft: '2px solid #ccc',
+                      height: '100%',
+                      margin: '0 auto',
+                      position: 'relative',
+                      left: '1.5rem'
+                    }}
+                    className='title-hr'
+                  />
+                )}
             </div>
           ))}
 
@@ -110,8 +117,8 @@ export const TechnologyGrid: React.FC<TechnologyGridProps> = ({
             }}
           >
             {selectedData
-              ? (
-                  <div style={{ display: 'flex', flexDirection: 'column', textAlign: 'center', gap: '2rem' }}>
+              && (
+                  <div style={{ display: 'flex', textAlign: 'center', gap: '2rem', height: '150px', alignItems: 'center', }}>
                     {/* <h5>{selectedData.title}</h5> */}
                     {selectedData.description && (
                       <p style={{ maxWidth: '55ch' }}>
@@ -119,16 +126,6 @@ export const TechnologyGrid: React.FC<TechnologyGridProps> = ({
                       </p>
 
                     )}
-                  </div>
-                )
-              : (
-                  <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '2rem' }}>
-                    <h5>
-                      {extraDataMapping[expertiseAreas[0]?.title]?.title}
-                    </h5>
-                    <p>
-                      {extraDataMapping[expertiseAreas[0]?.title]?.description}
-                    </p>
                   </div>
                 )}
           </div>

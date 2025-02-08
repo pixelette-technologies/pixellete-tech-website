@@ -55,7 +55,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
 
           <div>
             <Link href={buttonLink}>
-              <Button className="primary" animation="fade-up" duration="1100">
+              <Button className="primary">
                 {buttonText}
               </Button>
             </Link>

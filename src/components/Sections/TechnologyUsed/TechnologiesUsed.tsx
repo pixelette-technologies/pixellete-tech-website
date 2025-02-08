@@ -38,7 +38,7 @@ const TechnologiesUsed: React.FC<TechnologiesUsedProps> = ({ technologies, title
             {Object.keys(technologies).map(tab => (
               <button
                 key={tab}
-                onClick={() => setActiveTab(tab as keyof Technologies)}
+                onMouseEnter={() => setActiveTab(tab as keyof Technologies)}
                 className={`${styles.tabButton} ${activeTab === tab ? styles.active : ''}`}
               >
                 {tab.replace('_', ' ')}

@@ -66,11 +66,15 @@ export const CaseStudies = ({ heading, initialData }: CaseStudiesProps) => {
       <div className={styles.caseStudySection} id="sideMargin">
         <Container className="main margins">
           <center>
-            <h2 style={{ marginBottom: '5rem' }}>
+            <h2 style={{ marginBottom: '1rem' }}>
               {heading || 'Case Studies'}
             </h2>
-
-            <Link href="/case-studies" passHref>
+            <p style={{maxWidth: '48ch'}}>Dive into our portfolio of successful projects where strategic technology solutions meet client needs. Our case studies illustrate how we drive growth, efficiency, and innovation with every project.</p>
+          </center>
+          <section style={{ marginTop: '5rem' }}>
+            <CaseSlider data={caseStudyData} />
+          </section>
+            <center style={{marginTop: '3rem'}}><Link href="/case-studies" passHref>
               <Button className="primary" animation="fade-up" duration="400">
                 <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
                   View Our Projects
@@ -78,11 +82,7 @@ export const CaseStudies = ({ heading, initialData }: CaseStudiesProps) => {
                   <FiExternalLink />
                 </div>
               </Button>
-            </Link>
-          </center>
-          <section style={{ marginTop: '5rem' }}>
-            <CaseSlider data={caseStudyData} />
-          </section>
+            </Link></center>
         </Container>
       </div>
     </>
