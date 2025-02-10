@@ -9,14 +9,14 @@ import styles from './footer.module.css';
 export const Footer: React.FC = () => {
   return (
     <div className={styles.footer}>
-      <Image
+      {/* <Image
         src="/images/footer/footerbackground.svg"
         alt="background"
         layout="responsive"
         width={100}
         height={100}
         className="img"
-      />
+      /> */}
       <Container className="main margins">
         <blockquote>
           <Image src="/images/footer/box_21.svg" alt="box 21" width={100} height={100} className="img" />

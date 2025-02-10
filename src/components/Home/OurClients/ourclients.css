@@ -4,7 +4,9 @@
   width: 100%;
   margin: 5rem 0;
 }
-
+.ourClients {
+  padding: 5rem 0rem;
+}
 .marquee-content {
   display: flex;
   animation: marquee 20s linear infinite;

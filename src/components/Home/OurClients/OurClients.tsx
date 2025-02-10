@@ -19,7 +19,7 @@ const Marqueee: React.FC = () => {
   ];
   return (
     // <div className="marquee-container">
-    <Marquee className="marquee-container" speed={60}>
+    <Marquee className="marquee-container" speed={50}>
       {/* Add your images or content here */}
       {/* <Image src="/images/trustedclients/ec_1.svg" alt="icon 1" width={100} height={62} />
         <Image src="/images/trustedclients/ec_2.svg" alt="icon 2" width={100} height={62} />
@@ -36,6 +36,7 @@ const Marqueee: React.FC = () => {
             src={src}
             alt={`icon ${index}`}
             style={{ flex: '0 0 auto' }}
+            loading="lazy"
           />
         ))}
       </div>

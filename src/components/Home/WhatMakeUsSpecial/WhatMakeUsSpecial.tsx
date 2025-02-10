@@ -43,7 +43,7 @@ const WhatMakeUsSpecialHome: React.FC = () => {
                 height={200}
               />
               <Image
-                src="/images/home/aicompany.png"
+                src="/images/home/awardpartnerships/designrush.png"
                 alt="heroImage"
                 // data-aos="fade-up"
                 // data-aos-duration="600"
@@ -67,69 +67,68 @@ const WhatMakeUsSpecialHome: React.FC = () => {
             <br />
             <div>
               <Image
-                src="/images/home/Partnership1.svg"
+                src="/images/home/awardpartnerships/provenexpert.png"
                 alt="heroImage"
                 // data-aos="fade-up"
                 // data-aos-duration="600"
-                width={200}
-                height={200}
+                width={183}
+                height={55}
               />
               <Image
-                src="/images/home/Partnership2.svg"
+                src="/images/home/awardpartnerships/pclutch.png"
                 alt="heroImage"
                 // data-aos="fade-up"
                 // data-aos-duration="600"
-                width={200}
-                height={200}
+                width={183}
+                height={55}
               />
               <Image
-                src="/images/home/Partnership3.svg"
+                src="/images/home/awardpartnerships/goodfirms.png"
                 alt="heroImage"
                 // data-aos="fade-up"
                 // data-aos-duration="600"
-                width={200}
-                height={200}
+                width={183}
+                height={55}
               />
               <Image
-                src="/images/home/Partnership4.svg"
+                src="/images/home/awardpartnerships/themanifes.png"
                 alt="heroImage"
                 // data-aos="fade-up"
                 // data-aos-duration="600"
-                width={200}
-                height={200}
+                width={183}
+                height={55}
               />
               <Image
-                src="/images/home/Partnership5.svg"
+                src="/images/home/awardpartnerships/elementor.png"
                 alt="heroImage"
                 // data-aos="fade-up"
                 // data-aos-duration="600"
-                width={200}
-                height={200}
+                width={183}
+                height={55}
               />
               <Image
-                src="/images/home/Partnership6.svg"
+                src="/images/home/awardpartnerships/oracle.png"
                 alt="heroImage"
                 // data-aos="fade-up"
                 // data-aos-duration="600"
-                width={200}
-                height={200}
+                width={183}
+                height={55}
               />
               <Image
-                style={{ width: '50px' }}
-                src="/images/home/Partnership7.svg"
+                src="/images/home/awardpartnerships/awspartner.png"
                 alt="heroImage"
                 // data-aos="fade-up"
                 // data-aos-duration="600"
-                width={50}
-                height={50}
+                width={183}
+                height={55}
               />
               <Image
-                src="/images/home/Partnership8.svg"
+                src="/images/home/awardpartnerships/silverpartner.png"
                 alt="heroImage"
                 // data-aos="fade-up"
                 // data-aos-duration="600"
-                width={200}
-                height={200}
+                width={183}
+                height={55}
               />
             </div>
           </div>

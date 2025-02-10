@@ -84,13 +84,13 @@ export const Testimonial: FC<TestimonialProps> = ({ background }) => {
   return (
     <>
       <Container>
-        <div className={styles.testimonialSectionBackground}>
+        {/* <div className={styles.testimonialSectionBackground}>
           <img
             src="/images/home/testimonials/testimonialBackground.svg"
             alt="Testimonial Background"
             className={styles.backgroundImage}
           />
-        </div>
+        </div> */}
       </Container>
 
       <div className={styles.testimonialSection}>

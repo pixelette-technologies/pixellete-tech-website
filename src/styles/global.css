@@ -402,17 +402,33 @@ p {
 }
 
 #sideMargin {
-  padding: 0 10rem;
+  padding: 5rem 10rem;
 }
 
 @media screen and (max-width: 768px) {
   #sideMargin {
-    padding: 0 5rem;
+    padding: 3rem 5rem;
   }
 }
 
 @media screen and (max-width: 400px) {
   #sideMargin {
-    padding: 0 2rem;
+    padding: 1rem 2rem;
+  }
+}
+
+.main-content {
+  position: relative;
+  background-image: url('/images/home/bodyBackground.svg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Helps with parallax effect */
+  width: 100%;
+  height: auto;
+  /* z-index: -1; */
+}
+@media (max-width: 768px) {
+  .main-content {
+    background-attachment: scroll; /* performance */
   }
 }

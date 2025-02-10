@@ -1,5 +1,6 @@
 import { Container } from '@/components/Feature/Container/Container';
 import { technologyStackAiData } from '@/data/technologyStackAiData';
+import Link from 'next/link';
 import React from 'react';
 import './ourservicessection.css';
 
@@ -18,28 +19,33 @@ const OurServicesSection: React.FC = () => {
       <Container className="main margins">
         <div className="margins" style={{ marginBottom: '3rem' }}>
           {technologyStackAiData.map((item, index) => (
-            <div
+            <Link
+              href={item.link}
               key={index}
-              style={{
-                display: 'flex',
-                alignItems: 'center',
-                gap: '1rem',
-                padding: '2rem 3rem',
-                width: '23rem',
-              }}
+            >
+              <div
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '1rem',
+                  padding: '2rem 3rem',
+                  width: '23rem',
+                  cursor: 'pointer',
+                }}
               // data-aos="fade-up"
               // data-aos-duration={600}
-            >
-              <img src={item.icon} alt="icon" />
-              <h4
-                style={{
-                  fontSize: '2rem',
-                  lineHeight: '2.5rem',
-                }}
               >
-                {item.title}
-              </h4>
-            </div>
+                <img src={item.icon} alt="icon" />
+                <h4
+                  style={{
+                    fontSize: '2rem',
+                    lineHeight: '2.5rem',
+                  }}
+                >
+                  {item.title}
+                </h4>
+              </div>
+            </Link>
           ))}
         </div>
         {/* <center>

@@ -1,30 +1,37 @@
 export const technologyStackAiData = [
   {
-    icon: '/images/home/s_1.svg',
+    icon: '/images/home/services/softwaredev.svg',
     title: 'Software Development',
+    link: '/custom-software-development-services',
   },
   {
-    icon: '/images/home/s_2.svg',
+    icon: '/images/home/services/webdev.svg',
     title: 'Web Development',
+    link: '/web-development-services',
   },
   {
-    icon: '/images/home/s_3.svg',
+    icon: '/images/home/services/blockchaindev.svg',
     title: 'Blockchain Development',
+    link: '/blockchain-development-services',
   },
   {
-    icon: '/images/home/s_4.svg',
+    icon: '/images/home/services/aidev.svg',
     title: 'AI Development',
+    link: '/ai-development-services',
   },
   {
-    icon: '/images/home/s_5.svg',
+    icon: '/images/home/services/mobiledev.svg',
     title: 'Mobile App Development',
+    link: '/mobile-app-development-services',
   },
   {
-    icon: '/images/home/s_5.svg',
-    title: 'Custom Software Development',
+    icon: '/images/home/services/s_8.svg',
+    title: 'AR/VR Services',
+    link: '/ar-vr-development-services',
   },
   {
-    icon: '/images/home/s_5.svg',
+    icon: '/images/home/services/s_6.svg',
     title: 'UI/UX Design',
+    link: '/ui-ux-design-services',
   },
 ];

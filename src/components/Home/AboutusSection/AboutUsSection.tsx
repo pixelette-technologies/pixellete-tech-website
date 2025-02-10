@@ -132,12 +132,12 @@ const AboutUsSection: React.FC = () => {
 
   return (
     <>
-      <Container className="main">
+      {/* <Container className="main">
         {/* <div className="aboutUsSection-background">
           <Image src="/images/aboutSection/aboutLeftBackground.svg" alt="background" width={100} height={100} />
           <Image src="/images/aboutSection/aboutRightBackground.svg" alt="background" width={100} height={100} />
-        </div> */}
-      </Container>
+        </div>
+      </Container> */}
       <div className="aboutUsSection" id="sideMargin">
         <Container className="main margins">
           <section // data-aos="fade-up" data-aos-duration="1000"

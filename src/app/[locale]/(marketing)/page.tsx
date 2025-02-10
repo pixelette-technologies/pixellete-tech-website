@@ -1,7 +1,6 @@
 import { homeTechnologies } from '@/data/technology/homeTechnologies';
 import { getTranslations } from 'next-intl/server';
 import dynamic from 'next/dynamic';
-import Image from 'next/image';
 
 type IIndexProps = {
   params: Promise<{ locale: string }>;
@@ -43,8 +42,8 @@ export default async function Index(props: IIndexProps) {
     <>
       <HeroSection />
       <OurClients />
-      <div style={{ position: 'relative' }}>
-        <Image
+      <div className="main-content">
+        {/* <Image
           src="/images/home/bodyBackground.svg"
           fill
           alt="body background"
@@ -57,7 +56,7 @@ export default async function Index(props: IIndexProps) {
             bottom: 0,
             objectFit: 'cover',
           }}
-        />
+        /> */}
 
         <AboutUsSection />
         <WhatMakeUsSpecialHome />
@@ -70,11 +69,12 @@ export default async function Index(props: IIndexProps) {
         />
         <CaseStudies heading="Our past work speaks volumes" />
         <Testimonial background="" />
+
+        <EvaluateBusiness
+          heading="Ready to become a tech success story?"
+          description="Don’t let technical hurdles stand in the way of building tech solutions that shake up the world as we know it. Let us help you bring your vision to life with innovative, cost-effective and reliable services. Get in touch!"
+        />
       </div>
-      <EvaluateBusiness
-        heading="Ready to become a tech success story?"
-        description="Don’t let technical hurdles stand in the way of building tech solutions that shake up the world as we know it. Let us help you bring your vision to life with innovative, cost-effective and reliable services. Get in touch!"
-      />
       {/* Uncomment these components when needed */}
       {/* <OurTeam /> */}
       {/* <UnlockBusinessPotential

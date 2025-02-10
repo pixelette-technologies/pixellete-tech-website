@@ -1,6 +1,4 @@
 import { Button } from '@/components/Feature/Button/Button';
-import { Container } from '@/components/Feature/Container/Container';
-import Image from 'next/image';
 import Link from 'next/link'; // Correct usage of Next.js routing
 import React from 'react';
 import styles from './herosection.module.css';
@@ -11,8 +9,7 @@ type HeroSectionProps = object;
 export const HeroSection: React.FC<HeroSectionProps> = () => {
   return (
     <>
-      <div className={styles.heroSectionBackground}>
-        {/* Use Next.js Image component for better optimization */}
+      {/* <div className={styles.heroSectionBackground}>
         <Image
           src="/images/home/hero/homeHeroBackground.svg"
           alt="background"
@@ -21,16 +18,17 @@ export const HeroSection: React.FC<HeroSectionProps> = () => {
           height={800} // Set the height of the image
           className={styles.heroBackgroundImg}
         />
-      </div>
+      </div> */}
       <div className={styles.heroSection}>
-        <Container className="main margins">
+        <div className={styles.content}>
           <blockquote>
             {/* Loop through images using static paths in the public directory */}
-            {Array.from({ length: 7 }).map((_, idx) => (
+            {Array.from({ length: 6 }).map((_, idx) => (
               <img
                 key={idx}
                 src={`/images/home/hero/box_${idx + 1}.svg`} // Static path for box images
                 alt={`box ${idx + 1}`}
+                loading="lazy"
                 // className={`${styles.boxImage} ${styles[`.box${idx + 1}`]}`}
               />
             ))}
@@ -56,7 +54,7 @@ export const HeroSection: React.FC<HeroSectionProps> = () => {
               </Button>
             </Link>
           </div>
-        </Container>
+        </div>
       </div>
     </>
   );
