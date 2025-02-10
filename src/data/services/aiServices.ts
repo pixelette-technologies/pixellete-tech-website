@@ -108,19 +108,19 @@ export const aiServicelist
         title: 'AI Solutions',
         items: [
           'Generative AI',
+          'Chatbots and Smart AI Assistants',
+          'AI Product Development',
+          'Recommendation Engines',
           'AI Security',
-          'AI Design',
-          'AI Ops',
-          'Automation Solutions',
         ],
       },
       {
         title: 'AI Applications',
         items: [
-          'Chatbots & Conversational AI',
-          'Recommendations Engines',
+          'AI Design',
+          'AIOps',
           'AI-as-a-Service (AIaaS)',
-          'AI Product Development',
+          'Automation Solutions',
           'Predictive Modeling',
         ],
       },
@@ -132,59 +132,59 @@ export const aiServices = {
     description:
         'We are recognized as a leading generative AI development company and bring deep expertise in generative AI tools like GPT-4, GPT-3.5, and DALL-E. Our models provide visual content analysis to aid in brand identity, data analysis, business intelligence, and visualization, offering tailored generative AI development services.',
   },
-  'AI Security': {
+  'Chatbots and Smart AI Assistants': {
     imageSrc: '/images/aiServices/s_7.svg',
+    title: 'Chatbots and Smart AI Assistants',
+    description:
+        'As a top provider of AI chatbot development services, we design custom chatbot solutions that integrate seamlessly with apps, websites, and platforms. Our conversational AI voice solutions go even a step ahead and elevate client interactions, customer experience with intelligent, adaptable smart AI assistants.',
+  },
+  'AI Product Development': {
+    imageSrc: '/images/aiServices/s_9.svg',
+    title: 'AI Product Development',
+    description:
+        'We’re a pioneering custom AI solution provider building scalable and innovative AI product development solutions. Our offerings, from natural language processing apps and predictive analysis tools to recommendation engines, are built with precision to integrate smoothly with your existing systems, driving efficiency and user satisfaction.',
+  },
+  'Recommendation Engines': {
+    imageSrc: '/images/aiServices/s_5.svg',
+    title: 'Recommendation Engines',
+    description:
+        'Our custom recommendation engine development services enhance customer satisfaction, drive engagement, and greatly boost revenues for clients. We enable your business to deliver personalized recommendations that strengthen retention and optimize processes, driving growth.',
+  },
+  'AI Security': {
+    imageSrc: '/images/aiServices/s_11.svg',
     title: 'AI Security',
     description:
-        'Our AI security solutions leverage advanced machine learning algorithms to detect and prevent cyber threats in real time, ensuring robust and reliable system protection.',
+        'Our AI automation tools analyze millions of events to detect threats like malware and phishing. Through artificial intelligence in security, our solutions use AI-powered cybersecurity to mitigate risks, reinforcing your data security framework.',
   },
   'AI Design': {
-    imageSrc: '/images/aiServices/s_9.svg',
+    imageSrc: '/images/aiServices/s_2.svg',
     title: 'AI Design',
     description:
-        'We provide cutting-edge AI-powered design solutions that enhance user experiences, optimize workflows, and drive creative innovation.',
+        'Our AI product development expertise encompasses ethical, unbiased design solutions, including tools similar to Canva and Adobe Sensei. We use AI technologies to bring transformative solutions to life, addressing real-world challenges.',
   },
-  'AI Ops': {
-    imageSrc: '/images/aiServices/s_5.svg',
-    title: 'AI Ops',
-    description:
-        'Streamline your operations with AI-driven automation and insights that improve efficiency, reduce downtime, and maximize productivity.',
-  },
-  'Automation Solutions': {
-    imageSrc: '/images/aiServices/s_11.svg',
-    title: 'Automation Solutions',
-    description:
-        'Implement intelligent automation solutions that empower businesses to achieve greater accuracy, speed, and scalability in their operations.',
-  },
-  'Chatbots & Conversational AI': {
-    imageSrc: '/images/aiServices/s_2.svg',
-    title: 'Chatbots & Conversational AI',
-    description:
-        'Develop interactive chatbots and conversational AI tools that deliver personalized customer engagement and support.',
-  },
-  'Recommendations Engines': {
+  'AIOps': {
     imageSrc: '/images/aiServices/s_8.svg',
-    title: 'Recommendations Engines',
+    title: 'AIOps',
     description:
-        'Build recommendation systems that provide users with highly relevant suggestions, enhancing user satisfaction and retention.',
+        'Our dedicated AIOps solutions optimize application performance, enhance customer experiences, and cut IT costs. Organizations around the globe can streamline operations and scale efficiently with Pixelette Technologies.',
   },
   'AI-as-a-Service (AIaaS)': {
     imageSrc: '/images/aiServices/s_10.svg',
     title: 'AI-as-a-Service (AIaaS)',
     description:
-        'Deliver scalable AI capabilities on-demand, enabling businesses to quickly integrate AI into their processes.',
+        'Our AIaaS solutions allow you to integrate advanced AI tools into your operations without heavy investments. By removing the need for in-house AI software development expertise and also cutting costs, our developers deliver AI integration effortlessly with our services.',
   },
-  'AI Product Development': {
+  'Automation Solutions': {
     imageSrc: '/images/aiServices/s_3.svg',
-    title: 'AI Product Development',
+    title: 'Automation Solutions',
     description:
-        'Create innovative AI-driven products that cater to specific business needs, leveraging advanced AI technologies.',
+        'We streamline repetitive tasks, boost accuracy, and enhance operational efficiency across industries through our advanced robotics process automation and also by providing custom built robotic automation process apps.',
   },
   'Predictive Modeling': {
     imageSrc: '/images/aiServices/s_12.svg',
     title: 'Predictive Modeling',
     description:
-        'Harness the power of predictive analytics to forecast trends, identify opportunities, and make data-driven decisions.',
+        'Through AI predictive modeling and machine learning, we leverage historical data to anticipate trends, aiding in strategic planning and decision-making. Our predictive analytics models help you stay ahead with improved forecasting.',
   },
 };
 

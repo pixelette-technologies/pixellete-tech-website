@@ -19,7 +19,7 @@ export const tgexpertiseAreas = [
   { title: 'Fully Secure' },
   { title: 'Easy Integration' },
   { title: 'Support and Maintenance' },
-  { title: 'Reliable Performance' },
+  // { title: 'Reliable Performance' },
 ];
 
 export const customDevelopmentExpertiseData = {
@@ -84,19 +84,21 @@ export const commitmentData = [
   },
   {
     img: '/images/customDevelopmentServices/FIAT.svg',
-    value1: '90%',
-    value2: '95%',
-    desc1: 'Satisfaction with speech quality',
-    desc2: 'Text-to-speech accuracy',
+    value1: '28%',
+    value2: '18%',
+    value3: '25%',
+    desc1: 'increase in test drive booking rate',
+    desc2: 'increase in test drive-to-purchase conversion',
+    desc3: 'increase in appointment scheduling conversion rate',
   },
 ];
 
 export const customDevelopmentHeroHeading = 'Custom Software Development Services';
 
 export const customDevelopmentHeroDescription
-  = 'From concept to deployment, we deliver adaptive, scalable AI solutions that bring your vision of intelligent technology to life.';
+  = 'From concept to completion, our custom software development services deliver secure, industry-focused solutions that transform your project into highly impactful digital products.';
 
-export const customDevelopmentHeroButtonText = 'consult our experts';
+export const customDevelopmentHeroButtonText = 'Consult our experts';
 
 export const customDevelopmentHeroButtonLink = '/contact-us';
 
@@ -109,7 +111,7 @@ export const customDevelopmentHeroImages = [
   { src: '/images/customDevelopmentServices/box_4.svg', alt: 'box 4' },
 ];
 
-export const customDevelopmentServicesHeading = 'Our Services';
+export const customDevelopmentServicesHeading = 'Our services';
 
 export const customDevelopmentServicesDescription
   = 'Our custom software development service focuses on creating efficient, user-centric solutions. With our services, we provide a transparent partnership that ensures impactful, innovative results in custom software solutions.';

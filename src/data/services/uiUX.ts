@@ -66,9 +66,9 @@ export const ocdescription
 export const commitmentData = [
   {
     img: '/images/uiuxServices/logo.svg',
-    value1: '80%',
-    value2: '85%',
-    value3: '60%',
+    value1: 'X%',
+    value2: 'X',
+    value3: 'X',
     desc1: 'Reduction in review analysis time',
     desc2: 'Accuracy in predictive analysis',
     desc3: 'Improvement in overall efficiency',
@@ -94,7 +94,7 @@ export const commitmentData = [
 export const aiHeroHeading = 'UI/UX Design Services';
 
 export const aiHeroDescription
-  = 'From concept to deployment, we deliver adaptive, scalable AI solutions that bring your vision of intelligent technology to life.';
+  = 'As a leading UI UX design services company, we provide clients with exceptional UI/UX design services supported by expert designers, analysts, project managers, and software engineers.';
 
 export const aiHeroButtonText = 'consult our experts';
 
@@ -109,7 +109,7 @@ export const aiHeroImages = [
   { src: '/images/uiuxServices/box_4.svg', alt: 'box 4' },
 ];
 
-export const aiServicesHeading = 'Our Services';
+export const aiServicesHeading = 'Our services';
 
 export const aiServicesDescription
   = 'Our UI/UX design services empower businesses to create intuitive, visually appealing interfaces that elevate user engagement. Let’s work together to bring your design vision to life and set new standards for user experience!';
@@ -123,12 +123,12 @@ export const uiuxServicelist
       'Web and Mobile UI/UX Design',
       'App and Website Redesign',
       'UI/UX Design Audit',
-      'UI/UX Design Research',
     ],
   },
   {
     title: 'AI Applications',
     items: [
+      'UI/UX Design Research',
       'Design Strategy Development',
       'Design Concept Development',
       // 'AI-as-a-Service (AIaaS)',

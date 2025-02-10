@@ -1,9 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import { Container } from '../../Feature/Container/Container'; // Simplified import
-// Simplified import
-// Simplified import
+import { Container } from '../../Feature/Container/Container';
 import './aboutussection.css';
 
 type VisibleSections = {

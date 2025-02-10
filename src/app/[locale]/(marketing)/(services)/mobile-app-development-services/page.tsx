@@ -94,7 +94,7 @@ export default async function MobileDevelopment(props: IMobileDevelopmentProps) 
       />
       <TechnologiesUsed
         technologies={mobileDevelomentTechnologies}
-        title="Our AI development tech stack "
+        title="Our mobile application development tech stack"
         subtitle="Our go-to tech for unmatched results"
       />
       {/* <TechStack techStack="mobile app" /> */}

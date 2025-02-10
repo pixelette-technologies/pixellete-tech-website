@@ -6,7 +6,7 @@ export const header = {
 
 export const backgroundImage = '/images/aiServices/serviceSectionBackground.svg';
 
-export const tgheading = 'Our web development service expertise';
+export const tgheading = 'Our web development service guarantees';
 
 export const tgdescription
   = 'Our services play a crucial role in helping organizations of all sizes thrive in the digital landscape.';
@@ -70,9 +70,9 @@ export const ocdescription
 export const commitmentData = [
   {
     img: '/images/webServices/logo.svg',
-    value1: '80%',
-    value2: '85%',
-    value3: '60%',
+    value1: 'X%',
+    value2: 'X%',
+    value3: 'X%',
     desc1: 'Reduction in review analysis time',
     desc2: 'Accuracy in predictive analysis',
     desc3: 'Improvement in overall efficiency',
@@ -95,10 +95,10 @@ export const commitmentData = [
   },
 ];
 
-export const aiHeroHeading = 'Transform Your Website Experience';
+export const aiHeroHeading = 'Web Development Services';
 
 export const aiHeroDescription
-  = 'From concept to deployment, we deliver adaptive, scalable AI solutions that bring your vision of intelligent technology to life.';
+  = 'Our expert team of developers, designers and project managers create high-quality websites and applications that enhance user experience and drive engagement. Each project is executed with precision to help clients achieve their goals.';
 
 export const aiHeroButtonText = 'consult our experts';
 
@@ -113,7 +113,7 @@ export const aiHeroImages = [
   { src: '/images/webServices/box_4.svg', alt: 'box 4' },
 ];
 
-export const aiServicesHeading = 'Our Services';
+export const aiServicesHeading = 'Our services';
 
 export const aiServicesDescription
   = 'By making use of the latest technologies and best practices, Pixelette Technologies’ web development services provide customized solutions that cater to the unique needs of each client, whether they require simple informational websites, custom web application development or complex e-commerce store and platforms.';
@@ -126,18 +126,18 @@ export const webDevelopmentServicelist
       'Ecommerce Development',
       'Custom Web Development',
       'Custom CMS Development',
-      'Web Application Development',
-      'Web Portal Development',
     ],
   },
   {
     title: 'AI Applications',
     items: [
-      'Chatbots & Conversational AI',
-      'Recommendations Engines',
-      'AI-as-a-Service (AIaaS)',
-      'AI Product Development',
-      'Predictive Modeling',
+      'Web Application Development',
+      'Web Portal Development',
+      'Website Design & Development',
+      // 'Recommendations Engines',
+      // 'AI-as-a-Service (AIaaS)',
+      // 'AI Product Development',
+      // 'Predictive Modeling',
     ],
   },
 ];

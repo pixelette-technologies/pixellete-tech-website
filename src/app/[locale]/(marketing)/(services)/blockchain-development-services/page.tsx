@@ -10,7 +10,6 @@ import { OurServices } from '@/components/Sections/Services/OurServices/OurServi
 import { TechnologyGrid } from '@/components/Sections/Services/TechnologyGrid/TechnologyGrid';
 import TechnologiesUsed from '@/components/Sections/TechnologyUsed/TechnologiesUsed';
 import { expertiseAiChangeData } from '@/data/expertise/expertiseAiChangeData';
-import { aiFaq } from '@/data/faqs/aiFaqs';
 import { blockFaqs } from '@/data/faqs/blockFaqs';
 import {
   aiHeroBackgroundImage,
@@ -95,7 +94,7 @@ export default async function BlockchainDevelopment(props: IBlockchainDevelopmen
       />
       <TechnologiesUsed
         technologies={blockchainTechnologies}
-        title="Our AI development tech stack "
+        title="Our blockchain development tech stack"
         subtitle="Our go-to tech for unmatched results"
       />
       {/* <TechStack techStack="blockchain" /> */}

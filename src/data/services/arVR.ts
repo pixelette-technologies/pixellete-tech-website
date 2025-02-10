@@ -88,7 +88,7 @@ export const commitmentData = [
 export const aiHeroHeading = 'AR/VR Development Services';
 
 export const aiHeroDescription
-  = 'From concept to deployment, we deliver adaptive, scalable AI solutions that bring your vision of intelligent technology to life.';
+  = 'Our expertise in immersive technology empowers businesses to enhance customer engagement and turn complex processes into seamless, interactive digital experiences.';
 
 export const aiHeroButtonText = 'consult our experts';
 
@@ -103,10 +103,10 @@ export const aiHeroImages = [
   { src: '/images/arvrServices/box_4.svg', alt: 'box 4' },
 ];
 
-export const aiServicesHeading = 'Our Services';
+export const aiServicesHeading = 'Our services';
 
 export const aiServicesDescription
-  = 'We specialize in providing AR/VR development services customized for various industries, platforms, and applications. Using tools like Unity, Unreal Engine, ARKit, and ARCore, we bring immersive, interactive experiences to life. Ultimately, we enhance customer engagement and streamlining complex processes with the latest in 3D rendering, motion tracking, and spatial audio. ';
+  = 'We specialize in providing AR/VR development services customized for various industries, platforms, and applications.\nUsing tools like Unity, Unreal Engine, ARKit, and ARCore, we bring immersive, interactive experiences to life. Ultimately, we enhance customer engagement and streamlining complex processes with the latest in 3D rendering, motion tracking, and spatial audio. ';
 
 export const vrServicelist
 = [

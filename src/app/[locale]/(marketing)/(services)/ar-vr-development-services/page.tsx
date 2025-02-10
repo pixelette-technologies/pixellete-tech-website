@@ -94,7 +94,7 @@ export default async function ARVR(props: IARVRProps) {
       />
       <TechnologiesUsed
         technologies={vrTechnologies}
-        title="Our AI development tech stack "
+        title="Our AR/VR development tech stack"
         subtitle="Our go-to tech for unmatched results"
       />
       <AiServiceTable />

@@ -1,6 +1,6 @@
-import { YourPlanCardGrid } from '@/components/Feature/Cards/YourPlanCardGrid'; // Simplified import for the CardSectionGrid component
-import { Container } from '@/components/Feature/Container/Container'; // Simplified import for the Container component
-import { yourPlanData } from '@/data/yourPlanData'; // Centralized data import
+import { YourPlanCardGrid } from '@/components/Feature/Cards/YourPlanCardGrid';
+import { Container } from '@/components/Feature/Container/Container';
+import { yourPlanData } from '@/data/yourPlanData';
 import Image from 'next/image';
 import React from 'react';
 import styles from './yourplan.module.css';

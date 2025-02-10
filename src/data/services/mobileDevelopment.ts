@@ -6,7 +6,7 @@ export const header = {
 
 export const backgroundImage = '/images/aiServices/serviceSectionBackground.svg';
 
-export const tgheading = 'Our mobile app development service expertise';
+export const tgheading = 'Our mobile app development service guarantees';
 
 export const tgdescription
   = 'Our goal is to drive your success with secure mobile application development services for seamless and engaging user experiences. We’re a globally recognized and trusted mobile app development company focused on transformative digital solutions.';
@@ -65,35 +65,37 @@ export const ocdescription
 export const commitmentData = [
   {
     img: '/images/mobileAppServices/blackHole.svg',
-    value1: '80%',
+    value1: '5',
     value2: '85%',
-    value3: '60%',
-    desc1: 'Reduction in review analysis time',
-    desc2: 'Accuracy in predictive analysis',
-    desc3: 'Improvement in overall efficiency',
+    value3: '0',
+    desc1: 'star',
+    desc2: 'retention rate (after 3 months)',
+    desc3: 'security breaches reported',
   },
   {
     img: '/images/mobileAppServices/chillow.svg',
-    value1: '200%',
-    value2: '70%',
-    value3: '3X',
-    desc1: 'Expansion of new sources monitored',
-    desc2: 'Efficiency of AI based scraping',
-    desc3: 'Increase in real-time handling capacity',
+    value1: '99.3%',
+    value2: '85%',
+    value3: '98%',
+    desc1: 'crash-free rate across Android devices',
+    desc2: 'retention rate',
+    desc3: 'of users successfully completed ID verification',
   },
   {
     img: '/images/mobileAppServices/logo.svg',
-    value1: '90%',
-    value2: '95%',
-    desc1: 'Satisfaction with speech quality',
-    desc2: 'Text-to-speech accuracy',
+    value1: '98%',
+    value2: '0',
+    value3: '72',
+    desc1: 'accuracy in real-time cash flow tracking',
+    desc2: 'security breaches in first 12 months',
+    desc3: 'Net Promoters Score (NPS)',
   },
 ];
 
 export const mobileDevelopmentHeroHeading = 'Mobile App Development Services';
 
 export const mobileDevelopmentHeroDescription
-  = 'From concept to deployment, we deliver adaptive, scalable AI solutions that bring your vision of intelligent technology to life.';
+  = 'Our mobile application development combines innovative, user-centric design with scalable solutions to bring your mobile strategy to life.';
 
 export const mobileDevelopmentHeroButtonText = 'consult our experts';
 
@@ -108,7 +110,7 @@ export const mobileDevelopmentHeroImages = [
   { src: '/images/mobileAppServices/box_4.svg', alt: 'box 4' },
 ];
 
-export const mobileDevelopmentServicesHeading = 'Our Services';
+export const mobileDevelopmentServicesHeading = 'Our services';
 
 export const mobileDevelopmentServicesDescription
   = 'The mobile era is reshaping businesses and how they engage with users. To stand out, companies need a powerful, responsive design for mobile apps that boosts visibility and customer connections.'
@@ -121,14 +123,14 @@ export const mobileDevelopmentServicelist
     items: [
       'iOS App Development',
       'Android App Development',
-      'Wearable and Embedded Software App Development',
+      'Wearable and Embedded App Development',
       'PWA Development',
-      'Hybrid App Development',
     ],
   },
   {
     title: 'AI Applications',
     items: [
+      'Hybrid App Development',
       'Native Mobile App Development',
       'Cross Platform App Development',
     ],
@@ -147,7 +149,7 @@ export const mobileDevelopmentServices = {
     description:
     'We offer Android mobile app development solutions that put your brand on the map. With our app development services, we deliver user-friendly Android apps from concept to launch, ensuring they stand out and deliver a joyful user experience.',
   },
-  'Wearable and Embedded Software App Development': {
+  'Wearable and Embedded App Development': {
     imageSrc: '/images/aiServices/s_24.svg',
     title: 'Wearable and Embedded Software App Development',
     description:
@@ -176,24 +178,6 @@ export const mobileDevelopmentServices = {
     title: 'Cross Platform App Development',
     description:
     'Cross-platform development is cost-effective and easy to maintain, providing a unified experience across devices. Our cross-platform mobile app development approach combines the best of native and web technologies, expanding your reach without compromising on quality or functionality.',
-  },
-  'AI-as-a-Service (AIaaS)': {
-    imageSrc: '/images/aiServices/s_2.svg',
-    title: 'AI-as-a-Service (AIaaS)',
-    description:
-    'Deliver scalable AI capabilities on-demand, enabling businesses to quickly integrate AI into their processes.',
-  },
-  'AI Product Development': {
-    imageSrc: '/images/aiServices/s_3.svg',
-    title: 'AI Product Development',
-    description:
-    'Create innovative AI-driven products that cater to specific business needs, leveraging advanced AI technologies.',
-  },
-  'Predictive Modeling': {
-    imageSrc: '/images/aiServices/s_4.svg',
-    title: 'Predictive Modeling',
-    description:
-    'Harness the power of predictive analytics to forecast trends, identify opportunities, and make data-driven decisions.',
   },
 };
 

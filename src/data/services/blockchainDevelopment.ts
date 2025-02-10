@@ -9,7 +9,7 @@ export const backgroundImage = '/images/aiServices/serviceSectionBackground.svg'
 export const tgheading = 'Our blockchain development service expertise';
 
 export const tgdescription
-  = 'Our solutions are custom-built to push existing technological boundaries and meet the specific needs of every sector we serve.';
+  = 'Pixelette Marketing is a pioneering blockchain development company with extensive experience in building secure, decentralized solutions. Our expertise covers all facets of blockchain technology, from consensus algorithms to smart contract development services, delivering transformative, efficient, and secure blockchain-driven systems.';
 
 export const tgexpertiseAreas = [
   { title: 'Distributed Ledger Technology' },
@@ -59,28 +59,30 @@ export const ocdescription
 export const commitmentData = [
   {
     img: '/images/blockchainServices/diamond.svg',
-    value1: '80%',
-    value2: '85%',
-    value3: '60%',
-    desc1: 'Reduction in review analysis time',
-    desc2: 'Accuracy in predictive analysis',
-    desc3: 'Improvement in overall efficiency',
+    value1: '98%',
+    value2: '1500%',
+    value3: '70%',
+    desc1: 'diamonds with complete provenance history',
+    desc2: 'active diamond traders',
+    desc3: 'retention rate after 3 months',
   },
   {
     img: '/images/blockchainServices/baldman.svg',
-    value1: '200%',
-    value2: '70%',
-    value3: '3X',
-    desc1: 'Expansion of new sources monitored',
-    desc2: 'Efficiency of AI based scraping',
-    desc3: 'Increase in real-time handling capacity',
+    value1: '80%',
+    value2: '£500,000+',
+    value3: '10%',
+    desc1: 'of NFTs sold within 1 hour of launch',
+    desc2: 'total maketplace sales volume',
+    desc3: 'of NFTs linked with physical artworks',
   },
   {
     img: '/images/blockchainServices/graph.svg',
-    value1: '90%',
-    value2: '95%',
-    desc1: 'Satisfaction with speech quality',
-    desc2: 'Text-to-speech accuracy',
+    value1: '$14M',
+    value2: 'AVG. 25',
+    value3: '1200+',
+    desc1: 'USD assets tokenized',
+    desc2: 'fractional owners per asset',
+    desc3: 'tokens sold within the first 6 months',
   },
 ];
 
