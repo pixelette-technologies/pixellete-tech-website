@@ -58,7 +58,7 @@ const DedicatedTech: React.FC = () => {
 
       </center>
       <Container className="main margins">
-        <div className="margins" style={{ marginBottom: '3rem', display: 'flex', justifyContent: 'space-between' }}>
+        <div className="margins" style={{ marginBottom: '3rem', display: 'flex', justifyContent: 'space-between' }} id="sideMargin">
           <span
             className="dedicatedTechLinks"
           >
@@ -71,7 +71,7 @@ const DedicatedTech: React.FC = () => {
                     : 'linkDedicatedCard'
                 }`}
 
-                onClick={() => setSelectedCardIndex(index)} // Update the selected card index
+                onMouseEnter={() => setSelectedCardIndex(index)} // Update the selected card index
               >
                 {card.title}
               </a>

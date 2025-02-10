@@ -40,6 +40,7 @@ const YourPlanCard: FC<YourPlanCardProps> = ({ data }) => {
                   alt="icon"
                   width={20}
                   height={20}
+                  quality={100}
                 />
                 <h4>{el.iconhead}</h4>
               </div>

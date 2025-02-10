@@ -115,7 +115,7 @@ export const blockchainServicelist
     title: 'AI Solutions',
     items: [
       'Blockchain Consulting',
-      'DApp Development',
+      'Smart Contract Audit and Development',
       'Crypto Wallet Development',
       'Cryptocurrency Exchange Development',
       'Asset Tokenization Platform',
@@ -124,8 +124,8 @@ export const blockchainServicelist
   {
     title: 'AI Applications',
     items: [
+      'DApp Development',
       'Layer 1 & Layer 2 Blockchain',
-      'Smart Contract Audit and Development',
       'DeFi Development',
       'DAO Development',
       'Crypto Token Development',

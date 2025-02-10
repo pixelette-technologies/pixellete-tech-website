@@ -70,7 +70,7 @@ export const OurServices: React.FC<OurServicesProps> = ({
                 <p
                   key={index}
                 >
-                  <p onClick={() => handleServiceClick(item)}>
+                  <p onMouseEnter={() => handleServiceClick(item)}>
                     <strong>
                       {' '}
                       {item}

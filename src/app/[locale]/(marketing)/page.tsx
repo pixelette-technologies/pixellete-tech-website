@@ -37,9 +37,50 @@ export default async function Index(props: IIndexProps) {
   //   locale,
   //   namespace: 'Index',
   // });
-
+  const GTM_ID = 'GTM-KXC3K4RL';
   return (
     <>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(
+        function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','${GTM_ID}');`,
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'Company',
+              'name': 'Pixelette Technologies',
+              'url': 'https://www.blockguard.org',
+              'logo': 'https://pixelettetech.com/images/company/logo.svg',
+              'sameAs': [
+                'https://www.instagram.com/pixelettetechnologies',
+                'https://www.facebook.com/pixelette.technologies',
+                'https://x.com/Pixelette__Tech',
+                'https://www.linkedin.com/company/pixelettetechnologies/',
+                'https://www.youtube.com/channel/UCikfbjKTZ22-J4utsb9pzNg',
+              ],
+              'description': 'We are rebuilding trust in DeFi by bridging it with the compliance of TradFi. For users who demand nothing short of unparalleled security and performance.',
+            }),
+          }}
+        />
+      </head>
+      <noscript>
+        <iframe
+          src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
+          height="0"
+          width="0"
+          style={{ display: 'none', visibility: 'hidden' }}
+        >
+        </iframe>
+      </noscript>
       <HeroSection />
       <OurClients />
       <div className="main-content">

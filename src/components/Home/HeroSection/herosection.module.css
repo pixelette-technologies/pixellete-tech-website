@@ -16,7 +16,9 @@
   overflow: hidden;
   position: relative;
   /* background: black; */
-  background-image: url('/images/home/hero/homeHeroBackground.svg');
+  /* background-image: url('/images/home/hero/homeHeroBackground.svg'); */
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.8) 100%),
+    url('/images/home/hero/homeHeroBackground.svg');
   background-size: cover;
   background-position: center top; /* Center the background image and position it at the top */
   background-attachment: fixed;

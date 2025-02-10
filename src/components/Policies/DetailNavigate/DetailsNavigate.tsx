@@ -125,7 +125,10 @@ const DetailsNavigate = (props) => {
                     <p>
                       {description}
                       {' '}
-                      abvd
+                    </p>
+                    <p>
+                      {lists}
+                      {' '}
                     </p>
                   </header>
 

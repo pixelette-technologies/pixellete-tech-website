@@ -1,0 +1,11 @@
+# *
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /dashboard
+
+# Host
+Host: https://pixelettetech.com
+
+# Sitemaps
+Sitemap: https://pixelettetech.com/sitemap.xml

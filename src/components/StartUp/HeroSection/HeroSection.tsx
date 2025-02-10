@@ -40,8 +40,8 @@ export const HeroSection = () => {
           </p>
         </center>
 
-        <Container className="main margins" id="sideMargin">
-          <section data-aos="fade-up" data-aos-duration="500">
+        <Container className="main margins">
+          <section id="sideMargin">
             {/* Section 1 */}
             <div>
               <h1 className="policyHeading">

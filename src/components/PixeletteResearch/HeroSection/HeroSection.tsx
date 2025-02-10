@@ -51,7 +51,7 @@ const HeroSection: React.FC = () => {
 
         {/* Main Content */}
         <Container className="main margins">
-          <div className="content">
+          <div className="content" id="sideMargin">
             {/* Globe Section */}
             <div className="globe-container">
               <GlobeWorld />
@@ -89,7 +89,7 @@ const HeroSection: React.FC = () => {
           </div>
 
           {/* Featured Whitepapers */}
-          <section>
+          <section id="sideMargin">
             <h1>
               Featured Whitepapers
             </h1>

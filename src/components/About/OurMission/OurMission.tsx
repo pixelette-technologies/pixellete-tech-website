@@ -61,21 +61,29 @@ const OurMission: React.FC = () => {
               <h2>Our core values</h2>
               <p className="values">
                 <h3>Building what’s next</h3>
-                Innovation is our lifeblood. We’re not waiting for the future;
-                we’re actively building it, creating cutting-edge solutions that
-                redefine industries.
+                <p>
+                  Innovation is our lifeblood. We’re not waiting for the future;
+                  we’re actively building it, creating cutting-edge solutions that
+                  redefine industries.
+                </p>
                 <h3>Raising the bar</h3>
-                Excellence is our baseline. We aim for results that inspire,
-                setting the gold standard for technology solutions in every
-                industry we serve.
+                <p>
+                  Excellence is our baseline. We aim for results that inspire,
+                  setting the gold standard for technology solutions in every
+                  industry we serve.
+                </p>
                 <h3>Trust in every step</h3>
-                We believe in transparency and accountability, ensuring every
-                interaction and project builds trust and confidence with our
-                clients.
+                <p>
+                  We believe in transparency and accountability, ensuring every
+                  interaction and project builds trust and confidence with our
+                  clients.
+                </p>
                 <h3>Creating together</h3>
-                Success is a team sport. Whether it’s our clients, partners, or
-                team, we work collaboratively to achieve powerful outcomes that
-                drive shared success.
+                <p>
+                  Success is a team sport. Whether it’s our clients, partners, or
+                  team, we work collaboratively to achieve powerful outcomes that
+                  drive shared success.
+                </p>
               </p>
             </div>
           </div>
