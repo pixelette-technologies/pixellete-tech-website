@@ -1,9 +1,9 @@
 import DeliverBenefits from '@/components/Deliver/DeliverBenefits/DeliverBenefits';
 import HowItWorksHeroSection from '@/components/Deliver/HeroSection/HowItWorksHeroSection';
 import SelectPlan from '@/components/Deliver/SelectPlan/SelectPlan';
-import ServiceWork from '@/components/Deliver/ServiceWork/ServiceWork';
 import { EvaluateBusiness } from '@/components/Sections/EvaluateBusiness/EvaluateBusiness';
 import FaqsSection from '@/components/Sections/Services/FAQs/FaqsSection';
+import { HowWeWork } from '@/components/Sections/Services/HowWeWork/HowWeWork';
 import { deliverFaqs } from '@/data/faqs/deliverFaqs';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 
@@ -77,7 +77,8 @@ export default async function DedicatedTeamServices(props: IDeliverProps) {
       <HowItWorksHeroSection {...deliverHeroData} />
       <DeliverBenefits {...benefitData} />
       <SelectPlan />
-      <ServiceWork />
+      <HowWeWork />
+      {/* <ServiceWork /> */}
       <FaqsSection faqs={deliverFaqs} />
       <EvaluateBusiness
         heading="Ready to become a tech success story?"
