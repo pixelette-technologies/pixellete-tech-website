@@ -1,7 +1,7 @@
 import DeliverBenefits from '@/components/Deliver/DeliverBenefits/DeliverBenefits';
 import HowItWorksHeroSection from '@/components/Deliver/HeroSection/HowItWorksHeroSection';
-import SelectPlan from '@/components/Deliver/SelectPlan/SelectPlan';
 import { EvaluateBusiness } from '@/components/Sections/EvaluateBusiness/EvaluateBusiness';
+import { AiServiceTable } from '@/components/Sections/Services/AiServiceTable/AiServiceTable';
 import FaqsSection from '@/components/Sections/Services/FAQs/FaqsSection';
 import { HowWeWork } from '@/components/Sections/Services/HowWeWork/HowWeWork';
 
@@ -77,8 +77,9 @@ export default async function StaffAugmentationServices(props: IDeliverProps) {
     <>
       <HowItWorksHeroSection {...deliverHeroData} />
       <DeliverBenefits {...benefitData} />
-      <SelectPlan />
+      {/* <SelectPlan /> */}
       {/* <ServiceWork /> */}
+      <AiServiceTable />
       <HowWeWork />
       <FaqsSection faqs={deliverFaqs} />
       <EvaluateBusiness />
