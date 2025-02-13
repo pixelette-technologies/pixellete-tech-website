@@ -19,9 +19,6 @@ export const tgexpertiseAreas = [
   { title: 'Accessibility Compliance' },
   { title: 'Interactive Prototyping' },
   { title: 'Ongoing Design Support' },
-  { title: 'User-Centric Design' },
-  { title: 'User-Centric Design' },
-  { title: 'User-Centric Design' },
 ];
 export const tgExpertiseData = {
   'User-Centric Design': {
@@ -119,7 +116,7 @@ export const uiuxServicelist
   {
     title: 'AI Solutions',
     items: [
-      'Digital Product Design and Development Consulting',
+      'Digital Product Consulting',
       'Web and Mobile UI/UX Design',
       'App and Website Redesign',
       'UI/UX Design Audit',
@@ -138,7 +135,7 @@ export const uiuxServicelist
   },
 ];
 export const uiuxServices = {
-  'Digital Product Design and Development Consulting': {
+  'Digital Product Consulting': {
     imageSrc: '/images/aiServices/s_43.svg',
     title: 'Digital Product Design and Development Consulting',
     description:
@@ -242,7 +239,7 @@ export const uiuxTechnologies: Technologies = {
     { id: 2, name: 'InVision', icon: '/images/tech/logos/invision-studio.png' },
     { id: 3, name: 'Axure RP', icon: '/images/tech/logos/axure-rp.png' },
     { id: 4, name: 'Adobe XD Prototyping', icon: '/images/tech/logos/adobe-xd.png' },
-    { id: 5, name: 'Sketch Prototyping', icon: '/images/tech/logos/sketch-prototyping.png' },
+    { id: 5, name: 'Sketch Prototyping', icon: '/images/tech/logos/sketch.png' },
     { id: 6, name: 'Balsamiq', icon: '/images/tech/logos/balsamiq.png' },
     { id: 7, name: 'Marvel App', icon: '/images/tech/logos/marvel-app.png' },
     { id: 8, name: 'Origami Studio', icon: '/images/tech/logos/origami-studio.png' },

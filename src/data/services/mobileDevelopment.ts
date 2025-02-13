@@ -19,7 +19,6 @@ export const tgexpertiseAreas = [
   { title: 'Top Notch Security' },
   { title: 'Easy Integration' },
   { title: 'Continued Support' },
-  { title: 'Responsive Design' },
 ];
 export const tgExpertiseData = {
   'Responsive Design': {

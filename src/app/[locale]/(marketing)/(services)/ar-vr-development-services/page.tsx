@@ -5,7 +5,6 @@ import ExpertiseGrid from '@/components/Sections/Services/ExpertiseGrid/Expertis
 import FaqsSection from '@/components/Sections/Services/FAQs/FaqsSection';
 import { HeroSection } from '@/components/Sections/Services/HeroSection/HeroSection';
 import { HowWeWork } from '@/components/Sections/Services/HowWeWork/HowWeWork';
-import { OurCommitment } from '@/components/Sections/Services/OurCommitment/OurCommitment';
 import { OurServices } from '@/components/Sections/Services/OurServices/OurServices';
 import { TechnologyGrid } from '@/components/Sections/Services/TechnologyGrid/TechnologyGrid';
 import TechnologiesUsed from '@/components/Sections/TechnologyUsed/TechnologiesUsed';
@@ -21,10 +20,7 @@ import {
   aiServicesDescription,
   aiServicesHeading,
   backgroundImage,
-  commitmentData,
   header,
-  ocdescription,
-  ocheading,
   tgdescription,
   tgexpertiseAreas,
   tgExpertiseData,
@@ -99,11 +95,11 @@ export default async function ARVR(props: IARVRProps) {
       />
       <AiServiceTable />
       <HowWeWork />
-      <OurCommitment
+      {/* <OurCommitment
         heading={ocheading}
         description={ocdescription}
         commitmentData={commitmentData}
-      />
+      /> */}
       <FaqsSection faqs={arFaqs} />
       <EvaluateBusiness
         heading="We’re not waiting for the future; we’re actively building with businesses"

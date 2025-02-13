@@ -23,7 +23,7 @@ const YourPlanCard: FC<YourPlanCardProps> = ({ data }) => {
     <>
       {data.map((el, index) => {
         const cardContent = (
-          <div>
+          <div style={{ height: '300px' }}>
             <div style={{ display: 'flex' }}>
               <div
                 style={{
@@ -33,6 +33,7 @@ const YourPlanCard: FC<YourPlanCardProps> = ({ data }) => {
                   gap: '7px',
                   padding: '5px 20px',
                   borderRadius: '100px',
+
                 }}
               >
                 <Image
@@ -51,7 +52,7 @@ const YourPlanCard: FC<YourPlanCardProps> = ({ data }) => {
               {/* {el.link}
                 {' '}
                 <FaExternalLinkAlt /> */}
-              <div>
+              {/* <div>
                 <Link href={el.path}>
                   <p>{el.link}</p>
                 </Link>
@@ -64,15 +65,21 @@ const YourPlanCard: FC<YourPlanCardProps> = ({ data }) => {
                   width={10}
                   height={10}
                 />
-              </div>
+              </div> */}
             </div>
           </div>
         );
 
-        return !el.path
+        return el.path
           ? (
               <Link href={el.path} key={uuidv4()} passHref>
-                {cardContent}
+                <div
+                  key={uuidv4()}
+                  id="servicesCard_id"
+                  className="servicesCard"
+                >
+                  {cardContent}
+                </div>
                 {/* <a
                   id="servicesCard_id"
                   className="servicesCard"
@@ -89,8 +96,8 @@ const YourPlanCard: FC<YourPlanCardProps> = ({ data }) => {
                 key={uuidv4()}
                 id="servicesCard_id"
                 className="servicesCard"
-                data-aos="fade-up"
-                data-aos-duration={`2${index}00`}
+                // data-aos="fade-up"
+                // data-aos-duration={`2${index}00`}
               >
                 {cardContent}
               </div>

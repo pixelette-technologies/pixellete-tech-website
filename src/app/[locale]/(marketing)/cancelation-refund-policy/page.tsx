@@ -37,7 +37,7 @@ export default async function PrivacyPolicy(props: IAIservicesProps) {
         </div>
       </Container>
       <Container className="main margins">
-        <div className="privacyPolicy">
+        <div className="privacyPolicy" id="sideMargin">
           <center>
             <h1>
               Our Cancellation and Refund Policy

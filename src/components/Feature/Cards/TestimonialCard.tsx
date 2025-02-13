@@ -24,6 +24,7 @@ export const TestimonialCard: FC<TestimonialCardProps> = ({
   return (
     <div
       className="testimonialCard"
+      style={{ height: '280px' }}
       data-aos={animation}
       data-aos-duration={duration}
     >
@@ -31,8 +32,10 @@ export const TestimonialCard: FC<TestimonialCardProps> = ({
         <Image src="/images/home/stars.svg" alt="Rating Stars" width={100} height={100} />
         <p>{rating}</p>
       </div>
-      <p style={{fontWeight: "700"}}>
-        "{comment}"
+      <p style={{ fontWeight: '700' }}>
+        "
+        {comment}
+        "
       </p>
 
       <section>

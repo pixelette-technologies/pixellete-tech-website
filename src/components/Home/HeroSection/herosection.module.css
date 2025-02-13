@@ -12,21 +12,21 @@
   height: 127rem;
   width: 100%;
 }
-.heroSection {
+/* .heroSection {
   overflow: hidden;
   position: relative;
-  /* background: black; */
-  /* background-image: url('/images/home/hero/homeHeroBackground.svg'); */
+  background: black;
+  background-image: url('/images/home/hero/homeHeroBackground.svg');
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.8) 100%),
     url('/images/home/hero/homeHeroBackground.svg');
   background-size: cover;
-  background-position: center top; /* Center the background image and position it at the top */
+  background-position: center top;
   background-attachment: fixed;
   width: 100%;
   margin-top: -10rem;
   z-index: -1;
-}
-.heroSectionBackground::before {
+} */
+/* .heroSectionBackground {
   content: '';
   position: absolute;
   top: 0;
@@ -35,12 +35,14 @@
   height: 100%;
   background-image: url('/images/home/hero/homeHeroBackground.svg');
   background-size: cover;
-  background-position: left -7rem top -20rem; /* Apply the left and top positioning */
+  background-position: center top;
   background-attachment: fixed;
-  /* z-index: -2; Ensure it's placed behind the content */
-}
+  z-index: -1;
+  height: 127rem;
+} */
 .content {
-  padding: 18rem;
+  padding: 11rem;
+  overflow: hidden;
 }
 @media only screen and (max-width: 37.5em) {
   .heroSectionBackground > img {
@@ -68,7 +70,7 @@
   margin-top: 10rem;
 
   position: absolute;
-  z-index: -100;
+  z-index: -1;
 }
 .heroSection > div > blockquote > * {
   will-change: transform;

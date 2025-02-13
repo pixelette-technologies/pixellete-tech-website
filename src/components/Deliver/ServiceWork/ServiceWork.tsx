@@ -44,9 +44,9 @@ const ServiceWork: React.FC = () => {
         <center // data-aos-duration="700" data-aos="fade-up"
         >
           <h2 id="h_ani">
-            Here’s How Our Services Work
+            Here’s How our services work
           </h2>
-          <Button className="primary--light btn-sm mt-2">Book a Free Call</Button>
+          <Button className="primary--light btn-sm mt-2">Book a free call</Button>
         </center>
         <div // data-aos-duration="500" data-aos="fade-up"
         >

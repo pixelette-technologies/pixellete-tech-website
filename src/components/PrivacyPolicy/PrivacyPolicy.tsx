@@ -17,7 +17,7 @@ const PrivacyPolicy: React.FC = () => {
         </div>
       </Container>
       <Container className="main margins">
-        <div className="privacyPolicy">
+        <div className="privacyPolicy" style={{ padding: '10rem 0' }}>
           <center>
             <h1
               className="heroHeading"

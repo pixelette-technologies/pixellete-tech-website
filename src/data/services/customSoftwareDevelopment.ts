@@ -264,7 +264,7 @@ export const customDevelopmentTechnologies: Technologies = {
     { id: 10, name: 'Google Cloud Platform', icon: '/images/tech/logos/google-cloud-platform.png' },
     { id: 11, name: 'Microsoft Azure', icon: '/images/tech/logos/microsoft-azure-ai.png' },
     { id: 12, name: 'Snowflake', icon: '/images/tech/logos/snowflake.png' },
-    { id: 13, name: 'ElasticSearch', icon: '/images/tech/logos/elasticsearch.png' },
+    { id: 13, name: 'ElasticSearch', icon: '/images/tech/logos/elastic-search.png' },
     { id: 14, name: 'Amazon DynamoDB', icon: '/images/tech/logos/amazon-dynamodb.png' },
     { id: 15, name: 'Couchbase', icon: '/images/tech/logos/couchbase-lite.png' },
     { id: 16, name: 'Apache Cassandra', icon: '/images/tech/logos/apache-cassandra.png' },

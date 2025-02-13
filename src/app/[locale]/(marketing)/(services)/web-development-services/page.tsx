@@ -5,12 +5,10 @@ import ExpertiseGrid from '@/components/Sections/Services/ExpertiseGrid/Expertis
 import FaqsSection from '@/components/Sections/Services/FAQs/FaqsSection';
 import { HeroSection } from '@/components/Sections/Services/HeroSection/HeroSection';
 import { HowWeWork } from '@/components/Sections/Services/HowWeWork/HowWeWork';
-import { OurCommitment } from '@/components/Sections/Services/OurCommitment/OurCommitment';
 import { OurServices } from '@/components/Sections/Services/OurServices/OurServices';
 import { TechnologyGrid } from '@/components/Sections/Services/TechnologyGrid/TechnologyGrid';
 import TechnologiesUsed from '@/components/Sections/TechnologyUsed/TechnologiesUsed';
 import { expertiseAiChangeData } from '@/data/expertise/expertiseAiChangeData';
-import { aiFaq } from '@/data/faqs/aiFaqs';
 import { webFaqs } from '@/data/faqs/webFaqs';
 import {
   aiHeroBackgroundImage,
@@ -22,10 +20,7 @@ import {
   aiServicesDescription,
   aiServicesHeading,
   backgroundImage,
-  commitmentData,
   header,
-  ocdescription,
-  ocheading,
   tgdescription,
   tgexpertiseAreas,
   tgExpertiseData,
@@ -101,11 +96,11 @@ export default async function WebDevelopment(props: IWebDevelopmentProps) {
       {/* <TechStack techStack="web" /> */}
       <AiServiceTable />
       <HowWeWork />
-      <OurCommitment
+      {/* <OurCommitment
         heading={ocheading}
         description={ocdescription}
         commitmentData={commitmentData}
-      />
+      /> */}
       <FaqsSection faqs={webFaqs} />
       <EvaluateBusiness
         heading="We’re not waiting for the future; we’re actively building with businesses"

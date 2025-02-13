@@ -79,7 +79,7 @@ const CaseStudieDetail = async ({ params }: { params: { slug: string } }) => {
             </figure>
 
           </header>
-          <section>
+          <section style={{ padding: '10rem 0rem' }}>
             <span style={{ display: 'flex', flexDirection: 'column', gap: '1rem', textAlign: 'center' }}>
               <h1>The blocker</h1>
               <p style={{ fontSize: '15px' }}>{blocker}</p>
@@ -99,7 +99,7 @@ const CaseStudieDetail = async ({ params }: { params: { slug: string } }) => {
             </header>
           </section>
           <MillstoneList data={milestones} />
-          <section style={{ margin: '10rem 0' }}>
+          <section style={{ padding: '10rem 0' }}>
             <header style={{ textAlign: 'center', display: 'flex', flexDirection: 'column' }}>
               <h1>The chosen tech stack</h1>
               <p>The strategic IT staff augmentation led to significant improvements and achievements:</p>

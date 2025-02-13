@@ -12,7 +12,7 @@
   position: absolute;
   bottom: 0rem;
   margin: auto;
-  z-index: -100;
+  z-index: -1;
   left: 0rem;
   right: 0rem;
   width: 100%;
@@ -27,7 +27,7 @@
 }
 .footer > div > blockquote > img {
   position: absolute;
-  z-index: -100;
+  z-index: -1;
 }
 .footer > div > blockquote > *:first-child {
   right: 0;

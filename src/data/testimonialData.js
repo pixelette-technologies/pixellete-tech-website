@@ -1,11 +1,11 @@
 export const testimonialData = [
   {
     rating: 5,
-    comment: 'Pixelette Technologies has been the perfect partner so far.',
-    user_name: 'Mushtaq Khalil',
-    user_role: 'Co-Founder, Buttersmiles Marketplace',
-    user_profile: '/images/home/testimonials/t_one.svg',
-    url: 'https://clutch.co/profile/pixelette-technologies-0?utm_campaign=widget&utm_content=stars&utm_medium=3&utm_source=widget&utm_term=www.pixelettetech.com#review-158221',
+    comment: 'We had a great experience working with them.',
+    user_name: 'Renen Hallak',
+    user_role: 'Founder & CEO, VAST Data',
+    user_profile: '/images/home/testimonials/t_three.svg',
+    url: 'https://clutch.co/go-to-review/258ba1ac-898a-4a98-8359-19cf91fc3ced/342558',
   },
   {
     rating: 5,
@@ -14,6 +14,22 @@ export const testimonialData = [
     user_role: 'CEO, The BlockGuard Technologies',
     user_profile: '/images/home/testimonials/t_two.svg',
     url: 'https://clutch.co/profile/pixelette-technologies-0?sort_by=date_desc#review-275026',
+  },
+  {
+    rating: 4,
+    comment: 'The people were impressive.',
+    user_name: 'Julien Braun',
+    user_role: 'Co-Founder, Carmentis',
+    user_profile: '/images/home/testimonials/t_three.svg',
+    url: 'https://clutch.co/go-to-review/258ba1ac-898a-4a98-8359-19cf91fc3ced/341615',
+  },
+  {
+    rating: 5,
+    comment: 'Pixelette Technologies has been the perfect partner so far.',
+    user_name: 'Mushtaq Khalil',
+    user_role: 'Co-Founder, Buttersmiles Marketplace',
+    user_profile: '/images/home/testimonials/t_one.svg',
+    url: 'https://clutch.co/profile/pixelette-technologies-0?utm_campaign=widget&utm_content=stars&utm_medium=3&utm_source=widget&utm_term=www.pixelettetech.com#review-158221',
   },
   {
     rating: 5,

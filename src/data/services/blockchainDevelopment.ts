@@ -104,7 +104,7 @@ export const aiHeroImages = [
   { src: '/images/blockchainServices/box_4.svg', alt: 'box 4' },
 ];
 
-export const aiServicesHeading = 'Our Services';
+export const aiServicesHeading = 'Our services';
 
 export const aiServicesDescription
   = 'Our blockchain development services empower businesses to use decentralized technology for enhanced security and transparency. As a seasoned blockchain development company, we specialize in transforming complex processes into streamlined, trustworthy solutions that make efficiency and secure data handling seamless. Let’s work together to bring your blockchain ideas to life and to the forefront of innovation!';

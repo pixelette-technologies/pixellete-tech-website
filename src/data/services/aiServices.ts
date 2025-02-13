@@ -133,37 +133,37 @@ export const aiServices = {
         'We are recognized as a leading generative AI development company and bring deep expertise in generative AI tools like GPT-4, GPT-3.5, and DALL-E. Our models provide visual content analysis to aid in brand identity, data analysis, business intelligence, and visualization, offering tailored generative AI development services.',
   },
   'Chatbots and Smart AI Assistants': {
-    imageSrc: '/images/aiServices/s_7.svg',
+    imageSrc: '/images/aiServices/s_2.svg',
     title: 'Chatbots and Smart AI Assistants',
     description:
         'As a top provider of AI chatbot development services, we design custom chatbot solutions that integrate seamlessly with apps, websites, and platforms. Our conversational AI voice solutions go even a step ahead and elevate client interactions, customer experience with intelligent, adaptable smart AI assistants.',
   },
   'AI Product Development': {
-    imageSrc: '/images/aiServices/s_9.svg',
+    imageSrc: '/images/aiServices/aiproductdev.svg',
     title: 'AI Product Development',
     description:
         'We’re a pioneering custom AI solution provider building scalable and innovative AI product development solutions. Our offerings, from natural language processing apps and predictive analysis tools to recommendation engines, are built with precision to integrate smoothly with your existing systems, driving efficiency and user satisfaction.',
   },
   'Recommendation Engines': {
-    imageSrc: '/images/aiServices/s_5.svg',
+    imageSrc: '/images/aiServices/s_8.svg',
     title: 'Recommendation Engines',
     description:
         'Our custom recommendation engine development services enhance customer satisfaction, drive engagement, and greatly boost revenues for clients. We enable your business to deliver personalized recommendations that strengthen retention and optimize processes, driving growth.',
   },
   'AI Security': {
-    imageSrc: '/images/aiServices/s_11.svg',
+    imageSrc: '/images/aiServices/s_7.svg',
     title: 'AI Security',
     description:
         'Our AI automation tools analyze millions of events to detect threats like malware and phishing. Through artificial intelligence in security, our solutions use AI-powered cybersecurity to mitigate risks, reinforcing your data security framework.',
   },
   'AI Design': {
-    imageSrc: '/images/aiServices/s_2.svg',
+    imageSrc: '/images/aiServices/s_9.svg',
     title: 'AI Design',
     description:
         'Our AI product development expertise encompasses ethical, unbiased design solutions, including tools similar to Canva and Adobe Sensei. We use AI technologies to bring transformative solutions to life, addressing real-world challenges.',
   },
   'AIOps': {
-    imageSrc: '/images/aiServices/s_8.svg',
+    imageSrc: '/images/aiServices/s_5.svg',
     title: 'AIOps',
     description:
         'Our dedicated AIOps solutions optimize application performance, enhance customer experiences, and cut IT costs. Organizations around the globe can streamline operations and scale efficiently with Pixelette Technologies.',
@@ -175,7 +175,7 @@ export const aiServices = {
         'Our AIaaS solutions allow you to integrate advanced AI tools into your operations without heavy investments. By removing the need for in-house AI software development expertise and also cutting costs, our developers deliver AI integration effortlessly with our services.',
   },
   'Automation Solutions': {
-    imageSrc: '/images/aiServices/s_3.svg',
+    imageSrc: '/images/aiServices/s_11.svg',
     title: 'Automation Solutions',
     description:
         'We streamline repetitive tasks, boost accuracy, and enhance operational efficiency across industries through our advanced robotics process automation and also by providing custom built robotic automation process apps.',
@@ -199,11 +199,11 @@ type Technologies = {
 };
 
 export const aiTechnologies: Technologies = {
-  'Blockchain Platforms': [
+  'Programming & Scripting Languages': [
     { id: 1, name: 'Python', icon: '/images/tech/logos/python.png' },
     { id: 2, name: 'R', icon: '/images/tech/logos/r.png' },
     { id: 3, name: 'Julia', icon: '/images/tech/logos/julia.png' },
-    { id: 4, name: 'Java', icon: '/images/tech/logos/Java.png' },
+    { id: 4, name: 'Java', icon: '/images/tech/logos/java.png' },
     { id: 4, name: 'C++', icon: '/images/tech/logos/c-plus.png' },
     { id: 387, name: 'Scala', icon: '/images/tech/logos/scala.png' },
     { id: 18, name: 'JavaScript', icon: '/images/tech/logos/javascript.png' },

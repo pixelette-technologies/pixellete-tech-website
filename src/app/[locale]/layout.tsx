@@ -19,17 +19,17 @@ export const metadata: Metadata = {
       rel: 'icon',
       type: 'image/png',
       sizes: '32x32',
-      url: '/favicon-32x32.png',
+      url: '/images/logo/shortLogo.svg',
     },
     {
       rel: 'icon',
       type: 'image/png',
       sizes: '16x16',
-      url: '/favicon-16x16.png',
+      url: '/images/logo/shortLogo.svg',
     },
     {
       rel: 'icon',
-      url: '/favicon.ico',
+      url: '/images/logo/shortLogo.svg',
     },
   ],
 };
@@ -91,7 +91,7 @@ export default async function RootLayout(props: {
 
   return (
     <html lang={locale} data-theme="dark">
-      <body suppressHydrationWarning className={`${outfit.className}`}>
+      <body className={`${outfit.className}`}>
         {/* <ThemeProvider attribute="class"> */}
         <NextIntlClientProvider
           locale={locale}

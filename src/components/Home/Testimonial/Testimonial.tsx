@@ -118,7 +118,7 @@ export const Testimonial: FC<TestimonialProps> = ({ background }) => {
                 height={100}
               />
               <Button className="primary">
-                21 Reviews
+                23 Reviews
                 <FiExternalLink />
               </Button>
             </div>

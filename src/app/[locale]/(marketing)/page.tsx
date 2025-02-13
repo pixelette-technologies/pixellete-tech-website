@@ -40,7 +40,7 @@ export default async function Index(props: IIndexProps) {
   const GTM_ID = 'GTM-KXC3K4RL';
   return (
     <>
-      <head>
+      {/* <head>
         <script
           dangerouslySetInnerHTML={{
             __html: `(
@@ -71,8 +71,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             }),
           }}
         />
-      </head>
-      <noscript>
+      </head> */}
+      <div className="main-content"></div>
+      <HeroSection />
+      <OurClients />
+      {/* <noscript>
         <iframe
           src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
           height="0"
@@ -80,11 +83,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           style={{ display: 'none', visibility: 'hidden' }}
         >
         </iframe>
-      </noscript>
-      <HeroSection />
-      <OurClients />
-      <div className="main-content">
-        {/* <Image
+      </noscript> */}
+      {/* <Image
           src="/images/home/bodyBackground.svg"
           fill
           alt="body background"
@@ -99,23 +99,23 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           }}
         /> */}
 
-        <AboutUsSection />
-        <WhatMakeUsSpecialHome />
-        <OurServicesSection />
-        <YourPlan />
-        <TechnologiesUsed
-          technologies={homeTechnologies}
-          title="Benefit from our unmatched tech stack expertise"
-          subtitle="With our team's deep mastery in the latest frameworks, languages, and tools, we build scalable, secure, and high-performance applications that set new standards. From ideation to deployment, our technology capabilities are designed to drive your business forward."
-        />
-        <CaseStudies heading="Our past work speaks volumes" />
-        <Testimonial background="" />
+      <AboutUsSection />
+      <WhatMakeUsSpecialHome />
+      <OurServicesSection />
+      <YourPlan />
+      <TechnologiesUsed
+        technologies={homeTechnologies}
+        title="Benefit from our unmatched tech stack expertise"
+        subtitle="With our team's deep mastery in the latest frameworks, languages, and tools, we build scalable, secure, and high-performance applications that set new standards. From ideation to deployment, our technology capabilities are designed to drive your business forward."
+      />
+      <CaseStudies heading="Our past work speaks volumes" />
+      <Testimonial background="" />
 
-        <EvaluateBusiness
-          heading="Ready to become a tech success story?"
-          description="Don’t let technical hurdles stand in the way of building tech solutions that shake up the world as we know it. Let us help you bring your vision to life with innovative, cost-effective and reliable services. Get in touch!"
-        />
-      </div>
+      <EvaluateBusiness
+        heading="Ready to become a tech success story?"
+        description="Don’t let technical hurdles stand in the way of building tech solutions that shake up the world as we know it. Let us help you bring your vision to life with innovative, cost-effective and reliable services. Get in touch!"
+      />
+
       {/* Uncomment these components when needed */}
       {/* <OurTeam /> */}
       {/* <UnlockBusinessPotential

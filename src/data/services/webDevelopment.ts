@@ -146,13 +146,13 @@ export const webDevelopmentServices = {
     imageSrc: '/images/aiServices/s_45.svg',
     title: 'Ecommerce Development',
     description:
-    'Our ecommerce website development services are crafted to drive sales and boost user engagement through seamless, intuitive design.\nAs a leading web development company, we create custom, scalable platforms with robust functionalities and secure payment options that meet your business needs.\nWhether you\'re a startup or an established brand, our ecommerce web development team delivers user-friendly, optimized sites that elevate the customer experience and support growth.',
+    'Our ecommerce website development drives sales and engagement with seamless design. We create custom, scalable platforms with secure payments and robust features. Whether for startups or established brands, our optimized sites enhance user experience and growth.',
   },
   'Custom Web Development': {
     imageSrc: '/images/aiServices/s_48.svg',
     title: 'Custom Web Development',
     description:
-    'For businesses that need custom solutions, our custom web development services provide an edge through fully personalized websites designed to captivate and convert.\nWe blend innovative designs with functionality, resulting in efficient, responsive sites that reflect your unique brand.\nOur custom website design focuses on adaptability, ensuring your site grows alongside your business while maintaining superior performance and security.',
+    'Our custom web development services create fully personalized websites designed to captivate and convert. We blend innovative design with functionality, delivering responsive, high-performance sites that grow with your business while ensuring security.',
   },
   'Custom CMS Development': {
     imageSrc: '/images/aiServices/s_46.svg',
@@ -164,19 +164,19 @@ export const webDevelopmentServices = {
     imageSrc: '/images/aiServices/s_49.svg',
     title: 'Web Application Development',
     description:
-    'Our web application development services focus on building scalable, secure, and efficient web applications that enhance user engagement and drive digital transformation.\nBeing one of the best web development companies in the western hemisphere, we specialize in custom applications that cater to your specific requirements, ensuring they are adaptable and scalable for long-term success.\nFrom concept to deployment, our team guarantees a flawless user experience across all platforms and devices.',
+    'Our web application development delivers scalable, secure solutions that enhance engagement and drive digital transformation. We build custom, adaptable applications for long-term success, ensuring a seamless user experience across all devices.',
   },
   'Web Portal Development': {
     imageSrc: '/images/aiServices/s_47.svg',
     title: 'Web Portal Development',
     description:
-    'Our web portal development services provide innovative, user-friendly portals tailored to your business needs.\nFrom employee portals to customer interfaces, our web portal solutions offer streamlined access, secure data management, and efficient workflows to enhance your digital ecosystem.\nPartnering with our award-winning website development company, you’ll get a portal that’s not only functional but also aligns easily with your brand and enhances overall user satisfaction.',
+    'Our web portal development services deliver user-friendly, secure, and efficient portals tailored to your business. From employee to customer interfaces, we ensure streamlined access and data management. Partner with our award-winning company for a portal that enhances your brand and user experience.',
   },
   'Website Design & Development': {
     imageSrc: '/images/aiServices/s_50.svg',
-    title: 'Chatbots & Conversational AI',
+    title: 'Website Design & Development',
     description:
-    'Our website design and development services offer the perfect blend of aesthetics and functionality, delivering a powerful online presence that captures your brand essence.\nWe specialize in responsive, user-friendly sites that drive engagement and conversions. Our custom website design services prioritize adaptability, security, and performance to ensure your website remains relevant and impactful as your business grows.',
+    'Our website design and development services blend aesthetics with functionality for a strong online presence. We create responsive, user-friendly sites that drive engagement and conversions while ensuring adaptability, security, and performance as your business grows.',
   },
 };
 
@@ -249,7 +249,7 @@ export const webDevelopmentTechnologies: Technologies = {
     { id: 3, name: 'MongoDB', icon: '/images/tech/logos/mongodb.png' },
     { id: 4, name: 'SQLite', icon: '/images/tech/logos/sqlite.png' },
     { id: 5, name: 'Redis', icon: '/images/tech/logos/redis.png' },
-    { id: 6, name: 'ElasticSearch', icon: '/images/tech/logos/elasticsearch.png' },
+    { id: 6, name: 'ElasticSearch', icon: '/images/tech/logos/elastic-search.png' },
     { id: 7, name: 'Firebase', icon: '/images/tech/logos/firebase-analytics.png' },
     { id: 8, name: 'Google Cloud Platform', icon: '/images/tech/logos/google-cloud-platform.png' },
     { id: 9, name: 'AWS', icon: '/images/tech/logos/aws.png' },

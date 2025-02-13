@@ -4,14 +4,11 @@ import { AiServiceTable } from '@/components/Sections/Services/AiServiceTable/Ai
 import FaqsSection from '@/components/Sections/Services/FAQs/FaqsSection';
 import { HeroSection } from '@/components/Sections/Services/HeroSection/HeroSection';
 import { HowWeWork } from '@/components/Sections/Services/HowWeWork/HowWeWork';
-import { OurCommitment } from '@/components/Sections/Services/OurCommitment/OurCommitment';
 import { OurServices } from '@/components/Sections/Services/OurServices/OurServices';
 import { TechnologyGrid } from '@/components/Sections/Services/TechnologyGrid/TechnologyGrid';
 import TechnologiesUsed from '@/components/Sections/TechnologyUsed/TechnologiesUsed';
-import { aiFaq } from '@/data/faqs/aiFaqs';
 import { softwareFaqs } from '@/data/faqs/softwareFaqs';
 import {
-  commitmentData,
   customDevelopmentExpertiseData,
   customDevelopmentHeroBackgroundImage,
   customDevelopmentHeroButtonLink,
@@ -24,8 +21,6 @@ import {
   customDevelopmentServicesDescription,
   customDevelopmentServicesHeading,
   customDevelopmentTechnologies,
-  ocdescription,
-  ocheading,
   tgdescription,
   tgexpertiseAreas,
   tgheading,
@@ -91,11 +86,11 @@ export default async function CustomSoftwareDevelopment(props: ICustomSoftwareDe
       />
       <AiServiceTable />
       <HowWeWork />
-      <OurCommitment
+      {/* <OurCommitment
         heading={ocheading}
         description={ocdescription}
         commitmentData={commitmentData}
-      />
+      /> */}
       <FaqsSection faqs={softwareFaqs} />
       <EvaluateBusiness
         heading="We’re not waiting for the future; we’re actively building with businesses"

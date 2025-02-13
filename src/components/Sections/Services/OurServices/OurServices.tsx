@@ -87,7 +87,7 @@ export const OurServices: React.FC<OurServicesProps> = ({
               backgroundColor: '#0F0F0FB2',
               padding: '2rem',
               borderRadius: '13.84px',
-              height: '500px',
+              height: '460px',
             }}
           >
             <Image src={currentService.imageSrc} alt={currentService.title} width={50} height={50} />

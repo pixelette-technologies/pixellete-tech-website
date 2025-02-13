@@ -126,10 +126,10 @@ const DetailsNavigate = (props) => {
                       {description}
                       {' '}
                     </p>
-                    <p>
+                    {/* <p>
                       {lists}
                       {' '}
-                    </p>
+                    </p> */}
                   </header>
 
                 )}

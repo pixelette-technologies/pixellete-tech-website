@@ -418,16 +418,16 @@ p {
 }
 
 .main-content {
-  position: relative;
+  position: fixed;
   /* background-image: url('/images/home/bodyBackground.svg'); */
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 50%, rgb(0 0 0) 100%),
-    url(/images/home/bodyBackground.svg);
+  background: url(/images/home/bodyBackground.svg);
   background-size: cover;
   background-position: center;
-  background-attachment: fixed; /* Helps with parallax effect */
+  background-attachment: fixed;
   width: 100%;
-  height: auto;
-  /* z-index: -1; */
+  height: 100vh;
+  margin-top: -10rem;
+  z-index: -1;
 }
 @media (max-width: 768px) {
   .main-content {

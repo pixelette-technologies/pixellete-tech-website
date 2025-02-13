@@ -1,5 +1,5 @@
 import { Button } from '@/components/Feature/Button/Button';
-import Link from 'next/link'; // Correct usage of Next.js routing
+import Link from 'next/link';
 import React from 'react';
 import styles from './herosection.module.css';
 // import { Link as ScrollLink } from 'react-scroll';
@@ -9,16 +9,16 @@ type HeroSectionProps = object;
 export const HeroSection: React.FC<HeroSectionProps> = () => {
   return (
     <>
-      {/* <div className={styles.heroSectionBackground}>
-        <Image
+      <div className={styles.heroSectionBackground}>
+        {/* <Image
           src="/images/home/hero/homeHeroBackground.svg"
           alt="background"
-          layout="responsive" // Makes the image responsive
-          width={1200} // Set the width of the image
-          height={800} // Set the height of the image
+          layout="responsive"
+          width={1200}
+          height={800}
           className={styles.heroBackgroundImg}
-        />
-      </div> */}
+        /> */}
+      </div>
       <div className={styles.heroSection}>
         <div className={styles.content}>
           <blockquote>
