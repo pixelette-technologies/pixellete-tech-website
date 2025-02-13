@@ -110,13 +110,14 @@ const CaseStudieDetail = async ({ params }: { params: { slug: string } }) => {
                 gridTemplateColumns: 'repeat(3, 1fr)',
                 width: '70%',
                 margin: '0 auto',
+                marginTop: '4rem',
                 gap: '2rem',
                 alignItems: 'center',
                 justifyContent: 'center',
               }}
             >
               {techStack.map((tech, index) => (
-                <img key={index} style={{ width: '50%' }} src={tech.icon} alt={tech.name} />
+                <img key={index} style={{ width: '50%', borderRadius: '1.5rem' }} src={tech.icon} alt={tech.name} />
               ))}
             </span>
           </section>

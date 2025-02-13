@@ -191,7 +191,7 @@ type Technologies = {
 };
 
 export const webDevelopmentTechnologies: Technologies = {
-  'Frontend': [
+  'Frontend Technologies': [
     { id: 1, name: 'HTML5', icon: '/images/tech/logos/html5.png' },
     { id: 2, name: 'CSS3', icon: '/images/tech/logos/css3.png' },
     { id: 3, name: 'JavaScript', icon: '/images/tech/logos/javascript.png' },
@@ -217,7 +217,7 @@ export const webDevelopmentTechnologies: Technologies = {
     { id: 23, name: 'Stencil.js', icon: '/images/tech/logos/stenciljs.png' },
     { id: 24, name: 'Foundation', icon: '/images/tech/logos/foundation.png' },
   ],
-  'Backend': [
+  'Backend Technologies': [
     { id: 1, name: 'Node.js', icon: '/images/tech/logos/nodejs.png' },
     { id: 2, name: 'Express.js', icon: '/images/tech/logos/expressjs.png' },
     { id: 3, name: 'Django', icon: '/images/tech/logos/django.png' },

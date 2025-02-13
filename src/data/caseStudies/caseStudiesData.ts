@@ -45,7 +45,7 @@ const caseStudiesData = [
     bannerImage: '/images/casestudies/aia/aia-header-image.svg',
     techStack: [
       { name: 'Reactjs', icon: '/images/tech/logos/reactjs.png' },
-      { name: 'Node.js', icon: '/images/tech/node.svg' },
+      { name: 'Node.js', icon: '/images/tech/logos/nodejs.png' },
       { name: 'MongoDB', icon: '/images/tech/logos/mongodb.png' },
       { name: 'Stripe API', icon: '/images/tech/logos/stripe-api.png' },
       { name: 'Openai', icon: '/images/tech/logos/openai.png' },
