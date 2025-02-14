@@ -1,14 +1,7 @@
 'use client';
-import { Button } from '@/components/Feature/Button/Button';
 import { Container } from '@/components/Feature/Container/Container';
-import { FormInput } from '@/components/Feature/Form/FormInput';
-import FormTextArea from '@/components/Feature/Form/FormTextArea';
-import InputPhoneNo from '@/components/Feature/InputPhoneNo/InputPhoneNo';
-import data from '@/data';
-import emailjs from 'emailjs-com';
-import { Form, Formik } from 'formik';
 import Image from 'next/image';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './contactusform.css';
 
 type ContactUsProps = {
@@ -27,6 +20,36 @@ type FormValues = {
 
 export const ContactUsForm: React.FC<ContactUsProps> = (props) => {
   const [statusMessage, setStatusMessage] = useState<string>('');
+
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = '//js-eu1.hsforms.net/forms/embed/v2.js';
+    script.charset = 'utf-8';
+    script.type = 'text/javascript';
+    script.async = true;
+
+    script.onload = () => {
+      console.log('HubSpot form script loaded');
+
+      if (window.hbspt && window.hbspt.forms) {
+        hbspt.forms.create({
+          portalId: '145652385',
+          formId: 'fce98d79-3a21-4d66-8638-bba4617c0cbd',
+          region: 'eu1',
+          target: '.hubspot-form-container',
+        });
+      } else {
+        console.error('HubSpot form is not available');
+      }
+    };
+
+    document.body.appendChild(script);
+
+    // Cleanup: Remove the script when the component unmounts
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
 
   // const dummyValues = [
   //   'Search Engine',
@@ -89,7 +112,8 @@ export const ContactUsForm: React.FC<ContactUsProps> = (props) => {
                 {props.insideHeading}
               </h3>
             )}
-
+            <div className="hubspot-form-container"></div>
+            {/*
             <Formik
               initialValues={initialValues}
               validateOnMount
@@ -172,7 +196,7 @@ export const ContactUsForm: React.FC<ContactUsProps> = (props) => {
                   </div>
                 </Form>
               )}
-            </Formik>
+            </Formik> */}
           </div>
         </section>
       </div>

@@ -46,7 +46,7 @@ const ExpertiseGrid: React.FC<ExpertiseGridProps> = ({
                     <div className={styles.flipCardInner}>
                       <div className={styles.flipCardFront}>
                         <Image src={el.image} alt={el.text} width={44} height={44} />
-                        <p><b>{el.text}</b></p>
+                        <p>{el.text}</p>
                       </div>
                       <div className={styles.flipCardBack}>
                         {el.description}
@@ -66,7 +66,7 @@ const ExpertiseGrid: React.FC<ExpertiseGridProps> = ({
                 <div className={styles.flipCard} key={index}>
                   <div className={styles.flipCardInner}>
                     <div className={styles.flipCardFront}>
-                      <img src={el.image} alt={el.text} />
+                      <Image src={el.image} alt={el.text} width={44} height={44} />
                       <p>{el.text}</p>
                     </div>
                     <div className={styles.flipCardBack}>

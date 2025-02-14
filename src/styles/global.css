@@ -31,6 +31,7 @@ body {
 
 body,
 html {
+  scroll-behavior: smooth;
   /* padding: 0 5rem; */
   /* overflow-x: hidden; */
 }
