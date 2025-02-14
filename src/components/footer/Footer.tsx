@@ -101,7 +101,7 @@ export const Footer: React.FC = () => {
                 rel="noopener noreferrer"
               >
                 <Image
-                  src="/images/social/twitter.svg"
+                  src="/images/social/youtube.svg"
                   alt="Twitter"
                   // data-aos="fade-up"
                   // data-aos-duration="1000"

@@ -57,11 +57,11 @@ export const OurTeam = () => {
     <div className="ourTeamSection">
       <Container className="main margins">
         <center>
-          <h1
+          <h2
             id="h_ani"
           >
             Our Team
-          </h1>
+          </h2>
         </center>
 
         <p>

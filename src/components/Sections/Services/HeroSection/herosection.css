@@ -87,22 +87,22 @@
   animation: rotateOpposite 13s linear infinite;
   height: 13rem;
 }
-.heroSection > div > h2 {
+.heroSection > div > h1 {
   text-align: center;
-  /* font-size: 8rem; */
+  font-size: 4.5rem;
   max-width: 92rem;
   margin: auto;
   font-weight: 600;
   line-height: 13rem;
 }
 @media only screen and (max-width: 62.6em) {
-  .heroSection > div > h2 {
+  .heroSection > div > h1 {
     /* font-size: 8.5rem; */
     line-height: 10rem;
   }
 }
 @media only screen and (max-width: 37.5em) {
-  .heroSection > div > h2 {
+  .heroSection > div > h1 {
     /* font-size: 4rem; */
     line-height: 6rem;
   }
@@ -121,7 +121,6 @@
   margin-top: 3.2rem;
 }
 .heroSection > div > div > * {
-  
 }
 @media only screen and (max-width: 37.5em) {
   .heroSection > div > div > * {
