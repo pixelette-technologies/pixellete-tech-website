@@ -49,7 +49,7 @@ export const OurTeam = () => {
     return {
       '@context': 'https://schema.org',
       '@type': 'Organization',
-      'name': 'Your Organization Name', // Replace with your organization name
+      'name': 'Pixelette Technologies', // Replace with your organization name
       'member': peopleSchema,
     };
   };
