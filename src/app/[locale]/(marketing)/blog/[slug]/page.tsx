@@ -674,7 +674,10 @@ const page = (props: any) => {
                     backgroundColor: '#0F0F0FB2',
                     padding: '2rem',
                     borderRadius: '13.84px',
-                    // height: '350px',
+                    // uncomment when sticky scroll ad banner needed
+                    // position: 'sticky',
+                    // top: '20px',
+                    // zIndex: 10,
 
                   }}
                 >

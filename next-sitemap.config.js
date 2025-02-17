@@ -12,7 +12,7 @@ async function fetchBlogPaths() {
     accessToken: ACCESS_TOKEN,
   });
 
-  const entries = await client.getEntries({ content_type: 'blogPage' });
+  const entries = await client.getEntries({ content_type: 'blogsPage' });
   return entries.items.map(entry => `/blog/${entry.fields.slug}`);
 }
 
