@@ -437,7 +437,27 @@ p {
 
 .main-content {
   position: fixed;
-  background: url('/images/home/bodyBackground.svg');
+  /* background: url('/images/home/bodyBackgroundTest7.webp'); */
+  /* background: rgb(18, 26, 69);
+  background: -moz-radial-gradient(
+    circle,
+    rgba(18, 26, 69, 0.43883490896358546) 0%,
+    rgba(218, 29, 25, 0.3968181022408963) 100%
+  );
+  background: -webkit-radial-gradient(
+    circle,
+    rgba(18, 26, 69, 0.43883490896358546) 0%,
+    rgba(218, 29, 25, 0.3968181022408963) 100%
+  );
+  background: radial-gradient(
+    circle,
+    rgba(18, 26, 69, 0.43883490896358546) 0%,
+    rgba(218, 29, 25, 0.3968181022408963) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#121a45",endColorstr="#da1d19",GradientType=1); */
+  background: linear-gradient(217deg, rgb(7 23 41 / 93%), rgb(255 0 0 / 0%) 70.71%),
+    linear-gradient(127deg, rgb(255 0 0 / 38%), rgb(0 255 0 / 0%) 70.71%),
+    linear-gradient(336deg, rgb(12 12 33 / 80%), rgb(0 0 255 / 0%) 70.71%);
   background-size: cover;
   /* background-position: center; */
   width: 100%;
@@ -453,7 +473,28 @@ p {
   left: 0;
   right: 0;
   bottom: 0;
-  background: url('/images/home/bodyBackground.svg');
+  /* background: url('/images/home/bodyBackgroundTest7.webp'); */
+  /* background: rgb(63, 100, 251);
+  background: rgb(18, 26, 69);
+  background: -moz-radial-gradient(
+    circle,
+    rgba(18, 26, 69, 0.43883490896358546) 0%,
+    rgba(218, 29, 25, 0.3968181022408963) 100%
+  );
+  background: -webkit-radial-gradient(
+    circle,
+    rgba(18, 26, 69, 0.43883490896358546) 0%,
+    rgba(218, 29, 25, 0.3968181022408963) 100%
+  );
+  background: radial-gradient(
+    circle,
+    rgba(18, 26, 69, 0.43883490896358546) 0%,
+    rgba(218, 29, 25, 0.3968181022408963) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#121a45",endColorstr="#da1d19",GradientType=1); */
+  background: linear-gradient(217deg, rgb(7 23 41 / 93%), rgb(255 0 0 / 0%) 70.71%),
+    linear-gradient(127deg, rgb(255 0 0 / 38%), rgb(0 255 0 / 0%) 70.71%),
+    linear-gradient(336deg, rgb(12 12 33 / 80%), rgb(0 0 255 / 0%) 70.71%);
   background-size: cover;
   background-position: center;
   z-index: -1; /* Ensure it's behind content */
