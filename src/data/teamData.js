@@ -1,6 +1,6 @@
 export const teamData = [
   {
-    image: '/images/people/Asif.webp',
+    image: '/images/people/asif.webp',
     role: 'CEO & Founder',
     name: 'Mr. Asif Ashiq Rana',
     linkedin: 'https://www.linkedin.com/in/rana-khan-asif/',
