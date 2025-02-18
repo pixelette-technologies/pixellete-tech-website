@@ -144,7 +144,7 @@ export const customDevelopmentServices = {
     description:
     'As a trusted customized software development company, we assess your business needs, design the ideal software structure, and deliver custom software services that maximize value. Our dedicated team uses deep technical expertise to create tailored solutions that enhance productivity and efficiency.',
   },
-  'Custom Software Development': {
+  'Custom Software Services': {
     imageSrc: '/images/aiServices/s_30.svg',
     title: 'Custom Software Development Services',
     description:
