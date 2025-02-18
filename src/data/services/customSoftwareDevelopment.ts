@@ -144,15 +144,15 @@ export const customDevelopmentServices = {
     description:
     'As a trusted customized software development company, we assess your business needs, design the ideal software structure, and deliver custom software services that maximize value. Our dedicated team uses deep technical expertise to create tailored solutions that enhance productivity and efficiency.',
   },
-  'Custom Software Development Services': {
+  'Custom Software Development': {
     imageSrc: '/images/aiServices/s_30.svg',
-    title: 'Custom Software Services',
+    title: 'Custom Software Development Services',
     description:
     'In today’s fast-paced market, custom software development gives businesses a competitive edge. As a leading software development agency, we provide specialized software development tailored to your business goals and designed to drive results.',
   },
-  'Enterprise Software Development Services': {
+  'Enterprise Software Development': {
     imageSrc: '/images/aiServices/s_32.svg',
-    title: 'Enterprise Software Development',
+    title: 'Enterprise Software Development Services',
     description:
     'We develop custom enterprise software development solutions to help large businesses scale and optimize key functions. Our offerings improve business infrastructure while driving sustainable growth.',
   },
