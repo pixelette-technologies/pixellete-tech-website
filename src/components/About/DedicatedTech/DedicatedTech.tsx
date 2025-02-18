@@ -92,13 +92,13 @@ const DedicatedTech: React.FC = () => {
               }}
             >
               <h3>{cards[selectedCardIndex].title}</h3>
-              <p>
+              <div>
                 {cards[selectedCardIndex].content.map(x => (
-                  <ul>
-                    <li style={{ textAlign: 'left', listStyle: 'circle' }}>{x}</li>
+                  <ul key={selectedCardIndex}>
+                    <li style={{ textAlign: 'left', listStyle: 'circle', fontSize: '1.6rem', fontWeight: '400', lineHeight: '3rem' }}>{x}</li>
                   </ul>
                 ))}
-              </p>
+              </div>
 
             </div>
           </div>

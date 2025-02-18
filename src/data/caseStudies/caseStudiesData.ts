@@ -67,6 +67,42 @@ const caseStudiesData = [
       { title: 'Testing and deployment', description: 'Our QA and testing teams rigorously tested the tool for accessibility and functionality across diverse platforms. After refining the design based on feedback, we deployed and delivered a fully operational and scalable product.' },
     ],
   },
+  {
+    slug: 'adwatch',
+    title: 'How AdWatch is Reshaping Ad-Free Streaming',
+    description: 'AdWatch is an advanced AI-powered solution designed to detect and remove advertisements from TV input streams and media campaigns. By providing smooth, interruption-free viewing experiences, AdWatch is addressing one of the biggest challenges in media consumption today. They collaborated with Pixelette Technologies for the design, technological development and deployment of their platform.',
+    businessType: 'Technology Company',
+    industry: 'Artificial Intelligence',
+    blocker: 'Interruptive ads during media campaigns pose a significant challenge for companies aiming to deliver a smooth viewer experience. These ads not only disrupt engagement but also diminish the overall effectiveness of ad campaigns, often leaving audiences frustrated and disengaged. The inability to detect and remove such ads efficiently exacerbates the issue, leading to a decline in user satisfaction and, ultimately, customer retention. Without a solution to address these interruptions, businesses risk losing loyal customers, facing decreased campaign ROI and tarnishing their brand reputation in highly competitive markets.',
+    goal: 'AdWatch aimed to completely change the viewer experience by creating an advanced AI automated system designed to detect intrusive advertisements with precision. The system\'s objective was to remove unwanted content in real-time to provide uninterrupted and smooth input streams for media campaigns.',
+    solution: 'To address these challenges, AdWatch partnered with Pixelette Technologies to create an AI-driven ad Detection & removal System. By utilizing artificial intelligence and a carefully curated tech stack, we developed the AdWatch Engine, an automated solution that not only detects and removes intrusive ads in real time but also intelligently filters out unwanted content across multiple media streams. The system’s advanced capabilities allow for precise ad identification to minimize disruptions and ensure integration with existing campaign infrastructures. Furthermore, this technology provides advertisers with greater control over their content, improving viewer satisfaction, enhancing campaign performance and delivering a consistent, uninterrupted experience across all platforms.',
+    logo: '/images/casestudies/adwatch/adwatch-logo.png',
+    bannerImage: '/images/casestudies/adwatch/adwatch-header-image.svg',
+    techStack: [
+      { name: 'Linux', icon: '/images/tech/logos/linux.png' },
+      { name: 'vgg-16', icon: '/images/tech/logos/vgg-16.png' },
+      { name: 'Python', icon: '/images/tech/logos/python.png' },
+      { name: 'Openai', icon: '/images/tech/logos/openai.png' },
+      { name: 'audfprint', icon: '/images/tech/logos/audprint.png' },
+      { name: 'FFMPEG', icon: '/images/tech/logos/ffmpeg.png' },
+    ],
+    impactStats: {
+      description: 'AdWatch achieved transformative results through this collaboration, redefining ad removal and enhancing its operational efficiency. The innovative solutions implemented laid a strong foundation for ad detection, strong integration and superior viewer engagement outcomes.',
+      percentage: '60%',
+      details: 'The idea of Non-Fungible Tokens...',
+    },
+    impactBoxes: [
+      { title: 'Ad detection', description: 'Estimated average savings of $20,000 per organization in recruitment costs due to better candidate matching.' },
+      { title: 'Improved viewer experience', description: 'Achieved a 95% reduction in viewer interruptions.' },
+      { title: 'Unwanted content removal', description: 'Accomplished a 75% reduction in unwanted content across all input streams.' },
+    ],
+    milestones: [
+      { title: 'Discovery and research', description: 'Our team conducted an in-depth analysis of current ad interruptions alongside comprehensive viewer feedback. The goal was to identify key pain points, patterns and potential improvements. Insights gathered were able to guide us in refining strategies to enhance the overall viewer experience and ad engagement.' },
+      { title: 'Design and development', description: 'Then our design and development teams developed a custom AI-powered framework personalized to AdWatch’s specific requirements. The system uses a Linux-Python stack and integrates FFmpeg, Audfprint and VGG-16 technologies. This innovative solution ensured precise functionality, optimized performance and integration for AdWatch’s needs.' },
+      { title: 'Integrations', description: 'Our next challenge was integration. The team integrated the AI-powered AdWatch into existing media infrastructure, especially focusing on compatibility with various platforms for smooth interaction and little to none disruption.' },
+      { title: 'Testing and deployment', description: 'In the final stages of the project, we were able to achieve up to 98% accuracy in ad detection through continued testing and refinements. We successfully delivered and integrated the AdWatch Engine into live media streams, enabling real-time functionality and immediate impact on enhancing ad monitoring and viewer experience.' },
+    ],
+  },
   // Add more case studies here
 ];
 

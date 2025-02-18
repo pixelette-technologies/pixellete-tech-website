@@ -122,7 +122,7 @@ export const mobileDevelopmentServicelist
     items: [
       'iOS App Development',
       'Android App Development',
-      'Wearable and Embedded App Development',
+      'Wearable and Embedded App',
       'PWA Development',
     ],
   },
@@ -148,7 +148,7 @@ export const mobileDevelopmentServices = {
     description:
     'We offer Android mobile app development solutions that put your brand on the map. With our app development services, we deliver user-friendly Android apps from concept to launch, ensuring they stand out and deliver a joyful user experience.',
   },
-  'Wearable and Embedded App Development': {
+  'Wearable and Embedded App': {
     imageSrc: '/images/aiServices/s_24.svg',
     title: 'Wearable and Embedded Software App Development',
     description:

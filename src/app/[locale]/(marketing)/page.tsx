@@ -1,5 +1,5 @@
 import { homeTechnologies } from '@/data/technology/homeTechnologies';
-import { GoogleTagManager } from '@next/third-parties/google';
+
 import { getTranslations } from 'next-intl/server';
 import dynamic from 'next/dynamic';
 
@@ -41,39 +41,7 @@ export default async function Index(props: IIndexProps) {
   const GTM_ID = 'GTM-KXC3K4RL';
   return (
     <>
-      <GoogleTagManager gtmId="GTM-KXC3K4RL" />
-      {/* <head>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `(
-        function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','${GTM_ID}');`,
-          }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              '@context': 'https://schema.org',
-              '@type': 'Company',
-              'name': 'Pixelette Technologies',
-              'url': 'https://www.pixelettetech.com',
-              'logo': 'https://pixelettetech.com/images/company/logo.svg',
-              'sameAs': [
-                'https://www.instagram.com/pixelettetechnologies',
-                'https://www.facebook.com/pixelette.technologies',
-                'https://x.com/Pixelette__Tech',
-                'https://www.linkedin.com/company/pixelettetechnologies/',
-                'https://www.youtube.com/channel/UCikfbjKTZ22-J4utsb9pzNg',
-              ],
-              'description': '',
-            }),
-          }}
-        />
-      </head> */}
+
       <div className="main-content"></div>
       <HeroSection />
       <OurClients />

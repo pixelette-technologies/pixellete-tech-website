@@ -65,23 +65,28 @@ export const OurServices: React.FC<OurServicesProps> = ({
         </center>
         <div className="ourServicesLists">
           {serviceLists.map((list, idx) => (
-            <div key={idx}>
+            <div
+              key={idx}
+              style={{ gap: '0rem' }}
+            >
               {list.items.map((item, index) => (
-                <p
+                <div
                   key={index}
+                  style={{ gap: '0rem' }}
                 >
-                  <p onMouseEnter={() => handleServiceClick(item)}>
+                  <p onMouseEnter={() => handleServiceClick(item)} style={{ fontSize: '1.5rem' }}>
                     <strong>
                       {' '}
                       {item}
                       {' '}
                     </strong>
                   </p>
-                </p>
+                </div>
               ))}
             </div>
           ))}
           <div
+            // className="ourServicesBlock"
             style={{
               width: '450px',
               backgroundColor: '#0F0F0FB2',

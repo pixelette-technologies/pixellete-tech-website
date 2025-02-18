@@ -10,12 +10,20 @@ export const caseStudies = [
   // },
   {
     id: 'accessible-intelligence-assessment',
-    frontImageSrc: '/images/casestudies/aia/aia-logo.png',
+    frontImageSrc: '/images/casestudies/aia/aia-card-logo-512.png',
     backImageSrc: '/images/casestudies/aia/aia-casestudy-image.png',
-    description: 'APIs and launch solutions like Prepaid cards, Multi-currency, Charge and Credit cards, and Buy Now Pay Later.',
+    description: 'a gamified cognitive mapping tool designed to help organizations meet diversity hiring quotas and support inclusive talent development',
     title: 'Accessible Intelligence Assessment',
     tags: ['Banking', 'Financial Service', 'Fintech', 'Payments'],
     buttonText: 'View Project',
   },
-  // Add more case studies as needed
+  {
+    id: 'adwatch',
+    frontImageSrc: '/images/casestudies/adwatch/adwatch-card-logo-512.png',
+    backImageSrc: '/images/casestudies/adwatch/adwatch-casestudy-image.png',
+    description: 'An advanced AI-powered solution designed to detect and remove advertisements from TV input streams and media campaigns.',
+    title: 'AdWatch',
+    tags: ['Artificial Intelligence', 'Adtech'],
+    buttonText: 'View Project',
+  },
 ];

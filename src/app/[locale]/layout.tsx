@@ -3,6 +3,7 @@ import Breadcrumb from '@/components/SEO/Breadcrumb';
 import arcjet, { detectBot, request } from '@/libs/Arcjet';
 import { Env } from '@/libs/Env';
 import { routing } from '@/libs/i18nNavigation';
+import { GoogleTagManager } from '@next/third-parties/google';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, setRequestLocale } from 'next-intl/server';
 import { Outfit } from 'next/font/google';
@@ -13,7 +14,7 @@ export const metadata: Metadata = {
   icons: [
     {
       rel: 'apple-touch-icon',
-      url: '/apple-touch-icon.png',
+      url: '/images/logo/shortLogo.svg',
     },
     {
       rel: 'icon',
@@ -91,7 +92,30 @@ export default async function RootLayout(props: {
 
   return (
     <html lang={locale} data-theme="dark">
-      <body className={`${outfit.className}`}>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'Company',
+              'name': 'Pixelette Technologies',
+              'url': 'https://www.pixelettetech.com',
+              'logo': 'https://pixelettetech.com/images/company/logo.svg',
+              'sameAs': [
+                'https://www.instagram.com/pixelettetechnologies',
+                'https://www.facebook.com/pixelette.technologies',
+                'https://x.com/Pixelette__Tech',
+                'https://www.linkedin.com/company/pixelettetechnologies/',
+                'https://www.youtube.com/channel/UCikfbjKTZ22-J4utsb9pzNg',
+              ],
+              'description': 'Cutting-edge AI & Blockchain solutions. Custom AI, blockchain consulting, metaverse integration. Innovative & impactful results for your business.',
+            }),
+          }}
+        />
+      </head>
+      <body className={`${outfit.className}`} style={{ overflowX: 'auto', overflowY: 'auto' }}>
+        <GoogleTagManager gtmId="GTM-KXC3K4RL" />
         {/* <ThemeProvider attribute="class"> */}
         <NextIntlClientProvider
           locale={locale}

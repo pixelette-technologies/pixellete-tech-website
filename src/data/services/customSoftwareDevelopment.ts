@@ -122,9 +122,9 @@ export const customDevelopmentServicelist
     title: 'AI Solutions',
     items: [
       'Software Consulting Services',
-      'Custom Software Development Services',
-      'Enterprise Software Development Services',
-      'Software Product Development Services',
+      'Custom Software Services',
+      'Enterprise Software Development',
+      'Product Development Services',
     ],
   },
   {
@@ -146,17 +146,17 @@ export const customDevelopmentServices = {
   },
   'Custom Software Development Services': {
     imageSrc: '/images/aiServices/s_30.svg',
-    title: 'Custom Software Development Services',
+    title: 'Custom Software Services',
     description:
     'In today’s fast-paced market, custom software development gives businesses a competitive edge. As a leading software development agency, we provide specialized software development tailored to your business goals and designed to drive results.',
   },
   'Enterprise Software Development Services': {
     imageSrc: '/images/aiServices/s_32.svg',
-    title: 'Enterprise Software Development Services',
+    title: 'Enterprise Software Development',
     description:
     'We develop custom enterprise software development solutions to help large businesses scale and optimize key functions. Our offerings improve business infrastructure while driving sustainable growth.',
   },
-  'Software Product Development Services': {
+  'Product Development Services': {
     imageSrc: '/images/aiServices/s_34.svg',
     title: 'Software Product Development Services',
     description:

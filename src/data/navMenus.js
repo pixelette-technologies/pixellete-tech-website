@@ -18,7 +18,7 @@ export const navMenus = [
         name: 'Blockchain Development',
         to: '/blockchain-development-services',
       },
-      { id: 5, name: 'AR/VR Development ', to: '/vr-ar-development-services' },
+      { id: 5, name: 'AR/VR Development ', to: '/ar-vr-development-services' },
       { id: 6, name: 'Web Development', to: '/web-development-services' },
       { id: 7, name: 'Mobile Application Development', to: '/mobile-app-development-services' },
       { id: 8, name: 'Custom Software Development', to: '/custom-software-development-services' },

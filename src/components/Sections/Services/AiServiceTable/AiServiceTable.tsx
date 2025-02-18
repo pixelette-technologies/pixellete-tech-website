@@ -1,12 +1,13 @@
 import { Button } from '@/components/Feature/Button/Button';
 import { Container } from '@/components/Feature/Container/Container';
+import Link from 'next/link';
 import React from 'react';
 import './index.css';
 
 type AiServiceTableProps = object;
 export const AiServiceTable: React.FC<AiServiceTableProps> = () => {
   return (
-    <div id='sideMargin'>
+    <div id="sideMargin">
       <Container className="main margins">
         <center style={{ marginTop: '10rem' }}>
           <h2>
@@ -156,7 +157,7 @@ export const AiServiceTable: React.FC<AiServiceTableProps> = () => {
                   <td>✔️</td>
                 </tr>
                 <tr>
-                  <td>✔️🏆</td>
+                  <td>✔️</td>
                 </tr>
                 <tr>
                   <td
@@ -165,13 +166,15 @@ export const AiServiceTable: React.FC<AiServiceTableProps> = () => {
                       borderBottomLeftRadius: '10px',
                     }}
                   >
-                    <Button
-                      className="primary"
-                      animation="fade-up"
-                      duration="2400"
-                    >
-                      Book a free consultation
-                    </Button>
+                    <Link href="/contact-us">
+                      <Button
+                        className="primary"
+                        // animation="fade-up"
+                        // duration="2400"
+                      >
+                        Book a free consultation
+                      </Button>
+                    </Link>
                   </td>
                 </tr>
               </tbody>
@@ -209,7 +212,7 @@ export const AiServiceTable: React.FC<AiServiceTableProps> = () => {
                   <td></td>
                 </tr>
                 <tr>
-                  <td>✔️🏆</td>
+                  <td>✔️</td>
                 </tr>
                 <tr>
                   <td
@@ -218,13 +221,15 @@ export const AiServiceTable: React.FC<AiServiceTableProps> = () => {
                       borderBottomLeftRadius: '10px',
                     }}
                   >
-                    <Button
-                      className="primary"
-                      animation="fade-up"
-                      duration="2400"
-                    >
-                      Book a free consultation
-                    </Button>
+                    <Link href="/contact-us">
+                      <Button
+                        className="primary"
+                        // animation="fade-up"
+                        // duration="2400"
+                      >
+                        Book a free consultation
+                      </Button>
+                    </Link>
                   </td>
                 </tr>
               </tbody>
@@ -262,7 +267,7 @@ export const AiServiceTable: React.FC<AiServiceTableProps> = () => {
                   <td>✔️</td>
                 </tr>
                 <tr>
-                  <td>✔️🏆</td>
+                  <td>✔️</td>
                 </tr>
                 <tr>
                   <td
@@ -271,13 +276,15 @@ export const AiServiceTable: React.FC<AiServiceTableProps> = () => {
                       borderBottomLeftRadius: '10px',
                     }}
                   >
-                    <Button
-                      className="primary"
-                      animation="fade-up"
-                      duration="2400"
-                    >
-                      Book a free consultation
-                    </Button>
+                    <Link href="/contact-us">
+                      <Button
+                        className="primary"
+                        // animation="fade-up"
+                        // duration="2400"
+                      >
+                        Book a free consultation
+                      </Button>
+                    </Link>
                   </td>
                 </tr>
               </tbody>

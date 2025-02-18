@@ -65,6 +65,7 @@ export const CaseStudyCard: FC<CaseStudiCardProps> = ({
                 alt="Case Studies Back"
                 width={300}
                 height={200}
+                quality={100}
               />
             </figure>
             <div style={{ margin: '1rem 0', textAlign: 'center', display: 'flex', flexDirection: 'column', gap: '2rem' }}>

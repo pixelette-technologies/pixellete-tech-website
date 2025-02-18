@@ -59,7 +59,7 @@ const OurMission: React.FC = () => {
             />
             <div className="content">
               <h2>Our core values</h2>
-              <p className="values">
+              <div className="values">
                 <h3>Building what’s next</h3>
                 <p>
                   Innovation is our lifeblood. We’re not waiting for the future;
@@ -84,7 +84,7 @@ const OurMission: React.FC = () => {
                   team, we work collaboratively to achieve powerful outcomes that
                   drive shared success.
                 </p>
-              </p>
+              </div>
             </div>
           </div>
         </div>

@@ -96,6 +96,12 @@
     /* top: -12rem; */
   }
 }
+@media only screen and (max-width: 600px) {
+  .heroSection > div > blockquote > * {
+    display: none;
+    /* top: -12rem; */
+  }
+}
 .heroSection > div > blockquote > *:nth-child(2) {
   max-width: 14.3rem;
   height: 14.13rem;

@@ -1,5 +1,6 @@
 import { Button } from '@/components/Feature/Button/Button';
 import { Container } from '@/components/Feature/Container/Container';
+import Link from 'next/link';
 import React from 'react';
 import './selectplan.css';
 
@@ -75,7 +76,9 @@ const PlanTable: React.FC = () => {
           <tr>
             <td colSpan={2}></td>
             <td>
-              <Button className="primary--light">Schedule a call</Button>
+              <Link href="/contact-us">
+                <Button className="primary--light">Schedule a call</Button>
+              </Link>
             </td>
             <td>
               <Button className="primary--light">Schedule a call</Button>

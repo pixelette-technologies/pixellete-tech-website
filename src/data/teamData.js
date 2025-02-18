@@ -1,23 +1,26 @@
 export const teamData = [
   {
-    image: '/images/people/Asif.png',
+    image: '/images/people/Asif.webp',
     role: 'CEO & Founder',
     name: 'Mr. Asif Ashiq Rana',
+    linkedin: 'https://www.linkedin.com/in/rana-khan-asif/',
+  },
+  {
+    image: '/images/people/hamza.jpg',
+    role: 'Managing Director - Global',
+    name: 'Humza Chishty',
+    linkedin: 'https://www.linkedin.com/in/humza-chishty/',
   },
   {
     image: '/images/people/Temur_Khan.jpg',
     name: 'Temur Khan',
     role: 'Chief Technology Officer',
-  },
-  {
-    image: '/images/people/hamza.jpg',
-    role: 'MD (Global)',
-    name: 'Humza Chishty',
+    linedin: 'https://www.linkedin.com/in/temurkhan/',
   },
   {
     image: '/images/people/barry.jpg',
     name: 'Barry Perkins',
-    role: 'SVP (USA)',
+    role: 'Managing Director - USA',
   },
   {
     image: '/images/people/Eric_R_Smithers.jpg',
@@ -27,18 +30,38 @@ export const teamData = [
   {
     image: '/images/people/Emmanuel_Ruiz_Jobim.jpg',
     name: 'Emmanuel Ruiz-Gimenez Jobim',
-    role: 'Head of Business Development',
+    role: 'Head of Partnerships',
+  },
+  {
+    image: '/images/people/maiwand-sultan.jpeg',
+    name: 'Maiwand Sultan',
+    role: 'Technical Project Manager',
+  },
+  {
+    image: '/images/people/M_Adnan.jpg',
+    name: 'Muhamad Adnan',
+    role: 'Solution Architect - Blockchain',
+  },
+  {
+    image: '/images/people/Sehr.jpg',
+    name: 'Sehr Navid',
+    role: 'Head of Operations',
   },
   // {
   //   image: '/images/people/Gulafsha.jpg',
   //   name: 'Gul Afshan',
   //   role: 'Head of Engineering (AI)',
   // },
-  // {
-  //   image: '/images/people/Ammar_Hanif.jpg',
-  //   name: 'Ammar Hanif',
-  //   role: 'Head of Engineering (Blockchain)',
-  // },
+  {
+    image: '/images/people/Ammar_Hanif.jpg',
+    name: 'Ammar Hanif',
+    role: 'Solution Architect - AI',
+  },
+  {
+    image: '/images/people/M_Ali.jpg',
+    name: 'Syed Muhammad Ali',
+    role: 'Innovation Strategist',
+  },
   // {
   //   image: '/images/people/Ayesha_Yaqoob.jpg',
   //   name: 'Ayesha Yaqoob',
@@ -54,11 +77,11 @@ export const teamData = [
   //   name: 'Muhammad Jawad',
   //   role: 'Head of Project Management',
   // },
-  // {
-  //   image: '/images/people/Ghulam.jpg',
-  //   name: 'Ghulam Mustafa',
-  //   role: 'Head of Product Design',
-  // },
+  {
+    image: '/images/people/Ghulam.jpg',
+    name: 'Ghulam Mustafa',
+    role: 'Head of Product Design',
+  },
   // {
   //   image: '/images/people/nurben_karatuna.jpg',
   //   name: 'Nurben Karatunee',
