@@ -1,12 +1,12 @@
 .heroSectionAiServices {
   margin-top: 1rem;
 }
-#heroSectionAiServices {
+/* #heroSectionAiServices {
   margin-top: -10rem;
-}
-.heroSectionAiServices-background {
+} */
+/* .heroSectionAiServices-background {
   position: relative;
-}
+} */
 .heroSectionAiServices-background > img {
   position: absolute;
   margin-top: -12rem;
@@ -120,11 +120,11 @@
   width: 50%;
 }
 .deliverHeroCard > section > h1 {
-  font-size: 45px;
-  font-weight: 600;
+  /* font-size: 45px;
+  font-weight: 600; */
 }
 .deliverHeroCard > section > p {
-  font-size: 18px;
+  /* font-size: 18px; */
   margin-top: 20px;
   color: rgb(184, 184, 184);
 }
@@ -139,10 +139,10 @@
     height: 50%;
   }
   .deliverHeroCard > section > h1 {
-    font-size: 35px;
+    /* font-size: 35px; */
   }
   .deliverHeroCard > section > p {
-    font-size: 15px;
+    /* font-size: 15px; */
   }
 }
 
@@ -152,10 +152,10 @@
     flex-direction: column-reverse;
   }
   .deliverHeroCard > section > h1 {
-    font-size: 30px;
+    /* font-size: 30px; */
   }
   .deliverHeroCard > section > p {
-    font-size: 15px;
+    /* font-size: 15px; */
     margin: 5px 0;
   }
   .deliverHeroCard > section {

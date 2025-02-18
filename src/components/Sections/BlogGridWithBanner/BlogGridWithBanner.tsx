@@ -3,21 +3,19 @@
 import { BlogCard } from '@/components/Feature/Blog/BlogCard';
 import { Button } from '@/components/Feature/Button/Button';
 import { Container } from '@/components/Feature/Container/Container';
-import { Heading } from '@/components/Feature/Heading/Heading';
-import { Text } from '@/components/Feature/Text/Text';
 import Image from 'next/image';
 import Link from 'next/link';
 import React, { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import styles from './BlogGridWithBanner.module.css';
 
-export const BlogGridWithBanner = ({ data = [], singleView = false }) => {
+export const BlogGridWithBanner = ({ data, singleView = false }) => {
   const [visibleCount, setVisibleCount] = useState(3);
 
   if (!data.length) {
     return <div>No blogs available.</div>;
   }
-  console.log(data);
+  // console.log(data);
   const blogCardsMain = data[0] || {};
   const blogCardsData = data.slice(1, visibleCount + 1);
 
@@ -40,9 +38,9 @@ export const BlogGridWithBanner = ({ data = [], singleView = false }) => {
     return (
       <BlogCard
         key={el.sys?.id || uuidv4()}
-        image={resolveUrl(el.fields.images?.fields?.file?.url)}
+        image={resolveUrl(el.fields.thumbnailImage?.fields?.file?.url)}
         date={el.fields.date || 'No date available'}
-        heading={el.fields.name || 'No title available'}
+        heading={el.fields.title || 'No title available'}
         description={el.fields.shortDescription || 'No description available'}
         to={`${el.fields.slug}`}
         duration={`${index + 2}00`}
@@ -57,42 +55,33 @@ export const BlogGridWithBanner = ({ data = [], singleView = false }) => {
         <div>
           {/* Hero Blog Section */}
           <header className={styles.heroBlog}>
-            {blogCardsMain && blogCardsMain.fields?.images?.fields?.file?.url && (
+            {blogCardsMain && blogCardsMain.fields?.thumbnailImage?.fields?.file?.url && (
               <figure className={styles.heroImage}>
                 <Image
-                  src={resolveUrl(blogCardsMain.fields.images.fields.file.url)}
+                  src={resolveUrl(blogCardsMain.fields.thumbnailImage.fields.file.url)}
                   alt={blogCardsMain.fields.name || 'Blog Hero Image'}
                   data-aos="fade-up"
                   data-aos-duration="800"
-                  width={50}
-                  height={50}
+                  width={1000}
+                  height={1000}
                 />
               </figure>
             )}
             <div className={styles.heroContent}>
-              <Text
-                className="titory--bold"
-                animation="fade-up"
-                duration="500"
-              >
-                {blogCardsMain.fields?.date || 'No date available'}
-              </Text>
-              <Heading
-                className="titory"
-                animation="fade-up"
-                duration="600"
-              >
-                {blogCardsMain.fields?.name || 'No title available'}
-              </Heading>
-              <Text
-                className="secondary"
-                animation="fade-up"
-                duration="700"
-              >
-                {blogCardsMain.fields?.shortDescription || 'No description available'}
-              </Text>
+
+              <p>
+                {blogCardsMain.sys?.updatedAt || 'No date available'}
+              </p>
+              <h3>
+                {blogCardsMain.fields?.title || 'No title available'}
+              </h3>
+
+              <p>
+                {blogCardsMain.fields?.description || 'No description available'}
+              </p>
+
               <div className={styles.readMoreButton}>
-                <Link href={`/blogs/${blogCardsMain.fields?.slug}`} passHref>
+                <Link href={`/blog/${blogCardsMain.fields?.slug}`} passHref>
                   <Button className="primary">
                     Read More
                   </Button>

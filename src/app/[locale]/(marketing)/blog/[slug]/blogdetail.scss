@@ -1,0 +1,562 @@
+.cardSectionBackground {
+  position: relative;
+}
+.cardSectionBackground > img {
+  position: absolute;
+  z-index: -90;
+  width: 100%;
+  /* height: 100vh; */
+  margin-top: -65rem;
+}
+.blog_detail {
+  padding-top: 5rem;
+  padding-bottom: 10rem;
+  z-index: 0;
+  @media (max-width: 1199px) {
+    padding-top: 10rem;
+    padding-bottom: 5rem;
+  }
+
+  @media (max-width: 767px) {
+    padding-top: 8rem;
+    padding-bottom: 3rem;
+  }
+
+  &::after {
+    position: absolute;
+    top: 15%;
+    left: 0;
+    background: url('/images/Ellipse1.png') no-repeat;
+    background-repeat: no-repeat;
+    background-size: cover;
+    content: '';
+    z-index: -1;
+    width: 80rem;
+    height: 100%;
+    filter: blur(80px);
+
+    @media (max-width: 767px) {
+      width: 30rem;
+      top: 0;
+    }
+  }
+
+  &::before {
+    position: absolute;
+    top: 15%;
+    right: 0;
+    background: url('/images/Ellipse2.png') no-repeat;
+    background-repeat: no-repeat;
+    background-size: cover;
+    content: '';
+    z-index: -1;
+    width: 80rem;
+    height: 100%;
+    filter: blur(80px);
+
+    @media (max-width: 767px) {
+      width: 30rem;
+      bottom: 0;
+    }
+  }
+
+  &_inner {
+    .videoCard {
+      .react-thumbnail-generator {
+        img {
+          object-fit: contain;
+        }
+      }
+    }
+
+    .blogDetailBanner {
+      background-color: #0a2136;
+      border-radius: 2rem;
+
+      img {
+        width: 100%;
+        height: 50.7rem;
+        object-fit: cover;
+        border-radius: 2rem;
+
+        @media (max-width: 767px) {
+          height: 20rem;
+          border-radius: 2rem;
+          object-fit: cover;
+        }
+      }
+    }
+
+    .contentImage {
+      width: 100%;
+      height: 25.7rem;
+      object-fit: cover;
+      border-radius: 4rem;
+      object-position: center;
+
+      @media (max-width: 767px) {
+        height: 25rem;
+        border-radius: 2rem;
+      }
+    }
+
+    .react-thumbnail-generator {
+      width: 100%;
+      height: 25.7rem;
+
+      @media (max-width: 767px) {
+        height: 20rem;
+      }
+    }
+
+    video {
+      width: 100%;
+      height: 50rem;
+
+      @media (max-width: 767px) {
+        height: 25rem;
+      }
+    }
+
+    &_content {
+      margin-top: 2rem;
+
+      @media (max-width: 767px) {
+        margin-top: 2rem;
+      }
+
+      p {
+        font-size: 1.6rem;
+        font-weight: 500;
+        line-height: 2.4rem;
+        color: '#fff';
+
+        @media (max-width: 767px) {
+          margin: 0.5rem 0;
+          font-size: 1.4rem;
+          line-height: 2rem;
+        }
+      }
+
+      &_area {
+        margin-top: 3.6rem;
+
+        p {
+          margin-top: 1rem;
+          font-size: 1.6rem;
+          font-weight: 500;
+          line-height: 2.6rem;
+          color: #fff;
+
+          @media (max-width: 767px) {
+            margin-top: 1rem;
+          }
+
+          @media (max-width: 575px) {
+            font-size: 1.3rem;
+            line-height: 2.2rem;
+          }
+        }
+
+        .row {
+          margin: 0 -1.2rem;
+
+          > div {
+            padding: 0 1.2rem;
+            margin-bottom: 2.5rem;
+
+            @media (max-width: 767px) {
+              margin-bottom: 2rem;
+            }
+          }
+        }
+
+        .blog_box {
+          padding: 2.4rem 2.4rem 3.2rem;
+          border-radius: 0px 4.2rem;
+          background: transparent;
+          box-shadow: 0px 4px 50px 0px rgba(50, 50, 50, 0.38);
+          backdrop-filter: blur(25px);
+          border: 0.1rem solid transparent;
+          background: #fff;
+          height: 100%;
+
+          @media (max-width: 1679px) {
+            padding: 1.8rem;
+          }
+
+          p {
+            margin-top: 1rem;
+            font-size: 1.4rem;
+            font-weight: 500;
+            line-height: 2.4rem;
+            color: #fff;
+
+            @media (max-width: 767px) {
+              margin-top: 1rem;
+            }
+
+            @media (max-width: 575px) {
+              font-size: 1.2rem;
+              line-height: 2rem;
+            }
+          }
+        }
+      }
+    }
+
+    &_moreblog {
+      margin-top: 10rem;
+      margin-bottom: 4rem;
+
+      @media (max-width: 1199px) {
+        margin: 4rem 0 2rem;
+      }
+    }
+  }
+}
+
+.load-more {
+  text-align: center;
+  padding: 40px;
+}
+
+.toc {
+  position: relative; /* Keeps it visible while scrolling */
+  top: 20px; /* Adjust this to space from the top */
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.248); /* Subtle shadow for depth */
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.toc h5 {
+  margin: 0 0 10px;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.toc ul {
+  list-style: none; /* Remove default bullets */
+  padding: 0;
+  margin: 0;
+}
+
+.toc ul li {
+  padding: 1rem;
+  margin-bottom: 8px;
+  position: relative; /* Needed for ::before positioning */
+}
+
+.toc ul li a {
+  text-decoration: none; /* Remove underline */
+  color: #fff; /* Primary blue for links */
+  font-weight: 400;
+  display: block; /* Ensures full-width clickable area */
+  padding-left: 10px; /* Space for the vertical bar */
+  transition:
+    color 0.3s ease,
+    padding-left 0.3s ease;
+}
+
+.toc ul li:hover a,
+.toc ul li a:focus,
+.toc ul li a:active {
+  color: #0056b3; /* Darker blue on hover/active */
+  padding-left: 15px; /* Slight indentation effect */
+}
+
+.toc ul li::before {
+  content: ''; /* Creates the vertical bar */
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 100%;
+  background-color: transparent; /* Hidden by default */
+  transition: background-color 0.3s ease;
+}
+
+.toc ul li:hover::before,
+.toc ul li a:focus::before,
+.toc ul li a:active::before {
+  background-color: #0056b3; /* Dark blue bar on hover/active */
+}
+
+.share-container {
+  margin-top: 2rem;
+  padding: 2rem;
+  display: flex; /* Align child elements in a row */
+  justify-content: space-between; /* Space out the p and social icons */
+  align-items: center; /* Vertically align elements in the center */
+  background: url('/images/blog/shareBackgroundStrip.png') no-repeat;
+}
+.share-containerToc {
+  margin-top: 2rem;
+  padding: 2rem;
+  display: flex; /* Align child elements in a row */
+  flex-direction: column; /* Stack the paragraph and icons vertically */
+  align-items: flex-start; /* Align to the start of the container */
+  background: url('/images/blog/shareBackgroundStrip.png') no-repeat;
+}
+
+.share-container p {
+  margin: 0; /* Remove default margin from the paragraph */
+  font-size: 16px; /* Adjust font size as needed */
+}
+
+.social-links {
+  display: flex; /* Align social icons in a row */
+  gap: 10px; /* Space between icons */
+}
+
+.social-links a {
+  display: inline-block; /* Ensure links are inline */
+}
+
+.social-links svg {
+  width: 24px; /* Set size for the icons */
+  height: 24px; /* Set size for the icons */
+  fill: #0073b1; /* Set a default color, can be adjusted */
+  transition: fill 0.3s ease; /* Smooth transition on hover */
+}
+
+.social-links a:hover svg {
+  fill: #005582; /* Change icon color on hover (example: dark blue) */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .share-container {
+    flex-direction: column; /* Stack the paragraph and icons vertically */
+    align-items: flex-start; /* Align to the start of the container */
+  }
+
+  .social-links {
+    margin-top: 10px; /* Add spacing between paragraph and icons */
+  }
+}
+
+/* Container styling */
+.rich-text-container {
+  line-height: 1.6; /* Improve readability */
+  margin: 0 auto; /* Center the content */
+  white-space: pre-line;
+}
+
+/* Paragraphs inside the container (excluding lists, blockquotes, etc.) */
+.rich-text-container p {
+  margin-bottom: 1.25em; /* Increased space between paragraphs */
+  font-size: 1.5rem; /* Standardize the font size */
+  text-align: justify; /* Justify text for clean edges */
+}
+
+.rich-text-container p,
+.rich-text-container li,
+.rich-text-container span {
+  white-space: pre-line;
+}
+
+/* Lists */
+.rich-text-container ul,
+.rich-text-container ol {
+  margin-bottom: 1.25em; /* Spacing after lists */
+  padding-left: 1.5em; /* Indentation for lists */
+  list-style-position: outside; /* Ensure bullets/numbers are aligned properly */
+}
+
+.rich-text-container ul {
+  margin-bottom: 1.25em; /* Spacing after unordered lists */
+  padding-left: 1.5em; /* Indentation for lists */
+  list-style-type: disc; /* Show bullets for unordered list */
+}
+
+.rich-text-container li {
+  font-size: 1.6rem; /* Standard font size for list items */
+  margin-bottom: 0.5em; /* Space between list items */
+  color: #fff;
+}
+
+/* Nested paragraphs inside lists, avoid conflict with regular paragraphs */
+.rich-text-container li p {
+  margin-bottom: 0.75em; /* Reduced space to avoid large gaps */
+  font-size: 1.5rem; /* Slightly smaller text in lists */
+  text-align: left; /* Align text to the left in list paragraphs */
+}
+
+/* Blockquotes */
+.rich-text-container blockquote {
+  margin: 1.5em 0; /* Vertical space around blockquotes */
+  padding: 1em 1.5em; /* Padding inside blockquotes */
+  background-color: #f9f9f9; /* Light background for quotes */
+  border-left: 5px solid #007bff; /* Blue border for visual emphasis */
+  font-style: italic; /* Italicize quote text */
+  font-size: 1.1rem; /* Slightly larger text for blockquotes */
+  color: #555; /* Slightly lighter text color */
+  line-height: 1.75; /* Increase line height for quotes */
+}
+
+/* Links */
+.rich-text-container a {
+  color: #007bff; /* Link color */
+  text-decoration: none; /* Remove underline */
+}
+
+.rich-text-container a:hover {
+  text-decoration: underline; /* Underline on hover for better UX */
+}
+
+/* Horizontal rules */
+.rich-text-container hr {
+  border: 0;
+  border-top: 1px solid #ddd; /* Light gray line for hr */
+  margin: 2em 0; /* Space before and after horizontal rule */
+}
+
+/* Additional styling for embedded content like images, videos, etc. */
+.rich-text-container img {
+  max-width: 100%; /* Ensure images are responsive */
+  height: auto;
+  display: block;
+  margin: 1em 0; /* Add space around images */
+}
+
+.rich-text-container iframe {
+  width: 100%;
+  height: 315px; /* Set a fixed height for embedded videos */
+  margin: 1em 0; /* Add space around iframe elements */
+}
+
+.author-info {
+  background-color: #3245574a;
+  padding: 1rem;
+  border-radius: 0.06rem;
+  box-shadow: 0 0.25rem 0.16rem rgba(0, 0, 0, 0.193);
+  margin-top: 4rem;
+}
+
+.author-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.8rem;
+}
+
+.author-image {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 0.8rem;
+  border: 0.5rem solid #ddd;
+}
+
+.author-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.author-name {
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+  color: #dfcfff;
+}
+
+.author-title {
+  margin: 0;
+  font-size: 14px;
+  color: #777;
+}
+
+.author-description {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+
+.author-social-links {
+  display: flex;
+  gap: 10px;
+}
+
+.social-link {
+  font-size: 3rem; /* Adjust the icon size */
+  color: #ffffff; /* Default icon color */
+  transition: color 0.3s ease;
+}
+
+.social-link:hover {
+  color: #0073e6; /* Highlight color on hover */
+}
+
+// .bootstrap-container {
+//   max-width: 1400px; /* Set your own width */
+//   margin: 0 auto;    /* Center-align like Bootstrap container */
+//   padding: 20px;     /* Add padding */
+//   background-color: #f8f9fa; /* Background color */
+// }
+
+// #bootstrap-row {
+//   margin-bottom: 20px; /* Add space between rows */
+//   background-color: #e9ecef; /* Background color for rows */
+// }
+
+// #bootstrap-col {
+//   padding: 20px; /* Increase padding inside columns */
+//   border: 1px solid #ddd; /* Add a border around columns */
+//   background-color: #ffffff; /* Background color for columns */
+// }
+
+.custom-col {
+  flex: 0 0 auto; /* Allows it to shrink and grow */
+  width: 33.3333%; /* Equal to 4 columns in a 12-column grid */
+  padding: 15px; /* Default Bootstrap padding */
+  box-sizing: border-box; /* Ensures padding doesn't affect width */
+}
+
+@media screen and (max-width: 1024px) {
+  #hiddenSectionBlog {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .blogAuthor {
+    display: flex;
+    flex-direction: column;
+
+    div {
+      img {
+        width: 30px;
+        height: 30px;
+      }
+      p {
+        font-size: 14px;
+      }
+    }
+    div:nth-child(2) {
+      p {
+        margin-bottom: 2rem;
+      }
+    }
+  }
+}
+
+/* Add underline and color to links */
+.custom-link {
+  text-decoration: underline;
+  color: #007bff; /* Change this to your desired color */
+  transition:
+    color 0.3s ease,
+    text-decoration-color 0.3s ease;
+}
+
+/* Hover effect on links */
+.custom-link:hover {
+  color: #0056b3; /* Change to a darker shade or any hover color */
+  text-decoration-color: #0056b3; /* Change underline color on hover */
+}

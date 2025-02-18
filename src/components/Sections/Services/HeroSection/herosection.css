@@ -89,7 +89,7 @@
 }
 .heroSection > div > h1 {
   text-align: center;
-  font-size: 8rem;
+  font-size: 4.5rem;
   max-width: 92rem;
   margin: auto;
   font-weight: 600;
@@ -97,13 +97,13 @@
 }
 @media only screen and (max-width: 62.6em) {
   .heroSection > div > h1 {
-    font-size: 8.5rem;
+    /* font-size: 8.5rem; */
     line-height: 10rem;
   }
 }
 @media only screen and (max-width: 37.5em) {
   .heroSection > div > h1 {
-    font-size: 4rem;
+    /* font-size: 4rem; */
     line-height: 6rem;
   }
 }
@@ -112,7 +112,7 @@
   max-width: 78.8rem;
   margin: auto;
   padding-top: 1rem;
-  font-size: 1.5rem;
+  /* font-size: 1.5rem; */
 }
 .heroSection > div > div {
   display: flex;
@@ -121,7 +121,6 @@
   margin-top: 3.2rem;
 }
 .heroSection > div > div > * {
-  width: 26.6rem;
 }
 @media only screen and (max-width: 37.5em) {
   .heroSection > div > div > * {

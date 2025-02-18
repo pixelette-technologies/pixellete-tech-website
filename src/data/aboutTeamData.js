@@ -125,11 +125,11 @@ export const aboutTeamData = [
     name: 'Dave Sackett',
     role: 'Head of Operations (Boston, USA)',
   },
-  {
-    image: 'images/people/Jawad.jpg',
-    name: 'Muhammad Jawad',
-    role: 'Head of Project Management',
-  },
+  // {
+  //   image: 'images/people/Jawad.jpg',
+  //   name: 'Muhammad Jawad',
+  //   role: 'Head of Project Management',
+  // },
   {
     image: 'images/people/Ghulam.jpg',
     name: 'Ghulam Mustafa',

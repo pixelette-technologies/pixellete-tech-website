@@ -104,7 +104,7 @@
   margin: 4rem 0 2rem 0;
 }
 
-.detailNavigate > section > div > div > p > p >a {
+.detailNavigate > section > div > div > p > p > a {
   color: white;
   font-weight: 700;
   text-decoration: underline;
@@ -113,8 +113,6 @@
 .detailNavigate > section > div > div > p > p {
   margin: 2rem 0;
 }
-
-
 
 .detailNavigate > section > div > *:not(:last-child) {
   margin-bottom: 4rem;

@@ -1,72 +1,20 @@
-// import { FiExternalLink } from "react-icons/fi";
-// import { Container } from "@/components/Feature/Container/Container";
-// import { Heading } from "@/components/Feature/Heading/Heading";
-// import { Button } from "@/components/Feature/Button/Button";
-// import './casestudies.css'
-// import { CaseSlider } from "@/components/Feature/CaseSlider/CaseSlider";
-
-// const images = [
-//   '/images/home/CaseSliderImgg.png',
-//   '/images/home/CaseSliderImgg.png',
-//   '/images/home/CaseSliderImgg.png',
-//   '/images/home/CaseSliderImgg.png',
-//   '/images/home/CaseSliderImgg.png',
-// ];
-
-// const CaseStudies = () => {
-//   return (
-//     <div className="caseStudySection">
-//       <Container className="main margins">
-//         <center>
-//           <Heading
-//             className="secondry"
-//             animation="fade-up"
-//             duration="500"
-//             id="h_ani"
-//           >
-//          Our past work speaks volumes
-//           </Heading>
-//           {/* <Link to="/case-studies"> */}
-//           <Button className="primary" animation="fade-up" duration="400">
-//             <span
-//               style={{ display: "flex", alignItems: "center", gap: "0.7rem" }}
-//             >
-//               View Our Projects
-//               <FiExternalLink />
-//             </span>
-//           </Button>
-//           {/* </Link> */}
-//         </center>
-//         <section>
-//           {/* <CaseSlider data={data.caseSliderData} /> */}
-
-//           <CaseSlider data={images} />
-//         </section>
-//       </Container>
-//     </div>
-//   );
-// };
-
-// export default CaseStudies;
-
-
-
 'use client';
 
 import { Button } from '@/components/Feature/Button/Button';
+import { Card } from '@/components/Feature/CaseSlider/Card';
 import { Container } from '@/components/Feature/Container/Container';
-import { Heading } from '@/components/Feature/Heading/Heading';
-import { Text } from '@/components/Feature/Text/Text';
-import data from '@/data';
 import Image from 'next/image';
 import React, { useRef } from 'react';
 import { FiExternalLink } from 'react-icons/fi';
 import Slider from 'react-slick';
 import { v4 as uuidv4 } from 'uuid';
 import './casestudies.css';
-import { Card } from '@/components/Feature/CaseSlider/Card';
 
-const images = [
+type CaseStudiesProps = {
+  images: string[];
+};
+
+const images: string[] = [
   '/images/home/CaseSliderImgg.png',
   '/images/home/CaseSliderImgg.png',
   '/images/home/CaseSliderImgg.png',
@@ -74,9 +22,8 @@ const images = [
   '/images/home/CaseSliderImgg.png',
 ];
 
-
-export const CaseStudies = () => {
-  const slider = useRef(null);
+export const CaseStudies: React.FC<CaseStudiesProps> = () => {
+  const slider = useRef<Slider>(null);
 
   const settings = {
     dots: false,
@@ -97,14 +44,14 @@ export const CaseStudies = () => {
 
   return (
     <>
-        <Container className="main margins">
-          <div className="testimonialSection-background">
-            <img
-              src="/images/home/testimonials/testimonialBackground.svg"
-              alt="Testimonial Background"
-            />
-          </div>
-        </Container>
+      <Container className="main margins">
+        <div className="testimonialSection-background">
+          <img
+            src="/images/home/testimonials/testimonialBackground.svg"
+            alt="Testimonial Background"
+          />
+        </div>
+      </Container>
 
       <div className="testimonialSection">
         <Container className="main">
@@ -113,16 +60,15 @@ export const CaseStudies = () => {
           </blockquote>
 
           <center>
-            <Heading className="secondry" animation="fade-up" duration="400" id="h_ani">
-            Clients love us
-            </Heading>
+            <h2>
+              Clients love us
+            </h2>
             <div data-aos-duration="500" data-aos="fade-up">
-              <Text className="primary">4.9</Text>
+              <p>4.9</p>
               <Image src="/images/home/stars.svg" alt="Rating Stars" width={100} height={100} />
               <Button className="primary">
-                
-                  21 Reviews
-                  <FiExternalLink />
+                21 Reviews
+                <FiExternalLink />
               </Button>
             </div>
           </center>
@@ -130,11 +76,9 @@ export const CaseStudies = () => {
           <section>
             <div className="id">
               <Slider ref={slider} {...settings}>
-                {images.map((el, index) => (
-                  <a key={uuidv4()} href={el.url}>
-                    <Card
-                    image={el}
-                    />
+                {images.map(el => (
+                  <a key={uuidv4()} href={el}>
+                    <Card image={el} />
                   </a>
                 ))}
               </Slider>
@@ -165,3 +109,5 @@ export const CaseStudies = () => {
     </>
   );
 };
+
+export default CaseStudies;

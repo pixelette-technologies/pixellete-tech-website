@@ -2,7 +2,6 @@ import type { FC } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { v4 as uuidv4 } from 'uuid';
-import Text from '../Text/Text';
 import './cards.css';
 
 type PlanData = {
@@ -24,7 +23,7 @@ const YourPlanCard: FC<YourPlanCardProps> = ({ data }) => {
     <>
       {data.map((el, index) => {
         const cardContent = (
-          <div>
+          <div style={{ height: '300px' }}>
             <div style={{ display: 'flex' }}>
               <div
                 style={{
@@ -34,6 +33,7 @@ const YourPlanCard: FC<YourPlanCardProps> = ({ data }) => {
                   gap: '7px',
                   padding: '5px 20px',
                   borderRadius: '100px',
+
                 }}
               >
                 <Image
@@ -41,33 +41,45 @@ const YourPlanCard: FC<YourPlanCardProps> = ({ data }) => {
                   alt="icon"
                   width={20}
                   height={20}
+                  quality={100}
                 />
-                <h3>{el.iconhead}</h3>
+                <h4>{el.iconhead}</h4>
               </div>
             </div>
-            <Text className="primary--bold">{el.name}</Text>
-            <Text className="titory">{el.description}</Text>
-            <div style={{display: 'flex', alignItems: 'center'}}>
-            <Text className="titory-link">
-              {el.link}
-              {' '}
-            </Text>
-              <div>
-              <Image
-                src={el.linkIcon}
-                alt="link icon"
-                width={20}
-                height={20}
-              />
+            <h3>{el.name}</h3>
+            <p>{el.description}</p>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.3rem', marginTop: '1rem' }}>
+              {/* {el.link}
+                {' '}
+                <FaExternalLinkAlt /> */}
+              {/* <div>
+                <Link href={el.path}>
+                  <p>{el.link}</p>
+                </Link>
               </div>
+              {' '}
+              <div>
+                <Image
+                  src={el.linkIcon}
+                  alt="link icon"
+                  width={10}
+                  height={10}
+                />
+              </div> */}
             </div>
           </div>
         );
 
-        return !el.path
+        return el.path
           ? (
               <Link href={el.path} key={uuidv4()} passHref>
-                {cardContent}
+                <div
+                  key={uuidv4()}
+                  id="servicesCard_id"
+                  className="servicesCard"
+                >
+                  {cardContent}
+                </div>
                 {/* <a
                   id="servicesCard_id"
                   className="servicesCard"
@@ -84,8 +96,8 @@ const YourPlanCard: FC<YourPlanCardProps> = ({ data }) => {
                 key={uuidv4()}
                 id="servicesCard_id"
                 className="servicesCard"
-                data-aos="fade-up"
-                data-aos-duration={`2${index}00`}
+                // data-aos="fade-up"
+                // data-aos-duration={`2${index}00`}
               >
                 {cardContent}
               </div>

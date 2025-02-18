@@ -1,0 +1,29 @@
+.ourPlanContainer > div {
+  position: relative;
+  padding: 0 5rem;
+}
+.ourPlanContainer > div > blockquote {
+  width: 100%;
+}
+.ourPlanContainer > div > blockquote > img {
+  position: absolute;
+  z-index: -100;
+}
+.ourPlanContainer > div > blockquote > *:first-child {
+  right: 2rem;
+  margin-top: 33rem;
+  height: 19.5rem;
+  width: 18rem;
+}
+@media only screen and (max-width: 37.5em) {
+  .ourPlanContainer > div > blockquote > *:first-child {
+    right: 5rem;
+    width: 16rem;
+    margin-right: 3rem;
+  }
+}
+.ourPlanContainer > div > blockquote > *:last-child {
+  left: -1px;
+  margin-top: 10rem;
+  height: 50rem;
+}

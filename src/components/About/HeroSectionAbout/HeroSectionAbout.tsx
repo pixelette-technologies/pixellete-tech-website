@@ -1,7 +1,5 @@
 import { Button } from '@/components/Feature/Button/Button';
 import { Container } from '@/components/Feature/Container/Container';
-import { Heading } from '@/components/Feature/Heading/Heading';
-import Text from '@/components/Feature/Text/Text';
 import Link from 'next/link';
 import './herosectionabout.css';
 
@@ -18,19 +16,16 @@ const HeroSectionAbout: React.FC = () => {
         <Container className="main margins">
           <center>
             <header>
-              <Heading
-                className="secondry"
-                animation="zoom-out"
-                duration="300"
-              >
-                Leading Innovation in AI and Blockchain
-              </Heading>
-              <Text className="primary" animation="zoom-in" duration="500">
+              <h1>
+              A league of builders, set on shaping future tech
+              </h1>
+              <p>
                 We’re on a mission to empower businesses with groundbreaking
                 solutions that reshape the digital world as we know it.
-              </Text>
+              </p>
+
               <div className="buttonpad"></div>
-              <Link href="contactUs">
+              <Link href="/contact-us">
                 <Button className="primary">
                   Get in Touch and Explore Our Journey
                 </Button>

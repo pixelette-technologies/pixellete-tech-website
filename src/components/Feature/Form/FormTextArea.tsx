@@ -1,7 +1,6 @@
 import { ErrorMessage, useField } from 'formik';
 import React from 'react';
-import './form.css'
-
+import './form.css';
 
 export const FormTextArea = ({ label, ...props }) => {
   const [field, meta] = useField(props);

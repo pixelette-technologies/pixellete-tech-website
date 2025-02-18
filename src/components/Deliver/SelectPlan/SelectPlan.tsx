@@ -1,29 +1,8 @@
 import { Button } from '@/components/Feature/Button/Button';
 import { Container } from '@/components/Feature/Container/Container';
-import { Heading } from '@/components/Feature/Heading/Heading';
+import Link from 'next/link';
 import React from 'react';
 import './selectplan.css';
-
-const SelectPlan: React.FC = () => {
-  return (
-    <div className="SelectPlan">
-      <Container className="main">
-        <center data-aos-duration="700" data-aos="fade-up">
-          <Heading className="primary" id="h_ani">
-            Select a Plan That Aligns Best with
-            {' '}
-            <br />
-            {' '}
-            Your Project Goals
-          </Heading>
-        </center>
-        <div data-aos-duration="500" data-aos="fade-up">
-          <PlanTable />
-        </div>
-      </Container>
-    </div>
-  );
-};
 
 const PlanTable: React.FC = () => {
   return (
@@ -97,7 +76,9 @@ const PlanTable: React.FC = () => {
           <tr>
             <td colSpan={2}></td>
             <td>
-              <Button className="primary--light">Schedule a call</Button>
+              <Link href="/contact-us">
+                <Button className="primary--light">Schedule a call</Button>
+              </Link>
             </td>
             <td>
               <Button className="primary--light">Schedule a call</Button>
@@ -108,6 +89,28 @@ const PlanTable: React.FC = () => {
           </tr>
         </tbody>
       </table>
+    </div>
+  );
+};
+const SelectPlan: React.FC = () => {
+  return (
+    <div className="SelectPlan">
+      <Container className="main">
+        <center // data-aos-duration="700" data-aos="fade-up"
+        >
+          <h2 id="h_ani">
+            Select a Plan That Aligns Best with
+            {' '}
+            <br />
+            {' '}
+            Your Project Goals
+          </h2>
+        </center>
+        <div // data-aos-duration="500" data-aos="fade-up"
+        >
+          <PlanTable />
+        </div>
+      </Container>
     </div>
   );
 };

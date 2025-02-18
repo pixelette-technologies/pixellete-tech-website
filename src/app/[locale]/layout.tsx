@@ -1,9 +1,12 @@
 import type { Metadata } from 'next';
+import Breadcrumb from '@/components/SEO/Breadcrumb';
 import arcjet, { detectBot, request } from '@/libs/Arcjet';
 import { Env } from '@/libs/Env';
 import { routing } from '@/libs/i18nNavigation';
+import { GoogleTagManager } from '@next/third-parties/google';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, setRequestLocale } from 'next-intl/server';
+import { Outfit } from 'next/font/google';
 import { notFound } from 'next/navigation';
 import '@/styles/global.css';
 
@@ -11,23 +14,23 @@ export const metadata: Metadata = {
   icons: [
     {
       rel: 'apple-touch-icon',
-      url: '/apple-touch-icon.png',
+      url: '/images/logo/shortLogo.svg',
     },
     {
       rel: 'icon',
       type: 'image/png',
       sizes: '32x32',
-      url: '/favicon-32x32.png',
+      url: '/images/logo/shortLogo.svg',
     },
     {
       rel: 'icon',
       type: 'image/png',
       sizes: '16x16',
-      url: '/favicon-16x16.png',
+      url: '/images/logo/shortLogo.svg',
     },
     {
       rel: 'icon',
-      url: '/favicon.ico',
+      url: '/images/logo/shortLogo.svg',
     },
   ],
 };
@@ -49,6 +52,12 @@ const aj = arcjet.withRule(
     ],
   }),
 );
+
+const outfit = Outfit({
+  weight: ['100', '300', '400', '600', '900'],
+  subsets: ['latin'],
+  variable: '--font-outfit',
+});
 
 export default async function RootLayout(props: {
   children: React.ReactNode;
@@ -81,19 +90,39 @@ export default async function RootLayout(props: {
   // Using internationalization in Client Components
   const messages = await getMessages();
 
-  // The `suppressHydrationWarning` attribute in <body> is used to prevent hydration errors caused by Sentry Overlay,
-  // which dynamically adds a `style` attribute to the body tag.
-
   return (
     <html lang={locale} data-theme="dark">
-      <body suppressHydrationWarning>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'Company',
+              'name': 'Pixelette Technologies',
+              'url': 'https://www.pixelettetech.com',
+              'logo': 'https://pixelettetech.com/images/company/logo.svg',
+              'sameAs': [
+                'https://www.instagram.com/pixelettetechnologies',
+                'https://www.facebook.com/pixelette.technologies',
+                'https://x.com/Pixelette__Tech',
+                'https://www.linkedin.com/company/pixelettetechnologies/',
+                'https://www.youtube.com/channel/UCikfbjKTZ22-J4utsb9pzNg',
+              ],
+              'description': 'Cutting-edge AI & Blockchain solutions. Custom AI, blockchain consulting, metaverse integration. Innovative & impactful results for your business.',
+            }),
+          }}
+        />
+      </head>
+      <body className={`${outfit.className}`} style={{ overflowX: 'auto', overflowY: 'auto' }}>
+        <GoogleTagManager gtmId="GTM-KXC3K4RL" />
         {/* <ThemeProvider attribute="class"> */}
         <NextIntlClientProvider
           locale={locale}
           messages={messages}
         >
+          <Breadcrumb siteUrl={process.env.NEXT_PUBLIC_SITE_URL || 'https://www.pixelettetech.com'} />
           {props.children}
-
           {/* <DemoBadge /> */}
         </NextIntlClientProvider>
         {/* </ThemeProvider> */}

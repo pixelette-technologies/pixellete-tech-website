@@ -1,5 +1,4 @@
 import { Container } from '@/components/Feature/Container/Container';
-import { Heading } from '@/components/Feature/Heading/Heading';
 import React from 'react';
 import './partner.module.css';
 
@@ -19,9 +18,9 @@ export const Partner = () => {
     <div className="partners" data-aos="fade-up" data-aos-duration="600">
       <Container className="main margins">
         <center>
-          <Heading className="secondry" id="h_ani">
+          <h1 id="h_ani">
             Industry Partnerships and Accreditation
-          </Heading>
+          </h1>
         </center>
         <div className="partners-scroll-container">
           <div className="partners-scroll">

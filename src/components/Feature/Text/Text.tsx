@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react';
 import React from 'react';
-import './text.css'
+import './text.css';
 
 type TextProps = {
   className?: string;
@@ -10,7 +10,7 @@ type TextProps = {
   children?: ReactNode;
 };
 
-export const Text: React.FC<TextProps> = ({
+export const Text: React.FCProps> = ({
   className = '',
   dangerouslySetInnerHTML,
   animation,

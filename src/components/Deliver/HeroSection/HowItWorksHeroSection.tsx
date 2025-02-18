@@ -1,8 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
 import { Container } from '../../Feature/Container/Container';
-import { Heading } from '../../Feature/Heading/Heading';
-import Text from '../../Feature/Text/Text';
 import './herosection.css';
 
 type HeroSectionProps = {
@@ -31,25 +29,26 @@ const HowItWorksHeroSection: React.FC<HeroSectionProps> = ({
 
   return (
     <>
-      <Container className="main margins">
+      <Container>
         <div className="heroSectionAiServices-background">
           <Image src={backgroundImage} alt="background" width={100} height={100} />
         </div>
       </Container>
       <div id="heroSectionAiServices" className="heroSectionAiServices">
-        <Container className="main margins">
+        <Container>
           <center>
-            <Heading className="secondry" animation="zoom-out" duration="2000">
+            <h1>
               {heading}
-            </Heading>
-            <Text className="primary" animation="zoom-in" duration="2200">
+            </h1>
+            <p>
               {text}
-            </Text>
+            </p>
+
           </center>
-          <section>
+          <section id="sideMargin">
             <div className="deliverHeroCard">
               <section>
-                <h1>{deliverTitle}</h1>
+                <h2>{deliverTitle}</h2>
                 {deliverDescription.map((desc, index) => (
                   <p key={index}>{desc}</p>
                 ))}

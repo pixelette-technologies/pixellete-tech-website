@@ -1,7 +1,5 @@
 'use client';
 import { Container } from '@/components/Feature/Container/Container';
-import { Heading } from '@/components/Feature/Heading/Heading';
-import Text from '@/components/Feature/Text/Text';
 import { mapIndexData } from '@/data/mapIndexData';
 import { motion } from 'framer-motion';
 import React, { useState } from 'react';
@@ -20,24 +18,20 @@ const Map: React.FC = () => {
     setHoveredIndex(index);
   };
 
-  const handleMouseLeave = () => {
-    setHoveredIndex(londonIndex); // Revert to London index on mouse leave
-  };
+  // const handleMouseLeave = () => {
+  //   setHoveredIndex(londonIndex); // Revert to London index on mouse leave
+  // };
 
   return (
     <Container className="main margins">
       <div className="map">
         <center>
-          <Heading className="secondry">
-            Global Reach, Local Impact: Pixelette Technologies Around the World
-          </Heading>
-          <Text className="titory--bold">
-            Discover how Pixelette Technologies spans across continents, with
-            dedicated teams in 13 countries ensuring we are both globally
-            connected and locally present. Each location is strategically chosen
-            to foster close relationships with local markets, offering tailored
-            solutions that respect regional nuances and requirements.
-          </Text>
+          <h2>
+            Our global hubs
+          </h2>
+          <p>
+            Our presence spans across continents, with dedicated teams in 13 countries ensuring we are, both, globally connected and locally present.
+          </p>
         </center>
 
         <div>
@@ -48,18 +42,18 @@ const Map: React.FC = () => {
                   <div className="hide-section show">
                     <img src="/images/about/curve.svg" alt="curve" />
                     <section>
-                      <Text className="primary--bold">{el.city}</Text>
+                      <p>{el.city}</p>
                       <div>
                         <img src="/images/about/phone.svg" alt="phone" />
-                        <Text className="titory">{el.phone}</Text>
+                        <p>{el.phone}</p>
                       </div>
                       <div>
                         <img src="/images/about/mail.svg" alt="mail" />
-                        <Text className="titory">{el.mail}</Text>
+                        <p>{el.mail}</p>
                       </div>
                       <div>
                         <img src="/images/about/pin.svg" alt="pin" />
-                        <Text className="titory">{el.address}</Text>
+                        <p>{el.address}</p>
                       </div>
                     </section>
                   </div>
@@ -75,7 +69,7 @@ const Map: React.FC = () => {
                   className="image-for-hover"
                   whileHover={{ scale: 1.1 }}
                   onMouseEnter={() => handleMouseEnter(index)}
-                  style={{ width: '100%', height: '100%' }}
+                  style={{ width: '100px' }}
                   // onMouseLeave={handleMouseLeave}
                 />
               </div>

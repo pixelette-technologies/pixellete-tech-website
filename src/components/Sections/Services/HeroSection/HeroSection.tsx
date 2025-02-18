@@ -1,7 +1,5 @@
 import { Button } from '@/components/Feature/Button/Button';
 import { Container } from '@/components/Feature/Container/Container';
-import { Heading } from '@/components/Feature/Heading/Heading';
-import Text from '@/components/Feature/Text/Text';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
@@ -48,15 +46,16 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
               />
             ))}
           </blockquote>
-          <Heading data-aos="zoom-out" data-aos-duration="700">
+          <h1>
             {heading}
-          </Heading>
-          <Text className="primary" animation="zoom-in" duration="1000">
+          </h1>
+          <p>
             {description}
-          </Text>
+          </p>
+
           <div>
             <Link href={buttonLink}>
-              <Button className="primary" animation="fade-up" duration="1100">
+              <Button className="primary">
                 {buttonText}
               </Button>
             </Link>

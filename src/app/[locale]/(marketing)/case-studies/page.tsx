@@ -1,5 +1,5 @@
 import HeroSection from '@/components/CaseStudies/HeroSection/HeroSection';
-import {ProjectSection} from '@/components/CaseStudies/ProjectSection/ProjectSection';
+import { ProjectSection } from '@/components/CaseStudies/ProjectSection/ProjectSection';
 import { EvaluateBusiness } from '@/components/Sections/EvaluateBusiness/EvaluateBusiness';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 
@@ -11,7 +11,7 @@ export async function generateMetadata(props: IAboutProps) {
   const { locale } = await props.params;
   const t = await getTranslations({
     locale,
-    namespace: 'About',
+    namespace: 'CaseStudies',
   });
 
   return {
@@ -32,7 +32,10 @@ export default async function About(props: IAboutProps) {
     <>
       <HeroSection />
       <ProjectSection />
-      <EvaluateBusiness/>
+      <EvaluateBusiness
+        heading="Ready to become a tech success story?"
+        description="Don’t let technical hurdles stand in the way of building powerful tech solutions. Let us help you bring your vision to life with innovative, cost-effective and reliable services. Get in touch!"
+      />
       {/* <p>{t('about_paragraph')}</p>
 
       <div className="mt-2 text-center text-sm">

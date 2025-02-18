@@ -1,26 +1,20 @@
 import { Container } from '@/components/Feature/Container/Container';
-import { Heading } from '@/components/Feature/Heading/Heading';
-import Text from '@/components/Feature/Text/Text';
 import React from 'react';
 import { ContactUsForm } from '../contactUsForm/ContactUsForm';
 import './evaluatebusiness.css';
 
-export const EvaluateBusiness: React.FC = () => {
+type EvaluateBusinessProps = {
+  heading: string;
+  description: string;
+};
+
+export const EvaluateBusiness: React.FC<EvaluateBusinessProps> = ({ heading, description }) => {
   return (
     <Container className="main margins">
-      <div className="evaluateBussiness">
+      <div className="evaluateBussiness" id="sideMargin">
         <header>
-          <Heading className="secondry">
-            Elevate Your Business Today
-          </Heading>
-          <Text
-            className="secondry"
-            animation="fade-up"
-            duration="700"
-          >
-            Complete the form to collaborate with our specialists and develop a
-            customised solution that brings your vision alive.
-          </Text>
+          <h2>{heading}</h2>
+          <p>{description}</p>
         </header>
         <div>
           <ContactUsForm

@@ -1,26 +1,7 @@
 import { Button } from '@/components/Feature/Button/Button';
 import { Container } from '@/components/Feature/Container/Container';
-import { Heading } from '@/components/Feature/Heading/Heading';
 import React from 'react';
 import './servicework.css';
-
-const ServiceWork: React.FC = () => {
-  return (
-    <div className="SelectPlan" style={{ marginTop: '100px' }}>
-      <Container className="main">
-        <center data-aos-duration="700" data-aos="fade-up">
-          <Heading className="primary" id="h_ani">
-            Here’s How Our Services Work
-          </Heading>
-          <Button className="primary--light btn-sm mt-2">Book a Free Call</Button>
-        </center>
-        <div data-aos-duration="500" data-aos="fade-up">
-          <ServiceCards />
-        </div>
-      </Container>
-    </div>
-  );
-};
 
 const ServiceCards: React.FC = () => {
   const cardData = [
@@ -48,11 +29,30 @@ const ServiceCards: React.FC = () => {
     <div className="serviceWorkCards">
       {cardData.map((card, index) => (
         <section key={index}>
-          <h1>{card.step}</h1>
-          <h3>{card.title}</h3>
-          <h5>{card.description}</h5>
+          <h3>{card.step}</h3>
+          <h2>{card.title}</h2>
+          <p>{card.description}</p>
         </section>
       ))}
+    </div>
+  );
+};
+const ServiceWork: React.FC = () => {
+  return (
+    <div className="SelectPlan" style={{ marginTop: '100px' }}>
+      <Container className="main">
+        <center // data-aos-duration="700" data-aos="fade-up"
+        >
+          <h2 id="h_ani">
+            Here’s How our services work
+          </h2>
+          <Button className="primary--light btn-sm mt-2">Book a free call</Button>
+        </center>
+        <div // data-aos-duration="500" data-aos="fade-up"
+        >
+          <ServiceCards />
+        </div>
+      </Container>
     </div>
   );
 };

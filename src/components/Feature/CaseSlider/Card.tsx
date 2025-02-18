@@ -1,6 +1,6 @@
 import type { FC } from 'react';
-import Image from 'next/image';
 import Link from 'next/link';
+import { Button } from '../Button/Button';
 import './caseslider.css';
 
 type CardProps = {
@@ -12,19 +12,19 @@ type CardProps = {
 };
 
 export const Card: FC<CardProps> = ({ id, image, blockChainLink, name, description }) => {
-  // const truncateText = (text: string, maxLength: number) =>
-  //   text.length <= maxLength ? text : `${text.slice(0, maxLength)}...`;
+  const truncateText = (text: string, maxLength: number) =>
+    text.length <= maxLength ? text : `${text.slice(0, maxLength)}...`;
 
-  // const truncatedName = truncateText(name, 50);
-  // const truncatedDescription = truncateText(description, 100);
+  // const truncatedName = truncateText(name, 25);
+  // const truncatedDescription = truncateText(description, 80);
 
-  const link = `/case-study/${id}`;
+  const link = `/case-studies/${id}`;
 
   return (
     <Link href={link}>
       <div className="caseSlider-card">
         <div>
-          <Image src={image} alt="slider hero" width={300} height={200} />
+          <img src={image} alt="slider hero" />
         </div>
         {/* <div>
           <div>
@@ -32,8 +32,8 @@ export const Card: FC<CardProps> = ({ id, image, blockChainLink, name, descripti
               <Button className="primary">{blockChainLink}</Button>
             </Link>
           </div>
-          <h1>{truncatedName}</h1>
-          <Text className="titory">{truncatedDescription}</Text>
+          <h3>{truncatedName}</h3>
+          <p>{truncatedDescription}</p>
         </div> */}
       </div>
     </Link>

@@ -1,15 +1,15 @@
-import { YourPlanCardGrid } from '@/components/Feature/Cards/YourPlanCardGrid'; // Simplified import for the CardSectionGrid component
-import { Container } from '@/components/Feature/Container/Container'; // Simplified import for the Container component
-import data from '@/data'; // Centralized data import
+import { YourPlanCardGrid } from '@/components/Feature/Cards/YourPlanCardGrid';
+import { Container } from '@/components/Feature/Container/Container';
+import { yourPlanData } from '@/data/yourPlanData';
 import Image from 'next/image';
 import React from 'react';
-import './yourplan.css';
+import styles from './yourplan.module.css';
 
-type OurYourPlanProps = {};
+type OurYourPlanProps = object;
 
 export const YourPlan: React.FC<OurYourPlanProps> = () => {
   return (
-    <div className="ourServices">
+    <div className={styles.ourPlanContainer}>
       <Container className="main margins">
         <blockquote>
           <Image src="/images/home/services/box_10.svg" alt="box" width={100} height={100} />
@@ -17,9 +17,9 @@ export const YourPlan: React.FC<OurYourPlanProps> = () => {
         </blockquote>
       </Container>
       <YourPlanCardGrid
-        heading="Your Plan, Your Way"
+        heading="Choose an engagement model that adapts to your needs"
         text="Every project is unique, and so are our solutions. All you’ve got to do is select a plan that best aligns with your goals, let us know and we’ll help bring your project to life."
-        data={data.yourPlanData}
+        data={yourPlanData}
       />
     </div>
   );

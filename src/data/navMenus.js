@@ -10,37 +10,20 @@ export const navMenus = [
     subMenus: [
       {
         id: 3,
-        name: 'Artificial Intelligence',
-        to: '/ai-services',
+        name: 'AI Development',
+        to: '/ai-development-services',
       },
       {
         id: 4,
         name: 'Blockchain Development',
-        to: '/blockchain-development',
+        to: '/blockchain-development-services',
       },
-      { id: 5, name: 'Virtual/Augmented Reality', to: '/vr-ar' },
-      { id: 6, name: 'Web Development', to: '/web-development' },
-      { id: 7, name: 'Mobile Application Development', to: '/mobile-development' },
-      { id: 8, name: 'Custom Software Development', to: '/custom-software-development' },
-      { id: 9, name: 'User Interface (UI) and User Experience (UX) Design', to: '/ui-ux' },
-      {
-        id: 10,
-        name: 'How it works',
-        subMenus: [
-          {
-            id: 11,
-            name: 'Complete Outsourcing',
-            to: '/deliver',
+      { id: 5, name: 'AR/VR Development ', to: '/ar-vr-development-services' },
+      { id: 6, name: 'Web Development', to: '/web-development-services' },
+      { id: 7, name: 'Mobile Application Development', to: '/mobile-app-development-services' },
+      { id: 8, name: 'Custom Software Development', to: '/custom-software-development-services' },
+      { id: 9, name: 'UI/UX Design', to: '/ui-ux-design-services' },
 
-          },
-          {
-            id: 12,
-            name: 'Staff Augmentation',
-            to: '/supplement',
-          },
-          { id: 13, name: 'Dedicated Teams', to: '/deploy' },
-        ],
-      },
       // {
       //   name: "Digital Marketing",
       //   to: "digital-marketing",
@@ -53,12 +36,28 @@ export const navMenus = [
     ],
   },
   {
+    id: 10,
+    name: 'How we work',
+    subMenus: [
+      {
+        id: 11,
+        name: 'Complete Outsourcing',
+        to: '/it-outsourcing-services',
+
+      },
+      {
+        id: 12,
+        name: 'Staff Augmentation',
+        to: '/staff-augmentation-services',
+      },
+      { id: 13, name: 'Dedicated Teams', to: '/dedicated-team-services' },
+    ],
+  },
+  {
     id: 14,
     name: 'About Us',
     to: '/about-us',
   },
   { id: 15, name: 'Case Studies', to: '/case-studies' },
-  { id: 16, name: 'Pixelette Research', to: '/pixelette-research' },
-  { id: 17, name: 'Start-ups', to: '/start-ups' },
-  { id: 18, name: 'Blogs', to: '/blogs' },
+  { id: 16, name: 'Blogs', to: '/blog' },
 ];

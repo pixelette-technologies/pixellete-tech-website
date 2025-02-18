@@ -2,6 +2,8 @@
 
 🚀 Pixellete Tech Next.js with App Router, Tailwind CSS, and TypeScript ⚡️ Prioritizing developer experience first: Next.js, TypeScript, ESLint, Prettier, Husky, Lint-Staged, Vitest (replacing Jest), Testing Library, Playwright, Commitlint, VSCode, Tailwind CSS, Authentication with [Clerk](https://clerk.com?utm_source=github&utm_medium=sponsorship&utm_campaign=pixelettetech), If Applicable Database with DrizzleORM (PostgreSQL, SQLite, and MySQL), Error Monitoring with [Sentry](https://sentry.io/for/nextjs/?utm_source=github&utm_medium=paid-community&utm_campaign=general-fy25q1-nextjs&utm_content=github-banner-pixelettetech-logo), Logging with Pino.js and Log Management, Monitoring as Code, Storybook, Multi-language (i18n), Secure with [Arcjet](https://launch.arcjet.com/Q6eLbRE) (Bot detection, Rate limiting, Attack protection, etc.) and more.
 
+
+
 - ⚡ [Next.js](https://nextjs.org) with App Router support
 - 🔥 Type checking [TypeScript](https://www.typescriptlang.org)
 - 💎 Integrate with [Tailwind CSS](https://tailwindcss.com)
@@ -71,12 +73,26 @@ cd PixeletteTech
 npm install
 ```
 
+or
+
+```shell
+git clone --depth=1 https://github.com/Hamid-Ayub/pixeletteTech-nextjs.git PixeletteTech
+cd PixeletteTech
+yarn
+```
+
 For your information, all dependencies are updated every month.
 
 Then, you can run the project locally in development mode with live reload by executing:
 
 ```shell
 npm run dev
+```
+
+or
+
+```shell
+yarn dev
 ```
 
 Open http://localhost:3000 with your favorite browser to see your project.
@@ -391,7 +407,7 @@ See [LICENSE](LICENSE) for more information.
   </tr>
   <tr height="187px">
     <td align="center" width="33%">
-      <a href="mailto:contact@HamidAyub.com">
+      <a href="mailto:hamidgujjar33@gmail.com">
         Add your logo here
       </a>
     </td>

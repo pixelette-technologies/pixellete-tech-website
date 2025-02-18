@@ -4,7 +4,18 @@
   width: 100%;
   margin: 5rem 0;
 }
-
+.ourClients {
+  padding: 5rem 0rem;
+  /* background: linear-gradient(
+  to bottom,
+  #060203 0%,
+  #0f080c 25%,
+  #060203 50%,
+  #32323e 75%,
+  #060203 90%,
+  #32323e 100%
+); */
+}
 .marquee-content {
   display: flex;
   animation: marquee 20s linear infinite;

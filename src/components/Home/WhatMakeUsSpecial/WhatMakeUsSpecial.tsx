@@ -1,11 +1,8 @@
-// import { Container, Heading } from "../feature";
-// import WhatMakeUsSpecial from "../common/WhatMakeUsSpecial";
+import { Container } from '@/components/Feature/Container/Container';
+import Image from 'next/image'; // Import Next.js Image component
+import './whatmakeusspecial.css';
 
-import { Container } from "@/components/Feature/Container/Container";
-import { Heading } from "@/components/Feature/Heading/Heading";
-import './whatmakeusspecial.css'
-
-const WhatMakeUsSpecialHome = () => {
+const WhatMakeUsSpecialHome: React.FC = () => {
   return (
     <>
       <Container className="main">
@@ -17,96 +14,121 @@ const WhatMakeUsSpecialHome = () => {
       <Container className="main margins">
         <div className="mainSpecialImgs">
           <div className="specialImgs">
-            <Heading className="primary">Our awards</Heading>
+            <h2>Our awards</h2>
             <br />
             <br />
             <div>
-              <img
-                src='/images/home/clutch.png'
+              <Image
+                src="/images/home/clutch.png"
                 alt="heroImage"
-                data-aos="fade-up"
-                data-aos-duration={`600`}
+                // data-aos="fade-up"
+                // data-aos-duration="600"
+                width={200} // Add a width to the image
+                height={200} // Add a height to the image
               />
-              <img
-                src='/images/home/computervision.png'
+              <Image
+                src="/images/home/computervision.png"
                 alt="heroImage"
-                data-aos="fade-up"
-                data-aos-duration={`600`}
+                // data-aos="fade-up"
+                // data-aos-duration="600"
+                width={200}
+                height={200}
               />
-              <img
-                src='/images/home/clutch.png'
+              <Image
+                src="/images/home/clutch.png"
                 alt="heroImage"
-                data-aos="fade-up"
-                data-aos-duration={`600`}
+                // data-aos="fade-up"
+                // data-aos-duration="600"
+                width={200}
+                height={200}
               />
-              <img
-                src='/images/home/aicompany.png'
+              <Image
+                src="/images/home/awardpartnerships/designrush.png"
                 alt="heroImage"
-                data-aos="fade-up"
-                data-aos-duration={`600`}
+                // data-aos="fade-up"
+                // data-aos-duration="600"
+                width={200}
+                height={200}
               />
-              <img
-                src='/images/home/clutch.png'
+              <Image
+                src="/images/home/clutch.png"
                 alt="heroImage"
-                data-aos="fade-up"
-                data-aos-duration={`600`}
+                // data-aos="fade-up"
+                // data-aos-duration="600"
+                width={200}
+                height={200}
               />
             </div>
           </div>
           <div className="specialImgs1">
-            <Heading className="primary">Our partnerships</Heading>
+            <h2>Our partnerships</h2>
             <br />
             <br />
             <br />
             <div>
-              <img
-                src='/images/home/Partnership1.svg'
+              <Image
+                src="/images/home/awardpartnerships/provenexpert.png"
                 alt="heroImage"
-                data-aos="fade-up"
-                data-aos-duration={`600`}
+                // data-aos="fade-up"
+                // data-aos-duration="600"
+                width={183}
+                height={55}
               />
-              <img
-                src='/images/home/Partnership2.svg'
+              <Image
+                src="/images/home/awardpartnerships/pclutch.png"
                 alt="heroImage"
-                data-aos="fade-up"
-                data-aos-duration={`600`}
+                // data-aos="fade-up"
+                // data-aos-duration="600"
+                width={183}
+                height={55}
               />
-              <img
-                src='/images/home/Partnership3.svg'
+              <Image
+                src="/images/home/awardpartnerships/goodfirms.png"
                 alt="heroImage"
-                data-aos="fade-up"
-                data-aos-duration={`600`}
+                // data-aos="fade-up"
+                // data-aos-duration="600"
+                width={183}
+                height={55}
               />
-              <img
-                src='/images/home/Partnership4.svg'
+              <Image
+                src="/images/home/awardpartnerships/themanifes.png"
                 alt="heroImage"
-                data-aos="fade-up"
-                data-aos-duration={`600`}
+                // data-aos="fade-up"
+                // data-aos-duration="600"
+                width={183}
+                height={55}
               />
-              <img
-                src='/images/home/Partnership5.svg'
+              <Image
+                src="/images/home/awardpartnerships/elementor.png"
                 alt="heroImage"
-                data-aos="fade-up"
-                data-aos-duration={`600`}
+                // data-aos="fade-up"
+                // data-aos-duration="600"
+                width={183}
+                height={55}
               />
-              <img
-                src='/images/home/Partnership6.svg'
+              <Image
+                src="/images/home/awardpartnerships/oracle.png"
                 alt="heroImage"
-                data-aos="fade-up"
-                data-aos-duration={`600`}
+                // data-aos="fade-up"
+                // data-aos-duration="600"
+                width={183}
+                height={55}
               />
-              <img
-                style={{ width: "50px" }}
-                src='/images/home/Partnership7.svg'
+              <Image
+                src="/images/home/awardpartnerships/awspartner.png"
                 alt="heroImage"
-                data-aos="fade-up"
-                data-aos-duration={`600`}
+                // data-aos="fade-up"
+                // data-aos-duration="600"
+                width={183}
+                height={55}
               />
-              <img
-                src='/images/home/Partnership8.svg'
+              <Image
+                src="/images/home/awardpartnerships/silverpartner.png"
                 alt="heroImage"
-                data-aos="fade-up"
-                data-aos-duration={`600`}
+                // data-aos="fade-up"
+                // data-aos-duration="600"
+                width={183}
+                height={55}
               />
             </div>
           </div>

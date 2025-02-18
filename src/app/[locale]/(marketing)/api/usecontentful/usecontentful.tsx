@@ -5,6 +5,8 @@ const useContentful = () => {
   const client = createClient({
   //  space: process.env.CONTENTFUL_SPACE_ID,
   //  accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+    // space: 'iu40d70qrkjm',
+    // accessToken: 'sa3kKcmFZSSGZEHw9FylVx0eOIuJordTBaMWfOeRf1Y',
     space: 'ggtsbq0gqfii',
     accessToken: 'VZvVye8dMIc497wF-1pNt5rdYUG-h4E30uX58AcGVUo',
     host: 'cdn.contentful.com',
@@ -22,7 +24,7 @@ const useContentful = () => {
   const getPosts = async () => {
     try {
       const entries = await client.getEntries({
-        content_type: 'blogPage', // Replace 'blog' with your content type ID
+        content_type: 'blogsPage', // Replace 'blog' with your content type ID
       });
       return entries; // Only return the array of entries
     } catch (error) {
@@ -39,11 +41,11 @@ const useContentful = () => {
     }
   };
 
-  // const getOneAssest = async (param: { id: string }) => {
+  // const getOneAssest = async (param: { slug: string }) => {
   //   try {
   //     const asset = await client.getEntries({
   //       content_type: "blogPage",
-  //       "fields.slug": param.id,
+  //       "fields.slug": param.slug,
   //     });
   //     return asset.items[0]; // Returns the first matching entry
   //   } catch (error) {
@@ -52,12 +54,12 @@ const useContentful = () => {
   //   }
   // };
 
-  const getOneAssest = async (params: { id: any }) => {
+  const getOneAssest = async (params: { slug: string }) => {
     try {
-      const { id } = params;
+      const { slug } = params;
       const response = await client.getEntries({
-        'content_type': 'blogPage',
-        'fields.slug': id,
+        'content_type': 'blogsPage',
+        'fields.slug': slug,
         'include': 10,
       }) as any;
 
@@ -65,9 +67,9 @@ const useContentful = () => {
       // const assets = asset.includes?.Asset || [];
 
       // const blogData = response.items[0]; // Main blog entry
-      const blogData = response.items && response.items.length > 0 ? response.items[0] : null;
+      const blogsPage = response.items && response.items.length > 0 ? response.items[0] : null;
       const includes = response.includes || []; // Linked assets
-      return { blogData, includes };
+      return { blogsPage, includes };
     } catch (error) {
       console.log('error: ', error);
     }

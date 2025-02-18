@@ -1,7 +1,5 @@
 import type { FC } from 'react';
 import { Container } from '../../Feature/Container/Container';
-import { Heading } from '../../Feature/Heading/Heading';
-import { Text } from '../../Feature/Text/Text';
 import ServicesCard from './ServicesCard';
 import './cards.css';
 
@@ -16,17 +14,15 @@ export const CardSectionGrid: FC<CardSectionGridProps> = ({ heading, text, data 
     <div className="cardSectionGrid">
       <Container className="main margins">
         <center>
-          <Heading
-            className="secondry"
-            animation="fade-up"
-            duration="300"
+          <h1
             id="h_ani"
           >
             {heading}
-          </Heading>
-          <Text className="secondry" animation="fade-up" duration="500">
+          </h1>
+          <p>
             {text}
-          </Text>
+          </p>
+
         </center>
         <section>
           <ServicesCard data={data} />

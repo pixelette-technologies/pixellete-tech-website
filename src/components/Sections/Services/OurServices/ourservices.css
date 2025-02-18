@@ -17,14 +17,22 @@
   position: absolute;
   left: 0;
   top: 0;
-  z-index: 1; /* Keep this lower than the z-index of the content */
+  z-index: 1;
 }
 
 .OurServicesBg div {
-  z-index: 2; /* Ensure content is on top */
-  color: white; /* Add a color to make text readable */
-  height: 100%;
+  z-index: 2;
+  color: white;
+  /* height: 100%; */
   margin: 2rem 0;
+  padding: 0 4rem;
+  /* width: 100%; */
+}
+
+@media screen and (max-width: 768px) {
+  .OurServicesBg div {
+    padding: 0 1rem;
+  }
 }
 .OurServicesBg {
   /* background: url('../../../../public/images/ai-services/aiServiceBg.png'); */
@@ -33,8 +41,8 @@
   background-position: center;
   display: flex;
   position: relative;
-  align-items: center; /* Center content vertically */
-  justify-content: center; /* Center content horizontally */
+  align-items: center;
+  justify-content: center;
 }
 
 .OurServicesBg::after {
@@ -48,87 +56,104 @@
   z-index: 1; /* Keep this lower than the z-index of the content */
 }
 
+.OurServicesBg > div > center > p {
+  max-width: 72ch;
+}
 .OurServicesBg div {
-  z-index: 2; /* Ensure content is on top */
-  color: white; /* Add a color to make text readable */
+  z-index: 2;
+  color: white;
   height: 100%;
   margin: 2rem 0;
 }
 
-
-.ourServicesLists{
+.ourServicesLists {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  /* width: 100%; */
 }
 
-
-.ourServicesLists div:nth-child(1), .ourServicesLists div:nth-child(2){
+.ourServicesLists div:nth-child(1),
+.ourServicesLists div:nth-child(2) {
   display: flex;
   flex-direction: column;
   gap: 3rem;
 }
 
-.ourServicesLists div:nth-child(1) p, .ourServicesLists div:nth-child(2) p{
+.ourServicesLists div:nth-child(1) p,
+.ourServicesLists div:nth-child(2) p {
   cursor: pointer;
   position: relative;
 }
 
-.ourServicesLists div:nth-child(1) p::before, .ourServicesLists div:nth-child(2) p::before{
+.ourServicesLists div:nth-child(1) p::before,
+.ourServicesLists div:nth-child(2) p::before {
   content: '';
   position: absolute;
   width: 0;
   height: 4px;
-  background-color: #1F7ADA;
+  background-color: #1f7ada;
   bottom: 0;
   left: 0;
   transition: all ease 1s;
 }
 
-.ourServicesLists div:nth-child(1) p:hover::before, .ourServicesLists div:nth-child(2) p:hover::before{
+.ourServicesLists div:nth-child(1) p:hover::before,
+.ourServicesLists div:nth-child(2) p:hover::before {
   content: '';
   position: absolute;
   width: 100%;
   height: 4px;
-  background-color: #1F7ADA;
+  background-color: #1f7ada;
   bottom: 0;
   left: 0;
 }
 
-.ourServicesLists{
+.ourServicesLists {
   display: flex;
   justify-content: space-between;
 }
 
-
-.ourServicesLists div:nth-child(1), .ourServicesLists div:nth-child(2){
+.ourServicesLists div:nth-child(1),
+.ourServicesLists div:nth-child(2) {
   display: flex;
   flex-direction: column;
   gap: 3rem;
 }
 
-.ourServicesLists div:nth-child(1) p, .ourServicesLists div:nth-child(2) p{
+.ourServicesLists div:nth-child(1) p,
+.ourServicesLists div:nth-child(2) p {
   cursor: pointer;
   position: relative;
 }
 
-.ourServicesLists div:nth-child(1) p::before, .ourServicesLists div:nth-child(2) p::before{
+.ourServicesLists div:nth-child(1) p::before,
+.ourServicesLists div:nth-child(2) p::before {
   content: '';
   position: absolute;
   width: 0;
   height: 4px;
-  background-color: #1F7ADA;
+  background-color: #1f7ada;
   bottom: 0;
   left: 0;
   transition: all ease 1s;
 }
 
-.ourServicesLists div:nth-child(1) p:hover::before, .ourServicesLists div:nth-child(2) p:hover::before{
+.ourServicesLists div:nth-child(1) p:hover::before,
+.ourServicesLists div:nth-child(2) p:hover::before {
   content: '';
   position: absolute;
   width: 100%;
   height: 4px;
-  background-color: #1F7ADA;
+  background-color: #1f7ada;
   bottom: 0;
   left: 0;
+}
+
+.ourServicesBlock {
+  width: 450px;
+  background-color: #0f0f0fb2;
+  padding: 2rem;
+  border-radius: 13.84px;
+  height: 460px;
 }

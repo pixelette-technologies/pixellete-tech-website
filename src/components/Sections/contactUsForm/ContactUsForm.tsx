@@ -1,16 +1,7 @@
 'use client';
-import { Button } from '@/components/Feature/Button/Button';
 import { Container } from '@/components/Feature/Container/Container';
-import { FormInput } from '@/components/Feature/Form/FormInput';
-import FormTextArea from '@/components/Feature/Form/FormTextArea';
-import { Heading } from '@/components/Feature/Heading/Heading';
-import InputPhoneNo from '@/components/Feature/InputPhoneNo/InputPhoneNo';
-import Text from '@/components/Feature/Text/Text';
-import data from '@/data';
-import emailjs from 'emailjs-com';
-import { Form, Formik } from 'formik';
 import Image from 'next/image';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './contactusform.css';
 
 type ContactUsProps = {
@@ -30,13 +21,43 @@ type FormValues = {
 export const ContactUsForm: React.FC<ContactUsProps> = (props) => {
   const [statusMessage, setStatusMessage] = useState<string>('');
 
-  const dummyValues = [
-    'Search Engine',
-    'Clutch',
-    'Social Media',
-    'Referral',
-    'Others',
-  ];
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = '//js-eu1.hsforms.net/forms/embed/v2.js';
+    script.charset = 'utf-8';
+    script.type = 'text/javascript';
+    script.async = true;
+
+    script.onload = () => {
+      console.log('HubSpot form script loaded');
+
+      if (window.hbspt && window.hbspt.forms) {
+        hbspt.forms.create({
+          portalId: '145652385',
+          formId: 'fce98d79-3a21-4d66-8638-bba4617c0cbd',
+          region: 'eu1',
+          target: '.hubspot-form-container',
+        });
+      } else {
+        console.error('HubSpot form is not available');
+      }
+    };
+
+    document.body.appendChild(script);
+
+    // Cleanup: Remove the script when the component unmounts
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
+
+  // const dummyValues = [
+  //   'Search Engine',
+  //   'Clutch',
+  //   'Social Media',
+  //   'Referral',
+  //   'Others',
+  // ];
 
   const initialValues: FormValues = {
     fullName: '',
@@ -70,33 +91,29 @@ export const ContactUsForm: React.FC<ContactUsProps> = (props) => {
       <div className="contactUs">
         {!props.header && (
           <center>
-            <Heading
-              className="secondry"
+            <h1
               id="h_ani"
-              animation="fade-up"
-              duration="500"
             >
               Contact Us
-            </Heading>
-            <Text
-              className="secondry"
-              animation="fade-up"
-              duration="600"
-            >
+            </h1>
+
+            <p>
               Get in touch to let us know what you’re looking for, and one of
               our solutions architects will get back to you.
-            </Text>
+            </p>
+
           </center>
         )}
 
         <section>
           <div>
             {props.insideHeading && (
-              <Heading className="titory">
+              <h3>
                 {props.insideHeading}
-              </Heading>
+              </h3>
             )}
-
+            <div className="hubspot-form-container"></div>
+            {/*
             <Formik
               initialValues={initialValues}
               validateOnMount
@@ -104,7 +121,7 @@ export const ContactUsForm: React.FC<ContactUsProps> = (props) => {
               onSubmit={(values, { resetForm }) => {
                 if (window.lintrk) {
                   window.lintrk('track', { conversion_id: 19141409 });
-                  console.log('conversion');
+                  // console.log('conversion');
                 } else {
                   console.error('LinkedIn tracking not initialized.');
                 }
@@ -125,8 +142,8 @@ export const ContactUsForm: React.FC<ContactUsProps> = (props) => {
                     'LYS_0H8byHSkeaSrz',
                   )
                   .then((response) => {
-                    console.log(values);
-                    console.log(response);
+                    // console.log(values);
+                    // console.log(response);
 
                     setStatusMessage('Email sent successfully!');
                   })
@@ -179,7 +196,7 @@ export const ContactUsForm: React.FC<ContactUsProps> = (props) => {
                   </div>
                 </Form>
               )}
-            </Formik>
+            </Formik> */}
           </div>
         </section>
       </div>

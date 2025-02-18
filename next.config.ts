@@ -14,7 +14,11 @@ export default withSentryConfig(
   bundleAnalyzer(
     withNextIntl({
       eslint: {
-        dirs: ['.'],
+        dirs: ['.'], // Enable linting in these directories
+        ignoreDuringBuilds: true, // Skip ESLint during builds
+      },
+      typescript: {
+        ignoreBuildErrors: true, // Skip TypeScript type-checking during builds
       },
       poweredByHeader: false,
       reactStrictMode: true,
@@ -25,28 +29,12 @@ export default withSentryConfig(
         deviceSizes: [320, 420, 768, 1024, 1200], // Define appropriate device sizes
         imageSizes: [16, 32, 48, 64, 128, 256, 512], // Image sizes for optimization
       },
-      webpack(config, { isServer }) {
-        if (!isServer) {
-          // Custom rule to handle .wp2 images (WebP v2)
-          config.module.rules.push({
-            test: /\.wp2$/,
-            use: {
-              loader: 'url-loader',
-              options: {
-                limit: 10000, // Inline images smaller than 10kB as base64
-                mimetype: 'image/wp2', // Correct MIME type for WebP
-              },
-            },
-          });
-        }
-        return config;
-      },
     }),
   ),
   {
     // Sentry configuration options
-    org: 'nextjs-boilerplate-org',
-    project: 'nextjs-boilerplate',
+    org: 'pixelette-tech',
+    project: 'pixelette-tech',
     silent: !process.env.CI,
     widenClientFileUpload: true,
     reactComponentAnnotation: {

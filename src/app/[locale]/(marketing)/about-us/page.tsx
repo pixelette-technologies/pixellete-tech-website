@@ -7,7 +7,6 @@ import { EvaluateBusiness } from '@/components/Sections/EvaluateBusiness/Evaluat
 import { OurTeam } from '@/components/Sections/OurTeam/OurTeam';
 import { HowWeWork } from '@/components/Sections/Services/HowWeWork/HowWeWork';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
-import Image from 'next/image';
 
 type IAboutProps = {
   params: Promise<{ slug: string; locale: string }>;
@@ -36,14 +35,14 @@ export default async function About(props: IAboutProps) {
 
   return (
     <>
-      <HeroSectionAbout/>
-      <DedicatedTech/>
-      <OurClients/>
-      <OurMission/>
-      <HowWeWork/>
-      <OurTeam/>
-      <Map/>
-      <EvaluateBusiness/>
+      <HeroSectionAbout />
+      <DedicatedTech />
+      <OurClients />
+      <OurMission />
+      <HowWeWork />
+      <OurTeam />
+      <Map />
+      <EvaluateBusiness heading='Ready to become a tech success story?' description='Don’t let technical hurdles stand in the way of building powerful tech solutions. Let us help you bring your vision to life with innovative, cost-effective and reliable services. Get in touch!'/>
     </>
   );
 };

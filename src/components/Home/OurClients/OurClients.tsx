@@ -1,14 +1,10 @@
 import { Container } from '@/components/Feature/Container/Container'; // Import your custom Container component
-import { Heading } from '@/components/Feature/Heading/Heading';
-import Image from 'next/image';
 import React from 'react';
-import './ourclients.css';
 import Marquee from 'react-fast-marquee';
+import './ourclients.css';
 // Import your custom Text component
 
 type OurClientsProps = object;
-
-
 
 const Marqueee: React.FC = () => {
   const images = [
@@ -19,13 +15,13 @@ const Marqueee: React.FC = () => {
     '/images/trustedclients/ec_5.svg',
     '/images/trustedclients/ec_6.svg',
     '/images/trustedclients/ec_7.svg',
-    '/images/trustedclients/ec_8.svg',
+    // '/images/trustedclients/ec_8.svg',
   ];
   return (
-    // <div className="marquee-container"> 
-      <Marquee className='marquee-container' speed={60} >
-        {/* Add your images or content here */}
-        {/* <Image src="/images/trustedclients/ec_1.svg" alt="icon 1" width={100} height={62} />
+    // <div className="marquee-container">
+    <Marquee className="marquee-container" speed={50}>
+      {/* Add your images or content here */}
+      {/* <Image src="/images/trustedclients/ec_1.svg" alt="icon 1" width={100} height={62} />
         <Image src="/images/trustedclients/ec_2.svg" alt="icon 2" width={100} height={62} />
         <Image src="/images/trustedclients/ec_3.svg" alt="icon 3" width={100} height={62} />
         <Image src="/images/trustedclients/ec_4.svg" alt="icon 4" width={100} height={62} />
@@ -33,17 +29,18 @@ const Marqueee: React.FC = () => {
         <Image src="/images/trustedclients/ec_6.svg" alt="icon 6" width={100} height={62} />
         <Image src="/images/trustedclients/ec_7.svg" alt="icon 7" width={100} height={62} />
         <Image src="/images/trustedclients/ec_8.webp" alt="icon 8" width={100} height={62} /> */}
-        <div style={{ display: "flex", flexWrap: "nowrap", alignItems: 'center', gap: '2rem' }}>
+      <div style={{ display: 'flex', flexWrap: 'nowrap', alignItems: 'center', gap: '2rem' }}>
         {images.concat(images).map((src, index) => (
           <img
             key={index}
             src={src}
             alt={`icon ${index}`}
-            style={{ flex: "0 0 auto" }}
+            style={{ flex: '0 0 auto' }}
+            loading="lazy"
           />
         ))}
       </div>
-      </Marquee>
+    </Marquee>
     // </div>
   );
 };
@@ -53,11 +50,12 @@ export const OurClients: React.FC<OurClientsProps> = () => {
     <div className="ourClients">
       <Container className="main">
         <center>
-          <Heading className="primary" id="h_ani">
-            Trusted By Leading Innovators
-          </Heading>
+          <h2 id="h_ani">
+            Trusted by leading innovators
+          </h2>
         </center>
-        <div data-aos="fade-up" data-aos-duration="500">
+        <div // data-aos="fade-up" data-aos-duration="500"
+        >
           <Marqueee />
         </div>
       </Container>

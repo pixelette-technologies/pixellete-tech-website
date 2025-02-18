@@ -9,12 +9,13 @@ export async function generateMetadata(props: IAboutProps) {
   const { locale } = await props.params;
   const t = await getTranslations({
     locale,
-    namespace: 'About',
+    namespace: 'PixeletteResearch',
   });
 
   return {
     title: t('meta_title'),
     description: t('meta_description'),
+    keywords: t('meta_keywords'),
   };
 }
 

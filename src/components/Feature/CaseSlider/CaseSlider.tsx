@@ -27,7 +27,7 @@ export const CaseSlider: FC<CaseSliderProps> = ({ data }) => {
     infinite: true,
     arrows: false,
     speed: 700,
-    slidesToShow: 4,
+    slidesToShow: 3,
     slidesToScroll: 1,
     responsive: [
       { breakpoint: 1424, settings: { slidesToShow: 3, slidesToScroll: 1 } },
@@ -46,20 +46,19 @@ export const CaseSlider: FC<CaseSliderProps> = ({ data }) => {
           {data && data.map(el => (
             <Card
               key={uuidv4()}
-              id={uuidv4()}
-              image={el} // Pass the absolute image URL
-            // blockChainLink={el.fields?.tags || ''}
-            // name={el.fields?.shortDescription || ''}
-            // description={el.fields?.longDescription || ''}
+              id={el.sys?.id}
+              image={el.fields?.image?.fields?.file?.url}
+              blockChainLink={el.fields?.tags}
+              name={el.fields?.shortDescription}
+              description={el.fields?.longDescription}
             />
           ))}
         </Slider>
-
       </section>
 
       <div>
         <Image
-          src="/images/others/arrowLeftSlider.svg"
+          src="/images/home/arrowLeft.svg"
           alt="Previous"
           height={20}
           width={20}
@@ -68,7 +67,7 @@ export const CaseSlider: FC<CaseSliderProps> = ({ data }) => {
           data-aos="fade-right"
         />
         <Image
-          src="/images/arrowRightSlider.svg"
+          src="/images/home/arrowRight.svg"
           alt="Next"
           height={20}
           width={20}

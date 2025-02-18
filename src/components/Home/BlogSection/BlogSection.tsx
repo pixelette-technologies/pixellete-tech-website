@@ -3,8 +3,6 @@
 import BlogCard from '@/components/Feature/Blog/BlogCard';
 import { Button } from '@/components/Feature/Button/Button';
 import { Container } from '@/components/Feature/Container/Container';
-import { Heading } from '@/components/Feature/Heading/Heading';
-import { Text } from '@/components/Feature/Text/Text';
 import { BlogGridWithBanner } from '@/components/Sections/BlogGridWithBanner/BlogGridWithBanner';
 import { createClient } from 'contentful';
 import Image from 'next/image';
@@ -12,23 +10,44 @@ import Link from 'next/link';
 import React, { useEffect, useRef, useState } from 'react';
 import { FiExternalLink } from 'react-icons/fi';
 import Slider from 'react-slick';
-import styles from './blogsection.module.css'; // Scoped CSS Module for this component
+import styles from './blogsection.module.css';
 
-export const BlogSection = ({ heading, text }) => {
-  const [blogData, setBlogData] = useState([]);
-  const slider = useRef(null);
+type BlogSectionProps = {
+  heading?: string;
+  text?: string;
+};
+
+type BlogEntry = {
+  sys: {
+    id: string;
+  };
+  fields: {
+    name?: string;
+    shortDescription?: string;
+    slug?: string;
+    date?: string;
+    image?: {
+      fields: {
+        file: {
+          url: string;
+        };
+      };
+    };
+  };
+};
+
+export const BlogSection: React.FC<BlogSectionProps> = ({ heading, text }) => {
+  const [blogData, setBlogData] = useState<BlogEntry[]>([]);
+  const slider = useRef<Slider | null>(null);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const client = createClient({
-
           space: 'ggtsbq0gqfii',
           accessToken: 'VZvVye8dMIc497wF-1pNt5rdYUG-h4E30uX58AcGVUo',
-          // space: process.env.CONTENTFUL_SPACE_ID || '',
-          // accessToken: process.env.CONTENTFUL_ACCESS_TOKEN || '',
         });
-        const response = await client.getEntries({ content_type: 'blogs' });
+        const response = await client.getEntries<BlogEntry>({ content_type: 'blogs' });
         setBlogData(response.items);
       } catch (error) {
         console.error('Error fetching data:', error);
@@ -56,8 +75,8 @@ export const BlogSection = ({ heading, text }) => {
     ],
   };
 
-  const handleNext = () => slider?.current?.slickNext();
-  const handlePrev = () => slider?.current?.slickPrev();
+  const handleNext = () => slider.current?.slickNext();
+  const handlePrev = () => slider.current?.slickPrev();
 
   return (
     <div className={styles.blogSection}>
@@ -68,14 +87,15 @@ export const BlogSection = ({ heading, text }) => {
             <Image src="/images/blog/box_29.png" alt="Decorative box" width={20} height={20} />
           </blockquote>
           <center>
-            <Heading className="secondary" id="h_ani">
+            <h1 id="h_ani">
               {heading || 'The Pixelette Post'}
-            </Heading>
-            <Text className="secondary" id="h_ani">
+            </h1>
+            <p>
               {text
               || 'Dive into our curated collection of updates and guides to deepen your understanding of diverse technologies.'}
-            </Text>
-            <Link href="/blogs" passHref>
+            </p>
+
+            <Link href="/blog" passHref>
               <Button className="primary" id="h_ani">
                 Explore Blogs
                 {' '}
@@ -103,7 +123,7 @@ export const BlogSection = ({ heading, text }) => {
                 date={blog.fields.date || 'No date available'}
                 heading={blog.fields.name || 'No title'}
                 description={blog.fields.shortDescription || 'No description'}
-                to={`/blogs/${blog.fields.slug}`}
+                to={`/blog/${blog.fields.slug}`}
               />
             );
           })}

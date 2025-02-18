@@ -1,5 +1,4 @@
 import { Container } from '@/components/Feature/Container/Container';
-import { Heading } from '@/components/Feature/Heading/Heading';
 import React from 'react';
 import './deliverbenifits.css';
 
@@ -56,12 +55,14 @@ const DeliverBenefits: React.FC<DeliverBenefitsProps> = ({ heading, cards }) => 
   return (
     <div className="deliverBenifits">
       <Container className="main">
-        <center data-aos-duration="700" data-aos="fade-up">
-          <Heading className="primary" id="h_ani">
+        <center // data-aos-duration="700" data-aos="fade-up"
+        >
+          <h1 id="h_ani">
             {heading}
-          </Heading>
+          </h1>
         </center>
-        <div data-aos-duration="500" data-aos="fade-up">
+        <div // data-aos-duration="500" data-aos="fade-up"
+        >
           <Cards cards={cards} />
         </div>
       </Container>

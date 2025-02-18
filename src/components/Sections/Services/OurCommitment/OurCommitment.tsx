@@ -1,8 +1,6 @@
 import { Container } from '@/components/Feature/Container/Container';
-import { Heading } from '@/components/Feature/Heading/Heading';
-import Text from '@/components/Feature/Text/Text';
 import React from 'react';
-import './index.css';
+import styles from './index.module.css';
 
 type CommitmentData = {
   img: string;
@@ -26,33 +24,35 @@ export const OurCommitment: React.FC<OurCommitmentProps> = ({
   commitmentData,
 }) => {
   return (
-    <div>
+    <div id="sideMargin">
       <Container className="main margins">
-        <div className="expertiseGrid">
-          <header>
-            <Heading className="secondry">{heading}</Heading>
-            <Text className="secondry">{description}</Text>
-          </header>
-          <section className="OurCommitmentCards">
+        <div className={styles.expertiseGrid} style={{ padding: '10rem 0' }}>
+          <center style={{ margin: '3rem 0' }}>
+            <h2>{heading}</h2>
+            <p>
+              {description}
+            </p>
+          </center>
+          <section className={styles.OurCommitmentCards}>
             {commitmentData.map((el, index) => (
               <div style={{ margin: '0 1rem' }} key={index}>
                 <img src={el.img} alt={`Commitment ${index + 1}`} />
                 <div style={{ display: 'flex' }}>
                   <div>
-                    <Text className="titory--bold">{el.value1}</Text>
-                    <p>{el.desc1}</p>
+                    <p className={styles.valueText}>{el.value1}</p>
+                    <p className={styles.descText}>{el.desc1}</p>
                   </div>
-                  <hr style={{ margin: '0 1rem' }} />
+                  <hr className={styles.verticalDivider} />
                   <div>
-                    <Text className="titory--bold">{el.value2}</Text>
-                    <p>{el.desc2}</p>
+                    <p className={styles.valueText}>{el.value2}</p>
+                    <p className={styles.descText}>{el.desc2}</p>
                   </div>
                   {el.desc3 && (
                     <>
-                      <hr style={{ margin: '0 1rem' }} />
+                      <hr className={styles.verticalDivider} />
                       <div>
-                        <Text className="titory--bold">{el.value3}</Text>
-                        <p>{el.desc3}</p>
+                        <p className={styles.valueText}>{el.value3}</p>
+                        <p className={styles.descText}>{el.desc3}</p>
                       </div>
                     </>
                   )}

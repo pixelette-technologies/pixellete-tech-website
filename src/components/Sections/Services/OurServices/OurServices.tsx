@@ -1,7 +1,7 @@
+'use client';
 import { Container } from '@/components/Feature/Container/Container';
-import { Heading } from '@/components/Feature/Heading/Heading';
-import Text from '@/components/Feature/Text/Text';
-import React from 'react';
+import Image from 'next/image';
+import React, { useEffect, useState } from 'react';
 import './ourservices.css';
 
 type ServiceList = {
@@ -15,50 +15,91 @@ type HighlightedService = {
   description: string;
 };
 
+type ServiceMapping = {
+  [key: string]: HighlightedService;
+};
+
 type OurServicesProps = {
   heading: string;
   description: string;
   serviceLists: ServiceList[];
-  highlightedService: HighlightedService;
+  serviceMapping: ServiceMapping; // Add this prop
 };
 
 export const OurServices: React.FC<OurServicesProps> = ({
   heading,
   description,
   serviceLists,
-  highlightedService,
+  serviceMapping, // Accept mapping as a prop
 }) => {
+  const initialService = Object.values(serviceMapping)[0] || null;
+
+  const [currentService, setCurrentService] = useState<HighlightedService | null>(
+    initialService,
+  );
+  const handleServiceClick = (item: string) => {
+    if (!serviceMapping) {
+      console.error('Service mapping is undefined.');
+      return;
+    }
+
+    const newService = serviceMapping[item];
+    if (newService) {
+      // console.log('Setting current service to:', newService);
+      setCurrentService(newService);
+    } else {
+      // console.error(`No service found for key: ${item}`);
+    }
+  };
+  useEffect(() => {
+    // console.log('Current service updated:', currentService);
+  }, [currentService]);
+
   return (
-    <div style={{ marginTop: '5rem' }} className="OurServicesBg">
+    <div style={{ padding: '10rem 0' }} className="OurServicesBg">
       <Container className="main margins">
         <center>
-          <Heading className="primary">{heading}</Heading>
+          <h2>{heading}</h2>
           <br />
-          <Text className="titory--bold">{description}</Text>
+          <p>{description}</p>
         </center>
         <div className="ourServicesLists">
           {serviceLists.map((list, idx) => (
-            <div key={idx}>
+            <div
+              key={idx}
+              style={{ gap: '0rem' }}
+            >
               {list.items.map((item, index) => (
-                <Text key={index} className="primary">
-                  {item}
-                </Text>
+                <div
+                  key={index}
+                  style={{ gap: '0rem' }}
+                >
+                  <p onMouseEnter={() => handleServiceClick(item)} style={{ fontSize: '1.5rem' }}>
+                    <strong>
+                      {' '}
+                      {item}
+                      {' '}
+                    </strong>
+                  </p>
+                </div>
               ))}
             </div>
           ))}
           <div
+            // className="ourServicesBlock"
             style={{
               width: '450px',
               backgroundColor: '#0F0F0FB2',
               padding: '2rem',
               borderRadius: '13.84px',
+              height: '460px',
             }}
           >
-            <img src={highlightedService.imageSrc} alt={highlightedService.title} />
+            <Image src={currentService.imageSrc} alt={currentService.title} width={50} height={50} />
             <br />
-            <Text className="primary">{highlightedService.title}</Text>
+            <h3>{currentService.title}</h3>
             <br />
-            <Text className="titory--bold">{highlightedService.description}</Text>
+            <p>{currentService.description}</p>
           </div>
         </div>
       </Container>

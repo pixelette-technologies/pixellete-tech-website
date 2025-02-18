@@ -1,6 +1,5 @@
 import { Button } from '@/components/Feature/Button/Button';
 import { Container } from '@/components/Feature/Container/Container';
-import { Heading } from '@/components/Feature/Heading/Heading';
 import { Text } from '@/components/Feature/Text/Text';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -12,8 +11,8 @@ export const UnlockBusinessPotential = ({ heading, text, btnText }) => {
     <Container className="main margins">
       <div className="unlockBussiness" data-aos="fade-up" data-aos-duration="500">
         <div>
-          <Heading className="primary">{heading}</Heading>
-          <Text className="secondary">{text}</Text>
+          <h2>{heading}</h2>
+           className="secondary">{text}
 
           <section className="social-links">
             <a
@@ -75,7 +74,7 @@ export const UnlockBusinessPotential = ({ heading, text, btnText }) => {
           </section>
         </div>
 
-        <Link href="#contactUs" scroll={false} passHref>
+        <Link href="/contact-us" scroll={false} passHref>
           <Button className="primary">{btnText}</Button>
         </Link>
       </div>

@@ -1,9 +1,6 @@
 import type { FC } from 'react';
-import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '../Button/Button';
-import { Heading } from '../Heading/Heading';
-import Text from '../Text/Text';
 import './blogcard.css';
 
 type BlogCardProps = {
@@ -25,16 +22,16 @@ export const BlogCard: FC<BlogCardProps> = ({
   description,
   to,
 }) => {
-  console.log(to);
+  // console.log(to);
   return (
     <div className="blogCard" data-aos={animation} data-aos-duration={duration}>
       <figure>
-        <Image src={image} alt="Blog-Profile" width={300} height={200} />
+        <img src={image} alt="Blog-Profile" />
       </figure>
-      <Text className="titory--bold">{date}</Text>
-      <Heading className="blogCardHeading">{heading}</Heading>
-      <Text className="blogCardDescription">{description}</Text>
-      <Link href={`/blogs/${to}`}>
+      <p>{date}</p>
+      <h3 className="blogCardHeading">{heading}</h3>
+      <p className="blogCardDescription">{description}</p>
+      <Link href={`/blog/${to}`}>
         <Button className="primary">Read More</Button>
       </Link>
     </div>

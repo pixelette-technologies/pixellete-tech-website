@@ -29,11 +29,11 @@ const NewServiceCard: FC<NewServiceCardProps> = ({ data }) => {
                 width={50}
                 height={50}
               />
-              <Text>
+              >
                 <span className="service-heading">{el.name}</span>
-              </Text>
+              
             </div>
-            <Text className="service-text">{el.description}</Text>
+             className="service-text">{el.description}
           </div>
         );
 

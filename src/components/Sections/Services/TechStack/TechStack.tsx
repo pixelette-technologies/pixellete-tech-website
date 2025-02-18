@@ -1,6 +1,4 @@
 import { Container } from '@/components/Feature/Container/Container';
-import { Heading } from '@/components/Feature/Heading/Heading';
-import Text from '@/components/Feature/Text/Text';
 import React from 'react';
 import './techstack.css';
 
@@ -25,17 +23,18 @@ export const TechStack: React.FC<TechStackProps> = (props: TechStackProps) => {
             style={{ display: 'flex', flexDirection: 'column', gap: '5rem' }}
           >
             <div>
-              <Heading className="primary">
+              <h2>
                 Our
                 {' '}
                 {props?.techStack ? props.techStack : 'AI'}
                 {' '}
                 development tech stack
-              </Heading>
+              </h2>
               <br />
-              <Text className="titory--bold">
+              <p>
                 Our go-to tech for unmatched results
-              </Text>
+              </p>
+
             </div>
             <div
               style={{

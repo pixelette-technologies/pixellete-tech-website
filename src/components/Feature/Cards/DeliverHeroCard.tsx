@@ -2,7 +2,6 @@ import type { FC } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import Button from '../Button/Button';
-import Text from '../Text/Text';
 import './cards.css';
 
 type DeliverHeroCardProps = {
@@ -43,7 +42,7 @@ export const Card: FC<CardProps> = ({ image, blockChainLink, id, name, descripti
             </Link>
           </div>
           <h1>{truncatedName}</h1>
-          <Text className="titory">{truncatedDescription}</Text>
+          <p>{truncatedDescription}</p>
         </div>
       </div>
     </Link>

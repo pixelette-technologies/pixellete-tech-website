@@ -39,7 +39,7 @@ ul.custom-list li {
   margin-bottom: 2rem;
 }
 ul.custom-list li::before {
-  content: "\2714"; /* Unicode for straight checkmark */
+  content: '\2714'; /* Unicode for straight checkmark */
   color: red;
   background-color: white;
   border-radius: 50%;

@@ -1,6 +1,4 @@
 import { Container } from '@/components/Feature/Container/Container';
-import { Heading } from '@/components/Feature/Heading/Heading';
-import Text from '@/components/Feature/Text/Text';
 import Image from 'next/image';
 import './herosection.css';
 
@@ -24,33 +22,32 @@ export const HeroSection = () => {
       {/* Content Section */}
       <div className="heroSectionMarketing">
         <center>
-          <Heading
+          <h1
             className="heroHeading"
-            animation="zoom-out"
-            duration="500"
           >
             Ready to scale? Partner with Pixelette Technologies
-          </Heading>
-          <Text
+          </h1>
+          {/* <div
             className="secondary"
             animation="zoom-in"
             duration="600"
-          >
+          > */}
+          <p>
             At Pixelette Technologies, we're passionate about startups and
             innovation, committed to turning your ideas into reality. With our
             expert support, we guide you from ideation to execution, ensuring
             your project receives the attention and dedication it deserves.
-          </Text>
+          </p>
         </center>
 
         <Container className="main margins">
-          <section data-aos="fade-up" data-aos-duration="500">
+          <section id="sideMargin">
             {/* Section 1 */}
             <div>
-              <Heading className="policyHeading">
+              <h1 className="policyHeading">
                 Our commitment to innovation
-              </Heading>
-              <Text className="titory--bold">
+              </h1>
+              <p>
                 Pixelette Technologies recognizes the scarcity of innovative
                 thinkers and the challenges they face in accessing funding. We
                 advocate for the process of thesis, antithesis, and synthesis,
@@ -60,15 +57,15 @@ export const HeroSection = () => {
                 ventures see the light of day. Join us to navigate the hurdles
                 hindering your startup's success and turn your vision into
                 reality.
-              </Text>
+              </p>
             </div>
 
             {/* Section 2 */}
             <div>
-              <Heading className="policyHeading">
+              <h1 className="policyHeading">
                 Kickstart your journey
-              </Heading>
-              <Text className="titory--bold">
+              </h1>
+              <p>
                 Pixelette Technologies offers start-ups access to a seasoned
                 team of experts deeply ingrained in the start-up ecosystem,
                 dedicated to facilitating success. Choose us for funded
@@ -77,7 +74,7 @@ export const HeroSection = () => {
                 minimal control relinquished, we prioritise your start-up's
                 growth and prosperity, ensuring unparalleled support on your
                 journey to success.
-              </Text>
+              </p>
             </div>
           </section>
         </Container>

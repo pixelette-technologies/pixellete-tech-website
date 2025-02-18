@@ -1,0 +1,105 @@
+.cardSectionBackground {
+  position: relative;
+}
+.cardSectionBackground > img {
+  position: absolute;
+  z-index: -90;
+  width: 100%;
+  /* height: 100vh; */
+  margin-top: -65rem;
+}
+.expertiseGrid > header {
+  max-width: 82rem;
+  margin: auto;
+  text-align: center;
+  padding-top: 12rem;
+  padding-bottom: 1rem;
+}
+.expertiseGrid > header > h2 {
+  margin-bottom: 1.7rem;
+}
+
+@media only screen and (max-width: 62.6em) {
+  .expertiseGrid > section > div {
+    width: calc(50% - 2.4rem);
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .expertiseGrid > section > div {
+    width: 100%;
+  }
+}
+.expertiseGrid > section > div:hover {
+  box-shadow:
+    0 4px 8px #0003,
+    0 6px 20px #00000030;
+}
+.expertiseGrid > section > div > img {
+  margin-bottom: 2.4rem;
+}
+
+.marqueeCardss {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.marqueeCardss > div {
+  width: 25rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  border-radius: 1.2rem;
+  background-color: #0f0f0fb3;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: 0.5s all;
+}
+.marqueeCardss > div > img {
+  width: 40%;
+  margin: 0 auto;
+}
+
+.flipCard {
+  width: 200px;
+  height: 20rem;
+  perspective: 1000px;
+  margin: 0 1rem;
+}
+
+.flipCardInner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.flipCard:hover .flipCardInner {
+  transform: rotateY(180deg);
+}
+
+.flipCardFront,
+.flipCardBack {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+}
+
+.flipCardFront {
+  /* background: #fff; */
+}
+
+.flipCardBack {
+  /* background: #f0f0f0; */
+  font-size: 1.5rem;
+  transform: rotateY(180deg);
+}

@@ -3,6 +3,8 @@
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  padding: 0 5rem;
+  margin: 10rem 0;
 }
 @media screen and (max-width: 760px) {
   .evaluateBussiness > * {
@@ -18,12 +20,15 @@
   .unlockBussiness > div > section {
     justify-content: center;
   }
+  .evaluateBussiness > div > div {
+    width: 100%;
+  }
 }
 
 .evaluateBussiness > header {
   max-width: 61.6rem;
 }
-.evaluateBussiness > header > h1 {
+.evaluateBussiness > header > h2 {
   margin-bottom: 1.6rem;
 }
 .evaluateBussiness > div > div {

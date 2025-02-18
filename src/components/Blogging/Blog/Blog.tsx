@@ -1,8 +1,5 @@
 import { Container } from '@/components/Feature/Container/Container';
-import { Heading } from '@/components/Feature/Heading/Heading';
-import Text from '@/components/Feature/Text/Text';
 import { BlogGridWithBanner } from '@/components/Sections/BlogGridWithBanner/BlogGridWithBanner';
-import Image from 'next/image';
 import './blog.css';
 
 type BlogProps = {
@@ -41,33 +38,24 @@ export const Blog = ({ blogdata }: BlogProps) => {
       <div className="blogsPage">
         <Container className="main">
           <div className="blogsPage-background">
-            <Image
+            <img
               src="/images/blogs/blogsMainBackground.svg"
               alt="background"
-              layout="fill"
-              objectFit="cover"
-              priority
             />
           </div>
         </Container>
 
         {/* Hero Section */}
         <center>
-          <Heading
-            className="heroHeading"
-            animation="zoom-out"
-            duration="2000"
-          >
+          <h1>
             The Pixelette Post
-          </Heading>
-          <Text
-            className="secondary"
-            animation="zoom-in"
-            duration="2200"
-          >
+          </h1>
+
+          <p>
             Dive into our curated collection of updates and guides to deepen
             your understanding of diverse technologies.
-          </Text>
+          </p>
+
         </center>
 
         {/* Blog Grid Section */}

@@ -12,7 +12,7 @@
   justify-content: center;
   flex-direction: column;
 }
-.map > center > h1 {
+.map > center > h2 {
   margin: 1.7rem;
 }
 .map > div > *:first-child {
@@ -95,6 +95,8 @@
   position: absolute;
   display: flex;
   align-items: center;
+  top: -17rem;
+  left: 35%;
 }
 
 @media (max-width: 768px) {
@@ -121,8 +123,8 @@
   gap: 1.2rem;
 }
 .map > div > header > div > img {
-  margin-left: -1.5rem;
-  margin-top: 13.5rem;
+  margin-left: -3rem;
+  margin-top: 6.5rem;
   cursor: pointer;
   width: 2.2rem;
   height: 3.4rem;
@@ -136,4 +138,8 @@
   .map {
     display: none;
   }
+}
+
+.image-for-hover {
+  width: 100px;
 }
