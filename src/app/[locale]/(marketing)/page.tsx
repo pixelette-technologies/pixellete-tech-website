@@ -42,7 +42,7 @@ export default async function Index(props: IIndexProps) {
   return (
     <>
 
-      <div className="main-content"></div>
+      {/* <div className="main-content"></div> */}
       <HeroSection />
       <OurClients />
       {/* not needed we already used gtm component by nextjs

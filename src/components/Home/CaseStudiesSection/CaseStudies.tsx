@@ -55,6 +55,7 @@ export const CaseStudies = ({ heading, initialData }: CaseStudiesProps) => {
   return (
     <>
       <Container className={styles.main}>
+
         {/* <div className={styles.testimonialSectionBackground}>
           <img
             src="/images/home/testimonials/testimonialBackground.svg"
