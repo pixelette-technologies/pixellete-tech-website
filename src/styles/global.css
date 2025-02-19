@@ -506,11 +506,16 @@ p {
   left: 0; /* Align to the left */
   padding: 100px; /* Adds space inside the element */
   background: linear-gradient(180deg, rgba(218, 25, 25, 0.17) 50.7%, rgb(22, 2, 2) 68.73%, rgb(10, 15, 28) 88.31%);
+  background: rgb(208, 26, 37);
+  background: -moz-radial-gradient(circle, rgba(208, 26, 37, 1) 0%, rgba(0, 0, 0, 1) 100%);
+  background: -webkit-radial-gradient(circle, rgba(208, 26, 37, 1) 0%, rgba(0, 0, 0, 1) 100%);
+  background: radial-gradient(circle, rgba(208, 26, 37, 1) 0%, rgba(0, 0, 0, 1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#d01a25",endColorstr="#000000",GradientType=1);
   border-left: 70px solid transparent; /* Creates the left border with a gradient */
   height: 120vh; /* Full viewport height */
   width: 65px; /* Take the full width of the container */
   z-index: -1; /* Positioned behind other content */
-  /* filter: blur(150px); */
+  filter: blur(50px);
   margin-left: -7rem; /* Shifts the element to the left for better positioning */
   pointer-events: none; /* Ensures it doesn’t interfere with interactions */
   margin-top: -10rem;
@@ -523,9 +528,10 @@ p {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(180deg, rgba(218, 25, 25, 0.17) 50.7%, rgb(22, 2, 2) 68.73%, rgb(10, 15, 28) 88.31%);
-  z-index: -2; /* Place the pseudo-element behind the element */
-  /* filter: blur(30px); */
+  /* background: linear-gradient(180deg, rgba(218, 25, 25, 0.17) 50.7%, rgb(22, 2, 2) 68.73%, rgb(10, 15, 28) 88.31%); */
+  z-index: -2;
+  /* Place the pseudo-element behind the element */
+  filter: blur(30px);
   pointer-events: none; /* Avoid interference with interactions */
 }
 .blue-background-border {
@@ -538,7 +544,7 @@ p {
   height: 120vh;
   width: 65px;
   z-index: -1;
-  /* filter: blur(150px); */
+  filter: blur(50px);
   margin-left: -7rem;
   pointer-events: none;
   margin-top: -10rem;
@@ -552,8 +558,10 @@ p {
   right: 0;
   bottom: 0;
   background: linear-gradient(180deg, rgba(0, 0, 50, 0.5) 50%, rgba(10, 10, 30, 0.7) 90%);
-  z-index: -2; /* Place the pseudo-element behind the element */
-  /* filter: blur(30px); */
+  z-index: -2;
+  box-shadow: 0 0 150px rgba(0, 0, 0, 0.5);
+  /* Place the pseudo-element behind the element */
+  filter: blur(30px);
   pointer-events: none; /* Avoid interference with interactions */
 }
 /*
