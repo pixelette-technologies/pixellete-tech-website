@@ -459,6 +459,7 @@ p {
   height: 125vh;
   margin-top: -10rem;
   z-index: -1;
+  will-change: transform, opacity;
 }
 
 .main-content::before {
@@ -488,6 +489,7 @@ p {
   background-size: cover;
   background-position: center;
   z-index: -1; /* Ensure it's behind content */
+  will-change: transform, opacity;
 }
 
 /* .red-background-border {
@@ -504,7 +506,6 @@ p {
   left: 0; /* Align to the left */
   padding: 100px; /* Adds space inside the element */
   background: linear-gradient(180deg, rgba(218, 25, 25, 0.17) 50.7%, rgb(22, 2, 2) 68.73%, rgb(10, 15, 28) 88.31%);
-  background-blend-mode: screen;
   border-left: 70px solid transparent; /* Creates the left border with a gradient */
   height: 120vh; /* Full viewport height */
   width: 65px; /* Take the full width of the container */
@@ -513,24 +514,48 @@ p {
   margin-left: -7rem; /* Shifts the element to the left for better positioning */
   pointer-events: none; /* Ensures it doesn’t interfere with interactions */
   margin-top: -10rem;
+  will-change: transform, opacity;
+}
+.red-background-border::before {
+  content: ''; /* Make sure there's no text in it */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(180deg, rgba(218, 25, 25, 0.17) 50.7%, rgb(22, 2, 2) 68.73%, rgb(10, 15, 28) 88.31%);
+  z-index: -2; /* Place the pseudo-element behind the element */
+  filter: blur(150px); /* Soft blur effect for the pseudo-element */
+  pointer-events: none; /* Avoid interference with interactions */
 }
 .blue-background-border {
   position: absolute;
-  top: 0; /* Start at the top of the container */
-  right: 0; /* Align to the left */
-  padding: 100px; /* Adds space inside the element */
+  top: 0;
+  right: 0;
+  padding: 100px;
   background: linear-gradient(180deg, rgba(0, 26, 95, 0.27) 50.7%, rgb(22, 2, 2) 68.73%, rgb(10, 15, 28) 88.31%);
-  background-blend-mode: screen;
-  border-left: 70px solid transparent; /* Creates the left border with a gradient */
-  height: 120vh; /* Full viewport height */
-  width: 65px; /* Take the full width of the container */
-  z-index: -1; /* Positioned behind other content */
-  filter: blur(150px); /* Softens the gradient with a blur effect */
-  margin-left: -7rem; /* Shifts the element to the left for better positioning */
-  pointer-events: none; /* Ensures it doesn’t interfere with interactions */
+  border-left: 70px solid transparent;
+  height: 120vh;
+  width: 65px;
+  z-index: -1;
+  filter: blur(150px); /* Reduced blur effect */
+  margin-left: -7rem;
+  pointer-events: none;
   margin-top: -10rem;
+  will-change: transform, opacity; /* Enable hardware acceleration */
 }
-
+.blue-background-border::before {
+  content: ''; /* Make sure there's no text in it */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 50, 0.5) 50%, rgba(10, 10, 30, 0.7) 90%);
+  z-index: -2; /* Place the pseudo-element behind the element */
+  filter: blur(150px); /* Soft blur effect for the pseudo-element */
+  pointer-events: none; /* Avoid interference with interactions */
+}
 /*
 .red-background-border::before {
   content: '';
