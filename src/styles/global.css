@@ -451,8 +451,8 @@ p {
     linear-gradient(113deg, rgba(7, 23, 42, 0.74), rgba(255, 0, 0, 0) 70.71%),
     linear-gradient(127deg, rgba(189, 28, 28, 0.54), rgba(0, 255, 0, 0) 70.71%),
     linear-gradient(336deg, rgba(12, 12, 33, 0.5), rgba(0, 0, 255, 0) 70.71%);
-  -webkit-filter: blur(150px);
-  -moz-filter: blur(150px);
+  /* -webkit-filter: blur(150px); */
+  /* -moz-filter: blur(150px); */
   /* filter: blur(150px); */
   background-size: cover;
   width: 100%;
@@ -483,9 +483,9 @@ p {
     linear-gradient(113deg, rgba(7, 23, 42, 0.74), rgba(255, 0, 0, 0) 70.71%),
     linear-gradient(127deg, rgba(189, 28, 28, 0.54), rgba(0, 255, 0, 0) 70.71%),
     linear-gradient(336deg, rgba(12, 12, 33, 0.5), rgba(0, 0, 255, 0) 70.71%);
-  -webkit-filter: blur(150px); /* Safari */
-  -moz-filter: blur(30px); /* Firefox */
-  filter: blur(150px); /* Standard syntax */
+  /* -webkit-filter: blur(150px); */
+  /* -moz-filter: blur(30px); */
+  /* filter: blur(30px); */
   background-size: cover;
   background-position: center;
   z-index: -1; /* Ensure it's behind content */
@@ -525,7 +525,7 @@ p {
   bottom: 0;
   background: linear-gradient(180deg, rgba(218, 25, 25, 0.17) 50.7%, rgb(22, 2, 2) 68.73%, rgb(10, 15, 28) 88.31%);
   z-index: -2; /* Place the pseudo-element behind the element */
-  filter: blur(30px);
+  /* filter: blur(30px); */
   pointer-events: none; /* Avoid interference with interactions */
 }
 .blue-background-border {
@@ -553,7 +553,7 @@ p {
   bottom: 0;
   background: linear-gradient(180deg, rgba(0, 0, 50, 0.5) 50%, rgba(10, 10, 30, 0.7) 90%);
   z-index: -2; /* Place the pseudo-element behind the element */
-  filter: blur(30px); /* Soft blur effect for the pseudo-element */
+  /* filter: blur(30px); */
   pointer-events: none; /* Avoid interference with interactions */
 }
 /*
