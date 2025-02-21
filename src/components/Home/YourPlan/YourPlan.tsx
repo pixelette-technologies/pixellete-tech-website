@@ -10,6 +10,7 @@ type OurYourPlanProps = object;
 export const YourPlan: React.FC<OurYourPlanProps> = () => {
   return (
     <div className={styles.ourPlanContainer}>
+      <div style={{ position: 'relative' }}><div className="blue-background-border"></div></div>
       <Container className="main margins">
         <blockquote>
           <Image src="/images/home/services/box_10.svg" alt="box" width={100} height={100} />

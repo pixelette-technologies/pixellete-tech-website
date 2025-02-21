@@ -6,7 +6,8 @@ const WhatMakeUsSpecialHome: React.FC = () => {
   return (
     <>
       <Container className="main">
-        <div className="aboutUsSection-background">
+        <div style={{ position: 'relative' }}>
+          <div className="red-background-border"></div>
           {/* <img src='/images/home' alt="background" /> */}
           {/* <img src={assets.home.aboutRightBackground} alt="background" /> */}
         </div>

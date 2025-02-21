@@ -9,6 +9,7 @@ type HeroSectionProps = object;
 export const HeroSection: React.FC<HeroSectionProps> = () => {
   return (
     <>
+      <div className="main-content"></div>
       <div className={styles.heroSectionBackground}>
         {/* <Image
           src="/images/home/hero/homeHeroBackground.svg"
