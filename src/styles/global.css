@@ -486,12 +486,14 @@ p {
     linear-gradient(113deg, rgba(7, 23, 42, 0.74), rgba(255, 0, 0, 0) 70.71%),
     linear-gradient(127deg, rgba(189, 28, 28, 0.54), rgba(0, 255, 0, 0) 70.71%),
     linear-gradient(336deg, rgba(12, 12, 33, 0.5), rgba(0, 0, 255, 0) 70.71%);
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.02) 0%, rgba(0, 0, 0, 0.02) 100%),
+
+  /* This is a blur effect gradient which we will use later*/
+  /* background: linear-gradient(0deg, rgba(0, 0, 0, 0.02) 0%, rgba(0, 0, 0, 0.02) 100%),
     linear-gradient(90deg, rgba(0, 0, 0, 0.02) 0%, rgba(0, 0, 0, 0.02) 100%),
     linear-gradient(180deg, rgba(0, 0, 0, 0.02) 90%, rgba(0, 0, 0, 0.93) 100%),
     linear-gradient(324.54deg, rgba(7, 23, 42, 0.74) 0%, rgba(0, 0, 255, 0) 70.71%),
     linear-gradient(115.22deg, rgba(189, 28, 28, 0.54) 0%, rgba(0, 255, 0, 0) 70.71%),
-    linear-gradient(230.33deg, rgba(7, 23, 41, 0.93) 0%, rgba(255, 0, 0, 0) 70.71%); /* Original gradient 3 */
+    linear-gradient(230.33deg, rgba(7, 23, 41, 0.93) 0%, rgba(255, 0, 0, 0) 70.71%); Original gradient 3 */
 
   /* -webkit-filter: blur(150px); */
   /* -moz-filter: blur(150px); */
