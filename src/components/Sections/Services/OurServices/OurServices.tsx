@@ -86,14 +86,14 @@ export const OurServices: React.FC<OurServicesProps> = ({
             </div>
           ))}
           <div
-            // className="ourServicesBlock"
-            style={{
-              width: '450px',
-              backgroundColor: '#0F0F0FB2',
-              padding: '2rem',
-              borderRadius: '13.84px',
-              height: '460px',
-            }}
+            className="ourServicesBlock"
+            // style={{
+            //   width: '450px',
+            //   backgroundColor: '#0F0F0FB2',
+            //   padding: '2rem',
+            //   borderRadius: '13.84px',
+            //   height: '460px',
+            // }}
           >
             <Image src={currentService.imageSrc} alt={currentService.title} width={50} height={50} />
             <br />

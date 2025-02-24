@@ -59,24 +59,37 @@
     width: 90%;
   }
 }
-
+.technologyDes {
+  display: flex;
+  height: 150px;
+  text-align: center;
+  gap: 2rem;
+}
 @media only screen and (max-width: 37.5em) {
-  .technologyStackAi > div > div > div {
+  .technologyStackAi > div > div {
+    gap: 0rem;
     /* flex: 1 0 calc(48% - 2rem); */
   }
   .technologyStackAi > div > div > div {
-    width: 100%;
-    margin: 0rem 0.5rem;
-    background-color: #1f2123b2;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    /* width: 100%; */
+    /* margin: 0rem 0.5rem; */
+    /* background-color: #1f2123b2; */
+    /* border: 1px solid rgba(255, 255, 255, 0.1); */
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 2.5rem 2.2rem;
+    padding: 0.5rem 0.2rem;
     border-radius: 1rem;
   }
+  .technologyStackAi > div > div > div > hr {
+    display: none;
+  }
+  .technologyDes {
+    height: 220px;
+    text-align: center;
+  }
 }
-.mockButton{
+.mockButton {
   background-color: #1f2123b2;
   padding: 1rem;
   border-radius: 0.5rem;

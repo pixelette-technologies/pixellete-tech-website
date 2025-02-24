@@ -11,7 +11,7 @@ export const caseStudies = [
   {
     id: 'accessible-intelligence-assessment',
     frontImageSrc: '/images/casestudies/aia/aia-card-logo-512.png',
-    backImageSrc: '/images/casestudies/aia/aia-casestudy-image.png',
+    backImageSrc: '/images/casestudies/aia/aia-card-image.png',
     description: 'a gamified cognitive mapping tool designed to help organizations meet diversity hiring quotas and support inclusive talent development',
     title: 'Accessible Intelligence Assessment',
     tags: ['Banking', 'Financial Service', 'Fintech', 'Payments'],

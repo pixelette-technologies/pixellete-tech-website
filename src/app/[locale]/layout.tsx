@@ -14,23 +14,23 @@ export const metadata: Metadata = {
   icons: [
     {
       rel: 'apple-touch-icon',
-      url: '/images/logo/shortLogo.svg',
+      url: '/images/logo/short-logo-purple.png',
     },
     {
       rel: 'icon',
       type: 'image/png',
       sizes: '32x32',
-      url: '/images/logo/shortLogo.svg',
+      url: '/images/logo/short-logo-purple.png',
     },
     {
       rel: 'icon',
       type: 'image/png',
       sizes: '16x16',
-      url: '/images/logo/shortLogo.svg',
+      url: '/images/logo/short-logo-purple.png',
     },
     {
       rel: 'icon',
-      url: '/images/logo/shortLogo.svg',
+      url: '/images/logo/short-logo-purple.png',
     },
   ],
 };

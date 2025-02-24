@@ -24,16 +24,16 @@
   z-index: 2;
   color: white;
   /* height: 100%; */
-  margin: 2rem 0;
-  padding: 0 4rem;
+  /* margin: 2rem 0; */
+  padding: 2rem;
   /* width: 100%; */
 }
 
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
   .OurServicesBg div {
     padding: 0 1rem;
   }
-}
+} */
 .OurServicesBg {
   /* background: url('../../../../public/images/ai-services/aiServiceBg.png'); */
   background-repeat: no-repeat;
@@ -62,8 +62,8 @@
 .OurServicesBg div {
   z-index: 2;
   color: white;
-  height: 100%;
-  margin: 2rem 0;
+  /* height: 100%; */
+  /* margin: 2rem 0; */
 }
 
 .ourServicesLists {
@@ -156,4 +156,31 @@
   padding: 2rem;
   border-radius: 13.84px;
   height: 460px;
+}
+
+@media screen and (max-width: 768px) {
+  .OurServicesBg div {
+    padding: 0.5rem;
+  }
+  .ourServicesLists {
+    padding: 2rem;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .ourServicesBlock {
+    width: 100%; /* Full width for small screens */
+    height: 300px; /* Auto height to adjust to content */
+    padding: 1rem; /* Less padding for mobile */
+  }
+
+  .ourServicesLists div {
+    /* align-items: center; */
+    width: 100%;
+    gap: 1.5rem; /* Reduced gap for mobile */
+  }
+
+  .ourServicesLists div p {
+    font-size: 1.2rem; /* Smaller font size for mobile */
+  }
 }

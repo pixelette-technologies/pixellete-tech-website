@@ -53,7 +53,7 @@ export const HowWeWork: React.FC<HowWeWorkProps> = () => {
           <div className="expertiseGrid">
             <section className="HowWeWorkCards">
               {data.map((el, index) => (
-                <div style={{ margin: '0 1rem' }} key={index}>
+                <div key={index}>
                   <h4>{index + 1}</h4>
                   <h3>{el.title}</h3>
                   <br />
