@@ -264,8 +264,61 @@
   border-radius: 10000px;
 }
 
+.BlockerGrid > div {
+  width: 50%;
+}
+
+.ourImpactBlock {
+  display: flex;
+  margin-top: 5rem;
+}
+
+.ourImpactBlock > span {
+  width: 70%;
+}
+.ourImpactBlock > section {
+  width: 70%;
+}
+.ourImpactBlock > section > span {
+  width: 70%;
+}
+.caseStudyTechStack {
+  padding: 10rem 0;
+}
+.caseStudyTechStack > span {
+  width: 70%;
+}
 @media screen and (max-width: 700px) {
   .BlockerGrid {
     flex-wrap: wrap;
+  }
+  .BlockerGrid > div {
+    width: 100%;
+  }
+  .caseStudieDetail > section > div {
+    padding: 0 0;
+  }
+
+  .ourImpactBlock {
+    display: flex;
+    margin-top: 5rem;
+    flex-direction: column;
+  }
+
+  .ourImpactBlock > span {
+    width: 100%;
+  }
+  .ourImpactBlock > section {
+    width: 100%;
+    padding: 2rem;
+  }
+  .ourImpactBlock > section > span {
+    width: 100%;
+  }
+  .caseStudyTechStack {
+    padding: 1rem 0;
+  }
+  .caseStudyTechStack > span {
+    width: 100%;
   }
 }

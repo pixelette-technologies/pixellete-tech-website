@@ -7,7 +7,7 @@ import './index.css';
 type AiServiceTableProps = object;
 export const AiServiceTable: React.FC<AiServiceTableProps> = () => {
   return (
-    <div id="sideMargin">
+    <div id="sideMargin" className="servicesTable">
       <Container className="main margins">
         <center style={{ marginTop: '10rem' }}>
           <h2>

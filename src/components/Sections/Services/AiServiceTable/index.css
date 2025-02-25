@@ -125,6 +125,11 @@
     padding: 1px;
   }
 }
+@media screen and (max-width: 760px) {
+  .servicesTable {
+    display: none;
+  }
+}
 
 /* .AiServiceTable{
   display: flex;

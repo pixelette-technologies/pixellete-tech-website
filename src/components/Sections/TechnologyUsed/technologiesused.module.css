@@ -54,7 +54,7 @@
 
 .tabButton.active {
   color: #fff;
-  font-weight: bold;
+  /* font-weight: bold; */
   background-color: #232323; /* Dark background for the active tab */
   border: 1px solid #232323;
 }
@@ -96,7 +96,7 @@
 }
 
 .iconCardHover {
-  transform: scale(1.1);
+  /* transform: scale(1.1); */
 }
 
 .iconImg {
@@ -112,7 +112,7 @@
 
 .iconImgHover {
   filter: grayscale(0%);
-  transform: scale(1.05);
+  /* transform: scale(1.05); */
   box-shadow: 0 0.4rem 7rem #e2e2e233;
 }
 
@@ -162,7 +162,7 @@
 
   .iconImg {
     width: 80px;
-    height: 80px;
+    height: auto;
   }
 }
 
@@ -181,6 +181,35 @@
 
   .iconImg {
     width: 45px;
-    height: 45px;
+    height: auto;
+  }
+}
+
+/* Base styles for the technology name */
+.technologyName {
+  display: block; /* Default display for full name */
+}
+
+/* Shortened name for mobile */
+.shortName {
+  display: none; /* Hide the shortened name by default */
+}
+
+/* Full name for mobile */
+.fullName {
+  display: block; /* Ensure full name is displayed on larger screens */
+}
+
+/* For mobile screens */
+@media (max-width: 768px) {
+  /* Hide the full name on mobile */
+  .fullName {
+    display: none;
+  }
+
+  /* Show the shortened name on mobile */
+  .shortName {
+    font-size: 1.2rem;
+    display: block;
   }
 }

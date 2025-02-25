@@ -6,6 +6,9 @@
   padding: 0 5rem;
   margin: 10rem 0;
 }
+.evaluateBussiness > div > div {
+  width: 55rem;
+}
 @media screen and (max-width: 760px) {
   .evaluateBussiness > * {
     padding: 0 2%;
@@ -30,7 +33,4 @@
 }
 .evaluateBussiness > header > h2 {
   margin-bottom: 1.6rem;
-}
-.evaluateBussiness > div > div {
-  width: 55rem;
 }
