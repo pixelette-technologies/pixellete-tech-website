@@ -1,12 +1,13 @@
 import MillstoneList from '@/components/CaseStudies/MilestoneList/MillstoneList';
 import { Container } from '@/components/Feature/Container/Container';
 import caseStudiesData from '@/data/caseStudies/caseStudiesData'; // Import case studies data
+import Head from 'next/head';
 import Image from 'next/image';
 import React from 'react';
 import './casestudydetail.css';
 
 const CaseStudieDetail = async ({ params }: { params: { slug: string } }) => {
-  const { slug } = params;
+  const slug = await params.slug;
 
   // Find the case study data based on the slug
   const caseStudy = caseStudiesData.find(study => study.slug === slug);
@@ -31,6 +32,23 @@ const CaseStudieDetail = async ({ params }: { params: { slug: string } }) => {
 
   return (
     <div className="caseStudieDetail">
+      <Head>
+        <title>
+          {title}
+          {' '}
+          | Case Study
+        </title>
+        <meta name="description" content={description} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={`https://yourwebsite.com/case-studies/${slug}`} />
+        <meta property="og:image" content={caseStudy.bannerImage || '/images/casestudies/aia/aia-header-image.svg'} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
+        <meta name="twitter:image" content={caseStudy.bannerImage || '/images/casestudies/aia/aia-header-image.svg'} />
+      </Head>
       <Container className="main">
         <div className="caseStudieDetail-background">
           <Image

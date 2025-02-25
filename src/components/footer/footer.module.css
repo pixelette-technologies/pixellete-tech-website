@@ -98,7 +98,8 @@
 }
 .footer > div > section > *:last-child > *:last-child > *:first-child,
 .footer > div > section > *:last-child > *:nth-child(5) > *:first-child {
-  font-size: 4rem;
+  /* font-size: 4rem; */
+  font-size: 1.7rem;
   margin-top: -1.8rem;
 }
 .footer > div > center {

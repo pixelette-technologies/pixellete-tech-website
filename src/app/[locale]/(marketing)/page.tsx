@@ -1,3 +1,5 @@
+// import { HeroSection } from '@/components/Home/HeroSection/HeroSection';
+import { HeroSection } from '@/components/Home/HeroSection/HeroSection';
 import { homeTechnologies } from '@/data/technology/homeTechnologies';
 
 import { getTranslations } from 'next-intl/server';
