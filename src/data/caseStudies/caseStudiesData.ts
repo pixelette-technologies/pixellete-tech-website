@@ -83,7 +83,7 @@ const caseStudiesData = [
       { name: 'vgg-16', icon: '/images/tech/logos/vgg-16.png' },
       { name: 'Python', icon: '/images/tech/logos/python.png' },
       { name: 'Openai', icon: '/images/tech/logos/openai.png' },
-      { name: 'audfprint', icon: '/images/tech/logos/audprint.png' },
+      { name: 'audfprint', icon: '/images/tech/logos/audfprint.png' },
       { name: 'FFMPEG', icon: '/images/tech/logos/ffmpeg.png' },
     ],
     impactStats: {
@@ -97,10 +97,10 @@ const caseStudiesData = [
       { title: 'Unwanted content removal', description: 'Accomplished a 75% reduction in unwanted content across all input streams.' },
     ],
     milestones: [
-      { title: 'Discovery and research', description: 'Our team conducted an in-depth analysis of current ad interruptions alongside comprehensive viewer feedback. The goal was to identify key pain points, patterns and potential improvements. Insights gathered were able to guide us in refining strategies to enhance the overall viewer experience and ad engagement.' },
       { title: 'Design and development', description: 'Then our design and development teams developed a custom AI-powered framework personalized to AdWatch’s specific requirements. The system uses a Linux-Python stack and integrates FFmpeg, Audfprint and VGG-16 technologies. This innovative solution ensured precise functionality, optimized performance and integration for AdWatch’s needs.' },
-      { title: 'Integrations', description: 'Our next challenge was integration. The team integrated the AI-powered AdWatch into existing media infrastructure, especially focusing on compatibility with various platforms for smooth interaction and little to none disruption.' },
       { title: 'Testing and deployment', description: 'In the final stages of the project, we were able to achieve up to 98% accuracy in ad detection through continued testing and refinements. We successfully delivered and integrated the AdWatch Engine into live media streams, enabling real-time functionality and immediate impact on enhancing ad monitoring and viewer experience.' },
+      { title: 'Discovery and research', description: 'Our team conducted an in-depth analysis of current ad interruptions alongside comprehensive viewer feedback. The goal was to identify key pain points, patterns and potential improvements. Insights gathered were able to guide us in refining strategies to enhance the overall viewer experience and ad engagement.' },
+      { title: 'Integrations', description: 'Our next challenge was integration. The team integrated the AI-powered AdWatch into existing media infrastructure, especially focusing on compatibility with various platforms for smooth interaction and little to none disruption.' },
     ],
   },
   // Add more case studies here

@@ -54,28 +54,28 @@ export const TechnologyGrid: React.FC<TechnologyGridProps> = ({
         <div className="margins" style={{ marginBottom: '3rem' }}>
           {/* Render expertise areas */}
           {expertiseAreas?.map((area, index) => (
-            <div>
-            <div
-              key={index}
-              data-aos="fade-up"
-              data-aos-duration="600"
-              onMouseEnter={() => handleCardClick(area.title)} // Handle click
-              style={{
-                cursor: 'pointer',
-                textAlign: 'center',
-                display: 'flex',
-                alignItems: 'center',
-                // flexDirection: 'column',
-                gap: '1rem',
-              }}
-              className='mockButton'
-            >
-              <h5
+            <div key={index}>
+              <div
+                key={index}
+                data-aos="fade-up"
+                data-aos-duration="600"
+                onMouseEnter={() => handleCardClick(area.title)} // Handle click
                 style={{
-                  color:
-                  selectedData?.title === area.title ? '#4292FA' : '#fff',
-                  transition: 'color 0.3s ease-in-out, transform 0.3s ease-in-out',
+                  cursor: 'pointer',
+                  textAlign: 'center',
+                  display: 'flex',
+                  alignItems: 'center',
+                  // flexDirection: 'column',
+                  gap: '1rem',
                 }}
+                className="mockButton"
+              >
+                <h5
+                  style={{
+                    color:
+                  selectedData?.title === area.title ? '#4292FA' : '#fff',
+                    transition: 'color 0.3s ease-in-out, transform 0.3s ease-in-out',
+                  }}
                 // onMouseEnter={(e) => {
                 //   e.currentTarget.style.transform = 'scale(1.05)';
                 //   // e.currentTarget.style.color = '#4292FA'; // Change to your preferred hover color
@@ -84,27 +84,27 @@ export const TechnologyGrid: React.FC<TechnologyGridProps> = ({
                 //   e.currentTarget.style.transform = 'scale(1)';
                 //   // e.currentTarget.style.color = '#fff'; // Reset to default
                 // }}
-              >
-                {area.title}
-              </h5>
-              {/* {area.description && (
+                >
+                  {area.title}
+                </h5>
+                {/* {area.description && (
                 <p>{area.description}</p>
                 )} */}
-                
-            </div>
-            {index !== expertiseAreas.length - 1 && (
-                  <hr
-                    style={{
-                      border: '0',
-                      borderLeft: '2px solid #ccc',
-                      height: '100%',
-                      margin: '0 auto',
-                      position: 'relative',
-                      left: '1.5rem'
-                    }}
-                    className='title-hr'
-                  />
-                )}
+
+              </div>
+              {index !== expertiseAreas.length - 1 && (
+                <hr
+                  style={{
+                    border: '0',
+                    borderLeft: '2px solid #ccc',
+                    height: '100%',
+                    margin: '0 auto',
+                    position: 'relative',
+                    left: '1.5rem',
+                  }}
+                  className="title-hr"
+                />
+              )}
             </div>
           ))}
 
@@ -117,17 +117,20 @@ export const TechnologyGrid: React.FC<TechnologyGridProps> = ({
             }}
           >
             {selectedData
-              && (
-                  <div style={{ display: 'flex', textAlign: 'center', gap: '2rem', height: '150px', alignItems: 'center', }}>
-                    {/* <h5>{selectedData.title}</h5> */}
-                    {selectedData.description && (
-                      <p style={{ maxWidth: '55ch' }}>
-                        {selectedData.description}
-                      </p>
+            && (
+              <div
+                // style={{ display: 'flex', textAlign: 'center', gap: '2rem', height: '150px', alignItems: 'center' }}
+                className="technologyDes"
+              >
+                {/* <h5>{selectedData.title}</h5> */}
+                {selectedData.description && (
+                  <p style={{ maxWidth: '55ch' }}>
+                    {selectedData.description}
+                  </p>
 
-                    )}
-                  </div>
                 )}
+              </div>
+            )}
           </div>
         </div>
       </Container>

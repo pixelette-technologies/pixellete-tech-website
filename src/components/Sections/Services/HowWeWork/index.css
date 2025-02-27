@@ -20,6 +20,7 @@
 .HowWeWorkCards > div {
   width: 28rem;
   padding: 2rem;
+  margin: 0 1rem;
   border-radius: 1.2rem;
   background-color: #0f0f0fb3;
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -49,7 +50,8 @@
 @media screen and (max-width: 768px) {
   .HowWeWorkCards > div {
     width: 100%;
-    padding: 2rem;
+    padding: 2.5rem;
+    margin: 2rem;
     border-radius: 1.2rem;
     background-color: #0f0f0fb3;
     border: 1px solid rgba(255, 255, 255, 0.1);

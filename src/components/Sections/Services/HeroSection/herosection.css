@@ -50,6 +50,9 @@
   animation: rotateOpposite 20s linear infinite;
 }
 @media only screen and (max-width: 37.5em) {
+  .heroSection > div > blockquote {
+    display: none;
+  }
   .heroSection > div > blockquote > *:first-child {
     max-width: 9rem;
     top: -5rem;

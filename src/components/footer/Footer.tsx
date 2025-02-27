@@ -175,20 +175,31 @@ export const Footer: React.FC = () => {
               {
                 Icon: HiLocationMarker,
                 text: '71-75 Shelton Street, WC2 H9J, London, UK (Headquarter)',
+                link: 'https://g.page/r/CQ7pSJ0AcTbYEAE/',
               },
               {
                 Icon: HiLocationMarker,
                 text: '6305 Naples Blvd Naples, FL 34109, USA (Headquarter)',
               },
             ].map((contact, index) => (
-              <p
-                key={index}
-              >
-                <contact.Icon />
-                {contact.text}
-              </p>
+              <div key={index}>
+                <p><contact.Icon /></p>
+                {contact.link
+                  ? (
+                      <Link href={contact.link} target="_blank" rel="noopener noreferrer">
+                        <p>
+                          {' '}
+                          {contact.text}
+                        </p>
+                      </Link>
+                    )
+                  : (
+                      <p>{contact.text}</p>
+                    )}
+              </div>
             ))}
           </div>
+
         </section>
         <center>
           <p>

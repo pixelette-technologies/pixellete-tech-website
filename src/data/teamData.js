@@ -33,6 +33,11 @@ export const teamData = [
     role: 'Head of Partnerships',
   },
   {
+    image: '/images/people/kelvin-kong.jpg',
+    name: 'Kelvin Kong',
+    role: 'MD (Asia Pacific)',
+  },
+  {
     image: '/images/people/maiwand-sultan.jpeg',
     name: 'Maiwand Sultan',
     role: 'Technical Project Manager',

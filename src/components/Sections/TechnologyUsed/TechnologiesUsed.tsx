@@ -24,6 +24,15 @@ type TechnologiesUsedProps = {
 const TechnologiesUsed: React.FC<TechnologiesUsedProps> = ({ technologies, title, subtitle }) => {
   const [activeTab, setActiveTab] = useState<keyof Technologies>(Object.keys(technologies)[0] as keyof Technologies);
 
+  const shortenTechName = (name: string) => {
+    const techMap: { [key: string]: string } = {
+      'AI development': 'AI',
+      'Blockchain development': 'Blockchain',
+      // Add more mappings as needed
+    };
+    return techMap[name] || name; // Return the shortened name or original if no mapping exists
+  };
+
   return (
     <>
       <div style={{ position: 'relative' }}>
@@ -46,7 +55,18 @@ const TechnologiesUsed: React.FC<TechnologiesUsedProps> = ({ technologies, title
                   onMouseEnter={() => setActiveTab(tab as keyof Technologies)}
                   className={`${styles.tabButton} ${activeTab === tab ? styles.active : ''}`}
                 >
-                  {tab.replace('_', ' ')}
+                  {/* {tab.replace('_', ' ')} */}
+                  <span className={`${styles.technologyName} ${styles.fullName}`}>
+                    {tab.replace('_', ' ')}
+                    {' '}
+                    {/* Full name on desktop */}
+                  </span>
+                  <span className={`${styles.technologyName} ${styles.shortName}`}>
+                    {tab.split(' ')[0]}
+                    {/* {shortenTechName(tab.replace('_', ' '))} */}
+                    {/* {' '} */}
+                    {/* Shortened name on mobile */}
+                  </span>
                 </button>
               ))}
             </div>
