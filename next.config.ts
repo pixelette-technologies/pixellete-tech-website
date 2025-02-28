@@ -32,66 +32,166 @@ export default withSentryConfig(
       async redirects() {
         return [
           {
-            source: '/deliver', // Old URL
-            destination: '/it-outsourcing-services', // New URL
-            permanent: true, // Permanent redirect (301)
-          },
-          {
-            source: '/supplement', // Old URL
-            destination: '/staff-augmentation-services', // New URL
-            permanent: true, // Permanent redirect (301)
-          },
-          {
-            source: '/deploy', // Another old URL
-            destination: '/dedicated-team-services', // Another new URL
+            source: '/deliver',
+            destination: '/it-outsourcing-services',
             permanent: true,
           },
           {
-            source: '/blogs', // Another old URL
-            destination: '/blog', // Another new URL
+            source: '/supplement',
+            destination: '/staff-augmentation-services',
             permanent: true,
           },
           {
-            source: '/start-ups', // Another old URL
-            destination: '/startup-funding', // Another new URL
+            source: '/deploy',
+            destination: '/dedicated-team-services',
             permanent: true,
           },
           {
-            source: '/ai-services', // Another old URL
-            destination: '/ai-development-services', // Another new URL
+            source: '/blogs',
+            destination: '/blog',
             permanent: true,
           },
           {
-            source: '/blockchain-development', // Another old URL
-            destination: '/blockchain-development-services', // Another new URL
+            source: '/start-ups',
+            destination: '/startup-funding',
             permanent: true,
           },
           {
-            source: '/vr-ar', // Another old URL
-            destination: '/ar-vr-development-services', // Another new URL
+            source: '/ai-services',
+            destination: '/ai-development-services',
             permanent: true,
           },
           {
-            source: '/web-development', // Another old URL
-            destination: '/web-development-services', // Another new URL
+            source: '/blockchain-development',
+            destination: '/blockchain-development-services',
             permanent: true,
           },
           {
-            source: '/mobile-development', // Another old URL
-            destination: '/mobile-app-development-services', // Another new URL
+            source: '/vr-ar',
+            destination: '/ar-vr-development-services',
             permanent: true,
           },
           {
-            source: '/custome-software-development', // Another old URL
-            destination: '/custom-software-development-services', // Another new URL
+            source: '/web-development',
+            destination: '/web-development-services',
             permanent: true,
           },
           {
-            source: '/ui-ux', // Another old URL
-            destination: '/ui-ux-design-services', // Another new URL
+            source: '/mobile-development',
+            destination: '/mobile-app-development-services',
             permanent: true,
           },
-          // Add more redirects as needed
+          {
+            source: '/custome-software-development',
+            destination: '/custom-software-development-services',
+            permanent: true,
+          },
+          {
+            source: '/ui-ux',
+            destination: '/ui-ux-design-services',
+            permanent: true,
+          },
+          {
+            source: '/ui-ux-design',
+            destination: '/ui-ux-design-services',
+            permanent: true,
+          },
+          {
+            source: '/food-delivery-app-case-study',
+            destination: '/case-studies',
+            permanent: true,
+          },
+          {
+            source: '/food-delivery-app-case-study',
+            destination: '/case-studies',
+            permanent: true,
+          },
+          {
+            source: '/case-study/3eKvdUcg042cCmUYqEm2XF',
+            destination: '/case-studies',
+            permanent: true,
+          },
+          {
+            source: '/media-pulse-multi-client-dashboards',
+            destination: '/blog',
+            permanent: true,
+          },
+          {
+            source: '/chillow-roommate-finder-mobile-application',
+            destination: '/blog',
+            permanent: true,
+          },
+          {
+            source: '/extract-your-competitors-leads-stealthily-with-the-marketing-zeus',
+            destination: '/blog',
+            permanent: true,
+          },
+          {
+            source: '/decentralised-marketplaces-and-the-future-of-online',
+            destination: '/blog',
+            permanent: true,
+          },
+          {
+            source: '/smart-contract-audits-best-practices-and-common-pitfalls',
+            destination: '/blog',
+            permanent: true,
+          },
+          {
+            source: '/central-bank-digital-currencies-blockchain-adoption',
+            destination: '/blog',
+            permanent: true,
+          },
+          {
+            source: '/decentralized-autonomous-organization-dao',
+            destination: '/blog',
+            permanent: true,
+          },
+          {
+            source: '/exciting-world-of-nft-art-galleries',
+            destination: '/blog',
+            permanent: true,
+          },
+          {
+            source: '/dphq-parking-dashboard-development',
+            destination: '/blog',
+            permanent: true,
+          },
+          {
+            source: '/microsoft-announces-windows-11-generally-available-by-the-holidays',
+            destination: '/blog',
+            permanent: true,
+          },
+          {
+            source: '/h1-headings-over-50-of-seos-doing-it-wrong',
+            destination: '/blog',
+            permanent: true,
+          },
+          {
+            source: '/services',
+            destination: '/',
+            permanent: true,
+          },
+          {
+            source: '/services/search-engine-optimization',
+            destination: '/',
+            permanent: true,
+          },
+          {
+            source: '/assessment',
+            destination: '/',
+            permanent: true,
+          },
+          {
+            source: '/services/java-web-development',
+            destination: '/custom-software-development-services',
+            permanent: true,
+          },
+          {
+            source: '/blockchain-game-development',
+            destination: '/blockchain-development-services',
+            permanent: true,
+          },
+
         ];
       },
     }),

@@ -12,10 +12,9 @@
     "made_with": "Made with <author></author>."
   },
   "Index": {
-    "meta_title": "AI & Blockchain Solutions | Pixelette Technologies | Custom AI Development",
-    "meta_description": "Cutting-edge AI & Blockchain solutions. Custom AI, blockchain consulting, metaverse integration. Innovative & impactful results for your business.",
-    "meta_keywords": " blockchain and ai, blockchain development company, blockchain software development company, blockchain development services",
-    "sponsors_title": "Sponsors"
+    "meta_title": "Pixelette Technologies | Shaping Future Tech",
+    "meta_description": "We're a leading IT solutions company in the UK and USA for development services in AI, blockchain, software, mobile, web and more. Get in touch ⚡️",
+    "meta_keywords": "IT solutions, IT solutions company, offshore software development company, nearshore development services, IT, outsourcing company"
   },
   "Counter": {
     "meta_title": "Counter",
@@ -40,7 +39,7 @@
   "CaseStudies": {
     "_comment": "Add Case Studies content here",
     "meta_title": "Pixelette Tech Case Studies | Tech & IT Development Services",
-    "meta_description": "Explore our portfolio of clients in Blockchain, AI, VR/AR, Web, Mobile & Software Development, delivering tailored solutions and transformative results.",
+    "meta_description": "Explore our portfolio of clients in blockchain, AI, web, mobile & software development | Delivering custom IT solutions & top-notch results since 2018 ✅",
     "meta_keywords": "ai case studies, blockchain case studies, web development case studies, software development case studies, ui ux case studies",
     "about_paragraph": "Welcome to our About page! We are a team of passionate individuals dedicated to creating amazing software.",
     "translation_powered_by": "Translation powered by"
@@ -56,7 +55,7 @@
   "StartUps": {
     "_comment": "Add StartUps content here",
     "meta_title": "Tech Startup Funding Program | Pixelette Technologies",
-    "meta_description": "We invest our resources and expertise to support ideas from concept to execution. Get in touch to navigate the hurdles hindering your startup's success",
+    "meta_description": "We invest our resources & expertise to support ideas from concept to execution. Let's talk about hurdles in your startup's success and how to FIX them.",
     "meta_keywords": "startup funding, start up capital, funding for startups, startup fundraising, startup investment opportunities, fund startup",
     "about_paragraph": "Welcome to our About page! We are a team of passionate individuals dedicated to creating amazing software.",
     "translation_powered_by": "Translation powered by"
@@ -64,15 +63,16 @@
   "PixeletteResearch": {
     "_comment": "Add Pixelette Research content here",
     "meta_title": "Pixelette Research | Actionable Intelligence, Delivered",
-    "meta_description": "Pixelette Research offers expert insights, predictive modeling and comprehensive data analysis. Transform your data into actionable strategies.",
-    "meta_keywords": "robotic process automation, natural language processing, predictive modeling, data analysis services, research services, research projects",
+    "meta_description": "We provide research services across AI, blockchain, data science and more. Transform your data into actionable strategies with our help. Let’s talk today.",
+    "meta_keywords": "predictive modeling, data analysis services, research services, research projects, robotic process automation, natural language processing",
     "about_paragraph": "Welcome to our About page! We are a team of passionate individuals dedicated to creating amazing software.",
     "translation_powered_by": "Translation powered by"
   },
   "Blogs": {
     "_comment": "Add Blogs content here",
-    "meta_title": "Blog | Pixelette Technologies",
+    "meta_title": "Blog | Development Insights | Pixelette Technologies",
     "meta_description": "Explore valuable tech insights and industry best practices to upgrade development strategies across various domains like Web3, AI, Software and more.",
+    "meta_keywords": "app development blog, ai blog, web3 blog, blockchain articles, ai articles, web development blog, software development blog, technology articles",
     "about_paragraph": "Welcome to our About page! We are a team of passionate individuals dedicated to creating amazing software.",
     "translation_powered_by": "Translation powered by"
   },
@@ -85,15 +85,15 @@
   },
   "AiServices": {
     "_comment": "Add Ai Services content here",
-    "meta_title": "AI Development Services 2025 | Advanced AI Solutions",
-    "meta_description": " Pixelette Technologies: We specialize in AI software, generative AI, AI applications, chatbots, and custom AI development services. Leverage AI to transform your business.",
-    "meta_keywords": "AI Development Services, ai software development services, generative ai development services, ai application development services, ai chatbot development services",
+    "meta_title": "Top AI Development Company 2024 🥇 on Clutch",
+    "meta_description": "We're a full spectrum AI development services provider. Experts in AI software, AI chatbots, generative AI, AI agents, AI apps and more. Let's talk today 📞",
+    "meta_keywords": "ai development services, ai software development services, generative ai development services, ai application development services, ai chatbot development services, custom ai development services",
     "about_paragraph": "Welcome to our About page! We are a team of passionate individuals dedicated to creating amazing software.",
     "translation_powered_by": "Translation powered by"
   },
   "BlockchainDevelopment": {
     "_comment": "Add Blockchain development services content here",
-    "meta_title": "Blockchain Development Company 2025 | Top Blockchain Experts",
+    "meta_title": "Top Blockchain Development Company 2024 🥇 on Clutch",
     "meta_description": "Leading Blockchain Development Company in 2025. Our top blockchain experts deliver cutting-edge solutions. Contact us today for secure blockchain software development services.",
     "meta_keywords": "blockchain development company, blockchain software development company, blockchain development services, blockchain software development services",
     "about_paragraph": "Welcome to our About page! We are a team of passionate individuals dedicated to creating amazing software.",
@@ -102,64 +102,72 @@
   "CustomSoftwareDevelopment": {
     "_comment": "Add Custom Software development services content here",
     "meta_title": "Custom Software Development Services | Pixelette Technologies",
-    "meta_description": "We deliver exceptional custom software development solutions tailored to your unique business needs. We specialize in ERP, CRM, HRMS, and document management systems.",
-    "meta_keywords": "custom software development, custom software development solutions, erp software development, crm development, hrms software development, document management systems",
+    "meta_description": "Full-cycle custom software development company ⭐️ Top 5% of global software developers team. Clients include Dodge, McDonald's, moTV and more!",
+    "meta_keywords": "software development services, custom software development services, software product development services, erp software development, crm development, hrms software development, document management systems",
     "about_paragraph": "Welcome to our About page! We are a team of passionate individuals dedicated to creating amazing software.",
     "translation_powered_by": "Translation powered by"
   },
   "MobileDevelopment": {
     "_comment": "Add Mobile development services content here",
     "meta_title": "Mobile App Development Services | Pixelette Technologies",
-    "meta_description": "Experience top-tier custom mobile app development with Pixelette Technologies. We excel in Android and iOS and enterprise mobile app development services.",
-    "meta_keywords": "Mobile App Development Services, custom mobile app development services, android mobile app development services, ios mobile app development services, enterprise mobile app development services",
+    "meta_description": "Experience top-tier custom mobile app development | iOS, Android & enterprise app development | Shipped 100+ apps since 2018 🚀  Get in touch today.",
+    "meta_keywords": "mobile app development services, mobile app development company, mobile application development company, android app development services, custom mobile app development services, ios app development services",
     "about_paragraph": "Welcome to our About page! We are a team of passionate individuals dedicated to creating amazing software.",
     "translation_powered_by": "Translation powered by"
   },
   "UiUx": {
     "_comment": "Add UX/UX services content here",
-    "meta_title": "UI/UX Design Services for Mobile & Web Apps",
-    "meta_description": "Enhance user experience with Pixelette Technologies. We offer comprehensive UI/UX services, including consulting, research, wireframing, prototyping, usability testing, and more.",
-    "meta_keywords": "ui ux design services, ux/ui design services, ui ux design services company",
+    "meta_title": "UI & UX Design Services | Pixelette Technologies",
+    "meta_description": "We’re a UI/UX design and development services company for mobile and web applications. Get in touch to upgrade your product with top-notch UI/UX.",
+    "meta_keywords": "ux/ui design services, ui ux design services company, ui ux design and development services, mobile ui ux design services",
     "about_paragraph": "Welcome to our About page! We are a team of passionate individuals dedicated to creating amazing software.",
     "translation_powered_by": "Translation powered by"
   },
   "VrAr": {
     "_comment": "Add VR/AR services content here",
     "meta_title": "AR/VR Development Services | Pixelette Technologies",
-    "meta_description": "We offer cutting-edge AR/VR app development services, including VR simulation development. Create engaging and interactive AR/VR experiences that captivate your audience.",
-    "meta_keywords": "ar vr development company, ar vr app development services, vr simulation development",
+    "meta_description": "Our AR/VR app development company offers VR simulation, AR game development and more. Let’s create interactive AR/VR experiences. Get in touch!",
+    "meta_keywords": "ar vr app development services, ar vr app development company, ar development, augmented reality services, vr game development, ar game development",
     "about_paragraph": "Welcome to our About page! We are a team of passionate individuals dedicated to creating amazing software.",
     "translation_powered_by": "Translation powered by"
   },
   "WebDevelopment": {
     "_comment": "Add Web development services content here",
-    "meta_title": "Web Development Services | Custom Websites & Web Apps",
-    "meta_description": "Pixelette Technologies: We specialize in web application development, custom web development, e-commerce websites, CMS development, UI/UX design, and ongoing web support.",
-    "meta_keywords": "Web Development Services, web application development, custom web development services, e commerce web development, cms development, ui ux design and development services",
+    "meta_title": "Web Development Services Company | Pixelette Technologies",
+    "meta_description": "We specialize in web application development, website redesign services, e-commerce web development + more to boost client conversions 🔥 Let's talk.",
+    "meta_keywords": "web development services, web development company, website development company, website development services, custom web development services",
     "about_paragraph": "Welcome to our About page! We are a team of passionate individuals dedicated to creating amazing software.",
     "translation_powered_by": "Translation powered by"
   },
   "outSourcePage": {
     "_comment": "Add Deliver page content here",
     "meta_title": "IT Outsourcing Services | Pixelette Technologies",
-    "meta_description": "Leading IT outsourcing services company. We provide expert software development, web development, and IT support solutions. Enhance efficiency and reduce costs.",
-    "meta_keywords": "IT Outsourcing Services, outsourcing it services, it outsourcing services company",
+    "meta_description": "Leave the technical details to us. 200+ Projects | Top 5% Talent | Clutch Rating 4.8 ⭐️  Book a free call to outsource with the best IT outsourcing company.",
+    "meta_keywords": "outsourcing services, it outsourcing services, it outsourcing company, outsourcing it services",
     "about_paragraph": "Welcome to our About page! We are a team of passionate individuals dedicated to creating amazing software.",
     "translation_powered_by": "Translation powered by"
   },
   "staffAugmentationPage": {
     "_comment": "Add Deploy page content here",
-    "meta_title": "IT Staff Augmentation Services | Pixelette Technologies",
-    "meta_description": "Top IT staff augmentation services. Access a pool of skilled developers and engineers to augment your in-house team. Enhance project speed and flexibility.",
-    "meta_keywords": "Staff Augmentation Services, it staff augmentation services, staff augmentation services company",
+    "meta_title": "Staff Augmentation Services | Pixelette Technologies",
+    "meta_description": "Fill team gaps with our IT staff augmentation solutions. Scale workforce quick ✅ Top 5% global talent pool ✅ No hiring headache. Get in touch today!",
+    "meta_keywords": "staff augmentation services, staff augmentation, it staff augmentation services, software development staff augmentation, staff augmentation company, staff augmentation solutions",
     "about_paragraph": "Welcome to our About page! We are a team of passionate individuals dedicated to creating amazing software.",
     "translation_powered_by": "Translation powered by"
   },
   "dedicatedTeamPage": {
     "_comment": "Add Supplement page content here",
     "meta_title": "Dedicated Team Services | Pixelette Technologies",
-    "meta_description": "Access top developer talent in your time zone. Team delivery within 2 weeks, tailored to your needs. Rated 4.8 ⭐️ Clutch. Book a free discovery call today",
+    "meta_description": "Hire a dedicated development team in your time zone. Delivery within 2 weeks, tailored to your needs. Rated 4.8 ⭐️ Clutch. Let's discuss your goals today.",
     "meta_keywords": "dedicated team services, dedicated teams, dedicated development team, dedicated software development team, dedicated development company",
+    "about_paragraph": "Welcome to our About page! We are a team of passionate individuals dedicated to creating amazing software.",
+    "translation_powered_by": "Translation powered by"
+  },
+  "clutchPage": {
+    "_comment": "Add Supplement page content here",
+    "meta_title": "Top Development Services Company | Clutch Rated 4.8 ⭐️",
+    "meta_description": "Pixelette Technologies makes IT development affordable. 35,000+ hrs in development, 200+ projects & top 5% talent in Web3, AI, Software. Let's talk!",
+    "meta_keywords": "development services company, ar vr app development company, custom software development company, custom blockchain software development",
     "about_paragraph": "Welcome to our About page! We are a team of passionate individuals dedicated to creating amazing software.",
     "translation_powered_by": "Translation powered by"
   },
