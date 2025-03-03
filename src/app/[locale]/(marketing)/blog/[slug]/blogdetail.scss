@@ -560,3 +560,8 @@
   color: #0056b3; /* Change to a darker shade or any hover color */
   text-decoration-color: #0056b3; /* Change underline color on hover */
 }
+
+.custom-col > div > ul {
+  padding: 0 2rem;
+  list-style: disc;
+}
