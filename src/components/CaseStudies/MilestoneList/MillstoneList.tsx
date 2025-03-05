@@ -2,7 +2,7 @@
 import { Container } from '@/components/Feature/Container/Container';
 import './index.css';
 
-const MillstoneList = ({ data }) => {
+const MillstoneList = ({ data, process }) => {
   const midIndex = Math.ceil(data.length / 2);
   return (
     <div
@@ -19,12 +19,10 @@ const MillstoneList = ({ data }) => {
         <div className="millstoneList">
           <header>
             <h1>
-              Our Journey: Milestones and Achievements
+              The process
             </h1>
             <p>
-              Explore key moments in Pixelette Technologies' history,
-              highlighting our path from inception to becoming a leader in
-              technology and innovation:
+              {process}
             </p>
           </header>
           <section>

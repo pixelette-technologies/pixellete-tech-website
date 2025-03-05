@@ -74,7 +74,7 @@
   border-radius: 0.7rem;
   background-color: #181818;
   transition: 0.5s ease-in-out;
-  background-color: #0F0F0FB2;
+  background-color: #0f0f0fb2;
 }
 .caseStudiSectionCard:hover {
   background-color: #181818;
@@ -129,25 +129,6 @@
   -webkit-line-clamp: var(--max-line);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .cardContainer {
   perspective: 1000px; /* Perspective to create 3D effect */
 }
@@ -164,7 +145,8 @@
   transform: rotateY(180deg); /* Rotate on hover */
 }
 
-.cardFront, .cardBack {
+.cardFront,
+.cardBack {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -172,22 +154,26 @@
 }
 
 .cardFront {
-  background: #0F0F0FB2;
+  background: #0f0f0fb2;
   z-index: 2;
   align-items: center;
   height: 100%;
 }
 
 .cardBack {
-  background: #0F0F0FB2;
-  transform: rotateY(180deg); /* Flip the back side */
+  background: #0f0f0fb2;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  justify-content: center;
 }
 
-.cardBack img{
+.cardBack img {
   width: 100%;
 }
 
-.cardBackTags{
+.cardBackTags {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;

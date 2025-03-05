@@ -7,7 +7,7 @@ import React from 'react';
 import './casestudydetail.css';
 
 const CaseStudieDetail = async ({ params }: { params: { slug: string } }) => {
-  const slug = await params.slug;
+  const { slug } = params;
 
   // Find the case study data based on the slug
   const caseStudy = caseStudiesData.find(study => study.slug === slug);
@@ -28,6 +28,7 @@ const CaseStudieDetail = async ({ params }: { params: { slug: string } }) => {
     impactStats,
     impactBoxes,
     milestones,
+    process,
   } = caseStudy;
 
   return (
@@ -42,7 +43,7 @@ const CaseStudieDetail = async ({ params }: { params: { slug: string } }) => {
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content={`https://yourwebsite.com/case-studies/${slug}`} />
+        <meta property="og:url" content={`https://pixelettetech.com/case-studies/${slug}`} />
         <meta property="og:image" content={caseStudy.bannerImage || '/images/casestudies/aia/aia-header-image.svg'} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={title} />
@@ -116,7 +117,7 @@ const CaseStudieDetail = async ({ params }: { params: { slug: string } }) => {
               </div>
             </header>
           </section>
-          <MillstoneList data={milestones} />
+          <MillstoneList data={milestones} process={process} />
           <section className="caseStudyTechStack">
             <header style={{ textAlign: 'center', display: 'flex', flexDirection: 'column' }}>
               <h1>The chosen tech stack</h1>
@@ -139,31 +140,34 @@ const CaseStudieDetail = async ({ params }: { params: { slug: string } }) => {
               ))}
             </span>
           </section>
-          <span className="ourImpactBlock">
-            <span>
-              <h2>Our impact</h2>
-              <p style={{ fontSize: '15px' }}>{impactStats.description}</p>
-              {/* <h1>{impactStats.percentage}</h1> */}
-              {/* <p>{impactStats.details}</p> */}
-            </span>
-            <section style={{ width: '100%' }}>
-              <span style={{ display: 'flex', flexDirection: 'column', gap: '1rem', margin: '0 0 0 auto' }} className="boxTick">
-                {impactBoxes.map((box, index) => (
-                  <div
-                    key={index}
-                    style={{
-                      backgroundColor: '#0F0F0FB2',
-                      padding: '1rem',
-                      borderRadius: '10px',
-                    }}
-                  >
-                    <h3>{box.title}</h3>
-                    <p style={{ fontSize: '15px' }}>{box.description}</p>
-                  </div>
-                ))}
+          {impactBoxes
+          && (
+            <span className="ourImpactBlock">
+              <span>
+                <h2>Our impact</h2>
+                <p style={{ fontSize: '15px' }}>{impactStats.description}</p>
+                {/* <h1>{impactStats.percentage}</h1> */}
+                {/* <p>{impactStats.details}</p> */}
               </span>
-            </section>
-          </span>
+              <section style={{ width: '100%' }}>
+                <span style={{ display: 'flex', flexDirection: 'column', gap: '1rem', margin: '0 0 0 auto' }} className="boxTick">
+                  {impactBoxes.map((box, index) => (
+                    <div
+                      key={index}
+                      style={{
+                        backgroundColor: '#0F0F0FB2',
+                        padding: '1rem',
+                        borderRadius: '10px',
+                      }}
+                    >
+                      <h3>{box.title}</h3>
+                      <p style={{ fontSize: '15px' }}>{box.description}</p>
+                    </div>
+                  ))}
+                </span>
+              </section>
+            </span>
+          )}
         </Container>
       </section>
     </div>

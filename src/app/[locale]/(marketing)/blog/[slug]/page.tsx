@@ -682,8 +682,8 @@ const page = (props: any) => {
                   }}
                 >
                   <div>
-                    {selectedData?.fields?.preBlogBanner
-                    && documentToReactComponents(selectedData.fields.preBlogBanner.fields.blogBanner, {
+                    {selectedData?.fields?.sideBannerAd
+                    && documentToReactComponents(selectedData.fields.sideBannerAd.fields.sideAdbanner, {
                       renderNode: {
                         [BLOCKS.HEADING_2]: (node: any, children: React.ReactNode) => {
                           const textContent = getTextContent(node);
