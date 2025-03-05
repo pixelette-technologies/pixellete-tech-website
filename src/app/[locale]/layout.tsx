@@ -89,6 +89,7 @@ export default async function RootLayout(props: {
 
   // Using internationalization in Client Components
   const messages = await getMessages();
+  const canonicalUrl = `${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.pixelettetech.com'}/${locale}`;
 
   return (
     <html lang={locale} data-theme="dark">
@@ -113,6 +114,7 @@ export default async function RootLayout(props: {
             }),
           }}
         />
+        <link rel="canonical" href={canonicalUrl} />
       </head>
       <body className={`${outfit.className}`} style={{ overflowX: 'auto', overflowY: 'auto' }}>
         <GoogleTagManager gtmId="GTM-KXC3K4RL" />

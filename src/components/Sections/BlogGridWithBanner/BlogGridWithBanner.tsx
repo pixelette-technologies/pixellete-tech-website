@@ -39,9 +39,9 @@ export const BlogGridWithBanner = ({ data, singleView = false }) => {
       <BlogCard
         key={el.sys?.id || uuidv4()}
         image={resolveUrl(el.fields.thumbnailImage?.fields?.file?.url)}
-        date={el.fields.date || 'No date available'}
+        date={el.sys?.updatedAt || 'No date available'}
         heading={el.fields.title || 'No title available'}
-        description={el.fields.shortDescription || 'No description available'}
+        description={el.fields.description || 'No description available'}
         to={`${el.fields.slug}`}
         duration={`${index + 2}00`}
         animation="fade-up"
