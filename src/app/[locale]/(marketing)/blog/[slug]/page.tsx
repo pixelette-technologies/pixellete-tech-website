@@ -14,7 +14,7 @@ import useContentful from '../../api/usecontentful/usecontentful';
 // import './blogdetail.module.css';
 import './blogdetail.scss';
 
-const page = (props: any) => {
+const Page = (props: any) => {
   const params = useParams();
   // const [contentfulData, setContentfulData] = useState<any>([{}]);
   const [playVideo, setPlayVideo] = useState<any>(false);
@@ -52,8 +52,8 @@ const page = (props: any) => {
   type Params = { id: string };
 
   useEffect(() => {
-    if (params?.slug) {
-      getOneAssest({ id: params.slug }).then((response) => {
+    if (params.slug) {
+      getOneAssest({ slug: params.slug }).then((response) => {
         if (response !== undefined) {
           const { blogsPage, includes } = response;
           setSelectedData(blogsPage);
@@ -181,15 +181,15 @@ const page = (props: any) => {
           <div style={{ marginBottom: '2rem' }}>
             <Breadcrumb items={breadcrumbItems} />
           </div>
-          <h1 style={{ marginBottom: '1rem', maxWidth: '18ch' }}>{selectedData?.fields?.title}</h1>
+          <h1 style={{ marginBottom: '1rem', maxWidth: '22ch' }}>{selectedData?.fields?.title}</h1>
           <div id="blog-top" className="blog_detail_inner">
             {/* Blog image or video */}
             <div style={{ display: 'flex', justifyContent: 'space-between', gap: '1rem' }}>
               <div>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }} className="blogAuthor">
-                  <div style={{ display: 'flex', gap: '1rem', alignItems: 'center', margin: '1rem' }}>
+                  <div style={{ display: 'flex', gap: '0.5rem', alignItems: 'center', margin: '1rem' }}>
                     <p>Written by</p>
-                    <Image
+                    {/* <Image
                       src={
                         resolvedAssets && resolvedAssets.find((item: any) => item.sys.id === resolvedAuthor?.fields?.profilePicture?.sys?.id)
                           ?.fields
@@ -203,13 +203,15 @@ const page = (props: any) => {
                       alt="Author Image"
                       className="author-image"
                       quality={100}
-                    />
+                    /> */}
                     <p>{resolvedAuthor ? resolvedAuthor?.fields?.name : ''}</p>
 
                   </div>
                   <div>
                     <p>
                       Last Updated:
+                      {' '}
+                      {' '}
                       {selectedData && selectedData?.sys?.updatedAt
                         ? (
                             new Date(selectedData.sys.updatedAt).toLocaleString('en-US', {
@@ -221,12 +223,12 @@ const page = (props: any) => {
                             })
                           )
                         : 'Unknown'}
-                      {' '}
+                      {/* {' '}
                       |
                       {' '}
                       {selectedData && selectedData?.fields?.readTime}
                       {' '}
-                      mins read
+                      mins read */}
                     </p>
                   </div>
                 </div>
@@ -282,35 +284,6 @@ const page = (props: any) => {
                   {/* Blog Content */}
 
                   <div>
-                    <div
-                      style={{
-                        width: 'fit-content',
-                        backgroundColor: '#0F0F0FB2',
-                        padding: '1rem',
-                        borderRadius: '13.84px',
-                        marginBottom: '2rem',
-                      }}
-                    >
-                      <div className="toc">
-                        <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%', cursor: 'pointer', gap: '1rem' }} onClick={toggleCollapse}>
-                          <div>
-                            <h5>In this article</h5>
-                          </div>
-                          {isCollapsed ? <IoIosArrowDown size={20} /> : <IoIosArrowUp size={20} />}
-                        </div>
-                        {!isCollapsed && (
-                          <ul>
-                            {tableOfContents.map((item, index) => (
-                              <li key={index}>
-                                <a href={`#${item.id}`} style={{ color: 'white' }}>
-                                  {item.text}
-                                </a>
-                              </li>
-                            ))}
-                          </ul>
-                        )}
-                      </div>
-                    </div>
                     <div style={{
                       width: '100%',
                       backgroundColor: '#0F0F0FB2',
@@ -391,6 +364,36 @@ const page = (props: any) => {
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae debitis quia placeat sed illo reprehenderit quis nesciunt quasi mollitia dignissimos. Dolorem quidem neque ratione necessitatibus culpa nemo eos ea placeat.</p>
                       </div> */}
                     </div>
+                    <div
+                      style={{
+                        width: 'fit-content',
+                        backgroundColor: '#0F0F0FB2',
+                        padding: '1rem',
+                        borderRadius: '13.84px',
+                        marginBottom: '2rem',
+                      }}
+                    >
+                      <div className="toc">
+                        <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%', cursor: 'pointer', gap: '1rem' }} onClick={toggleCollapse}>
+                          <div>
+                            <h5>In this article</h5>
+                          </div>
+                          {isCollapsed ? <IoIosArrowDown size={20} /> : <IoIosArrowUp size={20} />}
+                        </div>
+                        {!isCollapsed && (
+                          <ul>
+                            {tableOfContents.map((item, index) => (
+                              <li key={index}>
+                                <a href={`#${item.id}`} style={{ color: 'white' }}>
+                                  {item.text}
+                                </a>
+                              </li>
+                            ))}
+                          </ul>
+                        )}
+                      </div>
+                    </div>
+
                     {/* <h1>{selectedData?.fields?.title}</h1> */}
                     {/* <p>{selectedData?.fields?.description}</p> */}
 
@@ -458,6 +461,7 @@ const page = (props: any) => {
                                               key={headerIndex}
                                               style={{
                                                 padding: '8px',
+                                                color: '#000',
                                                 textAlign: 'left',
                                                 border: '1px solid #ddd',
                                                 backgroundColor: '#f4f4f4',
@@ -675,9 +679,9 @@ const page = (props: any) => {
                     padding: '2rem',
                     borderRadius: '13.84px',
                     // uncomment when sticky scroll ad banner needed
-                    // position: 'sticky',
-                    // top: '20px',
-                    // zIndex: 10,
+                    position: 'sticky',
+                    top: '20px',
+                    zIndex: 10,
 
                   }}
                 >
@@ -694,6 +698,11 @@ const page = (props: any) => {
                           const textContent = getTextContent(node);
                           const id = textContent.replace(/\s+/g, '-').toLowerCase();
                           return <h3 id={id}>{children}</h3>;
+                        },
+                        [BLOCKS.HEADING_4]: (node: any, children: React.ReactNode) => {
+                          const textContent = getTextContent(node);
+                          const id = textContent.replace(/\s+/g, '-').toLowerCase();
+                          return <h4 id={id} style={{ fontSize: '24px' }}>{children}</h4>;
                         },
 
                         [BLOCKS.EMBEDDED_ASSET]: (node: any) => {
@@ -713,7 +722,7 @@ const page = (props: any) => {
                               <img
                                 src={`https:${file.url}`}
                                 alt={title}
-                                style={{ maxWidth: '100%', height: '180px' }}
+                                style={{ maxWidth: '60%', height: 'auto', paddingBottom: '10px' }}
                                 // className="contentImage"
                               />
                             );
@@ -781,4 +790,4 @@ const page = (props: any) => {
   );
 };
 
-export default page;
+export default Page;
