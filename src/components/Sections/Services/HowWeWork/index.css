@@ -9,11 +9,16 @@
   display: flex;
 }
 
+.howWeWorkTextAlign > p {
+  max-width: 42ch;
+}
+
 @media screen and (max-width: 450px) {
   .howWeWorkTextAlign {
     text-align: center;
     display: flex;
     flex-direction: column;
+    padding: 0 1.5rem;
   }
 }
 

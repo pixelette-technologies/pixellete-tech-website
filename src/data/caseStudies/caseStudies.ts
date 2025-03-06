@@ -37,7 +37,7 @@ export const caseStudies = [
   },
   {
     id: 'adwatch',
-    frontImageSrc: '/images/casestudies/adwatch/adwatch-card-logo-512.png',
+    frontImageSrc: '/images/casestudies/adwatch/adwatch-card-fullimage.png',
     backImageSrc: '/images/casestudies/adwatch/adwatch-casestudy-image.png',
     description: 'An advanced AI-powered solution designed to detect and remove advertisements from TV input streams and media campaigns.',
     title: 'AdWatch',
@@ -46,7 +46,7 @@ export const caseStudies = [
   },
   {
     id: 'blockguard',
-    frontImageSrc: '/images/casestudies/blockguard/blockguard-card-image.png',
+    frontImageSrc: '/images/casestudies/blockguard/blockguard-card-fullimage.png',
     backImageSrc: '/images/casestudies/blockguard/blockguard-casestudy-image.png',
     description: 'Layer-1 blockchain designed to enhance security, decentralization and user experience for dApp development.',
     title: 'Blockguard',
