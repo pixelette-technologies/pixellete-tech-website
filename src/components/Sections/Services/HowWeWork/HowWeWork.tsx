@@ -39,15 +39,7 @@ export const HowWeWork: React.FC<HowWeWorkProps> = () => {
               flexible, responsive approach to every project.
             </p> */}
             <p>
-              We understand each client’s needs are unique, and we bring a
-              <br />
-              flexible, responsive approach to every project. With structured
-              <br />
-              methodologies and the agility to adapt, we stay on the pulse
-              <br />
-              of trends, providing you with tech and IT services that are not
-              <br />
-              just relevant today but remain future-proof.
+              We understand each client’s needs are unique, and we bring a flexible, responsive approach to every project. With structured methodologies and the agility to adapt, we stay on the pulse of trends, providing you with tech and IT services that are not just relevant today but remain future-proof.
             </p>
           </div>
           <div className="expertiseGrid">
