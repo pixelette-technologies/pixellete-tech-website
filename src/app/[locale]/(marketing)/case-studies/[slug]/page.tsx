@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import MillstoneList from '@/components/CaseStudies/MilestoneList/MillstoneList';
 import { Container } from '@/components/Feature/Container/Container';
 import caseStudiesData from '@/data/caseStudies/caseStudiesData'; // Import case studies data
@@ -5,6 +6,43 @@ import Head from 'next/head';
 import Image from 'next/image';
 import React from 'react';
 import './casestudydetail.css';
+
+export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
+  const { slug } = params;
+  const caseStudy = caseStudiesData.find(study => study.slug === slug);
+
+  if (!caseStudy) {
+    return {
+      title: 'Case Study Not Found',
+      description: 'This case study does not exist.',
+    };
+  }
+
+  return {
+    title: `${caseStudy.title} | Case Study`,
+    description: caseStudy.description,
+    openGraph: {
+      title: caseStudy.title,
+      description: caseStudy.description,
+      type: 'website',
+      url: `https://pixelettetech.com/case-studies/${slug}`,
+      images: [
+        {
+          url: caseStudy.bannerImage || '/images/casestudies/aia/aia-header-image.svg',
+          width: 1200,
+          height: 630,
+          alt: caseStudy.title,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: caseStudy.title,
+      description: caseStudy.description,
+      images: [caseStudy.bannerImage || '/images/casestudies/aia/aia-header-image.svg'],
+    },
+  };
+}
 
 const CaseStudieDetail = async ({ params }: { params: { slug: string } }) => {
   const { slug } = params;
