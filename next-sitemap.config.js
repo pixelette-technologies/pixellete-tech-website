@@ -51,13 +51,13 @@ function getStaticPaths() {
 }
 
 module.exports = {
-  siteUrl: process.env.NEXT_PUBLIC_BASE_URL || 'https://www.pixelettetech.com',
+  siteUrl: process.env.NEXT_PUBLIC_BASE_URL || 'https://pixelettetech.com',
   generateRobotsTxt: true,
   changefreq: 'daily',
   priority: 0.8,
   sitemapSize: 5000,
   generateIndexSitemap: true,
-  outDir: 'out',
+  // outDir: 'out',
   async additionalPaths(config) {
     const blogPaths = await fetchBlogPaths();
     const staticPaths = getStaticPaths();
