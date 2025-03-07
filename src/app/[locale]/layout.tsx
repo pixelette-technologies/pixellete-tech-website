@@ -89,7 +89,7 @@ export default async function RootLayout(props: {
 
   // Using internationalization in Client Components
   const messages = await getMessages();
-  const canonicalUrl = `${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.pixelettetech.com'}/${locale}`;
+  const canonicalUrl = `${process.env.NEXT_PUBLIC_SITE_URL || 'https://pixelettetech.com'}/${locale}`;
 
   return (
     <html lang={locale} data-theme="dark">
@@ -101,7 +101,7 @@ export default async function RootLayout(props: {
               '@context': 'https://schema.org',
               '@type': 'Company',
               'name': 'Pixelette Technologies',
-              'url': 'https://www.pixelettetech.com',
+              'url': 'https://pixelettetech.com',
               'logo': 'https://pixelettetech.com/images/company/logo.svg',
               'sameAs': [
                 'https://www.instagram.com/pixelettetechnologies',
@@ -123,7 +123,7 @@ export default async function RootLayout(props: {
           locale={locale}
           messages={messages}
         >
-          <Breadcrumb siteUrl={process.env.NEXT_PUBLIC_SITE_URL || 'https://www.pixelettetech.com'} />
+          <Breadcrumb siteUrl={process.env.NEXT_PUBLIC_SITE_URL || 'https://pixelettetech.com'} />
           {props.children}
           {/* <DemoBadge /> */}
         </NextIntlClientProvider>
