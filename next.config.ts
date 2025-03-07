@@ -14,7 +14,7 @@ export default withSentryConfig(
   bundleAnalyzer(
     withNextIntl({
       // output: 'export',
-      trailingSlash: true,
+      // trailingSlash: true,
       eslint: {
         dirs: ['.'], // Enable linting in these directories
         ignoreDuringBuilds: true, // Skip ESLint during builds
