@@ -62,10 +62,10 @@ const TechnologiesUsed: React.FC<TechnologiesUsedProps> = ({ technologies, title
                     {/* Full name on desktop */}
                   </span>
                   <span className={`${styles.technologyName} ${styles.shortName}`}>
-                    {tab.split(' ')[0]}
-                    {/* {shortenTechName(tab.replace('_', ' '))} */}
-                    {/* {' '} */}
-                    {/* Shortened name on mobile */}
+                    {/* {tab.split(' ')[0]} */}
+
+                    {tab?.split(' ')[0]?.replace(/[^a-z0-9]/gi, '') || ''}
+
                   </span>
                 </button>
               ))}
