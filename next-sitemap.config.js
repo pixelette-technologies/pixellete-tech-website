@@ -57,7 +57,7 @@ module.exports = {
   priority: 0.8,
   sitemapSize: 5000,
   generateIndexSitemap: true,
-  // outDir: 'out',
+  outDir: 'out',
   async additionalPaths(config) {
     const blogPaths = await fetchBlogPaths();
     const staticPaths = getStaticPaths();
