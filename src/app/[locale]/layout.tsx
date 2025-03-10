@@ -89,7 +89,7 @@ export default async function RootLayout(props: {
 
   // Using internationalization in Client Components
   const messages = await getMessages();
-  const canonicalUrl = `${process.env.NEXT_PUBLIC_SITE_URL || 'https://pixelettetech.com'}/${locale}`;
+  const canonicalUrl = `${process.env.NEXT_PUBLIC_SITE_URL || 'https://pixelettetech.com'}`;
 
   return (
     <html lang={locale} data-theme="dark">
