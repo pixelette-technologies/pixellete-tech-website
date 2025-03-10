@@ -1,11 +1,18 @@
 const fs = require('node:fs');
 const path = require('node:path');
 const { createClient } = require('contentful');
+require('ts-node').register();
+const caseStudiesData = require('./src/data/caseStudies/caseStudiesData');
 
 // Fetch dynamic blog paths from Contentful
 async function fetchBlogPaths() {
   const SPACE_ID = process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID;
   const ACCESS_TOKEN = process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN;
+
+  if (!SPACE_ID || !ACCESS_TOKEN) {
+    console.warn('Missing Contentful credentials, skipping blog paths.');
+    return [];
+  }
 
   const client = createClient({
     space: SPACE_ID,
@@ -28,15 +35,15 @@ function getStaticPaths() {
 
       if (fs.statSync(filePath).isDirectory()) {
         readDirRecursively(filePath);
-      } else if (
-        file === 'page.js'
-        || file === 'page.tsx' // Handle page files in the App Router
-      ) {
+      } else if (file === 'page.js' || file === 'page.tsx') {
         // Convert file path to route
         let route = filePath
           .replace(appDir, '')
           .replace(/\\/g, '/')
-          .replace(/\/page\.js$|\/page\.tsx$/, '');
+          .replace(/\/page\.(js|tsx)$/, '');
+
+        // ✅ Remove dynamic route brackets ([locale]) & groupings ((marketing))
+        route = route.replace(/\[.*?\]/g, '').replace(/\(.*?\)/g, '');
 
         if (route === '') {
           route = '/';
@@ -57,16 +64,32 @@ module.exports = {
   priority: 0.8,
   sitemapSize: 5000,
   generateIndexSitemap: false,
-  // outDir: 'out',
+
+  // Customize sitemap URLs dynamically
+  transform: async (config, url) => {
+    if (url.startsWith('/case-studies/')) {
+      return {
+        loc: url,
+        lastmod: new Date().toISOString(),
+        priority: 0.8,
+        changefreq: 'weekly',
+      };
+    }
+    return config;
+  },
+
   async additionalPaths(config) {
     const blogPaths = await fetchBlogPaths();
     const staticPaths = getStaticPaths();
 
-    // Combine static and dynamic paths
-    const combinedPaths = [...staticPaths, ...blogPaths];
+    const caseStudyPaths = caseStudiesData.map(study => ({
+      loc: `/case-studies/${study.slug}`,
+      lastmod: new Date().toISOString(),
+    }));
 
-    return combinedPaths.map(path => ({
-      loc: path,
+    // Combine and format all paths
+    return [...staticPaths, ...blogPaths, ...caseStudyPaths].map(path => ({
+      loc: typeof path === 'string' ? path : path.loc,
       changefreq: 'daily',
       priority: 0.8,
       lastmod: new Date().toISOString(),
