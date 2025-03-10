@@ -1,17 +1,15 @@
-'use client';
 import { createClient } from 'contentful';
 
-const useContentful = () => {
-  const client = createClient({
+const client = createClient({
   //  space: process.env.CONTENTFUL_SPACE_ID,
   //  accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
-    // space: 'iu40d70qrkjm',
-    // accessToken: 'sa3kKcmFZSSGZEHw9FylVx0eOIuJordTBaMWfOeRf1Y',
-    space: 'ggtsbq0gqfii',
-    accessToken: 'VZvVye8dMIc497wF-1pNt5rdYUG-h4E30uX58AcGVUo',
-    host: 'cdn.contentful.com',
-  });
-
+  // space: 'iu40d70qrkjm',
+  // accessToken: 'sa3kKcmFZSSGZEHw9FylVx0eOIuJordTBaMWfOeRf1Y',
+  space: 'ggtsbq0gqfii',
+  accessToken: 'VZvVye8dMIc497wF-1pNt5rdYUG-h4E30uX58AcGVUo',
+  host: 'cdn.contentful.com',
+});
+const useContentful = () => {
   // const getPosts = async () => {
   //   try {
   //     const entries = await client.getEntries();
@@ -77,4 +75,36 @@ const useContentful = () => {
 
   return { getPosts, getAsset, getOneAssest };
 };
+
+export async function fetchBlogMetadata(slug: string) {
+  const response = await client.getEntries({
+    'content_type': 'blogsPage',
+    'fields.slug': slug,
+  });
+
+  if (!response.items.length) {
+    return null;
+  }
+
+  const blog = response.items[0].fields;
+  return {
+    title: blog.title || 'Blockchain Experts',
+    description: blog.description || 'Read more about blockchain topics.',
+  };
+}
+
+export async function fetchAllBlogSlugs(): Promise<{ slug: string }[]> {
+  try {
+    const response = await client.getEntries({
+      content_type: 'blogsPage',
+      select: 'fields.slug',
+    });
+
+    return response.items.map(item => ({ slug: String(item.fields.slug) }));
+  } catch (error) {
+    console.error('Error fetching blog slugs:', error);
+    return [];
+  }
+}
+
 export default useContentful;
