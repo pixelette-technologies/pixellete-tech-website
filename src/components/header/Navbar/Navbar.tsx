@@ -1,26 +1,22 @@
-'use client';
-
 import { Button } from '@/components/Feature/Button/Button';
 import { Container } from '@/components/Feature/Container/Container';
 import { navMenus } from '@/data/menu/navMenu';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useEffect, useState } from 'react';
-import { IoMenuOutline } from 'react-icons/io5';
-import { MobileNav } from './Mobile/MobileNav';
+import { MobileNavButton } from './Mobile/MobileNavButton';
 import styles from './navbar.module.css';
 import { NavbarDropDown } from './NavbarDropDown';
 
 export const Navbar = () => {
-  const [activeMenu, setActiveMenu] = useState(false);
+  // const [activeMenu, setActiveMenu] = useState(false);
 
-  const handleNavMenu = () => {
-    setActiveMenu(prev => !prev);
-  };
+  // const handleNavMenu = () => {
+  //   setActiveMenu(prev => !prev);
+  // };
 
-  useEffect(() => {
-    document.body.style.overflowY = activeMenu ? 'hidden' : 'auto';
-  }, [activeMenu]);
+  // useEffect(() => {
+  //   document.body.style.overflowY = activeMenu ? 'hidden' : 'auto';
+  // }, [activeMenu]);
 
   return (
     <nav className={styles.navbar}>
@@ -73,14 +69,15 @@ export const Navbar = () => {
           </section>
 
           {/* Mobile Menu Button */}
-          <button onClick={handleNavMenu} className={styles.menuButton}>
+          {/* <button onClick={handleNavMenu} className={styles.menuButton}>
             {activeMenu ? '' : <IoMenuOutline size={30} />}
-          </button>
+          </button> */}
+          <MobileNavButton />
         </section>
       </Container>
 
       {/* Mobile Navigation */}
-      {activeMenu && <MobileNav onClick={handleNavMenu} />}
+      {/* {activeMenu && <MobileNav onClick={handleNavMenu} />} */}
     </nav>
   );
 };

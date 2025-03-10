@@ -9,7 +9,7 @@ type IIndexProps = {
   params: Promise<{ locale: string }>;
 };
 
-const HeroSection = dynamic(() => import('@/components/Home/HeroSection/HeroSection').then(mod => mod.HeroSection));
+// const HeroSection = dynamic(() => import('@/components/Home/HeroSection/HeroSection').then(mod => mod.HeroSection));
 const OurClients = dynamic(() => import('@/components/Home/OurClients/OurClients').then(mod => mod.OurClients));
 const AboutUsSection = dynamic(() => import('@/components/Home/AboutusSection/AboutUsSection'));
 const WhatMakeUsSpecialHome = dynamic(() => import('@/components/Home/WhatMakeUsSpecial/WhatMakeUsSpecial').then(mod => mod.default));

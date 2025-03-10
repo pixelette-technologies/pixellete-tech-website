@@ -1,38 +1,26 @@
-// components/Breadcrumb.tsx
-'use client';
-
-import Head from 'next/head';
-import { usePathname } from 'next/navigation';
+import { headers } from 'next/headers';
+import Script from 'next/script';
 
 type BreadcrumbProps = {
-  siteUrl: string; // Base URL of your website
+  siteUrl: string;
 };
 
-type BreadcrumbItem = {
-  name: string;
-  href: string;
-  position: number;
-};
+const Breadcrumb = async ({ siteUrl }: BreadcrumbProps) => {
+  const headersList = await headers(); // Await the headers
+  const fullUrl = headersList.get('x-forwarded-path') || ''; // Get the current path
+  const pathname = fullUrl.startsWith('/') ? fullUrl : `/${fullUrl}`;
 
-const Breadcrumb: React.FC<BreadcrumbProps> = ({ siteUrl }) => {
-  const pathname = usePathname();
-
-  // Handle case where pathname is undefined
   if (!pathname) {
     return null;
   }
 
-  // Split the current path into segments
   const segments = pathname.split('/').filter(seg => seg);
-
-  // Generate breadcrumb items
-  const breadcrumbItems: BreadcrumbItem[] = segments.map((segment, index) => ({
-    name: decodeURIComponent(segment.replace(/-/g, ' ')), // Replace hyphens with spaces
-    href: `/${segments.slice(0, index + 1).join('/')}`, // Construct breadcrumb URL
+  const breadcrumbItems = segments.map((segment, index) => ({
+    name: decodeURIComponent(segment.replace(/-/g, ' ')),
+    href: `/${segments.slice(0, index + 1).join('/')}`,
     position: index + 1,
   }));
 
-  // JSON-LD for structured data
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
@@ -45,13 +33,12 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({ siteUrl }) => {
   };
 
   return (
-    <Head>
-      {/* JSON-LD for SEO */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-      />
-    </Head>
+    <Script
+      id="breadcrumb-schema"
+      type="application/ld+json"
+      strategy="afterInteractive"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+    />
   );
 };
 
