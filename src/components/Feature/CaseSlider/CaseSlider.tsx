@@ -9,13 +9,8 @@ import './caseslider.css';
 
 type CaseSliderProps = {
   data: {
-    fields: {
-      image?: { fields: { file: { url: string } } };
-      tags?: string;
-      shortDescription?: string;
-      longDescription?: string;
-    };
-    sys?: { id: string };
+    id: string;
+    sliderImage: string;
   }[];
 };
 
@@ -46,11 +41,11 @@ export const CaseSlider: FC<CaseSliderProps> = ({ data }) => {
           {data && data.map(el => (
             <Card
               key={uuidv4()}
-              id={el.sys?.id}
-              image={el.fields?.image?.fields?.file?.url}
-              blockChainLink={el.fields?.tags}
-              name={el.fields?.shortDescription}
-              description={el.fields?.longDescription}
+              id={el.id}
+              image={el.sliderImage}
+              // blockChainLink={el.fields?.tags}
+              // name={el.fields?.shortDescription}
+              // description={el.fields?.longDescription}
             />
           ))}
         </Slider>
