@@ -1,6 +1,6 @@
 import type { FC } from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
-import { Button } from '../Button/Button';
 import './caseslider.css';
 
 type CardProps = {
@@ -24,7 +24,16 @@ export const Card: FC<CardProps> = ({ id, image, blockChainLink, name, descripti
     <Link href={link}>
       <div className="caseSlider-card">
         <div>
-          <img src={image} alt="slider hero" />
+          <Image
+            src={image}
+            alt={id}
+            height={100}
+            width={100}
+            style={{ objectFit: 'cover' }}
+            quality={100}
+          />
+
+          {/* <img src={image} alt="slider hero" /> */}
         </div>
         {/* <div>
           <div>

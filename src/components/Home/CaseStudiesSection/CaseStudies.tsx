@@ -1,12 +1,9 @@
-'use client';
-
-import type { EntryCollection } from 'contentful';
 import { Button } from '@/components/Feature/Button/Button';
 import { CaseSlider } from '@/components/Feature/CaseSlider/CaseSlider';
 import { Container } from '@/components/Feature/Container/Container';
-import { createClient } from 'contentful';
+import { caseStudies } from '@/data/caseStudies/caseStudies';
+
 import Link from 'next/link';
-import { useEffect, useState } from 'react';
 import { FiExternalLink } from 'react-icons/fi';
 import styles from './casestudies.module.css';
 
@@ -25,32 +22,32 @@ type CaseStudiesProps = {
 };
 
 export const CaseStudies = ({ heading, initialData }: CaseStudiesProps) => {
-  const [caseStudyData, setCaseStudyData] = useState<CaseStudy[]>(initialData);
+  // const [caseStudyData, setCaseStudyData] = useState<CaseStudy[]>(initialData);
 
-  useEffect(() => {
-    const fetchCaseStudies = async () => {
-      try {
-        const client = createClient({
-          space: 'ggtsbq0gqfii',
-          accessToken: 'VZvVye8dMIc497wF-1pNt5rdYUG-h4E30uX58AcGVUo',
-          // space: process.env.CONTENTFUL_SPACE_ID || '',
-          // accessToken: process.env.CONTENTFUL_ACCESS_TOKEN || '',
-        });
+  // useEffect(() => {
+  //   const fetchCaseStudies = async () => {
+  //     try {
+  //       const client = createClient({
+  //         space: 'ggtsbq0gqfii',
+  //         accessToken: 'VZvVye8dMIc497wF-1pNt5rdYUG-h4E30uX58AcGVUo',
+  //         // space: process.env.CONTENTFUL_SPACE_ID || '',
+  //         // accessToken: process.env.CONTENTFUL_ACCESS_TOKEN || '',
+  //       });
 
-        const response: EntryCollection<CaseStudy> = await client.getEntries({
-          content_type: 'caseStudies',
-        });
+  //       const response: EntryCollection<CaseStudy> = await client.getEntries({
+  //         content_type: 'caseStudies',
+  //       });
 
-        setCaseStudyData(response.items);
-      } catch (error) {
-        console.error('Error fetching data:', error);
-      }
-    };
+  //       setCaseStudyData(response.items);
+  //     } catch (error) {
+  //       console.error('Error fetching data:', error);
+  //     }
+  //   };
 
-    if (!initialData) {
-      fetchCaseStudies();
-    }
-  }, [initialData]);
+  //   if (!initialData) {
+  //     fetchCaseStudies();
+  //   }
+  // }, [initialData]);
 
   return (
     <>
@@ -73,7 +70,7 @@ export const CaseStudies = ({ heading, initialData }: CaseStudiesProps) => {
             <p style={{ maxWidth: '48ch' }}>Dive into our portfolio of successful projects where strategic technology solutions meet client needs. Our case studies illustrate how we drive growth, efficiency, and innovation with every project.</p>
           </center>
           <section style={{ marginTop: '5rem' }}>
-            <CaseSlider data={caseStudyData} />
+            <CaseSlider data={caseStudies} />
           </section>
           <center style={{ marginTop: '3rem' }}>
             <Link href="/case-studies" passHref>
@@ -92,31 +89,31 @@ export const CaseStudies = ({ heading, initialData }: CaseStudiesProps) => {
   );
 };
 
-export const getServerSideProps = async () => {
-  try {
-    const client = createClient({
-      space: process.env.CONTENTFUL_SPACE_ID || '',
-      accessToken: process.env.CONTENTFUL_ACCESS_TOKEN || '',
-    });
+// export const getServerSideProps = async () => {
+//   try {
+//     const client = createClient({
+//       space: process.env.CONTENTFUL_SPACE_ID || '',
+//       accessToken: process.env.CONTENTFUL_ACCESS_TOKEN || '',
+//     });
 
-    const response: EntryCollection<CaseStudy> = await client.getEntries({
-      content_type: 'caseStudies',
-    });
+//     const response: EntryCollection<CaseStudy> = await client.getEntries({
+//       content_type: 'caseStudies',
+//     });
 
-    return {
-      props: {
-        initialData: response.items,
-      },
-    };
-  } catch (error) {
-    console.error('Error fetching data on the server:', error);
+//     return {
+//       props: {
+//         initialData: response.items,
+//       },
+//     };
+//   } catch (error) {
+//     console.error('Error fetching data on the server:', error);
 
-    return {
-      props: {
-        initialData: [],
-      },
-    };
-  }
-};
+//     return {
+//       props: {
+//         initialData: [],
+//       },
+//     };
+//   }
+// };
 
 export default CaseStudies;

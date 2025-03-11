@@ -22,7 +22,7 @@ const ClutchRating: React.FC<ClutchRatingProps> = ({
   const structuredData = {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
-    'name': 'Your Business Name', // Replace with your business name
+    'name': 'Pixelette Technologies',
     'url': clutchProfileUrl,
     'aggregateRating': {
       '@type': 'AggregateRating',
