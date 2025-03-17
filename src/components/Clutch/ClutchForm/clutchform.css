@@ -1,6 +1,6 @@
 .evaluateBussiness {
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   justify-content: space-between;
 }
 @media screen and (max-width: 760px) {
@@ -20,7 +20,7 @@
 }
 
 .evaluateBussiness > header {
-  max-width: 61.6rem;
+  max-width: 64rem;
 }
 .evaluateBussiness > header > h1 {
   margin-bottom: 1.6rem;

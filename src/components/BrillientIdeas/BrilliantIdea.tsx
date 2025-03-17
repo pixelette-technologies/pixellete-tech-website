@@ -11,7 +11,7 @@ const BrilliantIdea: React.FC = () => {
       </Container>
       <div className="specialSection">
         <Container className="main margins">
-          <section>
+          <section id="sideMargin">
             <div className="award-text">
               <h1
                 id="h_ani"

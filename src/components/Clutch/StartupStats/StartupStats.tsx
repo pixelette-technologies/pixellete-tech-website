@@ -18,7 +18,7 @@ const StartupStats: React.FC<StartupStatsProps> = () => {
           />
         </div>
       </Container>
-      <div className="specialSection">
+      <div className="specialSection" id="sideMargin">
         <Container className="main margins">
           <section>
             <div className="award-text-wrapper">

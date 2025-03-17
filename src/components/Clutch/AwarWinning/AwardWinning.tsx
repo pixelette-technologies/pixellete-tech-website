@@ -11,7 +11,7 @@ const AwardWinning = () => {
           <img src="/images/Clutch/howWeWorkBackground.svg" alt="background" />
         </div>
       </Container>
-      <div className="specialSection">
+      <div className="specialSection" id="sideMargin">
         <Container className="main margins">
           <section>
             <div className="award-text">
