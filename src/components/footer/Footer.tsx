@@ -174,7 +174,7 @@ export const Footer: React.FC = () => {
               { Icon: FaPhone, text: '+1 7732709034' },
               {
                 Icon: HiLocationMarker,
-                text: '71-75 Shelton Street, WC2 H9J, London, UK (Headquarter)',
+                text: '71-75 Shelton Street, WC2H 9JQ, London, UK (Headquarter)',
                 link: 'https://g.page/r/CQ7pSJ0AcTbYEAE/',
               },
               {
