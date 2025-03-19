@@ -112,7 +112,7 @@ const StartupStats: React.FC<StartupStatsProps> = () => {
                 wordSpacing: '0.2rem',
               }}
             >
-              That&apos;s why we can help you out. Just look at our track
+              That&apos;s where we came in. Just look at our track
               record!
             </div>
           </center>

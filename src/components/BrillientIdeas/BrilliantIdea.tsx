@@ -30,7 +30,6 @@ const BrilliantIdea: React.FC = () => {
               {' '}
               <br />
               <>
-                Not to forget
                 <ul className="project-deilvered">
                   <li>35,000+ hours in development</li>
                   <li>1,000,000,00+ project visitors garnered</li>

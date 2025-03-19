@@ -9,18 +9,18 @@ import './clutchform.css';
 const ClutchForm: React.FC = () => {
   return (
     <Container className="main margins">
-      <div className="evaluateBussiness" id="sideMargin">
+      <div className="evaluateBussinessClutch" id="sideMargin" style={{ margin: '-2rem 0' }}>
         <header>
           <h1>
-            We&apos;ll bring your
+            We&apos;ll bring your&nbsp;
             <TypeAnimation
               className="red-color"
               sequence={[
                 'WEB3',
                 2500,
-                ' AI',
+                'AI',
                 2500,
-                ' APP',
+                'APP',
                 2500,
               ]}
               wrapper="span"
@@ -60,7 +60,7 @@ const ClutchForm: React.FC = () => {
           </ul>
 
         </header>
-        <div>
+        <div style={{ marginTop: '-1rem' }}>
           <ContactUsForm
             header
             backgrounds
