@@ -46,7 +46,9 @@ export default async function Clutch(props: IAIservicesProps) {
           <div className="pixelate-logo" id="sideMargin">
             <Container className="main margins">
               <Link href="/">
-                <img src="/images/Clutch/logo.svg" alt="" />
+                <span>
+                  <img src="/images/Clutch/logo.svg" alt="" />
+                </span>
               </Link>
             </Container>
           </div>

@@ -9,7 +9,7 @@ import './clutchform.css';
 const ClutchForm: React.FC = () => {
   return (
     <Container className="main margins">
-      <div className="evaluateBussinessClutch" id="sideMargin" style={{ margin: '-2rem 0' }}>
+      <div className="evaluateBussinessClutch" id="sideMargin" style={{ margin: '-7rem 0' }}>
         <header>
           <h1>
             We&apos;ll bring your&nbsp;
