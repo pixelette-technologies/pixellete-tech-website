@@ -55,3 +55,6 @@
     margin-top: -10rem;
   }
 }
+.logo-link {
+  display: inline-block;
+}
