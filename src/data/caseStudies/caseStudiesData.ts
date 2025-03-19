@@ -345,8 +345,8 @@ const caseStudiesData = [
     blocker: 'Crypto security breaches, asset theft, and lost private keys have made it difficult for individuals and businesses to protect their digital assets. Many existing solutions lacked both accessibility and enterprise-grade security, leaving users vulnerable to financial loss. A secure, scalable storage solution was needed to prevent unauthorized access while allowing controlled asset management.',
     goal: 'Digital Asset Vault set out to create a secure, user-friendly storage platform for digital assets with zero incidents of crypto theft. The focus was on integrating cold-storage wallets, private key certification and multi-signature wallet capabilities to provide a strong security framework.',
     solution: 'Pixelette Technologies helped develop the platform to provide secure cryptocurrency storage with cold-storage wallets, private key certificates, and multi-signature wallets. This combination protects assets from cyber threats, ensures verified ownership and enables shared control for added security.',
-    logo: '/images/casestudies/blockguard/blockguard-logo.png',
-    bannerImage: '/images/casestudies/blockguard/blockguard-casestudy-image.png',
+    logo: '/images/casestudies/digital-asset-vault/digital-asset-vault-card-logo.png',
+    bannerImage: '/images/casestudies/digital-asset-vault/digital-asset-vault-slider.png',
     techStack: [
       { name: 'react', icon: '/images/tech/logos/reactjs.png' },
       { name: 'Hyperledger', icon: '/images/tech/logos/openai.png' },
