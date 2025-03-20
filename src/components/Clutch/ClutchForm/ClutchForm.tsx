@@ -9,16 +9,15 @@ import './clutchform.css';
 const ClutchForm: React.FC = () => {
   return (
     <Container className="main margins">
-      <div className="evaluateBussiness">
+      <div className="evaluateBussinessClutch" id="sideMargin" style={{ margin: '-7rem 0' }}>
         <header>
           <h1>
-            We&apos;ll bring your
-            <br />
+            We&apos;ll bring your&nbsp;
             <TypeAnimation
               className="red-color"
               sequence={[
                 'WEB3',
-                2500, // Wait 2.5 seconds before transitioning
+                2500,
                 'AI',
                 2500,
                 'APP',
@@ -30,6 +29,7 @@ const ClutchForm: React.FC = () => {
               style={{ display: 'inline-block' }}
               repeat={Infinity}
             />
+            <br />
             idea to life or you
             <br />
             get your money back
@@ -60,7 +60,7 @@ const ClutchForm: React.FC = () => {
           </ul>
 
         </header>
-        <div>
+        <div style={{ marginTop: '-1rem' }}>
           <ContactUsForm
             header
             backgrounds

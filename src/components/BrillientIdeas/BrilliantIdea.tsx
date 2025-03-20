@@ -11,7 +11,7 @@ const BrilliantIdea: React.FC = () => {
       </Container>
       <div className="specialSection">
         <Container className="main margins">
-          <section>
+          <section id="sideMargin">
             <div className="award-text">
               <h1
                 id="h_ani"
@@ -30,7 +30,6 @@ const BrilliantIdea: React.FC = () => {
               {' '}
               <br />
               <>
-                Not to forget
                 <ul className="project-deilvered">
                   <li>35,000+ hours in development</li>
                   <li>1,000,000,00+ project visitors garnered</li>

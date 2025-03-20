@@ -28,7 +28,6 @@ const outfit = Outfit({
   variable: '--font-outfit',
 });
 
-// Async Messages Provider (Avoid blocking UI)
 async function MessagesProvider({ locale, children }: { locale: string; children: React.ReactNode }) {
   const messages = await getMessages().catch(() => ({}));
 

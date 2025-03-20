@@ -1,23 +1,23 @@
-.unlockBussiness {
+.unlockBussinessClutch {
   background-color: #0f0f0fb3;
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 0.8rem;
-  /* margin-top: 6rem; */
-  padding: 8rem 6.4rem;
+  margin: 3rem 10rem;
+  padding: 3rem;
   display: flex;
   gap: 10rem;
   /* width: 50%; */
   align-items: center;
   justify-content: space-between;
 }
-.unlockBussiness > div {
+.unlockBussinessClutch > div {
   max-width: 48%;
 }
-.unlockBussiness > div > p {
+.unlockBussinessClutch > div > p {
   margin-top: 1.6rem;
   margin-bottom: 3.2rem;
 }
-.unlockBussiness > div > section {
+.unlockBussinessClutch > div > section {
   display: flex;
   align-items: center;
   gap: 1.6rem;
@@ -33,24 +33,25 @@
     align-items: center;
     text-align: left;
   }
-  .unlockBussiness > div > section {
+  .unlockBussinessClutch > div > section {
     justify-content: center;
   }
 }
 @media only screen and (max-width: 37.5em) {
-  .unlockBussiness {
+  .unlockBussinessClutch {
+    margin: 3rem 3rem;
     display: flex;
     flex-direction: column;
   }
-  .unlockBussiness > div > section {
+  .unlockBussinessClutch > div > section {
     margin-bottom: 3rem;
   }
-  .unlockBussiness > div {
+  .unlockBussinessClutch > div {
     max-width: 100% !important;
   }
 }
 @media only screen and (max-width: 425px) {
-  .unlockBussiness > div {
+  .unlockBussinessClutch > div {
     width: 100%;
     height: auto;
   }

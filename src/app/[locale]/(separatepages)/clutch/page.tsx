@@ -4,9 +4,9 @@ import ClutchForm from '@/components/Clutch/ClutchForm/ClutchForm';
 import NoDeveloperReq from '@/components/Clutch/NoDeveloperReq/NoDeveloperReq';
 import StartupStats from '@/components/Clutch/StartupStats/StartupStats';
 import { Container } from '@/components/Feature/Container/Container';
+import { Footer } from '@/components/footer/Footer';
 import { OurClients } from '@/components/Home/OurClients/OurClients';
 import { Testimonial } from '@/components/Home/Testimonial/Testimonial';
-import { EvaluateBusiness } from '@/components/Sections/EvaluateBusiness/EvaluateBusiness';
 import FaqsSection from '@/components/Sections/Services/FAQs/FaqsSection';
 import { clFaqs } from '@/data/faqs/clFaqs';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
@@ -21,12 +21,13 @@ export async function generateMetadata(props: IAIservicesProps) {
   const { locale } = await props.params;
   const t = await getTranslations({
     locale,
-    namespace: 'About',
+    namespace: 'clutchPage',
   });
 
   return {
     title: t('meta_title'),
     description: t('meta_description'),
+    keywords: t('meta_keywords'),
   };
 }
 
@@ -36,16 +37,18 @@ export default async function Clutch(props: IAIservicesProps) {
 
   return (
     <>
+      <div className="specialSection-backgroundd">
+        {/* <img src="/images/Clutch/background.webp" alt="background" /> */}
+      </div>
       <div className="clutch-container">
-        <div className="specialSection-backgroundd">
-          <img src="/images/Clutch/background.webp" alt="background" />
-        </div>
         <div className="heroSectionAiServices-background">
           {/* <img src="/images/aiServices/heroSectionBackground.svg" alt="background" /> */}
-          <div className="pixelate-logo">
+          <div className="pixelate-logo" id="sideMargin">
             <Container className="main margins">
-              <Link href="/">
-                <img src="/images/Clutch/logo.svg" alt="" />
+              <Link href="/" className="logo-link">
+                <span>
+                  <img src="/images/Clutch/logo.svg" alt="" />
+                </span>
               </Link>
             </Container>
           </div>
@@ -70,10 +73,11 @@ export default async function Clutch(props: IAIservicesProps) {
           />
           <Testimonial />
           <FaqsSection faqs={clFaqs} />
-          <EvaluateBusiness
+          <Footer />
+          {/* <EvaluateBusiness
             heading="Ready to become a tech success story?"
             description="Don’t let technical hurdles stand in the way of building powerful tech solutions. Let us help you bring your vision to life with innovative, cost-effective and reliable services. Get in touch!"
-          />
+          /> */}
         </div>
       </div>
     </>

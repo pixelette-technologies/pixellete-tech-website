@@ -174,7 +174,7 @@ const caseStudiesData = [
     // { title: 'Precision enhancement', description: 'Reduced sentiment analysis errors by 60%, delivering more accurate and actionable insights.' },
     // { title: 'Expanded coverage', description: 'Increased the number of monitored news sources by 200%, broadening real-time data access.' },
     // { title: 'Optimized performance', description: 'Boosted AI-based scraping efficiency by 70%, enabling faster and more reliable data extraction.' },
-    // { title: 'Better scalability ', description: 'Tripled real-time data handling capacity (3x), allowing Lytics to process larger datasets without performance trade-offs.' },
+    // { title: 'Better scalability', description: 'Tripled real-time data handling capacity (3x), allowing Lytics to process larger datasets without performance trade-offs.' },
     // ],
     process: 'Pixelette Technologies took a structured, cross-functional approach to developing BlockGuard’s Layer-1 blockchain, making sure that each phase aligned with their mission of enhancing security, accessibility and developer usability.',
     milestones: [
@@ -182,6 +182,196 @@ const caseStudiesData = [
       { title: 'Testing and deployment', description: 'The blockchain underwent rigorous security audits and performance testing to validate its resilience. After refinements, BlockGuard was successfully deployed. The team delivered a secure, accessible and interoperable blockchain ecosystem to the client.' },
       { title: 'Discovery and research', description: 'A dedicated team conducted an in-depth analysis of blockchain adoption challenges, focusing on user experience, security, and interoperability. This research defined the technical requirements for a Layer-1 blockchain that balances decentralization with accessibility.' },
       { title: 'Security and interoperability', description: 'Pixelette’s blockchain engineers implemented advanced cryptographic security measures and EVM compatibility, allowing BlockGuard to connect with existing blockchain networks while maintaining high-security standards.' },
+    ],
+  },
+  {
+    slug: 'beyorch',
+    title: 'How Beyorch Digital Token is Reshaping Financial Markets',
+    description: 'Beyorch Digital Token is a blockchain-based investment solution designed to bring transparency and efficiency to financial markets. It provides investors with a secure, decentralized ecosystem to optimize returns while reducing risks. Beyorch partnered with Pixelette Technologies to develop a strong platform for secure transactions and automated financial management.',
+    businessType: 'Defi Investment Ecosystem',
+    industry: 'Blockchain/DeFi',
+    blocker: 'Traditional financial systems lack transparency and efficiency, making it difficult for investors to track assets and maximize profitability. Without an automated, secure process, inefficiencies and risk exposure increase, limiting investor confidence and financial growth.',
+    goal: 'Beyorch aimed to build a decentralized financial ecosystem where investors could easily manage assets, reduce reliance on intermediaries, and benefit from secure, automated transactions. The objective was to enhance transparency, efficiency, and profitability through blockchain-driven solutions.',
+    solution: 'Pixelette Technologies developed a blockchain-powered investment platform that integrates smart contracts, automated financial processes and secure tokenomics. This solution empowers investors with real-time asset tracking, instant transactions, and enhanced security, for a flawless investment experience.',
+    logo: '/images/casestudies/beyorch/beyorch-card-logo.png',
+    bannerImage: '/images/casestudies/beyorch/beyorch-slider-image.png',
+    techStack: [
+      { name: 'polkadot', icon: '/images/tech/logos/polkadot.png' },
+      { name: 'Hyperledger', icon: '/images/tech/logos/hyperledger-fabric.png' },
+      { name: 'go', icon: '/images/tech/logos/stripe-api.png' },
+      { name: 'c++', icon: '/images/tech/logos/mysql.png' },
+      { name: 'reactjs', icon: '/images/tech/logos/reactjs.png' },
+    ],
+    impactStats: {
+      description: 'By integrating AI-driven news monitoring and sentiment analysis, Pixelette Technologies helped Lytics enhance its platform’s accuracy, scalability, and efficiency. These advancements enabled the system to process and interpret vast amounts of real-time data with greater precision.',
+      percentage: '60%',
+      details: 'The idea of Non-Fungible Tokens...',
+    },
+    // impactBoxes: [
+    // { title: 'Precision enhancement', description: 'Reduced sentiment analysis errors by 60%, delivering more accurate and actionable insights.' },
+    // { title: 'Expanded coverage', description: 'Increased the number of monitored news sources by 200%, broadening real-time data access.' },
+    // { title: 'Optimized performance', description: 'Boosted AI-based scraping efficiency by 70%, enabling faster and more reliable data extraction.' },
+    // { title: 'Better scalability', description: 'Tripled real-time data handling capacity (3x), allowing Lytics to process larger datasets without performance trade-offs.' },
+    // ],
+    process: 'Pixelette Technologies executed a structured, multi-phase approach to building the Beyorch Digital Token platform for a secure, scalable and investor-friendly solution.',
+    milestones: [
+      { title: 'Platform development', description: 'Our development team built a smart contract-powered financial ecosystem, incorporating automated asset management, secure transactions and real-time investment tracking.' },
+      { title: 'Testing and deployment', description: 'Comprehensive security audits and stress testing were conducted to validate transaction integrity, scalability and performance. After final refinements, the platform was successfully deployed.' },
+      { title: 'Discovery and research', description: 'We conducted a deep analysis of financial market inefficiencies, investor concerns, and blockchain-based investment solutions to define the platform’s architecture and security requirements.' },
+      { title: 'Blockchain implementation', description: 'We implemented Ethereum-based smart contracts to automate investment transactions in order to deliver transparency, efficiency and security for all stakeholders.' },
+    ],
+  },
+  {
+    slug: 'sandoz',
+    title: 'How Sandoz Optimized Pharma Ops with a Centralized Dashboard',
+    description: 'Sandoz, a leading pharmaceutical company, struggled with fragmented data and inefficient analytics, slowing down decision-making and strategic growth. Without a unified system, monitoring campaign performance and extracting actionable insights was challenging. To address this, Sandoz partnered with Pixelette Technologies to develop a centralized dashboard that streamlined their operations and improved data-driven decision-making.',
+    businessType: 'Pharmaceutical Company',
+    industry: 'Pharmaceutical & Healthcare',
+    blocker: 'Sandoz lacked an integrated system to compile and analyze real-time business data. Their existing platforms operated in silos, making it difficult to track campaign performance, extract insights and drive informed decision-making. This fragmentation hindered operational efficiency and scalability in the South African market.',
+    goal: 'Sandoz set out to build an advanced dashboard that consolidated all campaign data into a single, intuitive platform. The objective was to accelerate decision-making, enhance analytics capabilities, and drive revenue growth within the pharmaceutical sector.',
+    solution: 'Pixelette Technologies designed a real-time analytics dashboard customized to Sandoz’s operational needs. By centralizing campaign data and integrating advanced visualization tools, the platform provided deeper insights, improved efficiency and truly empowered Sandoz to make faster, data-driven decisions.',
+    logo: '/images/casestudies/sandoz/sandoz-card-logo.png',
+    bannerImage: '/images/casestudies/sandoz/sandoz-slider-image.png',
+    techStack: [
+      { name: 'polkadot', icon: '/images/tech/logos/polkadot.png' },
+      { name: 'Hyperledger', icon: '/images/tech/logos/hyperledger-fabric.png' },
+      { name: 'go', icon: '/images/tech/logos/stripe-api.png' },
+      { name: 'c++', icon: '/images/tech/logos/mysql.png' },
+      { name: 'reactjs', icon: '/images/tech/logos/reactjs.png' },
+    ],
+    impactStats: {
+      description: 'Sandoz’s centralized dashboard significantly improved decision-making speed and revenue growth, reinforcing the importance of real-time data in pharmaceutical operations.',
+      percentage: '60%',
+      details: 'The idea of Non-Fungible Tokens...',
+    },
+    impactBoxes: [
+      { title: 'Growing decision-making efficiency', description: '40% improvement in decision-making speed, enabling faster and more strategic business operations.' },
+      { title: 'Revenue growth in pharma market', description: '20% increase in revenue, driven by real-time analytics and data-driven insights.' },
+    ],
+    process: 'Pixelette Technologies executed a structured, multi-phase approach to provide a flawless and high-performance solution. The project was completed in four months, delivering an intuitive and scalable analytics platform.',
+    milestones: [
+      // 2
+      { title: 'Design and development', description: 'Using Datorama and Moqups, we developed a scalable and intuitive dashboard tailored to Sandoz’s needs. The platform was designed to integrate real-time analytics and campaign performance tracking making sure that data-driven insights were easily accessible. By focusing on user-friendly design and seamless functionality, we optimized the dashboard for both efficiency and usability.' },
+      // 4
+      { title: 'Testing and deployment', description: 'To guarantee accuracy and reliability, we conducted testing to refine data processing to be sure of dashboard efficiency and eliminate any inconsistencies. Once all parameters were optimized, we successfully deployed the solution leaving Sandoz with real-time, data-driven decision-making capabilities.' },
+      // 1
+      { title: 'Discovery and research', description: 'We began with an in-depth analysis of Sandoz’s data management challenges and operational bottlenecks. Our team identified inefficiencies in their existing systems and defined the technical requirements necessary to align the solution with their business goals. This phase set the foundation for a robust and scalable dashboard.' },
+      // 3
+      { title: 'Data analytics optimization', description: 'We implemented advanced data visualization tools to provide meaningful insights and improve decisions. Our team also focused on improving system responsiveness and refining the user interface for a better experience. These enhancements ensured that the dashboard delivered high-quality, real-time analytics without performance lags.' },
+    ],
+  },
+  {
+    slug: 'neurostack',
+    title: 'How NeuroStack Changed Audio Content with Advanced Text-to-Speech',
+    description: 'NeuroStack, a leading AI solutions platform, sought to develop an advanced text-to-speech (TTS) system that could streamline content generation while maintaining high-quality, natural-sounding voice output. Their existing system required significant manual intervention, lacked efficiency and struggled with speech clarity. To overcome these challenges, NeuroStack partnered with Pixelette Technologies to create a newer AI-powered TTS platform.',
+    businessType: 'AI Solutions Platform',
+    industry: 'AI & Automation',
+    blocker: 'NeuroStack’s v1 text-to-speech technology faced limitations in speech clarity, processing speed and usability. The lack of a scalable and automated solution made it difficult to generate lifelike audio efficiently. Additionally, manual processes slowed down content workflows which prevented smooth text-to-speech conversion for diverse applications.',
+    goal: 'NeuroStack aimed to develop a more advanced AI-powered text-to-speech platform capable of processing large text volumes while delivering high-quality, natural voice synthesis. The objective was to improve speech clarity, reduce latency, and integrate easily into content workflows, ultimately boosting user engagement.',
+    solution: 'Pixelette Technologies designed and deployed a scalable, AI-driven TTS platform that significantly improved speech synthesis accuracy and content automation. Utilizing the latest AI voice models, the system enabled real-time text-to-speech conversion with lifelike audio output, reducing the need for manual adjustments and enhancing overall efficiency.',
+    logo: '/images/casestudies/neurostack/neurostack-card-logo.png',
+    bannerImage: '/images/casestudies/neurostack/neurostack-slider-image.png',
+    techStack: [
+      { name: 'react', icon: '/images/tech/logos/reactjs.png' },
+      { name: 'Hyperledger', icon: '/images/tech/logos/openai.png' },
+      { name: 'go', icon: '/images/tech/logos/typescript.png' },
+    ],
+    impactStats: {
+      description: 'NeuroStack’s AI-powered TTS system delivered significant improvements in content automation, speech clarity and processing efficiency.',
+      percentage: '60%',
+      details: 'The idea of Non-Fungible Tokens...',
+    },
+    impactBoxes: [
+      { title: 'Improved decision-making', description: '65% improvement in AI-backed decision-making processes for content creation.' },
+      { title: 'Reduction in data discrepancies', description: '40% decrease in errors and inconsistencies in generated speech output.' },
+      { title: 'Speech clarity enhancement', description: '80% improvement in voice synthesis accuracy for lifelike and natural-sounding audio.' },
+      { title: 'Content automation boost', description: '3x faster TTS processing speed, enabling real-time voice generation.' },
+    ],
+    process: 'Pixelette Technologies followed a structured, multi-phase approach, completing the project in six months to ensure scalability, precision and improved performance.',
+    milestones: [
+      // 2
+      { title: 'Design and development', description: 'Using React, OpenAI and TypeScript, we built a scalable, user-friendly TTS platform. The integration of AI-driven voice synthesis models allowed for high-quality speech generation, providing an intuitive and accessible user experience.' },
+      // 4
+      { title: 'Testing and deployment', description: 'Through extensive testing, we refined speech accuracy, system performance, and content automation workflows. After successful validation, the solution was deployed smoothly, enabling NeuroStack to generate high-quality voice content with minimal effort.' },
+      // 1
+      { title: 'Discovery and research', description: 'We conducted an in-depth analysis of NeuroStack’s content generation challenges and identified key inefficiencies in their existing TTS workflows. Our research focused on refining the technical requirements for an easy AI-driven solution.' },
+      // 3
+      { title: 'AI model training and optimization', description: 'We trained and fine-tuned AI-based speech models to enhance voice realism and clarity. Our team also optimized processing speed to enable real-time text-to-speech conversion, ensuring smooth and accurate voice synthesis.' },
+    ],
+  },
+  {
+    slug: 'neom',
+    title: 'How NEOM Cut Manual Work and Improved Ad Analytics Efficiency',
+    description: 'NEOM needed a faster, more efficient way to process ad analytics data from TikTok, Snapchat, and Facebook. Manual data aggregation slowed reporting and impacted decision-making. To solve this, NEOM partnered with Pixelette Technologies, and our team worked closely with them to develop a system that automated data retrieval, enhanced analytics visualization and improved reporting accuracy.',
+    businessType: 'Ad Analytics & Automation',
+    industry: 'Marketing Technology',
+    blocker: 'NEOM faced inefficiencies in collecting, processing and visualizing ad analytics data across multiple social media platforms like TikTok, Snapchat and Facebook. Manual data compilation consumed valuable time, delaying insights and affecting reporting accuracy. Without an automated system, the workflow remained fragmented and slow.',
+    goal: 'NEOM aimed to automate and optimize its ad analytics pipeline, reducing the time spent on data retrieval and reporting. The objective was to implement a scalable system that improved efficiency, accuracy and overall analytics performance.',
+    solution: 'Pixelette Technologies developed an automated data processing system for NEOM, using Azure Databricks, Azure Blobs and Datorama. This solution streamlined data retrieval, centralized analytics and enhanced visualization to reduce manual workload and improve reporting accuracy.',
+    logo: '/images/casestudies/neom/neom-card-logo.png',
+    bannerImage: '/images/casestudies/neom/neom-slider-image.png',
+    techStack: [
+      { name: 'react', icon: '/images/tech/logos/reactjs.png' },
+      { name: 'Hyperledger', icon: '/images/tech/logos/openai.png' },
+      { name: 'go', icon: '/images/tech/logos/typescript.png' },
+    ],
+    impactStats: {
+      description: 'The new system delivered measurable improvements, revolutionizing NEOM’s ad analytics efficiency.',
+      percentage: '60%',
+      details: 'The idea of Non-Fungible Tokens...',
+    },
+    impactBoxes: [
+      { title: 'Reduced manual data compilation', description: '70% decrease in time spent manually aggregating ad analytics data.' },
+      { title: 'Improved reporting efficiency', description: '75% reduction in time required for ad analytics reporting.' },
+    ],
+    process: 'We took a structured, multi-phase approach to building NEOM’s optimized script-processing system. From research to deployment, our team ensured efficiency, scalability and long-term reliability. The project was successfully completed within three months.',
+    milestones: [
+      // 2
+      { title: 'Design and development', description: 'We developed an optimized data processing system using Azure Databricks and Azure Blobs. To enhance real-time analytics visualization, we integrated Datorama making sure that NEOM had a clear, interactive view of their ad performance data.' },
+      // 4
+      { title: 'Testing and deployment', description: 'Before deployment, the system was deeply tested. We validated data accuracy, stress-tested system performance and also looked into integration with NEOM’s existing tools. After fine-tuning, we successfully deployed the solution, empowering NEOM with a faster, more efficient ad analytics workflow.' },
+      // 1
+      { title: 'Discovery and research', description: 'Our team collaborated with NEOM to analyze their existing data workflows, pinpoint inefficiencies, and define key technical requirements for automation. We mapped out pain points and designed a customized solution to address them.' },
+      // 3
+      { title: 'Automation and optimization', description: 'Our engineers automated data retrieval and compilation processes, eliminating repetitive manual work. This significantly improved processing speed and data accuracy, making reporting seamless and reliable.' },
+    ],
+  },
+  {
+    slug: 'digital-asset-vault',
+    title: 'How Digital Asset Vault is Redefining Secure Crypto Storage',
+    description: 'Digital Asset Vault is a blockchain-powered platform designed to protect cryptocurrencies from theft and unauthorized access. With cold-storage wallets and multi-signature security features, it provides individuals and enterprises with a reliable way to store digital assets. Pixelette Technologies collaborated with the client to develop a security-focused solution that prioritizes asset protection without compromising usability.',
+    businessType: 'Crypto Storage & Security Platform',
+    industry: 'Blockchain',
+    blocker: 'Crypto security breaches, asset theft, and lost private keys have made it difficult for individuals and businesses to protect their digital assets. Many existing solutions lacked both accessibility and enterprise-grade security, leaving users vulnerable to financial loss. A secure, scalable storage solution was needed to prevent unauthorized access while allowing controlled asset management.',
+    goal: 'Digital Asset Vault set out to create a secure, user-friendly storage platform for digital assets with zero incidents of crypto theft. The focus was on integrating cold-storage wallets, private key certification and multi-signature wallet capabilities to provide a strong security framework.',
+    solution: 'Pixelette Technologies helped develop the platform to provide secure cryptocurrency storage with cold-storage wallets, private key certificates, and multi-signature wallets. This combination protects assets from cyber threats, ensures verified ownership and enables shared control for added security.',
+    logo: '/images/casestudies/digital-asset-vault/digital-asset-vault-card-logo.png',
+    bannerImage: '/images/casestudies/digital-asset-vault/digital-asset-vault-slider.png',
+    techStack: [
+      { name: 'react', icon: '/images/tech/logos/reactjs.png' },
+      { name: 'Hyperledger', icon: '/images/tech/logos/openai.png' },
+      { name: 'go', icon: '/images/tech/logos/typescript.png' },
+    ],
+    impactStats: {
+      description: 'Digital Asset Vault is redefining cryptocurrency security, eliminating theft risks and providing a reliable way for users to store and manage their assets safely.',
+      percentage: '60%',
+      details: 'The idea of Non-Fungible Tokens...',
+    },
+    impactBoxes: [
+      { title: 'Crypto theft prevention', description: '0 reported incidents in the first year, proving its effectiveness in protecting digital assets.' },
+      { title: 'Cold storage adoption', description: '60% of active users opted for cold storage, highlighting strong demand for secure solutions.' },
+      { title: 'Early enterprise adoption', description: '100+ businesses onboarded within the first 6 months, demonstrating rapid trust and adoption.' },
+    ],
+    process: 'We followed a structured, security-focused approach to ensure the highest level of asset protection and platform functionality.',
+    milestones: [
+      // 2
+      { title: 'Design and development', description: 'We designed an intuitive interface and built a secure backend to support cold-storage wallets, private key certification and multi-signature wallets. The system was structured to balance security with ease of use.' },
+      // 4
+      { title: 'Testing and deployment', description: 'Our security team conducted extensive penetration testing, audits, and performance evaluations. Once the system met our tough security standards, we deployed it to provide a trusted solution for digital asset storage.' },
+      // 1
+      { title: 'Research & strategy', description: 'Our team analyzed common crypto security challenges, storage vulnerabilities, and user concerns. This research guided the development of a platform designed to eliminate risks associated with asset theft and unauthorized access.' },
+      // 3
+      { title: 'Security & compliance implementation', description: 'To strengthen the platform’s defenses, we incorporated multi-layered encryption, access control mechanisms and compliance with cybersecurity best practices.' },
     ],
   },
   // Add more case studies here
