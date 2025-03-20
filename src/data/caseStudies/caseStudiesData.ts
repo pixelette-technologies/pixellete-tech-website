@@ -193,8 +193,8 @@ const caseStudiesData = [
     blocker: 'Traditional financial systems lack transparency and efficiency, making it difficult for investors to track assets and maximize profitability. Without an automated, secure process, inefficiencies and risk exposure increase, limiting investor confidence and financial growth.',
     goal: 'Beyorch aimed to build a decentralized financial ecosystem where investors could easily manage assets, reduce reliance on intermediaries, and benefit from secure, automated transactions. The objective was to enhance transparency, efficiency, and profitability through blockchain-driven solutions.',
     solution: 'Pixelette Technologies developed a blockchain-powered investment platform that integrates smart contracts, automated financial processes and secure tokenomics. This solution empowers investors with real-time asset tracking, instant transactions, and enhanced security, for a flawless investment experience.',
-    logo: '/images/casestudies/blockguard/blockguard-logo.png',
-    bannerImage: '/images/casestudies/blockguard/blockguard-casestudy-image.png',
+    logo: '/images/casestudies/beyorch/beyorch-card-logo.png',
+    bannerImage: '/images/casestudies/beyorch/beyorch-slider-image.png',
     techStack: [
       { name: 'polkadot', icon: '/images/tech/logos/polkadot.png' },
       { name: 'Hyperledger', icon: '/images/tech/logos/hyperledger-fabric.png' },
@@ -230,8 +230,8 @@ const caseStudiesData = [
     blocker: 'Sandoz lacked an integrated system to compile and analyze real-time business data. Their existing platforms operated in silos, making it difficult to track campaign performance, extract insights and drive informed decision-making. This fragmentation hindered operational efficiency and scalability in the South African market.',
     goal: 'Sandoz set out to build an advanced dashboard that consolidated all campaign data into a single, intuitive platform. The objective was to accelerate decision-making, enhance analytics capabilities, and drive revenue growth within the pharmaceutical sector.',
     solution: 'Pixelette Technologies designed a real-time analytics dashboard customized to Sandoz’s operational needs. By centralizing campaign data and integrating advanced visualization tools, the platform provided deeper insights, improved efficiency and truly empowered Sandoz to make faster, data-driven decisions.',
-    logo: '/images/casestudies/blockguard/blockguard-logo.png',
-    bannerImage: '/images/casestudies/blockguard/blockguard-casestudy-image.png',
+    logo: '/images/casestudies/sandoz/sandoz-card-logo.png',
+    bannerImage: '/images/casestudies/sandoz/sandoz-slider-image.png',
     techStack: [
       { name: 'polkadot', icon: '/images/tech/logos/polkadot.png' },
       { name: 'Hyperledger', icon: '/images/tech/logos/hyperledger-fabric.png' },
@@ -269,8 +269,8 @@ const caseStudiesData = [
     blocker: 'NeuroStack’s v1 text-to-speech technology faced limitations in speech clarity, processing speed and usability. The lack of a scalable and automated solution made it difficult to generate lifelike audio efficiently. Additionally, manual processes slowed down content workflows which prevented smooth text-to-speech conversion for diverse applications.',
     goal: 'NeuroStack aimed to develop a more advanced AI-powered text-to-speech platform capable of processing large text volumes while delivering high-quality, natural voice synthesis. The objective was to improve speech clarity, reduce latency, and integrate easily into content workflows, ultimately boosting user engagement.',
     solution: 'Pixelette Technologies designed and deployed a scalable, AI-driven TTS platform that significantly improved speech synthesis accuracy and content automation. Utilizing the latest AI voice models, the system enabled real-time text-to-speech conversion with lifelike audio output, reducing the need for manual adjustments and enhancing overall efficiency.',
-    logo: '/images/casestudies/blockguard/blockguard-logo.png',
-    bannerImage: '/images/casestudies/blockguard/blockguard-casestudy-image.png',
+    logo: '/images/casestudies/neurostack/neurostack-card-logo.png',
+    bannerImage: '/images/casestudies/neurostack/neurostack-slider-image.png',
     techStack: [
       { name: 'react', icon: '/images/tech/logos/reactjs.png' },
       { name: 'Hyperledger', icon: '/images/tech/logos/openai.png' },
@@ -308,8 +308,8 @@ const caseStudiesData = [
     blocker: 'NEOM faced inefficiencies in collecting, processing and visualizing ad analytics data across multiple social media platforms like TikTok, Snapchat and Facebook. Manual data compilation consumed valuable time, delaying insights and affecting reporting accuracy. Without an automated system, the workflow remained fragmented and slow.',
     goal: 'NEOM aimed to automate and optimize its ad analytics pipeline, reducing the time spent on data retrieval and reporting. The objective was to implement a scalable system that improved efficiency, accuracy and overall analytics performance.',
     solution: 'Pixelette Technologies developed an automated data processing system for NEOM, using Azure Databricks, Azure Blobs and Datorama. This solution streamlined data retrieval, centralized analytics and enhanced visualization to reduce manual workload and improve reporting accuracy.',
-    logo: '/images/casestudies/blockguard/blockguard-logo.png',
-    bannerImage: '/images/casestudies/blockguard/blockguard-casestudy-image.png',
+    logo: '/images/casestudies/neom/neom-card-logo.png',
+    bannerImage: '/images/casestudies/neom/neom-slider-image.png',
     techStack: [
       { name: 'react', icon: '/images/tech/logos/reactjs.png' },
       { name: 'Hyperledger', icon: '/images/tech/logos/openai.png' },
