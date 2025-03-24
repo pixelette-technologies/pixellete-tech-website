@@ -18,80 +18,82 @@ export default async function Layout(props: {
     <>
       {/* <DemoBanner /> */}
       <Navbar />
-      {/* <BaseTemplate
-        leftNav={(
-          <>
-            <li>
-              <Link
-                href="/"
-                className="border-none text-gray-700 hover:text-gray-900"
-              >
-                {t('home_link')}
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/about/"
-                className="border-none text-gray-700 hover:text-gray-900"
-              >
-                {t('about_link')}
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/counter/"
-                className="border-none text-gray-700 hover:text-gray-900"
-              >
-                {t('counter_link')}
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/portfolio/"
-                className="border-none text-gray-700 hover:text-gray-900"
-              >
-                {t('portfolio_link')}
-              </Link>
-            </li>
-            <li>
-              <a
-                className="border-none text-gray-700 hover:text-gray-900"
-                href="https://github.com/Hamid-Ayub/Next-js-Boilerplate"
-              >
-                GitHub
-              </a>
-            </li>
-          </>
-        )}
-        rightNav={(
-          <>
-            <li>
-              <Link
-                href="/sign-in/"
-                className="border-none text-gray-700 hover:text-gray-900"
-              >
-                {t('sign_in_link')}
-              </Link>
-            </li>
+      <div>
+        {/* <BaseTemplate
+          leftNav={(
+            <>
+              <li>
+                <Link
+                  href="/"
+                  className="border-none text-gray-700 hover:text-gray-900"
+                >
+                  {t('home_link')}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/about/"
+                  className="border-none text-gray-700 hover:text-gray-900"
+                >
+                  {t('about_link')}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/counter/"
+                  className="border-none text-gray-700 hover:text-gray-900"
+                >
+                  {t('counter_link')}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/portfolio/"
+                  className="border-none text-gray-700 hover:text-gray-900"
+                >
+                  {t('portfolio_link')}
+                </Link>
+              </li>
+              <li>
+                <a
+                  className="border-none text-gray-700 hover:text-gray-900"
+                  href="https://github.com/Hamid-Ayub/Next-js-Boilerplate"
+                >
+                  GitHub
+                </a>
+              </li>
+            </>
+          )}
+          rightNav={(
+            <>
+              <li>
+                <Link
+                  href="/sign-in/"
+                  className="border-none text-gray-700 hover:text-gray-900"
+                >
+                  {t('sign_in_link')}
+                </Link>
+              </li>
 
-            <li>
-              <Link
-                href="/sign-up/"
-                className="border-none text-gray-700 hover:text-gray-900"
-              >
-                {t('sign_up_link')}
-              </Link>
-            </li>
+              <li>
+                <Link
+                  href="/sign-up/"
+                  className="border-none text-gray-700 hover:text-gray-900"
+                >
+                  {t('sign_up_link')}
+                </Link>
+              </li>
 
-            <li>
-              <LocaleSwitcher />
-            </li>
-          </>
-        )}
-      >
+              <li>
+                <LocaleSwitcher />
+              </li>
+            </>
+          )}
+        >
 
-      </BaseTemplate> */}
-      {props.children}
+        </BaseTemplate> */}
+        {props.children}
+      </div>
       <Footer />
     </>
   );

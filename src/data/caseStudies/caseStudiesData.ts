@@ -374,6 +374,133 @@ const caseStudiesData = [
       { title: 'Security & compliance implementation', description: 'To strengthen the platform’s defenses, we incorporated multi-layered encryption, access control mechanisms and compliance with cybersecurity best practices.' },
     ],
   },
+  {
+    slug: 'chysler',
+    title: 'How the \'Stay Sane\' NFT Collection Bridged Fine Art and Blockchain',
+    description: 'The Stay Sane NFT collection redefined the fusion of traditional fine art and blockchain by tokenizing the physical artwork of Charles Salvador Bronson. This initiative bridged digital and physical art, offering collectors a unique experience. In collaboration with Pixelette Technologies, the project delivered a secure, user-friendly NFT marketplace that preserved Bronson’s artistic vision through blockchain innovation.',
+    businessType: 'NFT Marketplace',
+    industry: 'Blockchain',
+    blocker: 'The client needed a platform to connect traditional fine art with NFTs. Key challenges included producing high-resolution digital renderings of physical artwork, integrating secure blockchain transactions, and designing an engaging experience for collectors. Without a reliable marketplace, Bronson’s digital art vision risked losing both authenticity and potential buyers.',
+    goal: 'The objective was to create an intuitive NFT marketplace that securely hosted and sold digital representations of Bronson’s artwork. The platform needed to support NFT minting and ownership verification, deliver high-resolution digital artwork, and provide a user-friendly experience for collectors and investors. Additionally, it aimed to drive strong sales while maintaining the exclusivity of Bronson’s collection.',
+    solution: 'Pixelette Technologies built a secure, blockchain-powered NFT marketplace for the Stay Sane collection. The platform authenticated ownership, facilitated secure transactions, and offered an immersive digital art experience. With advanced NFT integration, collectors could acquire unique digital assets directly linked to Bronson’s physical works, expanding both their accessibility and value.',
+    logo: '/images/casestudies/chysler/chysler-logo.png',
+    bannerImage: '/images/casestudies/chysler/chysler-casestudy-image.png',
+    techStack: [
+      { name: 'nodejs', icon: '/images/tech/logos/nodejs.png' },
+      { name: 'hardhat', icon: '/images/tech/logos/hardhat.png' },
+      { name: 'web3js', icon: '/images/tech/logos/web3js.png' },
+      { name: 'solidity', icon: '/images/tech/logos/solidity.png' },
+      { name: 'IPFS', icon: '/images/tech/logos/ipfs.png' },
+      { name: 'go', icon: '/images/tech/logos/typescript.png' },
+    ],
+    impactStats: {
+      description: 'The implementation of the \'Stay Sane\' NFT marketplace achieved outstanding results, successfully bringing fine art to the blockchain.',
+      percentage: '60%',
+      details: 'The idea of Non-Fungible Tokens...',
+    },
+    impactBoxes: [
+      { title: 'Marketplace success', description: 'Generated approximately £500,000 in total sales, proving strong demand for Bronson’s digital collectibles.' },
+      { title: 'Rapid sales', description: '80% of NFTs sold within the first hour, highlighting immediate collector interest.' },
+      { title: 'Art & blockchain fusion', description: 'Linked 10% of NFTs to physical artwork, setting a new benchmark for art tokenization.' },
+      { title: 'Smooth user experience', description: 'Attracted art collectors, crypto investors, and NFT enthusiasts worldwide through a secure and accessible platform.' },
+    ],
+    process: 'Pixelette Technologies followed a structured, four-phase approach to develop the Stay Sane NFT marketplace to create a secure and accessible digital art platform.',
+    milestones: [
+      // 2
+      { title: 'Design and development', description: 'Then our design and development teams jumped in to create a high-performance blockchain marketplace using Solidity, Web3.js and IPFS, with an intuitive UI/UX for a smooth user experience.' },
+      // 4
+      { title: 'Testing and deployment', description: 'Finally, we tested the marketplace for security, performance and blockchain functionality before launching the platform successfully.' },
+      // 1
+      { title: 'Research & strategy', description: 'We conducted in-depth market analysis on NFT trends, audience behavior and competitors to define a scalable platform framework.' },
+      // 3
+      { title: 'NFT minting & integration', description: 'Our blockchain team implemented ERC-721A smart contracts to tokenize Bronson’s artwork, providing verifiable ownership and high-resolution digital assets.' },
+    ],
+  },
+  {
+    slug: 'diamond-nxt',
+    title: 'How DIAMOND NXT is Transforming the Diamond Trading Industry',
+    description: 'DIAMOND NXT is redefining diamond trading by combining blockchain security with tokenization to create a transparent, efficient and trustworthy marketplace. The platform provides real-time provenance tracking, allowing diamonds to be authenticated and traded with confidence. By removing inefficiencies in the traditional market, DIAMOND NXT builds trust among stakeholders and attracts new investors. Pixelette Technologies handled the design, development and deployment of this advanced solution.',
+    businessType: 'Tokenized Trading Ecosystem',
+    industry: 'Blockchain',
+    blocker: 'The diamond trading industry has long struggled with transparency, authentication, and trust. Proving a diamond’s origins and ethical sourcing remains a challenge, discouraging buyers and investors. The lack of a secure digital marketplace for tokenization further limits market participation, leading to inefficiencies and security risks. Without a blockchain-powered system, stakeholders face financial losses, fraudulent claims and restricted growth opportunities.',
+    goal: 'DIAMOND NXT set out to build a secure, blockchain-based ecosystem where diamonds could be traded with verified provenance. The objective was to create a digital marketplace that guarantees authenticity, strengthens investor confidence and simplifies tokenized asset trading.',
+    solution: 'Pixelette Technologies built DIAMOND NXT using Solidity, Truffle, ERC-1155, and IPFS for secure provenance tracking and tokenized diamond assets. React.js and Web3.js powered the trading interface, while Node.js and Moralis handled real-time data. This blockchain marketplace modernized diamond trading with automated transactions and verifiable authenticity.',
+    logo: '/images/casestudies/diamond-nxt/diamond-nxt-card-logo.png',
+    bannerImage: '/images/casestudies/diamond-nxt/diamond-nxt-image-slider.png',
+    techStack: [
+      { name: 'nodejs', icon: '/images/tech/logos/nodejs.png' },
+      { name: 'moralis', icon: '/images/tech/logos/moralis.png' },
+      { name: 'hardhat', icon: '/images/tech/logos/hardhat.png' },
+      { name: 'web3js', icon: '/images/tech/logos/web3js.png' },
+      { name: 'solidity', icon: '/images/tech/logos/solidity.png' },
+      { name: 'IPFS', icon: '/images/tech/logos/ipfs.png' },
+      { name: 'truffle', icon: '/images/tech/logos/truffle.png' },
+    ],
+    impactStats: {
+      description: 'DIAMOND NXT is transforming the diamond trading industry by providing a secure, transparent and blockchain-powered marketplace for provenance tracking and tokenization.',
+      percentage: '60%',
+      details: 'The idea of Non-Fungible Tokens...',
+    },
+    impactBoxes: [
+      { title: 'Provenance tracking', description: '98% of diamonds now have verifiable provenance, strengthening trust and authenticity in trading.' },
+      { title: 'Trader engagement', description: 'Over 1,500 active traders onboarded, demonstrating strong adoption and market confidence.' },
+      { title: 'Tokenization growth', description: 'More than $10M USD worth of diamonds successfully tokenized, expanding investment opportunities.' },
+      { title: 'User retention', description: 'Achieved a 70% retention rate after three months, reflecting platform reliability and trader satisfaction.' },
+    ],
+    process: 'We followed a structured, multi-phase approach to develop DIAMOND NXT, delivering full functionality, security, and a smooth trading experience.',
+    milestones: [
+      // 2
+      { title: 'Design and development', description: 'The design and development teams at Pixelette Technologies built a blockchain-powered trading platform using React.js and Web3.js for a user-friendly interface. We structured a tokenization system that securely represents diamonds as digital assets.' },
+      // 4
+      { title: 'Testing and deployment', description: 'We conducted thorough security testing and performance evaluations to refine platform stability. Once optimized, DIAMOND NXT was successfully deployed to provide traders with a reliable and transparent marketplace' },
+      // 1
+      { title: 'Research & strategy', description: 'Our team analyzed the diamond trading industry to identify key issues in provenance tracking, security and tokenization. This research guided the development of DIAMOND NXT, shaping it to meet real market demands.' },
+      // 3
+      { title: 'Blockchain & smart contract implementation', description: 'Our blockchain team developed Solidity-based smart contracts using Truffle, ERC-1155 and IPFS. These contracts established verifiable provenance tracking and secure transactions, allowing traders to confirm authenticity with confidence.' },
+    ],
+  },
+  {
+    slug: 'mind-coach-ai',
+    title: 'How MindCoach AI Made Mental Health Care More Accessible',
+    description: 'MindCoach AI, an innovative mental health platform, sought to address the accessibility and responsiveness issues in traditional mental health support systems. Many individuals facing anxiety and stress lacked timely assistance and struggled with inconsistent care. To bridge this gap, MindCoach AI partnered with Pixelette Technologies to develop an AI-driven solution that provides real-time emotional support, behavioral analysis, and proactive mental health management.',
+    businessType: 'AI Mental Health Coaching',
+    industry: 'HealthTech',
+    blocker: 'Traditional mental health systems often lack accessibility, immediate support and effective tracking. Many individuals facing stress and anxiety struggle to find timely assistance. Moreover, conventional models often lead to delayed intervention and inconsistent care. To take this idea from idea to execution, Pixelette Technologies stepped in to help MindCoach AI with the strategy, design, development and deployment of their AI mental health coaching platform. ',
+    goal: 'MindCoach AI aimed to improve mental health support by integrating artificial intelligence into real-time coaching and emotional analysis. The goal was to provide instant assistance, monitor emotional patterns, and enable proactive mental well-being management.',
+    solution: 'Pixelette Technologies developed MindCoach AI, an intelligent mental health platform designed to offer real-time emotional support and behavioral insights. Our team built a system that analyzes user behavior, delivers AI-powered coaching, and provides continuous emotional tracking. By implementing advanced sentiment analysis, we created a solution that helps users take control of their mental wellness.',
+    logo: '/images/casestudies/mind-coach-ai/mind-coach-ai-logo.png',
+    bannerImage: '/images/casestudies/mind-coach-ai/mind-coach-ai-casestudy-image.png',
+    techStack: [
+      { name: 'nodejs', icon: '/images/tech/logos/python.png' },
+      { name: 'moralis', icon: '/images/tech/logos/tensorflow.png' },
+      { name: 'hardhat', icon: '/images/tech/logos/pytorch.png' },
+      { name: 'IPFS', icon: '/images/tech/logos/aws.png' },
+      { name: 'web3js', icon: '/images/tech/logos/postgresql.png' },
+      { name: 'solidity', icon: '/images/tech/logos/reactjs.png' },
+    ],
+    impactStats: {
+      description: 'The launch of MindCoach AI’s intelligent mental health platform significantly improved accessibility, engagement and mental well-being outcomes.',
+      percentage: '60%',
+      details: 'The idea of Non-Fungible Tokens...',
+    },
+    impactBoxes: [
+      { title: '24/7 mental health assistance', description: 'Users received round-the-clock AI-driven support, improving access to mental health resources.' },
+      { title: 'Stronger emotional guidance', description: 'Real-time sentiment analysis enabled instant responses, helping users manage emotional challenges effectively.' },
+      { title: 'Higher engagement rates', description: 'User interaction increased by 70% through AI-powered recommendations and continuous support.' },
+      { title: 'Stress reduction', description: 'Users reported a 40% decrease in stress and anxiety after regular use of the platform.' },
+    ],
+    process: 'To develop the AI-driven mental health platform, we followed a structured approach that combined research, development and continuous testing.',
+    milestones: [
+      // 2
+      { title: 'Development', description: 'Our team built an AI-powered system with machine learning models for sentiment analysis, real-time emotional tracking, and behavioral insights.' },
+      // 4
+      { title: 'Testing and deployment', description: 'We conducted extensive testing to verify accuracy, reliability, and a supportive user experience before launching with ongoing refinements.' },
+      // 1
+      { title: 'Research & strategy', description: 'We analyzed mental health challenges, identified gaps in accessibility and defined AI-driven solutions to provide real-time support.' },
+      // 3
+      { title: 'AI implementation', description: 'We integrated NLP and deep learning to recognize emotional patterns, deliver personalized support and adapt to user needs.' },
+    ],
+  },
   // Add more case studies here
 ];
 

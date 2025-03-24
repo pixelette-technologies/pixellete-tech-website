@@ -19,7 +19,7 @@ export const tgexpertiseAreas = [
   { title: 'Advanced Security Protocols' },
   { title: 'Smooth System Integration' },
   { title: 'Ongoing Maintenance and Support' },
-  { title: 'Fully Responsive Design' },
+  // { title: 'Fully Responsive Design' },
 ];
 export const tgExpertiseData = {
   'Fully Responsive Design': {

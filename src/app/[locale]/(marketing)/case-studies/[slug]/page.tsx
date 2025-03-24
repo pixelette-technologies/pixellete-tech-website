@@ -149,7 +149,7 @@ const CaseStudieDetail = async ({ params }: { params: { slug: string } }) => {
                   <p style={{ fontSize: '15px' }}>{goal}</p>
                 </div>
                 <div>
-                  <h2>The Solution</h2>
+                  <h2>The solution</h2>
                   <p style={{ fontSize: '15px' }}>{solution}</p>
                 </div>
               </div>
