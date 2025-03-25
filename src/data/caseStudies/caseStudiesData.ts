@@ -501,6 +501,48 @@ const caseStudiesData = [
       { title: 'AI implementation', description: 'We integrated NLP and deep learning to recognize emotional patterns, deliver personalized support and adapt to user needs.' },
     ],
   },
+  {
+    slug: 'law-ledger',
+    title: 'How LawLedger Reinvented Legal Transaction Management',
+    description: 'LawLedger simplifies legal transactions with blockchain, providing a secure and automated system for legal professionals. It enables real-time verification, prevents fraud, and supports compliance through smart contracts and decentralized audit trails. By removing inefficiencies in traditional processes, LawLedger strengthens trust, lowers costs, and improves operations. Pixelette Technologies handled its research and strategy, design, development as well as deployment.',
+    businessType: 'Blockchain Legal Transactions',
+    industry: 'LegalTech',
+    blocker: 'Legal professionals face inefficiencies, security risks and compliance challenges in transaction management. Traditional systems lack automated verification and transparency, increasing fraud exposure and operational delays. Without an immutable verification process, law firms struggle with trust, accuracy and financial burdens. To take this idea from idea to execution, Pixelette Technologies stepped in to help LawLedger with the strategy, design, development and deployment of their blockchain-backed legal transaction management platform. ',
+    goal: 'LawLedger set out to create a blockchain-driven platform that brings security, transparency and automation to legal transactions. The goal was to provide an immutable audit trail, real-time verification and a reliable system for managing legal agreements.',
+    solution: 'Our development teams at Pixelette Technologies designed and built a blockchain-based legal transaction platform for LawLedger. By integrating smart contracts, real-time verification and decentralized ledger technology, we developed a secure, automated system that eliminates fraud risks and simplifies legal operations.',
+    logo: '/images/casestudies/law-ledger/law-ledger-logo.png',
+    bannerImage: '/images/casestudies/law-ledger/law-ledger-ai-casestudy-image.png',
+    techStack: [
+      { name: 'nodejs', icon: '/images/tech/logos/hyperledger-fabric.png' },
+      { name: 'moralis', icon: '/images/tech/logos/solidity.png' },
+      { name: 'hardhat', icon: '/images/tech/logos/ipfs.png' },
+      { name: 'IPFS', icon: '/images/tech/logos/web3js.png' },
+      { name: 'web3js', icon: '/images/tech/logos/postgresql.png' },
+      { name: 'solidity', icon: '/images/tech/logos/aws.png' },
+    ],
+    impactStats: {
+      description: 'LawLedger is now live, bringing secure and transparent legal transaction management to professionals. Early adoption shows improved efficiency, reduced fraud risks and stronger compliance. As usage grows, further insights into its impact will continue to develop.',
+      percentage: '60%',
+      details: 'The idea of Non-Fungible Tokens...',
+    },
+    impactBoxes: [
+      { title: 'Faster legal transactions', description: 'Reduced legal transaction processing time by 50% for more improved workflow automation and reduced operational costs.' },
+      { title: 'Stronger compliance', description: 'Immutable audit trails provide transparent, verifiable records for law firms and enterprises.' },
+      { title: 'User adoption & trust', description: 'Achieved a 92% satisfaction rate among legal professionals who reported increased confidence and efficiency in managing transactions.' },
+      // { title: 'Stress reduction', description: 'Users reported a 40% decrease in stress and anxiety after regular use of the platform.' },
+    ],
+    process: 'To build the secure blockchain-based legal documentation platform, we analyzed legal workflows, developed smart contract validation, implemented immutable recordkeeping, and rigorously tested for compliance and performance.',
+    milestones: [
+      // 2
+      { title: 'Design and development', description: 'Our blockchain team built a secure transaction ecosystem using Hyperledger Fabric and Solidity for automated verification and immutable records.' },
+      // 4
+      { title: 'Testing and deployment', description: 'The system underwent extensive security audits and smart contract validation before deployment to make sure there was operational reliability and adherence to legal standards.' },
+      // 1
+      { title: 'Discovery and research', description: 'We conducted an in-depth analysis of legal transaction challenges, identifying key pain points and mapping out blockchain-driven solutions.' },
+      // 3
+      { title: 'Blockchain integration', description: 'Then we implemented smart contracts to automate legal agreements and integrated a decentralized audit trail to strengthen compliance.' },
+    ],
+  },
   // Add more case studies here
 ];
 
