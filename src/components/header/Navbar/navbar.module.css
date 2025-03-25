@@ -114,8 +114,15 @@
   }
 }
 
+.navbar {
+  position: relative;
+  width: 100%;
+  background-color: transparent;
+  z-index: 1000;
+}
+
 .navbar > div > section {
-  padding: 2.4rem 5rem;
+  padding: 1.6rem 5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;

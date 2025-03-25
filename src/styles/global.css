@@ -17,12 +17,20 @@
   box-sizing: inherit;
   scroll-behavior: smooth;
 }
+html {
+  font-size: 62.5%;
+  margin: 0;
+  padding: 0;
+}
 body {
   /* font-family: Outfit; */
   box-sizing: border-box;
   scroll-behavior: smooth;
   color: #fff;
   background-color: #000;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
 }
 
 * {
@@ -36,9 +44,6 @@ html {
   /* overflow-x: hidden; */
 }
 
-html {
-  font-size: 62.5%;
-}
 @media only screen and (max-width: 62.6em) {
   html {
     font-size: 45%;
@@ -561,7 +566,7 @@ p {
   z-index: -1; /* Positioned behind other content */
   filter: blur(50px);
   margin-left: -7rem; /* Shifts the element to the left for better positioning */
-  pointer-events: none; /* Ensures it doesn’t interfere with interactions */
+  pointer-events: none; /* Ensures it doesn't interfere with interactions */
   margin-top: -10rem;
   will-change: transform, opacity;
 }
