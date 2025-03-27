@@ -1,9 +1,10 @@
 import { Container } from '@/components/Feature/Container/Container';
 import React from 'react';
-import styles from './index.module.css';
-
+import styles from './ourcommitment.module.css';
+import Link from 'next/link';
 type CommitmentData = {
   img: string;
+  link?: string;
   value1: string;
   value2: string;
   value3?: string;
@@ -35,6 +36,7 @@ export const OurCommitment: React.FC<OurCommitmentProps> = ({
           </center>
           <section className={styles.OurCommitmentCards}>
             {commitmentData.map((el, index) => (
+              <Link href={el.link && el.link?el.link:'/#'}>
               <div style={{ margin: '0 1rem' }} key={index}>
                 <img src={el.img} alt={`Commitment ${index + 1}`} />
                 <div style={{ display: 'flex' }}>
@@ -58,6 +60,7 @@ export const OurCommitment: React.FC<OurCommitmentProps> = ({
                   )}
                 </div>
               </div>
+              </Link>
             ))}
           </section>
         </div>

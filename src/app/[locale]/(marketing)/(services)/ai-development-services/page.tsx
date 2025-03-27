@@ -38,6 +38,17 @@ import { getTranslations, setRequestLocale } from 'next-intl/server';
 
 // Use the imported objects as needed in your component
 
+const clutchLogos = [
+  {
+    src: "/images/Clutch/clutch-badges/ai/final/top-ai-company-uk.png",
+    alt: "Top AI Company UK"
+  },
+  {
+    src: "/images/Clutch/clutch-badges/ai/top-generative-ai-company-clutch.png",
+    alt: "Top Generative AI Company"
+  }
+];
+
 type IAIservicesProps = {
   params: Promise<{ slug: string; locale: string }>;
 };
@@ -109,6 +120,7 @@ export default async function AIservices(props: IAIservicesProps) {
       <EvaluateBusiness
         heading="We’re not waiting for the future; we’re actively building with businesses"
         description="Start your transformation today and promote your development goals with a top-tier global team that pushes the boundaries of innovation every single day."
+        clutchLogos={clutchLogos}
       />
     </>
   );

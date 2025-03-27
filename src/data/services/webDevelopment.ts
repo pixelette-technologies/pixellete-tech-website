@@ -100,7 +100,7 @@ export const aiHeroHeading = 'Web Development Services';
 export const aiHeroDescription
   = 'Our expert team of developers, designers and project managers create high-quality websites and applications that enhance user experience and drive engagement. Each project is executed with precision to help clients achieve their goals.';
 
-export const aiHeroButtonText = 'consult our experts';
+export const aiHeroButtonText = 'Consult our experts';
 
 export const aiHeroButtonLink = '/contact-us';
 

@@ -4,7 +4,7 @@
   justify-content: space-evenly;
   gap: 1rem;
 }
-.OurCommitmentCards > div {
+.OurCommitmentCards > a > div {
   width: 40rem;
   padding: 4rem 2rem;
   display: flex;
@@ -16,7 +16,7 @@
   transition: 0.5s all;
   gap: 2rem;
 }
-.OurCommitmentCards > div > img {
+.OurCommitmentCards > a > div > img {
   width: 40%;
   margin: 0 auto;
 }

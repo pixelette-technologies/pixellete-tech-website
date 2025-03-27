@@ -90,7 +90,7 @@ export const aiHeroHeading = 'AR/VR Development Services';
 export const aiHeroDescription
   = 'Our expertise in immersive technology empowers businesses to enhance customer engagement and turn complex processes into seamless, interactive digital experiences.';
 
-export const aiHeroButtonText = 'consult our experts';
+export const aiHeroButtonText = 'Consult our experts';
 
 export const aiHeroButtonLink = '/contact-us';
 

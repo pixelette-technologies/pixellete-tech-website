@@ -93,7 +93,7 @@ export const aiHeroHeading = 'UI/UX Design Services';
 export const aiHeroDescription
   = 'As a leading UI UX design services company, we provide clients with exceptional UI/UX design services supported by expert designers, analysts, project managers, and software engineers.';
 
-export const aiHeroButtonText = 'consult our experts';
+export const aiHeroButtonText = 'Consult our experts';
 
 export const aiHeroButtonLink = '/contact-us';
 

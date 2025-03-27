@@ -91,7 +91,7 @@ export const aiHeroHeading = 'Blockchain Development Services';
 export const aiHeroDescription
   = 'We specialize in end-to-end blockchain development, offering secure, scalable and industry-specific solutions to bring your decentralized solutions to reality';
 
-export const aiHeroButtonText = 'consult our experts';
+export const aiHeroButtonText = 'Consult our experts';
 
 export const aiHeroButtonLink = '/contact-us';
 
