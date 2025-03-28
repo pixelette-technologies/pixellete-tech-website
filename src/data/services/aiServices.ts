@@ -63,6 +63,7 @@ export const commitmentData = [
   },
   {
     img: '/images/aiServices/Lytics.svg',
+    link: '/case-studies/lytics',
     value1: '200%',
     value2: '70%',
     value3: '3X',
@@ -84,7 +85,7 @@ export const aiHeroHeading = 'AI Development Services';
 export const aiHeroDescription
   = 'From concept to deployment, we deliver adaptive, scalable AI solutions that bring your vision of intelligent technology to life.';
 
-export const aiHeroButtonText = 'consult our experts';
+export const aiHeroButtonText = 'Consult our experts';
 
 export const aiHeroButtonLink = '/contact-us';
 

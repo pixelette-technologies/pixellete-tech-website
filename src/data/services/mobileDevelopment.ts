@@ -96,7 +96,7 @@ export const mobileDevelopmentHeroHeading = 'Mobile App Development Services';
 export const mobileDevelopmentHeroDescription
   = 'Our mobile application development combines innovative, user-centric design with scalable solutions to bring your mobile strategy to life.';
 
-export const mobileDevelopmentHeroButtonText = 'consult our experts';
+export const mobileDevelopmentHeroButtonText = 'Consult our experts';
 
 export const mobileDevelopmentHeroButtonLink = '/contact-us';
 

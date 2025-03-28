@@ -1,4 +1,5 @@
 import Script from 'next/script';
+import { useRouter } from 'next/router';
 
 type BreadcrumbProps = {
   siteUrl: string;

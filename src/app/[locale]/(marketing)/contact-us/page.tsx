@@ -6,6 +6,33 @@ type IAboutProps = {
   params: Promise<{ slug: string; locale: string }>;
 };
 
+const clutchLogos = [
+  {
+    src: "/images/Clutch/clutch-badges/blockchain/final/blockchain-company-uk.png",
+    alt: "Blockchain Company UK"
+  },
+  {
+    src: "/images/Clutch/clutch-badges/ai/final/top-ai-company-uk.png",
+    alt: "Top AI Company UK"
+  },
+  {
+    src: "/images/Clutch/clutch-badges/software/most-reviewed-web-dev-clutch.png",
+    alt: "Most Reviewed Web Development Company"
+  },
+  {
+    src: "/images/Clutch/clutch-badges/blockchain/final/top-blockchain-clutch.png",
+    alt: "Top Blockchain Company"
+  },
+  {
+    src: "/images/Clutch/clutch-badges/blockchain/final/top-tokenization.png",
+    alt: "Top Tokenization Company"
+  },
+  {
+    src: "/images/Clutch/clutch-badges/ai/top-generative-ai-company-clutch.png",
+    alt: "Top Generative AI Company"
+  }
+];
+
 export async function generateMetadata(props: IAboutProps) {
   const { locale } = await props.params;
   const t = await getTranslations({
@@ -44,6 +71,7 @@ export default async function About(props: IAboutProps) {
       <EvaluateBusiness
         heading="Ready to become a tech success story?"
         description="Don’t let technical hurdles stand in the way of building powerful tech solutions. Let us help you bring your vision to life with innovative, cost-effective and reliable services. Get in touch!"
+        clutchLogos={clutchLogos}
       />
       {/* <p>{t('about_paragraph')}</p>
 
