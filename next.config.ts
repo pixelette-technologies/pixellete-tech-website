@@ -403,11 +403,11 @@ export default withSentryConfig(
             destination: '/blog',
             permanent: true,
           },
-          {
-            source: '/blockchain-development-services',
-            destination: '/blockchain-development-services',
-            permanent: true,
-          },
+          // {
+          //   source: '/blockchain-development-services',
+          //   destination: '/blockchain-development-services',
+          //   permanent: true,
+          // },
           {
             source: '/vr-architectural-visualisation',
             destination: '/ar-vr-development-services',
