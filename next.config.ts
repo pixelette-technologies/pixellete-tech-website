@@ -28,8 +28,8 @@ export default withSentryConfig(
       images: {
         loader: 'default', // Default loader
         domains: ['images.ctfassets.net', 'ui-avatars.com'], // Add domains you're using images from
-        deviceSizes: [320, 420, 768, 1024, 1200], // Define appropriate device sizes
-        imageSizes: [16, 32, 48, 64, 128, 256, 512], // Image sizes for optimization
+        deviceSizes: [320, 420, 768, 1024, 1200, 640, 750, 1080, 1920], // Define appropriate device sizes
+        imageSizes: [16, 32, 48, 64, 96, 128, 256, 512], // Image sizes for optimization
       },
       async redirects() {
         return [
@@ -403,11 +403,11 @@ export default withSentryConfig(
             destination: '/blog',
             permanent: true,
           },
-          {
-            source: '/blockchain-development-services',
-            destination: '/blockchain-development-services',
-            permanent: true,
-          },
+          // {
+          //   source: '/blockchain-development-services',
+          //   destination: '/blockchain-development-services',
+          //   permanent: true,
+          // },
           {
             source: '/vr-architectural-visualisation',
             destination: '/ar-vr-development-services',

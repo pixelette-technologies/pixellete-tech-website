@@ -22,29 +22,29 @@ const EvaluateBusiness = dynamic(() => import('@/components/Sections/EvaluateBus
 
 const clutchLogos = [
   {
-    src: "/images/Clutch/clutch-badges/blockchain/final/blockchain-company-uk.png",
-    alt: "Blockchain Company UK"
+    src: '/images/Clutch/clutch-badges/blockchain/final/blockchain-company-uk.png',
+    alt: 'Blockchain Company UK',
   },
   {
-    src: "/images/Clutch/clutch-badges/ai/final/top-ai-company-uk.png",
-    alt: "Top AI Company UK"
+    src: '/images/Clutch/clutch-badges/ai/final/top-ai-company-uk.png',
+    alt: 'Top AI Company UK',
   },
   {
-    src: "/images/Clutch/clutch-badges/software/most-reviewed-web-dev-clutch.png",
-    alt: "Most Reviewed Web Development Company"
+    src: '/images/Clutch/clutch-badges/software/most-reviewed-web-dev-clutch.png',
+    alt: 'Most Reviewed Web Development Company',
   },
   {
-    src: "/images/Clutch/clutch-badges/blockchain/final/top-blockchain-clutch.png",
-    alt: "Top Blockchain Company"
+    src: '/images/Clutch/clutch-badges/blockchain/final/top-blockchain-clutch.png',
+    alt: 'Top Blockchain Company',
   },
   {
-    src: "/images/Clutch/clutch-badges/blockchain/final/top-tokenization.png",
-    alt: "Top Tokenization Company"
+    src: '/images/Clutch/clutch-badges/blockchain/final/top-tokenization.png',
+    alt: 'Top Tokenization Company',
   },
   {
-    src: "/images/Clutch/clutch-badges/ai/top-generative-ai-company-clutch.png",
-    alt: "Top Generative AI Company"
-  }
+    src: '/images/Clutch/clutch-badges/ai/top-generative-ai-company-clutch.png',
+    alt: 'Top Generative AI Company',
+  },
 ];
 
 export async function generateMetadata(props: IIndexProps) {
@@ -110,7 +110,6 @@ export default async function Index(props: IIndexProps) {
       />
       <CaseStudies heading="Our past work speaks volumes" />
       <Testimonial background="" />
-
       <EvaluateBusiness
         heading="Ready to become a tech success story?"
         description="Don't let technical hurdles stand in the way of building tech solutions that shake up the world as we know it. Let us help you bring your vision to life with innovative, cost-effective and reliable services. Get in touch!"

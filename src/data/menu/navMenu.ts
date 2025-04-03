@@ -40,7 +40,7 @@ export const navMenus: NavMenu[] = [
   },
   {
     id: 10,
-    name: 'How we work',
+    name: 'How We Work',
     subMenus: [
       {
         id: 11,
