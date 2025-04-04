@@ -59,7 +59,7 @@ export async function GET() {
       headers: {
         'Content-Type': 'application/xml',
       },
-    });
+      });
   } catch (error) {
     console.error('Error generating sitemap:', error);
     return new NextResponse('Error generating sitemap', { status: 500 });

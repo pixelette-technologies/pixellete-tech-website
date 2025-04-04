@@ -217,7 +217,7 @@
 
   .blog-main-content {
     flex: 1;
-    max-width: calc(100% - 500px); // Account for sidebar width + gap
+   // max-width: calc(100% - 500px); // Account for sidebar width + gap
   }
 
   .blog-sidebar {
@@ -704,4 +704,22 @@
 }
 .custom-col > div > p > a {
   color: #0073e6;
+}
+
+@media (max-width: 768px) {
+  .side-banner-container {
+    display: none; // Hide SideBanner on mobile
+  }
+
+  .blog_detail_inner {
+    flex-direction: column; // Stack content vertically on mobile
+  }
+
+  .blog-main-content {
+    width: 100%; // Ensure main content takes full width
+  }
+
+  .blog-sidebar {
+    display: none; // Optionally hide sidebar on mobile
+  }
 }

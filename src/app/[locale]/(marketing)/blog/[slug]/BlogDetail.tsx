@@ -69,7 +69,7 @@ export default function BlogDetail({ slug }: { slug: string }) {
           <Breadcrumb items={breadcrumbItems} />
         </div>
         <div id="blog-top" className="blog_detail_inner">
-          <div style={{ display: 'flex', justifyContent: 'space-between', gap: '1rem' }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', gap: '4rem' }}>
             <div className="blog-main-content">
               <BlogHeader
                 title={selectedData?.fields?.title}
@@ -84,7 +84,7 @@ export default function BlogDetail({ slug }: { slug: string }) {
                 preBlogBanner={preContent}
               />
             </div>
-            <div className="blog-sidebar">
+            <div className="blog-sidebar side-banner-container">
               <SideBanner
                 sideBannerAd={selectedData?.fields?.sideBannerAd}
                 resolvedAssets={resolvedAssets}

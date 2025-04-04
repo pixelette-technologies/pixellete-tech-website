@@ -52,7 +52,7 @@ export default async function RootLayout({ children, params }: { children: React
     <html lang={locale} data-theme="dark">
       <head>
         <link rel="canonical" href={process.env.NEXT_PUBLIC_SITE_URL || 'https://pixelettetech.com'} />
-        <GoogleTagManager gtmId="G-XMRWC19WZ4" />
+        <GoogleTagManager gtmId="GTM-KXC3K4RL" />
       </head>
       <body className={`${outfit.className}`} style={{ overflowX: 'auto', overflowY: 'auto' }}>
         <Suspense>
