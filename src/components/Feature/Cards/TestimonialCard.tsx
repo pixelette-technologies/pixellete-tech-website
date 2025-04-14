@@ -23,8 +23,8 @@ export const TestimonialCard: FC<TestimonialCardProps> = ({
 }) => {
   return (
     <div
-      className="testimonialCard"
-      style={{ height: '280px' }}
+      className="testimonialCard card-height"
+      // style={{ height: '280px' }}
       data-aos={animation}
       data-aos-duration={duration}
     >

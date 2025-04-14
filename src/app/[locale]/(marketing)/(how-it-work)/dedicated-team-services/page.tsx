@@ -34,6 +34,19 @@ export default async function DedicatedTeamServices(props: IDeliverProps) {
   //   namespace: 'About',
   // });
 
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    'mainEntity': deliverFaqs.map(faq => ({
+      '@type': 'Question',
+      'name': faq.question,
+      'acceptedAnswer': {
+        '@type': 'Answer',
+        'text': faq.answer,
+      },
+    })),
+  };
+
   const deliverHeroData = {
     backgroundImage: '/images/aiServices/heroSectionBackground.svg',
     heading: 'Precision-Driven Teams, Ready to Deploy',
@@ -75,6 +88,10 @@ export default async function DedicatedTeamServices(props: IDeliverProps) {
 
   return (
     <>
+    <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <HowItWorksHeroSection {...deliverHeroData} />
       <DeliverBenefits {...benefitData} />
       {/* <SelectPlan /> */}

@@ -183,6 +183,9 @@
 .cardSectionGrid > div > section > * {
   width: calc(33.333% - 2.4rem);
 }
+.card-height {
+  height: 300px;
+}
 /* .cardSectionGrid > div > section > :nth-child(7) {
   margin-left: auto;
   margin-right: auto;
@@ -202,7 +205,7 @@
   }
 }
 
-.yourPlanCardGrid{
+.yourPlanCardGrid {
   padding: 0 15rem;
   margin: 10rem 3rem;
 }
@@ -218,7 +221,6 @@
 }
 .yourPlanCardGrid > div > left > h1 {
   padding-bottom: 1.6rem;
-  
 }
 .yourPlanCardGrid > div > section {
   display: flex;
@@ -243,6 +245,9 @@
   }
 }
 @media only screen and (max-width: 37.5em) {
+  .card-height {
+    height: auto;
+  }
   .yourPlanCardGrid > div > section > * {
     width: 100%;
   }

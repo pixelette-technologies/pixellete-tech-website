@@ -129,9 +129,9 @@ export const Footer: React.FC = () => {
               ),
             )} */}
             {[
-              { href: 'about-us', text: 'About us' },
-              { href: 'case-studies', text: 'Case studies' },
-              { href: 'pixelette-research', text: 'Pixelette research' },
+              { href: 'about-us', text: 'About Us' },
+              { href: 'case-studies', text: 'Case Studies' },
+              { href: 'pixelette-research', text: 'Pixelette Research' },
               { href: 'startup-funding', text: 'Startups' },
               { href: 'blog', text: 'Blogs' },
               // { href: 'cancelation-refund-policy', text: 'Cancellation & Refund Policy' },
@@ -150,10 +150,10 @@ export const Footer: React.FC = () => {
               <strong>{' '}</strong>
             </p>
             {[
-              { href: 'contact-us', text: 'Contact us' },
-              { href: 'privacy-policy', text: 'Privacy policy' },
-              { href: 'terms-condition', text: 'Terms & conditions' },
-              { href: 'cancelation-refund-policy', text: 'Cancellation & refund policy' },
+              { href: 'contact-us', text: 'Contact Us' },
+              { href: 'privacy-policy', text: 'Privacy Policy' },
+              { href: 'terms-condition', text: 'Terms & Conditions' },
+              { href: 'cancelation-refund-policy', text: 'Cancellation & Refund Policy' },
             ].map((item, index) => (
               <p
                 key={index}

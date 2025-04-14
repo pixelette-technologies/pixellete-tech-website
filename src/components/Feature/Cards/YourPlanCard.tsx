@@ -23,7 +23,7 @@ const YourPlanCard: FC<YourPlanCardProps> = ({ data }) => {
     <>
       {data.map((el, index) => {
         const cardContent = (
-          <div style={{ height: '300px' }}>
+          <div className="card-height">
             <div style={{ display: 'flex' }}>
               <div
                 style={{

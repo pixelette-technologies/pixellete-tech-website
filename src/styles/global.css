@@ -417,7 +417,29 @@ p {
   }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 480px) {
+  /* common classes for mbile */
+  .sm-mb-1 {
+    margin-bottom: 1rem;
+  }
+ 
+  .sm-m-1rem {
+    margin-block: 1.5rem;
+  }
+  .sm-flex-wrap {
+    flex-wrap: wrap;
+  }
+  .sm-flex-row {
+    flex-direction: row;
+  }
+  .sm-flex-center {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+  }
+  .sm-text-center {
+    text-align: center;
+  }
   #sideMargin {
     padding: 1rem 2rem;
   }
@@ -446,63 +468,19 @@ p {
     -webkit-linear-gradient(217deg, rgba(7, 23, 41, 0.51), rgba(255, 0, 0, 0) 70.71%),
     -webkit-linear-gradient(113deg, rgba(7, 23, 42, 0.74), rgba(255, 0, 0, 0) 70.71%),
     -webkit-linear-gradient(127deg, rgba(189, 28, 28, 0.54), rgba(0, 255, 0, 0) 70.71%),
-    -webkit-linear-gradient(336deg, rgba(12, 12, 33, 0.5), rgba(0, 0, 255, 0) 70.71%);
+    -webkit-linear-gradient(336deg, rgba(12, 12, 33, 0.5), rgba(0, 0, 255, 0) 70.71%),
+    -webkit-linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.9) 80%, black 100%);
   background:
     -moz-linear-gradient(217deg, rgba(7, 23, 41, 0.51), rgba(255, 0, 0, 0) 70.71%),
     -moz-linear-gradient(113deg, rgba(7, 23, 42, 0.74), rgba(255, 0, 0, 0) 70.71%),
     -moz-linear-gradient(127deg, rgba(189, 28, 28, 0.54), rgba(0, 255, 0, 0) 70.71%),
-    -moz-linear-gradient(336deg, rgba(12, 12, 33, 0.5), rgba(0, 0, 255, 0) 70.71%);
+    -moz-linear-gradient(336deg, rgba(12, 12, 33, 0.5), rgba(0, 0, 255, 0) 70.71%),
+    -moz-linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.9) 80%, black 100%);
   background: linear-gradient(217deg, rgba(7, 23, 41, 0.51), rgba(255, 0, 0, 0) 70.71%),
     linear-gradient(113deg, rgba(7, 23, 42, 0.74), rgba(255, 0, 0, 0) 70.71%),
     linear-gradient(127deg, rgba(189, 28, 28, 0.54), rgba(0, 255, 0, 0) 70.71%),
-    linear-gradient(336deg, rgba(12, 12, 33, 0.5), rgba(0, 0, 255, 0) 70.71%);
-
-  /* This is a blur effect gradient which we will use later*/
-  /* background: linear-gradient(0deg, rgba(0, 0, 0, 0.02) 0%, rgba(0, 0, 0, 0.02) 100%),
-    linear-gradient(90deg, rgba(0, 0, 0, 0.02) 0%, rgba(0, 0, 0, 0.02) 100%),
-    linear-gradient(180deg, rgba(0, 0, 0, 0.02) 90%, rgba(0, 0, 0, 0.93) 100%),
-    linear-gradient(324.54deg, rgba(7, 23, 42, 0.74) 0%, rgba(0, 0, 255, 0) 70.71%),
-    linear-gradient(115.22deg, rgba(189, 28, 28, 0.54) 0%, rgba(0, 255, 0, 0) 70.71%),
-    linear-gradient(230.33deg, rgba(7, 23, 41, 0.93) 0%, rgba(255, 0, 0, 0) 70.71%); */
-
-  /* -webkit-filter: blur(150px); */
-  /* -moz-filter: blur(150px); */
-  /* filter: blur(150px); */
-  background-size: cover;
-  width: 100%;
-  height: 125vh;
-  margin-top: -10rem;
-  z-index: -1;
-  will-change: transform, opacity;
-}
-.main-content {
-  position: absolute;
-  background:
-    -webkit-linear-gradient(217deg, rgba(7, 23, 41, 0.51), rgba(255, 0, 0, 0) 70.71%),
-    -webkit-linear-gradient(113deg, rgba(7, 23, 42, 0.74), rgba(255, 0, 0, 0) 70.71%),
-    -webkit-linear-gradient(127deg, rgba(189, 28, 28, 0.54), rgba(0, 255, 0, 0) 70.71%),
-    -webkit-linear-gradient(336deg, rgba(12, 12, 33, 0.5), rgba(0, 0, 255, 0) 70.71%);
-  background:
-    -moz-linear-gradient(217deg, rgba(7, 23, 41, 0.51), rgba(255, 0, 0, 0) 70.71%),
-    -moz-linear-gradient(113deg, rgba(7, 23, 42, 0.74), rgba(255, 0, 0, 0) 70.71%),
-    -moz-linear-gradient(127deg, rgba(189, 28, 28, 0.54), rgba(0, 255, 0, 0) 70.71%),
-    -moz-linear-gradient(336deg, rgba(12, 12, 33, 0.5), rgba(0, 0, 255, 0) 70.71%);
-  background: linear-gradient(217deg, rgba(7, 23, 41, 0.51), rgba(255, 0, 0, 0) 70.71%),
-    linear-gradient(113deg, rgba(7, 23, 42, 0.74), rgba(255, 0, 0, 0) 70.71%),
-    linear-gradient(127deg, rgba(189, 28, 28, 0.54), rgba(0, 255, 0, 0) 70.71%),
-    linear-gradient(336deg, rgba(12, 12, 33, 0.5), rgba(0, 0, 255, 0) 70.71%);
-
-  /* This is a blur effect gradient which we will use later*/
-  /* background: linear-gradient(0deg, rgba(0, 0, 0, 0.02) 0%, rgba(0, 0, 0, 0.02) 100%),
-    linear-gradient(90deg, rgba(0, 0, 0, 0.02) 0%, rgba(0, 0, 0, 0.02) 100%),
-    linear-gradient(180deg, rgba(0, 0, 0, 0.02) 90%, rgba(0, 0, 0, 0.93) 100%),
-    linear-gradient(324.54deg, rgba(7, 23, 42, 0.74) 0%, rgba(0, 0, 255, 0) 70.71%),
-    linear-gradient(115.22deg, rgba(189, 28, 28, 0.54) 0%, rgba(0, 255, 0, 0) 70.71%),
-    linear-gradient(230.33deg, rgba(7, 23, 41, 0.93) 0%, rgba(255, 0, 0, 0) 70.71%); Original gradient 3 */
-
-  /* -webkit-filter: blur(150px); */
-  /* -moz-filter: blur(150px); */
-  /* filter: blur(150px); */
+    linear-gradient(336deg, rgba(12, 12, 33, 0.5), rgba(0, 0, 255, 0) 70.71%),
+    linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.9) 80%, black 100%);
   background-size: cover;
   width: 100%;
   height: 125vh;
@@ -532,9 +510,6 @@ p {
     linear-gradient(113deg, rgba(7, 23, 42, 0.74), rgba(255, 0, 0, 0) 70.71%),
     linear-gradient(127deg, rgba(189, 28, 28, 0.54), rgba(0, 255, 0, 0) 70.71%),
     linear-gradient(336deg, rgba(12, 12, 33, 0.5), rgba(0, 0, 255, 0) 70.71%);
-  /* -webkit-filter: blur(150px); */
-  /* -moz-filter: blur(30px); */
-  /* filter: blur(30px); */
   background-size: cover;
   background-position: center;
   z-index: -1; /* Ensure it's behind content */
@@ -624,3 +599,94 @@ p {
   background: linear-gradient(180deg, rgb(218, 25, 25) 50.7%, rgb(22, 2, 2) 68.73%, rgb(10, 15, 28) 88.31%);
   background-blend-mode: screen;
 } */
+
+@media (max-width: 480px) {
+  .main-content {
+    height: 100vh;
+  }
+}
+
+/* Exact match of original background */
+.main-content-alt {
+  position: absolute;
+  background: 
+    linear-gradient(217deg, rgba(7, 23, 41, 0.51), rgba(255, 0, 0, 0) 70.71%),
+    linear-gradient(113deg, rgba(7, 23, 42, 0.74), rgba(255, 0, 0, 0) 70.71%),
+    linear-gradient(127deg, rgba(189, 28, 28, 0.54), rgba(0, 255, 0, 0) 70.71%),
+    linear-gradient(336deg, rgba(12, 12, 33, 0.5), rgba(0, 0, 255, 0) 70.71%),
+    linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.9) 80%, black 100%);
+  width: 100%;
+  height: 125vh;
+  margin-top: -10rem;
+  z-index: -1;
+  will-change: transform, opacity;
+}
+
+/* Left red glow border - exact match */
+.main-content-alt::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 100px;
+  background: linear-gradient(180deg, rgba(218, 25, 25, 0.17) 50.7%, rgb(22, 2, 2) 68.73%, rgb(10, 15, 28) 88.31%);
+  background: rgb(208, 26, 37);
+  background: -moz-radial-gradient(circle, rgba(208, 26, 37, 1) 0%, rgba(0, 0, 0, 1) 100%);
+  background: -webkit-radial-gradient(circle, rgba(208, 26, 37, 1) 0%, rgba(0, 0, 0, 1) 100%);
+  background: radial-gradient(circle, rgba(208, 26, 38, 0.334) 0%, rgba(0, 0, 0, 1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#d01a25",endColorstr="#000000",GradientType=1);
+  border-left: 70px solid transparent;
+  height: 120vh;
+  width: 65px;
+  z-index: -1;
+  filter: blur(50px);
+  margin-left: -7rem;
+  pointer-events: none;
+  margin-top: -10rem;
+  will-change: transform, opacity;
+}
+
+/* Right blue glow border - exact match */
+.main-content-alt::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 100px;
+  background: linear-gradient(180deg, rgba(0, 26, 95, 0.27) 50.7%, rgb(22, 2, 2) 68.73%, rgb(10, 15, 28) 88.31%);
+  border-left: 70px solid transparent;
+  height: 120vh;
+  width: 65px;
+  z-index: -1;
+  filter: blur(50px);
+  margin-right: -7rem;
+  pointer-events: none;
+  margin-top: -10rem;
+  will-change: transform, opacity;
+}
+
+/* Dark overlay with exact gradient stops */
+.main-content-alt-overlay {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 50, 0.5) 50%, rgba(10, 10, 30, 0.7) 90%);
+  z-index: -2;
+  box-shadow: 0 0 150px rgba(0, 0, 0, 0.5);
+  filter: blur(30px);
+  pointer-events: none;
+}
+
+@media (max-width: 480px) {
+  .main-content-alt {
+    height: 100vh;
+  }
+  
+  .main-content-alt::before,
+  .main-content-alt::after {
+    height: 100vh;
+  }
+}

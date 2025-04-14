@@ -15,21 +15,21 @@ type EvaluateBusinessProps = {
   clutchLogos?: ClutchLogo[];
 };
 
-export const EvaluateBusiness: React.FC<EvaluateBusinessProps> = ({ 
-  heading, 
+export const EvaluateBusiness: React.FC<EvaluateBusinessProps> = ({
+  heading,
   description,
-  clutchLogos 
+  clutchLogos,
 }) => {
   return (
     <Container className="main margins">
       <div className="evaluateBussiness" id="sideMargin">
         <div className="leftSection">
-          <header>
-            <h2>{heading}</h2>
-            <p>{description}</p>
+          <header className="mobileSpace">
+            <h2 className="sm-text-center">{heading}</h2>
+            <p className="sm-text-center">{description}</p>
           </header>
           {clutchLogos && clutchLogos.length > 0 && (
-            <div className="clutchLogos">
+            <div className="clutchLogos sm-flex-center sm-flex-wrap">
               {clutchLogos.map((logo, index) => (
                 <Image
                   key={index}

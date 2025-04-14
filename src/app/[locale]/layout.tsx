@@ -26,6 +26,8 @@ const outfit = Outfit({
   weight: ['100', '300', '400', '600', '900'],
   subsets: ['latin'],
   variable: '--font-outfit',
+  display: 'swap',
+  preload: true,
 });
 
 async function MessagesProvider({ locale, children }: { locale: string; children: React.ReactNode }) {
@@ -51,11 +53,18 @@ export default async function RootLayout({ children, params }: { children: React
   return (
     <html lang={locale} data-theme="dark">
       <head>
-        <link rel="canonical" href={process.env.NEXT_PUBLIC_SITE_URL || 'https://pixelettetech.com'} />
-        <GoogleTagManager gtmId="G-XMRWC19WZ4" />
+        <GoogleTagManager gtmId="GTM-KXC3K4RL" />
       </head>
       <body className={`${outfit.className}`} style={{ overflowX: 'auto', overflowY: 'auto' }}>
-        <Suspense>
+        <Suspense fallback={
+          <div className="flex items-center justify-center min-h-screen">
+            <img
+              src="/images/logo/shortLogo.svg"
+              alt="Loading..."
+              className="w-16 h-16 animate-pulse"
+            />
+          </div>
+        }>
           <MessagesProvider locale={locale}>{children}</MessagesProvider>
         </Suspense>
       </body>

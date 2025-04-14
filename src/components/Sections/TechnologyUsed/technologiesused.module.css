@@ -167,6 +167,9 @@
 }
 
 @media (max-width: 480px) {
+  .contentSection {
+    /* min-height: 284px !important; */
+  }
   .iconsContainer {
     grid-template-columns: repeat(6, 1fr);
     gap: 1rem;
@@ -182,6 +185,12 @@
   .iconImg {
     width: 45px;
     height: auto;
+  }
+  .mobilePadding {
+    padding-inline: 24px;
+  }
+  .technologiesMain {
+    padding-inline: 40px;
   }
 }
 

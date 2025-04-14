@@ -52,9 +52,60 @@ export async function generateMetadata(props: IBlockchainDevelopmentProps) {
     title: t('meta_title'),
     description: t('meta_description'),
     keywords: t('meta_keywords'),
+    alternates: {
+      canonical: `/blockchain-development-services`
+    }
   };
 }
 
+const clutchLogos = [
+  {
+    src: '/images/Clutch/clutch-badges/blockchain/most-reviewed-blockchain-company.png',
+    alt: 'Most reviewed Blockchain Company UK',
+  },
+  {
+    src: '/images/Clutch/clutch-badges/blockchain/top-company-blockchain-company.png',
+    alt: 'Top Blockchain Company UK',
+  },
+  {
+    src: '/images/Clutch/clutch-badges/blockchain/top-company-web3-development.png',
+    alt: 'Top web3 development Company',
+  },
+  {
+    src: '/images/Clutch/clutch-badges/blockchain/top-decentralized-finance-company.png',
+    alt: 'Top defi Company',
+  },
+  {
+    src: '/images/Clutch/clutch-badges/blockchain/top-smart-contract-development-company.png',
+    alt: 'Top smart contract development Company',
+  },
+  {
+    src: '/images/Clutch/clutch-badges/blockchain/top-tokenization-company.png',
+    alt: 'Top tokenization Company',
+  },
+];
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  'itemListElement': [
+    {
+      '@type': 'ListItem',
+      'position': 1,
+      'name': 'Home',
+      'item': `/`
+    },
+    {
+      '@type': 'ListItem',
+      'position': 2,
+      'name': 'Blockchain Development Services',
+      'item': `/blockchain-development-services`
+    }
+  ]
+};
+// <script
+//       type="application/ld+json"
+//       dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+//     />
 export default async function BlockchainDevelopment(props: IBlockchainDevelopmentProps) {
   const { locale } = await props.params;
   setRequestLocale(locale);
@@ -62,9 +113,28 @@ export default async function BlockchainDevelopment(props: IBlockchainDevelopmen
   //   locale,
   //   namespace: 'About',
   // });
-
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    'mainEntity': blockFaqs.map(faq => ({
+      '@type': 'Question',
+      'name': faq.question,
+      'acceptedAnswer': {
+        '@type': 'Answer',
+        'text': faq.answer,
+      },
+    })),
+  };
   return (
     <>
+    <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+    />
       <HeroSection
         heading={aiHeroHeading}
         description={aiHeroDescription}
@@ -109,6 +179,7 @@ export default async function BlockchainDevelopment(props: IBlockchainDevelopmen
       <EvaluateBusiness
         heading="We’re not waiting for the future; we’re actively building with businesses"
         description="Start your transformation today and promote your development goals with a top-tier global team that pushes the boundaries of innovation every single day."
+        clutchLogos={clutchLogos}
       />
     </>
   );

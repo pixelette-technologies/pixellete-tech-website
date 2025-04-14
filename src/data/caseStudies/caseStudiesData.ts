@@ -543,6 +543,173 @@ const caseStudiesData = [
       { title: 'Blockchain integration', description: 'Then we implemented smart contracts to automate legal agreements and integrated a decentralized audit trail to strengthen compliance.' },
     ],
   },
+  {
+    slug: 'life-optimizer-ai',
+    title: 'How LifeOptimizer AI Transformed Personalized Wellness with Artificial Intelligence',
+    description: 'LifeOptimizer AI, an AI-powered wellness platform, set out to make health and fitness more tailored and effective. Traditional wellness programs lacked personalization, making it difficult for individuals to stay motivated and achieve lasting results. To address this, LifeOptimizer AI partnered with Pixelette Technologies to develop an intelligent system that delivers real-time insights, behavioral tracking and AI-driven wellness recommendations.',
+    businessType: 'AI-Powered Wellness Platform',
+    industry: 'HealthTech',
+    blocker: 'Maintaining a balanced and healthy lifestyle was difficult without personalized guidance. Generic fitness and wellness programs failed to adapt to individual needs which makes motivation and progress tracking a challenge. Users needed a smarter solution that could offer customized support, real-time insights and sustainable wellness strategies. To take this idea from idea to execution, Pixelette Technologies stepped in to help LifeOptimizer AI with the strategy, design, development and deployment of their AI wellness platform.',
+    goal: 'LifeOptimizer AI set out to bridge the gap between artificial intelligence and personal well-being. The goal was to create an intelligent system that delivers tailored diet plans, fitness routines and stress management techniques based on real-time data and behavioral analysis.',
+    solution: 'Pixelette Technologies developed an AI-powered wellness platform that adapts to users’ health goals and daily routines. By integrating machine learning, health data analytics and real-time feedback, the platform provides customized fitness, nutrition and mental well-being solutions. AI-driven coaching helps users stay on track while making sustainable lifestyle changes.',
+    logo: '/images/casestudies/life-optimizer/life-optimizer-logo.png',
+    bannerImage: '/images/casestudies/life-optimizer/life-optimizer-ai-casestudy-image.png',
+    techStack: [
+      { name: 'python', icon: '/images/tech/logos/python.png' },
+      { name: 'TensorFlow', icon: '/images/tech/logos/tensorflow.png' },
+      { name: 'Pytorch', icon: '/images/tech/logos/pytorch.png' },
+      { name: 'aws', icon: '/images/tech/logos/aws.png' },
+      { name: 'postgresql', icon: '/images/tech/logos/postgresql.png' },
+      { name: 'reactjs', icon: '/images/tech/logos/reactjs.png' },
+    ],
+    impactStats: {
+      description: 'LifeOptimizer AI changed how people approach wellness by offering personalized fitness, nutrition and mental health support. By using AI-driven insights, the platform helped users build lasting habits and improve their overall well-being.',
+      percentage: '60%',
+      details: 'The idea of Non-Fungible Tokens...',
+    },
+    impactBoxes: [
+      { title: 'Higher user engagement', description: 'Users reported a 75% increase in engagement, driven by interactive tracking and personalized recommendations that kept them motivated.' },
+      { title: 'Sustainable lifestyle improvements', description: '60% of users maintained their wellness routines for over six months, showing the impact of tailored habit-building strategies.' },
+      { title: 'User adoption & trust', description: 'Achieved a 92% satisfaction rate among legal professionals who reported increased confidence and efficiency in managing transactions.' },
+      { title: 'Improved mental well-being', description: 'Stress management features helped reduce anxiety levels by 40%, giving users better control over their daily stressors.' },
+    ],
+    process: 'A structured, multi-phase approach guided the successful launch and adoption of LifeOptimizer AI.',
+    milestones: [
+      // 2
+      { title: 'Design and development', description: 'Built an adaptive AI model that evaluates user inputs, lifestyle habits and fitness goals to generate tailored wellness plans. Designed a recommendation system that adjusts based on progress to make sure users stay on track.' },
+      // 4
+      { title: 'Testing and deployment', description: 'Ran extensive usability and performance tests to confirm accuracy and effectiveness before launch. Conducted live trials with users to refine the platform and improve AI-driven recommendations.' },
+      // 1
+      { title: 'Research and strategy', description: 'Reviewed the challenges of traditional wellness programs and explored how AI could provide personalized support. Conducted in-depth user research to identify key factors affecting motivation and long-term health improvements.' },
+      // 3
+      { title: 'AI integration', description: 'Incorporated machine learning to provide real-time insights, track behaviors and offer personalized health suggestions. Connected with biometric and lifestyle data sources to create a more complete wellness experience.' },
+    ],
+  },
+  {
+    slug: 'ragnar-token',
+    title: 'How Ragnar Token Connects Traditional Banking and Crypto',
+    description: 'Ragnar Token ($RAG) is a blockchain-powered digital asset designed to connect traditional banking services with cryptocurrency transactions. Developed for Ragnar Trading Limited, the platform simplifies financial interactions by enabling easy token swapping, secure transactions and a user-friendly experience. Pixelette Technologies built both the native token and website, creating the foundation of their business and making digital asset adoption straightforward.',
+    businessType: 'Blockchain-Based Digital Asset',
+    industry: 'Blockchain/Cryptocurrency',
+    blocker: 'Ragnar Trading Limited needed an entire ecosystem from scratch which included a token transaction system that worked efficiently and an intuitive website to make adoption easy. The challenge was to create a solution that combined the familiarity of traditional banking with the flexibility of cryptocurrency.',
+    goal: 'The objective was to create a fully functional blockchain-powered financial system. This included developing Ragnar Token ($RAG) as a secure, scalable digital asset and designing a website that made buying, swapping, and managing tokens simple. The platform had to be accessible to both crypto-savvy users and those new to digital assets to deliver ease of use without sacrificing functionality.',
+    solution: 'Pixelette Technologies developed Ragnar Token ($RAG), an ERC-20 token designed for transactions and capital raising. Alongside this, we built a user-friendly website that allowed users to easily interact with the token and navigate the platform without complications.',
+    logo: '/images/casestudies/ragnar-token/ragnar-token-logo.png',
+    bannerImage: '/images/casestudies/ragnar-token/ragnar-token-ai-casestudy-image.png',
+    techStack: [
+      { name: 'python', icon: '/images/tech/logos/python.png' },
+      { name: 'TensorFlow', icon: '/images/tech/logos/tensorflow.png' },
+      { name: 'Pytorch', icon: '/images/tech/logos/pytorch.png' },
+      { name: 'aws', icon: '/images/tech/logos/aws.png' },
+      { name: 'postgresql', icon: '/images/tech/logos/postgresql.png' },
+      { name: 'reactjs', icon: '/images/tech/logos/reactjs.png' },
+    ],
+    impactStats: {
+      description: 'By creating both the Ragnar Token and its supporting platform, we provided Ragnar Trading Limited with a complete digital asset system that made transactions smoother and increased adoption.',
+      percentage: '60%',
+      details: 'The idea of Non-Fungible Tokens...',
+    },
+    impactBoxes: [
+      { title: 'Conversion rate', description: '12% of visitors became token holders, showing strong initial adoption.' },
+      { title: 'Transaction speed', description: 'Users could buy and swap Ragnar Token in under 1 minute, keeping transactions quick and efficient.' },
+      { title: 'User engagement', description: 'Features such as real-time price tracking and transaction history encouraged use and deeper engagement.' },
+    ],
+    process: 'A structured, multi-phase approach guided the successful launch and adoption of Ragnar Token.',
+    milestones: [
+      // 2
+      { title: 'Token development', description: 'Our blockchain team developed Ragnar Token ($RAG) on the Ethereum blockchain, ensuring security, compliance, and compatibility with crypto infrastructure. The token was designed to support fast and cost-effective transactions while maintaining a high level of security against fraud and unauthorized access.' },
+      // 4
+      { title: 'Deployment and optimization', description: 'After extensive security and usability testing, the token and website were launched, designed for fast transactions and an intuitive experience. Continuous monitoring and iterative improvements were implemented to refine functionality and enhance the overall user journey.' },
+      // 1
+      { title: 'Discovery and research', description: 'We worked with Ragnar Trading Limited to define their vision, researching industry challenges and identifying key features needed for adoption and usability. By analyzing competitor platforms and user behavior, we determined the most effective way to bridge traditional finance with blockchain technology.' },
+      // 3
+      { title: 'Website design and development', description: 'We built a responsive platform using React.js and Web3 technologies, allowing users to buy, swap, and manage tokens with ease. The interface was designed for clarity, reducing friction in the onboarding process and enabling smooth transactions even for users unfamiliar with blockchain.' },
+    ],
+  },
+  {
+    slug: 'chain-legal',
+    title: 'How ChainLegal Brought Blockchain to Legal Docs',
+    description: 'ChainLegal is a blockchain-powered legal document management platform whose founders set out to change how law firms and legal departments handle documentation. Traditional systems were and are slow, difficult to manage and prone to errors. To solve these issues, ChainLegal partnered with Pixelette Technologies to develop a decentralized, automated system that strengthens security, improves accessibility and keeps records accurate.',
+    businessType: 'Decentralized Legal Management',
+    industry: 'LegalTech/Blockchain',
+    blocker: 'Legal firms and departments deal with slow, inefficient document management due to outdated manual processes. These systems make it difficult to track changes, introduce security risks and increase the chance of compliance failures. Without an automated solution, keeping documents accurate, accessible and protected remains a major concern. To take this idea from idea to execution, Pixelette Technologies stepped in to help ChainLegal with the strategy, design, development and deployment of the blockchain-backed legal document management solution.',
+    goal: 'ChainLegal wanted to improve legal document management by using blockchain technology. The goal was to build a secure, decentralized and automated system that simplifies document handling while maintaining accuracy and compliance.',
+    solution: 'Pixelette Technologies developed a blockchain-integrated document management system for ChainLegal. Smart contracts and decentralized storage provided a structured approach to document security, user access and tracking. This approach helped legal teams manage files with greater accuracy and control.',
+    logo: '/images/casestudies/ragnar-token/ragnar-token-logo.png',
+    bannerImage: '/images/casestudies/ragnar-token/ragnar-token-ai-casestudy-image.png',
+    techStack: [
+      { name: 'solidity', icon: '/images/tech/logos/solidity.png' },
+      { name: 'Hyperledger Fabric', icon: '/images/tech/logos/hyperledger-fabric.png' },
+      { name: 'IPFS', icon: '/images/tech/logos/ipfs.png' },
+      { name: 'web3', icon: '/images/tech/logos/web3js.png' },
+      { name: 'mysql', icon: '/images/tech/logos/mysql.png' },
+      { name: 'aws', icon: '/images/tech/logos/aws.png' },
+    ],
+    impactStats: {
+      description: 'ChainLegal is making legal document management faster, more reliable and easier to track. By using blockchain, the platform reduces administrative burdens while improving compliance and security.',
+      percentage: '60%',
+      details: 'The idea of Non-Fungible Tokens...',
+    },
+    impactBoxes: [
+      { title: 'Fast document handling', description: '40% reduction in processing time, helping legal teams complete tasks with fewer delays.' },
+      { title: 'Stronger security', description: 'Blockchain-based records prevent unauthorized modifications and keep documents accurate.' },
+      { title: 'Low operational costs', description: '30% cost savings for law firms by replacing paperwork with automated digital processes.' },
+      { title: 'High user satisfaction', description: '90% of legal professionals reported better efficiency and trust in document management.' },
+    ],
+    process: 'A structured, multi-phase approach guided the successful launch and adoption of ChainLegal.',
+    milestones: [
+      // 2
+      { title: 'Design and development', description: 'Our team built a decentralized system using Solidity and Hyperledger Fabric which allow legal teams to store, verify and manage documents efficiently. The platform was structured to support automated approvals, version control and encrypted access for authorized users.' },
+      // 4
+      { title: 'Testing and deployment', description: 'The system went through security reviews and compliance testing before launch to confirm reliability and performance. We conducted real-world simulations with legal professionals to validate accuracy, usability and long-term scalability.' },
+      // 1
+      { title: 'Discovery and research', description: 'We assessed the limitations of existing document management systems and identified the key requirements for a blockchain-powered solution. This involved studying compliance challenges, security risks, and user needs to create a system that improves legal workflows.' },
+      // 3
+      { title: 'Blockchain integration', description: 'We applied cryptographic security measures to prevent unauthorized changes and restricted access to approved users. By incorporating smart contracts, the system made sure of document authenticity and automated critical legal processes.' },
+    ],
+  },
+  {
+    slug: 'smart-contractor',
+    title: 'How SmartContractor Changed Contract Management Forever',
+    description: 'SmartContractor set out to solve inefficiencies in contract execution, where delays, human error and compliance risks slowed down business operations. Traditional contract processes required extensive manual oversight, increasing costs and legal uncertainty. To address these issues, SmartContractor partnered with Pixelette Technologies to develop an automated, tamper-proof contract management system powered by blockchain.',
+    businessType: 'Smart Contract Automation',
+    industry: 'LegalTech',
+    blocker: 'Businesses struggle with outdated contract management systems that rely on manual processes, leading to delays, errors, and security vulnerabilities. The absence of automation meant contracts required continuous oversight, increasing compliance risks and operational inefficiencies. Pixelette Technologies stepped in to help SmartContractor with the strategy, design, development and deployment of their blockchain-powered contract management solution.',
+    goal: 'SmartContractor aimed to eliminate inefficiencies by introducing a blockchain-based contract management platform. The objective was to develop an automated, secure system that streamlined contract execution, improved transparency and reduced legal risks. By removing reliance on manual processes, SmartContractor sought to increase accuracy, speed and compliance in contract lifecycle management.',
+    solution: 'Pixelette Technologies built a blockchain-integrated smart contract management system that automates contract execution while providing real-time tracking and tamper-proof security. The platform enables businesses to create, execute and monitor contracts with complete transparency, reducing manual oversight and improving enforcement reliability. Decentralized storage and cryptographic security protect contract data, making every agreement verifiable and tamper-resistant.',
+    logo: '/images/casestudies/law-ledger/law-ledger-logo.png',
+    bannerImage: '/images/casestudies/law-ledger/law-ledger-ai-casestudy-image.png',
+    techStack: [
+      { name: 'python', icon: '/images/tech/logos/solidity.png' },
+      { name: 'TensorFlow', icon: '/images/tech/logos/hyperledger-fabric.png' },
+      { name: 'Pytorch', icon: '/images/tech/logos/web3js.png' },
+      { name: 'aws', icon: '/images/tech/logos/ipfs.png' },
+      { name: 'postgresql', icon: '/images/tech/logos/postgresql.png' },
+      { name: 'reactjs', icon: '/images/tech/logos/aws.png' },
+    ],
+    impactStats: {
+      description: 'The launch of SmartContractor’s blockchain-powered platform introduced a more efficient and secure approach to contract management, significantly improving execution speed and reliability.',
+      percentage: '60%',
+      details: 'The idea of Non-Fungible Tokens...',
+    },
+    impactBoxes: [
+      { title: 'Contract automation efficiency', description: 'Reduced contract execution time by 60%, allowing businesses to finalize agreements with minimal delays and manual intervention.' },
+      { title: 'Error reduction', description: 'Eliminated 95% of manual processing errors by implementing automated validation making sure contracts are executed accurately.' },
+      { title: 'Operational cost savings', description: 'Lowered contract management expenses by 40% by reducing reliance on intermediaries and manual oversight.' },
+      { title: 'User adoption & compliance', description: 'Achieved a 94% adoption rate among legal professionals and businesses, with automated audit trails supporting regulatory compliance.' },
+    ],
+    process: 'To develop a secure and automated contract management system, we followed a structured approach that combined research, development and extensive testing.',
+    milestones: [
+      // 2
+      { title: 'Design and development', description: 'Our team designed a structured smart contract framework using Solidity and Hyperledger, allowing contracts to self-execute based on predefined conditions. This eliminated the need for third-party enforcement while making sure contracts remained legally enforceable and tamper-resistant.' },
+      // 4
+      { title: 'Testing and deployment', description: 'Extensive testing was conducted to verify automation accuracy, security protocols, and compliance with legal standards. After successful trials, the platform was deployed with ongoing optimization, ensuring businesses could execute contracts faster while maintaining full transparency.' },
+      // 1
+      { title: 'Discovery and research', description: 'We conducted an in-depth analysis of traditional contract execution, identifying inefficiencies in validation, enforcement, and security. By studying industry-specific compliance requirements, we ensured the solution would meet legal standards while eliminating manual bottlenecks.' },
+      // 3
+      { title: 'Blockchain integration', description: 'We integrated decentralized storage with cryptographic signatures to protect contract integrity. This made every contract remained immutable, verifiable, and accessible only to authorized parties, reducing risks associated with unauthorized modifications or disputes.' },
+    ],
+  },
   // Add more case studies here
 ];
 

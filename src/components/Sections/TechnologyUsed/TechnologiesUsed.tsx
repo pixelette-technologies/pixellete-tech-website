@@ -40,8 +40,7 @@ const TechnologiesUsed: React.FC<TechnologiesUsedProps> = ({ technologies, title
       </div>
       <div className={styles.technologiesMain} id="sideMargin">
         <Container className="main margins">
-
-          <center>
+          <center className={styles.mobilePadding}>
             <h2 id="h_ani">{title}</h2>
             <p>{subtitle}</p>
           </center>

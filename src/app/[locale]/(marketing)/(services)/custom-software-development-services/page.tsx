@@ -45,6 +45,9 @@ export async function generateMetadata(props: ICustomSoftwareDevelopmentProps) {
     title: t('meta_title'),
     description: t('meta_description'),
     keywords: t('meta_keywords'),
+    alternates: {
+      canonical: `/custom-software-development-services`
+    }
   };
 }
 
@@ -56,8 +59,50 @@ export default async function CustomSoftwareDevelopment(props: ICustomSoftwareDe
   //   namespace: 'About',
   // });
 
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    'mainEntity': softwareFaqs.map(faq => ({
+      '@type': 'Question',
+      'name': faq.question,
+      'acceptedAnswer': {
+        '@type': 'Answer',
+        'text': faq.answer,
+      },
+    })),
+  };
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    'itemListElement': [
+      {
+        '@type': 'ListItem',
+        'position': 1,
+        'name': 'Home',
+        'item': `/`
+      },
+      {
+        '@type': 'ListItem',
+        'position': 2,
+        'name': 'Custom Software Development Services',
+        'item': `/custom-software-development-services`
+      }
+    ]
+  };
+  // <script
+  //       type="application/ld+json"
+  //       dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+  //     />
   return (
     <>
+    <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <HeroSection
         heading={customDevelopmentHeroHeading}
         description={customDevelopmentHeroDescription}

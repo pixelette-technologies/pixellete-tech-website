@@ -143,7 +143,7 @@ const AboutUsSection: React.FC = () => {
           <section // data-aos="fade-up" data-aos-duration="1000"
           >
             <div>
-              <h2>
+              <h2 className="sm-text-center">
                 Our passion lies in building
                 {' '}
                 <br />
@@ -151,7 +151,7 @@ const AboutUsSection: React.FC = () => {
                 tech solutions that drive real
                 change across industries
               </h2>
-              <p>
+              <p className="sm-text-center">
                 From our beginnings in 2018, Pixelette Technologies has rapidly become a world-leading development
                 services company, specializing in AI, blockchain, web, mobile technologies, and more.
               </p>

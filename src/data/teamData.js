@@ -15,22 +15,25 @@ export const teamData = [
     image: '/images/people/Temur_Khan.jpg',
     name: 'Temur Khan',
     role: 'Chief Technology Officer',
-    linedin: 'https://www.linkedin.com/in/temurkhan/',
+    linkedin: 'https://www.linkedin.com/in/temurkhan/',
   },
   {
     image: '/images/people/barry.jpg',
     name: 'Barry Perkins',
     role: 'Managing Director - USA',
+    linkedin: 'https://www.linkedin.com/in/barrynperkins/',
   },
   {
     image: '/images/people/Eric_R_Smithers.jpg',
     name: 'Eric R. Smithers',
     role: 'MD (USA)',
+    linkedin: 'https://www.linkedin.com/in/eric-r-smithers-2677565/',
   },
   {
     image: '/images/people/Emmanuel_Ruiz_Jobim.jpg',
-    name: 'Emmanuel Ruiz-Gimenez Jobim',
+    name: 'Emmanuel Ruiz',
     role: 'Head of Partnerships',
+    linkedin: 'https://www.linkedin.com/in/emmanuel-ruiz-gimenez-jobim/',
   },
   {
     image: '/images/people/kelvin-kong.jpg',
@@ -44,13 +47,15 @@ export const teamData = [
   },
   {
     image: '/images/people/M_Adnan.jpg',
-    name: 'Muhamad Adnan',
+    name: 'Muhammad Adnan',
     role: 'Solution Architect - Blockchain',
+    linkedin: 'https://www.linkedin.com/in/muhammad-adnan-54348313a/',
   },
   {
     image: '/images/people/Sehr.jpg',
     name: 'Sehr Navid',
     role: 'Head of Operations',
+    linkedin: 'https://www.linkedin.com/in/sehr-navid-285931236/',
   },
   // {
   //   image: '/images/people/Gulafsha.jpg',

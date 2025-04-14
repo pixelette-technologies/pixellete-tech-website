@@ -56,6 +56,11 @@
   }
 }
 
+@media (max-width: 480px) {
+  .mobileSpace {
+    padding-inline: 19px;
+  }
+}
 .evaluateBussiness > header {
   max-width: 61.6rem;
 }
