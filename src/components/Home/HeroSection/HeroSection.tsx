@@ -38,9 +38,11 @@ export const HeroSection: React.FC<HeroSectionProps> = () => {
             Shaping the future with every line of code
           </h1>
           <p>
-            At Pixelette Technologies, we are committed to crafting
+          At Pixelette Technologies, we build transformative tech for tomorrow’s world, because the future belongs to those who dare to <b>LIVE THE <span className="text-red-600 relative inline-block">
+          WHAT-IF</span></b>.
+            {/* At Pixelette Technologies, we are committed to crafting
             transformative technology that answers the problems to tomorrow’s
-            world.
+            world. */}
           </p>
 
           <div>
