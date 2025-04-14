@@ -7,7 +7,7 @@ import './ourservicessection.css';
 const OurServicesSection: React.FC = () => {
   return (
     <div className="technologyStack" id="sideMargin">
-      <center>
+      <center className="mobilePadding">
         <h2>
           We bring full-stack development services to the table
         </h2>

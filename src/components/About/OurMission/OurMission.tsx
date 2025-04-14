@@ -22,7 +22,7 @@ const OurMission: React.FC = () => {
               src="/images/about/OurMissionImage1.png"
               alt="Our mission"
             />
-            <div className="content">
+            <div className="content sm-m-1rem">
               <h2>Our mission</h2>
               <p>
                 We’re here to revolutionize how businesses use technology,
@@ -39,7 +39,7 @@ const OurMission: React.FC = () => {
               src="/images/about/OurMissionImage2.png"
               alt="Our vision"
             />
-            <div className="content">
+            <div className="content sm-m-1rem">
               <h2>Our vision</h2>
               <p>
                 Our vision is simple: to inspire a world where businesses are
@@ -57,7 +57,7 @@ const OurMission: React.FC = () => {
               src="/images/about/OurMissionImage3.png"
               alt="Our core values"
             />
-            <div className="content">
+            <div className="content sm-m-1rem">
               <h2>Our core values</h2>
               <div className="values">
                 <h3>Building what’s next</h3>

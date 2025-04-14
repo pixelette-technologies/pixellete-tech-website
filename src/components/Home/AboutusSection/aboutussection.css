@@ -140,6 +140,17 @@
 }
 
 @media (max-width: 480px) {
+  .aboutUsSection {
+    margin-bottom: 6rem;
+    padding: 5rem 0;
+  }
+  .aboutUsSection > div > section {
+    padding-inline: 40px !important;
+  }
+  .aboutUsSection > div > section > *:last-child {
+    display: flex;
+    flex-direction: column;
+  }
   .aboutUsSection > div > section > *:last-child > section > h1,
   .aboutUsSection > div > section > *:last-child > div > h1 {
     font-size: 3.5rem; /* Further adjust font size for smaller screens */

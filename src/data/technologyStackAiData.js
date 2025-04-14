@@ -25,12 +25,12 @@ export const technologyStackAiData = [
     link: '/mobile-app-development-services',
   },
   {
-    icon: '/images/home/services/s_8.svg',
+    icon: '/images/home/services/arvr.svg',
     title: 'AR/VR Services',
     link: '/ar-vr-development-services',
   },
   {
-    icon: '/images/home/services/s_6.svg',
+    icon: '/images/home/services/uiux.svg',
     title: 'UI/UX Design',
     link: '/ui-ux-design-services',
   },

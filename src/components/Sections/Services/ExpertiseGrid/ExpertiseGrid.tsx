@@ -33,7 +33,9 @@ const ExpertiseGrid: React.FC<ExpertiseGridProps> = ({
       <Container className={styles.main}>
         <div className={styles.expertiseGrid}>
           <header>
-            <h2>{header.title}</h2>
+            <h2>
+              {header.title}
+            </h2>
             <p>{header.description}</p>
           </header>
 

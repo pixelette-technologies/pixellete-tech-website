@@ -1,10 +1,6 @@
-'use client';
-import type { Entry } from 'contentful';
+import { fetchBlogBySlug } from '@/libs/fetchBlogBySlug';
 import Breadcrumb from '@/components/Feature/Breadcrumb/Breadcrumb';
 import { Container } from '@/components/Feature/Container/Container';
-import { BLOCKS } from '@contentful/rich-text-types';
-import { useEffect, useState } from 'react';
-import useContentful from '../../api/usecontentful/usecontentful';
 import { BlogContent } from './components/BlogContent';
 import { BlogHeader } from './components/BlogHeader';
 import { BlogMedia } from './components/BlogMedia';
@@ -12,49 +8,18 @@ import { SideBanner } from './components/SideBanner';
 import { TableOfContents } from './components/TableOfContents';
 import './blogdetail.scss';
 
-export default function BlogDetail({ slug }: { slug: string }) {
-  const { getOneAssest } = useContentful();
-  const [selectedData, setSelectedData] = useState<any>({});
-  const [resolvedAssets, setResolvedAssets] = useState<any[]>([]);
-  const [resolvedAuthor, setResolvedAuthor] = useState<any>({});
-  const [content, setContent] = useState<any>();
-  const [preContent, setPreContent] = useState<any>();
-  const [tableOfContents, setTableOfContents] = useState<any[]>([]);
+export default async function BlogDetail({ params }: { params: { slug: string } }) {
+  const data = await fetchBlogBySlug(params.slug);
 
-  useEffect(() => {
-    if (slug) {
-      getOneAssest({ slug }).then((response) => {
-        if (response !== undefined) {
-          const { blogsPage, includes } = response;
-          setSelectedData(blogsPage);
-          setContent(blogsPage.fields.body);
-          setPreContent(includes?.Entry?.find((entry: Entry<any>) => entry.sys.id === blogsPage?.fields.preBlogBanner?.sys.id));
-          extractTOC(blogsPage.fields.body);
-          setResolvedAssets(includes?.Asset);
-          const blogAuthorId = blogsPage?.fields.author?.sys.id;
-          setResolvedAuthor(includes?.Entry?.find((entry: Entry<any>) => entry.sys.id === blogAuthorId));
-        }
-      });
-    }
-  }, [slug]);
+  if (!data) return <div>Blog not found</div>;
 
-  const extractTOC = (body: any) => {
-    const headings: any[] = [];
-    body?.content?.forEach((node: any) => {
-      if (node.nodeType === BLOCKS.HEADING_2) {
-        headings.push({
-          text: node.content[0]?.value,
-          id: node.content[0]?.value.replace(/\s+/g, '-').toLowerCase(),
-        });
-      }
-    });
-    setTableOfContents(headings);
-  };
+  const { blog, content, resolvedAuthor, resolvedAssets, preContent, tableOfContents } = data;
+
 
   const breadcrumbItems = [
     { label: 'Home', href: '/' },
     { label: 'Blog', href: '/blog' },
-    { label: selectedData?.fields?.title || 'Blog Post', href: `/blog/${slug}` },
+    { label: blog?.fields?.title || 'Blog Post', href: `/blog/${params.slug}` },
   ];
 
   return (
@@ -72,11 +37,11 @@ export default function BlogDetail({ slug }: { slug: string }) {
           <div style={{ display: 'flex', justifyContent: 'space-between', gap: '4rem' }}>
             <div className="blog-main-content">
               <BlogHeader
-                title={selectedData?.fields?.title}
+                title={blog?.fields?.title}
                 author={resolvedAuthor}
-                updatedAt={selectedData?.sys?.updatedAt}
+                updatedAt={blog?.sys?.updatedAt}
               />
-              <BlogMedia thumbnailImage={selectedData?.fields?.thumbnailImage} />
+              <BlogMedia thumbnailImage={blog?.fields?.thumbnailImage} />
               <TableOfContents items={tableOfContents} />
               <BlogContent
                 content={content}
@@ -86,7 +51,7 @@ export default function BlogDetail({ slug }: { slug: string }) {
             </div>
             <div className="blog-sidebar side-banner-container">
               <SideBanner
-                sideBannerAd={selectedData?.fields?.sideBannerAd}
+                sideBannerAd={blog?.fields?.sideBannerAd}
                 resolvedAssets={resolvedAssets}
               />
             </div>

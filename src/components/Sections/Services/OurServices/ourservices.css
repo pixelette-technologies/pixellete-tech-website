@@ -184,3 +184,11 @@
     font-size: 1.2rem; /* Smaller font size for mobile */
   }
 }
+@media (max-width: 480px) {
+  .OurServicesBg .containerr {
+    padding: 20px;
+  }
+  .ourServicesBlock {
+    padding: 1.5rem !important;
+  }
+}

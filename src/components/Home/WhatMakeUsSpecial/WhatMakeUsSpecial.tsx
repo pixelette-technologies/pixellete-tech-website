@@ -20,15 +20,7 @@ const WhatMakeUsSpecialHome: React.FC = () => {
             <br />
             <div>
               <Image
-                src="/images/home/clutch.png"
-                alt="heroImage"
-                // data-aos="fade-up"
-                // data-aos-duration="600"
-                width={200} // Add a width to the image
-                height={200} // Add a height to the image
-              />
-              <Image
-                src="/images/home/computervision.png"
+                src="/images/Clutch/clutch-badges/business-form/manifest-ai-company-pak.png"
                 alt="heroImage"
                 // data-aos="fade-up"
                 // data-aos-duration="600"
@@ -36,7 +28,7 @@ const WhatMakeUsSpecialHome: React.FC = () => {
                 height={200}
               />
               <Image
-                src="/images/home/clutch.png"
+                src="/images/Clutch/clutch-badges/business-form/most-reviewed-blockchain-company.png"
                 alt="heroImage"
                 // data-aos="fade-up"
                 // data-aos-duration="600"
@@ -44,7 +36,7 @@ const WhatMakeUsSpecialHome: React.FC = () => {
                 height={200}
               />
               <Image
-                src="/images/home/awardpartnerships/designrush.png"
+                src="/images/Clutch/clutch-badges/business-form/most-reviewed-app-development-company.png"
                 alt="heroImage"
                 // data-aos="fade-up"
                 // data-aos-duration="600"
@@ -52,7 +44,31 @@ const WhatMakeUsSpecialHome: React.FC = () => {
                 height={200}
               />
               <Image
-                src="/images/home/clutch.png"
+                src="/images/Clutch/clutch-badges/business-form/top-decentralized-finance-company-2025.png"
+                alt="heroImage"
+                // data-aos="fade-up"
+                // data-aos-duration="600"
+                width={200}
+                height={200}
+              />
+              <Image
+                src="/images/Clutch/clutch-badges/business-form/top-machine-learning-company-2025.png"
+                alt="heroImage"
+                // data-aos="fade-up"
+                // data-aos-duration="600"
+                width={200}
+                height={200}
+              />
+              <Image
+                src="/images/Clutch/clutch-badges/business-form/top-ar-core-development-2025.png"
+                alt="heroImage"
+                // data-aos="fade-up"
+                // data-aos-duration="600"
+                width={200}
+                height={200}
+              />
+              <Image
+                src="/images/Clutch/clutch-badges/business-form/top-generative-ai-company-2023.png"
                 alt="heroImage"
                 // data-aos="fade-up"
                 // data-aos-duration="600"
@@ -92,7 +108,7 @@ const WhatMakeUsSpecialHome: React.FC = () => {
                 height={55}
               />
               <Image
-                src="/images/home/awardpartnerships/themanifes.png"
+                src="/images/home/awardpartnerships/manifestbadge.png"
                 alt="heroImage"
                 // data-aos="fade-up"
                 // data-aos-duration="600"

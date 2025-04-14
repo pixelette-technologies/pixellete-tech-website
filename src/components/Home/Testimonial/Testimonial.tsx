@@ -83,15 +83,15 @@ export const Testimonial: FC<TestimonialProps> = ({ background }) => {
 
   return (
     <>
-      <Container>
-        {/* <div className={styles.testimonialSectionBackground}>
+      {/* <Container> */}
+      {/* <div className={styles.testimonialSectionBackground}>
           <img
             src="/images/home/testimonials/testimonialBackground.svg"
             alt="Testimonial Background"
             className={styles.backgroundImage}
           />
         </div> */}
-      </Container>
+      {/* </Container> */}
 
       <div className={styles.testimonialSection}>
         <Container className={styles.main}>

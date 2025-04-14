@@ -13,7 +13,6 @@ import { expertiseAiChangeData } from '@/data/expertise/expertiseAiChangeData';
 import { aiFaq } from '@/data/faqs/aiFaqs';
 import {
   aiExpertiseData,
-
   aiHeroBackgroundImage,
   aiHeroButtonLink,
   aiHeroButtonText,
@@ -40,13 +39,29 @@ import { getTranslations, setRequestLocale } from 'next-intl/server';
 
 const clutchLogos = [
   {
-    src: "/images/Clutch/clutch-badges/ai/final/top-ai-company-uk.png",
-    alt: "Top AI Company UK"
+    src: '/images/Clutch/clutch-badges/ai/most-reviewed-ai-company.png',
+    alt: 'Most reviewed AI Company UK',
   },
   {
-    src: "/images/Clutch/clutch-badges/ai/top-generative-ai-company-clutch.png",
-    alt: "Top Generative AI Company"
-  }
+    src: '/images/Clutch/clutch-badges/ai/top-company-artificial-intelligence.png',
+    alt: 'Top AI Company',
+  },
+  {
+    src: '/images/Clutch/clutch-badges/ai/top-company-generative-ai.png',
+    alt: 'Top Generative AI Company',
+  },
+  {
+    src: '/images/Clutch/clutch-badges/ai/top-machine-learning-company.png',
+    alt: 'Top Machine learning Company',
+  },
+  {
+    src: '/images/Clutch/clutch-badges/ai/top-recommendation-system-company.png',
+    alt: 'Top recommendation system Company',
+  },
+  {
+    src: '/images/Clutch/clutch-badges/ai/top-ai-speech-generation-company.png',
+    alt: 'Top ai speech generation Company',
+  },
 ];
 
 type IAIservicesProps = {
@@ -60,13 +75,35 @@ export async function generateMetadata(props: IAIservicesProps) {
     namespace: 'AiServices',
   });
 
+  
+
   return {
     title: t('meta_title'),
     description: t('meta_description'),
     keywords: t('meta_keywords'),
+    alternates: {
+      canonical: `/ai-development-services`
+    }
   };
 }
-
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  'itemListElement': [
+    {
+      '@type': 'ListItem',
+      'position': 1,
+      'name': 'Home',
+      'item': `/`
+    },
+    {
+      '@type': 'ListItem',
+      'position': 2,
+      'name': 'AI Development Services',
+      'item': `/ai-development-services`
+    }
+  ]
+};
 export default async function AIservices(props: IAIservicesProps) {
   const { locale } = await props.params;
   setRequestLocale(locale);
@@ -75,8 +112,30 @@ export default async function AIservices(props: IAIservicesProps) {
   //   namespace: 'About',
   // });
 
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    'mainEntity': aiFaq.map(faq => ({
+      '@type': 'Question',
+      'name': faq.question,
+      'acceptedAnswer': {
+        '@type': 'Answer',
+        'text': faq.answer,
+      },
+    })),
+  };
+
   return (
     <>
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <HeroSection
         heading={aiHeroHeading}
         description={aiHeroDescription}
@@ -118,7 +177,7 @@ export default async function AIservices(props: IAIservicesProps) {
       />
       <FaqsSection faqs={aiFaq} />
       <EvaluateBusiness
-        heading="We’re not waiting for the future; we’re actively building with businesses"
+        heading="We're not waiting for the future; we're actively building with businesses"
         description="Start your transformation today and promote your development goals with a top-tier global team that pushes the boundaries of innovation every single day."
         clutchLogos={clutchLogos}
       />

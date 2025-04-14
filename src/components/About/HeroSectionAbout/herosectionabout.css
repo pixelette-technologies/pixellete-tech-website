@@ -117,4 +117,7 @@
   .heroSectionAiServices-background > img {
     margin-top: -10rem;
   }
+  .heroSectionAbout {
+    padding: 0rem 2rem;
+  }
 }

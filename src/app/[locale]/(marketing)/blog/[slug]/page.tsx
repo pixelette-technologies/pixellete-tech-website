@@ -1,4 +1,4 @@
-import { fetchAllBlogSlugs, fetchBlogMetadata } from '../../api/usecontentful/usecontentful';
+import { fetchAllBlogSlugs, fetchBlogMetadata } from '@/libs/contentful';
 import BlogDetail from './BlogDetail';
 
 export async function generateStaticParams() {
@@ -15,5 +15,5 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 }
 
 export default function BlogDetailPage({ params }: { params: { slug: string } }) {
-  return <BlogDetail slug={params.slug} />;
+  return <BlogDetail params={params} />;
 }

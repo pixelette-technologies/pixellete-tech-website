@@ -52,6 +52,9 @@ export async function generateMetadata(props: IMobileDevelopmentProps) {
     title: t('meta_title'),
     description: t('meta_description'),
     keywords: t('meta_keywords'),
+    alternates: {
+      canonical: `/mobile-app-development-services`
+    }
   };
 }
 
@@ -63,8 +66,46 @@ export default async function MobileDevelopment(props: IMobileDevelopmentProps) 
   //   namespace: 'About',
   // });
 
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    'mainEntity': mobileFaqs.map(faq => ({
+      '@type': 'Question',
+      'name': faq.question,
+      'acceptedAnswer': {
+        '@type': 'Answer',
+        'text': faq.answer,
+      },
+    })),
+  };
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    'itemListElement': [
+      {
+        '@type': 'ListItem',
+        'position': 1,
+        'name': 'Home',
+        'item': `/`
+      },
+      {
+        '@type': 'ListItem',
+        'position': 2,
+        'name': 'Mobile App Development Services',
+        'item': `/mobile-app-development-services`
+      }
+    ]
+  };
   return (
     <>
+    <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+    <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <HeroSection
         heading={mobileDevelopmentHeroHeading}
         description={mobileDevelopmentHeroDescription}

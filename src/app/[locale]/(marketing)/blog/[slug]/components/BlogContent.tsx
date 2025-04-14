@@ -134,7 +134,7 @@ export const BlogContent: React.FC<BlogContentProps> = ({ content, resolvedAsset
           style={{
             width: '100%',
             backgroundColor: '#2c172a',
-            padding: '1rem',
+            padding: '1rem 2rem',
             borderRadius: '13.84px',
             height: 'auto',
             marginBottom: '2rem',

@@ -153,7 +153,7 @@ export const Footer: React.FC = () => {
               { href: 'contact-us', text: 'Contact Us' },
               { href: 'privacy-policy', text: 'Privacy Policy' },
               { href: 'terms-condition', text: 'Terms & Conditions' },
-              { href: 'cancelation-refund-policy', text: 'Cancellation & Refund policy' },
+              { href: 'cancelation-refund-policy', text: 'Cancellation & Refund Policy' },
             ].map((item, index) => (
               <p
                 key={index}

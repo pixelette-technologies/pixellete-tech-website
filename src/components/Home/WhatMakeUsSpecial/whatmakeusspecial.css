@@ -101,3 +101,12 @@
     /* gap: 5rem; */
   }
 }
+@media (max-width: 480px) {
+  .specialImgs1 {
+    padding-block: 50px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+  }
+}

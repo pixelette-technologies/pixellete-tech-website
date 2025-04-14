@@ -26,7 +26,7 @@ export const CaseStudyCard: FC<CaseStudiCardProps> = ({
   onButtonClick,
 }) => {
   return (
-    <Link href={`/case-studies/${to}`} data-aos="fade-up" data-aos-duration="500">
+    <Link href={`/case-studies/${to}`} data-aos="fade-up" data-aos-duration="500" className="sm-mb-1">
       <div className="cardContainer">
         <div className="flipCard">
           {/* Front Side */}

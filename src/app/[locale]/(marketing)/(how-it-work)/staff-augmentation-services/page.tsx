@@ -72,9 +72,24 @@ export default async function StaffAugmentationServices(props: IDeliverProps) {
       },
     ],
   };
-
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    'mainEntity': deliverFaqs.map(faq => ({
+      '@type': 'Question',
+      'name': faq.question,
+      'acceptedAnswer': {
+        '@type': 'Answer',
+        'text': faq.answer,
+      },
+    })),
+  };
   return (
     <>
+    <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <HowItWorksHeroSection {...deliverHeroData} />
       <DeliverBenefits {...benefitData} />
       {/* <SelectPlan /> */}
