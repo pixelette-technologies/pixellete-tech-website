@@ -5,7 +5,7 @@ import type { Settings } from 'react-slick';
 import { Button } from '@/components/Feature/Button/Button';
 import { TestimonialCard } from '@/components/Feature/Cards/TestimonialCard';
 import { Container } from '@/components/Feature/Container/Container';
-import data from '@/data';
+import {testimonialData} from '@/data/testimonialData';
 import Image from 'next/image';
 import { useRef } from 'react';
 import { FiExternalLink } from 'react-icons/fi';
@@ -83,6 +83,38 @@ export const Testimonial: FC<TestimonialProps> = ({ background }) => {
 
   return (
     <>
+      {/* JSON-LD structured data for Google rich results */}
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Product",
+          "name": "Software Development",
+          "description": "software development services offered by Pixelette Technologies.",
+          "review": testimonialData.map((el) => ({
+            "@type": "Review",
+            "author": {
+              "@type": "Person",
+              "name": el.user_name,
+            },
+            "reviewRating": {
+              "@type": "Rating",
+              "ratingValue": el.rating.toString(),
+              "bestRating": "5"
+            },
+            "reviewBody": el.comment,
+            "datePublished": "2023-01-01",
+            "url": el.url,
+          })),
+          "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "23",
+    "bestRating": "5",
+    "worstRating": "3"
+  }
+        })}
+      </script>
+
       {/* <Container> */}
       {/* <div className={styles.testimonialSectionBackground}>
           <img
@@ -127,7 +159,7 @@ export const Testimonial: FC<TestimonialProps> = ({ background }) => {
           <section>
             <div className={styles.sliderContainer}>
               <Slider className={styles.slickSlider} ref={slider} {...settings}>
-                {data.testimonialData.map((el, index) => (
+                {testimonialData.map((el, index) => (
                   <a key={uuidv4()} href={el.url}>
                     <TestimonialCard
                       comment={el.comment}

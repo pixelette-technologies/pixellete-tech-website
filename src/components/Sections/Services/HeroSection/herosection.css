@@ -46,6 +46,7 @@
   height: 12rem;
   max-width: 17.5rem;
   top: -7rem;
+  margin-left: 10rem;
   padding-left: 1rem;
   animation: rotateOpposite 20s linear infinite;
 }
@@ -62,7 +63,7 @@
   max-width: 10rem;
   height: 14.13rem;
   top: 20rem;
-  margin-left: 0rem;
+  margin-left: 10rem;
   animation: rotateOpposite 15s linear infinite;
 }
 @media only screen and (max-width: 37.5em) {
