@@ -75,15 +75,13 @@ export async function generateMetadata(props: IAIservicesProps) {
     namespace: 'AiServices',
   });
 
-  
-
   return {
     title: t('meta_title'),
     description: t('meta_description'),
     keywords: t('meta_keywords'),
     alternates: {
-      canonical: `/ai-development-services`
-    }
+      canonical: `https://www.pixelettetech.com/ai-development-services`,
+    },
   };
 }
 const breadcrumbSchema = {
@@ -94,15 +92,15 @@ const breadcrumbSchema = {
       '@type': 'ListItem',
       'position': 1,
       'name': 'Home',
-      'item': `/`
+      'item': `https://www.pixelettetech.com/`,
     },
     {
       '@type': 'ListItem',
       'position': 2,
       'name': 'AI Development Services',
-      'item': `/ai-development-services`
-    }
-  ]
+      'item': `https://www.pixelettetech.com/ai-development-services`,
+    },
+  ],
 };
 export default async function AIservices(props: IAIservicesProps) {
   const { locale } = await props.params;
