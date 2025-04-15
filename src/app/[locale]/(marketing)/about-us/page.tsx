@@ -22,6 +22,9 @@ export async function generateMetadata(props: IAboutProps) {
   return {
     title: t('meta_title'),
     description: t('meta_description'),
+    alternates: {
+      canonical: `https://www.pixelettetech.com/about-us`,
+    },
   };
 }
 
@@ -42,7 +45,7 @@ export default async function About(props: IAboutProps) {
       <HowWeWork />
       <OurTeam />
       <Map />
-      <EvaluateBusiness heading='Ready to become a tech success story?' description='Don’t let technical hurdles stand in the way of building powerful tech solutions. Let us help you bring your vision to life with innovative, cost-effective and reliable services. Get in touch!'/>
+      <EvaluateBusiness heading="Ready to become a tech success story?" description="Don’t let technical hurdles stand in the way of building powerful tech solutions. Let us help you bring your vision to life with innovative, cost-effective and reliable services. Get in touch!" />
     </>
   );
 };

@@ -1,10 +1,10 @@
+import { AnimatedSection } from '@/components/animations';
 // import { HeroSection } from '@/components/Home/HeroSection/HeroSection';
 import { HeroSection } from '@/components/Home/HeroSection/HeroSection';
-import { homeTechnologies } from '@/data/technology/homeTechnologies';
 
+import { homeTechnologies } from '@/data/technology/homeTechnologies';
 import { getTranslations } from 'next-intl/server';
 import dynamic from 'next/dynamic';
-import { AnimatedSection } from '@/components/animations';
 
 type IIndexProps = {
   params: Promise<{ locale: string }>;
@@ -13,83 +13,83 @@ type IIndexProps = {
 // const HeroSection = dynamic(() => import('@/components/Home/HeroSection/HeroSection').then(mod => mod.HeroSection));
 const OurClients = dynamic(() => import('@/components/Home/OurClients/OurClients').then(mod => mod.OurClients), {
   loading: () => (
-    <div className="flex items-center justify-center min-h-[200px]">
-      <img src="/images/logo/shortLogo.svg" alt="Loading..." className="w-12 h-12 animate-pulse" />
+    <div className="flex min-h-[200px] items-center justify-center">
+      <img src="/images/logo/shortLogo.svg" alt="Loading..." className="size-12 animate-pulse" />
     </div>
   ),
-  ssr: true
+  ssr: true,
 });
 
 const AboutUsSection = dynamic(() => import('@/components/Home/AboutusSection/AboutUsSection'), {
   loading: () => (
-    <div className="flex items-center justify-center min-h-[200px]">
-      <img src="/images/logo/shortLogo.svg" alt="Loading..." className="w-12 h-12 animate-pulse" />
+    <div className="flex min-h-[200px] items-center justify-center">
+      <img src="/images/logo/shortLogo.svg" alt="Loading..." className="size-12 animate-pulse" />
     </div>
   ),
-  ssr: true
+  ssr: true,
 });
 
 const WhatMakeUsSpecialHome = dynamic(() => import('@/components/Home/WhatMakeUsSpecial/WhatMakeUsSpecial'), {
   loading: () => (
-    <div className="flex items-center justify-center min-h-[200px]">
-      <img src="/images/logo/shortLogo.svg" alt="Loading..." className="w-12 h-12 animate-pulse" />
+    <div className="flex min-h-[200px] items-center justify-center">
+      <img src="/images/logo/shortLogo.svg" alt="Loading..." className="size-12 animate-pulse" />
     </div>
   ),
-  ssr: true
+  ssr: true,
 });
 
 const OurServicesSection = dynamic(() => import('@/components/Home/OurServicesSection/OurServicesSection'), {
   loading: () => (
-    <div className="flex items-center justify-center min-h-[200px]">
-      <img src="/images/logo/shortLogo.svg" alt="Loading..." className="w-12 h-12 animate-pulse" />
+    <div className="flex min-h-[200px] items-center justify-center">
+      <img src="/images/logo/shortLogo.svg" alt="Loading..." className="size-12 animate-pulse" />
     </div>
   ),
-  ssr: true
+  ssr: true,
 });
 
 const YourPlan = dynamic(() => import('@/components/Home/YourPlan/YourPlan').then(mod => mod.YourPlan), {
   loading: () => (
-    <div className="flex items-center justify-center min-h-[200px]">
-      <img src="/images/logo/shortLogo.svg" alt="Loading..." className="w-12 h-12 animate-pulse" />
+    <div className="flex min-h-[200px] items-center justify-center">
+      <img src="/images/logo/shortLogo.svg" alt="Loading..." className="size-12 animate-pulse" />
     </div>
   ),
-  ssr: true
+  ssr: true,
 });
 
 const TechnologiesUsed = dynamic(() => import('@/components/Sections/TechnologyUsed/TechnologiesUsed'), {
   loading: () => (
-    <div className="flex items-center justify-center min-h-[200px]">
-      <img src="/images/logo/shortLogo.svg" alt="Loading..." className="w-12 h-12 animate-pulse" />
+    <div className="flex min-h-[200px] items-center justify-center">
+      <img src="/images/logo/shortLogo.svg" alt="Loading..." className="size-12 animate-pulse" />
     </div>
   ),
-  ssr: true
+  ssr: true,
 });
 
 const CaseStudies = dynamic(() => import('@/components/Home/CaseStudiesSection/CaseStudies'), {
   loading: () => (
-    <div className="flex items-center justify-center min-h-[200px]">
-      <img src="/images/logo/shortLogo.svg" alt="Loading..." className="w-12 h-12 animate-pulse" />
+    <div className="flex min-h-[200px] items-center justify-center">
+      <img src="/images/logo/shortLogo.svg" alt="Loading..." className="size-12 animate-pulse" />
     </div>
   ),
-  ssr: true
+  ssr: true,
 });
 
 const Testimonial = dynamic(() => import('@/components/Home/Testimonial/Testimonial'), {
   loading: () => (
-    <div className="flex items-center justify-center min-h-[200px]">
-      <img src="/images/logo/shortLogo.svg" alt="Loading..." className="w-12 h-12 animate-pulse" />
+    <div className="flex min-h-[200px] items-center justify-center">
+      <img src="/images/logo/shortLogo.svg" alt="Loading..." className="size-12 animate-pulse" />
     </div>
   ),
-  ssr: true
+  ssr: true,
 });
 
 const EvaluateBusiness = dynamic(() => import('@/components/Sections/EvaluateBusiness/EvaluateBusiness').then(mod => mod.EvaluateBusiness), {
   loading: () => (
-    <div className="flex items-center justify-center min-h-[200px]">
-      <img src="/images/logo/shortLogo.svg" alt="Loading..." className="w-12 h-12 animate-pulse" />
+    <div className="flex min-h-[200px] items-center justify-center">
+      <img src="/images/logo/shortLogo.svg" alt="Loading..." className="size-12 animate-pulse" />
     </div>
   ),
-  ssr: true
+  ssr: true,
 });
 
 const clutchLogos = [
@@ -130,17 +130,42 @@ export async function generateMetadata(props: IIndexProps) {
     title: t('meta_title'),
     description: t('meta_description'),
     alternates: {
-      canonical: `/`
-    }
+      canonical: `https://www.pixelettetech.com/`,
+    },
   };
 }
 
 export default async function Index(props: IIndexProps) {
+  const generateSchema = () => {
+    return {
+      '@context': 'https://schema.org',
+      '@type': 'Organization',
+      'name': 'Pixelette Technologies',
+      'description': 'A leading technology company specializing in AI, Blockchain, and software development solutions.',
+      'url': 'https://pixelette.com',
+      'logo': 'https://pixelette.com/images/logo.png',
+      'address': {
+        '@type': 'PostalAddress',
+        'streetAddress': '71-75 Shelton Street',
+        'addressLocality': 'London',
+        'postalCode': 'WC2 H9J',
+        'addressCountry': 'UK',
+      },
+      'contactPoint': {
+        '@type': 'ContactPoint',
+        'telephone': '+44 2045188226',
+        'contactType': 'customer service',
+        'email': 'sales@pixelettetech.com',
+      },
+
+    };
+  };
   return (
     <>
       {/* <div className="main-content"></div> */}
-      <AnimatedSection 
-        animation="fadeIn" 
+
+      <AnimatedSection
+        animation="fadeIn"
         delay={0}
         gradientColors={['transparent', 'rgba(0, 0, 0, 0.7)']}
         gradientHeight="200px"
@@ -148,9 +173,9 @@ export default async function Index(props: IIndexProps) {
       >
         <HeroSection />
       </AnimatedSection>
-      
-      <AnimatedSection 
-        animation="fadeUp" 
+
+      <AnimatedSection
+        animation="fadeUp"
         delay={0.2}
         gradientColors={['transparent', 'rgba(0, 0, 0, 0.6)']}
         gradientHeight="150px"
@@ -183,8 +208,8 @@ export default async function Index(props: IIndexProps) {
           }}
         /> */}
 
-      <AnimatedSection 
-        animation="fadeLeft" 
+      <AnimatedSection
+        animation="fadeLeft"
         delay={0.3}
         gradientColors={['transparent', 'rgba(0, 0, 0, 0.5)']}
         gradientHeight="180px"
@@ -193,8 +218,8 @@ export default async function Index(props: IIndexProps) {
         <AboutUsSection />
       </AnimatedSection>
 
-      <AnimatedSection 
-        animation="fadeRight" 
+      <AnimatedSection
+        animation="fadeRight"
         delay={0.4}
         gradientColors={['transparent', 'rgba(0, 0, 0, 0.6)']}
         gradientHeight="160px"
@@ -203,8 +228,8 @@ export default async function Index(props: IIndexProps) {
         <WhatMakeUsSpecialHome />
       </AnimatedSection>
 
-      <AnimatedSection 
-        animation="fadeUp" 
+      <AnimatedSection
+        animation="fadeUp"
         delay={0.5}
         gradientColors={['transparent', 'rgba(0, 0, 0, 0.7)']}
         gradientHeight="170px"
@@ -213,8 +238,8 @@ export default async function Index(props: IIndexProps) {
         <OurServicesSection />
       </AnimatedSection>
 
-      <AnimatedSection 
-        animation="fadeLeft" 
+      <AnimatedSection
+        animation="fadeLeft"
         delay={0.6}
         gradientColors={['transparent', 'rgba(0, 0, 0, 0.5)']}
         gradientHeight="140px"
@@ -223,8 +248,8 @@ export default async function Index(props: IIndexProps) {
         <YourPlan />
       </AnimatedSection>
 
-      <AnimatedSection 
-        animation="fadeRight" 
+      <AnimatedSection
+        animation="fadeRight"
         delay={0.7}
         gradientColors={['transparent', 'rgba(0, 0, 0, 0.6)']}
         gradientHeight="150px"
@@ -237,8 +262,8 @@ export default async function Index(props: IIndexProps) {
         />
       </AnimatedSection>
 
-      <AnimatedSection 
-        animation="fadeUp" 
+      <AnimatedSection
+        animation="fadeUp"
         delay={0.8}
         gradientColors={['transparent', 'rgba(0, 0, 0, 0.7)']}
         gradientHeight="180px"
@@ -247,8 +272,8 @@ export default async function Index(props: IIndexProps) {
         <CaseStudies heading="Our past work speaks volumes" initialData={[]} />
       </AnimatedSection>
 
-      <AnimatedSection 
-        animation="fadeLeft" 
+      <AnimatedSection
+        animation="fadeLeft"
         delay={0.9}
         gradientColors={['transparent', 'rgba(0, 0, 0, 0.5)']}
         gradientHeight="160px"
@@ -257,8 +282,8 @@ export default async function Index(props: IIndexProps) {
         <Testimonial background="" />
       </AnimatedSection>
 
-      <AnimatedSection 
-        animation="fadeRight" 
+      <AnimatedSection
+        animation="fadeRight"
         delay={1}
         gradientColors={['transparent', 'rgba(0, 0, 0, 0.6)']}
         gradientHeight="170px"
@@ -283,6 +308,9 @@ export default async function Index(props: IIndexProps) {
         heading="The Pixelette Post"
         text="Explore a world of insights through the Pixelette Post. Engage with expert opinions, groundbreaking ideas, and in-depth guides that empower and inspire. Dive into our content today."
       /> */}
+      <script type="application/ld+json">
+        {JSON.stringify(generateSchema())}
+      </script>
     </>
   );
 }

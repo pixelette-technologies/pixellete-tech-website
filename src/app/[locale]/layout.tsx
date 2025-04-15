@@ -65,7 +65,9 @@ export default async function RootLayout({ children, params }: { children: React
             />
           </div>
         }>
-          <MessagesProvider locale={locale}>{children}</MessagesProvider>
+          <MessagesProvider locale={locale}>
+            {children}
+          </MessagesProvider>
         </Suspense>
       </body>
     </html>

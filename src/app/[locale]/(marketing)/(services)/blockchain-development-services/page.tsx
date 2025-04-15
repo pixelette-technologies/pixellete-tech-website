@@ -53,8 +53,8 @@ export async function generateMetadata(props: IBlockchainDevelopmentProps) {
     description: t('meta_description'),
     keywords: t('meta_keywords'),
     alternates: {
-      canonical: `/blockchain-development-services`
-    }
+      canonical: `https://www.pixelettetech.com/blockchain-development-services`,
+    },
   };
 }
 
@@ -92,15 +92,15 @@ const breadcrumbSchema = {
       '@type': 'ListItem',
       'position': 1,
       'name': 'Home',
-      'item': `/`
+      'item': `https://www.pixelettetech.com/`,
     },
     {
       '@type': 'ListItem',
       'position': 2,
       'name': 'Blockchain Development Services',
-      'item': `/blockchain-development-services`
-    }
-  ]
+      'item': `https://www.pixelettetech.com/blockchain-development-services`,
+    },
+  ],
 };
 // <script
 //       type="application/ld+json"
@@ -127,14 +127,14 @@ export default async function BlockchainDevelopment(props: IBlockchainDevelopmen
   };
   return (
     <>
-    <script
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-    />
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <HeroSection
         heading={aiHeroHeading}
         description={aiHeroDescription}
