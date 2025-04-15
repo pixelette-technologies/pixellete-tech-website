@@ -11,13 +11,18 @@ const clutchLogos = [
     src: "/images/Clutch/clutch-badges/blockchain/final/blockchain-company-uk.png",
     alt: "Blockchain Company UK"
   },
-  {
-    src: "/images/Clutch/clutch-badges/ai/final/top-ai-company-uk.png",
-    alt: "Top AI Company UK"
-  },
+    
   {
     src: "/images/Clutch/clutch-badges/software/most-reviewed-web-dev-clutch.png",
     alt: "Most Reviewed Web Development Company"
+  },
+  {
+    src: "/images/Clutch/clutch-badges/ai/top-company-generative-ai.png",
+    alt: "Top Generative AI Company"
+  },
+  {
+    src: "/images/Clutch/clutch-badges/ai/final/top-ai-company-uk.png",
+    alt: "Top AI Company UK"
   },
   {
     src: "/images/Clutch/clutch-badges/blockchain/final/top-blockchain-clutch.png",
@@ -26,10 +31,6 @@ const clutchLogos = [
   {
     src: "/images/Clutch/clutch-badges/blockchain/final/top-tokenization.png",
     alt: "Top Tokenization Company"
-  },
-  {
-    src: "/images/Clutch/clutch-badges/ai/top-generative-ai-company-clutch.png",
-    alt: "Top Generative AI Company"
   }
 ];
 
