@@ -1,0 +1,30 @@
+.ourTeamSectionHome-background {
+  position: relative;
+}
+.ourTeamSectionHome-background > img {
+  position: absolute;
+  width: 80%;
+  z-index: -120;
+  margin-top: -12rem;
+  right: 1px;
+}
+@media only screen and (max-width: 37.5em) {
+  .ourTeamSectionHome-background > img {
+    margin-top: -7rem;
+  }
+}
+.ourTeamSectionHome > div > blockquote {
+  position: relative;
+}
+.ourTeamSectionHome > div > blockquote > img {
+  z-index: -100;
+  position: absolute;
+}
+.ourTeamSectionHome > div > blockquote > *:first-child {
+  left: 1px;
+  margin-top: 35rem;
+}
+.ourTeamSectionHome > div > blockquote > *:last-child {
+  margin-top: 75rem;
+  left: -1px;
+}

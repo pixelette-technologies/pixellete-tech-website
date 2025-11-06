@@ -1,0 +1,89 @@
+.specialSection {
+  margin-top: 6rem;
+}
+.specialSection-background {
+  position: relative;
+}
+.specialSection-background > img {
+  position: absolute;
+  z-index: -90;
+  width: 100%;
+  margin-top: -45rem;
+}
+@media only screen and (max-width: 37.5em) {
+  .specialSection {
+    margin-top: 9rem;
+  }
+}
+.specialSection > center {
+  max-width: 82rem;
+  margin: auto;
+  text-align: center;
+}
+.specialSection > center > h1 {
+  padding-bottom: 1.6rem;
+}
+@media only screen and (max-width: 50em) {
+  .specialSection > center {
+    padding: 2rem;
+  }
+}
+.specialSection > div > section {
+  display: flex;
+  /* align-items: center; */
+  justify-content: space-between;
+  /* margin-top: 5rem; */
+  /* gap: 2.4rem; */
+}
+@media only screen and (max-width: 50em) {
+  .specialSection > div > section {
+    flex-direction: column;
+  }
+}
+.specialSection > div > section > img {
+  height: 44rem;
+}
+@media only screen and (max-width: 62.6em) {
+  .specialSection > div > section > img {
+    width: 40rem;
+    margin-bottom: 2rem;
+  }
+}
+@media only screen and (max-width: 50em) {
+  .specialSection > div > section > img {
+    margin-top: 2rem;
+    max-width: 52rem;
+    margin-bottom: 2rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .specialSection > div > section > img {
+    width: 90%;
+    margin-bottom: 2rem;
+  }
+}
+.specialSection > div > section > *:first-child {
+  display: flex;
+  max-width: 70rem;
+  margin-bottom: 10rem;
+}
+.specialSection > div > section > *:first-child > *:last-child > div {
+  display: flex;
+}
+.specialSection > div > section > *:first-child > *:last-child > div > section > img {
+  height: 2rem;
+  width: 2rem;
+  margin-top: 0.5rem;
+}
+.specialSection > div > section > *:first-child > *:last-child > div > div {
+  margin-left: 2.4rem;
+}
+.specialSection > div > section > *:first-child > *:last-child > div > div > * :first-child {
+  margin-bottom: 0.8rem;
+}
+.specialSection > div > section > *:first-child > *:last-child > div > div > *:last-child {
+  color: #fbfbfba1;
+}
+.specialSection > div > section > *:first-child > *:last-child > *:not(:last-child) {
+  margin-bottom: 2.8rem;
+}

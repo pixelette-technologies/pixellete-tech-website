@@ -1,0 +1,73 @@
+.exploreProjectSections > section {
+  margin-bottom: 4.8rem;
+}
+.exploreProjectSections > section > center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.exploreProjectSections > div > header > div {
+  border-radius: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow-x: hidden;
+  padding: 1.5px;
+}
+.exploreProjectSections > div > header > div > div {
+  width: 85%;
+}
+@media only screen and (max-width: 78.125em) {
+  .exploreProjectSections > div > header > div > div {
+    width: 75%;
+  }
+  .exploreProjectSections > div > header > div > div {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .exploreProjectSections > div > header > div > div {
+    width: 65%;
+  }
+  .exploreProjectSections > div > header > div > div {
+    width: 100%;
+  }
+}
+.exploreProjectSections > div > header > div > img {
+  height: 5.2rem;
+  margin-bottom: -1.2px;
+  cursor: pointer;
+}
+@media only screen and (max-width: 37.5em) {
+  .exploreProjectSections > div > header > div > img {
+    width: 8rem;
+    height: 5.4rem;
+  }
+}
+.exploreProjectSections > div > section {
+  padding: 0 10rem;
+  margin-top: 3.8rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+.exploreProjectSections > div > section > * {
+  width: calc(33.333% - 2.4rem);
+}
+@media only screen and (max-width: 62.6em) {
+  .exploreProjectSections > div > section > * {
+    width: calc(50% - 2.4rem);
+  }
+  .exploreProjectSections > div > section {
+    padding: 0 5rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .exploreProjectSections > div > section > * {
+    width: 100%;
+  }
+  .exploreProjectSections > div > section {
+    padding: 0 2rem;
+  }
+}

@@ -1,0 +1,126 @@
+.caseSlider > *:last-child {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2.5rem;
+  gap: 0.7rem;
+}
+.caseSlider > *:last-child > img {
+  width: 9.4rem;
+  height: 5.4rem;
+  cursor: pointer;
+}
+.caseSlider-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.4rem;
+  padding: 2.4rem;
+  background-color: #0f0f0fb3;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1.5rem;
+}
+@media only screen and (max-width: 37.5em) {
+  .caseSlider-card {
+    padding: 1.4rem;
+  }
+}
+.caseSlider-card > *:first-child {
+  width: 80rem;
+  height: 26.4rem;
+  overflow: hidden;
+  border-radius: 1.5rem;
+}
+.caseSlider-card > *:first-child > img {
+  /* width: 800px;
+  height: 26.4rem; */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.5s ease-in-out;
+  transform: scale(1);
+}
+.caseSlider-card > *:first-child:hover img {
+  transform: scale(1);
+}
+@media only screen and (max-width: 50em) {
+  .caseSlider-card > *:first-child {
+    display: none;
+  }
+}
+.caseSlider-card > *:last-child > div > button {
+  margin-right: 1.5rem;
+  margin-top: 1.5rem;
+}
+.caseSlider-card > *:last-child > h1 {
+  font-size: 3.4rem;
+  font-family: 500;
+  line-height: 5.1rem;
+  margin-top: 1.4rem;
+  letter-spacing: 1px;
+}
+.caseSlider-card > *:last-child > p {
+  margin: 0.8rem 0rem;
+}
+.caseSlider-card > *:last-child > button {
+  background-color: transparent;
+  font-weight: 600;
+}
+
+.caseStudiSectionCard {
+  padding: 1.4rem;
+  border-radius: 0.7rem;
+  transition: 0.5s ease-in-out;
+}
+.caseStudiSectionCard:hover {
+  background-color: #181818;
+}
+.caseStudiSectionCard > figure {
+  height: 32rem;
+  width: 100%;
+  border-radius: 0.7rem;
+  overflow: hidden;
+}
+.caseStudiSectionCard > figure > img {
+  height: 24rem;
+  width: 100%;
+  border-radius: 0.7rem;
+  transform: scale(1.04);
+  transition: 0.5s ease-in-out;
+}
+.caseStudiSectionCard > figure:hover img {
+  transform: scale(1);
+}
+.caseStudiSectionCard > div {
+  margin-top: 2.4rem;
+}
+.caseStudiSectionCard > div > header {
+  margin-bottom: 2.4rem;
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+}
+.caseStudiSectionCard > div > header > span {
+  font-size: 1.6rem;
+  font-weight: 500;
+  padding: 0.5rem 1.5rem;
+  background-color: #ffffff26;
+  border-radius: 4rem;
+}
+.caseStudiSectionCard > div > h1 {
+  --max-line: 2;
+  line-height: 2.8rem;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: var(--max-line);
+  margin-bottom: 2.4rem;
+}
+.caseStudiSectionCard > div > p {
+  --max-line: 2;
+  line-height: 2.8rem;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: var(--max-line);
+}

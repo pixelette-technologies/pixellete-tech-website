@@ -1,0 +1,33 @@
+.privacyPolicy-background {
+  position: relative;
+}
+.privacyPolicy-background > img {
+  position: absolute;
+  margin-top: -12rem;
+  width: 100%;
+  z-index: -100;
+}
+.privacyPolicy > center {
+  padding-top: 0rem;
+  padding-bottom: 8rem;
+  max-width: 102rem;
+  margin: auto;
+  text-align: center;
+}
+@media only screen and (max-width: 50em) {
+  .privacyPolicy > center {
+    padding-top: 6rem;
+  }
+}
+.privacyPolicy > center > h1 {
+  margin-bottom: 1.6rem;
+}
+.privacyPolicy-background {
+  position: relative;
+}
+.privacyPolicy-background > img {
+  position: absolute;
+  margin-top: -12rem;
+  width: 100%;
+  z-index: -100;
+}
