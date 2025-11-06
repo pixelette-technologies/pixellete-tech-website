@@ -1,23 +1,22 @@
 export const arFaqs = [
   {
-    question: 'How long does it take to build an AR or VR app?',
-    answer:
-      'The timeline varies depending on the complexity and features of the app. Basic AR/VR applications may take a few weeks, while more advanced apps with custom interactions can take several months. On average, most AR/VR projects are completed within 3-6 months, with a detailed timeline provided after initial project assessment.',
+    question: 'How long does it take to develop an AR/VR experience?',
+    answer: 'Most immersive projects take between 6 to 12 weeks, depending on complexity and integrations.'
   },
   {
-    question: 'What type of services does a full-stack AR/VR development company offer?',
+    question: 'Can these experiences run in browsers or only in headsets?',
     answer:
-      'A full-stack AR/VR development company typically offers services including concept design, 3D modeling, animation, app development, testing and deployment. Pixelette Technologies covers end-to-end AR/VR solutions from creative design and interactive experience development to integration and support.',
+      'Our environments are cross-platform — accessible via web browsers, mobile devices, and major VR headsets.'
   },
   {
-    question: "What's the cost to develop AR/VR apps?",
+    question: 'Do you handle both design and development?',
     answer:
-      'Basic AR/VR apps start at $5,000. Mid-level apps with custom assets typically range from $10,000 - $60,000, while high-interactivity, multi-platform projects can go beyond $100,000. After our free discovery call, we are able to offer custom estimates based on the provided project details.',
+      'Yes. From 3D modeling and UX design to engineering and deployment, we handle the entire lifecycle.'
   },
   {
-    question: "What platforms and technologies do Pixelette Technologies' AR/VR development team specialize in?",
+    question: 'What’s the best way to get started?',
     answer:
-      'Pixelette’s AR/VR team specializes in platforms like Unity and Unreal Engine, with experience in developing for mobile (iOS, Android), desktop, and popular AR/VR headsets. We make use of the latest tech tools to deliver lifelike experiences across devices.',
+      'Book a quick discovery call with our experts to discuss your goals and see relevant examples.'
   },
   // {
   //   question: 'What is the process for developing a VR application?',

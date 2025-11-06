@@ -60,3 +60,67 @@ export const expertiseAiChangeData = [
     description: 'Transform manufacturing with innovative, scalable tech that optimizes production.',
   },
 ];
+export const expertiseArVrChangeData = [
+  {
+    image: 'images/industories/realtestate.svg',
+    text: 'Real Estate & Architecture',
+    description: 'Showcase unbuilt projects and properties with lifelike VR walkthroughs.',
+  },
+  {
+    image: 'images/industories/publicsector.svg',
+    text: 'Tourism & Heritage',
+    description: 'Turn landmarks, museums, and archaeological sites into interactive virtual destinations.',
+  },
+  {
+    image: 'images/industories/retail.svg',
+    text: 'Retail & Fashion ',
+    description: 'Create virtual showrooms and 3D product explorers for engaging online shopping.',
+  },
+  {
+    image: 'images/industories/healthcare.svg',
+    text: 'Healthcare & Therapy',
+    description: 'Deliver advanced rehabilitation and exposure therapy experiences in VR.',
+  },
+  {
+    image: 'images/industories/education.svg',
+    text: 'Education & Training',
+    description: 'Provide realistic learning environments that accelerate knowledge retention.',
+  },
+  {
+    image: 'images/industories/tourism.svg',
+    text: 'Public Sector & Smart Cities',
+    description: 'Visualize urban projects and cultural assets with immersive storytelling.',
+  },
+];
+export const technologyGridChangeData = [
+  {
+    image: '/images/arvrServices/eyeIcon.svg',
+    text: 'Realistic Engagement',
+    description: 'High-fidelity visuals and natural interactivity.',
+  },
+  {
+    image: '/images/arvrServices/mobIcon.svg',
+    text: 'Cross-Platform Performance',
+    description: 'Optimized for web, mobile, and headsets.',
+  },
+  {
+    image: '/images/arvrServices/scale.svg',
+    text: 'Scalability',
+    description: 'Designed to grow with your business.',
+  },
+  {
+    image: '/images/arvrServices/security.svg',
+    text: 'Data Security',
+    description: 'Enterprise-grade encryption and privacy compliance.',
+  },
+  {
+    image: '/images/arvrServices/experience.svg',
+    text: 'Tailored Experience',
+    description: 'Custom-built to your brand, goals, and audience.',
+  },
+  {
+    image: '/images/arvrServices/continue.svg',
+    text: 'Continuous Improvement',
+    description: 'Long-term optimization and updates.',
+  },
+];

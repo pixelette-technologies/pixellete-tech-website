@@ -1,6 +1,7 @@
 'use client';
 
 import { Container } from '@/components/Feature/Container/Container';
+import { backgroundImage } from '@/data/services/aiServices';
 import Image from 'next/image';
 import React, { useState } from 'react';
 import styles from './technologiesused.module.css';
@@ -24,20 +25,23 @@ type TechnologiesUsedProps = {
 const TechnologiesUsed: React.FC<TechnologiesUsedProps> = ({ technologies, title, subtitle }) => {
   const [activeTab, setActiveTab] = useState<keyof Technologies>(Object.keys(technologies)[0] as keyof Technologies);
 
-  const shortenTechName = (name: string) => {
-    const techMap: { [key: string]: string } = {
-      'AI development': 'AI',
-      'Blockchain development': 'Blockchain',
-      // Add more mappings as needed
-    };
-    return techMap[name] || name; // Return the shortened name or original if no mapping exists
-  };
+  // const shortenTechName = (name: string) => {
+  //   const techMap: { [key: string]: string } = {
+  //     'AI development': 'AI',
+  //     'Blockchain development': 'Blockchain',
+  //     // Add more mappings as needed
+  //   };
+  //   return techMap[name] || name; // Return the shortened name or original if no mapping exists
+  // };
 
   return (
     <>
-      <div style={{ position: 'relative' }}>
-        <div className="red-background-border" style={{ marginTop: '28rem' }}></div>
-      </div>
+
+      <Container className={styles.main}>
+        <div className={styles.cardSectionBackground}>
+          <img src={backgroundImage} alt="Background" />
+        </div>
+      </Container>
       <div className={styles.technologiesMain} id="sideMargin">
         <Container className="main margins">
           <center className={styles.mobilePadding}>

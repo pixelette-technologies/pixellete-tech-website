@@ -1,0 +1,68 @@
+import type { VideoShowcaseItem } from '@/components/Sections/Services/VideoShowcase/VideoShowcase';
+
+export const arVrVideoShowcaseData: VideoShowcaseItem[] = [
+  {
+    id: '1',
+    thumbnail: '/images/arvrServices/thumbnail1.jpg',
+    videoUrl: '/assets/arAndVr/vrbannner.mp4',
+    duration: '2:45',
+    title: 'Interactive Marketing Solutions',
+    description: 'Nestlé aimed to elevate its product presentation and customer interaction through advanced digital innovation.',
+  },
+  {
+    id: '2',
+    thumbnail: '/images/arvrServices/thumbnail2.jpg',
+    videoUrl: '/assets/arAndVr/vrbannner.mp4',
+    duration: '3:20',
+    title: 'AR/VR Exterior Design',
+    description: 'Traditional 2D visuals in architecture and landscaping often fail to convey the true scale and essence of a project.',
+  },
+  {
+    id: '3',
+    thumbnail: '/images/arvrServices/thumbnail3.jpg',
+    videoUrl: '/assets/arAndVr/vrbannner.mp4',
+    duration: '2:30',
+    title: 'AR/VR Interior Design',
+    description: 'Traditional interior design depends on imagination and static mockups, which can cause uncertainty and miscommunication.',
+  },
+  {
+    id: '4',
+    thumbnail: '/images/arvrServices/thumbnail4.jpg',
+    videoUrl: '/assets/arAndVr/vrbannner.mp4',
+    duration: '4:15',
+    title: 'AR/VR Exterior Design',
+    description: 'In architecture and landscaping, traditional renderings and 2D visuals often fail to convey the true scale and essence of a project.',
+  },
+  {
+    id: '5',
+    thumbnail: '/images/arvrServices/thumbnail5.jpg',
+    videoUrl: '/assets/arAndVr/vrbannner.mp4',
+    duration: '3:45',
+    title: 'Luxury villa view AR/VR Exterior Design',
+    description: 'In architecture and landscaping, standard 2D visuals often miss the true scale and spirit of a project.',
+  },
+  {
+    id: '6',
+    thumbnail: '/images/arvrServices/thumbnail6.jpg',
+    videoUrl: '/assets/arAndVr/vrbannner.mp4',
+    duration: '2:50',
+    title: 'Furniture shop immersive AR, VR',
+    description: 'Furniture retailers were seeking a way to modernize their shopping journey and reduce the uncertainty customers feel when purchasing items online.',
+  },
+  {
+    id: '7',
+    thumbnail: '/images/arvrServices/thumbnail7.jpg',
+    videoUrl: '/assets/arAndVr/vrbannner.mp4',
+    duration: '3:10',
+    title: 'Furniture shop immersive AR, VR',
+    description: 'Furniture retailers were seeking a way to modernize their shopping journey and reduce the uncertainty customers feel when purchasing items online.',
+  },
+  {
+    id: '8',
+    thumbnail: '/images/arvrServices/thumbnail8.jpg',
+    videoUrl: '/assets/arAndVr/vrbannner.mp4',
+    duration: '2:25',
+    title: 'Ladies dress in AR/VR',
+    description: 'Women\'s clothing retailers are looking to enhance the shopping experience and alleviate the doubts customers have when buying dresses online.',
+  },
+];

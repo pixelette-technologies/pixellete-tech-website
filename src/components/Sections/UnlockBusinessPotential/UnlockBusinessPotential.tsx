@@ -12,7 +12,7 @@ export const UnlockBusinessPotential = ({ heading, text, btnText }) => {
       <div className="unlockBussiness" data-aos="fade-up" data-aos-duration="500">
         <div>
           <h2>{heading}</h2>
-           className="secondary">{text}
+          <Text className="secondary">{text}</Text>
 
           <section className="social-links">
             <a

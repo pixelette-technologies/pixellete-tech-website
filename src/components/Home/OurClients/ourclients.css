@@ -5,7 +5,7 @@
   margin: 5rem 0;
 }
 .ourClients {
-  padding: 5rem 0rem;
+  padding: 24rem 5rem 0rem 0rem;
   /* background: linear-gradient(
   to bottom,
   #060203 0%,
@@ -15,6 +15,9 @@
   #060203 90%,
   #32323e 100%
 ); */
+}
+.ourClients p {
+  margin-bottom: 5rem;
 }
 .marquee-content {
   display: flex;

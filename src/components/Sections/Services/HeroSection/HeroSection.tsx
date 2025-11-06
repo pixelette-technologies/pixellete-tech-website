@@ -14,6 +14,13 @@ type HeroSectionProps = {
   images: { src: string; alt: string }[];
 };
 
+// Helper function to check if the file is a video based on extension
+const isVideoFile = (url: string): boolean => {
+  const videoExtensions = ['.mp4', '.webm', '.ogg', '.mov', '.avi', '.mkv', '.m4v'];
+  const lowerUrl = url.toLowerCase();
+  return videoExtensions.some(ext => lowerUrl.endsWith(ext));
+};
+
 export const HeroSection: React.FC<HeroSectionProps> = ({
   heading,
   description,
@@ -22,18 +29,42 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
   backgroundImage,
   images,
 }) => {
+  const isVideo = isVideoFile(backgroundImage);
+
   return (
     <>
+
       <div className="heroSection-background">
-        <Image
-          src={backgroundImage}
-          alt="background"
-          layout="responsive"
-          width={1200}
-          height={800}
-          className="hero-background-img"
-        />
+        {isVideo
+          ? (
+              <>
+                <video
+                  src={backgroundImage}
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className="hero-background-img"
+                />
+                <img
+                  src="/images/arvrServices/heroSectionBackground.svg"
+                  alt="overlay"
+                  className='arvr-overlay-image'
+                />
+              </>
+            )
+          : (
+              <Image
+                src={backgroundImage}
+                alt="background"
+                layout="responsive"
+                width={1200}
+                height={800}
+                className="hero-background-img absolute"
+              />
+            )}
       </div>
+
       <div className="heroSection">
         <Container className="main margins">
           <blockquote>
@@ -57,6 +88,11 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             <Link href={buttonLink}>
               <Button className="primary">
                 {buttonText}
+              </Button>
+            </Link>
+            <Link href={'/contact-us'}>
+              <Button className="primary">
+                {'Book a discovery call'}
               </Button>
             </Link>
           </div>

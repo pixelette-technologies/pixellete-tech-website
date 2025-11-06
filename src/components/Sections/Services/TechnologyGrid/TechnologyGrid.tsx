@@ -1,6 +1,9 @@
 'use client';
 import { Container } from '@/components/Feature/Container/Container';
-import React, { useState } from 'react';
+import { backgroundImage } from '@/data/services/aiServices';
+import Image from 'next/image';
+import React from 'react';
+import styles from '../ExpertiseGrid/expertisegrid.module.css';
 import './technologygrid.css';
 
 type ExpertiseArea = {
@@ -17,123 +20,64 @@ type TechnologyGridProps = {
   heading: string;
   description: string;
   expertiseAreas: ExpertiseArea[];
+  marqueeData: any;
   extraDataMapping: Record<string, ExtraData>; // Mapping object
 };
 
 export const TechnologyGrid: React.FC<TechnologyGridProps> = ({
   heading,
   description,
-  expertiseAreas,
-  extraDataMapping,
+  marqueeData,
+  extraDataMapping: _extraDataMapping,
 }) => {
   // const [selectedData, setSelectedData] = useState<ExtraData | null>(null);
+  // const [selectedData, setSelectedData] = useState<ExtraData | null>(
+  //   Object.values(extraDataMapping)[0] || null,
+  // );
 
-  const [selectedData, setSelectedData] = useState<ExtraData | null>(
-    Object.values(extraDataMapping)[0] || null,
-  );
-
-  const handleCardClick = (title: string) => {
-    const data = extraDataMapping[title];
-    setSelectedData(data);
-  };
+  // const handleCardClick = (title: string) => {
+  //   const data = extraDataMapping[title];
+  //   setSelectedData(data);
+  // };
 
   return (
-    <div className="technologyStackAi" id="sideMargin">
-      <center>
-        <h2
-          id="h_ani"
-        >
-          {heading}
-        </h2>
-        <p>
-          {description}
-        </p>
-
-      </center>
-      <Container className="main margins">
-        <div className="margins" style={{ marginBottom: '3rem' }}>
-          {/* Render expertise areas */}
-          {expertiseAreas?.map((area, index) => (
-            <div key={index}>
-              <div
-                key={index}
-                data-aos="fade-up"
-                data-aos-duration="600"
-                onMouseEnter={() => handleCardClick(area.title)} // Handle click
-                style={{
-                  cursor: 'pointer',
-                  textAlign: 'center',
-                  display: 'flex',
-                  alignItems: 'center',
-                  // flexDirection: 'column',
-                  gap: '1rem',
-                }}
-                className="mockButton"
-              >
-                <h5
-                  style={{
-                    color:
-                  selectedData?.title === area.title ? '#4292FA' : '#fff',
-                    transition: 'color 0.3s ease-in-out, transform 0.3s ease-in-out',
-                  }}
-                // onMouseEnter={(e) => {
-                //   e.currentTarget.style.transform = 'scale(1.05)';
-                //   // e.currentTarget.style.color = '#4292FA'; // Change to your preferred hover color
-                // }}
-                // onMouseLeave={(e) => {
-                //   e.currentTarget.style.transform = 'scale(1)';
-                //   // e.currentTarget.style.color = '#fff'; // Reset to default
-                // }}
-                >
-                  {area.title}
-                </h5>
-                {/* {area.description && (
-                <p>{area.description}</p>
-                )} */}
-
-              </div>
-              {index !== expertiseAreas.length - 1 && (
-                <hr
-                  style={{
-                    border: '0',
-                    borderLeft: '2px solid #ccc',
-                    height: '100%',
-                    margin: '0 auto',
-                    position: 'relative',
-                    left: '1.5rem',
-                  }}
-                  className="title-hr"
-                />
-              )}
-            </div>
-          ))}
-
-          {/* Last div to display selected data */}
-          <div
-            style={{
-              marginTop: '2rem',
-              padding: '1rem',
-              borderRadius: '8px',
-            }}
-          >
-            {selectedData
-            && (
-              <div
-                // style={{ display: 'flex', textAlign: 'center', gap: '2rem', height: '150px', alignItems: 'center' }}
-                className="technologyDes"
-              >
-                {/* <h5>{selectedData.title}</h5> */}
-                {selectedData.description && (
-                  <p style={{ maxWidth: '55ch' }}>
-                    {selectedData.description}
-                  </p>
-
-                )}
-              </div>
-            )}
-          </div>
+    <>
+      <Container className={styles.main}>
+        <div className={styles.cardSectionBackground}>
+          <img src={backgroundImage} alt="Background" />
         </div>
       </Container>
-    </div>
+      <Container className={styles.main}>
+        <div className={styles.expertiseGrid}>
+          <header>
+            <h2>
+              {heading}
+            </h2>
+            <p>{description}</p>
+          </header>
+
+          <center>
+
+            {/* Grid Layout */}
+            <div className={styles.gridContainer}>
+              {marqueeData.map((el: { image: string; text: string; description?: string }, index: number) => (
+                <div className={styles.flipCard} key={`${el.text}-${index}`}>
+                  <div className={styles.flipCardInner}>
+                    <div className={styles.flipCardFront}>
+                      <Image src={el.image} alt={el.text} width={44} height={44} />
+                      <p>{el.text}</p>
+                    </div>
+                    <div className={styles.flipCardBack}>
+                      {el.description ? <p>{el.description}</p> : null}
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+          </center>
+        </div>
+      </Container>
+    </>
   );
 };

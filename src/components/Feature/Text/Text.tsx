@@ -10,7 +10,7 @@ type TextProps = {
   children?: ReactNode;
 };
 
-export const Text: React.FCProps> = ({
+export const Text: React.FC<TextProps> = ({
   className = '',
   dangerouslySetInnerHTML,
   animation,

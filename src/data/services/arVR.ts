@@ -5,11 +5,12 @@ export const header = {
 };
 
 export const backgroundImage = '/images/aiServices/serviceSectionBackground.svg';
+export const arVrbackgroundImage = '/images/arvrServices/serviceSectionBackgroundred.svg';
 
 export const tgheading = 'Our AR/VR development solution guarantees';
 
 export const tgdescription
-  = 'Pixelette Tech’s AR/VR development team ensures that your immersive applications not only captivate but also perform seamlessly across devices.';
+  = 'Every solution we deliver is built for performance, precision, and long-term scalability.';
 
 export const tgexpertiseAreas = [
   { title: 'Immersive Experiences' },
@@ -85,16 +86,17 @@ export const commitmentData = [
   },
 ];
 
-export const aiHeroHeading = 'AR/VR Development Services';
+export const aiHeroHeading = ' Immersive AR/VR Experiences That Transform How People See, Learn, and Buy';
 
 export const aiHeroDescription
-  = 'Our expertise in immersive technology empowers businesses to enhance customer engagement and turn complex processes into seamless, interactive digital experiences.';
+  = `We design and develop interactive 3D environments for real estate, retail, heritage, healthcare, and beyond, built to engage, educate, and convert.`;
 
 export const aiHeroButtonText = 'Consult our experts';
 
 export const aiHeroButtonLink = '/contact-us';
 
 export const aiHeroBackgroundImage = '/images/arvrServices/heroSectionBackground.svg';
+export const vrHeroBackgroundImage = '/assets/arAndVr/vrbannner.mp4';
 
 export const aiHeroImages = [
   { src: '/images/arvrServices/box_1.svg', alt: 'box 1' },
@@ -104,86 +106,61 @@ export const aiHeroImages = [
 ];
 
 export const aiServicesHeading = 'Our services';
-
+export const arVrServicesHeading = 'Our AR/VR development services';
+export const arVrServicesDescription = 'We create immersive AR and VR solutions tailored to your business goals, from realistic simulations to interactive environments that boost engagement and deliver measurable outcomes.';
 export const aiServicesDescription
   = 'We specialize in providing AR/VR development services customized for various industries, platforms, and applications.\nUsing tools like Unity, Unreal Engine, ARKit, and ARCore, we bring immersive, interactive experiences to life. Ultimately, we enhance customer engagement and streamlining complex processes with the latest in 3D rendering, motion tracking, and spatial audio. ';
 
-export const vrServicelist
-= [
+export const vrServicelist = [
   {
-    title: 'AI Solutions',
+    title: 'AR/VR Services',
     items: [
-      'UI/UX Design',
-      'Consulting Services',
-      'Custom Application Development',
-      'Integration Services',
-      'Game Development Services',
-    ],
-  },
-  {
-    title: 'AI Applications',
-    items: [
-      'Content Creation',
-      'Simulation Development',
-      'Training and Educational Tools',
-      'Maintenance and Support',
+      'Design & Storyboarding',
+      'Custom AR/VR Application Development',
+      '3D Modeling & Asset Creation',
+      'Integration & Deployment',
+      'Training & Educational Simulations',
+      'Support & Maintenance',
     ],
   },
 ];
+
 export const vrServices = {
-  'UI/UX Design': {
+  'Design & Storyboarding': {
     imageSrc: '/images/aiServices/s_58.svg',
-    title: 'UI/UX Design for AR/VR',
+    title: 'Design & Storyboarding',
     description:
-    'We specialize in immersive UI/UX design for AR and VR environments, ensuring intuitive interfaces and user experiences. Our design approach prioritizes interactivity and ease of use, making digital spaces feel both accessible and engaging.',
+      'We translate your vision into detailed concepts, 3D layouts, and immersive storyboards.',
   },
-  'Consulting Services': {
-    imageSrc: '/images/aiServices/s_57.svg',
-    title: 'AR/VR Consulting Services',
-    description:
-    'We’re a well-known AR/VR app development company providing expert consulting to help you navigate the AR/VR landscape and use immersive technology. We assess your needs, offer insights and guide you through technology selection, strategy and implementation. This helps set a strong foundation for successful project deployment.',
-  },
-  'Custom Application Development': {
+  'Custom AR/VR Application Development': {
     imageSrc: '/images/aiServices/s_59.svg',
     title: 'Custom AR/VR Application Development',
     description:
-    'Our custom AR/VR app development services enhance user experiences and drive engagement. With a focus on delivering immersive, high-performance applications, our team combines augmented reality development and virtual reality development with advanced technology to make your vision a reality.',
+      'Full-cycle development of high-fidelity virtual experiences optimized for web, mobile, and headset.',
   },
-  'Integration Services': {
+  '3D Modeling & Asset Creation': {
     imageSrc: '/images/aiServices/s_52.svg',
-    title: 'AR/VR Integration Services',
+    title: '3D Modeling & Asset Creation',
     description:
-    'We help integrate AR and VR developed solutions into existing platforms and applications, transforming standard processes into interactive experiences. Our years of expertise allows us to create streamlined, efficient solutions that align with your business goals.',
+      'Realistic environments, lifelike textures, and spatially accurate objects that bring your world to life.',
   },
-  'Game Development Services': {
+  'Integration & Deployment': {
     imageSrc: '/images/aiServices/s_51.svg',
-    title: 'AR/VR Game Development Services',
+    title: 'Integration & Deployment',
     description:
-    'Our team of capable developers build captivating, interactive AR/VR games that transport users into exciting virtual worlds. Our AR/VR game development solutions create engaging, lifelike environments that resonate with players and enhance brand value.',
+      'Seamless setup across web, app, and headset environments with robust performance optimization.',
   },
-  'Content Creation': {
-    imageSrc: '/images/aiServices/s_53.svg',
-    title: 'AR/VR Content Creation',
-    description:
-    'We produce dynamic AR and VR content specialized to enhance user engagement and experience. Our AR/VR content creation services bring ideas to life, whether for training, marketing, healthcare or entertainment, ensuring immersive, memorable interactions that leave a lasting impact on your users.',
-  },
-  'Simulation Development': {
-    imageSrc: '/images/aiServices/s_60.svg',
-    title: 'AR/VR Simulation Development',
-    description:
-    'Our simulations offer lifelike experiences across various industries. As a trusted AR VR development company, we create realistic simulations that mimic real-world scenarios, allowing users to learn, practice, and engage in a safe, controlled digital environment.',
-  },
-  'Training and Educational Tools': {
+  'Training & Educational Simulations': {
     imageSrc: '/images/aiServices/s_55.svg',
-    title: 'AR/VR Training and Educational Tools',
+    title: 'Training & Educational Simulations',
     description:
-    'We help develop interactive AR/VR training and educational tools to empower learning through 3D experiences. Our AR/VR team delivers solutions that make complex concepts easy to understand, offering a hands-on approach to education.',
+      'Empower learners with immersive, interactive training and skill-based simulations.',
   },
-  'Maintenance and Support': {
+  'Support & Maintenance': {
     imageSrc: '/images/aiServices/s_54.svg',
-    title: 'AR/VR Maintenance and Support',
+    title: 'Support & Maintenance',
     description:
-    'Pixelette Technologies offers end-to-end maintenance and support, ensuring your AR/VR applications stay optimized and up-to-date even after they have been delivered. We provide ongoing assistance to address any issues you may face, maximize performance, and support your long-term business success in the digital space.',
+      'Continuous optimization, updates, and long-term technical support post-launch.',
   },
 };
 
@@ -303,3 +280,21 @@ export const vrTechnologies: Technologies = {
     { id: 24, name: 'Confluence for XR Documentation', icon: '/images/tech/logos/confluence.png' },
   ],
 };
+
+export const engagementModels = [
+  {
+    engagementType: 'Complete Outsourcing',
+    idealFor: 'Businesses seeking end-to-end AR/VR delivery',
+    benefits: 'Full-cycle execution, fast delivery, and measurable results',
+  },
+  {
+    engagementType: 'Staff Augmentation',
+    idealFor: 'Teams with existing infrastructure',
+    benefits: 'Plug-and-play specialists to bridge skill gaps',
+  },
+  {
+    engagementType: 'Dedicated Team',
+    idealFor: 'Ongoing AR/VR innovation projects',
+    benefits: 'Long-term collaboration with full project ownership',
+  },
+];

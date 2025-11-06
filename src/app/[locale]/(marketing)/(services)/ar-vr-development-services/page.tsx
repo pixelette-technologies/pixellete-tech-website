@@ -1,34 +1,37 @@
 import { OurClients } from '@/components/Home/OurClients/OurClients';
 import { EvaluateBusiness } from '@/components/Sections/EvaluateBusiness/EvaluateBusiness';
 import { AiServiceTable } from '@/components/Sections/Services/AiServiceTable/AiServiceTable';
+import { EngagementModels } from '@/components/Sections/Services/EngagementModels/EngagementModels';
 import ExpertiseGrid from '@/components/Sections/Services/ExpertiseGrid/ExpertiseGrid';
 import FaqsSection from '@/components/Sections/Services/FAQs/FaqsSection';
 import { HeroSection } from '@/components/Sections/Services/HeroSection/HeroSection';
 import { HowWeWork } from '@/components/Sections/Services/HowWeWork/HowWeWork';
 import { OurServices } from '@/components/Sections/Services/OurServices/OurServices';
 import { TechnologyGrid } from '@/components/Sections/Services/TechnologyGrid/TechnologyGrid';
+import { VideoShowcase } from '@/components/Sections/Services/VideoShowcase/VideoShowcase';
 import TechnologiesUsed from '@/components/Sections/TechnologyUsed/TechnologiesUsed';
-import { expertiseAiChangeData } from '@/data/expertise/expertiseAiChangeData';
+import { expertiseArVrChangeData, technologyGridChangeData } from '@/data/expertise/expertiseAiChangeData';
 import { arFaqs } from '@/data/faqs/arFaqs';
 import {
-  aiHeroBackgroundImage,
   aiHeroButtonLink,
   aiHeroButtonText,
   aiHeroDescription,
   aiHeroHeading,
-  aiHeroImages,
-  aiServicesDescription,
-  aiServicesHeading,
-  backgroundImage,
+  arVrbackgroundImage,
+  arVrServicesDescription,
+  arVrServicesHeading,
+  engagementModels,
   header,
   tgdescription,
   tgexpertiseAreas,
   tgExpertiseData,
   tgheading,
+  vrHeroBackgroundImage,
   vrServicelist,
   vrServices,
   vrTechnologies,
 } from '@/data/services/arVR';
+import { arVrVideoShowcaseData } from '@/data/services/videoShowcaseData';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 
 // Use the imported objects as needed in your component
@@ -49,8 +52,8 @@ export async function generateMetadata(props: IARVRProps) {
     description: t('meta_description'),
     keywords: t('meta_keywords'),
     alternates: {
-      canonical: `/ar-vr-development-services`
-    }
+      canonical: `/ar-vr-development-services`,
+    },
   };
 }
 
@@ -81,15 +84,15 @@ export default async function ARVR(props: IARVRProps) {
         '@type': 'ListItem',
         'position': 1,
         'name': 'Home',
-        'item': `/`
+        'item': `/`,
       },
       {
         '@type': 'ListItem',
         'position': 2,
         'name': 'AR/VR Development Services',
-        'item': `/ar-vr-development-services`
-      }
-    ]
+        'item': `/ar-vr-development-services`,
+      },
+    ],
   };
   // <script
   //       type="application/ld+json"
@@ -97,7 +100,7 @@ export default async function ARVR(props: IARVRProps) {
   //     />
   return (
     <>
-    <script
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
@@ -110,34 +113,47 @@ export default async function ARVR(props: IARVRProps) {
         description={aiHeroDescription}
         buttonText={aiHeroButtonText}
         buttonLink={aiHeroButtonLink}
-        backgroundImage={aiHeroBackgroundImage}
-        images={aiHeroImages}
+        backgroundImage={vrHeroBackgroundImage}
+        images={[]}
       />
+
       <OurClients />
+
       <OurServices
-        heading={aiServicesHeading}
-        description={aiServicesDescription}
+        heading={arVrServicesHeading}
+        description={arVrServicesDescription}
         serviceLists={vrServicelist}
         serviceMapping={vrServices}
       />
 
       <ExpertiseGrid
         header={header}
-        marqueeData={expertiseAiChangeData}
-        backgroundImage={backgroundImage}
+        marqueeData={expertiseArVrChangeData}
+        backgroundImage={arVrbackgroundImage}
       />
+
+      <VideoShowcase
+        title="Explore Our Immersive Showcases"
+        subtitle="A glimpse into the virtual worlds we've built, designed to inspire, engage, and redefine what's possible with AR and VR."
+        videos={arVrVideoShowcaseData}
+      />
+
       <TechnologyGrid
         heading={tgheading}
         description={tgdescription}
         expertiseAreas={tgexpertiseAreas}
+        marqueeData={technologyGridChangeData}
         extraDataMapping={tgExpertiseData}
       />
       <TechnologiesUsed
         technologies={vrTechnologies}
-        title="Our AR/VR development tech stack"
-        subtitle="Our go-to tech for unmatched results"
+        title="Our AR/VR technology ecosystem"
+        subtitle=" We combine the best platforms, SDKs, and engines to build experiences that perform flawlessly across every device."
       />
-      <AiServiceTable />
+
+      <EngagementModels models={engagementModels} />
+
+      {/* <AiServiceTable /> */}
       <HowWeWork />
       {/* <OurCommitment
         heading={ocheading}

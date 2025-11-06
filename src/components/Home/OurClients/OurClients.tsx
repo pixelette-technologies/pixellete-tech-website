@@ -57,11 +57,15 @@ export const OurClients: React.FC<OurClientsProps> = () => {
           <h2 id="h_ani">
             Trusted by leading innovators
           </h2>
+          <p>We collaborate with forward-thinking enterprises, startups, and public sector programs worldwide.</p>
         </center>
         <div // data-aos="fade-up" data-aos-duration="500"
         >
           <Marqueee />
         </div>
+        <center> 
+        <p>Supporting industries from healthcare to tourism, and innovation programs across the globe.</p>
+        </center>
       </Container>
     </div>
   );
