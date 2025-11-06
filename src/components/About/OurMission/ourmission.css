@@ -1,0 +1,85 @@
+.cardSectionBackground {
+  position: relative;
+}
+.cardSectionBackground > img {
+  position: absolute;
+  z-index: -90;
+  width: 100%;
+  margin-top: -65rem;
+}
+
+.main-container {
+  padding: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.image {
+  width: 40%;
+  max-width: 100%;
+  height: auto;
+}
+
+.content {
+  width: 50%;
+}
+
+.values {
+  font-size: 15px;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.section.reverse {
+  flex-direction: row-reverse;
+}
+/* Reverse the order of content for alternating layouts */
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .section {
+    flex-direction: column;
+    text-align: center;
+  }
+  .section.reverse {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .image {
+    width: 80%;
+    margin-bottom: 1rem;
+  }
+
+  .content {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .section.reverse {
+    flex-direction: column;
+  }
+  .values {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .image {
+    width: 100%;
+  }
+
+  .values {
+    font-size: 12px;
+  }
+}

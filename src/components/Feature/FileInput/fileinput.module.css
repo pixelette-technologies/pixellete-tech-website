@@ -1,0 +1,28 @@
+.inputFile {
+  margin-top: 2.4rem;
+}
+.inputFile > label {
+  font-size: 1.45rem;
+  font-weight: 500;
+  display: block;
+}
+.inputFile > input {
+  display: none;
+}
+.inputFile > section {
+  margin-top: 1.2rem;
+}
+.inputFile > section > section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1.2rem;
+  border-radius: 0.8rem;
+  padding: 3.15rem 0rem;
+  border: 1px dashed rgba(160, 161, 165, 0.3019607843);
+}
+.inputFile > section > section > p > span {
+  border-bottom: 1px solid white;
+  cursor: pointer;
+}

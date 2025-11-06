@@ -1,0 +1,147 @@
+.heroSection-background {
+  position: relative;
+  background: black;
+}
+.heroSection-background > img {
+  z-index: -1000;
+  position: absolute;
+  margin-left: -7rem;
+  margin-top: -20rem;
+  height: 127rem;
+  width: 100%;
+}
+/* .heroSection{
+  background-color: #007aff;
+  height: 80vh;
+} */
+@media only screen and (max-width: 37.5em) {
+  .heroSection-background > img {
+    margin-top: -30rem;
+    width: 180rem;
+    margin-left: -55rem;
+    display: none;
+  }
+}
+.heroSection > div {
+  margin-top: 5rem;
+  margin-bottom: 12rem;
+  position: relative;
+}
+@media only screen and (max-width: 37.5em) {
+  .heroSection > div {
+    margin-top: 10rem;
+    padding: 0rem 2rem;
+  }
+}
+.heroSection > div > blockquote {
+  width: 100%;
+}
+.heroSection > div > blockquote > img {
+  margin-top: 10rem;
+
+  position: absolute;
+  z-index: -100;
+}
+.heroSection > div > blockquote > *:first-child {
+  height: 12rem;
+  max-width: 17.5rem;
+  top: -7rem;
+  margin-left: 10rem;
+  padding-left: 1rem;
+  animation: rotateOpposite 20s linear infinite;
+}
+@media only screen and (max-width: 37.5em) {
+  .heroSection > div > blockquote {
+    display: none;
+  }
+  .heroSection > div > blockquote > *:first-child {
+    max-width: 9rem;
+    top: -5rem;
+  }
+}
+.heroSection > div > blockquote > *:nth-child(2) {
+  max-width: 10rem;
+  height: 14.13rem;
+  top: 20rem;
+  margin-left: 10rem;
+  animation: rotateOpposite 15s linear infinite;
+}
+@media only screen and (max-width: 37.5em) {
+  .heroSection > div > blockquote > *:nth-child(2) {
+    margin-left: 10rem;
+  }
+}
+.heroSection > div > blockquote > *:nth-child(3) {
+  right: 14rem;
+  height: 13rem;
+  margin-top: 6rem;
+  animation: rotateOpposite 25s linear infinite;
+}
+@media only screen and (max-width: 37.5em) {
+  .heroSection > div > blockquote > *:nth-child(3) {
+    right: 5rem;
+    /* margin-top: -8rem; */
+    height: 12rem;
+  }
+}
+.heroSection > div > blockquote > *:nth-child(4) {
+  right: 0;
+  margin-top: 28rem;
+  margin-right: 14rem;
+  animation: rotateOpposite 13s linear infinite;
+  height: 13rem;
+}
+.heroSection > div > h1 {
+  text-align: center;
+  font-size: 4.5rem;
+  max-width: 92rem;
+  margin: auto;
+  font-weight: 600;
+  line-height: 13rem;
+}
+@media only screen and (max-width: 62.6em) {
+  .heroSection > div > h1 {
+    /* font-size: 8.5rem; */
+    line-height: 10rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .heroSection > div > h1 {
+    /* font-size: 4rem; */
+    line-height: 6rem;
+  }
+}
+.heroSection > div > p {
+  text-align: center;
+  max-width: 78.8rem;
+  margin: auto;
+  padding-top: 1rem;
+  /* font-size: 1.5rem; */
+}
+.heroSection > div > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3.2rem;
+}
+.heroSection > div > div > * {
+}
+@media only screen and (max-width: 37.5em) {
+  .heroSection > div > div > * {
+    width: auto;
+  }
+}
+.heroSection > div > div > *:first-child {
+  margin-right: 1.5rem;
+}
+@media only screen and (max-width: 37.5em) {
+  .heroSection > div > div > *:first-child {
+    margin-right: 0rem;
+    margin-bottom: 2rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .heroSection > div > div {
+    flex-direction: column;
+  }
+}

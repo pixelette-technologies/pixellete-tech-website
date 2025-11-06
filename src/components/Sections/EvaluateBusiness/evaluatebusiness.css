@@ -1,0 +1,69 @@
+.evaluateBussiness {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 5rem;
+  margin: 10rem 0;
+}
+
+.leftSection {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.clutchLogos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.clutchLogo {
+  object-fit: contain;
+  transition: opacity 0.3s ease;
+}
+
+.clutchLogo:hover {
+  opacity: 0.8;
+}
+
+.evaluateBussiness > div > div {
+  width: 55rem;
+}
+
+@media screen and (max-width: 760px) {
+  .evaluateBussiness > * {
+    padding: 0 2%;
+  }
+  .evaluateBussiness {
+    margin-top: 2rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+  }
+  .unlockBussiness > div > section {
+    justify-content: center;
+  }
+  .evaluateBussiness > div > div {
+    width: 100%;
+  }
+  .clutchLogos {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .mobileSpace {
+    padding-inline: 19px;
+  }
+}
+.evaluateBussiness > header {
+  max-width: 61.6rem;
+}
+.evaluateBussiness > header > h2 {
+  margin-bottom: 1.6rem;
+}

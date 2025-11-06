@@ -1,0 +1,41 @@
+.SelectPlan {
+  padding: 0 10px;
+}
+.serviceWorkCards {
+  display: grid;
+  grid-template-columns: 1fr; /* Default: 1 column */
+  gap: 10px;
+  margin: 100px auto;
+  text-align: center;
+  width: 80%;
+  padding: 10px;
+}
+
+/* Medium screens (e.g., tablets) */
+@media (min-width: 768px) {
+  .serviceWorkCards {
+    text-align: left;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  }
+}
+
+/* Large screens (e.g., desktops) */
+@media (min-width: 1024px) {
+  .serviceWorkCards {
+    text-align: left;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  }
+}
+
+.serviceWorkCards > section > h1 {
+  /* font-size: 30px; */
+}
+
+.serviceWorkCards > section > h3 {
+  margin: 10px 0;
+  /* font-size: 20px; */
+}
+
+.serviceWorkCards > section > h5 {
+  /* font-size: 15px; */
+}
