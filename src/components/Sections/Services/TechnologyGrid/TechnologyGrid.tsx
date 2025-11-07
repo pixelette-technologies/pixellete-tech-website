@@ -14,21 +14,23 @@ type ExpertiseArea = {
 type ExtraData = {
   title: string;
   description?: string;
+  image?: string;
 };
 
 type TechnologyGridProps = {
   heading: string;
   description: string;
-  expertiseAreas: ExpertiseArea[];
-  marqueeData: any;
-  extraDataMapping: Record<string, ExtraData>; // Mapping object
+  expertiseAreas?: ExpertiseArea[];
+  marqueeData?: Array<{ image?: string; text: string; description?: string }>;
+  extraDataMapping?: Record<string, ExtraData>; // Mapping object
 };
 
 export const TechnologyGrid: React.FC<TechnologyGridProps> = ({
   heading,
   description,
+  expertiseAreas = [],
   marqueeData,
-  extraDataMapping: _extraDataMapping,
+  extraDataMapping: extraDataMapping,
 }) => {
   // const [selectedData, setSelectedData] = useState<ExtraData | null>(null);
   // const [selectedData, setSelectedData] = useState<ExtraData | null>(
@@ -60,11 +62,21 @@ export const TechnologyGrid: React.FC<TechnologyGridProps> = ({
 
             {/* Grid Layout */}
             <div className={styles.gridContainer}>
-              {marqueeData.map((el: { image: string; text: string; description?: string }, index: number) => (
+              {(marqueeData && marqueeData.length > 0
+                ? marqueeData
+                : expertiseAreas.map(area => ({
+                  text: area.title,
+                  description:
+                    area.description ?? extraDataMapping?.[area.title]?.description,
+                  image: extraDataMapping?.[area.title]?.image,
+                }))
+              ).map((el, index: number) => (
                 <div className={styles.flipCard} key={`${el.text}-${index}`}>
                   <div className={styles.flipCardInner}>
                     <div className={styles.flipCardFront}>
-                      <Image src={el.image} alt={el.text} width={44} height={44} />
+                      {el.image ? (
+                        <Image src={el.image} alt={el.text} width={44} height={44} />
+                      ) : null}
                       <p>{el.text}</p>
                     </div>
                     <div className={styles.flipCardBack}>
