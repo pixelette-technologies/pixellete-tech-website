@@ -100,7 +100,7 @@ export const VideoShowcase: React.FC<VideoShowcaseProps> = ({
                           <track kind="captions" srcLang="en" label="English captions" />
                           Your browser does not support the video tag.
                         </video>
-                        {/* Play Button Overlay */}
+
                         {!playingVideos[video.id] && (
                           <div
                             className={styles.playButtonOverlay}
