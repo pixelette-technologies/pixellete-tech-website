@@ -1,0 +1,67 @@
+@media only screen and (max-width: 37.5em) {
+  .heroSectionMarketing > center {
+    padding-top: 9rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+.heroSectionMarketing-background {
+  position: relative;
+}
+.heroSectionMarketing-background > img {
+  position: absolute;
+  margin-top: -12rem;
+  width: 100%;
+  z-index: -100;
+}
+.heroSectionMarketing > center {
+  padding-top: 10rem;
+  /* min-height: 80vh; */
+  /* padding-bottom: 4rem; */
+  max-width: 82rem;
+  margin: auto;
+  text-align: center;
+}
+@media only screen and (max-width: 37.5em) {
+  .heroSectionMarketing > center {
+    padding-top: 9rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+.heroSectionMarketing > center > h1 {
+  margin-bottom: 1.6rem;
+}
+.heroSectionMarketing > div > section {
+  margin-top: 3rem;
+  display: flex;
+  gap: 2.4rem;
+}
+@media only screen and (max-width: 50em) {
+  .heroSectionMarketing > div > section {
+    margin-top: 1.7rem;
+    flex-direction: column;
+  }
+}
+.heroSectionMarketing > div > section > div {
+  width: 49%;
+  background-color: #0f0f0fb3;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 2rem;
+  padding: 2.4rem;
+  transition: 0.3s ease-in-out;
+}
+@media only screen and (max-width: 50em) {
+  .heroSectionMarketing > div > section > div {
+    width: 100%;
+  }
+}
+.heroSectionMarketing > div > section > div > h1 {
+  margin-bottom: 2.4rem;
+}
+.heroSectionMarketing > div > section > div:hover {
+  transform: translateY(-1.2rem) scale(1.01);
+  outline: 0.1rem solid rgba(255, 255, 255, 0.288);
+  box-shadow: 0 0.4rem 7rem #e2e2e233;
+  z-index: 20;
+}

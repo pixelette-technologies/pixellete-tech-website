@@ -1,0 +1,145 @@
+.map {
+  margin-top: 12rem;
+  position: relative;
+}
+.map > center {
+  padding-bottom: 10rem;
+  max-width: 85rem;
+  margin: auto;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.map > center > h2 {
+  margin: 1.7rem;
+}
+.map > div > *:first-child {
+  top: 52.8%;
+  left: 28.4%;
+}
+.map > div > *:nth-child(2) {
+  top: 54%;
+  left: 24.8%;
+}
+.map > div > *:nth-child(3) {
+  top: 57.5%;
+  left: 24.3%;
+}
+.map > div > *:nth-child(4) {
+  top: 55%;
+  left: 26.5%;
+}
+.map > div > *:nth-child(5) {
+  top: 55%;
+  left: 23.1%;
+}
+.map > div > *:nth-child(6) {
+  top: 54%;
+  left: 45.7%;
+}
+.map > div > *:nth-child(7) {
+  top: 49%;
+  left: 48.5%;
+}
+.map > div > *:nth-child(8) {
+  top: 54.8%;
+  left: 56.5%;
+}
+.map > div > *:nth-child(9) {
+  top: 65%;
+  left: 75.5%;
+}
+.map > div > *:nth-child(10) {
+  top: 52%;
+  left: 49%;
+}
+.map > div > *:nth-child(11) {
+  top: 49%;
+  left: 52.5%;
+}
+.map > div > *:nth-child(12) {
+  top: 51%;
+  left: 51%;
+}
+.map > div > *:nth-child(13) {
+  top: 61%;
+  left: 19.2%;
+}
+.map > div > *:nth-child(14) {
+  top: 61%;
+  left: 25.2%;
+}
+.map > div > *:nth-child(15) {
+  top: 69%;
+  left: 34%;
+}
+.map > div > *:nth-child(16) {
+  top: 57%;
+  left: 67%;
+}
+.map > div > *:nth-child(17) {
+  top: 48.5%;
+  left: 46.34%;
+}
+.map > div > header {
+  position: absolute;
+  cursor: pointer;
+}
+.map > div > header > div {
+  position: relative;
+}
+.map > div > header > div > div {
+  background-color: transparent;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  top: -17rem;
+  left: 35%;
+}
+
+@media (max-width: 768px) {
+  .map > div > header > div > div {
+    display: none;
+  }
+}
+.map > div > header > div > div > section {
+  background-color: #0f0f0fb3;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1.8rem 2rem;
+  border-radius: 1rem;
+  width: 38rem;
+}
+.map > div > header > div > div > section > *:first-child {
+  margin: 0.6rem 0rem;
+}
+.map > div > header > div > div > section > *:not(:last-child) {
+  margin-bottom: 1.9rem;
+}
+.map > div > header > div > div > section > div {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+.map > div > header > div > img {
+  margin-left: -3rem;
+  margin-top: 6.5rem;
+  cursor: pointer;
+  width: 2.2rem;
+  height: 3.4rem;
+  transition: 0.3s ease-in-out;
+}
+.map > div > section > img {
+  width: 100%;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .map {
+    display: none;
+  }
+}
+
+.image-for-hover {
+  width: 100px;
+}

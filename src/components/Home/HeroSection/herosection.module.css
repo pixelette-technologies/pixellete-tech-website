@@ -1,0 +1,252 @@
+.heroSectionContainer {
+  position: relative;
+  width: 100%;
+  margin-top: 0;
+  padding-top: 0;
+  overflow: hidden;
+}
+
+.heroSectionBackground {
+  position: relative;
+  width: 100%;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.heroSectionBackground > img {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  z-index: 1;
+  top: 0;
+}
+
+.heroBackgroundImg {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  padding: 11rem 11rem 11rem 11rem;
+  overflow: hidden;
+  margin-top: 0;
+}
+
+.heroSection {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .heroSectionBackground > img {
+    margin-top: -30rem;
+    width: 180rem;
+    margin-left: -55rem;
+    display: none;
+  }
+}
+
+.heroSection > div {
+  position: relative;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .heroSection > div {
+    margin: 10rem 0;
+    padding: 0rem 2rem;
+  }
+}
+
+.heroSection > div > blockquote {
+  width: 100%;
+}
+
+.heroSection > div > blockquote > img {
+  margin-top: 10rem;
+  position: absolute;
+  z-index: -1;
+}
+
+.heroSection > div > blockquote > * {
+  will-change: transform;
+}
+
+.heroSection > div > blockquote > *:first-child {
+  height: 18.5rem;
+  max-width: 17.5rem;
+  margin-left: 5rem;
+  animation: rotateOpposite 20s linear infinite;
+}
+
+@keyframes rotateOpposite {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .heroSection > div > blockquote > *:first-child {
+    max-width: 14rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .content {
+    padding-inline: 40px !important;
+    padding-bottom: 48px !important;
+  }
+  .heroSection > div > blockquote > * {
+    display: none;
+  }
+}
+
+.heroSection > div > blockquote > *:nth-child(2) {
+  max-width: 14.3rem;
+  height: 14.13rem;
+  top: -3rem;
+  margin-left: -2rem;
+  animation: rotateOpposite 15s linear infinite;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .heroSection > div > blockquote > *:nth-child(2) {
+    margin-left: 10rem;
+  }
+}
+
+.heroSection > div > blockquote > *:nth-child(3) {
+  right: -7rem;
+  margin-top: -8rem;
+  animation: rotateOpposite 25s linear infinite;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .heroSection > div > blockquote > *:nth-child(3) {
+    right: 5rem;
+    margin-top: -4rem;
+    height: 15rem;
+  }
+}
+
+.heroSection > div > blockquote > *:nth-child(4) {
+  right: 18rem;
+  margin-top: 13rem;
+  margin-right: 14rem;
+  animation: rotateOpposite 13s linear infinite;
+}
+
+.heroSection > div > blockquote > *:nth-child(5) {
+  right: 16rem;
+  margin-top: 33rem;
+  animation: rotateOpposite 11s linear infinite;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .heroSection > div > blockquote > *:nth-child(5) {
+    right: 6rem;
+    margin-top: 15rem;
+  }
+}
+
+.heroSection > div > blockquote > *:nth-child(6) {
+  margin-top: 35rem;
+  height: 18.5rem;
+  max-width: 17.5rem;
+  margin-left: 3rem;
+  animation: rotateOpposite 17s linear infinite;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .heroSection > div > blockquote > *:nth-child(6) {
+    margin-top: 29rem;
+    display: none;
+  }
+}
+
+.heroSection > div > blockquote > *:nth-child(7) {
+  animation: rotateOpposite 30s linear infinite;
+  margin-top: 55rem;
+  height: 20.5rem;
+  max-width: 19.5rem;
+  margin-left: -8rem;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .heroSection > div > blockquote > *:nth-child(7) {
+    margin-top: 45rem;
+    height: 12rem;
+    margin-left: 0rem;
+  }
+}
+
+.heroSection > div > h1 {
+  text-align: center;
+  font-size: 8rem;
+  max-width: 20ch;
+  margin: auto;
+  font-weight: 600;
+  line-height: 11rem;
+}
+
+@media only screen and (max-width: 62.6em) {
+  .heroSection > div > h1 {
+    font-size: 8.5rem;
+    line-height: 10rem;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .heroSection > div > h1 {
+    font-size: 4rem;
+    line-height: 6rem;
+  }
+}
+
+.heroSection > div > p {
+  text-align: center;
+  max-width: 55ch;
+  margin: auto;
+  padding-top: 1rem;
+  font-size: 1.8rem;
+}
+
+.heroSection > div > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3.2rem;
+}
+
+.heroSection > div > div > * {
+}
+
+@media only screen and (max-width: 37.5em) {
+  .heroSection > div > div > * {
+    width: auto;
+  }
+}
+
+.heroSection > div > div > *:first-child {
+}
+
+@media only screen and (max-width: 37.5em) {
+  .heroSection > div > div > *:first-child {
+    margin-right: 0rem;
+    margin-bottom: 2rem;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .heroSection > div > div {
+    flex-direction: column;
+  }
+}

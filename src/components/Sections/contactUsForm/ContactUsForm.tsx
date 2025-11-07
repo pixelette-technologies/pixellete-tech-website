@@ -1,0 +1,205 @@
+'use client';
+import { Container } from '@/components/Feature/Container/Container';
+import Image from 'next/image';
+import React, { useEffect, useState } from 'react';
+import './contactusform.css';
+
+type ContactUsProps = {
+  backgrounds?: boolean;
+  header?: boolean;
+  insideHeading?: string;
+};
+
+type FormValues = {
+  fullName: string;
+  email: string;
+  phone: string;
+  refer: string;
+  message: string;
+};
+
+export const ContactUsForm: React.FC<ContactUsProps> = (props) => {
+  const [statusMessage, setStatusMessage] = useState<string>('');
+
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = '//js-eu1.hsforms.net/forms/embed/v2.js';
+    script.charset = 'utf-8';
+    script.type = 'text/javascript';
+    script.async = true;
+
+    script.onload = () => {
+      console.log('HubSpot form script loaded');
+
+      if (window.hbspt && window.hbspt.forms) {
+        hbspt.forms.create({
+          portalId: '145652385',
+          formId: 'fce98d79-3a21-4d66-8638-bba4617c0cbd',
+          region: 'eu1',
+          target: '.hubspot-form-container',
+        });
+      } else {
+        console.error('HubSpot form is not available');
+      }
+    };
+
+    document.body.appendChild(script);
+
+    // Cleanup: Remove the script when the component unmounts
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
+
+  // const dummyValues = [
+  //   'Search Engine',
+  //   'Clutch',
+  //   'Social Media',
+  //   'Referral',
+  //   'Others',
+  // ];
+
+  const initialValues: FormValues = {
+    fullName: '',
+    email: '',
+    phone: '',
+    refer: 'N/A',
+    message: '',
+  };
+
+  return (
+    <>
+      {!props.backgrounds && (
+        <Container className="main">
+          <div className="contactUs-background">
+            <Image
+              src="/assets/contactUs.contactUsLeftBackground"
+              alt="left background"
+              width={100}
+              height={100}
+            />
+            <Image
+              src="/assets/contactUs.contactUsRightBackground"
+              alt="right background"
+              width={100}
+              height={100}
+            />
+          </div>
+        </Container>
+      )}
+
+      <div className="contactUs">
+        {!props.header && (
+          <center>
+            <h1
+              id="h_ani"
+            >
+              Contact Us
+            </h1>
+
+            <p>
+              Get in touch to let us know what you’re looking for, and one of
+              our solutions architects will get back to you.
+            </p>
+
+          </center>
+        )}
+
+        <section>
+          <div>
+            {props.insideHeading && (
+              <h3>
+                {props.insideHeading}
+              </h3>
+            )}
+            <div className="hubspot-form-container"></div>
+            {/*
+            <Formik
+              initialValues={initialValues}
+              validateOnMount
+              validationSchema={data.validationContactUs}
+              onSubmit={(values, { resetForm }) => {
+                if (window.lintrk) {
+                  window.lintrk('track', { conversion_id: 19141409 });
+                  // console.log('conversion');
+                } else {
+                  console.error('LinkedIn tracking not initialized.');
+                }
+
+                const templateParams = {
+                  fullName: values.fullName,
+                  email: values.email,
+                  phone: `+ ${values.phone}`,
+                  reference: values.refer,
+                  message: values.message,
+                };
+
+                emailjs
+                  .send(
+                    'service_5y0itcg',
+                    'template_4aiiawr',
+                    templateParams,
+                    'LYS_0H8byHSkeaSrz',
+                  )
+                  .then((response) => {
+                    // console.log(values);
+                    // console.log(response);
+
+                    setStatusMessage('Email sent successfully!');
+                  })
+                  .catch((error) => {
+                    console.error(error);
+                    setStatusMessage('Failed to send email.');
+                  });
+
+                resetForm();
+              }}
+            >
+              {formik => (
+                <Form>
+                  <div className="contactUs-form">
+                    <div className="contactUs-form-flex">
+                      <FormInput
+                        name="fullName"
+                        label="Full Name"
+                        place="Enter your full name"
+                      />
+                      <FormInput
+                        name="email"
+                        label="Email"
+                        place="Enter your email"
+                      />
+                    </div>
+                    <InputPhoneNo
+                      name="phone"
+                      label="Phone Number"
+                      place="+1 (555) 000-0000"
+                    />
+                    <FormTextArea
+                      name="message"
+                      label="Message"
+                      place="Write your message..."
+                      rows={7}
+                      cols={30}
+                    />
+                    <Button
+                      className="primary"
+                      animation="fade-up"
+                      duration="800"
+                      type="submit"
+                    >
+                      Submit
+                    </Button>
+                    {statusMessage && (
+                      <div className="status-message">{statusMessage}</div>
+                    )}
+                  </div>
+                </Form>
+              )}
+            </Formik> */}
+          </div>
+        </section>
+      </div>
+    </>
+  );
+};

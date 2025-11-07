@@ -1,0 +1,41 @@
+export { default as box_1 } from './box_1.svg';
+
+export { default as box_2 } from './box_2.svg';
+export { default as box_3 } from './box_3.svg';
+export { default as box_4 } from './box_4.svg';
+export { default as e_1 } from './e_1.svg';
+
+export { default as e_2 } from './e_2.svg';
+export { default as e_3 } from './e_3.svg';
+export { default as e_4 } from './e_4.svg';
+export { default as e_5 } from './e_5.svg';
+export { default as e_6 } from './e_6.svg';
+export { default as e_7 } from './e_7.svg';
+
+export { default as heroSectionBackground } from './heroSectionBackground.svg';
+export { default as s_1 } from './s_1.svg';
+export { default as s_2 } from './s_2.svg';
+export { default as s_3 } from './s_3.svg';
+export { default as s_4 } from './s_4.svg';
+export { default as s_5 } from './s_5.svg';
+export { default as s_6 } from './s_6.svg';
+export { default as tsw_1 } from './tsw_1.svg';
+export { default as tsw_2 } from './tsw_2.svg';
+export { default as tsw_3 } from './tsw_3.svg';
+export { default as tsw_4 } from './tsw_4.svg';
+export { default as tsw_5 } from './tsw_5.svg';
+export { default as tsw_6 } from './tsw_6.svg';
+export { default as tsw_7 } from './tsw_7.svg';
+export { default as tsw_8 } from './tsw_8.svg';
+export { default as e_8 } from './tsw_8.svg';
+export { default as tsw_9 } from './tsw_9.svg';
+export { default as tsw_10 } from './tsw_10.svg';
+
+export { default as tsw_11 } from './tsw_11.svg';
+export { default as tsw_12 } from './tsw_12.svg';
+export { default as tsw_13 } from './tsw_13.svg';
+export { default as tsw_14 } from './tsw_14.svg';
+export { default as tsw_15 } from './tsw_15.svg';
+export { default as tsw_16 } from './tsw_16.svg';
+export { default as tsw_17 } from './tsw_17.svg';
+export { default as tsw_18 } from './tsw_18.svg';
