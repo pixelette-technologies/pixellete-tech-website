@@ -22,27 +22,30 @@ type ServiceMapping = {
 type OurServicesProps = {
   heading: string;
   description: string;
-  serviceLists: ServiceList[];
-  serviceMapping: ServiceMapping; // Add this prop
+  serviceLists?: ServiceList[];
+  serviceMapping?: ServiceMapping; // Add this prop
 };
 
 export const OurServices: React.FC<OurServicesProps> = ({
   heading,
   description,
-  serviceLists,
-  serviceMapping, // Accept mapping as a prop
+  serviceLists = [],
+  serviceMapping = {}, // Accept mapping as a prop
 }) => {
-  const initialService = Object.values(serviceMapping)[0] || null;
+  const initialService = Object.values(serviceMapping)[0] ?? null;
 
   const [currentService, setCurrentService] = useState<HighlightedService | null>(
     initialService,
   );
-  const handleServiceClick = (item: string) => {
-    if (!serviceMapping) {
-      console.error('Service mapping is undefined.');
-      return;
+  useEffect(() => {
+    if (!currentService) {
+      const fallbackService = Object.values(serviceMapping)[0];
+      if (fallbackService) {
+        setCurrentService(fallbackService);
+      }
     }
-
+  }, [currentService, serviceMapping]);
+  const handleServiceClick = (item: string) => {
     const newService = serviceMapping[item];
     if (newService) {
       // console.log('Setting current service to:', newService);
@@ -69,7 +72,7 @@ export const OurServices: React.FC<OurServicesProps> = ({
               key={idx}
               style={{ gap: '0rem' }}
             >
-              {list.items.map((item, index) => (
+              {list.items?.map((item, index) => (
                 <div
                   key={index}
                   style={{ gap: '0rem' }}
@@ -85,22 +88,24 @@ export const OurServices: React.FC<OurServicesProps> = ({
               ))}
             </div>
           ))}
-          <div
-            className="ourServicesBlock"
-            // style={{
-            //   width: '450px',
-            //   backgroundColor: '#0F0F0FB2',
-            //   padding: '2rem',
-            //   borderRadius: '13.84px',
-            //   height: '460px',
-            // }}
-          >
-            <Image src={currentService.imageSrc} alt={currentService.title} width={50} height={50} />
-            <br />
-            <h3>{currentService.title}</h3>
-            <br />
-            <p>{currentService.description}</p>
-          </div>
+          {currentService ? (
+            <div
+              className="ourServicesBlock"
+              // style={{
+              //   width: '450px',
+              //   backgroundColor: '#0F0F0FB2',
+              //   padding: '2rem',
+              //   borderRadius: '13.84px',
+              //   height: '460px',
+              // }}
+            >
+              <Image src={currentService.imageSrc} alt={currentService.title} width={50} height={50} />
+              <br />
+              <h3>{currentService.title}</h3>
+              <br />
+              <p>{currentService.description}</p>
+            </div>
+          ) : null}
         </div>
       </Container>
     </div>
