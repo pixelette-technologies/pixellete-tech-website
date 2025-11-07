@@ -1,0 +1,716 @@
+const caseStudiesData = [
+  {
+    slug: 'accessible-intelligence-assessment',
+    title: 'How AIA is Shaping the Future of Inclusive Hiring',
+    description: 'AIA or Accessible Intelligence Assessment is a specialized assessment tool that helps organizations with achieving their hiring quotes for individuals who have auditory, visual or dual impairments. The tool is backed by a pioneering consultancy, DiverSCInnova, that specializes in creating gamified, science-backed solutions for the support and development of individuals, particularly those who are differently abled. They collaborated with Pixelette Technologies for the technological development and maintenance of AIA. ',
+    businessType: 'Software-as-a-Service (SaaS)',
+    industry: 'Artificial Intelligence',
+    blocker: 'Many organizations around the world struggle to meet mandated hiring quotas for individuals with disabilities, facing challenges in identifying and assessing candidates with sensory, physical or intellectual impairments. This difficulty is compounded by the need to comply with legal and regulatory requirements for diversity hiring all the while making sure that candidates are effectively matched to roles that align with their abilities. Without an efficient and inclusive assessment solution, companies risk non-compliance, higher recruitment costs and missed opportunities to foster a truly diverse workforce.',
+    goal: 'DiverSCInnova aimed to develop a solution to support differently-abled individuals. The goal was to design a tool that enables inclusive hiring, professional development, and role alignment for companies, while also aiding educational planning and vocational guidance. By addressing these needs, DiverSCInnova sought to promote inclusivity and help organizations and educators effectively align talent with opportunities.',
+    solution: 'Pixelette Technologies developed AIA, a gamified cognitive mapping tool designed to help organizations meet diversity hiring quotas and support inclusive talent development. Made for individuals with sensory, physical or intellectual disabilities, AIA assesses up to 10 cognitive skills such as focus, attention and logical reasoning. It provides detailed reports highlighting candidates\' strengths, suitable roles and tips for skill enhancement. AIA also supports educational planning and vocational guidance, enabling educators and organizations to match skills with opportunities, comply with regulations and create inclusive work an learning environments.',
+    logo: '/images/casestudies/aia/aia-logo.png',
+    bannerImage: '/images/casestudies/aia/aia-header-image.svg',
+    techStack: [
+      { name: 'Reactjs', icon: '/images/tech/logos/reactjs.png' },
+      { name: 'Node.js', icon: '/images/tech/logos/nodejs.png' },
+      { name: 'MongoDB', icon: '/images/tech/logos/mongodb.png' },
+      { name: 'Stripe API', icon: '/images/tech/logos/stripe-api.png' },
+      { name: 'Openai', icon: '/images/tech/logos/openai.png' },
+    ],
+    impactStats: {
+      description: 'The tool’s effectiveness in assessing cognitive abilities and promoting inclusivity led to high user satisfaction and strong feedback, underscoring its success in meeting DiverSCInnova’s goals. All in all, AIA has proven to be a valuable asset in driving diversity, reducing recruitment costs and supporting inclusive hiring practices.',
+      percentage: '60%',
+      details: 'The idea of Non-Fungible Tokens...',
+    },
+    impactBoxes: [
+      { title: 'Cost efficiency', description: 'Estimated average savings of $20,000 per organization in recruitment costs due to better candidate matching.' },
+      { title: 'Integration success', description: '98% successful integration with existing recruitment tools (e.g., ATS systems)' },
+      { title: 'Improved hiring', description: '4.7/5 customer satisfaction rating based on post-assessment surveys meaning organizations experience faster hiring decisions with advanced assessment capabilities.' },
+    ],
+    process: 'Pixelette Technologies took an intentional, cross-departmental approach to developing AIA, deploying resources from research, design, development and our AI teams. The project was completed in 7 months, with each phase executed collaboratively to promote inclusivity, functionality and regulatory compliance.',
+    milestones: [
+      { title: 'Discovery and research', description: 'A dedicated team of experts from research and design departments worked together to conduct comprehensive analysis, including user needs assessments, stakeholder interviews and accessibility studies. This collaborative effort developed a clear understanding of the challenges and requirements for inclusive hiring and talent development.' },
+      { title: 'Design and development', description: 'Design and development teams integrated a gamified, AI-driven system to assess 10 key cognitive skills such as attention, logical reasoning and focus. The tool was intentionally built to be accessible for users with sensory, physical or intellectual disabilities, delivering an intuitive interface while mapping cognitive abilities with precision.' },
+      { title: 'AI model training and integrations', description: 'The AI and data science teams worked closely to train custom AI models capable of accurately mapping cognitive skills and sensory pathways. Integrations were developed to enable the tool to generate personalized reports, suggest suitable roles and offer development tips to give clients of AIA a personalized user experience.' },
+      { title: 'Testing and deployment', description: 'Our QA and testing teams rigorously tested the tool for accessibility and functionality across diverse platforms. After refining the design based on feedback, we deployed and delivered a fully operational and scalable product.' },
+    ],
+  },
+  {
+    slug: 'adwatch',
+    title: 'How AdWatch is Reshaping Ad-Free Streaming',
+    description: 'AdWatch is an advanced AI-powered solution designed to detect and remove advertisements from TV input streams and media campaigns. By providing smooth, interruption-free viewing experiences, AdWatch is addressing one of the biggest challenges in media consumption today. They collaborated with Pixelette Technologies for the design, technological development and deployment of their platform.',
+    businessType: 'Technology Company',
+    industry: 'Artificial Intelligence',
+    blocker: 'Interruptive ads during media campaigns pose a significant challenge for companies aiming to deliver a smooth viewer experience. These ads not only disrupt engagement but also diminish the overall effectiveness of ad campaigns, often leaving audiences frustrated and disengaged. The inability to detect and remove such ads efficiently exacerbates the issue, leading to a decline in user satisfaction and, ultimately, customer retention. Without a solution to address these interruptions, businesses risk losing loyal customers, facing decreased campaign ROI and tarnishing their brand reputation in highly competitive markets.',
+    goal: 'AdWatch aimed to completely change the viewer experience by creating an advanced AI automated system designed to detect intrusive advertisements with precision. The system\'s objective was to remove unwanted content in real-time to provide uninterrupted and smooth input streams for media campaigns.',
+    solution: 'To address these challenges, AdWatch partnered with Pixelette Technologies to create an AI-driven ad Detection & removal System. By utilizing artificial intelligence and a carefully curated tech stack, we developed the AdWatch Engine, an automated solution that not only detects and removes intrusive ads in real time but also intelligently filters out unwanted content across multiple media streams. The system’s advanced capabilities allow for precise ad identification to minimize disruptions and ensure integration with existing campaign infrastructures. Furthermore, this technology provides advertisers with greater control over their content, improving viewer satisfaction, enhancing campaign performance and delivering a consistent, uninterrupted experience across all platforms.',
+    logo: '/images/casestudies/adwatch/adwatch-logo.png',
+    bannerImage: '/images/casestudies/adwatch/adwatch-header-image.svg',
+    techStack: [
+      { name: 'Linux', icon: '/images/tech/logos/linux.png' },
+      { name: 'vgg-16', icon: '/images/tech/logos/vgg-16.png' },
+      { name: 'Python', icon: '/images/tech/logos/python.png' },
+      { name: 'Openai', icon: '/images/tech/logos/openai.png' },
+      { name: 'audfprint', icon: '/images/tech/logos/audfprint.png' },
+      { name: 'FFMPEG', icon: '/images/tech/logos/ffmpeg.png' },
+    ],
+    impactStats: {
+      description: 'AdWatch achieved transformative results through this collaboration, redefining ad removal and enhancing its operational efficiency. The innovative solutions implemented laid a strong foundation for ad detection, strong integration and superior viewer engagement outcomes.',
+      percentage: '60%',
+      details: 'The idea of Non-Fungible Tokens...',
+    },
+    impactBoxes: [
+      { title: 'Ad detection', description: 'Estimated average savings of $20,000 per organization in recruitment costs due to better candidate matching.' },
+      { title: 'Improved viewer experience', description: 'Achieved a 95% reduction in viewer interruptions.' },
+      { title: 'Unwanted content removal', description: 'Accomplished a 75% reduction in unwanted content across all input streams.' },
+    ],
+    process: 'Pixelette Technologies adopted a cross-functional approach to develop the AdWatch Engine, using expertise from our research, design, development and AI teams. The project was completed in 4 months, with each phase working in sync to deliver a flawless, automated ad detection and removal solution.',
+    milestones: [
+      { title: 'Design and development', description: 'Then our design and development teams developed a custom AI-powered framework personalized to AdWatch’s specific requirements. The system uses a Linux-Python stack and integrates FFmpeg, Audfprint and VGG-16 technologies. This innovative solution ensured precise functionality, optimized performance and integration for AdWatch’s needs.' },
+      { title: 'Testing and deployment', description: 'In the final stages of the project, we were able to achieve up to 98% accuracy in ad detection through continued testing and refinements. We successfully delivered and integrated the AdWatch Engine into live media streams, enabling real-time functionality and immediate impact on enhancing ad monitoring and viewer experience.' },
+      { title: 'Discovery and research', description: 'Our team conducted an in-depth analysis of current ad interruptions alongside comprehensive viewer feedback. The goal was to identify key pain points, patterns and potential improvements. Insights gathered were able to guide us in refining strategies to enhance the overall viewer experience and ad engagement.' },
+      { title: 'Integrations', description: 'Our next challenge was integration. The team integrated the AI-powered AdWatch into existing media infrastructure, especially focusing on compatibility with various platforms for smooth interaction and little to none disruption.' },
+    ],
+  },
+  {
+    slug: 'fusio',
+    title: 'How Fusio Portfolio Simplifies Crypto Portfolio Management',
+    description: 'Fusio Portfolio is an AI-powered platform that simplifies crypto investing with expertly curated portfolios for different risk levels. It helps both novice and professional traders optimize their strategies and avoid missed opportunities. Fusio Portfolio partnered with Pixelette Technologies for the platform’s design, development and deployment.',
+    businessType: 'Crypto Portfolio Management',
+    industry: 'Blockchain/DeFi',
+    blocker: 'Crypto investing can be overwhelming, especially for those unfamiliar with market trends, risk assessment and portfolio diversification. Many investors struggle to build and manage balanced portfolios, leading to missed opportunities and poor investment outcomes. Without an intuitive portfolio-building tool, users risk inefficient capital allocation and increased financial losses.',
+    goal: 'BlockGuard, the company behind Fusio Portfolio, set out to simplify crypto investing with an user-friendly platform that offers expertly curated portfolios for different risk levels. The objective was to help both novice and experienced traders build diversified portfolios with ease to reduce risks and optimize returns.',
+    solution: 'Pixelette Technologies developed an accessible, AI-powered platform that provides investors with pre-curated crypto portfolios designed for various risk tolerances. With integrated analytics, smart allocation strategies and a streamlined interface, Fusio Portfolio empowers traders to make informed decisions and navigate the market with confidence.',
+    logo: '/images/casestudies/fusio/fusio-card-logo.png',
+    bannerImage: '/images/casestudies/fusio/fusio-casestudy-image.png',
+    techStack: [
+      { name: 'Nextjs', icon: '/images/tech/logos/nextjs.png' },
+      { name: 'Hyperledger', icon: '/images/tech/logos/hyperledger-fabric.png' },
+      { name: 'Nodejs', icon: '/images/tech/logos/nodejs.png' },
+      { name: 'Solidity', icon: '/images/tech/logos/solidity.png' },
+      { name: 'aws', icon: '/images/tech/logos/aws.png' },
+      { name: 'etherjs', icon: '/images/tech/logos/ethersjs.png' },
+      { name: 'bsc', icon: '/images/tech/logos/binance-smart-chain-bsc.png' },
+    ],
+    impactStats: {
+      description: 'Fusio Portfolio has recently been beta-launched, making crypto investing more accessible and user-friendly. Early adoption has shown promising outcomes, with users benefiting from simplified portfolio management and reduced investment risks. As more data is gathered, additional insights into the platform’s long-term impact will emerge.',
+      percentage: '60%',
+      details: 'The idea of Non-Fungible Tokens...',
+    },
+    impactBoxes: [
+      { title: 'Growing user adoption', description: 'New user signups increased by 200% in the first three months, reflecting strong demand for a crypto investment solution.' },
+      { title: 'Simplified access', description: 'Over 90% of users found the platform easier to use than traditional investment tools, reinforcing its effectiveness in simplifying crypto investing.' },
+      { title: 'Industry recognition', description: 'Gained traction among key opinion leaders (KOLs) in the crypto space, including CryptoSensei, CryptoFace and Grey Jabesi.' },
+    ],
+    process: 'Pixelette Technologies adopted a strategic, multi-phase approach to developing Fusio Portfolio, leveraging expertise from research, design, development, and blockchain teams. The project was completed in 6 months, ensuring optimal functionality, security, and user experience.',
+    milestones: [
+      { title: 'Design and development', description: 'The design and development teams built a user-friendly, AI-driven portfolio management platform with a well-structured UI/UX and a strong backend. Features like risk-based portfolio selection and automated investment tracking were integrated for a smoother trading experience.' },
+      { title: 'Testing and deployment', description: 'In the final stages of the project, we were able to achieve up to 98% accuracy in ad detection through continued testing and refinements. We successfully delivered and integrated the AdWatch Engine into live media streams, enabling real-time functionality and immediate impact on enhancing ad monitoring and viewer experience.' },
+      { title: 'Discovery and research', description: 'Our research team analyzed crypto trading challenges in competing products, investor behaviors and market trends to define the platform’s technical requirements and align it with user needs.' },
+      { title: 'Blockchain and smart contract integration', description: 'Our team of blockchain specialists developed smart contract-based portfolio management, allowing secure and transparent investments in predefined portfolios. Ether.js and Solidity were used to facilitate smooth and straightforward transaction execution.' },
+    ],
+  },
+  {
+    slug: 'lytics',
+    title: 'How Lytics Boosted Real-Time Insights with AI-Powered Monitoring',
+    description: 'Lytics’ AI-powered news monitoring system enables businesses to process real-time data and conduct sentiment analysis at scale. By using advanced news scraping and sentiment analysis, the platform delivers actionable insights to users. To enhance scalability, precision and real-time processing, Lytics partnered with Pixelette Technologies to strengthen its ability to drive smarter, data-driven decision-making.',
+    businessType: 'B2B SaaS',
+    industry: 'AI Analytics',
+    blocker: 'Lytics faced significant challenges in processing real-time data and conducting sentiment analysis at scale. Accurately interpreting large datasets quickly was a major hurdle, especially when monitoring a vast range of news sources. Without a scalable, high-precision system, Lytics risked inefficiencies, missed opportunities and delays in responding to critical market trends.',
+    goal: 'To overcome these challenges, Lytics aimed to improve its platform with AI-driven capabilities that could process real-time data more efficiently, improve sentiment analysis accuracy and expand source coverage. The goal was to refine the system’s ability to deliver actionable insights to users while ensuring smooth scalability and operational efficiency.',
+    solution: 'Lytics partnered with Pixelette Technologies to strengthen its platform with advanced AI-powered news monitoring and sentiment analysis capabilities. Our team helped enhance the system’s ability to scrape and analyze vast amounts of news data in real time to improve accuracy and responsiveness. By refining the platform’s scalability and real-time processing, this collaboration empowered Lytics to provide businesses with smarter, data-driven awareness.',
+    logo: '/images/casestudies/lytics/lytics-logo.png',
+    bannerImage: '/images/casestudies/lytics/lytics-casestudy-image.png',
+    techStack: [
+      { name: 'python', icon: '/images/tech/logos/python.png' },
+      { name: 'tensorflow', icon: '/images/tech/logos/tensorflow.png' },
+      { name: 'Reactjs', icon: '/images/tech/logos/reactjs.png' },
+      { name: 'nodejs', icon: '/images/tech/logos/nodejs.png' },
+      { name: 'aws', icon: '/images/tech/logos/aws.png' },
+    ],
+    impactStats: {
+      description: 'By integrating AI-driven news monitoring and sentiment analysis, Pixelette Technologies helped Lytics enhance its platform’s accuracy, scalability, and efficiency. These advancements enabled the system to process and interpret vast amounts of real-time data with greater precision.',
+      percentage: '60%',
+      details: 'The idea of Non-Fungible Tokens...',
+    },
+    impactBoxes: [
+      { title: 'Precision enhancement', description: 'Reduced sentiment analysis errors by 60%, delivering more accurate and actionable insights.' },
+      { title: 'Expanded coverage', description: 'Increased the number of monitored news sources by 200%, broadening real-time data access.' },
+      { title: 'Optimized performance', description: 'Boosted AI-based scraping efficiency by 70%, enabling faster and more reliable data extraction.' },
+      { title: 'Better scalability ', description: 'Tripled real-time data handling capacity (3x), allowing Lytics to process larger datasets without performance trade-offs.' },
+    ],
+    process: 'Pixelette Technologies collaborated with Lytics using a cross-functional, phased approach to make sure the platform’s efficiency, scalability and integration matched with Lytics\' objectives. Over six months, the project focused on refining accuracy, performance and AI-driven capabilities for real-time news monitoring and sentiment analysis.',
+    milestones: [
+      { title: 'Design and development', description: 'Testing was conducted to validate the platform’s performance under diverse conditions and datasets. After final refinements, the enhanced solution was deployed, providing Lytics with a fully operational system capable of scaling with their evolving needs.' },
+      { title: 'Testing and deployment', description: 'In the final stages of the project, we were able to achieve up to 98% accuracy in ad detection through continued testing and refinements. We successfully delivered and integrated the AdWatch Engine into live media streams, enabling real-time functionality and immediate impact on enhancing ad monitoring and viewer experience.' },
+      { title: 'Discovery and research', description: 'Pixelette’s research and design teams conducted in-depth market analysis and reviewed user feedback to understand the complexities of real-time data processing and sentiment analysis. This phase helped define all technical requirements to make sure that the system aligned with Lytics\' business goals.' },
+      { title: 'AI model training and integrations', description: 'The AI and data science teams collaborated to train sophisticated machine learning models for precise sentiment analysis and real-time data processing. We also developed seamless integrations with news sources, ensuring the system could deliver actionable insights across multiple media platforms.' },
+    ],
+  },
+  {
+    slug: 'blockguard',
+    title: 'How BlockGuard Network is Building a User-First Blockchain',
+    description: 'BlockGuard Network (BGN) is an advanced Layer-1 blockchain designed to bridge the gap between security, decentralization and user experience in the blockchain landscape. The platform enables developers to build accessible decentralized applications (dApps) with enhanced usability for both retail and institutional users. The parent company behind BGN, BlockGuard, partnered with Pixelette Technologies for the design, development, integration and deployment of the platform for top-notch functionality and the latest security features.',
+    businessType: 'Layer-1 Blockchain',
+    industry: 'Blockchain/Web3',
+    blocker: 'Many blockchain networks focus on scalability and security but often neglect user experience, making it difficult for both retail and institutional users to engage easily with decentralized applications. The lack of intuitive design and accessibility creates adoption barriers, majorly limiting blockchain’s potential for mainstream use. Without a user-friendly Layer-1 blockchain, developers face challenges in creating secure, decentralized applications that appeal to a wider audience.',
+    goal: 'BlockGuard aimed to build a user-focused blockchain ecosystem that improves developer accessibility, security and cross-chain functionality. The goal was to create a Layer-1 blockchain with on-chain 2FA, multi-signature wallets, zero-knowledge proofs (ZKPs) and inter-blockchain communication (IBC) while delivering an intuitive user experience. A governance token, BGRD, was also introduced to add utility for platform users.',
+    solution: 'Pixelette Technologies developed BlockGuard’s Layer-1 blockchain with built-in multi-factor authentication, ZKPs, and IBC to strengthen security and interoperability. This infrastructure allows developers to build accessible dApps while maintaining strong security for both retail and institutional users. With EVM compatibility, the platform supports easy integration with existing blockchain networks and is designed for long-term scalability.',
+    logo: '/images/casestudies/blockguard/blockguard-logo.png',
+    bannerImage: '/images/casestudies/blockguard/blockguard-casestudy-image.png',
+    techStack: [
+      { name: 'polkadot', icon: '/images/tech/logos/polkadot.png' },
+      { name: 'Hyperledger', icon: '/images/tech/logos/hyperledger-fabric.png' },
+      { name: 'go', icon: '/images/tech/logos/golang.png' },
+      { name: 'c++', icon: '/images/tech/logos/c-plus.png' },
+      { name: 'reactjs', icon: '/images/tech/logos/reactjs.png' },
+    ],
+    impactStats: {
+      description: 'By integrating AI-driven news monitoring and sentiment analysis, Pixelette Technologies helped Lytics enhance its platform’s accuracy, scalability, and efficiency. These advancements enabled the system to process and interpret vast amounts of real-time data with greater precision.',
+      percentage: '60%',
+      details: 'The idea of Non-Fungible Tokens...',
+    },
+    // impactBoxes: [
+    // { title: 'Precision enhancement', description: 'Reduced sentiment analysis errors by 60%, delivering more accurate and actionable insights.' },
+    // { title: 'Expanded coverage', description: 'Increased the number of monitored news sources by 200%, broadening real-time data access.' },
+    // { title: 'Optimized performance', description: 'Boosted AI-based scraping efficiency by 70%, enabling faster and more reliable data extraction.' },
+    // { title: 'Better scalability', description: 'Tripled real-time data handling capacity (3x), allowing Lytics to process larger datasets without performance trade-offs.' },
+    // ],
+    process: 'Pixelette Technologies took a structured, cross-functional approach to developing BlockGuard’s Layer-1 blockchain, making sure that each phase aligned with their mission of enhancing security, accessibility and developer usability.',
+    milestones: [
+      { title: 'Design and development', description: 'The development teams built a streamlined blockchain infrastructure to support dApp creation, integrating on-chain two-factor authentication (2FA) and multi-signature wallets, zero-knowledge proofs and inter-blockchain communication (IBC). The platform was designed to maximize security and usability for both retail and institutional users.' },
+      { title: 'Testing and deployment', description: 'The blockchain underwent rigorous security audits and performance testing to validate its resilience. After refinements, BlockGuard was successfully deployed. The team delivered a secure, accessible and interoperable blockchain ecosystem to the client.' },
+      { title: 'Discovery and research', description: 'A dedicated team conducted an in-depth analysis of blockchain adoption challenges, focusing on user experience, security, and interoperability. This research defined the technical requirements for a Layer-1 blockchain that balances decentralization with accessibility.' },
+      { title: 'Security and interoperability', description: 'Pixelette’s blockchain engineers implemented advanced cryptographic security measures and EVM compatibility, allowing BlockGuard to connect with existing blockchain networks while maintaining high-security standards.' },
+    ],
+  },
+  {
+    slug: 'beyorch',
+    title: 'How Beyorch Digital Token is Reshaping Financial Markets',
+    description: 'Beyorch Digital Token is a blockchain-based investment solution designed to bring transparency and efficiency to financial markets. It provides investors with a secure, decentralized ecosystem to optimize returns while reducing risks. Beyorch partnered with Pixelette Technologies to develop a strong platform for secure transactions and automated financial management.',
+    businessType: 'Defi Investment Ecosystem',
+    industry: 'Blockchain/DeFi',
+    blocker: 'Traditional financial systems lack transparency and efficiency, making it difficult for investors to track assets and maximize profitability. Without an automated, secure process, inefficiencies and risk exposure increase, limiting investor confidence and financial growth.',
+    goal: 'Beyorch aimed to build a decentralized financial ecosystem where investors could easily manage assets, reduce reliance on intermediaries, and benefit from secure, automated transactions. The objective was to enhance transparency, efficiency, and profitability through blockchain-driven solutions.',
+    solution: 'Pixelette Technologies developed a blockchain-powered investment platform that integrates smart contracts, automated financial processes and secure tokenomics. This solution empowers investors with real-time asset tracking, instant transactions, and enhanced security, for a flawless investment experience.',
+    logo: '/images/casestudies/beyorch/beyorch-card-logo.png',
+    bannerImage: '/images/casestudies/beyorch/beyorch-slider-image.png',
+    techStack: [
+      { name: 'polkadot', icon: '/images/tech/logos/polkadot.png' },
+      { name: 'Hyperledger', icon: '/images/tech/logos/hyperledger-fabric.png' },
+      { name: 'go', icon: '/images/tech/logos/stripe-api.png' },
+      { name: 'c++', icon: '/images/tech/logos/mysql.png' },
+      { name: 'reactjs', icon: '/images/tech/logos/reactjs.png' },
+    ],
+    impactStats: {
+      description: 'By integrating AI-driven news monitoring and sentiment analysis, Pixelette Technologies helped Lytics enhance its platform’s accuracy, scalability, and efficiency. These advancements enabled the system to process and interpret vast amounts of real-time data with greater precision.',
+      percentage: '60%',
+      details: 'The idea of Non-Fungible Tokens...',
+    },
+    // impactBoxes: [
+    // { title: 'Precision enhancement', description: 'Reduced sentiment analysis errors by 60%, delivering more accurate and actionable insights.' },
+    // { title: 'Expanded coverage', description: 'Increased the number of monitored news sources by 200%, broadening real-time data access.' },
+    // { title: 'Optimized performance', description: 'Boosted AI-based scraping efficiency by 70%, enabling faster and more reliable data extraction.' },
+    // { title: 'Better scalability', description: 'Tripled real-time data handling capacity (3x), allowing Lytics to process larger datasets without performance trade-offs.' },
+    // ],
+    process: 'Pixelette Technologies executed a structured, multi-phase approach to building the Beyorch Digital Token platform for a secure, scalable and investor-friendly solution.',
+    milestones: [
+      { title: 'Platform development', description: 'Our development team built a smart contract-powered financial ecosystem, incorporating automated asset management, secure transactions and real-time investment tracking.' },
+      { title: 'Testing and deployment', description: 'Comprehensive security audits and stress testing were conducted to validate transaction integrity, scalability and performance. After final refinements, the platform was successfully deployed.' },
+      { title: 'Discovery and research', description: 'We conducted a deep analysis of financial market inefficiencies, investor concerns, and blockchain-based investment solutions to define the platform’s architecture and security requirements.' },
+      { title: 'Blockchain implementation', description: 'We implemented Ethereum-based smart contracts to automate investment transactions in order to deliver transparency, efficiency and security for all stakeholders.' },
+    ],
+  },
+  {
+    slug: 'sandoz',
+    title: 'How Sandoz Optimized Pharma Ops with a Centralized Dashboard',
+    description: 'Sandoz, a leading pharmaceutical company, struggled with fragmented data and inefficient analytics, slowing down decision-making and strategic growth. Without a unified system, monitoring campaign performance and extracting actionable insights was challenging. To address this, Sandoz partnered with Pixelette Technologies to develop a centralized dashboard that streamlined their operations and improved data-driven decision-making.',
+    businessType: 'Pharmaceutical Company',
+    industry: 'Pharmaceutical & Healthcare',
+    blocker: 'Sandoz lacked an integrated system to compile and analyze real-time business data. Their existing platforms operated in silos, making it difficult to track campaign performance, extract insights and drive informed decision-making. This fragmentation hindered operational efficiency and scalability in the South African market.',
+    goal: 'Sandoz set out to build an advanced dashboard that consolidated all campaign data into a single, intuitive platform. The objective was to accelerate decision-making, enhance analytics capabilities, and drive revenue growth within the pharmaceutical sector.',
+    solution: 'Pixelette Technologies designed a real-time analytics dashboard customized to Sandoz’s operational needs. By centralizing campaign data and integrating advanced visualization tools, the platform provided deeper insights, improved efficiency and truly empowered Sandoz to make faster, data-driven decisions.',
+    logo: '/images/casestudies/sandoz/sandoz-card-logo.png',
+    bannerImage: '/images/casestudies/sandoz/sandoz-slider-image.png',
+    techStack: [
+      { name: 'polkadot', icon: '/images/tech/logos/polkadot.png' },
+      { name: 'Hyperledger', icon: '/images/tech/logos/hyperledger-fabric.png' },
+      { name: 'go', icon: '/images/tech/logos/stripe-api.png' },
+      { name: 'c++', icon: '/images/tech/logos/mysql.png' },
+      { name: 'reactjs', icon: '/images/tech/logos/reactjs.png' },
+    ],
+    impactStats: {
+      description: 'Sandoz’s centralized dashboard significantly improved decision-making speed and revenue growth, reinforcing the importance of real-time data in pharmaceutical operations.',
+      percentage: '60%',
+      details: 'The idea of Non-Fungible Tokens...',
+    },
+    impactBoxes: [
+      { title: 'Growing decision-making efficiency', description: '40% improvement in decision-making speed, enabling faster and more strategic business operations.' },
+      { title: 'Revenue growth in pharma market', description: '20% increase in revenue, driven by real-time analytics and data-driven insights.' },
+    ],
+    process: 'Pixelette Technologies executed a structured, multi-phase approach to provide a flawless and high-performance solution. The project was completed in four months, delivering an intuitive and scalable analytics platform.',
+    milestones: [
+      // 2
+      { title: 'Design and development', description: 'Using Datorama and Moqups, we developed a scalable and intuitive dashboard tailored to Sandoz’s needs. The platform was designed to integrate real-time analytics and campaign performance tracking making sure that data-driven insights were easily accessible. By focusing on user-friendly design and seamless functionality, we optimized the dashboard for both efficiency and usability.' },
+      // 4
+      { title: 'Testing and deployment', description: 'To guarantee accuracy and reliability, we conducted testing to refine data processing to be sure of dashboard efficiency and eliminate any inconsistencies. Once all parameters were optimized, we successfully deployed the solution leaving Sandoz with real-time, data-driven decision-making capabilities.' },
+      // 1
+      { title: 'Discovery and research', description: 'We began with an in-depth analysis of Sandoz’s data management challenges and operational bottlenecks. Our team identified inefficiencies in their existing systems and defined the technical requirements necessary to align the solution with their business goals. This phase set the foundation for a robust and scalable dashboard.' },
+      // 3
+      { title: 'Data analytics optimization', description: 'We implemented advanced data visualization tools to provide meaningful insights and improve decisions. Our team also focused on improving system responsiveness and refining the user interface for a better experience. These enhancements ensured that the dashboard delivered high-quality, real-time analytics without performance lags.' },
+    ],
+  },
+  {
+    slug: 'neurostack',
+    title: 'How NeuroStack Changed Audio Content with Advanced Text-to-Speech',
+    description: 'NeuroStack, a leading AI solutions platform, sought to develop an advanced text-to-speech (TTS) system that could streamline content generation while maintaining high-quality, natural-sounding voice output. Their existing system required significant manual intervention, lacked efficiency and struggled with speech clarity. To overcome these challenges, NeuroStack partnered with Pixelette Technologies to create a newer AI-powered TTS platform.',
+    businessType: 'AI Solutions Platform',
+    industry: 'AI & Automation',
+    blocker: 'NeuroStack’s v1 text-to-speech technology faced limitations in speech clarity, processing speed and usability. The lack of a scalable and automated solution made it difficult to generate lifelike audio efficiently. Additionally, manual processes slowed down content workflows which prevented smooth text-to-speech conversion for diverse applications.',
+    goal: 'NeuroStack aimed to develop a more advanced AI-powered text-to-speech platform capable of processing large text volumes while delivering high-quality, natural voice synthesis. The objective was to improve speech clarity, reduce latency, and integrate easily into content workflows, ultimately boosting user engagement.',
+    solution: 'Pixelette Technologies designed and deployed a scalable, AI-driven TTS platform that significantly improved speech synthesis accuracy and content automation. Utilizing the latest AI voice models, the system enabled real-time text-to-speech conversion with lifelike audio output, reducing the need for manual adjustments and enhancing overall efficiency.',
+    logo: '/images/casestudies/neurostack/neurostack-card-logo.png',
+    bannerImage: '/images/casestudies/neurostack/neurostack-slider-image.png',
+    techStack: [
+      { name: 'react', icon: '/images/tech/logos/reactjs.png' },
+      { name: 'Hyperledger', icon: '/images/tech/logos/openai.png' },
+      { name: 'go', icon: '/images/tech/logos/typescript.png' },
+    ],
+    impactStats: {
+      description: 'NeuroStack’s AI-powered TTS system delivered significant improvements in content automation, speech clarity and processing efficiency.',
+      percentage: '60%',
+      details: 'The idea of Non-Fungible Tokens...',
+    },
+    impactBoxes: [
+      { title: 'Improved decision-making', description: '65% improvement in AI-backed decision-making processes for content creation.' },
+      { title: 'Reduction in data discrepancies', description: '40% decrease in errors and inconsistencies in generated speech output.' },
+      { title: 'Speech clarity enhancement', description: '80% improvement in voice synthesis accuracy for lifelike and natural-sounding audio.' },
+      { title: 'Content automation boost', description: '3x faster TTS processing speed, enabling real-time voice generation.' },
+    ],
+    process: 'Pixelette Technologies followed a structured, multi-phase approach, completing the project in six months to ensure scalability, precision and improved performance.',
+    milestones: [
+      // 2
+      { title: 'Design and development', description: 'Using React, OpenAI and TypeScript, we built a scalable, user-friendly TTS platform. The integration of AI-driven voice synthesis models allowed for high-quality speech generation, providing an intuitive and accessible user experience.' },
+      // 4
+      { title: 'Testing and deployment', description: 'Through extensive testing, we refined speech accuracy, system performance, and content automation workflows. After successful validation, the solution was deployed smoothly, enabling NeuroStack to generate high-quality voice content with minimal effort.' },
+      // 1
+      { title: 'Discovery and research', description: 'We conducted an in-depth analysis of NeuroStack’s content generation challenges and identified key inefficiencies in their existing TTS workflows. Our research focused on refining the technical requirements for an easy AI-driven solution.' },
+      // 3
+      { title: 'AI model training and optimization', description: 'We trained and fine-tuned AI-based speech models to enhance voice realism and clarity. Our team also optimized processing speed to enable real-time text-to-speech conversion, ensuring smooth and accurate voice synthesis.' },
+    ],
+  },
+  {
+    slug: 'neom',
+    title: 'How NEOM Cut Manual Work and Improved Ad Analytics Efficiency',
+    description: 'NEOM needed a faster, more efficient way to process ad analytics data from TikTok, Snapchat, and Facebook. Manual data aggregation slowed reporting and impacted decision-making. To solve this, NEOM partnered with Pixelette Technologies, and our team worked closely with them to develop a system that automated data retrieval, enhanced analytics visualization and improved reporting accuracy.',
+    businessType: 'Ad Analytics & Automation',
+    industry: 'Marketing Technology',
+    blocker: 'NEOM faced inefficiencies in collecting, processing and visualizing ad analytics data across multiple social media platforms like TikTok, Snapchat and Facebook. Manual data compilation consumed valuable time, delaying insights and affecting reporting accuracy. Without an automated system, the workflow remained fragmented and slow.',
+    goal: 'NEOM aimed to automate and optimize its ad analytics pipeline, reducing the time spent on data retrieval and reporting. The objective was to implement a scalable system that improved efficiency, accuracy and overall analytics performance.',
+    solution: 'Pixelette Technologies developed an automated data processing system for NEOM, using Azure Databricks, Azure Blobs and Datorama. This solution streamlined data retrieval, centralized analytics and enhanced visualization to reduce manual workload and improve reporting accuracy.',
+    logo: '/images/casestudies/neom/neom-card-logo.png',
+    bannerImage: '/images/casestudies/neom/neom-slider-image.png',
+    techStack: [
+      { name: 'react', icon: '/images/tech/logos/reactjs.png' },
+      { name: 'Hyperledger', icon: '/images/tech/logos/openai.png' },
+      { name: 'go', icon: '/images/tech/logos/typescript.png' },
+    ],
+    impactStats: {
+      description: 'The new system delivered measurable improvements, revolutionizing NEOM’s ad analytics efficiency.',
+      percentage: '60%',
+      details: 'The idea of Non-Fungible Tokens...',
+    },
+    impactBoxes: [
+      { title: 'Reduced manual data compilation', description: '70% decrease in time spent manually aggregating ad analytics data.' },
+      { title: 'Improved reporting efficiency', description: '75% reduction in time required for ad analytics reporting.' },
+    ],
+    process: 'We took a structured, multi-phase approach to building NEOM’s optimized script-processing system. From research to deployment, our team ensured efficiency, scalability and long-term reliability. The project was successfully completed within three months.',
+    milestones: [
+      // 2
+      { title: 'Design and development', description: 'We developed an optimized data processing system using Azure Databricks and Azure Blobs. To enhance real-time analytics visualization, we integrated Datorama making sure that NEOM had a clear, interactive view of their ad performance data.' },
+      // 4
+      { title: 'Testing and deployment', description: 'Before deployment, the system was deeply tested. We validated data accuracy, stress-tested system performance and also looked into integration with NEOM’s existing tools. After fine-tuning, we successfully deployed the solution, empowering NEOM with a faster, more efficient ad analytics workflow.' },
+      // 1
+      { title: 'Discovery and research', description: 'Our team collaborated with NEOM to analyze their existing data workflows, pinpoint inefficiencies, and define key technical requirements for automation. We mapped out pain points and designed a customized solution to address them.' },
+      // 3
+      { title: 'Automation and optimization', description: 'Our engineers automated data retrieval and compilation processes, eliminating repetitive manual work. This significantly improved processing speed and data accuracy, making reporting seamless and reliable.' },
+    ],
+  },
+  {
+    slug: 'digital-asset-vault',
+    title: 'How Digital Asset Vault is Redefining Secure Crypto Storage',
+    description: 'Digital Asset Vault is a blockchain-powered platform designed to protect cryptocurrencies from theft and unauthorized access. With cold-storage wallets and multi-signature security features, it provides individuals and enterprises with a reliable way to store digital assets. Pixelette Technologies collaborated with the client to develop a security-focused solution that prioritizes asset protection without compromising usability.',
+    businessType: 'Crypto Storage & Security Platform',
+    industry: 'Blockchain',
+    blocker: 'Crypto security breaches, asset theft, and lost private keys have made it difficult for individuals and businesses to protect their digital assets. Many existing solutions lacked both accessibility and enterprise-grade security, leaving users vulnerable to financial loss. A secure, scalable storage solution was needed to prevent unauthorized access while allowing controlled asset management.',
+    goal: 'Digital Asset Vault set out to create a secure, user-friendly storage platform for digital assets with zero incidents of crypto theft. The focus was on integrating cold-storage wallets, private key certification and multi-signature wallet capabilities to provide a strong security framework.',
+    solution: 'Pixelette Technologies helped develop the platform to provide secure cryptocurrency storage with cold-storage wallets, private key certificates, and multi-signature wallets. This combination protects assets from cyber threats, ensures verified ownership and enables shared control for added security.',
+    logo: '/images/casestudies/digital-asset-vault/digital-asset-vault-card-logo.png',
+    bannerImage: '/images/casestudies/digital-asset-vault/digital-asset-vault-slider.png',
+    techStack: [
+      { name: 'react', icon: '/images/tech/logos/reactjs.png' },
+      { name: 'Hyperledger', icon: '/images/tech/logos/openai.png' },
+      { name: 'go', icon: '/images/tech/logos/typescript.png' },
+    ],
+    impactStats: {
+      description: 'Digital Asset Vault is redefining cryptocurrency security, eliminating theft risks and providing a reliable way for users to store and manage their assets safely.',
+      percentage: '60%',
+      details: 'The idea of Non-Fungible Tokens...',
+    },
+    impactBoxes: [
+      { title: 'Crypto theft prevention', description: '0 reported incidents in the first year, proving its effectiveness in protecting digital assets.' },
+      { title: 'Cold storage adoption', description: '60% of active users opted for cold storage, highlighting strong demand for secure solutions.' },
+      { title: 'Early enterprise adoption', description: '100+ businesses onboarded within the first 6 months, demonstrating rapid trust and adoption.' },
+    ],
+    process: 'We followed a structured, security-focused approach to ensure the highest level of asset protection and platform functionality.',
+    milestones: [
+      // 2
+      { title: 'Design and development', description: 'We designed an intuitive interface and built a secure backend to support cold-storage wallets, private key certification and multi-signature wallets. The system was structured to balance security with ease of use.' },
+      // 4
+      { title: 'Testing and deployment', description: 'Our security team conducted extensive penetration testing, audits, and performance evaluations. Once the system met our tough security standards, we deployed it to provide a trusted solution for digital asset storage.' },
+      // 1
+      { title: 'Research & strategy', description: 'Our team analyzed common crypto security challenges, storage vulnerabilities, and user concerns. This research guided the development of a platform designed to eliminate risks associated with asset theft and unauthorized access.' },
+      // 3
+      { title: 'Security & compliance implementation', description: 'To strengthen the platform’s defenses, we incorporated multi-layered encryption, access control mechanisms and compliance with cybersecurity best practices.' },
+    ],
+  },
+  {
+    slug: 'chysler',
+    title: 'How the \'Stay Sane\' NFT Collection Bridged Fine Art and Blockchain',
+    description: 'The Stay Sane NFT collection redefined the fusion of traditional fine art and blockchain by tokenizing the physical artwork of Charles Salvador Bronson. This initiative bridged digital and physical art, offering collectors a unique experience. In collaboration with Pixelette Technologies, the project delivered a secure, user-friendly NFT marketplace that preserved Bronson’s artistic vision through blockchain innovation.',
+    businessType: 'NFT Marketplace',
+    industry: 'Blockchain',
+    blocker: 'The client needed a platform to connect traditional fine art with NFTs. Key challenges included producing high-resolution digital renderings of physical artwork, integrating secure blockchain transactions, and designing an engaging experience for collectors. Without a reliable marketplace, Bronson’s digital art vision risked losing both authenticity and potential buyers.',
+    goal: 'The objective was to create an intuitive NFT marketplace that securely hosted and sold digital representations of Bronson’s artwork. The platform needed to support NFT minting and ownership verification, deliver high-resolution digital artwork, and provide a user-friendly experience for collectors and investors. Additionally, it aimed to drive strong sales while maintaining the exclusivity of Bronson’s collection.',
+    solution: 'Pixelette Technologies built a secure, blockchain-powered NFT marketplace for the Stay Sane collection. The platform authenticated ownership, facilitated secure transactions, and offered an immersive digital art experience. With advanced NFT integration, collectors could acquire unique digital assets directly linked to Bronson’s physical works, expanding both their accessibility and value.',
+    logo: '/images/casestudies/chysler/chysler-logo.png',
+    bannerImage: '/images/casestudies/chysler/chysler-casestudy-image.png',
+    techStack: [
+      { name: 'nodejs', icon: '/images/tech/logos/nodejs.png' },
+      { name: 'hardhat', icon: '/images/tech/logos/hardhat.png' },
+      { name: 'web3js', icon: '/images/tech/logos/web3js.png' },
+      { name: 'solidity', icon: '/images/tech/logos/solidity.png' },
+      { name: 'IPFS', icon: '/images/tech/logos/ipfs.png' },
+      { name: 'go', icon: '/images/tech/logos/typescript.png' },
+    ],
+    impactStats: {
+      description: 'The implementation of the \'Stay Sane\' NFT marketplace achieved outstanding results, successfully bringing fine art to the blockchain.',
+      percentage: '60%',
+      details: 'The idea of Non-Fungible Tokens...',
+    },
+    impactBoxes: [
+      { title: 'Marketplace success', description: 'Generated approximately £500,000 in total sales, proving strong demand for Bronson’s digital collectibles.' },
+      { title: 'Rapid sales', description: '80% of NFTs sold within the first hour, highlighting immediate collector interest.' },
+      { title: 'Art & blockchain fusion', description: 'Linked 10% of NFTs to physical artwork, setting a new benchmark for art tokenization.' },
+      { title: 'Smooth user experience', description: 'Attracted art collectors, crypto investors, and NFT enthusiasts worldwide through a secure and accessible platform.' },
+    ],
+    process: 'Pixelette Technologies followed a structured, four-phase approach to develop the Stay Sane NFT marketplace to create a secure and accessible digital art platform.',
+    milestones: [
+      // 2
+      { title: 'Design and development', description: 'Then our design and development teams jumped in to create a high-performance blockchain marketplace using Solidity, Web3.js and IPFS, with an intuitive UI/UX for a smooth user experience.' },
+      // 4
+      { title: 'Testing and deployment', description: 'Finally, we tested the marketplace for security, performance and blockchain functionality before launching the platform successfully.' },
+      // 1
+      { title: 'Research & strategy', description: 'We conducted in-depth market analysis on NFT trends, audience behavior and competitors to define a scalable platform framework.' },
+      // 3
+      { title: 'NFT minting & integration', description: 'Our blockchain team implemented ERC-721A smart contracts to tokenize Bronson’s artwork, providing verifiable ownership and high-resolution digital assets.' },
+    ],
+  },
+  {
+    slug: 'diamond-nxt',
+    title: 'How DIAMOND NXT is Transforming the Diamond Trading Industry',
+    description: 'DIAMOND NXT is redefining diamond trading by combining blockchain security with tokenization to create a transparent, efficient and trustworthy marketplace. The platform provides real-time provenance tracking, allowing diamonds to be authenticated and traded with confidence. By removing inefficiencies in the traditional market, DIAMOND NXT builds trust among stakeholders and attracts new investors. Pixelette Technologies handled the design, development and deployment of this advanced solution.',
+    businessType: 'Tokenized Trading Ecosystem',
+    industry: 'Blockchain',
+    blocker: 'The diamond trading industry has long struggled with transparency, authentication, and trust. Proving a diamond’s origins and ethical sourcing remains a challenge, discouraging buyers and investors. The lack of a secure digital marketplace for tokenization further limits market participation, leading to inefficiencies and security risks. Without a blockchain-powered system, stakeholders face financial losses, fraudulent claims and restricted growth opportunities.',
+    goal: 'DIAMOND NXT set out to build a secure, blockchain-based ecosystem where diamonds could be traded with verified provenance. The objective was to create a digital marketplace that guarantees authenticity, strengthens investor confidence and simplifies tokenized asset trading.',
+    solution: 'Pixelette Technologies built DIAMOND NXT using Solidity, Truffle, ERC-1155, and IPFS for secure provenance tracking and tokenized diamond assets. React.js and Web3.js powered the trading interface, while Node.js and Moralis handled real-time data. This blockchain marketplace modernized diamond trading with automated transactions and verifiable authenticity.',
+    logo: '/images/casestudies/diamond-nxt/diamond-nxt-card-logo.png',
+    bannerImage: '/images/casestudies/diamond-nxt/diamond-nxt-image-slider.png',
+    techStack: [
+      { name: 'nodejs', icon: '/images/tech/logos/nodejs.png' },
+      { name: 'moralis', icon: '/images/tech/logos/moralis.png' },
+      { name: 'hardhat', icon: '/images/tech/logos/hardhat.png' },
+      { name: 'web3js', icon: '/images/tech/logos/web3js.png' },
+      { name: 'solidity', icon: '/images/tech/logos/solidity.png' },
+      { name: 'IPFS', icon: '/images/tech/logos/ipfs.png' },
+      { name: 'truffle', icon: '/images/tech/logos/truffle.png' },
+    ],
+    impactStats: {
+      description: 'DIAMOND NXT is transforming the diamond trading industry by providing a secure, transparent and blockchain-powered marketplace for provenance tracking and tokenization.',
+      percentage: '60%',
+      details: 'The idea of Non-Fungible Tokens...',
+    },
+    impactBoxes: [
+      { title: 'Provenance tracking', description: '98% of diamonds now have verifiable provenance, strengthening trust and authenticity in trading.' },
+      { title: 'Trader engagement', description: 'Over 1,500 active traders onboarded, demonstrating strong adoption and market confidence.' },
+      { title: 'Tokenization growth', description: 'More than $10M USD worth of diamonds successfully tokenized, expanding investment opportunities.' },
+      { title: 'User retention', description: 'Achieved a 70% retention rate after three months, reflecting platform reliability and trader satisfaction.' },
+    ],
+    process: 'We followed a structured, multi-phase approach to develop DIAMOND NXT, delivering full functionality, security, and a smooth trading experience.',
+    milestones: [
+      // 2
+      { title: 'Design and development', description: 'The design and development teams at Pixelette Technologies built a blockchain-powered trading platform using React.js and Web3.js for a user-friendly interface. We structured a tokenization system that securely represents diamonds as digital assets.' },
+      // 4
+      { title: 'Testing and deployment', description: 'We conducted thorough security testing and performance evaluations to refine platform stability. Once optimized, DIAMOND NXT was successfully deployed to provide traders with a reliable and transparent marketplace' },
+      // 1
+      { title: 'Research & strategy', description: 'Our team analyzed the diamond trading industry to identify key issues in provenance tracking, security and tokenization. This research guided the development of DIAMOND NXT, shaping it to meet real market demands.' },
+      // 3
+      { title: 'Blockchain & smart contract implementation', description: 'Our blockchain team developed Solidity-based smart contracts using Truffle, ERC-1155 and IPFS. These contracts established verifiable provenance tracking and secure transactions, allowing traders to confirm authenticity with confidence.' },
+    ],
+  },
+  {
+    slug: 'mind-coach-ai',
+    title: 'How MindCoach AI Made Mental Health Care More Accessible',
+    description: 'MindCoach AI, an innovative mental health platform, sought to address the accessibility and responsiveness issues in traditional mental health support systems. Many individuals facing anxiety and stress lacked timely assistance and struggled with inconsistent care. To bridge this gap, MindCoach AI partnered with Pixelette Technologies to develop an AI-driven solution that provides real-time emotional support, behavioral analysis, and proactive mental health management.',
+    businessType: 'AI Mental Health Coaching',
+    industry: 'HealthTech',
+    blocker: 'Traditional mental health systems often lack accessibility, immediate support and effective tracking. Many individuals facing stress and anxiety struggle to find timely assistance. Moreover, conventional models often lead to delayed intervention and inconsistent care. To take this idea from idea to execution, Pixelette Technologies stepped in to help MindCoach AI with the strategy, design, development and deployment of their AI mental health coaching platform. ',
+    goal: 'MindCoach AI aimed to improve mental health support by integrating artificial intelligence into real-time coaching and emotional analysis. The goal was to provide instant assistance, monitor emotional patterns, and enable proactive mental well-being management.',
+    solution: 'Pixelette Technologies developed MindCoach AI, an intelligent mental health platform designed to offer real-time emotional support and behavioral insights. Our team built a system that analyzes user behavior, delivers AI-powered coaching, and provides continuous emotional tracking. By implementing advanced sentiment analysis, we created a solution that helps users take control of their mental wellness.',
+    logo: '/images/casestudies/mind-coach-ai/mind-coach-ai-logo.png',
+    bannerImage: '/images/casestudies/mind-coach-ai/mind-coach-ai-casestudy-image.png',
+    techStack: [
+      { name: 'nodejs', icon: '/images/tech/logos/python.png' },
+      { name: 'moralis', icon: '/images/tech/logos/tensorflow.png' },
+      { name: 'hardhat', icon: '/images/tech/logos/pytorch.png' },
+      { name: 'IPFS', icon: '/images/tech/logos/aws.png' },
+      { name: 'web3js', icon: '/images/tech/logos/postgresql.png' },
+      { name: 'solidity', icon: '/images/tech/logos/reactjs.png' },
+    ],
+    impactStats: {
+      description: 'The launch of MindCoach AI’s intelligent mental health platform significantly improved accessibility, engagement and mental well-being outcomes.',
+      percentage: '60%',
+      details: 'The idea of Non-Fungible Tokens...',
+    },
+    impactBoxes: [
+      { title: '24/7 mental health assistance', description: 'Users received round-the-clock AI-driven support, improving access to mental health resources.' },
+      { title: 'Stronger emotional guidance', description: 'Real-time sentiment analysis enabled instant responses, helping users manage emotional challenges effectively.' },
+      { title: 'Higher engagement rates', description: 'User interaction increased by 70% through AI-powered recommendations and continuous support.' },
+      { title: 'Stress reduction', description: 'Users reported a 40% decrease in stress and anxiety after regular use of the platform.' },
+    ],
+    process: 'To develop the AI-driven mental health platform, we followed a structured approach that combined research, development and continuous testing.',
+    milestones: [
+      // 2
+      { title: 'Development', description: 'Our team built an AI-powered system with machine learning models for sentiment analysis, real-time emotional tracking, and behavioral insights.' },
+      // 4
+      { title: 'Testing and deployment', description: 'We conducted extensive testing to verify accuracy, reliability, and a supportive user experience before launching with ongoing refinements.' },
+      // 1
+      { title: 'Research & strategy', description: 'We analyzed mental health challenges, identified gaps in accessibility and defined AI-driven solutions to provide real-time support.' },
+      // 3
+      { title: 'AI implementation', description: 'We integrated NLP and deep learning to recognize emotional patterns, deliver personalized support and adapt to user needs.' },
+    ],
+  },
+  {
+    slug: 'law-ledger',
+    title: 'How LawLedger Reinvented Legal Transaction Management',
+    description: 'LawLedger simplifies legal transactions with blockchain, providing a secure and automated system for legal professionals. It enables real-time verification, prevents fraud, and supports compliance through smart contracts and decentralized audit trails. By removing inefficiencies in traditional processes, LawLedger strengthens trust, lowers costs, and improves operations. Pixelette Technologies handled its research and strategy, design, development as well as deployment.',
+    businessType: 'Blockchain Legal Transactions',
+    industry: 'LegalTech',
+    blocker: 'Legal professionals face inefficiencies, security risks and compliance challenges in transaction management. Traditional systems lack automated verification and transparency, increasing fraud exposure and operational delays. Without an immutable verification process, law firms struggle with trust, accuracy and financial burdens. To take this idea from idea to execution, Pixelette Technologies stepped in to help LawLedger with the strategy, design, development and deployment of their blockchain-backed legal transaction management platform. ',
+    goal: 'LawLedger set out to create a blockchain-driven platform that brings security, transparency and automation to legal transactions. The goal was to provide an immutable audit trail, real-time verification and a reliable system for managing legal agreements.',
+    solution: 'Our development teams at Pixelette Technologies designed and built a blockchain-based legal transaction platform for LawLedger. By integrating smart contracts, real-time verification and decentralized ledger technology, we developed a secure, automated system that eliminates fraud risks and simplifies legal operations.',
+    logo: '/images/casestudies/law-ledger/law-ledger-logo.png',
+    bannerImage: '/images/casestudies/law-ledger/law-ledger-ai-casestudy-image.png',
+    techStack: [
+      { name: 'nodejs', icon: '/images/tech/logos/hyperledger-fabric.png' },
+      { name: 'moralis', icon: '/images/tech/logos/solidity.png' },
+      { name: 'hardhat', icon: '/images/tech/logos/ipfs.png' },
+      { name: 'IPFS', icon: '/images/tech/logos/web3js.png' },
+      { name: 'web3js', icon: '/images/tech/logos/postgresql.png' },
+      { name: 'solidity', icon: '/images/tech/logos/aws.png' },
+    ],
+    impactStats: {
+      description: 'LawLedger is now live, bringing secure and transparent legal transaction management to professionals. Early adoption shows improved efficiency, reduced fraud risks and stronger compliance. As usage grows, further insights into its impact will continue to develop.',
+      percentage: '60%',
+      details: 'The idea of Non-Fungible Tokens...',
+    },
+    impactBoxes: [
+      { title: 'Faster legal transactions', description: 'Reduced legal transaction processing time by 50% for more improved workflow automation and reduced operational costs.' },
+      { title: 'Stronger compliance', description: 'Immutable audit trails provide transparent, verifiable records for law firms and enterprises.' },
+      { title: 'User adoption & trust', description: 'Achieved a 92% satisfaction rate among legal professionals who reported increased confidence and efficiency in managing transactions.' },
+      // { title: 'Stress reduction', description: 'Users reported a 40% decrease in stress and anxiety after regular use of the platform.' },
+    ],
+    process: 'To build the secure blockchain-based legal documentation platform, we analyzed legal workflows, developed smart contract validation, implemented immutable recordkeeping, and rigorously tested for compliance and performance.',
+    milestones: [
+      // 2
+      { title: 'Design and development', description: 'Our blockchain team built a secure transaction ecosystem using Hyperledger Fabric and Solidity for automated verification and immutable records.' },
+      // 4
+      { title: 'Testing and deployment', description: 'The system underwent extensive security audits and smart contract validation before deployment to make sure there was operational reliability and adherence to legal standards.' },
+      // 1
+      { title: 'Discovery and research', description: 'We conducted an in-depth analysis of legal transaction challenges, identifying key pain points and mapping out blockchain-driven solutions.' },
+      // 3
+      { title: 'Blockchain integration', description: 'Then we implemented smart contracts to automate legal agreements and integrated a decentralized audit trail to strengthen compliance.' },
+    ],
+  },
+  {
+    slug: 'life-optimizer-ai',
+    title: 'How LifeOptimizer AI Transformed Personalized Wellness with Artificial Intelligence',
+    description: 'LifeOptimizer AI, an AI-powered wellness platform, set out to make health and fitness more tailored and effective. Traditional wellness programs lacked personalization, making it difficult for individuals to stay motivated and achieve lasting results. To address this, LifeOptimizer AI partnered with Pixelette Technologies to develop an intelligent system that delivers real-time insights, behavioral tracking and AI-driven wellness recommendations.',
+    businessType: 'AI-Powered Wellness Platform',
+    industry: 'HealthTech',
+    blocker: 'Maintaining a balanced and healthy lifestyle was difficult without personalized guidance. Generic fitness and wellness programs failed to adapt to individual needs which makes motivation and progress tracking a challenge. Users needed a smarter solution that could offer customized support, real-time insights and sustainable wellness strategies. To take this idea from idea to execution, Pixelette Technologies stepped in to help LifeOptimizer AI with the strategy, design, development and deployment of their AI wellness platform.',
+    goal: 'LifeOptimizer AI set out to bridge the gap between artificial intelligence and personal well-being. The goal was to create an intelligent system that delivers tailored diet plans, fitness routines and stress management techniques based on real-time data and behavioral analysis.',
+    solution: 'Pixelette Technologies developed an AI-powered wellness platform that adapts to users’ health goals and daily routines. By integrating machine learning, health data analytics and real-time feedback, the platform provides customized fitness, nutrition and mental well-being solutions. AI-driven coaching helps users stay on track while making sustainable lifestyle changes.',
+    logo: '/images/casestudies/life-optimizer/life-optimizer-logo.png',
+    bannerImage: '/images/casestudies/life-optimizer/life-optimizer-ai-casestudy-image.png',
+    techStack: [
+      { name: 'python', icon: '/images/tech/logos/python.png' },
+      { name: 'TensorFlow', icon: '/images/tech/logos/tensorflow.png' },
+      { name: 'Pytorch', icon: '/images/tech/logos/pytorch.png' },
+      { name: 'aws', icon: '/images/tech/logos/aws.png' },
+      { name: 'postgresql', icon: '/images/tech/logos/postgresql.png' },
+      { name: 'reactjs', icon: '/images/tech/logos/reactjs.png' },
+    ],
+    impactStats: {
+      description: 'LifeOptimizer AI changed how people approach wellness by offering personalized fitness, nutrition and mental health support. By using AI-driven insights, the platform helped users build lasting habits and improve their overall well-being.',
+      percentage: '60%',
+      details: 'The idea of Non-Fungible Tokens...',
+    },
+    impactBoxes: [
+      { title: 'Higher user engagement', description: 'Users reported a 75% increase in engagement, driven by interactive tracking and personalized recommendations that kept them motivated.' },
+      { title: 'Sustainable lifestyle improvements', description: '60% of users maintained their wellness routines for over six months, showing the impact of tailored habit-building strategies.' },
+      { title: 'User adoption & trust', description: 'Achieved a 92% satisfaction rate among legal professionals who reported increased confidence and efficiency in managing transactions.' },
+      { title: 'Improved mental well-being', description: 'Stress management features helped reduce anxiety levels by 40%, giving users better control over their daily stressors.' },
+    ],
+    process: 'A structured, multi-phase approach guided the successful launch and adoption of LifeOptimizer AI.',
+    milestones: [
+      // 2
+      { title: 'Design and development', description: 'Built an adaptive AI model that evaluates user inputs, lifestyle habits and fitness goals to generate tailored wellness plans. Designed a recommendation system that adjusts based on progress to make sure users stay on track.' },
+      // 4
+      { title: 'Testing and deployment', description: 'Ran extensive usability and performance tests to confirm accuracy and effectiveness before launch. Conducted live trials with users to refine the platform and improve AI-driven recommendations.' },
+      // 1
+      { title: 'Research and strategy', description: 'Reviewed the challenges of traditional wellness programs and explored how AI could provide personalized support. Conducted in-depth user research to identify key factors affecting motivation and long-term health improvements.' },
+      // 3
+      { title: 'AI integration', description: 'Incorporated machine learning to provide real-time insights, track behaviors and offer personalized health suggestions. Connected with biometric and lifestyle data sources to create a more complete wellness experience.' },
+    ],
+  },
+  {
+    slug: 'ragnar-token',
+    title: 'How Ragnar Token Connects Traditional Banking and Crypto',
+    description: 'Ragnar Token ($RAG) is a blockchain-powered digital asset designed to connect traditional banking services with cryptocurrency transactions. Developed for Ragnar Trading Limited, the platform simplifies financial interactions by enabling easy token swapping, secure transactions and a user-friendly experience. Pixelette Technologies built both the native token and website, creating the foundation of their business and making digital asset adoption straightforward.',
+    businessType: 'Blockchain-Based Digital Asset',
+    industry: 'Blockchain/Cryptocurrency',
+    blocker: 'Ragnar Trading Limited needed an entire ecosystem from scratch which included a token transaction system that worked efficiently and an intuitive website to make adoption easy. The challenge was to create a solution that combined the familiarity of traditional banking with the flexibility of cryptocurrency.',
+    goal: 'The objective was to create a fully functional blockchain-powered financial system. This included developing Ragnar Token ($RAG) as a secure, scalable digital asset and designing a website that made buying, swapping, and managing tokens simple. The platform had to be accessible to both crypto-savvy users and those new to digital assets to deliver ease of use without sacrificing functionality.',
+    solution: 'Pixelette Technologies developed Ragnar Token ($RAG), an ERC-20 token designed for transactions and capital raising. Alongside this, we built a user-friendly website that allowed users to easily interact with the token and navigate the platform without complications.',
+    logo: '/images/casestudies/ragnar-token/ragnar-token-logo.png',
+    bannerImage: '/images/casestudies/ragnar-token/ragnar-token-ai-casestudy-image.png',
+    techStack: [
+      { name: 'python', icon: '/images/tech/logos/python.png' },
+      { name: 'TensorFlow', icon: '/images/tech/logos/tensorflow.png' },
+      { name: 'Pytorch', icon: '/images/tech/logos/pytorch.png' },
+      { name: 'aws', icon: '/images/tech/logos/aws.png' },
+      { name: 'postgresql', icon: '/images/tech/logos/postgresql.png' },
+      { name: 'reactjs', icon: '/images/tech/logos/reactjs.png' },
+    ],
+    impactStats: {
+      description: 'By creating both the Ragnar Token and its supporting platform, we provided Ragnar Trading Limited with a complete digital asset system that made transactions smoother and increased adoption.',
+      percentage: '60%',
+      details: 'The idea of Non-Fungible Tokens...',
+    },
+    impactBoxes: [
+      { title: 'Conversion rate', description: '12% of visitors became token holders, showing strong initial adoption.' },
+      { title: 'Transaction speed', description: 'Users could buy and swap Ragnar Token in under 1 minute, keeping transactions quick and efficient.' },
+      { title: 'User engagement', description: 'Features such as real-time price tracking and transaction history encouraged use and deeper engagement.' },
+    ],
+    process: 'A structured, multi-phase approach guided the successful launch and adoption of Ragnar Token.',
+    milestones: [
+      // 2
+      { title: 'Token development', description: 'Our blockchain team developed Ragnar Token ($RAG) on the Ethereum blockchain, ensuring security, compliance, and compatibility with crypto infrastructure. The token was designed to support fast and cost-effective transactions while maintaining a high level of security against fraud and unauthorized access.' },
+      // 4
+      { title: 'Deployment and optimization', description: 'After extensive security and usability testing, the token and website were launched, designed for fast transactions and an intuitive experience. Continuous monitoring and iterative improvements were implemented to refine functionality and enhance the overall user journey.' },
+      // 1
+      { title: 'Discovery and research', description: 'We worked with Ragnar Trading Limited to define their vision, researching industry challenges and identifying key features needed for adoption and usability. By analyzing competitor platforms and user behavior, we determined the most effective way to bridge traditional finance with blockchain technology.' },
+      // 3
+      { title: 'Website design and development', description: 'We built a responsive platform using React.js and Web3 technologies, allowing users to buy, swap, and manage tokens with ease. The interface was designed for clarity, reducing friction in the onboarding process and enabling smooth transactions even for users unfamiliar with blockchain.' },
+    ],
+  },
+  {
+    slug: 'chain-legal',
+    title: 'How ChainLegal Brought Blockchain to Legal Docs',
+    description: 'ChainLegal is a blockchain-powered legal document management platform whose founders set out to change how law firms and legal departments handle documentation. Traditional systems were and are slow, difficult to manage and prone to errors. To solve these issues, ChainLegal partnered with Pixelette Technologies to develop a decentralized, automated system that strengthens security, improves accessibility and keeps records accurate.',
+    businessType: 'Decentralized Legal Management',
+    industry: 'LegalTech/Blockchain',
+    blocker: 'Legal firms and departments deal with slow, inefficient document management due to outdated manual processes. These systems make it difficult to track changes, introduce security risks and increase the chance of compliance failures. Without an automated solution, keeping documents accurate, accessible and protected remains a major concern. To take this idea from idea to execution, Pixelette Technologies stepped in to help ChainLegal with the strategy, design, development and deployment of the blockchain-backed legal document management solution.',
+    goal: 'ChainLegal wanted to improve legal document management by using blockchain technology. The goal was to build a secure, decentralized and automated system that simplifies document handling while maintaining accuracy and compliance.',
+    solution: 'Pixelette Technologies developed a blockchain-integrated document management system for ChainLegal. Smart contracts and decentralized storage provided a structured approach to document security, user access and tracking. This approach helped legal teams manage files with greater accuracy and control.',
+    logo: '/images/casestudies/ragnar-token/ragnar-token-logo.png',
+    bannerImage: '/images/casestudies/ragnar-token/ragnar-token-ai-casestudy-image.png',
+    techStack: [
+      { name: 'solidity', icon: '/images/tech/logos/solidity.png' },
+      { name: 'Hyperledger Fabric', icon: '/images/tech/logos/hyperledger-fabric.png' },
+      { name: 'IPFS', icon: '/images/tech/logos/ipfs.png' },
+      { name: 'web3', icon: '/images/tech/logos/web3js.png' },
+      { name: 'mysql', icon: '/images/tech/logos/mysql.png' },
+      { name: 'aws', icon: '/images/tech/logos/aws.png' },
+    ],
+    impactStats: {
+      description: 'ChainLegal is making legal document management faster, more reliable and easier to track. By using blockchain, the platform reduces administrative burdens while improving compliance and security.',
+      percentage: '60%',
+      details: 'The idea of Non-Fungible Tokens...',
+    },
+    impactBoxes: [
+      { title: 'Fast document handling', description: '40% reduction in processing time, helping legal teams complete tasks with fewer delays.' },
+      { title: 'Stronger security', description: 'Blockchain-based records prevent unauthorized modifications and keep documents accurate.' },
+      { title: 'Low operational costs', description: '30% cost savings for law firms by replacing paperwork with automated digital processes.' },
+      { title: 'High user satisfaction', description: '90% of legal professionals reported better efficiency and trust in document management.' },
+    ],
+    process: 'A structured, multi-phase approach guided the successful launch and adoption of ChainLegal.',
+    milestones: [
+      // 2
+      { title: 'Design and development', description: 'Our team built a decentralized system using Solidity and Hyperledger Fabric which allow legal teams to store, verify and manage documents efficiently. The platform was structured to support automated approvals, version control and encrypted access for authorized users.' },
+      // 4
+      { title: 'Testing and deployment', description: 'The system went through security reviews and compliance testing before launch to confirm reliability and performance. We conducted real-world simulations with legal professionals to validate accuracy, usability and long-term scalability.' },
+      // 1
+      { title: 'Discovery and research', description: 'We assessed the limitations of existing document management systems and identified the key requirements for a blockchain-powered solution. This involved studying compliance challenges, security risks, and user needs to create a system that improves legal workflows.' },
+      // 3
+      { title: 'Blockchain integration', description: 'We applied cryptographic security measures to prevent unauthorized changes and restricted access to approved users. By incorporating smart contracts, the system made sure of document authenticity and automated critical legal processes.' },
+    ],
+  },
+  {
+    slug: 'smart-contractor',
+    title: 'How SmartContractor Changed Contract Management Forever',
+    description: 'SmartContractor set out to solve inefficiencies in contract execution, where delays, human error and compliance risks slowed down business operations. Traditional contract processes required extensive manual oversight, increasing costs and legal uncertainty. To address these issues, SmartContractor partnered with Pixelette Technologies to develop an automated, tamper-proof contract management system powered by blockchain.',
+    businessType: 'Smart Contract Automation',
+    industry: 'LegalTech',
+    blocker: 'Businesses struggle with outdated contract management systems that rely on manual processes, leading to delays, errors, and security vulnerabilities. The absence of automation meant contracts required continuous oversight, increasing compliance risks and operational inefficiencies. Pixelette Technologies stepped in to help SmartContractor with the strategy, design, development and deployment of their blockchain-powered contract management solution.',
+    goal: 'SmartContractor aimed to eliminate inefficiencies by introducing a blockchain-based contract management platform. The objective was to develop an automated, secure system that streamlined contract execution, improved transparency and reduced legal risks. By removing reliance on manual processes, SmartContractor sought to increase accuracy, speed and compliance in contract lifecycle management.',
+    solution: 'Pixelette Technologies built a blockchain-integrated smart contract management system that automates contract execution while providing real-time tracking and tamper-proof security. The platform enables businesses to create, execute and monitor contracts with complete transparency, reducing manual oversight and improving enforcement reliability. Decentralized storage and cryptographic security protect contract data, making every agreement verifiable and tamper-resistant.',
+    logo: '/images/casestudies/law-ledger/law-ledger-logo.png',
+    bannerImage: '/images/casestudies/law-ledger/law-ledger-ai-casestudy-image.png',
+    techStack: [
+      { name: 'python', icon: '/images/tech/logos/solidity.png' },
+      { name: 'TensorFlow', icon: '/images/tech/logos/hyperledger-fabric.png' },
+      { name: 'Pytorch', icon: '/images/tech/logos/web3js.png' },
+      { name: 'aws', icon: '/images/tech/logos/ipfs.png' },
+      { name: 'postgresql', icon: '/images/tech/logos/postgresql.png' },
+      { name: 'reactjs', icon: '/images/tech/logos/aws.png' },
+    ],
+    impactStats: {
+      description: 'The launch of SmartContractor’s blockchain-powered platform introduced a more efficient and secure approach to contract management, significantly improving execution speed and reliability.',
+      percentage: '60%',
+      details: 'The idea of Non-Fungible Tokens...',
+    },
+    impactBoxes: [
+      { title: 'Contract automation efficiency', description: 'Reduced contract execution time by 60%, allowing businesses to finalize agreements with minimal delays and manual intervention.' },
+      { title: 'Error reduction', description: 'Eliminated 95% of manual processing errors by implementing automated validation making sure contracts are executed accurately.' },
+      { title: 'Operational cost savings', description: 'Lowered contract management expenses by 40% by reducing reliance on intermediaries and manual oversight.' },
+      { title: 'User adoption & compliance', description: 'Achieved a 94% adoption rate among legal professionals and businesses, with automated audit trails supporting regulatory compliance.' },
+    ],
+    process: 'To develop a secure and automated contract management system, we followed a structured approach that combined research, development and extensive testing.',
+    milestones: [
+      // 2
+      { title: 'Design and development', description: 'Our team designed a structured smart contract framework using Solidity and Hyperledger, allowing contracts to self-execute based on predefined conditions. This eliminated the need for third-party enforcement while making sure contracts remained legally enforceable and tamper-resistant.' },
+      // 4
+      { title: 'Testing and deployment', description: 'Extensive testing was conducted to verify automation accuracy, security protocols, and compliance with legal standards. After successful trials, the platform was deployed with ongoing optimization, ensuring businesses could execute contracts faster while maintaining full transparency.' },
+      // 1
+      { title: 'Discovery and research', description: 'We conducted an in-depth analysis of traditional contract execution, identifying inefficiencies in validation, enforcement, and security. By studying industry-specific compliance requirements, we ensured the solution would meet legal standards while eliminating manual bottlenecks.' },
+      // 3
+      { title: 'Blockchain integration', description: 'We integrated decentralized storage with cryptographic signatures to protect contract integrity. This made every contract remained immutable, verifiable, and accessible only to authorized parties, reducing risks associated with unauthorized modifications or disputes.' },
+    ],
+  },
+  // Add more case studies here
+];
+
+module.exports = caseStudiesData;

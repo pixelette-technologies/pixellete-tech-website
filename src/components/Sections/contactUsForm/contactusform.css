@@ -1,0 +1,74 @@
+.contactUs {
+  margin-top: 2rem;
+}
+.contactUs-background {
+  position: relative;
+}
+.contactUs-background > img {
+  position: absolute;
+  z-index: -100;
+}
+.contactUs-background > *:first-child {
+  right: 0;
+  margin-top: -200rem;
+  width: 90%;
+}
+.contactUs-background > *:last-child {
+  left: 0rem;
+  margin-top: -100rem;
+  width: 70%;
+}
+@media only screen and (max-width: 50em) {
+  .contactUs {
+    padding: 0rem 2%;
+  }
+}
+.contactUs > center {
+  max-width: 68rem;
+  margin: auto;
+}
+@media only screen and (max-width: 50em) {
+  .contactUs > center {
+    padding: 0rem 2rem;
+  }
+}
+.contactUs > center > h1 {
+  padding-bottom: 1.6rem;
+}
+.contactUs > section {
+  /* margin-top: 4.8rem; */
+}
+.contactUs > section > div {
+  padding: 4rem;
+  max-width: 80rem;
+  margin: auto;
+  background-color: #0f0f0fb3;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1.5rem;
+}
+@media only screen and (max-width: 50em) {
+  .contactUs > section > div {
+    padding: 3rem 2.5rem;
+    max-width: 45rem;
+    /* max-width: 50rem; */
+  }
+}
+.contactUs-form-flex {
+  display: flex;
+  gap: 2.4rem;
+}
+@media only screen and (max-width: 28em) {
+  .contactUs-form-flex {
+    flex-direction: column;
+  }
+  .contactUs-form-flex > div {
+    width: 100% !important;
+  }
+}
+.contactUs-form-flex > div {
+  width: 50%;
+}
+.contactUs-form > button {
+  margin-top: 3.2rem;
+  width: 18rem;
+}

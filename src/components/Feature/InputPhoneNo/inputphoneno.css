@@ -1,0 +1,44 @@
+.inputPhoneNumber {
+  margin-top: 2.4rem;
+}
+.inputPhoneNumber > label {
+  font-size: 1.45rem;
+  font-weight: 500;
+  display: block;
+}
+.inputPhoneNumber > section {
+  margin-top: 0.8rem;
+  border: 1px solid rgba(255, 255, 255, 0.479);
+  padding: 1.4rem 1.2rem;
+  border-radius: 0.7rem;
+  display: flex;
+  align-items: left;
+  background-color: black;
+}
+.inputPhoneNumber > section > div {
+  display: flex;
+  align-items: center;
+  margin-right: 1.4rem;
+  cursor: pointer;
+  gap: 0.5rem;
+}
+.inputPhoneNumber > section > div > *:last-child {
+  font-size: 2rem;
+  color: #ffffff7a;
+}
+
+.inputPhoneNumber > section > input {
+  width: 100%;
+  color: #ffffff00;
+  background-color: transparent;
+  font-size: 1.6rem;
+  border: none;
+}
+.inputPhoneNumber > section > input:focus {
+  outline: none;
+}
+.inputPhoneNumber > div {
+  margin-top: 0.8rem;
+  color: #ff000096;
+  font-size: 1.4rem;
+}

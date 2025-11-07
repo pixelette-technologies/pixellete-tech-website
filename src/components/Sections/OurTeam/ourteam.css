@@ -1,0 +1,191 @@
+.ourTeamSection {
+  margin-top: 12rem;
+  /* display: flex; */
+  flex-wrap: wrap;
+  padding: 0 8rem 0 8rem;
+}
+@media only screen and (max-width: 37.5em) {
+  .ourTeamSection {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 7rem;
+  }
+}
+
+.ourTeamSection > div > center {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.ourTeamSection > div > center > button {
+  display: flex;
+  align-items: center;
+}
+.ourTeamSection > div > center > button {
+  display: flex;
+  align-items: center;
+}
+.ourTeamSection > div > center > button > *:last-child {
+  margin-left: 1rem;
+}
+.ourTeamSection > div > center > h2 {
+  padding-bottom: 3rem;
+}
+.ourTeamSection > div > p {
+  max-width: 80rem;
+  text-align: center;
+  margin: auto;
+}
+.ourTeamSection > div > section {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(200px, 1fr)); /* Adjust minmax values as needed */
+  gap: 2.4rem;
+  margin-top: 4.8rem;
+}
+.ourTeamSection > div > section > div {
+  flex: 1 0 calc(25% - 1.6rem);
+  width: 100%;
+  position: relative;
+  padding: 4%;
+  object-fit: cover;
+  background-color: #0f0f0fb3;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1.5rem;
+  box-sizing: border-box;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+/* Adjust layout for medium screens (tablets) */
+@media only screen and (max-width: 767px) {
+  .ourTeamSection > div > section {
+    grid-template-columns: repeat(2, minmax(200px, 1fr)); /* 2 columns */
+    margin-bottom: 4.8rem;
+  }
+  .ourTeamSection > div > section > div {
+    flex: 1 0 calc(50% - 1.6rem);
+  }
+  .ourTeamSection > div > center > {
+    margin-bottom: 4.8rem;
+  }
+}
+
+/* Adjust layout for small screens (mobile) */
+@media (max-width: 600px) {
+  .ourTeamSection > div > section {
+    grid-template-columns: 1fr; /* 1 column */
+    margin-bottom: 4.8rem;
+  }
+  .ourTeamSection > div > section > div {
+    flex: 1 0 100%;
+  }
+  .ourTeamSection > div > center > {
+    margin-bottom: 4.8rem;
+  }
+}
+
+.ourTeamSection > div > section > div > .image-container {
+  width: 100%;
+  aspect-ratio: 0.8; /* This maintains a square aspect ratio */
+  overflow: hidden;
+  padding-bottom: 2rem;
+}
+
+.ourTeamSection > div > section > div > .image-container > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1.5rem;
+  transition: 0.5s ease-in-out;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+@media only screen and (max-width: 62.6em) {
+  .ourTeamSection > div > section > div > .image-container > img {
+    height: 40rem;
+  }
+}
+@media only screen and (max-width: 46.875em) {
+  .ourTeamSection > div > section > div > .image-container > img {
+    height: 32rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .ourTeamSection > div > section > div > .image-container > img {
+    height: 48rem;
+  }
+}
+@media only screen and (max-width: 25em) {
+  .ourTeamSection > div > section > div > .image-container > img {
+    height: 40rem;
+  }
+}
+.ourTeamSection > div > section > div > .image-container > img:hover {
+  -webkit-filter: grayscale(0);
+  filter: grayscale(0);
+}
+.ourTeamSection > div > section > div > *:last-child {
+  flex: 1 0 calc(23% - 2rem);
+  margin-top: 0.3rem;
+}
+/* Clearfix for floating issues if any */
+.ourTeamSection::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.team-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.team-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.team-card .image-container {
+  /* width: 120px;
+  height: 120px;
+  border-radius: 50%; */
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+  /* border: 2px solid rgba(255, 255, 255, 0.1); */
+}
+
+.team-card .image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.team-info {
+  width: 100%;
+}
+
+.team-info h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 2.2rem;
+  color: #fff;
+}
+
+.team-info p {
+  margin: 0 0 1rem 0;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.6rem;
+}
+
+.linkedin-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #0077b5;
+  transition: color 0.3s ease;
+}
+
+.linkedin-link:hover {
+  color: #00a0dc;
+}

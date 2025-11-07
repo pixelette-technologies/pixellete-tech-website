@@ -1,0 +1,175 @@
+.section {
+  padding: 8rem 0;
+  background-color: #000;
+  position: relative;
+  overflow: hidden;
+}
+
+.section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(ellipse at center top, rgba(139, 69, 19, 0.15) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.description {
+  font-size: 1.6rem;
+  color: #ffffff;
+  line-height: 1.6;
+  max-width: 90rem;
+  margin: 0 auto;
+  opacity: 0.9;
+}
+
+.tableCard {
+  background-color: rgba(30, 30, 30, 0.9);
+  border-radius: 1.2rem;
+  padding: 3rem;
+  margin: 0 auto 4rem;
+  max-width: 120rem;
+  border: none;
+}
+
+.table {
+  width: 100%;
+  color: #ffffff;
+  table-layout: fixed;
+
+  /* ✅ Needed for TH gaps */
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.table thead {
+  border-bottom: none;
+}
+
+.table th {
+  padding: 1.5rem 2rem 2rem 2rem;
+  text-align: left;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #ffffff;
+
+  /* ✅ Individual border for each th */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+
+  /* ✅ Ensures borders don’t overlap */
+  background-clip: padding-box;
+}
+
+/* ✅ Create gap between header cells */
+.table th + th {
+  border-left: 1rem solid transparent;
+}
+
+.table td {
+  padding: 2rem;
+  font-size: 1.5rem;
+  color: #ffffff;
+  line-height: 1.6;
+  border: none;
+}
+
+.engagementType {
+  font-weight: 600;
+}
+
+.idealFor {
+  opacity: 0.9;
+}
+
+.benefits {
+  opacity: 0.9;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+@media only screen and (max-width: 768px) {
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .description {
+    font-size: 1.4rem;
+    padding: 0 2rem;
+  }
+
+  .tableCard {
+    padding: 2rem 1.5rem;
+    overflow-x: auto;
+  }
+
+  .table {
+    min-width: 600px;
+  }
+
+  .table th,
+  .table td {
+    padding: 1.5rem 1rem;
+    font-size: 1.3rem;
+  }
+
+  .buttons {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 2rem;
+  }
+
+  .buttons a {
+    width: 100%;
+    max-width: 30rem;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .section {
+    padding: 6rem 0;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .description {
+    font-size: 1.3rem;
+  }
+
+  .tableCard {
+    padding: 1.5rem 1rem;
+  }
+
+  .table th,
+  .table td {
+    padding: 1rem 0.8rem;
+    font-size: 1.2rem;
+  }
+}

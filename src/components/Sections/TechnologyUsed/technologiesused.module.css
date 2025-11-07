@@ -1,0 +1,233 @@
+.technologiesMain {
+  margin: 10rem 0rem;
+  padding: 0 5rem;
+  /* margin-bottom: 5rem; */
+}
+.cardSectionBackground {
+  position: relative;
+}
+.cardSectionBackground > img {
+  position: absolute;
+  z-index: -90;
+  width: 100%;
+  /* height: 100vh; */
+  margin-top: -65rem;
+}
+.technologiesMain > div > center > h2 {
+  max-width: 24ch;
+}
+
+.technologiesMain > div > center > p {
+  max-width: 60ch;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.technologiesLayout {
+  display: flex;
+  gap: 2rem;
+  margin-top: 5rem;
+  /* align-items: flex-start; */
+  width: 100%;
+}
+
+/* Tabs Section */
+.tabsSection {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #232323;
+  padding: 1rem;
+  border-radius: 1rem;
+  background: black;
+  /* width: 20rem; */
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  width: 280px;
+}
+
+.tabButton {
+  background: none;
+  border: none;
+  color: #aaa;
+  padding: 1.5rem;
+  font-size: 1.6rem;
+  border-radius: 1rem;
+  margin: 1rem;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tabButton.active {
+  color: #fff;
+  /* font-weight: bold; */
+  background-color: #232323; /* Dark background for the active tab */
+  border: 1px solid #232323;
+}
+
+.tabButton:hover {
+  color: #fff;
+  background-color: #444; /* Lighter hover effect */
+}
+
+.contentSection {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  background-color: #f8f8f8; /* Default background */
+  transition: background-color 0.3s ease;
+}
+
+.contentSection.active {
+  background-color: #232323; /* Dark background for active tab content */
+  color: #fff; /* Ensure text is visible on dark background */
+}
+
+/* Icons Container */
+.iconsContainer {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.iconCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.iconCardHover {
+  /* transform: scale(1.1); */
+}
+
+.iconImg {
+  width: 100px;
+  height: 60px;
+  margin-bottom: 0.5rem;
+  /* filter: grayscale(100%); */
+  border-radius: 0.5rem;
+  transition:
+    filter 0.3s ease,
+    transform 0.3s ease;
+}
+
+.iconImgHover {
+  filter: grayscale(0%);
+  /* transform: scale(1.05); */
+  box-shadow: 0 0.4rem 7rem #e2e2e233;
+}
+
+/* === RESPONSIVE STYLES === */
+
+/* Tablet Screens */
+@media (max-width: 1024px) {
+  .technologiesLayout {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tabsSection {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+  }
+
+  .iconsContainer {
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1.5rem;
+  }
+
+  .tabButton {
+    font-size: 1.8rem;
+    padding: 1rem;
+  }
+}
+
+/* Mobile Screens */
+@media (max-width: 768px) {
+  .tabsSection {
+    width: 100%;
+  }
+
+  .iconsContainer {
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1rem;
+  }
+
+  .tabButton {
+    font-size: 1.6rem;
+    padding: 1rem;
+  }
+
+  .iconImg {
+    width: 80px;
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .contentSection {
+    /* min-height: 284px !important; */
+  }
+  .iconsContainer {
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1rem;
+  }
+
+  .tabButton {
+    display: flex;
+    font-size: 1.4rem;
+    padding: 0.5rem;
+    margin: 0.5rem;
+  }
+
+  .iconImg {
+    width: 45px;
+    height: auto;
+  }
+  .mobilePadding {
+    padding-inline: 24px;
+  }
+  .technologiesMain {
+    padding-inline: 40px;
+  }
+}
+
+/* Base styles for the technology name */
+.technologyName {
+  display: block; /* Default display for full name */
+}
+
+/* Shortened name for mobile */
+.shortName {
+  display: none; /* Hide the shortened name by default */
+}
+
+/* Full name for mobile */
+.fullName {
+  display: block; /* Ensure full name is displayed on larger screens */
+}
+
+/* For mobile screens */
+@media (max-width: 768px) {
+  /* Hide the full name on mobile */
+  .fullName {
+    display: none;
+  }
+
+  /* Show the shortened name on mobile */
+  .shortName {
+    font-size: 1.2rem;
+    display: block;
+  }
+}

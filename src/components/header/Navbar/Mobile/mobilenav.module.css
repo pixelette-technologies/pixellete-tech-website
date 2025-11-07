@@ -1,0 +1,156 @@
+/* .mobileNavMain {
+  position: absolute;
+  width: 100%;
+  display: none;
+  margin-top: -9rem;
+  height: 100vh;
+  z-index: 10;
+  background-color: #00000057;
+}
+@media only screen and (max-width: 62.6em) {
+  .mobileNavMain {
+    display: block;
+    display: flex;
+  }
+  .mobileNavMain > figure {
+    padding-top: 3rem;
+    padding-left: 3rem;
+  }
+  .mobileNavMain > figure > * {
+    font-size: 3rem;
+  }
+}
+.mobileNavMain > div {
+  padding: 5rem 3rem;
+  height: 100vh;
+  width: 70%;
+  display: flex;
+  background-color: #0e0e0e;
+  color: gray;
+  flex-direction: column;
+}
+.mobileNavMain > div > div > section {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+.mobileNavMain > div > div > section > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 0.1rem;
+}
+.mobileNavMain > div > div > section > div > * {
+  font-size: 1.6rem;
+}
+.mobileNavMain > div > div > div {
+  background-color: #ffffff1a;
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+  padding: 1.6rem 1.8rem;
+  margin-top: 1.3rem;
+  border-radius: 0.7rem;
+}
+.mobileNavMain > div > div > div > a {
+  font-size: 1.6rem;
+  font-weight: 500;
+  opacity: 0.7;
+}
+.mobileNavMain > div > * {
+  font-size: 1.6rem;
+  color: #fff;
+}
+.mobileNavMain > div > *:not(:last-child) {
+  margin-bottom: 3rem;
+}
+.mobileNavMain > div > *:first-child {
+  margin-top: 5rem;
+}
+.mobileNavMain > div > *:last-child {
+  padding-bottom: 3rem;
+}
+.mobileNavMain > div > center {
+  margin-top: 2rem;
+} */
+.active {
+  border-bottom: 2px solid white;
+}
+
+.mobileNavMain {
+  position: absolute;
+  width: 100%;
+  display: none;
+  z-index: 1000000;
+  margin-top: -9rem;
+  height: 100vh;
+  z-index: 10;
+  background-color: #00000057;
+}
+@media only screen and (max-width: 62.6em) {
+  .mobileNavMain {
+    display: block;
+    display: flex;
+  }
+  .mobileNavMain > figure {
+    padding-top: 3rem;
+    padding-left: 3rem;
+  }
+  .mobileNavMain > figure > * {
+    font-size: 3rem;
+  }
+}
+.mobileNavMain > div {
+  padding: 5rem 3rem;
+  height: 100vh;
+  width: 70%;
+  display: flex;
+  background-color: #0e0e0e;
+  color: gray;
+  flex-direction: column;
+  z-index: 10000000000;
+}
+.mobileNavMain > div > div > section {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+.mobileNavMain > div > div > section > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 0.1rem;
+}
+.mobileNavMain > div > div > section > div > * {
+  font-size: 1.6rem;
+}
+.mobileNavMain > div > div > div {
+  background-color: #ffffff1a;
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+  padding: 1.6rem 1.8rem;
+  margin-top: 1.3rem;
+  border-radius: 0.7rem;
+}
+.mobileNavMain > div > div > div > a {
+  font-size: 1.6rem;
+  font-weight: 500;
+  opacity: 0.7;
+}
+.mobileNavMain > div > * {
+  font-size: 1.6rem;
+  color: #fff;
+}
+.mobileNavMain > div > *:not(:last-child) {
+  margin-bottom: 3rem;
+}
+.mobileNavMain > div > *:first-child {
+  margin-top: 5rem;
+}
+.mobileNavMain > div > *:last-child {
+  padding-bottom: 3rem;
+}
+.mobileNavMain > div > center {
+  margin-top: 2rem;
+}

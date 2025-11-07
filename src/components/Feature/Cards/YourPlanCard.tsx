@@ -1,0 +1,110 @@
+import type { FC } from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
+import { v4 as uuidv4 } from 'uuid';
+import './cards.css';
+
+type PlanData = {
+  icon: string;
+  iconhead: string;
+  name: string;
+  description: string;
+  link: string;
+  linkIcon: string;
+  path?: string;
+};
+
+type YourPlanCardProps = {
+  data: PlanData[];
+};
+
+const YourPlanCard: FC<YourPlanCardProps> = ({ data }) => {
+  return (
+    <>
+      {data.map((el, index) => {
+        const cardContent = (
+          <div className="card-height">
+            <div style={{ display: 'flex' }}>
+              <div
+                style={{
+                  backgroundColor: '#006FF026',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '7px',
+                  padding: '5px 20px',
+                  borderRadius: '100px',
+
+                }}
+              >
+                <Image
+                  src={el.icon}
+                  alt="icon"
+                  width={20}
+                  height={20}
+                  quality={100}
+                />
+                <h4>{el.iconhead}</h4>
+              </div>
+            </div>
+            <h3>{el.name}</h3>
+            <p>{el.description}</p>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.3rem', marginTop: '1rem' }}>
+              {/* {el.link}
+                {' '}
+                <FaExternalLinkAlt /> */}
+              {/* <div>
+                <Link href={el.path}>
+                  <p>{el.link}</p>
+                </Link>
+              </div>
+              {' '}
+              <div>
+                <Image
+                  src={el.linkIcon}
+                  alt="link icon"
+                  width={10}
+                  height={10}
+                />
+              </div> */}
+            </div>
+          </div>
+        );
+
+        return el.path
+          ? (
+              <Link href={el.path} key={uuidv4()} passHref>
+                <div
+                  key={uuidv4()}
+                  id="servicesCard_id"
+                  className="servicesCard"
+                >
+                  {cardContent}
+                </div>
+                {/* <a
+                  id="servicesCard_id"
+                  className="servicesCard"
+                  data-aos="fade-up"
+                  data-aos-duration={`2${index}00`}
+                  style={{ cursor: el.path ? 'pointer' : 'default' }}
+                >
+                  {cardContent}
+                </a> */}
+              </Link>
+            )
+          : (
+              <div
+                key={uuidv4()}
+                id="servicesCard_id"
+                className="servicesCard"
+                // data-aos="fade-up"
+                // data-aos-duration={`2${index}00`}
+              >
+                {cardContent}
+              </div>
+            );
+      })}
+    </>
+  );
+};
+
+export default YourPlanCard;
