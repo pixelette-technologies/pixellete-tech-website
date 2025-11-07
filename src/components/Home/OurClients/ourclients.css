@@ -16,6 +16,18 @@
   #32323e 100%
 ); */
 }
+
+@media (max-width: 768px) {
+  .ourClients {
+    padding: 2rem 2rem 0rem 0rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .ourClients {
+    padding: 4rem 1rem 0rem 0rem;
+  }
+}
 .ourClients p {
   margin-bottom: 5rem;
 }

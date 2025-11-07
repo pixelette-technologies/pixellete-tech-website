@@ -87,6 +87,7 @@ export const VideoShowcase: React.FC<VideoShowcaseProps> = ({
                           }}
                           src={video.videoUrl}
                           poster={video.thumbnail}
+                          muted
                           className={styles.video}
                           onClick={e => handleVideoClick(video.id, e)}
                           onPlay={() => handleVideoPlay(video.id)}
