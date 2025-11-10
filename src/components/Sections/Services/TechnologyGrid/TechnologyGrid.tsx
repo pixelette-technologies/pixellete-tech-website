@@ -28,26 +28,35 @@ type TechnologyGridProps = {
 export const TechnologyGrid: React.FC<TechnologyGridProps> = ({
   heading,
   description,
-  expertiseAreas = [],
+  expertiseAreas,
   marqueeData,
-  extraDataMapping: extraDataMapping,
+  extraDataMapping,
 }) => {
-  // const [selectedData, setSelectedData] = useState<ExtraData | null>(null);
-  // const [selectedData, setSelectedData] = useState<ExtraData | null>(
-  //   Object.values(extraDataMapping)[0] || null,
-  // );
+  const definedMarqueeData = marqueeData ?? [];
+  const definedExpertiseAreas = expertiseAreas ?? [];
 
-  // const handleCardClick = (title: string) => {
-  //   const data = extraDataMapping[title];
-  //   setSelectedData(data);
-  // };
+  const expertiseCards = definedExpertiseAreas.map(area => ({
+    text: area.title,
+    description:
+      area.description ?? extraDataMapping?.[area.title]?.description,
+    image: extraDataMapping?.[area.title]?.image,
+  }));
+
+  const cards = definedMarqueeData.length > 0 ? definedMarqueeData : expertiseCards;
 
   return (
     <>
       <Container className={styles.main}>
-        <div className={styles.cardSectionBackground}>
-          <img src={backgroundImage} alt="Background" />
-        </div>
+        {/* <div className={styles.cardSectionBackground}>
+          <Image
+            src={backgroundImage}
+            alt="Background"
+            className={styles.backgroundImage}
+            width={1920}
+            height={1080}
+            priority
+          />
+        </div> */}
       </Container>
       <Container className={styles.main}>
         <div className={styles.expertiseGrid}>
@@ -58,36 +67,21 @@ export const TechnologyGrid: React.FC<TechnologyGridProps> = ({
             <p>{description}</p>
           </header>
 
-          <center>
-
-            {/* Grid Layout */}
+          <div className={styles.gridWrapper}>
             <div className={styles.gridContainer}>
-              {(marqueeData && marqueeData.length > 0
-                ? marqueeData
-                : expertiseAreas.map(area => ({
-                  text: area.title,
-                  description:
-                    area.description ?? extraDataMapping?.[area.title]?.description,
-                  image: extraDataMapping?.[area.title]?.image,
-                }))
-              ).map((el, index: number) => (
-                <div className={styles.flipCard} key={`${el.text}-${index}`}>
-                  <div className={styles.flipCardInner}>
-                    <div className={styles.flipCardFront}>
-                      {el.image ? (
-                        <Image src={el.image} alt={el.text} width={44} height={44} />
-                      ) : null}
-                      <p>{el.text}</p>
-                    </div>
-                    <div className={styles.flipCardBack}>
-                      {el.description ? <p>{el.description}</p> : null}
-                    </div>
-                  </div>
+              {cards.map(card => (
+                <div className={styles.card} key={card.text}>
+                  {card.image && (
+                    <Image src={card.image} alt={card.text} width={44} height={44} />
+                  )}
+                  <p className={styles.cardTitle}>{card.text}</p>
+                  {card.description && (
+                    <p className={styles.cardDescription}>{card.description}</p>
+                  )}
                 </div>
               ))}
             </div>
-
-          </center>
+          </div>
         </div>
       </Container>
     </>
