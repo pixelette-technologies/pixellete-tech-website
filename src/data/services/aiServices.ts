@@ -6,6 +6,7 @@ export const header = {
 
 export const backgroundImage = '/images/aiServices/serviceSectionBackground.svg';
 export const redBackground = '/images/aiServices/redBackground.png';
+export const redBackgroundLower = '/images/aiServices/redBackground.png';
 
 export const tgheading = 'Our AI development service expertise';
 
