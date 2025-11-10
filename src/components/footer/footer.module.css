@@ -39,7 +39,7 @@
 }
 .footer > div > section {
   padding: 8rem 5rem 0 5rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.342);
+  /* border-bottom: 1px solid rgba(255, 255, 255, 0.342); */
   /* padding: 8rem 0rem; */
   display: flex;
   flex-wrap: wrap;
@@ -104,4 +104,12 @@
 }
 .footer > div > center {
   padding: 2.4rem 0rem;
+}
+.footerSeparator {
+  border-bottom: 0.5px solid #3A444E;
+  opacity: 0.2;
+  color: #3A444E;
+  height: 0.5px;
+  width: 87%;
+  margin-bottom: 1rem;
 }

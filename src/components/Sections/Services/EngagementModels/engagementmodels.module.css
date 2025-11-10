@@ -1,6 +1,6 @@
 .section {
-  padding: 8rem 0;
-  background-color: #000;
+  padding: 0rem 0rem 8rem 0;
+  /* background-color: #000; */
   position: relative;
   overflow: hidden;
 }
@@ -10,11 +10,12 @@
   position: absolute;
   z-index: -90;
   top: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  /* left: 50%; */
+  /* transform: translateX(-50%); */
+  transform: translateY(50%);
   width: 100%;
   height: 100%;
-  background: radial-gradient(ellipse at center top, rgba(139, 69, 19, 0.15) 0%, transparent 70%);
+  background: radial-gradient(ellipse at center top, rgba(139, 69, 19, 0.15) 0%, transparent 100%);
   pointer-events: none;
 }
 
@@ -59,9 +60,8 @@
   color: #ffffff;
   table-layout: fixed;
 
-  /* ✅ Needed for TH gaps */
   border-collapse: separate;
-  border-spacing: 0;
+  border-spacing: 1.6rem 0;
 }
 
 .table thead {
@@ -69,26 +69,16 @@
 }
 
 .table th {
-  padding: 1.5rem 2rem 2rem 2rem;
+  padding: 1.5rem 2.5rem 2rem 2.5rem;
   text-align: left;
   font-size: 1.6rem;
   font-weight: 600;
-  color: #ffffff;
-
-  /* ✅ Individual border for each th */
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-
-  /* ✅ Ensures borders don’t overlap */
-  background-clip: padding-box;
-}
-
-/* ✅ Create gap between header cells */
-.table th + th {
-  border-left: 1rem solid transparent;
+  color: #ffffff;
 }
 
 .table td {
-  padding: 2rem;
+  padding: 2rem 2.5rem;
   font-size: 1.5rem;
   color: #ffffff;
   line-height: 1.6;

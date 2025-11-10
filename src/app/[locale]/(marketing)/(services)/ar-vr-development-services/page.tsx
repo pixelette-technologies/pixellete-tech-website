@@ -1,4 +1,5 @@
 import { OurClients } from '@/components/Home/OurClients/OurClients';
+import { EvaluateBusiness } from '@/components/Sections/EvaluateBusiness/EvaluateBusiness';
 import { CallToAction } from '@/components/Sections/Services/CallToAction/CallToAction';
 import { EngagementModels } from '@/components/Sections/Services/EngagementModels/EngagementModels';
 import ExpertiseGrid from '@/components/Sections/Services/ExpertiseGrid/ExpertiseGrid';
@@ -102,7 +103,32 @@ export default async function ARVR(props: IARVRProps) {
     ...faq,
     list: (faq as { list?: string[] }).list ?? [],
   }));
-
+  const clutchLogos = [
+    {
+      src: '/images/Clutch/clutch-badges/blockchain/most-reviewed-blockchain-company.png',
+      alt: 'Most reviewed Blockchain Company UK',
+    },
+    {
+      src: '/images/Clutch/clutch-badges/blockchain/top-company-blockchain-company.png',
+      alt: 'Top Blockchain Company UK',
+    },
+    {
+      src: '/images/Clutch/clutch-badges/blockchain/top-company-web3-development.png',
+      alt: 'Top web3 development Company',
+    },
+    {
+      src: '/images/Clutch/clutch-badges/blockchain/top-decentralized-finance-company.png',
+      alt: 'Top defi Company',
+    },
+    {
+      src: '/images/Clutch/clutch-badges/blockchain/top-smart-contract-development-company.png',
+      alt: 'Top smart contract development Company',
+    },
+    {
+      src: '/images/Clutch/clutch-badges/blockchain/top-tokenization-company.png',
+      alt: 'Top tokenization Company',
+    },
+  ];
   return (
     <>
       <script
@@ -122,56 +148,67 @@ export default async function ARVR(props: IARVRProps) {
         images={[]}
       />
 
-      <OurClients />
+      <div style={{ overflowX: 'hidden' }}>
+        <OurClients />
 
-      <OurServices
-        heading={arVrServicesHeading}
-        description={arVrServicesDescription}
-        serviceLists={vrServicelist}
-        serviceMapping={vrServices}
-      />
+        <OurServices
+          heading={arVrServicesHeading}
+          description={arVrServicesDescription}
+          serviceLists={vrServicelist}
+          serviceMapping={vrServices}
+        />
 
-      <ExpertiseGrid
-        header={header}
-        marqueeData={expertiseArVrChangeData}
-        backgroundImage={arVrbackgroundImage}
-      />
+        <ExpertiseGrid
+          header={header}
+          marqueeData={expertiseArVrChangeData}
+          backgroundImage={arVrbackgroundImage}
+        />
 
-      <VideoShowcase
-        title="Explore Our Immersive Showcases"
-        subtitle="A glimpse into the virtual worlds we've built, designed to inspire, engage, and redefine what's possible with AR and VR."
-        videos={arVrVideoShowcaseData}
-      />
+        <VideoShowcase
+          title="Explore Our Immersive Showcases"
+          subtitle="A glimpse into the virtual worlds we've built, designed to inspire, engage, and redefine what's possible with AR and VR."
+          videos={arVrVideoShowcaseData}
+        />
 
-      <TechnologyGrid
-        heading={tgheading}
-        description={tgdescription}
-        expertiseAreas={tgexpertiseAreas}
-        marqueeData={technologyGridChangeData}
-        extraDataMapping={tgExpertiseData}
-      />
-      <TechnologiesUsed
-        technologies={vrTechnologies}
-        title="Our AR/VR technology ecosystem"
-        subtitle=" We combine the best platforms, SDKs, and engines to build experiences that perform flawlessly across every device."
-      />
+        <TechnologyGrid
+          heading={tgheading}
+          description={tgdescription}
+          expertiseAreas={tgexpertiseAreas}
+          marqueeData={technologyGridChangeData}
+          extraDataMapping={tgExpertiseData}
+        />
+        <TechnologiesUsed
+          technologies={vrTechnologies}
+          title="Our AR/VR technology ecosystem"
+          subtitle=" We combine the best platforms, SDKs, and engines to build experiences that perform flawlessly across every device."
+        />
 
-      <EngagementModels models={engagementModels} />
+        <EngagementModels models={engagementModels} />
 
-      {/* <AiServiceTable /> */}
-      <HowWeWork />
-      {/* <OurCommitment
+        {/* <AiServiceTable /> */}
+        <HowWeWork />
+        {/* <OurCommitment
         heading={ocheading}
         description={ocdescription}
         commitmentData={commitmentData}
       /> */}
-      <FaqsSection faqs={formattedFaqs} />
-      <CallToAction
-        heading={arVrCta.heading}
-        description={arVrCta.description}
-        buttonText={arVrCta.buttonText}
-        buttonLink={arVrCta.buttonLink}
-      />
+        <FaqsSection faqs={formattedFaqs} />
+        <CallToAction
+          heading={arVrCta.heading}
+          description={arVrCta.description}
+          buttonText={arVrCta.buttonText}
+          buttonLink={arVrCta.buttonLink}
+        />
+
+        <EvaluateBusiness
+          heading="Ready to become a tech
+success story?"
+          description="Don’t let technical hurdles stand in the way of building tech solutions that
+shake up the world as we know it. Let us help you bring your vision to life with
+innovative, cost-effective and reliable services. Get in touch!"
+          clutchLogos={clutchLogos}
+        />
+      </div>
     </>
   );
 };
