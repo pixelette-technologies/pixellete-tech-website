@@ -1,7 +1,7 @@
 'use client';
 
 import { Container } from '@/components/Feature/Container/Container';
-import { backgroundImage } from '@/data/services/aiServices';
+import { backgroundImage, redBackground } from '@/data/services/aiServices';
 import Image from 'next/image';
 import React, { useState } from 'react';
 import styles from './technologiesused.module.css';
@@ -39,7 +39,7 @@ const TechnologiesUsed: React.FC<TechnologiesUsedProps> = ({ technologies, title
 
       <Container className={styles.main}>
         <div className={styles.cardSectionBackground}>
-          <img src={backgroundImage} alt="Background" />
+          <img src={redBackground} alt="Background" />
         </div>
       </Container>
       <div className={styles.technologiesMain} id="sideMargin">

@@ -4,6 +4,8 @@ import { Container } from '@/components/Feature/Container/Container';
 import Image from 'next/image';
 import React, { useRef, useState } from 'react';
 import styles from './videoshowcase.module.css';
+import Link from 'next/link';
+import { Button } from '@/components/Feature/Button/Button';
 
 export type VideoShowcaseItem = {
   id: string;
@@ -201,7 +203,17 @@ export const VideoShowcase: React.FC<VideoShowcaseProps> = ({
               </div>
             </div>
           ))}
+
         </div>
+       <div className={styles.callToAction}>
+       <p>Want to see how immersive technology can elevate your industry?</p>
+          <Link href={'/contact-us'}>
+              <Button className="primary">
+                {'Book a discovery call'}
+              </Button>
+            </Link>
+       </div>
+
       </div>
     </Container>
   );

@@ -1,6 +1,5 @@
 import { OurClients } from '@/components/Home/OurClients/OurClients';
-import { EvaluateBusiness } from '@/components/Sections/EvaluateBusiness/EvaluateBusiness';
-import { AiServiceTable } from '@/components/Sections/Services/AiServiceTable/AiServiceTable';
+import { CallToAction } from '@/components/Sections/Services/CallToAction/CallToAction';
 import { EngagementModels } from '@/components/Sections/Services/EngagementModels/EngagementModels';
 import ExpertiseGrid from '@/components/Sections/Services/ExpertiseGrid/ExpertiseGrid';
 import FaqsSection from '@/components/Sections/Services/FAQs/FaqsSection';
@@ -18,6 +17,7 @@ import {
   aiHeroDescription,
   aiHeroHeading,
   arVrbackgroundImage,
+  arVrCta,
   arVrServicesDescription,
   arVrServicesHeading,
   engagementModels,
@@ -98,6 +98,11 @@ export default async function ARVR(props: IARVRProps) {
   //       type="application/ld+json"
   //       dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
   //     />
+  const formattedFaqs = arFaqs.map(faq => ({
+    ...faq,
+    list: (faq as { list?: string[] }).list ?? [],
+  }));
+
   return (
     <>
       <script
@@ -160,10 +165,12 @@ export default async function ARVR(props: IARVRProps) {
         description={ocdescription}
         commitmentData={commitmentData}
       /> */}
-      <FaqsSection faqs={arFaqs} />
-      <EvaluateBusiness
-        heading="We’re not waiting for the future; we’re actively building with businesses"
-        description="Start your transformation today and promote your development goals with a top-tier global team that pushes the boundaries of innovation every single day."
+      <FaqsSection faqs={formattedFaqs} />
+      <CallToAction
+        heading={arVrCta.heading}
+        description={arVrCta.description}
+        buttonText={arVrCta.buttonText}
+        buttonLink={arVrCta.buttonLink}
       />
     </>
   );

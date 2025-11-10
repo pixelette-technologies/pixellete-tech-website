@@ -1,0 +1,50 @@
+.wrapper {
+  padding: 10rem 0;
+  background: radial-gradient(circle at top, rgba(39, 39, 39, 0.6) 0%, rgba(10, 10, 10, 0.95) 55%, #050505 100%);
+  border-top: 1px solid rgba(255, 255, 255, 0.04);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  text-align: center;
+  width: 100%;
+}
+
+.eyebrow {
+  font-size: 1.4rem;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0;
+}
+
+.heading {
+  margin: 0;
+  font-size: clamp(2rem, 3vw + 1.6rem, 3rem);
+  /* line-height: 1.2; */
+}
+
+.description {
+  margin: 0;
+  font-size: 1.6rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.75);
+  max-width: 58ch;
+}
+@media (max-width: 768px) {
+  .wrapper {
+    padding: 8rem 0;
+  }
+
+  .container {
+    gap: 1.6rem;
+  }
+
+  .description {
+    font-size: 1.5rem;
+  }
+}

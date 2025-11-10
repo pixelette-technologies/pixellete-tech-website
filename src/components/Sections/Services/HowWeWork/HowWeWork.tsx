@@ -1,35 +1,45 @@
-import React from 'react';
-import './index.css';
+import React from "react";
+import "./index.css";
 
 type HowWeWorkProps = object;
 
 const data = [
   {
-    title: 'Discovery Call',
-    desc: 'We start with a deep-dive discovery call to understand your unique goals, challenges, and vision.',
+    title: "Discovery call",
+    desc: "We identify your goals and define success metrics.",
   },
   {
-    title: 'Proposal',
-    desc: 'Next, we craft a tailored strategy and proposal. Every step, from tech stack to timelines, is mapped out.',
+    title: "Proposal & storyboarding",
+    desc: "Our team designs your immersive experience from concept to prototype.",
   },
   {
-    title: 'Execution',
-    desc: 'With a well-defined plan in place, our expert team moves into action. Using agile methods, we build, test, and refine, keeping you engaged every step of the way.',
+    title: "Build & launch",
+    desc: "We develop, test, and deploy using agile methods.",
   },
   {
-    title: 'Evaluation and Maintenance',
-    desc: 'Post-launch, we rigorously evaluate performance and provide ongoing support for any of your growing needs',
+    title: "Evaluate & support",
+    desc: "We monitor performance and refine your solution for continued impact.",
   },
 ];
 
 export const HowWeWork: React.FC<HowWeWorkProps> = () => {
   return (
-    <div style={{ margin: '5rem 0', padding: '10rem 0' }} className="howWeWorkBg">
-      <div style={{ display: 'flex', justifyContent: 'center', width: '100%' }}>
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '5rem', justifyContent: 'center' }}>
+    <div
+      style={{ margin: "5rem 0", padding: "10rem 0" }}
+      className="howWeWorkBg"
+    >
+      <div style={{ display: "flex", justifyContent: "center", width: "100%" }}>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            gap: "5rem",
+            justifyContent: "center",
+          }}
+        >
           <div
             className="howWeWorkTextAlign"
-            style={{ display: 'flex', justifyContent: 'space-between' }}
+            style={{ display: "flex", justifyContent: "space-between" }}
           >
             <h2>How we work</h2>
             {/* <p>
@@ -39,7 +49,8 @@ export const HowWeWork: React.FC<HowWeWorkProps> = () => {
               flexible, responsive approach to every project.
             </p> */}
             <p>
-              We understand each client’s needs are unique, and we bring a flexible, responsive approach to every project. With structured methodologies and the agility to adapt, we stay on the pulse of trends, providing you with tech and IT services that are not just relevant today but remain future-proof.
+              Our agile process keeps every project aligned with your goals,
+              timelines, and evolving requirements.
             </p>
           </div>
           <div className="expertiseGrid">
