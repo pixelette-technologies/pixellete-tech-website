@@ -60,13 +60,14 @@ export const OurServices: React.FC<OurServicesProps> = ({
 
   return (
     <div style={{ padding: '10rem 0' }} className="OurServicesBg">
-      <Container className="main margins">
+      <div className="main margins arvrContainer">
         <center>
           <h2>{heading}</h2>
           <br />
           <p>{description}</p>
         </center>
-        <div className="ourServicesLists">
+       <center>
+       <div className="ourServicesListsar ">
           {serviceLists.map((list, idx) => (
             <div
               key={idx}
@@ -107,7 +108,8 @@ export const OurServices: React.FC<OurServicesProps> = ({
             </div>
           ) : null}
         </div>
-      </Container>
+        </center> 
+             </div>
     </div>
   );
 };

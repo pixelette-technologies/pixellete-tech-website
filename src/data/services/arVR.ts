@@ -298,3 +298,11 @@ export const engagementModels = [
     benefits: 'Long-term collaboration with full project ownership',
   },
 ];
+
+export const arVrCta = {
+  heading: 'We’re not waiting for the future, we’re building it with you',
+  description:
+    'Partner with our global AR/VR team to turn your ideas into immersive experiences that captivate, educate, and convert.',
+  buttonText: 'Book a discovery session',
+  buttonLink: '/contact-us',
+};

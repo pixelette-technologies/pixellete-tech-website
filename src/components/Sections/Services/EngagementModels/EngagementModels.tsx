@@ -5,6 +5,7 @@ import { Container } from '@/components/Feature/Container/Container';
 import Link from 'next/link';
 import React from 'react';
 import styles from './engagementmodels.module.css';
+import { redBackground } from '@/data/services/aiServices';
 
 export type EngagementModel = {
   engagementType: string;
@@ -33,6 +34,7 @@ export const EngagementModels: React.FC<EngagementModelsProps> = ({
 }) => {
   return (
     <section className={styles.section}>
+
       <Container className={styles.container}>
         <div className={styles.header}>
           <h2 className={styles.title}>{title}</h2>

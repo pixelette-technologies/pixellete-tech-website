@@ -27,7 +27,14 @@ const ExpertiseGrid: React.FC<ExpertiseGridProps> = ({
     <>
       <Container className={styles.main}>
         <div className={styles.cardSectionBackground}>
-          <img src={backgroundImage} alt="Background" />
+          <Image
+            src={backgroundImage}
+            alt="Background"
+            className={styles.backgroundImage}
+            width={1920}
+            height={1080}
+            priority
+          />
         </div>
       </Container>
       <Container className={styles.main}>
@@ -39,26 +46,19 @@ const ExpertiseGrid: React.FC<ExpertiseGridProps> = ({
             <p>{header.description}</p>
           </header>
 
-          <center>
-          
-           {/* Grid Layout */}
-           <div className={styles.gridContainer}>
-            {marqueeData.map((el, index) => (
-              <div className={styles.flipCard} key={`${el.text}-${index}`}>
-                <div className={styles.flipCardInner}>
-                  <div className={styles.flipCardFront}>
-                    <Image src={el.image} alt={el.text} width={44} height={44} />
-                    <p>{el.text}</p>
-                  </div>
-                  <div className={styles.flipCardBack}>
-                    {el.description ? <p>{el.description}</p> : null}
-                  </div>
+          <div className={styles.gridWrapper}>
+            <div className={styles.gridContainer}>
+              {marqueeData.map(el => (
+                <div className={styles.card} key={el.text}>
+                  <Image src={el.image} alt={el.text} width={44} height={44} />
+                  <p className={styles.cardTitle}>{el.text}</p>
+                  {el.description && (
+                    <p className={styles.cardDescription}>{el.description}</p>
+                  )}
                 </div>
-              </div>
-            ))}
+              ))}
             </div>
-
-          </center>
+          </div>
         </div>
       </Container>
     </>

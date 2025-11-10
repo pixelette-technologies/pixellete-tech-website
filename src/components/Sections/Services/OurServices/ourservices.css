@@ -8,7 +8,9 @@
   align-items: center; /* Center content vertically */
   justify-content: center; /* Center content horizontally */
 }
-
+.arvrContainer{
+  width: 100% !important;
+}
 .OurServicesBg::after {
   content: '';
   width: 100%;
@@ -66,28 +68,29 @@
   /* margin: 2rem 0; */
 }
 
-.ourServicesLists {
+.ourServicesListsar {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  /* width: 100%; */
+text-align:start;
+  width: 80%;
 }
 
-.ourServicesLists div:nth-child(1),
-.ourServicesLists div:nth-child(2) {
+.ourServicesListsar div:nth-child(1),
+.ourServicesListsar div:nth-child(2) {
   display: flex;
   flex-direction: column;
   gap: 3rem;
 }
 
-.ourServicesLists div:nth-child(1) p,
-.ourServicesLists div:nth-child(2) p {
+.ourServicesListsar div:nth-child(1) p,
+.ourServicesListsar div:nth-child(2) p {
   cursor: pointer;
   position: relative;
 }
 
-.ourServicesLists div:nth-child(1) p::before,
-.ourServicesLists div:nth-child(2) p::before {
+.ourServicesListsar div:nth-child(1) p::before,
+.ourServicesListsar div:nth-child(2) p::before {
   content: '';
   position: absolute;
   width: 0;
@@ -98,8 +101,8 @@
   transition: all ease 1s;
 }
 
-.ourServicesLists div:nth-child(1) p:hover::before,
-.ourServicesLists div:nth-child(2) p:hover::before {
+.ourServicesListsar div:nth-child(1) p:hover::before,
+.ourServicesListsar div:nth-child(2) p:hover::before {
   content: '';
   position: absolute;
   width: 100%;
@@ -109,26 +112,26 @@
   left: 0;
 }
 
-.ourServicesLists {
+.ourServicesListsar {
   display: flex;
   justify-content: space-between;
 }
 
-.ourServicesLists div:nth-child(1),
-.ourServicesLists div:nth-child(2) {
+.ourServicesListsar div:nth-child(1),
+.ourServicesListsar div:nth-child(2) {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
 }
 
-.ourServicesLists div:nth-child(1) p,
-.ourServicesLists div:nth-child(2) p {
+.ourServicesListsar div:nth-child(1) p,
+.ourServicesListsar div:nth-child(2) p {
   cursor: pointer;
   position: relative;
 }
 
-.ourServicesLists div:nth-child(1) p::before,
-.ourServicesLists div:nth-child(2) p::before {
+.ourServicesListsar div:nth-child(1) p::before,
+.ourServicesListsar div:nth-child(2) p::before {
   content: '';
   position: absolute;
   width: 0;
@@ -139,8 +142,8 @@
   transition: all ease 1s;
 }
 
-.ourServicesLists div:nth-child(1) p:hover::before,
-.ourServicesLists div:nth-child(2) p:hover::before {
+.ourServicesListsar div:nth-child(1) p:hover::before,
+.ourServicesListsar div:nth-child(2) p:hover::before {
   content: '';
   position: absolute;
   width: 100%;
@@ -151,7 +154,7 @@
 }
 
 .ourServicesBlock {
-  width: 450px;
+  width: 550px;
   background-color: #0f0f0fb2;
   padding: 2rem;
   border-radius: 13.84px;
@@ -162,7 +165,7 @@
   .OurServicesBg div {
     padding: 0.5rem;
   }
-  .ourServicesLists {
+  .ourServicesListsar {
     padding: 2rem;
     flex-direction: column;
     align-items: center;
@@ -174,13 +177,13 @@
     padding: 1rem; /* Less padding for mobile */
   }
 
-  .ourServicesLists div {
+  .ourServicesListsar div {
     /* align-items: center; */
     width: 100%;
     gap: 1.5rem; /* Reduced gap for mobile */
   }
 
-  .ourServicesLists div p {
+  .ourServicesListsar div p {
     font-size: 1.2rem; /* Smaller font size for mobile */
   }
 }
