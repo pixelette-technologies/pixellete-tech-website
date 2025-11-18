@@ -93,8 +93,9 @@
 }
 
 .ourServicesHeader p {
-  max-width: 72ch;
+  max-width: 90ch;
   line-height: 1.6;
+  text-align: center;
 }
 
 .ourServicesListsar {

@@ -63,7 +63,14 @@ export const OurServices: React.FC<OurServicesProps> = ({
         <center>
           <div className="ourServicesHeader">
             <h2>{heading}</h2>
-            <p>{description}</p>
+            <p>
+              {description.split('\n').map((line, index, array) => (
+                <React.Fragment key={index}>
+                  {line}
+                  {index < array.length - 1 && <br />}
+                </React.Fragment>
+              ))}
+            </p>
           </div>
         </center>
         <div className="ourServicesLayout">

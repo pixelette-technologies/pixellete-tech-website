@@ -147,7 +147,7 @@ const AboutUsSection: React.FC = () => {
                 Our passion lies in engineering technologies that redefine industries
               </h2>
               <p className="sm-text-center">
-                Since 2018, Pixelette Technologies has evolved from a pioneering blockchain studio into a frontier innovation group, leading breakthroughs across AI, agentic systems, quantum computing, and decentralised technologies.  Our mission is simple, to turn bold ideas into secure, scalable, and world-changing solutions.
+                Since 2018, Pixelette Technologies has evolved from a pioneering blockchain studio into a frontier innovation group, leading breakthroughs across AI, agentic systems, quantum computing, and decentralised technologies.<br/>   Our mission is simple, to turn bold ideas into secure, scalable, and world-changing solutions.
               </p>
             </div>
             <div>

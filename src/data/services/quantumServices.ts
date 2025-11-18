@@ -55,8 +55,7 @@ export const tgExpertiseData = {
 export const quantumHeroHeading = 'Quantum Services';
 export const quantumHeroSubHeading = 'Secure. Intelligent. Future-Ready.';
 
-export const quantumHeroDescription
-  = 'Pixelette Quantum brings practical quantum adoption to governments, enterprises, and investors, integrating AI and blockchain with quantum technologies to help organisations stay secure, efficient, and future-ready.We bridge the gap between innovation and application, making quantum-driven intelligence accessible today.';
+export const quantumHeroDescription = 'Pixelette Quantum brings practical quantum adoption to governments, enterprises, and investors, integrating AI and blockchain with quantum technologies to help organisations stay secure, efficient, and future-ready.\nWe bridge the gap between innovation and application, making quantum-driven intelligence accessible today.';
 
 export const quantumHeroButtonText = 'Consult our experts';
 
@@ -74,7 +73,7 @@ export const quantumHeroImages = [
 export const quantumServicesHeading = 'Our services';
 
 export const quantumServicesDescription
-  = 'Our quantum services empower organisations to explore the practical intersections of AI, blockchain, and quantum computing. We focus on applied pilots and integrations that deliver measurable outcomes, from quantum-ready blockchain frameworks to hybrid AI optimisation.';
+  = 'Our quantum services empower organisations to explore the practical intersections of AI, blockchain, and quantum computing.\nWe focus on applied pilots and integrations that deliver measurable outcomes, from quantum-ready blockchain frameworks to hybrid AI optimisation.';
 
 export const quantumServicelist
     = [
@@ -93,19 +92,19 @@ export const quantumServices = {
     imageSrc: '/images/quantumService/quantumService_1.svg',
     title: 'Web3 Hardening (Quantum-Safe Architecture)',
     description:
-        'We prepare blockchain ecosystems for the post-quantum era. Our team helps organisations assess cryptographic dependencies, design crypto-agile architectures, and implement digital-signature upgrades aligned with emerging NIST PQC standards. All delivered with a focus on interoperability, scalability, and long-term data integrity.',
+        'We prepare blockchain ecosystems for the post-quantum era.\nOur team helps organisations assess cryptographic dependencies, design crypto-agile architectures, and implement digital-signature upgrades aligned with <strong>emerging NIST PQC standards</strong>. \nAll delivered with a focus on interoperability, scalability, and long-term data integrity.',
   },
   'Hybrid Quantum-AI Optimisation': {
     imageSrc: '/images/quantumService/quantumService_2.svg',
     title: 'Hybrid Quantum-AI Optimisation',
     description:
-        'Combine classical and quantum computing to enhance AI-based decision systems. <br /><br />We develop models and pilots that optimise:<br />• <strong>Finance:</strong> portfolio management, risk modelling<br />• <strong>Supply Chains:</strong> logistics optimisation, dynamic routing<br />• <strong>Energy Systems:</strong> grid balancing and storage efficiency<br /><br />Delivered through APIs or managed service pilots, benchmarked against real business KPIs.',
+        'Combine classical and quantum computing to enhance AI-based decision systems.\nWe develop models and pilots that optimise: \n• <strong>Finance:</strong> portfolio management, risk modelling<br />• <strong>Supply Chains:</strong> logistics optimisation, dynamic routing<br />• <strong>Energy Systems:</strong> grid balancing and storage efficiency \nDelivered through APIs or managed service pilots, benchmarked against real business KPIs.',
   },
   'Executive Advisory & Roadmapping': {
     imageSrc: '/images/quantumService/quantumService_3.svg',
     title: 'Executive Advisory & Roadmapping',
     description:
-        'We help leadership teams make informed, low-risk decisions on quantum adoption. Includes board-level briefings, technical workshops, and 6- to 12-week pilot frameworks aligned with organisational strategy.',
+        'We help leadership teams make informed, low-risk decisions on quantum adoption.\n Includes board-level briefings, technical workshops, and 6- to 12-week pilot frameworks aligned with organisational strategy.',
   },
 };
 

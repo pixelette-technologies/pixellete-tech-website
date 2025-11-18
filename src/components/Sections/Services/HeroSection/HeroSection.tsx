@@ -51,7 +51,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                 <img
                   src="/images/arvrServices/heroSectionBackground.svg"
                   alt="overlay"
-                  className='arvr-overlay-image'
+                  className="arvr-overlay-image"
                 />
               </>
             )
@@ -84,15 +84,20 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
           </h1>
           {
             subHeading && (
-             <center>
-               <h2 className='quantum-sub-heading'>
-                {subHeading}
-              </h2>
-             </center>
+              <center>
+                <h2 className="quantum-sub-heading">
+                  {subHeading}
+                </h2>
+              </center>
             )
           }
           <p>
-            {description}
+            {description.split('\n').map((line, index, array) => (
+              <React.Fragment key={index}>
+                {line}
+                {index < array.length - 1 && <br />}
+              </React.Fragment>
+            ))}
           </p>
 
           <div>
@@ -101,9 +106,9 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                 {buttonText}
               </Button>
             </Link>
-            <Link href={'/contact-us'}>
+            <Link href="/contact-us">
               <Button className="primary">
-                {'Book a discovery call'}
+                Book a discovery call
               </Button>
             </Link>
           </div>
