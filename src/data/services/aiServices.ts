@@ -134,7 +134,7 @@ export const aiServices = {
     imageSrc: '/images/aiServices/agenticAiIcon.svg',
     title: 'Agentic AI',
     description:
-        'We build intelligent, autonomous systems capable of reasoning, learning, and acting independently. From multi-agent architectures to real-time decision-making engines, our Agentic AI solutions replicate human-like initiative, enabling dynamic workflows, automated problem-solving, and adaptive decision systems across industries.',
+        'Specializing in multi-agent AI systems, we build autonomous models that reason, collaborate, and act proactively. Our agentic frameworks enable AI to make contextual decisions, automate complex workflows, and dynamically adapt to changing data environments, unlocking next-level operational intelligence.',
   },
   'Generative AI': {
     imageSrc: '/images/aiServices/s_1.svg',
