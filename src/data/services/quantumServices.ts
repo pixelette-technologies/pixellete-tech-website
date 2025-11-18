@@ -86,7 +86,24 @@ export const quantumServicelist
         ],
       },
     ];
-
+    export const quantumHowWeWork = [
+      {
+        title: "Discovery Call",
+        desc: "Understand your goals and readiness for quantum adoption.",
+      },
+      {
+        title: "Proposal",
+        desc: "Define project scope, milestones, and delivery model.",
+      },
+      {
+        title: "Execution",
+        desc: "Deploy pilots with measurable, data-driven outcomes.",
+      },
+      {
+        title: "Evaluation and Maintenance",
+        desc: "Review results and plan further integration.",
+      },
+    ];
 export const quantumServices = {
   'Web3 Hardening (Quantum-Safe Architecture)': {
     imageSrc: '/images/quantumService/quantumService_1.svg',
