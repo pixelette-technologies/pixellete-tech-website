@@ -17,6 +17,7 @@ import {
   quantumHeroHeading,
   quantumHeroImages,
   quantumHeroSubHeading,
+  quantumHowWeWork,
   quantumServicelist,
   quantumServices,
   quantumServicesDescription,
@@ -141,7 +142,7 @@ export default async function QuantumServices(props: IQuantumServicesProps) {
 
       <QuantumPlans />
 
-      <HowWeWork />
+      <HowWeWork customData={quantumHowWeWork} />
 
       <QuantumCommitment />
 
