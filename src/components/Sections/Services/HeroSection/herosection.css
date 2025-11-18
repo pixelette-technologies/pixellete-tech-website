@@ -2,6 +2,13 @@
   position: relative;
   background: black;
 }
+.quantum-sub-heading {
+  font-size: 20px;
+  font-weight: 600;
+  color: #ffffff;
+  line-height: 1.2;
+  margin-top: 1rem;
+}
 .heroSection-background > img {
   z-index: -1000;
   position: absolute;
@@ -86,17 +93,21 @@
 }
 .heroSection > div > blockquote > img {
   margin-top: 10rem;
-
   position: absolute;
   z-index: -100;
+  object-fit: contain;
+  width: auto;
+  height: auto;
 }
 .heroSection > div > blockquote > *:first-child {
   height: 12rem;
   max-width: 17.5rem;
+  width: auto;
   top: -7rem;
   margin-left: 10rem;
   padding-left: 1rem;
   animation: rotateOpposite 20s linear infinite;
+  object-fit: contain;
 }
 @media only screen and (max-width: 37.5em) {
   .heroSection > div > blockquote {
@@ -109,10 +120,12 @@
 }
 .heroSection > div > blockquote > *:nth-child(2) {
   max-width: 10rem;
+  width: auto;
   height: 14.13rem;
   top: 20rem;
   margin-left: 10rem;
   animation: rotateOpposite 15s linear infinite;
+  object-fit: contain;
 }
 @media only screen and (max-width: 37.5em) {
   .heroSection > div > blockquote > *:nth-child(2) {
@@ -122,8 +135,11 @@
 .heroSection > div > blockquote > *:nth-child(3) {
   right: 14rem;
   height: 13rem;
+  width: auto;
+  max-width: 13rem;
   margin-top: 6rem;
   animation: rotateOpposite 25s linear infinite;
+  object-fit: contain;
 }
 @media only screen and (max-width: 37.5em) {
   .heroSection > div > blockquote > *:nth-child(3) {
@@ -138,6 +154,9 @@
   margin-right: 14rem;
   animation: rotateOpposite 13s linear infinite;
   height: 13rem;
+  width: auto;
+  max-width: 13rem;
+  object-fit: contain;
 }
 .heroSection > div > h1 {
   text-align: center;

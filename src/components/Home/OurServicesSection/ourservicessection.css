@@ -56,7 +56,12 @@
   gap: 2rem;
   margin-top: 4.8rem;
   justify-content: center;
+  align-items: stretch;
   transition: 0.5s ease-in-out;
+}
+.technologyStack > div > div > a {
+  display: flex;
+  height: 100%;
 }
 .technologyStack > div > div > a > div {
   width: 17%;
@@ -68,6 +73,8 @@
   justify-content: center;
   padding: 2.5rem 2.2rem;
   border-radius: 1rem;
+  min-height: 120px;
+  height: 100%;
 }
 .technologyStack > div > div > a > div > img {
   width: 80%;

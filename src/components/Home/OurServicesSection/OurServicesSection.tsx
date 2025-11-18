@@ -9,10 +9,11 @@ const OurServicesSection: React.FC = () => {
     <div className="technologyStack" id="sideMargin">
       <center className="mobilePadding">
         <h2>
-          We bring full-stack development services to the table
+          We engineer full-stack solutions across blockchain, agentic ai & frontier tech
         </h2>
         <p>
-          Explore our full suite of development services designed to deliver success to businesses across various industries.
+          Explore our complete suite of development and innovation services, combining enterprise-grade blockchain, intelligent AI systems, and quantum-ready architectures to drive measurable transformation across industries.
+          {' '}
         </p>
 
       </center>
@@ -29,7 +30,9 @@ const OurServicesSection: React.FC = () => {
                   alignItems: 'center',
                   gap: '1rem',
                   padding: '2rem 3rem',
-                  width: '23rem',
+                  width: '230px',
+                  height: '100%',
+                  minHeight: '120px',
                   cursor: 'pointer',
                 }}
               // data-aos="fade-up"
@@ -38,7 +41,7 @@ const OurServicesSection: React.FC = () => {
                 <img src={item.icon} alt="icon" />
                 <h4
                   style={{
-                    fontSize: '2rem',
+                    fontSize: '20px',
                     lineHeight: '2.5rem',
                   }}
                 >

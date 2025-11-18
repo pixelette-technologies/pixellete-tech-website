@@ -18,10 +18,22 @@ export const teamData = [
     linkedin: 'https://www.linkedin.com/in/temurkhan/',
   },
   {
+    image: '/images/people/Chad Donahue.jpg',
+    name: 'Chad Donahue',
+    role: 'CBDO',
+    linkedin: 'https://www.linkedin.com/in/chad-donahue/',
+  },
+  {
     image: '/images/people/barry.jpg',
     name: 'Barry Perkins',
     role: 'Managing Director - USA',
     linkedin: 'https://www.linkedin.com/in/barrynperkins/',
+  },
+  {
+    image: '/images/people/Daniel_Tschinkel.png',
+    name: 'Daniel C. Tschinkel',
+    role: 'Head of Operations (DACH)',
+    linkedin: 'https://www.linkedin.com/in/daniel-tschinkel/',
   },
   {
     image: '/images/people/Eric_R_Smithers.jpg',
@@ -29,17 +41,17 @@ export const teamData = [
     role: 'MD (USA)',
     linkedin: 'https://www.linkedin.com/in/eric-r-smithers-2677565/',
   },
-  {
-    image: '/images/people/Emmanuel_Ruiz_Jobim.jpg',
-    name: 'Emmanuel Ruiz',
-    role: 'Head of Partnerships',
-    linkedin: 'https://www.linkedin.com/in/emmanuel-ruiz-gimenez-jobim/',
-  },
-  {
-    image: '/images/people/kelvin-kong.jpg',
-    name: 'Kelvin Kong',
-    role: 'MD (Asia Pacific)',
-  },
+  // {
+  //   image: '/images/people/Emmanuel_Ruiz_Jobim.jpg',
+  //   name: 'Emmanuel Ruiz',
+  //   role: 'Head of Partnerships',
+  //   linkedin: 'https://www.linkedin.com/in/emmanuel-ruiz-gimenez-jobim/',
+  // },
+  // {
+  //   image: '/images/people/kelvin-kong.jpg',
+  //   name: 'Kelvin Kong',
+  //   role: 'MD (Asia Pacific)',
+  // },
   {
     image: '/images/people/maiwand-sultan.jpeg',
     name: 'Maiwand Sultan',
