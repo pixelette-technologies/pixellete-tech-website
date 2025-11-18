@@ -35,10 +35,11 @@ export const HeroSection: React.FC<HeroSectionProps> = () => {
             ))}
           </blockquote>
           <h1>
-            Shaping the future with every line of code
+          From blocks & neural vectors to qubits - engineering the future.
           </h1>
           <p>
-          At Pixelette Technologies, we build transformative tech for tomorrow’s world, because the future belongs to those who dare to <b>LIVE THE <span className="text-red-600 relative inline-block">
+          From quantum-safe blockchain architectures and decentralized intelligence frameworks to multi-agent AI systems, we turn frontier research into real-world advantage.
+Because innovation begins with those who dare to <b>LIVE THE <span className="text-red-600 relative inline-block">
           WHAT-IF</span></b>.
             {/* At Pixelette Technologies, we are committed to crafting
             transformative technology that answers the problems to tomorrow’s

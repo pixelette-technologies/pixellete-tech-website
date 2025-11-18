@@ -23,6 +23,7 @@ export const navMenus = [
       { id: 7, name: 'Mobile Application Development', to: '/mobile-app-development-services' },
       { id: 8, name: 'Custom Software Development', to: '/custom-software-development-services' },
       { id: 9, name: 'UI/UX Design', to: '/ui-ux-design-services' },
+      { id: 10, name: 'Quantum Development', to: '/quantum-development-services' },
 
       // {
       //   name: "Digital Marketing",

@@ -1,0 +1,123 @@
+.industryTableSection {
+  padding: 10rem 0;
+  background-color: #0a0a0a;
+}
+
+.industryTableHeader {
+  text-align: center;
+  margin-bottom: 6rem;
+  max-width: 90rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.industryTableHeader h2 {
+  font-size: 4.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: #ffffff;
+  line-height: 1.2;
+}
+
+.industryTableHeader p {
+  font-size: 1.8rem;
+  color: #ffffff;
+  line-height: 1.6;
+  max-width: 80ch;
+  margin: 0 auto;
+  opacity: 0.9;
+}
+
+.industryTableContainer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.industryTableWrapper {
+  background-color: #111011;
+  border-radius: 1.2rem;
+  padding: 3rem;
+  margin: 0 auto 4rem;
+  max-width: 120rem;
+  border: none;
+}
+
+.industryTable {
+  width: 100%;
+  color: #ffffff;
+  table-layout: fixed;
+  border-collapse: separate;
+  border-spacing: 1.6rem 0;
+}
+
+.industryTable thead {
+  border-bottom: none;
+}
+
+.industryTable th {
+  padding: 1.5rem 2.5rem 2rem 2.5rem;
+  text-align: left;
+  font-size: 1.6rem;
+  font-weight: 600;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+}
+
+.industryTable td {
+  padding: 2rem 2.5rem;
+  font-size: 1.5rem;
+  color: #ffffff;
+  line-height: 1.6;
+  border: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .industryTableHeader h2 {
+    font-size: 2.5rem;
+  }
+
+  .industryTableHeader p {
+    font-size: 1.4rem;
+    padding: 0 2rem;
+  }
+
+  .industryTableWrapper {
+    padding: 2rem 1.5rem;
+    overflow-x: auto;
+  }
+
+  .industryTable {
+    min-width: 600px;
+  }
+
+  .industryTable th,
+  .industryTable td {
+    padding: 1.5rem 1rem;
+    font-size: 1.3rem;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .industryTableSection {
+    padding: 6rem 0;
+  }
+
+  .industryTableHeader h2 {
+    font-size: 2rem;
+  }
+
+  .industryTableHeader p {
+    font-size: 1.3rem;
+  }
+
+  .industryTableWrapper {
+    padding: 1.5rem 1rem;
+  }
+
+  .industryTable th,
+  .industryTable td {
+    padding: 1rem 0.8rem;
+    font-size: 1.2rem;
+  }
+}

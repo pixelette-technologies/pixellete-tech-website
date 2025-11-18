@@ -1,5 +1,4 @@
 'use client';
-import { Container } from '@/components/Feature/Container/Container';
 import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
 import './ourservices.css';
@@ -62,54 +61,53 @@ export const OurServices: React.FC<OurServicesProps> = ({
     <div style={{ padding: '10rem 0' }} className="OurServicesBg">
       <div className="main margins arvrContainer">
         <center>
-          <h2>{heading}</h2>
-          <br />
-          <p>{description}</p>
+          <div className="ourServicesHeader">
+            <h2>{heading}</h2>
+            <p>{description}</p>
+          </div>
         </center>
-       <center>
-       <div className="ourServicesListsar ">
-          {serviceLists.map((list, idx) => (
-            <div
-              key={idx}
-              style={{ gap: '0rem' }}
-            >
-              {list.items?.map((item, index) => (
+        <div className="ourServicesLayout">
+          <div className="ourServicesLeft">
+            <div className="ourServicesListsar">
+              {serviceLists.map((list, idx) => (
                 <div
-                  key={index}
+                  key={idx}
                   style={{ gap: '0rem' }}
                 >
-                  <p onMouseEnter={() => handleServiceClick(item)} style={{ fontSize: '1.5rem' }}>
-                    <strong>
-                      {' '}
-                      {item}
-                      {' '}
-                    </strong>
-                  </p>
+                  {list.items?.map((item, index) => (
+                    <div
+                      key={index}
+                      style={{ gap: '0rem' }}
+                    >
+                      <p onMouseEnter={() => handleServiceClick(item)} style={{ fontSize: '1.5rem' }}>
+                        <strong>
+                          {' '}
+                          {item}
+                          {' '}
+                        </strong>
+                      </p>
+                    </div>
+                  ))}
                 </div>
               ))}
             </div>
-          ))}
-          {currentService ? (
-            <div
-              className="ourServicesBlock"
-              // style={{
-              //   width: '450px',
-              //   backgroundColor: '#0F0F0FB2',
-              //   padding: '2rem',
-              //   borderRadius: '13.84px',
-              //   height: '460px',
-              // }}
-            >
-              <Image src={currentService.imageSrc} alt={currentService.title} width={50} height={50} />
-              <br />
-              <h3>{currentService.title}</h3>
-              <br />
-              <p>{currentService.description}</p>
-            </div>
-          ) : null}
+          </div>
+          <div className="ourServicesRight">
+            {currentService
+              ? (
+                  <div className="ourServicesBlock">
+                    <Image src={currentService.imageSrc} alt={currentService.title} width={50} height={50} />
+                    <h3>{currentService.title}</h3>
+                    <div
+                      className="ourServicesDescription"
+                      dangerouslySetInnerHTML={{ __html: currentService.description.replace(/\n/g, '<br />') }}
+                    />
+                  </div>
+                )
+              : null}
+          </div>
         </div>
-        </center> 
-             </div>
+      </div>
     </div>
   );
 };

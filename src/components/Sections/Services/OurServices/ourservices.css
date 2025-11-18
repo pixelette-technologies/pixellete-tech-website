@@ -5,10 +5,10 @@
   background-position: center;
   display: flex;
   position: relative;
-  align-items: center; /* Center content vertically */
-  justify-content: center; /* Center content horizontally */
+  align-items: center;
+  justify-content: center;
 }
-.arvrContainer{
+.arvrContainer {
   width: 100% !important;
 }
 .OurServicesBg::after {
@@ -68,53 +68,42 @@
   /* margin: 2rem 0; */
 }
 
-.ourServicesListsar {
+.ourServicesLayout {
   display: flex;
+  gap: 4rem;
+  align-items: flex-start;
   justify-content: space-between;
-  flex-wrap: wrap;
-text-align:start;
-  width: 80%;
 }
 
-.ourServicesListsar div:nth-child(1),
-.ourServicesListsar div:nth-child(2) {
+.ourServicesLeft {
+  flex: 1;
+  max-width: 50%;
+}
+
+.ourServicesRight {
+  flex: 1;
+  max-width: 50%;
   display: flex;
   flex-direction: column;
   gap: 3rem;
 }
 
-.ourServicesListsar div:nth-child(1) p,
-.ourServicesListsar div:nth-child(2) p {
-  cursor: pointer;
-  position: relative;
+.ourServicesHeader h2 {
+  margin-bottom: 1.5rem;
 }
 
-.ourServicesListsar div:nth-child(1) p::before,
-.ourServicesListsar div:nth-child(2) p::before {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 4px;
-  background-color: #1f7ada;
-  bottom: 0;
-  left: 0;
-  transition: all ease 1s;
-}
-
-.ourServicesListsar div:nth-child(1) p:hover::before,
-.ourServicesListsar div:nth-child(2) p:hover::before {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 4px;
-  background-color: #1f7ada;
-  bottom: 0;
-  left: 0;
+.ourServicesHeader p {
+  max-width: 72ch;
+  line-height: 1.6;
 }
 
 .ourServicesListsar {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  text-align: start;
+  gap: 2rem;
+  width: 100%;
 }
 
 .ourServicesListsar div:nth-child(1),
@@ -122,6 +111,8 @@ text-align:start;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  flex: 1;
+  min-width: 200px;
 }
 
 .ourServicesListsar div:nth-child(1) p,
@@ -154,37 +145,84 @@ text-align:start;
 }
 
 .ourServicesBlock {
-  width: 550px;
+  width: 100%;
+  max-width: 550px;
   background-color: #0f0f0fb2;
   padding: 2rem;
   border-radius: 13.84px;
-  height: 460px;
+  min-height: 460px;
+  display: flex;
+  flex-direction: column;
+}
+
+.ourServicesBlock img {
+  margin-bottom: 1.5rem;
+}
+
+.ourServicesBlock h3 {
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+}
+
+.ourServicesBlock p {
+  line-height: 1.6;
+  flex: 1;
+}
+
+.ourServicesDescription {
+  line-height: 1.6;
+  flex: 1;
+  color: #ffffff;
+  font-size: 1.6rem;
+}
+
+.ourServicesDescription strong {
+  font-weight: 700;
+  color: #ffffff;
 }
 
 @media screen and (max-width: 768px) {
   .OurServicesBg div {
     padding: 0.5rem;
   }
-  .ourServicesListsar {
-    padding: 2rem;
+
+  .ourServicesLayout {
     flex-direction: column;
-    align-items: center;
+    gap: 3rem;
+  }
+
+  .ourServicesLeft,
+  .ourServicesRight {
+    max-width: 100%;
+  }
+
+  .ourServicesListsar {
+    padding: 2rem 0;
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .ourServicesBlock {
-    width: 100%; /* Full width for small screens */
-    height: 300px; /* Auto height to adjust to content */
-    padding: 1rem; /* Less padding for mobile */
+    width: 100%;
+    min-height: auto;
+    padding: 1.5rem;
   }
 
   .ourServicesListsar div {
-    /* align-items: center; */
     width: 100%;
-    gap: 1.5rem; /* Reduced gap for mobile */
+    gap: 1.5rem;
   }
 
   .ourServicesListsar div p {
-    font-size: 1.2rem; /* Smaller font size for mobile */
+    font-size: 1.2rem;
+  }
+
+  .ourServicesHeader h2 {
+    font-size: 2.5rem;
+  }
+
+  .ourServicesHeader p {
+    font-size: 1.4rem;
   }
 }
 @media (max-width: 480px) {

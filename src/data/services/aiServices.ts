@@ -110,6 +110,7 @@ export const aiServicelist
       {
         title: 'AI Solutions',
         items: [
+          'Agentic AI',
           'Generative AI',
           'Chatbots and Smart AI Assistants',
           'AI Product Development',
@@ -129,6 +130,12 @@ export const aiServicelist
       },
     ];
 export const aiServices = {
+  'Agentic AI': {
+    imageSrc: '/images/aiServices/agenticAiIcon.svg',
+    title: 'Generative AI',
+    description:
+        'We build intelligent, autonomous systems capable of reasoning, learning, and acting independently. From multi-agent architectures to real-time decision-making engines, our Agentic AI solutions replicate human-like initiative, enabling dynamic workflows, automated problem-solving, and adaptive decision systems across industries',
+  },
   'Generative AI': {
     imageSrc: '/images/aiServices/s_1.svg',
     title: 'Generative AI',

@@ -1,0 +1,146 @@
+.quantumCommitmentSection {
+  padding: 10rem 0;
+}
+
+.quantumCommitmentHeader {
+  text-align: center;
+  margin-bottom: 6rem;
+  max-width: 90rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.quantumCommitmentHeader h2 {
+  font-size: 4.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: #ffffff;
+  line-height: 1.2;
+}
+
+.quantumCommitmentHeader p {
+  font-size: 1.8rem;
+  color: #ffffff;
+  line-height: 1.6;
+  max-width: 80ch;
+  margin: 0 auto;
+  opacity: 0.9;
+}
+
+.quantumCommitmentStats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  max-width: 120rem;
+  margin: 0 auto 8rem;
+}
+
+.quantumCommitmentStatCard {
+  /* background-color: rgba(30, 30, 30, 0.9); */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1.2rem;
+  padding: 3rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.quantumCommitmentStatCard:hover {
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-0.3rem);
+  box-shadow: 0 0.4rem 7rem #e2e2e233;
+}
+
+.quantumCommitmentStatCard h3 {
+  font-size: 4rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.quantumCommitmentStatCard p {
+  font-size: 1.6rem;
+  color: #ffffff;
+  line-height: 1.6;
+  opacity: 0.9;
+  margin: 0;
+}
+
+.quantumCommitmentCTA {
+  text-align: center;
+  max-width: 90rem;
+  margin: 0 auto;
+}
+
+.quantumCommitmentCTA h2 {
+  font-size: 4.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: #ffffff;
+  line-height: 1.2;
+}
+
+.quantumCommitmentCTA p {
+  font-size: 1.8rem;
+  color: #ffffff;
+  line-height: 1.6;
+  max-width: 80ch;
+  margin: 0 auto 3rem;
+  opacity: 0.9;
+}
+
+.quantumCommitmentButton {
+  display: flex;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 768px) {
+  .quantumCommitmentSection {
+    padding: 6rem 0;
+  }
+
+  .quantumCommitmentHeader h2,
+  .quantumCommitmentCTA h2 {
+    font-size: 3.5rem;
+  }
+
+  .quantumCommitmentHeader p,
+  .quantumCommitmentCTA p {
+    font-size: 1.6rem;
+    padding: 0 2rem;
+  }
+
+  .quantumCommitmentStats {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 0 2rem;
+    margin-bottom: 6rem;
+  }
+
+  .quantumCommitmentStatCard {
+    padding: 2.5rem;
+  }
+
+  .quantumCommitmentStatCard h3 {
+    font-size: 3rem;
+  }
+
+  .quantumCommitmentStatCard p {
+    font-size: 1.4rem;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .quantumCommitmentHeader h2,
+  .quantumCommitmentCTA h2 {
+    font-size: 2.5rem;
+  }
+
+  .quantumCommitmentStatCard h3 {
+    font-size: 2.5rem;
+  }
+
+  .quantumCommitmentStatCard p {
+    font-size: 1.3rem;
+  }
+}
