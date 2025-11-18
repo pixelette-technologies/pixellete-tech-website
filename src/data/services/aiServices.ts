@@ -44,7 +44,7 @@ export const aiExpertiseData = {
   'Computer Vision': {
     title: 'Computer Vision',
     description:
-        'Specializing in computer vision development services, we provide solutions for biometric authentication, video monitoring, and AI object detection. Our reliable computer vision object recognition capabilities guarantee security and operational accuracy.',
+        'We create AI models that understand the visual world, from object detection and image segmentation to facial recognition and quality inspection. Our computer vision solutions help businesses automate visual analysis, enhance security, and deliver richer, data-driven insights.',
   },
 };
 
@@ -132,9 +132,9 @@ export const aiServicelist
 export const aiServices = {
   'Agentic AI': {
     imageSrc: '/images/aiServices/agenticAiIcon.svg',
-    title: 'Generative AI',
+    title: 'Agentic AI',
     description:
-        'We build intelligent, autonomous systems capable of reasoning, learning, and acting independently. From multi-agent architectures to real-time decision-making engines, our Agentic AI solutions replicate human-like initiative, enabling dynamic workflows, automated problem-solving, and adaptive decision systems across industries',
+        'We build intelligent, autonomous systems capable of reasoning, learning, and acting independently. From multi-agent architectures to real-time decision-making engines, our Agentic AI solutions replicate human-like initiative, enabling dynamic workflows, automated problem-solving, and adaptive decision systems across industries.',
   },
   'Generative AI': {
     imageSrc: '/images/aiServices/s_1.svg',

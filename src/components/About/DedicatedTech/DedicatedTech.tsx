@@ -50,8 +50,9 @@ const DedicatedTech: React.FC = () => {
         </h2>
         <p>
         Since our founding in 2018 by Asif Ashiq Rana, we’ve evolved from a specialized agency into a global technology partner — now pioneering the convergence of AI, blockchain, and quantum computing.
-        Our teams deliver innovation across artificial intelligence (including agentic systems and machine learning), blockchain, Web3, AR/VR, and enterprise software.
         </p>
+        <p>        Our teams deliver innovation across artificial intelligence (including agentic systems and machine learning), blockchain, Web3, AR/VR, and enterprise software.
+</p>
         <p>
         We’re committed to helping organizations build the next generation of secure, intelligent, and scalable digital ecosystems.
         </p>

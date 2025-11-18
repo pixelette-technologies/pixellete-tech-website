@@ -24,21 +24,6 @@ import {
 } from '@/data/services/quantumServices';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 
-const clutchLogos = [
-  {
-    src: '/images/Clutch/clutch-badges/ai/most-reviewed-ai-company.png',
-    alt: 'Most reviewed Quantum Company UK',
-  },
-  {
-    src: '/images/Clutch/clutch-badges/ai/top-company-artificial-intelligence.png',
-    alt: 'Top Quantum Company',
-  },
-  {
-    src: '/images/Clutch/clutch-badges/ai/top-company-generative-ai.png',
-    alt: 'Top Quantum Computing Company',
-  },
-];
-
 type IQuantumServicesProps = {
   params: Promise<{ slug: string; locale: string }>;
 };
@@ -95,7 +80,32 @@ export default async function QuantumServices(props: IQuantumServicesProps) {
       },
     })),
   };
-
+  const clutchLogos = [
+    {
+      src: '/images/Clutch/clutch-badges/ai/most-reviewed-ai-company.png',
+      alt: 'Most reviewed AI Company UK',
+    },
+    {
+      src: '/images/Clutch/clutch-badges/ai/top-company-artificial-intelligence.png',
+      alt: 'Top AI Company',
+    },
+    {
+      src: '/images/Clutch/clutch-badges/ai/top-company-generative-ai.png',
+      alt: 'Top Generative AI Company',
+    },
+    {
+      src: '/images/Clutch/clutch-badges/ai/top-machine-learning-company.png',
+      alt: 'Top Machine learning Company',
+    },
+    {
+      src: '/images/Clutch/clutch-badges/ai/top-recommendation-system-company.png',
+      alt: 'Top recommendation system Company',
+    },
+    {
+      src: '/images/Clutch/clutch-badges/ai/top-ai-speech-generation-company.png',
+      alt: 'Top ai speech generation Company',
+    },
+  ];
   return (
     <>
       <script
