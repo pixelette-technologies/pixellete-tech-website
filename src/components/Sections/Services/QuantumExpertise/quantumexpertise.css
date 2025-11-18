@@ -1,0 +1,152 @@
+.quantumExpertiseSection {
+  padding: 10rem 0;
+  width: 80%;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+
+.quantumExpertiseHeader {
+  text-align: center;
+  margin-bottom: 6rem;
+  max-width: 90rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.quantumExpertiseHeader h2 {
+  font-size: 4.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: #ffffff;
+  line-height: 1.2;
+}
+
+.quantumExpertiseIntro {
+  font-size: 1.8rem;
+  color: #ffffff;
+  line-height: 1.6;
+  max-width: 80ch;
+  margin: 0 auto 2rem;
+  opacity: 0.9;
+}
+
+.quantumExpertiseSubHeading {
+  font-size: 1.6rem;
+  color: #ffffff;
+  line-height: 1.6;
+  margin: 0;
+  opacity: 0.9;
+}
+
+.quantumExpertiseGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2.4rem;
+  margin-bottom: 6rem;
+}
+
+.quantumExpertiseCard {
+  /* background-color: rgba(30, 30, 30, 0.9); */
+  border: 1px solid #282424;
+  border-radius: 1.2rem;
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.quantumExpertiseCard:hover {
+  transform: translateY(-0.5rem);
+  box-shadow: 0 0.4rem 7rem #e2e2e233;
+}
+
+.quantumExpertiseIcon {
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quantumExpertiseCard h3 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #ffffff;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.quantumExpertiseConclusion {
+  text-align: center;
+  max-width: 90rem;
+  margin: 0 auto;
+}
+
+.quantumExpertiseConclusion p {
+  font-size: 1.6rem;
+  color: #ffffff;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.quantumExpertiseConclusion p strong {
+  font-weight: 700;
+  color: #ffffff;
+}
+
+@media only screen and (max-width: 768px) {
+  .quantumExpertiseSection {
+    padding: 6rem 0;
+  }
+
+  .quantumExpertiseHeader h2 {
+    font-size: 3.5rem;
+  }
+
+  .quantumExpertiseIntro {
+    font-size: 1.6rem;
+    padding: 0 2rem;
+  }
+
+  .quantumExpertiseSubHeading {
+    font-size: 1.4rem;
+  }
+
+  .quantumExpertiseGrid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    padding: 0 2rem;
+  }
+
+  .quantumExpertiseCard {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .quantumExpertiseCard h3 {
+    font-size: 1.4rem;
+  }
+
+  .quantumExpertiseConclusion p {
+    font-size: 1.4rem;
+    padding: 0 2rem;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .quantumExpertiseHeader h2 {
+    font-size: 2.5rem;
+  }
+
+  .quantumExpertiseGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .quantumExpertiseCard h3 {
+    font-size: 1.3rem;
+  }
+}

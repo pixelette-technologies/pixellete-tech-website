@@ -7,6 +7,7 @@ import './herosection.css';
 
 type HeroSectionProps = {
   heading: string;
+  subHeading?: string;
   description: string;
   buttonText: string;
   buttonLink: string;
@@ -23,6 +24,7 @@ const isVideoFile = (url: string): boolean => {
 
 export const HeroSection: React.FC<HeroSectionProps> = ({
   heading,
+  subHeading,
   description,
   buttonText,
   buttonLink,
@@ -80,6 +82,15 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
           <h1>
             {heading}
           </h1>
+          {
+            subHeading && (
+             <center>
+               <h2 className='quantum-sub-heading'>
+                {subHeading}
+              </h2>
+             </center>
+            )
+          }
           <p>
             {description}
           </p>

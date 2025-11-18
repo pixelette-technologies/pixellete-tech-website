@@ -144,52 +144,53 @@ const AboutUsSection: React.FC = () => {
           >
             <div>
               <h2 className="sm-text-center">
-                Our passion lies in building
-                {' '}
-                <br />
-                {' '}
-                tech solutions that drive real
-                change across industries
+                Our passion lies in engineering technologies that redefine industries
               </h2>
               <p className="sm-text-center">
-                From our beginnings in 2018, Pixelette Technologies has rapidly become a world-leading development
-                services company, specializing in AI, blockchain, web, mobile technologies, and more.
+                Since 2018, Pixelette Technologies has evolved from a pioneering blockchain studio into a frontier innovation group, leading breakthroughs across AI, agentic systems, quantum computing, and decentralised technologies.  Our mission is simple, to turn bold ideas into secure, scalable, and world-changing solutions.
               </p>
             </div>
             <div>
               {[
                 { end: 97, prefix: '', midfix: '', suffix: '%' },
-                { end: 30000, prefix: '', midfix: '', suffix: '+' },
                 { end: 4.8, prefix: '', midfix: '', suffix: '' },
+                { end: 30000, prefix: '', midfix: '', suffix: '+' },
                 { end: 200, prefix: '', midfix: '', suffix: '+' },
-                { end: 100, prefix: '£', midfix: '', suffix: 'M+' },
+                // { end: 100, prefix: '£', midfix: '', suffix: 'M+' },
                 { end: 30, prefix: 'Top ', midfix: '', suffix: '' },
-              ].map((value, index) => (
-                <section className="counter-section" id={`counter-section-${index + 1}`} key={`counter-section-${index + 1}`}>
-                  <h1
-                    data-end={value.end}
-                    data-prefix={value.prefix}
-                    data-midfix={value.midfix}
-                    data-suffix={value.suffix}
+              ].map((value, index) => {
+                const isLastItem = index === 4;
+                return (
+                  <section
+                    className={`counter-section ${isLastItem ? 'counter-section-last' : ''}`}
+                    id={`counter-section-${index + 1}`}
+                    key={`counter-section-${index + 1}`}
                   >
-                    0
-                  </h1>
-                  <div>
-                    <p>
-                      {
-                        [
-                          'customer satisfaction rating',
-                          'hours in development across diverse industries',
-                          'overall Clutch rating',
-                          'team members across 13 countries, with 15+ locations and expanding',
-                          ' in funding secured for client startups',
-                          'globally among the software development companies (Clutch)',
-                        ][index]
-                      }
-                    </p>
-                  </div>
-                </section>
-              ))}
+                    <h1
+                      data-end={value.end}
+                      data-prefix={value.prefix}
+                      data-midfix={value.midfix}
+                      data-suffix={value.suffix}
+                    >
+                      0
+                    </h1>
+                    <div>
+                      <p>
+                        {
+                          [
+                            'customer satisfaction rating',
+                            'overall Clutch rating',
+                            'hours in development across diverse industries',
+                            'team members across 13 countries, with 15+ locations and expanding',
+                            // ' in funding secured for client startups',
+                            'globally among the software development companies (Clutch)',
+                          ][index]
+                        }
+                      </p>
+                    </div>
+                  </section>
+                );
+              })}
 
             </div>
           </section>

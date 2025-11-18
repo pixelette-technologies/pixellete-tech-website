@@ -82,6 +82,12 @@
   justify-content: center;
 }
 
+/* Center the last counter section */
+.aboutUsSection > div > section > *:last-child > section.counter-section-last {
+  grid-column: 1 / -1;
+  justify-self: center;
+}
+
 .aboutUsSection > div > section > *:last-child > section > h1,
 .aboutUsSection > div > section > *:last-child > div > h1 {
   font-size: 4.5rem;
@@ -95,6 +101,7 @@
   font-size: 1.6rem;
   text-align: center;
   font-weight: 300;
+  max-width: 30rem;
 }
 
 .aboutUsSection > div > section > *:last-child > div {

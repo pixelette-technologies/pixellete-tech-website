@@ -1,0 +1,126 @@
+.quantumTechStackSection {
+  padding: 10rem 0;
+}
+
+.quantumTechStackHeader {
+  text-align: center;
+  margin-bottom: 6rem;
+  max-width: 90rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.quantumTechStackHeader h2 {
+  font-size: 4.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: #ffffff;
+  line-height: 1.2;
+}
+
+.quantumTechStackHeader p {
+  font-size: 1.8rem;
+  color: #ffffff;
+  line-height: 1.6;
+  max-width: 80ch;
+  margin: 0 auto;
+  opacity: 0.9;
+}
+
+.quantumTechStackGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
+.quantumTechStackCard {
+  background-color: #1a1213;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 1.2rem;
+  padding: 22px 45px 22px 45px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: all 0.3s ease;
+  max-height: 80px;
+}
+
+.quantumTechStackCard:hover {
+  border-color: rgba(255, 255, 255, 0.4);
+  transform: translateY(-0.3rem);
+  box-shadow: 0 0.4rem 7rem #e2e2e233;
+}
+
+.quantumTechStackIcon {
+  object-fit: contain;
+  width: auto;
+  height: auto;
+}
+
+.quantumTechStackName {
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #ffffff;
+  line-height: 1.4;
+  text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+  .quantumTechStackSection {
+    padding: 6rem 0;
+  }
+
+  .quantumTechStackHeader h2 {
+    font-size: 3.5rem;
+  }
+
+  .quantumTechStackHeader p {
+    font-size: 1.6rem;
+    padding: 0 2rem;
+  }
+
+  .quantumTechStackGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    padding: 0 2rem;
+  }
+
+  .quantumTechStackCard {
+    padding: 2rem 1.5rem;
+    min-height: 130px;
+  }
+
+  .quantumTechStackName {
+    font-size: 1.2rem;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .quantumTechStackHeader h2 {
+    font-size: 2.5rem;
+  }
+
+  .quantumTechStackGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .quantumTechStackCard {
+    padding: 1.5rem 1rem;
+    min-height: 120px;
+  }
+
+  .quantumTechStackIcon {
+    object-fit: contain;
+    width: auto;
+    height: auto;
+  }
+
+  .quantumTechStackName {
+    font-size: 1.1rem;
+  }
+}

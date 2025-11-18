@@ -1,0 +1,123 @@
+.quantumFeaturesSection {
+  padding: 10rem 0;
+  background-color: #0a0a0a;
+}
+
+.quantumFeaturesHeader {
+  text-align: center;
+  margin-bottom: 6rem;
+  max-width: 90rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.quantumFeaturesHeader h2 {
+  font-size: 4.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: #ffffff;
+  line-height: 1.2;
+}
+
+.quantumFeaturesHeader p {
+  font-size: 1.8rem;
+  color: #a2a2a2;
+  line-height: 1.6;
+  max-width: 80ch;
+  margin: 0 auto;
+}
+
+.quantumFeaturesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 3rem;
+  margin-top: 4rem;
+}
+
+.quantumFeatureCard {
+  background-color: #0f0f0fb3;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 2rem;
+  padding: 3rem;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.quantumFeatureCard:hover {
+  transform: translateY(-0.5rem);
+  box-shadow: 0 0.4rem 7rem #e2e2e233;
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.quantumFeatureIcon {
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.quantumFeatureIconPlaceholder {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #006ff0 0%, #1f7ada 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.quantumFeatureIcon img {
+  width: 6rem;
+  height: 6rem;
+  object-fit: contain;
+}
+
+.quantumFeatureCard h3 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+  line-height: 1.3;
+}
+
+.quantumFeatureCard p {
+  font-size: 1.6rem;
+  color: #a2a2a2;
+  line-height: 1.6;
+  flex: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .quantumFeaturesSection {
+    padding: 6rem 0;
+  }
+
+  .quantumFeaturesHeader h2 {
+    font-size: 3.5rem;
+  }
+
+  .quantumFeaturesHeader p {
+    font-size: 1.6rem;
+  }
+
+  .quantumFeaturesGrid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .quantumFeatureCard {
+    padding: 2rem;
+  }
+
+  .quantumFeatureCard h3 {
+    font-size: 2rem;
+  }
+
+  .quantumFeatureCard p {
+    font-size: 1.4rem;
+  }
+}

@@ -1,6 +1,18 @@
 export const aiFaq = [
   {
     question:
+      'What is Agentic AI and how is it different from traditional AI?',
+    answer:
+      'Agentic AI goes beyond task automation, it builds autonomous systems that can reason, plan, and act without constant human input. Unlike traditional AI, which follows fixed instructions, Agentic AI adapts to real-time data and goals, enabling self-driven, context-aware decision-making.',
+  },
+  {
+    question:
+      'What are real-world use cases of Agentic AI?',
+    answer:
+      'Agentic AI is already revolutionizing industries through intelligent trading bots, automated R&D assistants, customer-support agents that learn from interaction, and smart manufacturing systems that optimize output in real time. It’s the foundation for the next generation of adaptive enterprise automation.',
+  },
+  {
+    question:
       'What type of AI development services do Pixelette Technologies offer?',
     answer:
       'Pixelette Technologies offers end-to-end AI development services including machine learning, natural language processing, predictive analytics and AI-driven automation for businesses of all sizes.',

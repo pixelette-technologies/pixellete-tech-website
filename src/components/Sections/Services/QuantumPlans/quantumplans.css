@@ -1,0 +1,153 @@
+.quantumPlansSection {
+  padding: 10rem 0;
+  margin: auto;
+}
+
+.quantumPlansHeader {
+  text-align: center;
+  margin-bottom: 6rem;
+  max-width: 90rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.quantumPlansHeader h2 {
+  font-size: 4.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: #ffffff;
+  line-height: 1.2;
+}
+
+.quantumPlansGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 498px);
+  gap: 3rem;
+  max-width: 120rem;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.quantumPlanCard {
+  background-color: #0d0b0b;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1.2rem;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+  width: 498px;
+}
+
+.quantumPlanCard:hover {
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-0.3rem);
+  box-shadow: 0 0.4rem 7rem #e2e2e233;
+}
+
+.quantumPlanCard h3 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.quantumPlanDescription {
+  font-size: 1.6rem;
+  color: #ffffff;
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+  opacity: 0.9;
+}
+
+.quantumPlanFeatures {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 3rem 0;
+  flex: 1;
+}
+
+.quantumPlanFeatures li {
+  font-size: 1.5rem;
+  color: #ffffff;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.quantumPlanCheckmark {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.2rem;
+}
+
+.quantumPlanButton {
+  margin-top: auto;
+}
+
+@media only screen and (max-width: 768px) {
+  .quantumPlansSection {
+    padding: 6rem 0;
+  }
+
+  .quantumPlansHeader h2 {
+    font-size: 3.5rem;
+    padding: 0 2rem;
+  }
+
+  .quantumPlansGrid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    padding: 0 2rem;
+    justify-content: center;
+  }
+
+  .quantumPlanCard {
+    width: 100%;
+    max-width: 498px;
+    margin: 0 auto;
+    padding: 2.5rem;
+  }
+
+  .quantumPlanCard h3 {
+    font-size: 2rem;
+  }
+
+  .quantumPlanDescription {
+    font-size: 1.4rem;
+  }
+
+  .quantumPlanFeatures li {
+    font-size: 1.4rem;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .quantumPlansHeader h2 {
+    font-size: 2.5rem;
+  }
+
+  .quantumPlanCard {
+    width: 100%;
+    max-width: 498px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+
+  .quantumPlanCard h3 {
+    font-size: 1.8rem;
+  }
+
+  .quantumPlanDescription {
+    font-size: 1.3rem;
+  }
+
+  .quantumPlanFeatures li {
+    font-size: 1.3rem;
+  }
+}
