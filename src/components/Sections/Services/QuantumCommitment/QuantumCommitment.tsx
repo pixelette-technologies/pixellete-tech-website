@@ -41,7 +41,7 @@ export const QuantumCommitment: React.FC<QuantumCommitmentProps> = ({
   description = 'Excellence drives every Pixelette Quantum engagement. We work tirelessly to translate complex technologies into tangible business impact.',
   statistics = defaultStatistics,
   ctaHeading = 'Start your quantum journey',
-  ctaDescription = 'Quantum transformation doesn\'t require a laboratory, it requires leadership. Launch your 8-12 week pilot under our Hybrid Sweat Equity model and join the next era of digital innovation.',
+  ctaDescription = 'Quantum transformation doesn\'t require a laboratory, it requires leadership.\n Launch your 8-12 week pilot under our <strong>Hybrid Sweat Equity model</strong> and join the next era of digital innovation.',
   ctaButtonText = 'Consult our experts',
   ctaButtonLink = '/contact-us',
 }) => {
@@ -62,7 +62,13 @@ export const QuantumCommitment: React.FC<QuantumCommitmentProps> = ({
         </div>
         <div className="quantumCommitmentCTA">
           <h2>{ctaHeading}</h2>
-          <p>{ctaDescription}</p>
+          <p
+            dangerouslySetInnerHTML={{
+              __html: ctaDescription.split('\n').map((line, index, array) => (
+                `${line}${index < array.length - 1 ? '<br />' : ''}`
+              )).join(''),
+            }}
+          />
           <div className="quantumCommitmentButton">
             <Link href={ctaButtonLink}>
               <Button className="primary">{ctaButtonText}</Button>

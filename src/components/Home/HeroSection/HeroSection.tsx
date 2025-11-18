@@ -39,6 +39,7 @@ export const HeroSection: React.FC<HeroSectionProps> = () => {
           </h1>
           <p>
           From quantum-safe blockchain architectures and decentralized intelligence frameworks to multi-agent AI systems, we turn frontier research into real-world advantage.
+          <br />
 Because innovation begins with those who dare to <b>LIVE THE <span className="text-red-600 relative inline-block">
           WHAT-IF</span></b>.
             {/* At Pixelette Technologies, we are committed to crafting

@@ -30,7 +30,6 @@ const OurServicesSection: React.FC = () => {
                   alignItems: 'center',
                   gap: '1rem',
                   padding: '2rem 3rem',
-                  width: '230px',
                   height: '100%',
                   minHeight: '120px',
                   cursor: 'pointer',
