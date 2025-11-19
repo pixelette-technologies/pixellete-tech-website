@@ -19,9 +19,9 @@ type QuantumTechStackProps = {
 const defaultTechnologies: TechItem[] = [
   { name: 'IBM Q', icon: '/images/quantumService/ibm.svg' },
   { name: 'AWS Braket', icon: '/images/quantumService/aws.svg' },
-  { name: 'QUANTINUUM', icon: '/images/quantumService/quantinuum.svg' },
+  { name: 'QUANTINUUM', icon: '/images/quantumService/Quantinuum.svg' },
   { name: 'D:wave', icon: '/images/quantumService/Dwave.svg' },
-  { name: 'TensorFlow', icon: '/images/quantumService/tensorflow.svg' },
+  { name: 'TensorFlow', icon: '/images/quantumService/TensorFlow.svg' },
   { name: 'PyTorch', icon: '/images/quantumService/pytorch.svg' },
   { name: 'Qiskit', icon: '/images/quantumService/qiskit.svg' },
   { name: 'pennylane', icon: '/images/quantumService/pennylane.svg' },
