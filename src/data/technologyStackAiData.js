@@ -12,7 +12,7 @@ export const technologyStackAiData = [
   {
     icon: '/images/home/services/quantumIcon.svg',
     title: 'Quantum Computing',
-    link: '/blockchain-development-services',
+    link: '/quantum-development-services',
   },
   {
     icon: '/images/home/services/softwaredev.svg',
