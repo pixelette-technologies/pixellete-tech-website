@@ -53,15 +53,15 @@ export const teamData = [
   //   role: 'MD (Asia Pacific)',
   // },
   {
-    image: '/images/people/maiwand-sultan.jpeg',
+    image: '/images/people/maiwand-sultan.png',
     name: 'Maiwand Sultan',
     role: 'Technical Project Manager',
   },
   {
-    image: '/images/people/M_Adnan.jpg',
-    name: 'Muhammad Adnan',
-    role: 'Solution Architect - Blockchain',
-    linkedin: 'https://www.linkedin.com/in/muhammad-adnan-54348313a/',
+    image: '/images/people/irum-khalil.png',
+    name: 'Irum Khalil',
+    role: 'HR Manager',
+    linkedin: 'http://linkedin.com/in/irum-khalil-b4270b1b6',
   },
   {
     image: '/images/people/Sehr.jpg',
