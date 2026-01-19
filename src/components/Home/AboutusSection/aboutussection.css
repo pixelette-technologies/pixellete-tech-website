@@ -66,11 +66,11 @@
   border: 1px solid rgba(255, 255, 255, 0.1);
   padding: 2rem;
   border-radius: 20px;
-  /* width: 50rem; */
+  width: 52%;
   display: grid;
   margin: 0 auto;
-  justify-content: center;
-  grid-template-columns: auto auto;
+  /* justify-content: center; */
+  grid-template-columns: 3fr 1fr;
   gap: 5rem;
 }
 
@@ -227,5 +227,145 @@
 
   .scottland-text {
     font-size: 0.9rem; /* Adjust font size for smaller screens */
+  }
+}
+
+/* Certificate Banner Styles */
+.certificate-banner {
+  margin-top: 6rem;
+  padding: 0;
+}
+
+.certificate-banner-content {
+  background-color: #0f0f0fb3;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 2rem;
+  padding: 4rem 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+}
+
+.certificate-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  flex: 1;
+  text-align: center;
+}
+
+.certificate-item-link {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.certificate-item-link:hover {
+  opacity: 0.8;
+}
+
+.certificate-logos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.certificate-logo {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.certificate-logo.iso-logo {
+  max-height: 120px;
+  width: auto;
+}
+
+.certificate-text {
+  color: #ffffff;
+  font-size: 1.4rem;
+  font-weight: 300;
+  line-height: 1.6;
+  margin: 0;
+  max-width: 50%;
+  text-align: left;
+}
+
+/* Responsive Styles for Certificate Banner */
+@media (max-width: 1024px) {
+  .certificate-banner-content {
+    flex-direction: column;
+    gap: 3rem;
+    padding: 3rem 2rem;
+  }
+
+  .certificate-item {
+    width: 100%;
+    margin-top: 1.5rem;
+  }
+
+  .certificate-item:first-child {
+    margin-top: 0;
+  }
+
+  .certificate-text {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .certificate-banner {
+    margin-top: 4rem;
+  }
+
+  .certificate-banner-content {
+    padding: 2.5rem 1.5rem;
+    gap: 2.5rem;
+  }
+
+  .certificate-item {
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  .certificate-item:first-child {
+    margin-top: 0;
+  }
+
+  .certificate-logo.iso-logo {
+    max-height: 100px;
+  }
+
+  .certificate-text {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .certificate-banner-content {
+    padding: 2rem 1rem;
+    gap: 2rem;
+  }
+
+  .certificate-item {
+    margin-top: 3rem;
+  }
+
+  .certificate-item:first-child {
+    margin-top: 0;
+  }
+
+  .certificate-text {
+    font-size: 1.4rem;
+    line-height: 1.5;
+  }
+
+  .certificate-logo.iso-logo {
+    max-height: 80px;
   }
 }

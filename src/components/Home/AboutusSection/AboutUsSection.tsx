@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
 import { Container } from '../../Feature/Container/Container';
 import './aboutussection.css';
@@ -130,6 +131,8 @@ const AboutUsSection: React.FC = () => {
     };
   }, [visibleSections]);
 
+  const isoText = 'ISO 9001:2015 certified';
+
   return (
     <>
       {/* <Container className="main">
@@ -147,7 +150,9 @@ const AboutUsSection: React.FC = () => {
                 Our passion lies in engineering technologies that redefine industries
               </h2>
               <p className="sm-text-center">
-                Since 2018, Pixelette Technologies has evolved from a pioneering blockchain studio into a frontier innovation group, leading breakthroughs across AI, agentic systems, quantum computing, and decentralised technologies.<br/>   Our mission is simple, to turn bold ideas into secure, scalable, and world-changing solutions.
+                Since 2018, Pixelette Technologies has evolved from a pioneering blockchain studio into a frontier innovation group, leading breakthroughs across AI, agentic systems, quantum computing, and decentralised technologies.
+                <br />
+                Our mission is simple, to turn bold ideas into secure, scalable, and world-changing solutions.
               </p>
             </div>
             <div>
@@ -195,37 +200,60 @@ const AboutUsSection: React.FC = () => {
             </div>
           </section>
         </Container>
-        <Container className="main margins">
-          <section // data-aos="fade-up" data-aos-duration="1000"
-          >
-            <div className="scottland-container" style={{ width: '100%' }}>
-              {[...Array.from({ length: 2 })].map((_, i) => (
-                <div
-                  className="scottland-section"
-                  key={i}
-                  style={{
-                    display: 'flex',
-                    alignItems: 'center',
-                    width: '100%',
-                    gap: '2rem',
-                    justifyContent: i === 1 ? 'right' : 'flex-start',
-                  }}
-                >
-                  <div>
-                    <img src={`/images/home/${i === 0 ? 'appg' : 'Scotland'}.png`} alt={i === 0 ? 'APPG Logo' : 'Scotland Logo'} />
-                  </div>
-                  <div className="scottland-text" style={{ flex: 1 }}>
-                    <p>
-                      {i === 0
-                        ? 'Official Secretariat of the British Government’s AI policy body (APPG AI)'
-                        : 'Awarded ‘Best AI Agency UK’ three times by the Scotland Business Awards'}
-                    </p>
-                  </div>
+
+        <div className="certificate-banner">
+          <Container className="main margins">
+            <div className="certificate-banner-content">
+              {/* APPG Section */}
+              <div className="certificate-item">
+                <div className="certificate-logos">
+                  <img
+                    src="/images/home/appg.png"
+                    alt="APPG Logo"
+                    className="certificate-logo"
+                  />
                 </div>
-              ))}
+                <p className="certificate-text">
+                  Official Secretariat of the British Government's AI policy body (APPG AI)
+                </p>
+              </div>
+
+              {/* ISO Section */}
+              <Link
+                href="https://www.iafcertsearch.org/certification/YO4M06B7qmkr3O8ftofk68ck"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="certificate-item certificate-item-link"
+              >
+                <div className="certificate-logos">
+                  <img
+                    src="/images/home/IsoCertificate.svg"
+                    alt="ISO Certificate"
+                    className="certificate-logo iso-logo"
+                  />
+                </div>
+                <p className="certificate-text">
+                  ISO 9001:2015 certified
+                </p>
+              </Link>
+
+              {/* Scotland Section */}
+              <div className="certificate-item">
+                <div className="certificate-logos">
+                  <img
+                    src="/images/home/Scotland.png"
+                    alt="Scotland Logo"
+                    className="certificate-logo"
+                  />
+                </div>
+                <p className="certificate-text">
+                  Awarded 'Best AI Agency UK' three times by the Scotland Business Awards
+                </p>
+              </div>
             </div>
-          </section>
-        </Container>
+          </Container>
+        </div>
+
       </div>
     </>
   );

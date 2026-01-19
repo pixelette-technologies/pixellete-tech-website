@@ -112,7 +112,7 @@ export const mapIndexData = [
     city: 'London, UK',
     phone: '+44 2045188226',
     mail: 'sales@pixelettetech.com',
-    address: '71-75 Shelton Street, WC2H 9JQ, London, UK',
+    address: '77 Fulham Palace Road London, W6 8JA',
   },
 
 ];
