@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/pixelette-technologies/pixellete-tech-website/compare/v1.0.0...v1.0.1) (2026-04-09)
+
+
+### Bug Fixes
+
+* remove leaked Resend API key from .env, add placeholder with instructions ([d212390](https://github.com/pixelette-technologies/pixellete-tech-website/commit/d2123905887f9355364b8c68e1ed0ef9d64f8d38))
+
 # 1.0.0 (2026-04-09)
 
 
