@@ -9,6 +9,7 @@ type ContactUsProps = {
   backgrounds?: boolean;
   header?: boolean;
   insideHeading?: string;
+  pageName?: string;
 };
 
 const PROJECT_TYPES = [
@@ -66,6 +67,7 @@ export const ContactUsForm: React.FC<ContactUsProps> = (props) => {
           ...formData,
           caseStudySlug: '',
           intent: 'enquiry',
+          source: props.pageName || 'Contact Page',
         }),
       });
 

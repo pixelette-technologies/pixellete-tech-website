@@ -20,6 +20,7 @@ export async function POST(request: NextRequest) {
       consent,
       caseStudySlug,
       intent,
+      source: rawSource,
     } = body;
 
     // Validation
@@ -39,7 +40,7 @@ export async function POST(request: NextRequest) {
     }
 
     const isRequestPDF = intent === 'pdf-request';
-    const source = caseStudySlug ? `case-study-${caseStudySlug}` : 'contact-page';
+    const source = rawSource || (caseStudySlug ? `Case Study — ${caseStudySlug.split('-').map((w: string) => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')}` : 'Contact Page');
 
     // Notification email to BD team
     await resend.emails.send({
@@ -52,16 +53,15 @@ export async function POST(request: NextRequest) {
         <!DOCTYPE html>
         <html>
         <head><meta charset="utf-8"></head>
-        <body style="margin:0;padding:0;background:#f4f4f5;font-family:Arial,Helvetica,sans-serif;">
-          <table width="100%" cellpadding="0" cellspacing="0" style="background:#f4f4f5;padding:32px 0;">
+        <body style="margin:0;padding:0;background:#0a0a0a;font-family:Arial,Helvetica,sans-serif;">
+          <table width="100%" cellpadding="0" cellspacing="0" style="background:#0a0a0a;padding:32px 0;">
             <tr><td align="center">
-              <table width="600" cellpadding="0" cellspacing="0" style="background:#ffffff;border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.06);">
+              <table width="600" cellpadding="0" cellspacing="0" style="background:#111111;border-radius:12px;overflow:hidden;border:1px solid #1f1f1f;">
 
                 <!-- Logo Header -->
                 <tr>
-                  <td style="background:#0a0a0a;padding:28px 32px;text-align:center;">
-                    <img src="https://pixelettetech.com/images/logo/short-logo-purple.png" alt="Pixelette Technologies" width="48" height="48" style="display:inline-block;vertical-align:middle;" />
-                    <span style="color:#ffffff;font-size:20px;font-weight:700;margin-left:12px;vertical-align:middle;">Pixelette Technologies</span>
+                  <td style="background:linear-gradient(135deg, #0a0a0a 0%, #1a0a2e 40%, #2d1b4e 70%, #1a0a2e 100%);padding:32px;text-align:center;border-bottom:1px solid #2d1b4e;">
+                    <img src="https://pixelettetech.com/images/company/logo.svg" alt="Pixelette Technologies" width="220" height="50" style="display:block;margin:0 auto;" />
                   </td>
                 </tr>
 
@@ -69,8 +69,8 @@ export async function POST(request: NextRequest) {
                 <tr>
                   <td style="padding:24px 32px 0;">
                     <table cellpadding="0" cellspacing="0"><tr>
-                      <td style="background:${isRequestPDF ? '#fef3c7' : '#dbeafe'};color:${isRequestPDF ? '#92400e' : '#1e40af'};font-size:12px;font-weight:600;padding:6px 14px;border-radius:20px;text-transform:uppercase;letter-spacing:0.5px;">
-                        ${isRequestPDF ? '📄 PDF Request' : '🔔 New Enquiry'}
+                      <td style="background:${isRequestPDF ? 'rgba(251,191,36,0.15)' : 'rgba(255,255,255,0.08)'};color:${isRequestPDF ? '#fbbf24' : '#ffffff'};font-size:12px;font-weight:600;padding:6px 14px;border-radius:20px;text-transform:uppercase;letter-spacing:0.5px;">
+                        ${isRequestPDF ? 'PDF Request' : 'New Enquiry'}
                       </td>
                     </tr></table>
                   </td>
@@ -79,7 +79,7 @@ export async function POST(request: NextRequest) {
                 <!-- Title -->
                 <tr>
                   <td style="padding:16px 32px 4px;">
-                    <h1 style="margin:0;font-size:22px;color:#111827;font-weight:700;">
+                    <h1 style="margin:0;font-size:22px;color:#ffffff;font-weight:700;">
                       ${isRequestPDF ? 'PDF Request' : 'New Project Enquiry'}
                     </h1>
                     <p style="margin:8px 0 0;font-size:14px;color:#6b7280;">
@@ -89,32 +89,32 @@ export async function POST(request: NextRequest) {
                 </tr>
 
                 <!-- Divider -->
-                <tr><td style="padding:20px 32px 0;"><hr style="border:none;border-top:1px solid #e5e7eb;margin:0;" /></td></tr>
+                <tr><td style="padding:20px 32px 0;"><hr style="border:none;border-top:1px solid #1f1f1f;margin:0;" /></td></tr>
 
                 <!-- Contact Info -->
                 <tr>
                   <td style="padding:20px 32px 0;">
-                    <p style="margin:0 0 12px;font-size:11px;font-weight:600;color:#9ca3af;text-transform:uppercase;letter-spacing:1px;">Contact Details</p>
+                    <p style="margin:0 0 12px;font-size:11px;font-weight:600;color:#6b7280;text-transform:uppercase;letter-spacing:1px;">Contact Details</p>
                     <table width="100%" cellpadding="0" cellspacing="0">
                       <tr>
-                        <td style="padding:10px 0;border-bottom:1px solid #f3f4f6;width:140px;font-size:13px;color:#6b7280;font-weight:600;">Name</td>
-                        <td style="padding:10px 0;border-bottom:1px solid #f3f4f6;font-size:14px;color:#111827;">${firstName} ${lastName}</td>
+                        <td style="padding:10px 0;border-bottom:1px solid #1f1f1f;width:140px;font-size:13px;color:#6b7280;font-weight:600;">Name</td>
+                        <td style="padding:10px 0;border-bottom:1px solid #1f1f1f;font-size:14px;color:#ffffff;">${firstName} ${lastName}</td>
                       </tr>
                       <tr>
-                        <td style="padding:10px 0;border-bottom:1px solid #f3f4f6;font-size:13px;color:#6b7280;font-weight:600;">Email</td>
-                        <td style="padding:10px 0;border-bottom:1px solid #f3f4f6;font-size:14px;color:#111827;"><a href="mailto:${email}" style="color:#6d28d9;text-decoration:none;">${email}</a></td>
+                        <td style="padding:10px 0;border-bottom:1px solid #1f1f1f;font-size:13px;color:#6b7280;font-weight:600;">Email</td>
+                        <td style="padding:10px 0;border-bottom:1px solid #1f1f1f;font-size:14px;color:#ffffff;"><a href="mailto:${email}" style="color:#a78bfa;text-decoration:none;">${email}</a></td>
                       </tr>
                       ${phone ? `<tr>
-                        <td style="padding:10px 0;border-bottom:1px solid #f3f4f6;font-size:13px;color:#6b7280;font-weight:600;">Phone</td>
-                        <td style="padding:10px 0;border-bottom:1px solid #f3f4f6;font-size:14px;color:#111827;">${phone}</td>
+                        <td style="padding:10px 0;border-bottom:1px solid #1f1f1f;font-size:13px;color:#6b7280;font-weight:600;">Phone</td>
+                        <td style="padding:10px 0;border-bottom:1px solid #1f1f1f;font-size:14px;color:#ffffff;">${phone}</td>
                       </tr>` : ''}
                       ${company ? `<tr>
-                        <td style="padding:10px 0;border-bottom:1px solid #f3f4f6;font-size:13px;color:#6b7280;font-weight:600;">Company</td>
-                        <td style="padding:10px 0;border-bottom:1px solid #f3f4f6;font-size:14px;color:#111827;font-weight:600;">${company}</td>
+                        <td style="padding:10px 0;border-bottom:1px solid #1f1f1f;font-size:13px;color:#6b7280;font-weight:600;">Company</td>
+                        <td style="padding:10px 0;border-bottom:1px solid #1f1f1f;font-size:14px;color:#ffffff;font-weight:600;">${company}</td>
                       </tr>` : ''}
                       ${jobTitle ? `<tr>
-                        <td style="padding:10px 0;border-bottom:1px solid #f3f4f6;font-size:13px;color:#6b7280;font-weight:600;">Job Title</td>
-                        <td style="padding:10px 0;border-bottom:1px solid #f3f4f6;font-size:14px;color:#111827;">${jobTitle}</td>
+                        <td style="padding:10px 0;border-bottom:1px solid #1f1f1f;font-size:13px;color:#6b7280;font-weight:600;">Job Title</td>
+                        <td style="padding:10px 0;border-bottom:1px solid #1f1f1f;font-size:14px;color:#ffffff;">${jobTitle}</td>
                       </tr>` : ''}
                     </table>
                   </td>
@@ -123,19 +123,19 @@ export async function POST(request: NextRequest) {
                 <!-- Project Info -->
                 <tr>
                   <td style="padding:24px 32px 0;">
-                    <p style="margin:0 0 12px;font-size:11px;font-weight:600;color:#9ca3af;text-transform:uppercase;letter-spacing:1px;">Project Details</p>
+                    <p style="margin:0 0 12px;font-size:11px;font-weight:600;color:#6b7280;text-transform:uppercase;letter-spacing:1px;">Project Details</p>
                     <table width="100%" cellpadding="0" cellspacing="0">
                       ${projectType ? `<tr>
-                        <td style="padding:10px 0;border-bottom:1px solid #f3f4f6;width:140px;font-size:13px;color:#6b7280;font-weight:600;">Project Type</td>
-                        <td style="padding:10px 0;border-bottom:1px solid #f3f4f6;font-size:14px;color:#111827;">${projectType}</td>
+                        <td style="padding:10px 0;border-bottom:1px solid #1f1f1f;width:140px;font-size:13px;color:#6b7280;font-weight:600;">Project Type</td>
+                        <td style="padding:10px 0;border-bottom:1px solid #1f1f1f;font-size:14px;color:#ffffff;">${projectType}</td>
                       </tr>` : ''}
                       ${budget ? `<tr>
-                        <td style="padding:10px 0;border-bottom:1px solid #f3f4f6;font-size:13px;color:#6b7280;font-weight:600;">Budget</td>
-                        <td style="padding:10px 0;border-bottom:1px solid #f3f4f6;font-size:14px;color:#111827;">${budget}</td>
+                        <td style="padding:10px 0;border-bottom:1px solid #1f1f1f;font-size:13px;color:#6b7280;font-weight:600;">Budget</td>
+                        <td style="padding:10px 0;border-bottom:1px solid #1f1f1f;font-size:14px;color:#ffffff;">${budget}</td>
                       </tr>` : ''}
                       ${heardFrom ? `<tr>
-                        <td style="padding:10px 0;border-bottom:1px solid #f3f4f6;font-size:13px;color:#6b7280;font-weight:600;">Heard From</td>
-                        <td style="padding:10px 0;border-bottom:1px solid #f3f4f6;font-size:14px;color:#111827;">${heardFrom}</td>
+                        <td style="padding:10px 0;border-bottom:1px solid #1f1f1f;font-size:13px;color:#6b7280;font-weight:600;">Heard From</td>
+                        <td style="padding:10px 0;border-bottom:1px solid #1f1f1f;font-size:14px;color:#ffffff;">${heardFrom}</td>
                       </tr>` : ''}
                     </table>
                   </td>
@@ -144,8 +144,8 @@ export async function POST(request: NextRequest) {
                 <!-- Message -->
                 <tr>
                   <td style="padding:24px 32px;">
-                    <p style="margin:0 0 12px;font-size:11px;font-weight:600;color:#9ca3af;text-transform:uppercase;letter-spacing:1px;">Message</p>
-                    <div style="background:#f9fafb;border:1px solid #e5e7eb;border-radius:8px;padding:16px;font-size:14px;color:#374151;line-height:1.6;">
+                    <p style="margin:0 0 12px;font-size:11px;font-weight:600;color:#6b7280;text-transform:uppercase;letter-spacing:1px;">Message</p>
+                    <div style="background:#1a1a1a;border:1px solid #1f1f1f;border-radius:8px;padding:16px;font-size:14px;color:#d1d5db;line-height:1.6;">
                       ${message}
                     </div>
                   </td>
@@ -153,9 +153,9 @@ export async function POST(request: NextRequest) {
 
                 <!-- Footer -->
                 <tr>
-                  <td style="background:#f9fafb;padding:20px 32px;text-align:center;border-top:1px solid #e5e7eb;">
-                    <p style="margin:0;font-size:12px;color:#9ca3af;">
-                      This lead was submitted via <strong>pixelettetech.com</strong> · Reply directly to <a href="mailto:${email}" style="color:#6d28d9;text-decoration:none;">${email}</a>
+                  <td style="background:#0a0a0a;padding:20px 32px;text-align:center;border-top:1px solid #1f1f1f;">
+                    <p style="margin:0;font-size:12px;color:#6b7280;">
+                      This lead was submitted via <strong style="color:#9ca3af;">pixelettetech.com</strong> · Reply directly to <a href="mailto:${email}" style="color:#a78bfa;text-decoration:none;">${email}</a>
                     </p>
                   </td>
                 </tr>
@@ -177,33 +177,32 @@ export async function POST(request: NextRequest) {
         <!DOCTYPE html>
         <html>
         <head><meta charset="utf-8"></head>
-        <body style="margin:0;padding:0;background:#f4f4f5;font-family:Arial,Helvetica,sans-serif;">
-          <table width="100%" cellpadding="0" cellspacing="0" style="background:#f4f4f5;padding:32px 0;">
+        <body style="margin:0;padding:0;background:#0a0a0a;font-family:Arial,Helvetica,sans-serif;">
+          <table width="100%" cellpadding="0" cellspacing="0" style="background:#0a0a0a;padding:32px 0;">
             <tr><td align="center">
-              <table width="600" cellpadding="0" cellspacing="0" style="background:#ffffff;border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.06);">
+              <table width="600" cellpadding="0" cellspacing="0" style="background:#111111;border-radius:12px;overflow:hidden;border:1px solid #1f1f1f;">
 
                 <!-- Logo Header -->
                 <tr>
-                  <td style="background:#0a0a0a;padding:28px 32px;text-align:center;">
-                    <img src="https://pixelettetech.com/images/logo/short-logo-purple.png" alt="Pixelette Technologies" width="48" height="48" style="display:inline-block;vertical-align:middle;" />
-                    <span style="color:#ffffff;font-size:20px;font-weight:700;margin-left:12px;vertical-align:middle;">Pixelette Technologies</span>
+                  <td style="background:linear-gradient(135deg, #0a0a0a 0%, #1a0a2e 40%, #2d1b4e 70%, #1a0a2e 100%);padding:32px;text-align:center;border-bottom:1px solid #2d1b4e;">
+                    <img src="https://pixelettetech.com/images/company/logo.svg" alt="Pixelette Technologies" width="220" height="50" style="display:block;margin:0 auto;" />
                   </td>
                 </tr>
 
                 <!-- Body -->
                 <tr>
                   <td style="padding:32px;">
-                    <h1 style="margin:0 0 20px;font-size:22px;color:#111827;font-weight:700;">Thank you, ${firstName}.</h1>
-                    <p style="margin:0 0 16px;font-size:15px;color:#374151;line-height:1.7;">
+                    <h1 style="margin:0 0 20px;font-size:22px;color:#ffffff;font-weight:700;">Thank you, ${firstName}.</h1>
+                    <p style="margin:0 0 16px;font-size:15px;color:#d1d5db;line-height:1.7;">
                       We have received your enquiry and a member of our team will be in touch within one business day.
                     </p>
-                    ${isRequestPDF ? '<p style="margin:0 0 16px;font-size:15px;color:#374151;line-height:1.7;">We will also send you the case study PDF shortly.</p>' : ''}
-                    <p style="margin:0 0 24px;font-size:15px;color:#374151;line-height:1.7;">
+                    ${isRequestPDF ? '<p style="margin:0 0 16px;font-size:15px;color:#d1d5db;line-height:1.7;">We will also send you the case study PDF shortly.</p>' : ''}
+                    <p style="margin:0 0 24px;font-size:15px;color:#d1d5db;line-height:1.7;">
                       In the meantime, you can explore more of our work:
                     </p>
                     <table cellpadding="0" cellspacing="0"><tr>
-                      <td style="background:#0a0a0a;border-radius:8px;padding:14px 28px;">
-                        <a href="https://pixelettetech.com/case-studies" style="color:#ffffff;font-size:14px;font-weight:600;text-decoration:none;">View Our Case Studies →</a>
+                      <td style="background:#ffffff;border-radius:50px;padding:14px 28px;">
+                        <a href="https://pixelettetech.com/case-studies" style="color:#000000;font-size:14px;font-weight:600;text-decoration:none;">View Our Case Studies</a>
                       </td>
                     </tr></table>
                   </td>
@@ -214,7 +213,7 @@ export async function POST(request: NextRequest) {
                   <td style="padding:0 32px 32px;">
                     <p style="margin:0;font-size:14px;color:#6b7280;line-height:1.6;">
                       Best regards,<br/>
-                      <strong style="color:#111827;">Business Development Team</strong><br/>
+                      <strong style="color:#ffffff;">Business Development Team</strong><br/>
                       Pixelette Technologies
                     </p>
                   </td>
@@ -222,10 +221,10 @@ export async function POST(request: NextRequest) {
 
                 <!-- Footer -->
                 <tr>
-                  <td style="background:#f9fafb;padding:20px 32px;text-align:center;border-top:1px solid #e5e7eb;">
-                    <p style="margin:0;font-size:12px;color:#9ca3af;">
+                  <td style="background:#0a0a0a;padding:20px 32px;text-align:center;border-top:1px solid #1f1f1f;">
+                    <p style="margin:0;font-size:12px;color:#6b7280;">
                       Pixelette Technologies Ltd · London, United Kingdom<br/>
-                      <a href="https://pixelettetech.com" style="color:#6d28d9;text-decoration:none;">pixelettetech.com</a>
+                      <a href="https://pixelettetech.com" style="color:#a78bfa;text-decoration:none;">pixelettetech.com</a>
                     </p>
                   </td>
                 </tr>
