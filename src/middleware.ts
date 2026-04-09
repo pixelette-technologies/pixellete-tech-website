@@ -13,9 +13,6 @@ export default function middleware(
 
 export const config = {
   matcher: [
-    // Skip Next.js internals and all static files, unless found in search params
-    '/((?!_next|monitoring|public|sitemap.xml|robots.txt|[^?]*\\.(?:html?|css|js(?!on)|jpe?g|webp|png|gif|svg|ttf|woff2?|ico|csv|docx?|xlsx?|zip|webmanifest|mp4|webm|ogg|mov|avi|mkv|m4v|wmv|flv)).*)',
-    // Always run for API routes
-    '/(api|trpc)(.*)',
+    '/((?!api|_next|monitoring|public|sitemap.xml|robots.txt|[^?]*\\.(?:html?|css|js(?!on)|jpe?g|webp|png|gif|svg|ttf|woff2?|ico|csv|docx?|xlsx?|zip|webmanifest|mp4|webm|ogg|mov|avi|mkv|m4v|wmv|flv)).*)',
   ],
 };
