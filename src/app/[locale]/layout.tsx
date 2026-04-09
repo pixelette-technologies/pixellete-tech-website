@@ -55,7 +55,7 @@ export default async function RootLayout({ children, params }: { children: React
       <head>
         <GoogleTagManager gtmId="GTM-KXC3K4RL" />
       </head>
-      <body className={`${outfit.className}`} style={{ overflowX: 'auto', overflowY: 'auto' }}>
+      <body className={`${outfit.className}`} style={{ overflowX: 'hidden', overflowY: 'auto' }}>
         <Suspense fallback={
           <div className="flex items-center justify-center min-h-screen">
             <img

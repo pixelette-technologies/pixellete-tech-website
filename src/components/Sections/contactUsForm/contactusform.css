@@ -82,7 +82,7 @@
 }
 
 .contactUs-field label {
-  font-size: 1.1rem;
+  font-size: 1.4rem;
   font-weight: 500;
   color: #d1d5db;
 }
@@ -93,7 +93,7 @@
   border: none;
   border-radius: 50px;
   padding: 14px 20px;
-  font-size: 1.15rem;
+  font-size: 1.4rem;
   color: #1a1a1a;
   width: 100%;
   font-family: inherit;
@@ -118,7 +118,7 @@
 }
 
 .contactUs-field textarea {
-  border-radius: 16px;
+  border-radius: 18px;
   resize: vertical;
   min-height: 110px;
 }
@@ -134,7 +134,7 @@
   border: none;
   border-radius: 50px;
   padding: 16px 36px;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   font-weight: 600;
   cursor: pointer;
   font-family: inherit;
@@ -185,7 +185,7 @@
   border: none;
   border-radius: 50px;
   padding: 14px 20px;
-  font-size: 1.15rem;
+  font-size: 1.4rem;
   color: #1a1a1a;
   width: 100%;
   font-family: inherit;
@@ -226,7 +226,7 @@
 }
 
 .contactUs-consent label {
-  font-size: 0.85rem;
+  font-size: 1.4rem;
   color: #9ca3af;
   line-height: 1.5;
   cursor: pointer;
