@@ -102,7 +102,7 @@ export const Footer: React.FC = () => {
               >
                 <Image
                   src="/images/social/youtube.svg"
-                  alt="Twitter"
+                  alt="YouTube"
                   // data-aos="fade-up"
                   // data-aos-duration="1000"
                   width={40}
@@ -134,7 +134,7 @@ export const Footer: React.FC = () => {
               { href: 'pixelette-research', text: 'Pixelette Research' },
               { href: 'startup-funding', text: 'Startups' },
               { href: 'blog', text: 'Blogs' },
-              // { href: 'cancelation-refund-policy', text: 'Cancellation & Refund Policy' },
+              // { href: 'cancellation-refund-policy', text: 'Cancellation & Refund Policy' },
             ].map((item, index) => (
               <p
                 key={index}
@@ -152,8 +152,8 @@ export const Footer: React.FC = () => {
             {[
               { href: 'contact-us', text: 'Contact Us' },
               { href: 'privacy-policy', text: 'Privacy Policy' },
-              { href: 'terms-condition', text: 'Terms & Conditions' },
-              { href: 'cancelation-refund-policy', text: 'Cancellation & Refund Policy' },
+              { href: 'terms-conditions', text: 'Terms & Conditions' },
+              { href: 'cancellation-refund-policy', text: 'Cancellation & Refund Policy' },
             ].map((item, index) => (
               <p
                 key={index}
