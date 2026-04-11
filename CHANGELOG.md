@@ -1,3 +1,10 @@
+## [1.0.5](https://github.com/pixelette-technologies/pixellete-tech-website/compare/v1.0.4...v1.0.5) (2026-04-11)
+
+
+### Bug Fixes
+
+* **lint:** apply eslint auto-fixes across codebase ([84c91c6](https://github.com/pixelette-technologies/pixellete-tech-website/commit/84c91c6f880b3a721af114910fe1047a9d276325))
+
 ## [1.0.4](https://github.com/pixelette-technologies/pixellete-tech-website/compare/v1.0.3...v1.0.4) (2026-04-11)
 
 
