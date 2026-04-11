@@ -1,3 +1,10 @@
+## [1.0.6](https://github.com/pixelette-technologies/pixellete-tech-website/compare/v1.0.5...v1.0.6) (2026-04-11)
+
+
+### Bug Fixes
+
+* enforce equal iso badge sizing with important ([6b98ea2](https://github.com/pixelette-technologies/pixellete-tech-website/commit/6b98ea2a4856ec75683febd8cea5c6b99884938b))
+
 ## [1.0.5](https://github.com/pixelette-technologies/pixellete-tech-website/compare/v1.0.4...v1.0.5) (2026-04-11)
 
 
