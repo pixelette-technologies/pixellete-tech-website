@@ -65,30 +65,14 @@ export const OurTeam = () => {
 
     return {
       '@context': 'https://schema.org',
-      '@type': 'Organization',
-      'name': 'Pixelette Technologies',
-      'description': 'A leading technology company specializing in AI, Blockchain, and software development solutions.',
-      'url': 'https://pixelette.com',
-      'logo': 'https://pixelette.com/images/logo.png',
-      'member': peopleSchema,
-      'numberOfEmployees': {
-        '@type': 'QuantitativeValue',
-        'value': teamData.length,
-      },
-      'address': {
-        '@type': 'PostalAddress',
-        'streetAddress': '71-75 Shelton Street',
-        'addressLocality': 'London',
-        'postalCode': 'WC2 H9J',
-        'addressCountry': 'UK',
-      },
-      'contactPoint': {
-        '@type': 'ContactPoint',
-        'telephone': '+44 2045188226',
-        'contactType': 'customer service',
-        'email': 'sales@pixelettetech.com',
-      },
-
+      '@type': 'ItemList',
+      'name': 'Pixelette Technologies Team',
+      'numberOfItems': teamData.length,
+      'itemListElement': peopleSchema.map((person, index) => ({
+        '@type': 'ListItem',
+        'position': index + 1,
+        'item': person,
+      })),
     };
   };
   return (

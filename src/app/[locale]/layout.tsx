@@ -10,6 +10,27 @@ import { Suspense } from 'react';
 import '@/styles/global.css';
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://pixelettetech.com'),
+  title: {
+    default: 'Pixelette Technologies | Enterprise AI & Blockchain Development',
+    template: '%s | Pixelette Technologies',
+  },
+  description: 'APPG AI Secretariat. ISO 9001 & ISO 27001 certified. 200+ products shipped across 13 countries. Enterprise AI, blockchain and custom software development.',
+  openGraph: {
+    siteName: 'Pixelette Technologies',
+    locale: 'en_GB',
+    type: 'website',
+    images: [{
+      url: '/og/homepage.png',
+      width: 1200,
+      height: 630,
+      alt: 'Pixelette Technologies — Enterprise AI & Blockchain Development',
+    }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    images: ['/og/homepage.png'],
+  },
   icons: [
     { rel: 'apple-touch-icon', url: '/images/logo/short-logo-purple.png' },
     { rel: 'icon', type: 'image/png', sizes: '32x32', url: '/images/logo/short-logo-purple.png' },

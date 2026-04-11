@@ -21,7 +21,7 @@ const WhatMakeUsSpecialHome: React.FC = () => {
             <div>
               <Image
                 src="/images/Clutch/clutch-badges/business-form/manifest-ai-company-pak.png"
-                alt="heroImage"
+                alt="Manifest — Top AI Company Pakistan"
                 // data-aos="fade-up"
                 // data-aos-duration="600"
                 width={200}
@@ -29,7 +29,7 @@ const WhatMakeUsSpecialHome: React.FC = () => {
               />
               <Image
                 src="/images/Clutch/clutch-badges/business-form/most-reviewed-blockchain-company.png"
-                alt="heroImage"
+                alt="Clutch — Most Reviewed Blockchain Company"
                 // data-aos="fade-up"
                 // data-aos-duration="600"
                 width={200}
@@ -37,7 +37,7 @@ const WhatMakeUsSpecialHome: React.FC = () => {
               />
               <Image
                 src="/images/Clutch/clutch-badges/business-form/most-reviewed-app-development-company.png"
-                alt="heroImage"
+                alt="Clutch — Most Reviewed App Development Company"
                 // data-aos="fade-up"
                 // data-aos-duration="600"
                 width={200}
@@ -45,7 +45,7 @@ const WhatMakeUsSpecialHome: React.FC = () => {
               />
               <Image
                 src="/images/Clutch/clutch-badges/business-form/top-decentralized-finance-company-2025.png"
-                alt="heroImage"
+                alt="Clutch — Top Decentralized Finance Company 2025"
                 // data-aos="fade-up"
                 // data-aos-duration="600"
                 width={200}
@@ -53,7 +53,7 @@ const WhatMakeUsSpecialHome: React.FC = () => {
               />
               <Image
                 src="/images/Clutch/clutch-badges/business-form/top-machine-learning-company-2025.png"
-                alt="heroImage"
+                alt="Clutch — Top Machine Learning Company 2025"
                 // data-aos="fade-up"
                 // data-aos-duration="600"
                 width={200}
@@ -61,7 +61,7 @@ const WhatMakeUsSpecialHome: React.FC = () => {
               />
               <Image
                 src="/images/Clutch/clutch-badges/business-form/top-ar-core-development-2025.png"
-                alt="heroImage"
+                alt="Clutch — Top AR Core Development 2025"
                 // data-aos="fade-up"
                 // data-aos-duration="600"
                 width={200}
@@ -69,7 +69,7 @@ const WhatMakeUsSpecialHome: React.FC = () => {
               />
               <Image
                 src="/images/Clutch/clutch-badges/business-form/top-generative-ai-company-2023.png"
-                alt="heroImage"
+                alt="Clutch — Top Generative AI Company 2023"
                 // data-aos="fade-up"
                 // data-aos-duration="600"
                 width={200}
@@ -85,7 +85,7 @@ const WhatMakeUsSpecialHome: React.FC = () => {
             <div>
               <Image
                 src="/images/home/awardpartnerships/provenexpert.png"
-                alt="heroImage"
+                alt="ProvenExpert Partner"
                 // data-aos="fade-up"
                 // data-aos-duration="600"
                 width={183}
@@ -93,7 +93,7 @@ const WhatMakeUsSpecialHome: React.FC = () => {
               />
               <Image
                 src="/images/home/awardpartnerships/pclutch.png"
-                alt="heroImage"
+                alt="Clutch — Verified Reviews Profile"
                 // data-aos="fade-up"
                 // data-aos-duration="600"
                 width={183}
@@ -101,7 +101,7 @@ const WhatMakeUsSpecialHome: React.FC = () => {
               />
               <Image
                 src="/images/home/awardpartnerships/goodfirms.png"
-                alt="heroImage"
+                alt="GoodFirms Partner"
                 // data-aos="fade-up"
                 // data-aos-duration="600"
                 width={183}
@@ -109,7 +109,7 @@ const WhatMakeUsSpecialHome: React.FC = () => {
               />
               <Image
                 src="/images/home/awardpartnerships/manifestbadge.png"
-                alt="heroImage"
+                alt="The Manifest — Top Listed Company"
                 // data-aos="fade-up"
                 // data-aos-duration="600"
                 width={183}
@@ -117,7 +117,7 @@ const WhatMakeUsSpecialHome: React.FC = () => {
               />
               <Image
                 src="/images/home/awardpartnerships/elementor.png"
-                alt="heroImage"
+                alt="Elementor Partner"
                 // data-aos="fade-up"
                 // data-aos-duration="600"
                 width={183}
@@ -125,7 +125,7 @@ const WhatMakeUsSpecialHome: React.FC = () => {
               />
               <Image
                 src="/images/home/awardpartnerships/oracle.png"
-                alt="heroImage"
+                alt="Oracle Partner"
                 // data-aos="fade-up"
                 // data-aos-duration="600"
                 width={183}
@@ -133,7 +133,7 @@ const WhatMakeUsSpecialHome: React.FC = () => {
               />
               <Image
                 src="/images/home/awardpartnerships/awspartner.png"
-                alt="heroImage"
+                alt="AWS Partner"
                 // data-aos="fade-up"
                 // data-aos-duration="600"
                 width={183}
@@ -141,7 +141,7 @@ const WhatMakeUsSpecialHome: React.FC = () => {
               />
               <Image
                 src="/images/home/awardpartnerships/silverpartner.png"
-                alt="heroImage"
+                alt="Microsoft Silver Partner"
                 // data-aos="fade-up"
                 // data-aos-duration="600"
                 width={183}

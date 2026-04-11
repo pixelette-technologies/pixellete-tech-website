@@ -7,36 +7,28 @@ import './ourclients.css';
 
 type OurClientsProps = object;
 
+const clientLogos = [
+  { src: '/images/trustedclients/t1.png', alt: 'Client logo' },
+  { src: '/images/trustedclients/t2.png', alt: 'Client logo' },
+  { src: '/images/trustedclients/t3.png', alt: 'Client logo' },
+  { src: '/images/trustedclients/t4.png', alt: 'Client logo' },
+  { src: '/images/trustedclients/t5.png', alt: 'Client logo' },
+  { src: '/images/trustedclients/t6.png', alt: 'Client logo' },
+  { src: '/images/trustedclients/t7.png', alt: 'Client logo' },
+  { src: '/images/trustedclients/t8.png', alt: 'Client logo' },
+  { src: '/images/trustedclients/t9.png', alt: 'Client logo' },
+];
+
 const Marqueee: React.FC = () => {
-  const images = [
-    // '/images/trustedclients/ec_1.svg',
-    // '/images/trustedclients/ec_2.svg',
-    // '/images/trustedclients/ec_3.svg',
-    // '/images/trustedclients/ec_4.svg',
-    // '/images/trustedclients/ec_5.svg',
-    // '/images/trustedclients/ec_6.svg',
-    // '/images/trustedclients/ec_7.svg',
-    '/images/trustedclients/t1.png',
-    '/images/trustedclients/t2.png',
-    '/images/trustedclients/t3.png',
-    '/images/trustedclients/t4.png',
-    '/images/trustedclients/t5.png',
-    '/images/trustedclients/t6.png',
-    '/images/trustedclients/t7.png',
-    '/images/trustedclients/t8.png',
-    '/images/trustedclients/t9.png',
-    // '/images/trustedclients/ec_8.svg',
-  ];
   return (
-    // <div className="marquee-container">
-    <Marquee className="marquee-container" speed={50}>
-      {/* Add your images or content here */}
+    <Marquee className="marquee-container" speed={50} aria-label="Trusted client logos">
       <div style={{ display: 'flex', flexWrap: 'nowrap', alignItems: 'center', gap: '2rem' }}>
-        {images.concat(images).map((src, index) => (
+        {clientLogos.concat(clientLogos).map((logo, index) => (
           <Image
             key={index}
-            src={src}
-            alt={`icon ${index}`}
+            src={logo.src}
+            alt={logo.alt}
+            role="img"
             style={{ flex: '0 0 auto' }}
             loading="lazy"
             height={50}
@@ -45,7 +37,6 @@ const Marqueee: React.FC = () => {
         ))}
       </div>
     </Marquee>
-    // </div>
   );
 };
 

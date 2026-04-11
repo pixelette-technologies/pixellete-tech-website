@@ -12,7 +12,7 @@ const OurServicesSection: React.FC = () => {
           We engineer full-stack solutions across blockchain, agentic ai & frontier tech
         </h2>
         <p>
-          Explore our complete suite of development and innovation services, combining enterprise-grade blockchain, intelligent AI systems, and quantum-ready architectures to drive measurable transformation across industries.
+          Explore our complete suite of development services, combining enterprise-grade blockchain, intelligent AI systems, and quantum-ready architectures to drive measurable transformation across industries.
           {' '}
         </p>
 

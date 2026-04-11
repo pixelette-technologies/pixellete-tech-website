@@ -87,9 +87,9 @@ export const BlogSection: React.FC<BlogSectionProps> = ({ heading, text }) => {
             <Image src="/images/blog/box_29.png" alt="Decorative box" width={20} height={20} />
           </blockquote>
           <center>
-            <h1 id="h_ani">
+            <h2 id="h_ani">
               {heading || 'The Pixelette Post'}
-            </h1>
+            </h2>
             <p>
               {text
               || 'Dive into our curated collection of updates and guides to deepen your understanding of diverse technologies.'}
