@@ -1,98 +1,26 @@
-const fs = require('node:fs');
-const path = require('node:path');
-const { createClient } = require('contentful');
-require('ts-node').register();
-const caseStudiesData = require('./src/data/caseStudies/caseStudiesData');
-
-// Fetch dynamic blog paths from Contentful
-async function fetchBlogPaths() {
-  const SPACE_ID = process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID;
-  const ACCESS_TOKEN = process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN;
-
-  if (!SPACE_ID || !ACCESS_TOKEN) {
-    console.warn('Missing Contentful credentials, skipping blog paths.');
-    return [];
-  }
-
-  const client = createClient({
-    space: SPACE_ID,
-    accessToken: ACCESS_TOKEN,
-  });
-
-  const entries = await client.getEntries({ content_type: 'blogsPage' });
-  return entries.items.map(entry => `/blog/${entry.fields.slug}`);
-}
-
-// Fetch static paths dynamically from the Next.js `app` directory
-function getStaticPaths() {
-  const appDir = path.join(process.cwd(), 'src/app');
-  const staticPaths = [];
-
-  function readDirRecursively(dir) {
-    const files = fs.readdirSync(dir);
-    files.forEach((file) => {
-      const filePath = path.join(dir, file);
-
-      if (fs.statSync(filePath).isDirectory()) {
-        readDirRecursively(filePath);
-      } else if (file === 'page.js' || file === 'page.tsx') {
-        // Convert file path to route
-        let route = filePath
-          .replace(appDir, '')
-          .replace(/\\/g, '/')
-          .replace(/\/page\.(js|tsx)$/, '');
-
-        // ✅ Remove dynamic route brackets ([locale]) & groupings ((marketing))
-        route = route.replace(/\[.*?\]/g, '').replace(/\(.*?\)/g, '');
-
-        if (route === '') {
-          route = '/';
-        } // Adjust root route
-        staticPaths.push(route);
-      }
-    });
-  }
-
-  readDirRecursively(appDir);
-  return staticPaths;
-}
-
+/** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: process.env.NEXT_PUBLIC_BASE_URL || 'https://pixelettetech.com',
-  generateRobotsTxt: true,
-  changefreq: 'daily',
-  priority: 0.8,
-  sitemapSize: 5000,
+  siteUrl: 'https://pixelettetech.com',
+  generateRobotsTxt: false,
   generateIndexSitemap: false,
+  outDir: 'public',
+  changefreq: 'weekly',
+  priority: 0.7,
+  sitemapSize: 5000,
+  transform: async (config, path) => {
+    // Strip /en/ prefix from all paths
+    const cleanPath = path.replace(/^\/en/, '') || '/';
 
-  // Customize sitemap URLs dynamically
-  transform: async (config, url) => {
-    if (url.startsWith('/case-studies/')) {
-      return {
-        loc: url,
-        lastmod: new Date().toISOString(),
-        priority: 0.8,
-        changefreq: 'weekly',
-      };
+    // Exclude non-page routes from sitemap
+    if (cleanPath === '/robots.txt' || cleanPath.startsWith('/api/')) {
+      return null;
     }
-    return config;
-  },
 
-  async additionalPaths(config) {
-    const blogPaths = await fetchBlogPaths();
-    const staticPaths = getStaticPaths();
-
-    const caseStudyPaths = caseStudiesData.map(study => ({
-      loc: `/case-studies/${study.slug}`,
+    return {
+      loc: cleanPath,
+      changefreq: config.changefreq,
+      priority: config.priority,
       lastmod: new Date().toISOString(),
-    }));
-
-    // Combine and format all paths
-    return [...staticPaths, ...blogPaths, ...caseStudyPaths].map(path => ({
-      loc: typeof path === 'string' ? path : path.loc,
-      changefreq: 'daily',
-      priority: 0.8,
-      lastmod: new Date().toISOString(),
-    }));
+    };
   },
-};
+}

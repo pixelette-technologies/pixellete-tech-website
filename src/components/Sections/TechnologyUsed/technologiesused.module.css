@@ -120,8 +120,9 @@
 }
 
 .iconImg {
-  width: 100px;
-  height: 60px;
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
   margin-bottom: 0.5rem;
   /* filter: grayscale(100%); */
   border-radius: 0.5rem;
@@ -181,8 +182,9 @@
   }
 
   .iconImg {
-    width: 80px;
-    height: auto;
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
   }
 }
 
@@ -203,8 +205,9 @@
   }
 
   .iconImg {
-    width: 45px;
-    height: auto;
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
   }
   .mobilePadding {
     padding-inline: 24px;

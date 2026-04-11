@@ -1,9 +1,0 @@
-# *
-User-agent: *
-Allow: /
-
-# Host
-Host: https://pixelettetech.com
-
-# Sitemaps
-Sitemap: https://pixelettetech.com/sitemap.xml

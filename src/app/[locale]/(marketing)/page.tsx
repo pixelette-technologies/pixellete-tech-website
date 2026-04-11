@@ -130,7 +130,25 @@ export async function generateMetadata(props: IIndexProps) {
     title: t('meta_title'),
     description: t('meta_description'),
     alternates: {
-      canonical: `https://www.pixelettetech.com/`,
+      canonical: 'https://pixelettetech.com',
+    },
+    openGraph: {
+      title: 'Pixelette Technologies | Enterprise AI & Blockchain Development',
+      description: 'APPG AI Secretariat. ISO 9001 & ISO 27001 certified. 200+ products shipped across 13 countries.',
+      url: 'https://pixelettetech.com',
+      type: 'website',
+      images: [{
+        url: '/og/homepage.png',
+        width: 1200,
+        height: 630,
+        alt: 'Pixelette Technologies — Enterprise AI & Blockchain Development',
+      }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: 'Pixelette Technologies | Enterprise AI & Blockchain Development',
+      description: 'APPG AI Secretariat. ISO 9001 & ISO 27001 certified. 200+ products shipped across 13 countries.',
+      images: ['/og/homepage.png'],
     },
   };
 }
@@ -142,14 +160,16 @@ export default async function Index(props: IIndexProps) {
       '@type': 'Organization',
       'name': 'Pixelette Technologies',
       'description': 'A leading technology company specializing in AI, Blockchain, and software development solutions.',
-      'url': 'https://pixelette.com',
-      'logo': 'https://pixelette.com/images/logo.png',
+      'url': 'https://pixelettetech.com',
+      'logo': 'https://pixelettetech.com/images/logo/short-logo-purple.png',
+      'legalName': 'Pixelette Technologies Ltd',
+      'foundingDate': '2018-12-07',
       'address': {
         '@type': 'PostalAddress',
-        'streetAddress': '71-75 Shelton Street',
+        'streetAddress': '77 Fulham Palace Road',
         'addressLocality': 'London',
-        'postalCode': 'WC2 H9J',
-        'addressCountry': 'UK',
+        'postalCode': 'W6 8JA',
+        'addressCountry': 'GB',
       },
       'contactPoint': {
         '@type': 'ContactPoint',
@@ -157,7 +177,14 @@ export default async function Index(props: IIndexProps) {
         'contactType': 'customer service',
         'email': 'sales@pixelettetech.com',
       },
-
+      'sameAs': [
+        'https://www.linkedin.com/company/pixelettetechnologies/',
+        'https://clutch.co/profile/pixelette-technologies',
+        'https://www.facebook.com/pixelette.technologies',
+        'https://www.instagram.com/pixelettetechnologies/',
+        'https://find-and-update.company-information.service.gov.uk/company/11716825',
+        'https://appg-ai.org',
+      ],
     };
   };
   return (
@@ -258,7 +285,7 @@ export default async function Index(props: IIndexProps) {
         <TechnologiesUsed
           technologies={homeTechnologies}
           title="Benefit from our unmatched tech stack expertise"
-          subtitle="With our team's deep mastery in the latest frameworks, languages, and tools, we build scalable, secure, and high-performance applications that set new standards. From ideation to deployment, our technology capabilities are designed to drive your business forward."
+          subtitle="With our team's deep mastery in the latest frameworks, languages, and tools, we build secure, high-performance, and production-tested applications that set new standards. From ideation to deployment, our technology capabilities are designed to drive your business forward."
         />
       </AnimatedSection>
 
@@ -291,7 +318,7 @@ export default async function Index(props: IIndexProps) {
       >
         <EvaluateBusiness
           heading="Ready to become a tech success story?"
-          description="Don't let technical hurdles stand in the way of building tech solutions that shake up the world as we know it. Let us help you bring your vision to life with innovative, cost-effective and reliable services. Get in touch!"
+          description="Don't let technical hurdles stand in the way of building tech solutions that shake up the world as we know it. Let us help you bring your vision to life with proven, cost-effective and ISO-certified services. Get in touch!"
           clutchLogos={clutchLogos}
         />
       </AnimatedSection>

@@ -1,16 +1,14 @@
-import { NextResponse } from 'next/server';
+export const dynamic = 'force-static';
 
-export async function GET() {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://pixelettetech.com';
-  
-  const robotsTxt = `User-agent: *
-Allow: /
+export function GET() {
+  const baseUrl = 'https://pixelettetech.com';
 
-Sitemap: ${baseUrl}/api/sitemap`;
-
-  return new NextResponse(robotsTxt, {
-    headers: {
-      'Content-Type': 'text/plain',
-    },
-  });
-} 
+  return new Response(
+    `User-agent: *\nAllow: /\nDisallow: /api/\n\nSitemap: ${baseUrl}/sitemap.xml`,
+    {
+      headers: {
+        'Content-Type': 'text/plain',
+      },
+    }
+  );
+}

@@ -1,15 +1,14 @@
-import Head from 'next/head';
 import React from 'react';
 
 type ClutchRatingProps = {
-  clutchProfileUrl: string; // Clutch profile URL
-  aggregateRating: number; // Overall rating (e.g., 4.8)
-  ratingCount: number; // Total number of ratings
+  clutchProfileUrl: string;
+  aggregateRating: number;
+  ratingCount: number;
   reviews: {
     author: string;
-    datePublished: string; // Format: YYYY-MM-DD
+    datePublished: string;
     reviewBody: string;
-    reviewRating: number; // Individual review rating
+    reviewRating: number;
   }[];
 };
 
@@ -21,7 +20,7 @@ const ClutchRating: React.FC<ClutchRatingProps> = ({
 }) => {
   const structuredData = {
     '@context': 'https://schema.org',
-    '@type': 'LocalBusiness',
+    '@type': 'Organization',
     'name': 'Pixelette Technologies',
     'url': clutchProfileUrl,
     'aggregateRating': {
@@ -49,12 +48,10 @@ const ClutchRating: React.FC<ClutchRatingProps> = ({
   };
 
   return (
-    <Head>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-      />
-    </Head>
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+    />
   );
 };
 

@@ -150,9 +150,9 @@ const AboutUsSection: React.FC = () => {
                 Our passion lies in engineering technologies that redefine industries
               </h2>
               <p className="sm-text-center">
-                Since 2018, Pixelette Technologies has evolved from a pioneering blockchain studio into a frontier innovation group, leading breakthroughs across AI, agentic systems, quantum computing, and decentralised technologies.
+                Since 2018, Pixelette Technologies has evolved from a pioneering blockchain studio into a enterprise technology group, leading breakthroughs across AI, agentic systems, quantum computing, and decentralised technologies.
                 <br />
-                Our mission is simple, to turn bold ideas into secure, scalable, and world-changing solutions.
+                Our mission is simple, to turn bold ideas into secure, ISO 27001-certified, and production-ready systems.
               </p>
             </div>
             <div>
@@ -177,7 +177,7 @@ const AboutUsSection: React.FC = () => {
                       data-midfix={value.midfix}
                       data-suffix={value.suffix}
                     >
-                      0
+                      {`${value.prefix}${value.end}${value.midfix}${value.suffix}`}
                     </h1>
                     <div>
                       <p>
@@ -236,6 +236,20 @@ const AboutUsSection: React.FC = () => {
                   ISO 9001:2015 certified
                 </p>
               </Link>
+
+              {/* ISO 27001 Section */}
+              <div className="certificate-item">
+                <div className="certificate-logos">
+                  <img
+                    src="/images/home/Iso27001.png"
+                    alt="ISO 27001:2022 Certified Company"
+                    className="certificate-logo iso-logo"
+                  />
+                </div>
+                <p className="certificate-text">
+                  ISO 27001:2022 certified
+                </p>
+              </div>
 
               {/* Scotland Section */}
               <div className="certificate-item">
