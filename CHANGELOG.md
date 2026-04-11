@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/pixelette-technologies/pixellete-tech-website/compare/v1.0.1...v1.0.2) (2026-04-11)
+
+
+### Bug Fixes
+
+* **site:** seo, structured data, og metadata, accessibility, banned words ([b785bff](https://github.com/pixelette-technologies/pixellete-tech-website/commit/b785bffb8b831114f96a5f61ef12bf99c8619e96))
+
 ## [1.0.1](https://github.com/pixelette-technologies/pixellete-tech-website/compare/v1.0.0...v1.0.1) (2026-04-09)
 
 
