@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/pixelette-technologies/pixellete-tech-website/compare/v1.0.2...v1.0.3) (2026-04-11)
+
+
+### Bug Fixes
+
+* **defect-4:** regenerate og image with site hero gradient colours ([1501a23](https://github.com/pixelette-technologies/pixellete-tech-website/commit/1501a23542451a6384446dbb863f7e8e914e5f2b))
+
 ## [1.0.2](https://github.com/pixelette-technologies/pixellete-tech-website/compare/v1.0.1...v1.0.2) (2026-04-11)
 
 

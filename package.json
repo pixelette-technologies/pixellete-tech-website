@@ -1,6 +1,6 @@
 {
   "name": "pixelette-tech",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "author": "Hamid (https://github.com/Hamid-Ayub)",
   "scripts": {
     "dev:spotlight": "spotlight-sidecar",
