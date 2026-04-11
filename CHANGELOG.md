@@ -1,3 +1,10 @@
+## [1.0.4](https://github.com/pixelette-technologies/pixellete-tech-website/compare/v1.0.3...v1.0.4) (2026-04-11)
+
+
+### Bug Fixes
+
+* update iso 27001 badge with correct image ([9d8b045](https://github.com/pixelette-technologies/pixellete-tech-website/commit/9d8b045512055f3b91aadb9dedac203edbb7fcc3))
+
 ## [1.0.3](https://github.com/pixelette-technologies/pixellete-tech-website/compare/v1.0.2...v1.0.3) (2026-04-11)
 
 
