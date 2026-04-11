@@ -422,7 +422,7 @@ p {
   .sm-mb-1 {
     margin-bottom: 1rem;
   }
- 
+
   .sm-m-1rem {
     margin-block: 1.5rem;
   }
@@ -609,8 +609,7 @@ p {
 /* Exact match of original background */
 .main-content-alt {
   position: absolute;
-  background: 
-    linear-gradient(217deg, rgba(7, 23, 41, 0.51), rgba(255, 0, 0, 0) 70.71%),
+  background: linear-gradient(217deg, rgba(7, 23, 41, 0.51), rgba(255, 0, 0, 0) 70.71%),
     linear-gradient(113deg, rgba(7, 23, 42, 0.74), rgba(255, 0, 0, 0) 70.71%),
     linear-gradient(127deg, rgba(189, 28, 28, 0.54), rgba(0, 255, 0, 0) 70.71%),
     linear-gradient(336deg, rgba(12, 12, 33, 0.5), rgba(0, 0, 255, 0) 70.71%),
@@ -684,7 +683,7 @@ p {
   .main-content-alt {
     height: 100vh;
   }
-  
+
   .main-content-alt::before,
   .main-content-alt::after {
     height: 100vh;

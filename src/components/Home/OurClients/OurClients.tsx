@@ -54,8 +54,8 @@ export const OurClients: React.FC<OurClientsProps> = () => {
         >
           <Marqueee />
         </div>
-        <center> 
-        <p>Supporting industries from healthcare to tourism, and innovation programs across the globe.</p>
+        <center>
+          <p>Supporting industries from healthcare to tourism, and innovation programs across the globe.</p>
         </center>
       </Container>
     </div>

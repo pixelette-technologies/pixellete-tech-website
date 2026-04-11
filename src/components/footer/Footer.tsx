@@ -203,7 +203,7 @@ export const Footer: React.FC = () => {
         </section>
         <center>
 
-          <hr className={styles.footerSeparator}/>
+          <hr className={styles.footerSeparator} />
           <p>
             Copyright © 2025 Pixelette Technologies | All Rights Reserved
           </p>

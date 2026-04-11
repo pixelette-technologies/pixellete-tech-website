@@ -1,15 +1,15 @@
 'use client';
 
+import type { ReactNode } from 'react';
 import { motion } from 'framer-motion';
-import { ReactNode } from 'react';
 
-interface MotionWrapperProps {
+type MotionWrapperProps = {
   children: ReactNode;
   animation?: 'fadeIn' | 'fadeLeft' | 'fadeRight' | 'fadeUp' | 'fadeDown' | 'scale';
   delay?: number;
   duration?: number;
   className?: string;
-}
+};
 
 const animations = {
   fadeIn: {
@@ -59,4 +59,4 @@ export default function MotionWrapper({
       {children}
     </motion.div>
   );
-} 
+}

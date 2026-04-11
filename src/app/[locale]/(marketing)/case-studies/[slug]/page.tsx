@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 import MillstoneList from '@/components/CaseStudies/MilestoneList/MillstoneList';
+import CaseStudyConversionBlock from '@/components/CaseStudy/CaseStudyConversionBlock';
 import { Container } from '@/components/Feature/Container/Container';
 import caseStudiesData from '@/data/caseStudies/caseStudiesData'; // Import case studies data
-import CaseStudyConversionBlock from '@/components/CaseStudy/CaseStudyConversionBlock';
 import Image from 'next/image';
 import React from 'react';
 import './casestudydetail.css';

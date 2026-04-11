@@ -1,6 +1,6 @@
 export const uiFaqs = [
   {
-    question: "Is UI/UX design and development important to a tech project's success?",
+    question: 'Is UI/UX design and development important to a tech project\'s success?',
     answer:
       'Absolutely. Effective UI/UX design enhances user satisfaction, streamlines navigation and builds trust in your brand. By making digital experiences intuitive and engaging, strong UI/UX design directly impacts user retention, conversion rates and overall project success.',
   },

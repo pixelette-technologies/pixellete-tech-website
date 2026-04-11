@@ -1,6 +1,5 @@
 'use client';
 import { Container } from '@/components/Feature/Container/Container';
-import { backgroundImage } from '@/data/services/aiServices';
 import Image from 'next/image';
 import React from 'react';
 import styles from '../ExpertiseGrid/expertisegrid.module.css';

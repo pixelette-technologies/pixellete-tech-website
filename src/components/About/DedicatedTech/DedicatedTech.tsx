@@ -29,9 +29,9 @@ const cards: Card[] = [
   {
     title: 'Impact Creation',
     content: [
-      "Official Secretariat of the British Government’s AI policy body (APPG AI)",
-      "Awarded ‘Best AI Agency UK’ three times by the Scotland Business Awards",
-      "200+ successful projects with over 100+ million project views",
+      'Official Secretariat of the British Government’s AI policy body (APPG AI)',
+      'Awarded ‘Best AI Agency UK’ three times by the Scotland Business Awards',
+      '200+ successful projects with over 100+ million project views',
     ],
   },
 ];
@@ -49,12 +49,14 @@ const DedicatedTech: React.FC = () => {
           and beyond
         </h2>
         <p>
-        Since our founding in 2018 by Asif Ashiq Rana, we’ve evolved from a specialized agency into a global technology partner — now pioneering the convergence of AI, blockchain, and quantum computing.
+          Since our founding in 2018 by Asif Ashiq Rana, we’ve evolved from a specialized agency into a global technology partner — now pioneering the convergence of AI, blockchain, and quantum computing.
         </p>
-        <p>        Our teams deliver across artificial intelligence (including agentic systems and machine learning), blockchain, Web3, AR/VR, and enterprise software.
-</p>
         <p>
-        We’re committed to helping organizations build the next generation of secure, intelligent, and enterprise-grade digital systems.
+          {' '}
+          Our teams deliver across artificial intelligence (including agentic systems and machine learning), blockchain, Web3, AR/VR, and enterprise software.
+        </p>
+        <p>
+          We’re committed to helping organizations build the next generation of secure, intelligent, and enterprise-grade digital systems.
         </p>
 
       </center>

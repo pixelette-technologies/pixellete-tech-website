@@ -1,22 +1,22 @@
 export const arFaqs = [
   {
     question: 'How long does it take to develop an AR/VR experience?',
-    answer: 'Most immersive projects take between 6 to 12 weeks, depending on complexity and integrations.'
+    answer: 'Most immersive projects take between 6 to 12 weeks, depending on complexity and integrations.',
   },
   {
     question: 'Can these experiences run in browsers or only in headsets?',
     answer:
-      'Our environments are cross-platform — accessible via web browsers, mobile devices, and major VR headsets.'
+      'Our environments are cross-platform — accessible via web browsers, mobile devices, and major VR headsets.',
   },
   {
     question: 'Do you handle both design and development?',
     answer:
-      'Yes. From 3D modeling and UX design to engineering and deployment, we handle the entire lifecycle.'
+      'Yes. From 3D modeling and UX design to engineering and deployment, we handle the entire lifecycle.',
   },
   {
     question: 'What’s the best way to get started?',
     answer:
-      'Book a quick discovery call with our experts to discuss your goals and see relevant examples.'
+      'Book a quick discovery call with our experts to discuss your goals and see relevant examples.',
   },
   // {
   //   question: 'What is the process for developing a VR application?',

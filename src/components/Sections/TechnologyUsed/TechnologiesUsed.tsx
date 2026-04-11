@@ -1,7 +1,7 @@
 'use client';
 
 import { Container } from '@/components/Feature/Container/Container';
-import { backgroundImage, redBackground } from '@/data/services/aiServices';
+import { redBackground } from '@/data/services/aiServices';
 import Image from 'next/image';
 import React, { useState } from 'react';
 import styles from './technologiesused.module.css';

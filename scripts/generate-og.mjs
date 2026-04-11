@@ -1,14 +1,14 @@
+import { statSync } from 'node:fs';
 import sharp from 'sharp';
-import { statSync } from 'fs';
 
 const WIDTH = 1200;
 const HEIGHT = 630;
 
 // Exact site hero gradient colours from global.css lines 479-483
-const GRADIENT_START = '#071729';   // rgba(7, 23, 41)
-const GRADIENT_END = '#0C0C21';     // rgba(12, 12, 33)
-const ACCENT_RED = '#BD1C1C';       // rgba(189, 28, 28)
-const ACCENT_BLUE = '#07172A';      // rgba(7, 23, 42)
+const GRADIENT_START = '#071729'; // rgba(7, 23, 41)
+const GRADIENT_END = '#0C0C21'; // rgba(12, 12, 33)
+const ACCENT_RED = '#BD1C1C'; // rgba(189, 28, 28)
+const ACCENT_BLUE = '#07172A'; // rgba(7, 23, 42)
 
 const svg = `<svg width="${WIDTH}" height="${HEIGHT}"
   xmlns="http://www.w3.org/2000/svg">

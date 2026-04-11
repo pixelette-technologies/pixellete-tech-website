@@ -45,7 +45,7 @@ export const ContactUsForm: React.FC<ContactUsProps> = (props) => {
   const [errorMessage, setErrorMessage] = useState('');
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>,
   ) => {
     const { name, value, type } = e.target;
     setFormData({
@@ -144,7 +144,9 @@ export const ContactUsForm: React.FC<ContactUsProps> = (props) => {
                 <div className="contactUs-form-flex">
                   <div className="contactUs-field">
                     <label htmlFor="cu-firstName">
-                      First Name <span className="contactUs-required">*</span>
+                      First Name
+                      {' '}
+                      <span className="contactUs-required">*</span>
                     </label>
                     <input
                       id="cu-firstName"
@@ -159,7 +161,9 @@ export const ContactUsForm: React.FC<ContactUsProps> = (props) => {
                   </div>
                   <div className="contactUs-field">
                     <label htmlFor="cu-lastName">
-                      Last Name <span className="contactUs-required">*</span>
+                      Last Name
+                      {' '}
+                      <span className="contactUs-required">*</span>
                     </label>
                     <input
                       id="cu-lastName"
@@ -178,7 +182,9 @@ export const ContactUsForm: React.FC<ContactUsProps> = (props) => {
                 <div className="contactUs-form-flex">
                   <div className="contactUs-field">
                     <label htmlFor="cu-email">
-                      Email <span className="contactUs-required">*</span>
+                      Email
+                      {' '}
+                      <span className="contactUs-required">*</span>
                     </label>
                     <input
                       id="cu-email"
@@ -284,7 +290,9 @@ export const ContactUsForm: React.FC<ContactUsProps> = (props) => {
                 {/* Message */}
                 <div className="contactUs-field">
                   <label htmlFor="cu-message">
-                    Message <span className="contactUs-required">*</span>
+                    Message
+                    {' '}
+                    <span className="contactUs-required">*</span>
                   </label>
                   <textarea
                     id="cu-message"

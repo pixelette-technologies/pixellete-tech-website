@@ -1,7 +1,8 @@
 import { Container } from '@/components/Feature/Container/Container';
+import Link from 'next/link';
 import React from 'react';
 import styles from './ourcommitment.module.css';
-import Link from 'next/link';
+
 type CommitmentData = {
   img: string;
   link?: string;
@@ -36,30 +37,30 @@ export const OurCommitment: React.FC<OurCommitmentProps> = ({
           </center>
           <section className={styles.OurCommitmentCards}>
             {commitmentData.map((el, index) => (
-              <Link href={el.link && el.link?el.link:'/#'}>
-              <div style={{ margin: '0 1rem' }} key={index}>
-                <img src={el.img} alt={`Commitment ${index + 1}`} />
-                <div style={{ display: 'flex' }}>
-                  <div>
-                    <p className={styles.valueText}>{el.value1}</p>
-                    <p className={styles.descText}>{el.desc1}</p>
+              <Link href={el.link && el.link ? el.link : '/#'}>
+                <div style={{ margin: '0 1rem' }} key={index}>
+                  <img src={el.img} alt={`Commitment ${index + 1}`} />
+                  <div style={{ display: 'flex' }}>
+                    <div>
+                      <p className={styles.valueText}>{el.value1}</p>
+                      <p className={styles.descText}>{el.desc1}</p>
+                    </div>
+                    <hr className={styles.verticalDivider} />
+                    <div>
+                      <p className={styles.valueText}>{el.value2}</p>
+                      <p className={styles.descText}>{el.desc2}</p>
+                    </div>
+                    {el.desc3 && (
+                      <>
+                        <hr className={styles.verticalDivider} />
+                        <div>
+                          <p className={styles.valueText}>{el.value3}</p>
+                          <p className={styles.descText}>{el.desc3}</p>
+                        </div>
+                      </>
+                    )}
                   </div>
-                  <hr className={styles.verticalDivider} />
-                  <div>
-                    <p className={styles.valueText}>{el.value2}</p>
-                    <p className={styles.descText}>{el.desc2}</p>
-                  </div>
-                  {el.desc3 && (
-                    <>
-                      <hr className={styles.verticalDivider} />
-                      <div>
-                        <p className={styles.valueText}>{el.value3}</p>
-                        <p className={styles.descText}>{el.desc3}</p>
-                      </div>
-                    </>
-                  )}
                 </div>
-              </div>
               </Link>
             ))}
           </section>

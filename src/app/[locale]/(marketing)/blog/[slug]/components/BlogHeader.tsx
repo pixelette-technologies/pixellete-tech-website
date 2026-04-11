@@ -1,16 +1,15 @@
+import type { Entry } from 'contentful';
 import React from 'react';
-import Image from 'next/image';
-import { Entry } from 'contentful';
 
-interface BlogHeaderProps {
+type BlogHeaderProps = {
   title: string;
   author: Entry<any>;
   updatedAt: string;
-}
+};
 
 export const BlogHeader: React.FC<BlogHeaderProps> = ({ title, author, updatedAt }) => {
   const authorName = author?.fields?.name as string || 'Unknown Author';
-  
+
   return (
     <div>
       <h1 style={{ marginBottom: '1rem', maxWidth: '22ch' }}>{title}</h1>
@@ -21,17 +20,18 @@ export const BlogHeader: React.FC<BlogHeaderProps> = ({ title, author, updatedAt
         </div>
         <div>
           <p>
-            Last Updated:{' '}
+            Last Updated:
+            {' '}
             {updatedAt
               ? new Date(updatedAt).toLocaleString('en-US', {
-                  year: 'numeric',
-                  month: 'long',
-                  day: 'numeric',
-                })
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric',
+              })
               : 'Unknown'}
           </p>
         </div>
       </div>
     </div>
   );
-}; 
+};

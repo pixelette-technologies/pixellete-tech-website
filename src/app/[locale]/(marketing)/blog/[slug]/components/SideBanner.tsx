@@ -1,12 +1,12 @@
-import React from 'react';
+import type { Text } from '@contentful/rich-text-types';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { BLOCKS } from '@contentful/rich-text-types';
-import type { Text } from '@contentful/rich-text-types';
+import React from 'react';
 
-interface SideBannerProps {
+type SideBannerProps = {
   sideBannerAd: any;
   resolvedAssets: any[];
-}
+};
 
 export const SideBanner: React.FC<SideBannerProps> = ({ sideBannerAd, resolvedAssets }) => {
   const getTextContent = (node: any): string => {
@@ -35,7 +35,9 @@ export const SideBanner: React.FC<SideBannerProps> = ({ sideBannerAd, resolvedAs
         const assetId = node.data.target.sys.id;
         const asset = resolvedAssets.find((item: any) => item.sys.id === assetId);
 
-        if (!asset) return null;
+        if (!asset) {
+          return null;
+        }
 
         const { file, title } = asset.fields;
         const contentType = file.contentType.split('/')[0];
@@ -82,4 +84,4 @@ export const SideBanner: React.FC<SideBannerProps> = ({ sideBannerAd, resolvedAs
       </div>
     </div>
   );
-}; 
+};

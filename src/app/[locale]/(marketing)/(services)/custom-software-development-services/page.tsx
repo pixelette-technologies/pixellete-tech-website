@@ -46,8 +46,8 @@ export async function generateMetadata(props: ICustomSoftwareDevelopmentProps) {
     description: t('meta_description'),
     keywords: t('meta_keywords'),
     alternates: {
-      canonical: `/custom-software-development-services`
-    }
+      canonical: `/custom-software-development-services`,
+    },
   };
 }
 
@@ -79,15 +79,15 @@ export default async function CustomSoftwareDevelopment(props: ICustomSoftwareDe
         '@type': 'ListItem',
         'position': 1,
         'name': 'Home',
-        'item': `/`
+        'item': `/`,
       },
       {
         '@type': 'ListItem',
         'position': 2,
         'name': 'Custom Software Development Services',
-        'item': `/custom-software-development-services`
-      }
-    ]
+        'item': `/custom-software-development-services`,
+      },
+    ],
   };
   // <script
   //       type="application/ld+json"
@@ -95,7 +95,7 @@ export default async function CustomSoftwareDevelopment(props: ICustomSoftwareDe
   //     />
   return (
     <>
-    <script
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />

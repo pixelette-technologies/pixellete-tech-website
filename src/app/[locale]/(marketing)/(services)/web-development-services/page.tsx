@@ -49,8 +49,8 @@ export async function generateMetadata(props: IWebDevelopmentProps) {
     description: t('meta_description'),
     keywords: t('meta_keywords'),
     alternates: {
-      canonical: `/web-development-services`
-    }
+      canonical: `/web-development-services`,
+    },
   };
 }
 
@@ -81,23 +81,23 @@ export default async function WebDevelopment(props: IWebDevelopmentProps) {
         '@type': 'ListItem',
         'position': 1,
         'name': 'Home',
-        'item': `/`
+        'item': `/`,
       },
       {
         '@type': 'ListItem',
         'position': 2,
         'name': 'Web development Services',
-        'item': `/web-development-services`
-      }
-    ]
+        'item': `/web-development-services`,
+      },
+    ],
   };
   return (
     <>
-    <script
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
-    <script
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />

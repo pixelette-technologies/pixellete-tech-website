@@ -9,7 +9,7 @@ type ContainerProps = {
 
 export const Container: FC<ContainerProps> = ({ className = '', class: additionalClass = '', children }) => {
   return (
-    <div className='containerr'>
+    <div className="containerr">
       {children}
     </div>
   );

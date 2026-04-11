@@ -1,7 +1,7 @@
 import { Container } from '@/components/Feature/Container/Container';
 import styles from './herosection.module.css';
 
-const HeroSection: React.FC = ({heading, description}) => {
+const HeroSection: React.FC = ({ heading, description }) => {
   return (
     <>
       {/* <Container className="main">

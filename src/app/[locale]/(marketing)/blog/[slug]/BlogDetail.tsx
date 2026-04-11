@@ -1,6 +1,6 @@
-import { fetchBlogBySlug } from '@/libs/fetchBlogBySlug';
 import Breadcrumb from '@/components/Feature/Breadcrumb/Breadcrumb';
 import { Container } from '@/components/Feature/Container/Container';
+import { fetchBlogBySlug } from '@/libs/fetchBlogBySlug';
 import { BlogContent } from './components/BlogContent';
 import { BlogHeader } from './components/BlogHeader';
 import { BlogMedia } from './components/BlogMedia';
@@ -11,10 +11,11 @@ import './blogdetail.scss';
 export default async function BlogDetail({ params }: { params: { slug: string } }) {
   const data = await fetchBlogBySlug(params.slug);
 
-  if (!data) return <div>Blog not found</div>;
+  if (!data) {
+    return <div>Blog not found</div>;
+  }
 
   const { blog, content, resolvedAuthor, resolvedAssets, preContent, tableOfContents } = data;
-
 
   const breadcrumbItems = [
     { label: 'Home', href: '/' },

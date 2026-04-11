@@ -50,8 +50,8 @@ export async function generateMetadata(props: IUIUXProps) {
     description: t('meta_description'),
     keywords: t('meta_keywords'),
     alternates: {
-      canonical: `/ui-ux-design-services`
-    }
+      canonical: `/ui-ux-design-services`,
+    },
   };
 }
 
@@ -83,23 +83,23 @@ export default async function UIUX(props: IUIUXProps) {
         '@type': 'ListItem',
         'position': 1,
         'name': 'Home',
-        'item': `/`
+        'item': `/`,
       },
       {
         '@type': 'ListItem',
         'position': 2,
         'name': 'UI/UX design Services',
-        'item': `/ui-ux-design-services`
-      }
-    ]
+        'item': `/ui-ux-design-services`,
+      },
+    ],
   };
   return (
     <>
-    <script
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
-    <script
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />

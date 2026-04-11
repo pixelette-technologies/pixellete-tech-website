@@ -2,7 +2,7 @@
 
 import React from 'react';
 
-interface GradientBlurProps {
+type GradientBlurProps = {
   colors?: string[];
   direction?: 'top' | 'bottom' | 'left' | 'right';
   height?: string;
@@ -10,7 +10,7 @@ interface GradientBlurProps {
   blurAmount?: number;
   opacity?: number;
   className?: string;
-}
+};
 
 export default function GradientBlur({
   colors = ['transparent', 'rgba(0, 0, 0, 0.8)'],
@@ -19,13 +19,17 @@ export default function GradientBlur({
   width = '100%',
   blurAmount = 10,
   opacity = 1,
-  className = ''
+  className = '',
 }: GradientBlurProps) {
   // Determine gradient direction
   let gradientDirection = 'to bottom';
-  if (direction === 'top') gradientDirection = 'to top';
-  else if (direction === 'left') gradientDirection = 'to left';
-  else if (direction === 'right') gradientDirection = 'to right';
+  if (direction === 'top') {
+    gradientDirection = 'to top';
+  } else if (direction === 'left') {
+    gradientDirection = 'to left';
+  } else if (direction === 'right') {
+    gradientDirection = 'to right';
+  }
 
   // Create gradient string
   const gradientString = `linear-gradient(${gradientDirection}, ${colors.join(', ')})`;
@@ -37,7 +41,7 @@ export default function GradientBlur({
     width: direction === 'left' || direction === 'right' ? width : '100%',
     zIndex: 1,
     pointerEvents: 'none',
-    opacity
+    opacity,
   };
 
   // Position the gradient
@@ -60,7 +64,7 @@ export default function GradientBlur({
   }
 
   return (
-    <div 
+    <div
       className={`gradient-blur ${className}`}
       style={{
         ...positionStyle,
@@ -69,4 +73,4 @@ export default function GradientBlur({
       }}
     />
   );
-} 
+}

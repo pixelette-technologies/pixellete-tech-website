@@ -1,20 +1,20 @@
 'use client';
 
-import { ComponentType } from 'react';
+import type { ComponentType } from 'react';
 import MotionWrapper from './MotionWrapper';
 
 export type AnimationType = 'fadeIn' | 'fadeLeft' | 'fadeRight' | 'fadeUp' | 'fadeDown' | 'scale';
 
-interface WithAnimationProps {
+type WithAnimationProps = {
   animation?: AnimationType;
   delay?: number;
   duration?: number;
   className?: string;
-}
+};
 
 export function withAnimation<P extends object>(
   WrappedComponent: ComponentType<P>,
-  defaultAnimation: AnimationType = 'fadeIn'
+  defaultAnimation: AnimationType = 'fadeIn',
 ) {
   return function WithAnimationComponent({
     animation = defaultAnimation,
@@ -29,4 +29,4 @@ export function withAnimation<P extends object>(
       </MotionWrapper>
     );
   };
-} 
+}

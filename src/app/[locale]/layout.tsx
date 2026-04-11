@@ -77,15 +77,16 @@ export default async function RootLayout({ children, params }: { children: React
         <GoogleTagManager gtmId="GTM-KXC3K4RL" />
       </head>
       <body className={`${outfit.className}`} style={{ overflowX: 'hidden', overflowY: 'auto' }}>
-        <Suspense fallback={
-          <div className="flex items-center justify-center min-h-screen">
+        <Suspense fallback={(
+          <div className="flex min-h-screen items-center justify-center">
             <img
               src="/images/logo/shortLogo.svg"
               alt="Loading..."
-              className="w-16 h-16 animate-pulse"
+              className="size-16 animate-pulse"
             />
           </div>
-        }>
+        )}
+        >
           <MessagesProvider locale={locale}>
             {children}
           </MessagesProvider>

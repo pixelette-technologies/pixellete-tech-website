@@ -1,5 +1,6 @@
 // lib/contentful.ts
-import { createClient, Entry, Asset, EntryCollection } from 'contentful';
+import type { Asset, Entry } from 'contentful';
+import { createClient } from 'contentful';
 
 const client = createClient({
   space: 'ggtsbq0gqfii',
@@ -16,9 +17,9 @@ export async function getOneBlogPost(slug: string): Promise<{
 }> {
   try {
     const response = await client.getEntries({
-      content_type: 'blogsPage',
+      'content_type': 'blogsPage',
       'fields.slug': slug,
-      include: 10,
+      'include': 10,
     });
 
     const blog = response.items?.[0] || null;
@@ -34,7 +35,7 @@ export async function getOneBlogPost(slug: string): Promise<{
 export async function fetchBlogMetadata(slug: string): Promise<{ title: string; description: string } | null> {
   try {
     const response = await client.getEntries({
-      content_type: 'blogsPage',
+      'content_type': 'blogsPage',
       'fields.slug': slug,
     });
 

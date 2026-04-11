@@ -3,52 +3,52 @@ export const blockFaqs = [
     question: 'What type of blockchain development services do Pixelette Technologies offer?',
     answer:
       'Pixelette Technologies offers comprehensive blockchain development services that include:',
-      list: [
-        'Custom Blockchain Development',
-        'Smart Contract Development and Auditing',
-        'Decentralized Application (dApp) Development',
-        'Blockchain Integration Services',
-        'Token Development and Tokenomics',
-        'Blockchain Consulting and Strategy',
-        'NFT Marketplace Development and more.'
-      ]
+    list: [
+      'Custom Blockchain Development',
+      'Smart Contract Development and Auditing',
+      'Decentralized Application (dApp) Development',
+      'Blockchain Integration Services',
+      'Token Development and Tokenomics',
+      'Blockchain Consulting and Strategy',
+      'NFT Marketplace Development and more.',
+    ],
   },
   {
     question: 'Which blockchain platforms do you specialize in?',
     answer:
       'We specialize in a variety of leading blockchain platforms, including:',
-      list:[
-        'Ethereum for smart contracts and dApps',
-        'Hyperledger for enterprise-level blockchain applications',
-        'Binance Smart Chain for DeFi and NFT solutions',
-        'Solana for high-performance, scalable applications',
-        'Polygon for cost-effective layer-2 solutions',
-        'Polkadot for cross-chain compatibility',
-        'Cardano for sustainability-focused blockchain solutions'
-      ]
+    list: [
+      'Ethereum for smart contracts and dApps',
+      'Hyperledger for enterprise-level blockchain applications',
+      'Binance Smart Chain for DeFi and NFT solutions',
+      'Solana for high-performance, scalable applications',
+      'Polygon for cost-effective layer-2 solutions',
+      'Polkadot for cross-chain compatibility',
+      'Cardano for sustainability-focused blockchain solutions',
+    ],
   },
   {
     question: 'How do Pixelette Technologies work on blockchain development projects?',
     answer:
       'We follow a structured, client-centered approach:',
-      list: [
-        'Discovery and consultation — understanding client needs, project scope and setting a roadmap.',
-        'Planning and proposal — detailed planning, platform selection and a customized proposal.',
-        'Design and development — agile development and UI/UX design that align with project goals.',
-        'Testing and deployment — rigorous testing for security and performance before deploying to the mainnet.',
-        'Maintenance and support — ongoing support, updates and performance optimizations as needed.'
-      ]
+    list: [
+      'Discovery and consultation — understanding client needs, project scope and setting a roadmap.',
+      'Planning and proposal — detailed planning, platform selection and a customized proposal.',
+      'Design and development — agile development and UI/UX design that align with project goals.',
+      'Testing and deployment — rigorous testing for security and performance before deploying to the mainnet.',
+      'Maintenance and support — ongoing support, updates and performance optimizations as needed.',
+    ],
   },
   {
     question: 'Which is the right blockchain platform for my use case?',
     answer:
       'The ideal blockchain platform depends on factors like scalability, security and transaction costs. Here are some suggestions:',
-      list:[
-        'Ethereum — best for smart contracts and dApps.',
-        'Hyperledger — preferred for enterprise solutions requiring private, permissioned blockchain.',
-        'Solana — suitable for high-throughput applications with a focus on speed and low fees.',
-        'Polygon — ideal for projects requiring layer-2 scalability on the Ethereum network.'
-      ]
+    list: [
+      'Ethereum — best for smart contracts and dApps.',
+      'Hyperledger — preferred for enterprise solutions requiring private, permissioned blockchain.',
+      'Solana — suitable for high-throughput applications with a focus on speed and low fees.',
+      'Polygon — ideal for projects requiring layer-2 scalability on the Ethereum network.',
+    ],
   },
   {
     question: 'How much do blockchain app development services cost?',

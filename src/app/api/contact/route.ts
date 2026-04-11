@@ -1,4 +1,5 @@
-import { NextRequest, NextResponse } from 'next/server';
+import type { NextRequest } from 'next/server';
+import { NextResponse } from 'next/server';
 import { Resend } from 'resend';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
@@ -27,15 +28,15 @@ export async function POST(request: NextRequest) {
     if (!firstName || !lastName || !email || !message || !consent) {
       return NextResponse.json(
         { error: 'Please fill in all required fields and accept the consent checkbox.' },
-        { status: 400 }
+        { status: 400 },
       );
     }
 
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const emailRegex = /^[^\s@]+@[^\s@][^\s.@]*\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
       return NextResponse.json(
         { error: 'Invalid email address.' },
-        { status: 400 }
+        { status: 400 },
       );
     }
 
@@ -104,18 +105,24 @@ export async function POST(request: NextRequest) {
                         <td style="padding:10px 0;border-bottom:1px solid #1f1f1f;font-size:13px;color:#6b7280;font-weight:600;">Email</td>
                         <td style="padding:10px 0;border-bottom:1px solid #1f1f1f;font-size:14px;color:#ffffff;"><a href="mailto:${email}" style="color:#a78bfa;text-decoration:none;">${email}</a></td>
                       </tr>
-                      ${phone ? `<tr>
+                      ${phone
+                        ? `<tr>
                         <td style="padding:10px 0;border-bottom:1px solid #1f1f1f;font-size:13px;color:#6b7280;font-weight:600;">Phone</td>
                         <td style="padding:10px 0;border-bottom:1px solid #1f1f1f;font-size:14px;color:#ffffff;">${phone}</td>
-                      </tr>` : ''}
-                      ${company ? `<tr>
+                      </tr>`
+                        : ''}
+                      ${company
+                        ? `<tr>
                         <td style="padding:10px 0;border-bottom:1px solid #1f1f1f;font-size:13px;color:#6b7280;font-weight:600;">Company</td>
                         <td style="padding:10px 0;border-bottom:1px solid #1f1f1f;font-size:14px;color:#ffffff;font-weight:600;">${company}</td>
-                      </tr>` : ''}
-                      ${jobTitle ? `<tr>
+                      </tr>`
+                        : ''}
+                      ${jobTitle
+                        ? `<tr>
                         <td style="padding:10px 0;border-bottom:1px solid #1f1f1f;font-size:13px;color:#6b7280;font-weight:600;">Job Title</td>
                         <td style="padding:10px 0;border-bottom:1px solid #1f1f1f;font-size:14px;color:#ffffff;">${jobTitle}</td>
-                      </tr>` : ''}
+                      </tr>`
+                        : ''}
                     </table>
                   </td>
                 </tr>
@@ -125,18 +132,24 @@ export async function POST(request: NextRequest) {
                   <td style="padding:24px 32px 0;">
                     <p style="margin:0 0 12px;font-size:11px;font-weight:600;color:#6b7280;text-transform:uppercase;letter-spacing:1px;">Project Details</p>
                     <table width="100%" cellpadding="0" cellspacing="0">
-                      ${projectType ? `<tr>
+                      ${projectType
+                        ? `<tr>
                         <td style="padding:10px 0;border-bottom:1px solid #1f1f1f;width:140px;font-size:13px;color:#6b7280;font-weight:600;">Project Type</td>
                         <td style="padding:10px 0;border-bottom:1px solid #1f1f1f;font-size:14px;color:#ffffff;">${projectType}</td>
-                      </tr>` : ''}
-                      ${budget ? `<tr>
+                      </tr>`
+                        : ''}
+                      ${budget
+                        ? `<tr>
                         <td style="padding:10px 0;border-bottom:1px solid #1f1f1f;font-size:13px;color:#6b7280;font-weight:600;">Budget</td>
                         <td style="padding:10px 0;border-bottom:1px solid #1f1f1f;font-size:14px;color:#ffffff;">${budget}</td>
-                      </tr>` : ''}
-                      ${heardFrom ? `<tr>
+                      </tr>`
+                        : ''}
+                      ${heardFrom
+                        ? `<tr>
                         <td style="padding:10px 0;border-bottom:1px solid #1f1f1f;font-size:13px;color:#6b7280;font-weight:600;">Heard From</td>
                         <td style="padding:10px 0;border-bottom:1px solid #1f1f1f;font-size:14px;color:#ffffff;">${heardFrom}</td>
-                      </tr>` : ''}
+                      </tr>`
+                        : ''}
                     </table>
                   </td>
                 </tr>
@@ -239,14 +252,13 @@ export async function POST(request: NextRequest) {
 
     return NextResponse.json(
       { success: true, message: 'Enquiry received. We will be in touch shortly.' },
-      { status: 200 }
+      { status: 200 },
     );
-
   } catch (error) {
     console.error('Contact route error:', error);
     return NextResponse.json(
       { error: 'Something went wrong. Please try again.' },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }

@@ -4,7 +4,9 @@ import { getOneBlogPost } from './contentful';
 export async function fetchBlogBySlug(slug: string) {
   const { blog, includes } = await getOneBlogPost(slug);
 
-  if (!blog) return null;
+  if (!blog) {
+    return null;
+  }
 
   const content = blog.fields.body;
   const headings: any[] = [];

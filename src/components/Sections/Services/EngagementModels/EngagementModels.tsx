@@ -5,7 +5,6 @@ import { Container } from '@/components/Feature/Container/Container';
 import Link from 'next/link';
 import React from 'react';
 import styles from './engagementmodels.module.css';
-import { redBackground, redBackgroundLower } from '@/data/services/aiServices';
 
 export type EngagementModel = {
   engagementType: string;
@@ -64,11 +63,11 @@ export const EngagementModels: React.FC<EngagementModelsProps> = ({
         </div>
 
         <div className={styles.buttons}>
-          <Link href={'/contact-us'}>
+          <Link href="/contact-us">
             <Button className="primary">{primaryButtonText}</Button>
           </Link>
-          <Link href={'/contact-us'}>
-          <Button className="primary">{secondaryButtonText}</Button>
+          <Link href="/contact-us">
+            <Button className="primary">{secondaryButtonText}</Button>
           </Link>
         </div>
       </Container>

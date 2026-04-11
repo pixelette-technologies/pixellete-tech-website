@@ -85,7 +85,7 @@ export default async function ItOutsourcingServices(props: IDeliverProps) {
   };
   return (
     <>
-    <script
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />

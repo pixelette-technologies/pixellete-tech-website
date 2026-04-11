@@ -2,19 +2,19 @@
 
 import React from 'react';
 
-interface BlurGradientProps {
+type BlurGradientProps = {
   color?: string;
   height?: string;
   className?: string;
-}
+};
 
-export default function BlurGradient({ 
-  color = 'rgba(0, 0, 0, 0.8)', 
+export default function BlurGradient({
+  color = 'rgba(0, 0, 0, 0.8)',
   height = '150px',
-  className = ''
+  className = '',
 }: BlurGradientProps) {
   return (
-    <div 
+    <div
       className={`blur-gradient ${className}`}
       style={{
         position: 'absolute',
@@ -25,8 +25,8 @@ export default function BlurGradient({
         background: `linear-gradient(to bottom, transparent, ${color})`,
         filter: 'blur(10px)',
         zIndex: 1,
-        pointerEvents: 'none'
+        pointerEvents: 'none',
       }}
     />
   );
-} 
+}

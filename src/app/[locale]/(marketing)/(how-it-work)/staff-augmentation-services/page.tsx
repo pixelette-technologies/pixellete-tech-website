@@ -86,7 +86,7 @@ export default async function StaffAugmentationServices(props: IDeliverProps) {
   };
   return (
     <>
-    <script
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />

@@ -23,4 +23,4 @@ module.exports = {
       lastmod: new Date().toISOString(),
     };
   },
-}
+};

@@ -53,8 +53,8 @@ export async function generateMetadata(props: IMobileDevelopmentProps) {
     description: t('meta_description'),
     keywords: t('meta_keywords'),
     alternates: {
-      canonical: `/mobile-app-development-services`
-    }
+      canonical: `/mobile-app-development-services`,
+    },
   };
 }
 
@@ -86,23 +86,23 @@ export default async function MobileDevelopment(props: IMobileDevelopmentProps) 
         '@type': 'ListItem',
         'position': 1,
         'name': 'Home',
-        'item': `/`
+        'item': `/`,
       },
       {
         '@type': 'ListItem',
         'position': 2,
         'name': 'Mobile App Development Services',
-        'item': `/mobile-app-development-services`
-      }
-    ]
+        'item': `/mobile-app-development-services`,
+      },
+    ],
   };
   return (
     <>
-    <script
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
-    <script
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />

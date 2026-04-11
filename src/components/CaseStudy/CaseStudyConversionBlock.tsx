@@ -1,13 +1,13 @@
 'use client';
 
-import { useState } from 'react';
 import Image from 'next/image';
+import { useState } from 'react';
 import styles from './CaseStudyConversionBlock.module.css';
 
-interface CaseStudyConversionBlockProps {
+type CaseStudyConversionBlockProps = {
   caseStudySlug: string;
   caseStudyTitle: string;
-}
+};
 
 export default function CaseStudyConversionBlock({
   caseStudySlug,
@@ -24,7 +24,7 @@ export default function CaseStudyConversionBlock({
   const [intent, setIntent] = useState<'enquiry' | 'pdf-request'>('enquiry');
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
@@ -82,7 +82,10 @@ export default function CaseStudyConversionBlock({
         {/* Headline */}
         <div className={styles.headlineGroup}>
           <h2 className={styles.headline}>
-            Planning a project at {caseStudyTitle}&apos;s scale?
+            Planning a project at
+            {' '}
+            {caseStudyTitle}
+            &apos;s scale?
           </h2>
           <p className={styles.subline}>
             We have delivered enterprise-grade solutions across AI, blockchain,
@@ -100,7 +103,9 @@ export default function CaseStudyConversionBlock({
           <div className={styles.fieldRow}>
             <div className={styles.fieldGroup}>
               <label className={styles.label} htmlFor="cs-name">
-                Full Name <span className={styles.required}>*</span>
+                Full Name
+                {' '}
+                <span className={styles.required}>*</span>
               </label>
               <input
                 id="cs-name"
@@ -116,7 +121,9 @@ export default function CaseStudyConversionBlock({
             </div>
             <div className={styles.fieldGroup}>
               <label className={styles.label} htmlFor="cs-email">
-                Work Email <span className={styles.required}>*</span>
+                Work Email
+                {' '}
+                <span className={styles.required}>*</span>
               </label>
               <input
                 id="cs-email"
@@ -134,7 +141,9 @@ export default function CaseStudyConversionBlock({
 
           <div className={styles.fieldGroup}>
             <label className={styles.label} htmlFor="cs-company">
-              Company <span className={styles.required}>*</span>
+              Company
+              {' '}
+              <span className={styles.required}>*</span>
             </label>
             <input
               id="cs-company"
@@ -151,7 +160,9 @@ export default function CaseStudyConversionBlock({
 
           <div className={styles.fieldGroup}>
             <label className={styles.label} htmlFor="cs-outline">
-              Project Outline <span className={styles.required}>*</span>
+              Project Outline
+              {' '}
+              <span className={styles.required}>*</span>
             </label>
             <textarea
               id="cs-outline"

@@ -1,10 +1,11 @@
 'use client';
 
-import React, { ReactNode } from 'react';
+import type { ReactNode } from 'react';
 import { motion } from 'framer-motion';
+import React from 'react';
 import GradientBlur from './GradientBlur';
 
-interface AnimatedSectionProps {
+type AnimatedSectionProps = {
   children: ReactNode;
   animation?: 'fadeIn' | 'fadeLeft' | 'fadeRight' | 'fadeUp' | 'fadeDown' | 'scale';
   delay?: number;
@@ -16,7 +17,7 @@ interface AnimatedSectionProps {
   gradientBlurAmount?: number;
   gradientOpacity?: number;
   hasGradient?: boolean;
-}
+};
 
 const animations = {
   fadeIn: {
@@ -72,7 +73,7 @@ export default function AnimatedSection({
       >
         {children}
       </motion.div>
-      
+
       {hasGradient && (
         <GradientBlur
           colors={gradientColors}
@@ -84,4 +85,4 @@ export default function AnimatedSection({
       )}
     </div>
   );
-} 
+}
