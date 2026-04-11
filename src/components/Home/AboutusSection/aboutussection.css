@@ -282,8 +282,9 @@
 }
 
 .certificate-logo.iso-logo {
-  width: 70px;
-  height: 70px;
+  width: 70px !important;
+  height: 70px !important;
+  max-width: 70px;
   object-fit: contain;
 }
 
