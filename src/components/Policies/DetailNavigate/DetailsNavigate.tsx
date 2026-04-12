@@ -137,19 +137,19 @@ const DetailsNavigate = (props) => {
                 {title === 'Contact' && (
                   <blockquote>
                     <div data-aos="fade-up" data-aos-duration="500">
-                      <img src="/images/about/mail.svg" alt="icon" />
+                      <img src="/images/about/mail.svg" alt="Email contact" />
                       <p>
                         sales@pixelettetech.com
                       </p>
                     </div>
                     <div data-aos="fade-up" data-aos-duration="500">
-                      <img src="/images/about/mapIcon.svg" alt="icon" />
+                      <img src="/images/about/mapIcon.svg" alt="Office location" />
                       <p>
                         https://www.pixelettetech.com/contact-us/
                       </p>
                     </div>
                     <div data-aos="fade-up" data-aos-duration="500">
-                      <img src="/images/about/phone.svg" alt="icon" />
+                      <img src="/images/about/phone.svg" alt="Phone contact" />
                       <p>
                         +44 2045188226
                       </p>

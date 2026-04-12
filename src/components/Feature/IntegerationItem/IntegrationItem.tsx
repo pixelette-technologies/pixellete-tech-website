@@ -12,7 +12,7 @@ const IntegrationItem: React.FC<IntegrationItemProps> = ({ icon, name }) => {
       data-aos="fade-up"
       data-aos-duration="500"
     >
-      <img src={icon} alt="icon" />
+      <img src={icon} alt="Integration partner logo" />
       <p>{name}</p>
     </div>
   );

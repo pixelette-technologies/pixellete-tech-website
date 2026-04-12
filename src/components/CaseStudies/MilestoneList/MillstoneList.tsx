@@ -60,10 +60,10 @@ const ItemLeft = (props) => {
             {props.description}
           </p>
         </div>
-        <img src="/images/casestudies/edeg.svg" alt="icon" />
+        <img src="/images/casestudies/edeg.svg" alt="Milestone icon" />
       </section>
       <header>
-        <img src="/images/casestudies/dot.svg" alt="icon" />
+        <img src="/images/casestudies/dot.svg" alt="Milestone icon" />
       </header>
     </div>
   );
@@ -75,10 +75,10 @@ const ItemRight = (props) => {
       className="millstoneList-itemRight"
     >
       <header>
-        <img src="/images/casestudies/dot.svg" alt="icon" />
+        <img src="/images/casestudies/dot.svg" alt="Milestone icon" />
       </header>
       <section>
-        <img src="/images/casestudies/edgeLeft.svg" alt="icon" />
+        <img src="/images/casestudies/edgeLeft.svg" alt="Milestone icon" />
         <div>
           <h3>
             {props.title}

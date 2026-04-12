@@ -74,7 +74,7 @@ const CaseStudieDetail = async ({ params }: { params: { slug: string } }) => {
       <Container className="main">
         <div className="caseStudieDetail-background">
           <Image
-            src="/images/casestudies/casestudybackground.svg"
+            src="/images/casestudies/casestudyBackground.svg"
             alt="background"
             width={100}
             height={100}

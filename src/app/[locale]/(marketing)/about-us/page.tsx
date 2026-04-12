@@ -23,7 +23,7 @@ export async function generateMetadata(props: IAboutProps) {
     title: t('meta_title'),
     description: t('meta_description'),
     alternates: {
-      canonical: `https://www.pixelettetech.com/about-us`,
+      canonical: `https://pixelettetech.com/about-us`,
     },
   };
 }

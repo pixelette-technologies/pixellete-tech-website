@@ -12,7 +12,7 @@ const AwardCards = () => {
           ))}
         </div>
         <div>
-          <img src="/images/Clutch/portfolio-marketing.svg" alt="img" />
+          <img src="/images/Clutch/portfolio-marketing.svg" alt="Clutch award badge" />
         </div>
       </div>
     </>

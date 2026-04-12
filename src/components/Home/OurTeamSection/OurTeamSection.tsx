@@ -15,8 +15,8 @@ export const OurTeamSection: React.FC = () => {
       <div className="ourTeamSectionHome">
         <Container className="main">
           <blockquote>
-            <Image src="/images/team/box_26.png}" alt="box" />
-            <Image src="/images/team/box_27.png}" alt="box" />
+            <Image src="/images/team/box_26.png}" alt="" />
+            <Image src="/images/team/box_27.png}" alt="" />
           </blockquote>
         </Container>
       </div>

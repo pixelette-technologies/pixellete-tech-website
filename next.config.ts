@@ -459,7 +459,17 @@ withNextIntl({
       },
       {
         source: '/cancellation-and-refund-policy',
-        destination: '/cancelation-refund-policy',
+        destination: '/cancellation-refund-policy',
+        permanent: true,
+      },
+      {
+        source: '/cancelation-refund-policy',
+        destination: '/cancellation-refund-policy',
+        permanent: true,
+      },
+      {
+        source: '/terms-condition',
+        destination: '/terms-conditions',
         permanent: true,
       },
     ];
