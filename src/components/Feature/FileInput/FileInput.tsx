@@ -26,7 +26,7 @@ const FileInput: React.FC<FileInputProps> = ({ name }) => {
   };
 
   const handleUpload = () => {
-    console.log('Uploading file:', file);
+    // File upload handler
   };
 
   return (

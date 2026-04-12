@@ -26,7 +26,6 @@ const getBlogs = async () => {
   });
 
   const response = await client.getEntries({ content_type: 'blogsPage' });
-  console.log('All Blogs:', response);
   return response.items;
 };
 

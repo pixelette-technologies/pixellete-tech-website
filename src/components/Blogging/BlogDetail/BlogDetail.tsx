@@ -17,18 +17,15 @@ const BlogDetail = () => {
     const getEntryById = async () => {
       try {
         client.getEntry({ content_type: 'blogs' }).then((response) => {
-          console.log('response: ', response);
           setSingleBlogDetail(response);
         });
       } catch (error) {
-        console.log(error);
+        // Error handled silently
       }
     };
 
     getEntryById();
   }, []);
-  console.log(singleBlogDetail);
-
   // let el = data.blogsData.find((item) => item.id === id * 1);
   return (
     <>

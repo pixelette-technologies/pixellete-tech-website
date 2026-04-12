@@ -90,8 +90,6 @@ const DetailsNavigate = (props) => {
         headings.push({ level, text });
       }
     });
-    console.log(headings);
-
     return headings;
   };
   return (
@@ -242,21 +240,21 @@ const DetailsNavigate = (props) => {
                   <blockquote>
                     <div // data-aos="fade-up" data-aos-duration="500"
                     >
-                      <img src={assets.commonAssests.mail} alt="icon" />
+                      <img src={assets.commonAssests.mail} alt="Email contact" />
                       <p>
                         sales@pixelettetech.com
                       </p>
                     </div>
                     <div // data-aos="fade-up" data-aos-duration="500"
                     >
-                      <img src={assets.commonAssests.mapIcon} alt="icon" />
+                      <img src={assets.commonAssests.mapIcon} alt="Office location" />
                       <p>
                         https://www.pixelettetech.com/contact-us/
                       </p>
                     </div>
                     <div // data-aos="fade-up" data-aos-duration="500"
                     >
-                      <img src={assets.commonAssests.phone} alt="icon" />
+                      <img src={assets.commonAssests.phone} alt="Phone contact" />
                       <p>
                         +44 2045188226
                       </p>

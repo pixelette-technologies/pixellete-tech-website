@@ -19,8 +19,8 @@ export const Footer: React.FC = () => {
       /> */}
       <Container className="main margins">
         <blockquote>
-          <Image src="/images/footer/box_21.svg" alt="box 21" width={100} height={100} className="img" />
-          <Image src="/images/footer/box_22.svg" alt="box 22" width={100} height={100} className="img" />
+          <Image src="/images/footer/box_21.svg" alt="" width={100} height={100} className="img" />
+          <Image src="/images/footer/box_22.svg" alt="" width={100} height={100} className="img" />
         </blockquote>
         <section id="sideMargin">
           {/* Logo and Social Links */}

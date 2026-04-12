@@ -182,7 +182,7 @@ export const ProjectSection: React.FC = () => {
               title={study.title}
               tags={study.tags}
               buttonText={study.buttonText}
-              onButtonClick={() => console.log(`${study.title} button clicked`)}
+              onButtonClick={() => {}}
             />
           ))}
 

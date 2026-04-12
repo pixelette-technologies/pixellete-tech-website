@@ -13,8 +13,8 @@ export const YourPlan: React.FC<OurYourPlanProps> = () => {
       <div style={{ position: 'relative' }}><div className="blue-background-border"></div></div>
       <Container className="main margins">
         <blockquote>
-          <Image src="/images/home/services/box_10.svg" alt="box" width={100} height={100} />
-          <Image src="/images/home/services/box_11.svg" alt="box" width={100} height={100} />
+          <Image src="/images/home/services/box_10.svg" alt="" width={100} height={100} />
+          <Image src="/images/home/services/box_11.svg" alt="" width={100} height={100} />
         </blockquote>
       </Container>
       <YourPlanCardGrid
