@@ -41,7 +41,7 @@ export async function generateMetadata(props: IQuantumServicesProps) {
     description: 'Expert quantum computing development services. We develop quantum algorithms, quantum machine learning, and quantum applications that solve complex problems.',
     keywords: 'quantum computing, quantum development, quantum algorithms, quantum machine learning',
     alternates: {
-      canonical: `https://www.pixelettetech.com/quantum-development-services`,
+      canonical: `https://pixelettetech.com/quantum-development-services`,
     },
   };
 }
@@ -54,13 +54,13 @@ const breadcrumbSchema = {
       '@type': 'ListItem',
       'position': 1,
       'name': 'Home',
-      'item': `https://www.pixelettetech.com/`,
+      'item': `https://pixelettetech.com/`,
     },
     {
       '@type': 'ListItem',
       'position': 2,
       'name': 'Quantum Development Services',
-      'item': `https://www.pixelettetech.com/quantum-development-services`,
+      'item': `https://pixelettetech.com/quantum-development-services`,
     },
   ],
 };

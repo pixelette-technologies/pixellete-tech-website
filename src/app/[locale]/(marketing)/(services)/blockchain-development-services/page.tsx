@@ -53,7 +53,7 @@ export async function generateMetadata(props: IBlockchainDevelopmentProps) {
     description: t('meta_description'),
     keywords: t('meta_keywords'),
     alternates: {
-      canonical: `https://www.pixelettetech.com/blockchain-development-services`,
+      canonical: `https://pixelettetech.com/blockchain-development-services`,
     },
   };
 }
@@ -92,13 +92,13 @@ const breadcrumbSchema = {
       '@type': 'ListItem',
       'position': 1,
       'name': 'Home',
-      'item': `https://www.pixelettetech.com/`,
+      'item': `https://pixelettetech.com/`,
     },
     {
       '@type': 'ListItem',
       'position': 2,
       'name': 'Blockchain Development Services',
-      'item': `https://www.pixelettetech.com/blockchain-development-services`,
+      'item': `https://pixelettetech.com/blockchain-development-services`,
     },
   ],
 };

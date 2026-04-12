@@ -80,7 +80,7 @@ export async function generateMetadata(props: IAIservicesProps) {
     description: t('meta_description'),
     keywords: t('meta_keywords'),
     alternates: {
-      canonical: `https://www.pixelettetech.com/ai-development-services`,
+      canonical: `https://pixelettetech.com/ai-development-services`,
     },
   };
 }
@@ -92,13 +92,13 @@ const breadcrumbSchema = {
       '@type': 'ListItem',
       'position': 1,
       'name': 'Home',
-      'item': `https://www.pixelettetech.com/`,
+      'item': `https://pixelettetech.com/`,
     },
     {
       '@type': 'ListItem',
       'position': 2,
       'name': 'AI Development Services',
-      'item': `https://www.pixelettetech.com/ai-development-services`,
+      'item': `https://pixelettetech.com/ai-development-services`,
     },
   ],
 };
