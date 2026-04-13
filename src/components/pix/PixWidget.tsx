@@ -106,36 +106,47 @@ export default function PixWidget() {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [messages, isLoading]);
 
-  // Load history on open
+  // Load history on mount (when sessionId is ready) — not on open
+  const welcomeShownRef = useRef(false);
   useEffect(() => {
-    if (!isOpen || !sessionId || historyLoaded) return;
+    if (!sessionId || historyLoaded) return;
 
     const loadHistory = async () => {
       try {
         const res = await fetch(`/api/chat/history?sessionId=${sessionId}`);
         const data = await res.json();
         if (data.messages && data.messages.length > 0) {
-          // Filter and clean messages for display
           const cleaned = data.messages.map((m: Message) => ({
             role: m.role,
             content: m.role === 'assistant' ? cleanDisplayText(m.content) : m.content,
           }));
-          setMessages([...cleaned, { role: 'assistant', content: 'Welcome back. Where would you like to pick up?' }]);
+          setMessages(cleaned);
           setMessageCount(data.messageCount || 0);
           setIsFirstMessage(false);
           if (cleaned.some((m: Message) => m.role === 'user')) setLeadFired(true);
         } else {
-          // Show greeting after delay
-          setTimeout(() => setShowGreeting(true), 400);
+          setShowGreeting(true);
         }
       } catch {
-        setTimeout(() => setShowGreeting(true), 400);
+        setShowGreeting(true);
       }
       setHistoryLoaded(true);
     };
 
     loadHistory();
-  }, [isOpen, sessionId, historyLoaded]);
+  }, [sessionId, historyLoaded]);
+
+  // Show welcome back message once when widget opens with existing history
+  useEffect(() => {
+    if (isOpen && historyLoaded && messages.length > 0 && !welcomeShownRef.current && !showGreeting) {
+      welcomeShownRef.current = true;
+      setMessages(prev => [...prev, { role: 'assistant', content: 'Welcome back. Where would you like to pick up?' }]);
+    }
+    // Show greeting with delay only for new visitors when they open
+    if (isOpen && historyLoaded && messages.length === 0 && showGreeting) {
+      // Greeting already set, just needs to render
+    }
+  }, [isOpen, historyLoaded, messages.length, showGreeting]);
 
   function cleanDisplayText(text: string): string {
     return text
