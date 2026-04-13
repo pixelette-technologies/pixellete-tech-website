@@ -52,7 +52,12 @@ export default function PixWidget() {
   const [awaitingCompany, setAwaitingCompany] = useState(false);
   const [showPrivacyNotice, setShowPrivacyNotice] = useState(false);
   const [leadFired, setLeadFired] = useState(false);
-  const [showIntroForm, setShowIntroForm] = useState(true);
+  const [showIntroForm, setShowIntroForm] = useState(() => {
+    if (typeof window !== 'undefined') {
+      return !localStorage.getItem('pix_intro_done');
+    }
+    return true;
+  });
   const [introName, setIntroName] = useState('');
   const [introEmail, setIntroEmail] = useState('');
   const [introError, setIntroError] = useState('');
@@ -128,6 +133,7 @@ export default function PixWidget() {
           setMessageCount(data.messageCount || 0);
           setIsFirstMessage(false);
           setShowIntroForm(false);
+          localStorage.setItem('pix_intro_done', 'true');
           if (cleaned.some((m: Message) => m.role === 'user')) setLeadFired(true);
         } else {
           setShowGreeting(true);
@@ -316,6 +322,7 @@ export default function PixWidget() {
     setLeadFired(true);
     setShowIntroForm(false);
     setShowGreeting(true);
+    localStorage.setItem('pix_intro_done', 'true');
   };
 
   const showScoreBadge = lead.score > 50 && (lead.tier === 'hot' || lead.tier === 'urgent');

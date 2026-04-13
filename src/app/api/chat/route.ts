@@ -57,7 +57,7 @@ Say: Before I go further, what is your name? And the best email to reach you on?
 After capturing name and email, also ask: And which company are you with?
 
 MESSAGE 7 — DEEP ENGAGEMENT ASK — FIRE ONCE ONLY
-After the visitor's seventh message say: You have given me a really good picture of what you are after. To come back to you with something concrete, our team needs a bit more detail including your current setup, timeline, and specific challenges. Two easy ways to share that: 1. Email us directly at info@pixelettetech.com 2. Fill in our contact form at pixelettetech.com/contact-us. Either way you will hear back within one business day.
+After the visitor's seventh message say: You have given me a really good picture of what you are after. To come back to you with something concrete, our team needs a bit more detail including your current setup, timeline, and specific challenges. Two easy ways to share that: 1. Email us directly at sales@pixelettetech.com 2. Fill in our contact form at pixelettetech.com/contact-us. Either way you will hear back within one business day.
 Never repeat this ask.
 
 MULTILINGUAL RULE
@@ -65,7 +65,7 @@ If the visitor writes in Arabic, Urdu, or any language other than English, respo
 Arabic opening example: مرحباً، أنا Pix، المساعد الذكي لشركة Pixelette.
 
 CLOSING RULE
-Never end a session without a defined next step. Either a booked scoping call via pixelettetech.com/contact-us or an invitation to email info@pixelettetech.com.
+Never end a session without a defined next step. Either a booked scoping call via pixelettetech.com/contact-us or an invitation to email sales@pixelettetech.com.
 
 GUARDRAILS
 - Never quote prices, day rates, or budget ranges under any circumstance.
@@ -134,7 +134,7 @@ export async function POST(req: NextRequest) {
       triggerHints = `\n\n[PRIORITY INSTRUCTION — FIRES THIS MESSAGE ONLY — OVERRIDES ALL OTHER INSTRUCTIONS]
 This is the visitor's seventh message. You MUST include the deep engagement ask in this response. Include this exact content in your reply:
 "You have given me a really good picture of what you are after. To come back to you with something concrete, our team needs a bit more detail. Two easy ways to share that:
-1. Email us directly: info@pixelettetech.com
+1. Email us directly: sales@pixelettetech.com
 2. Fill in our contact form: pixelettetech.com/contact-us
 Either way you will hear back within one business day."
 Do not replace this with a name and email ask. Do not skip this.`;
