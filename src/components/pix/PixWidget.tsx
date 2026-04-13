@@ -52,6 +52,10 @@ export default function PixWidget() {
   const [awaitingCompany, setAwaitingCompany] = useState(false);
   const [showPrivacyNotice, setShowPrivacyNotice] = useState(false);
   const [leadFired, setLeadFired] = useState(false);
+  const [showIntroForm, setShowIntroForm] = useState(true);
+  const [introName, setIntroName] = useState('');
+  const [introEmail, setIntroEmail] = useState('');
+  const [introError, setIntroError] = useState('');
 
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
@@ -123,6 +127,7 @@ export default function PixWidget() {
           setMessages(cleaned);
           setMessageCount(data.messageCount || 0);
           setIsFirstMessage(false);
+          setShowIntroForm(false);
           if (cleaned.some((m: Message) => m.role === 'user')) setLeadFired(true);
         } else {
           setShowGreeting(true);
@@ -164,16 +169,6 @@ export default function PixWidget() {
   const handleClose = () => {
     setIsOpen(false);
     closedRef.current = true;
-
-    // Show rating prompt if 3+ messages and no feedback yet
-    if (messageCount >= 3 && !feedbackGiven) {
-      setTimeout(() => {
-        if (closedRef.current) {
-          setShowRating(true);
-          setIsOpen(true);
-        }
-      }, 1200);
-    }
   };
 
   const sendMessage = useCallback(async (text: string) => {
@@ -310,6 +305,17 @@ export default function PixWidget() {
     } catch { /* silent */ }
     setFeedbackGiven(true);
     setRatingSubmitted(true);
+  };
+
+  const handleIntroSubmit = () => {
+    setIntroError('');
+    if (!introName.trim()) { setIntroError('Please enter your name.'); return; }
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(introEmail.trim())) { setIntroError('Please enter a valid email.'); return; }
+    setLead(prev => ({ ...prev, name: introName.trim(), email: introEmail.trim() }));
+    setLeadFired(true);
+    setShowIntroForm(false);
+    setShowGreeting(true);
   };
 
   const showScoreBadge = lead.score > 50 && (lead.tier === 'hot' || lead.tier === 'urgent');
@@ -509,6 +515,45 @@ export default function PixWidget() {
         .pix-rating-thanks { font-size: 14px; color: #22C55E; margin-top: 12px; }
         .pix-low-rating-note { font-size: 12px; color: #64748b; margin-top: 8px; line-height: 1.5; }
 
+        /* Intro form */
+        .pix-intro-form {
+          flex: 1; display: flex; flex-direction: column;
+          justify-content: center; padding: 32px 24px;
+          background: #0d0f14; gap: 16px;
+        }
+        .pix-intro-form h3 {
+          font-size: 18px; font-weight: 600; color: #f1f5f9;
+          margin-bottom: 4px;
+        }
+        .pix-intro-form p {
+          font-size: 13px; color: #64748b; line-height: 1.5;
+          margin-bottom: 8px;
+        }
+        .pix-intro-input {
+          width: 100%; border: 1px solid rgba(255, 255, 255, 0.08);
+          border-radius: 12px; padding: 12px 16px;
+          font-size: 14px; font-family: inherit; outline: none;
+          background: #161b26; color: #e2e8f0;
+          transition: border-color 0.2s;
+        }
+        .pix-intro-input::placeholder { color: #475569; }
+        .pix-intro-input:focus { border-color: rgba(109, 40, 217, 0.5); }
+        .pix-intro-submit {
+          width: 100%; padding: 12px; border-radius: 12px;
+          background: linear-gradient(135deg, #6d28d9, #4f46e5);
+          color: #fff; border: none; cursor: pointer;
+          font-size: 14px; font-weight: 600; transition: all 0.2s;
+          box-shadow: 0 2px 12px rgba(109, 40, 217, 0.3);
+          margin-top: 4px;
+        }
+        .pix-intro-submit:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(109, 40, 217, 0.4); }
+        .pix-intro-error {
+          font-size: 12px; color: #ef4444; text-align: center;
+        }
+        .pix-intro-privacy {
+          font-size: 11px; color: #475569; text-align: center; line-height: 1.5;
+        }
+
         /* Privacy notice */
         .pix-privacy-notice {
           background: rgba(109, 40, 217, 0.08); padding: 8px 16px; font-size: 11px;
@@ -553,6 +598,36 @@ export default function PixWidget() {
             <button className="pix-close" onClick={handleClose} aria-label="Close chat">&times;</button>
           </div>
 
+          {/* Intro form — shown before chat starts */}
+          {showIntroForm ? (
+            <div className="pix-intro-form">
+              <h3>Welcome to Pixelette</h3>
+              <p>Enter your details to start chatting with Pix, our AI assistant.</p>
+              {introError && <p className="pix-intro-error">{introError}</p>}
+              <input
+                className="pix-intro-input"
+                placeholder="Your name"
+                value={introName}
+                onChange={e => setIntroName(e.target.value)}
+                onKeyDown={e => e.key === 'Enter' && handleIntroSubmit()}
+              />
+              <input
+                className="pix-intro-input"
+                placeholder="Work email"
+                type="email"
+                value={introEmail}
+                onChange={e => setIntroEmail(e.target.value)}
+                onKeyDown={e => e.key === 'Enter' && handleIntroSubmit()}
+              />
+              <button className="pix-intro-submit" onClick={handleIntroSubmit}>
+                Start Chat
+              </button>
+              <p className="pix-intro-privacy">
+                Details shared are handled per our privacy policy and UK GDPR.
+              </p>
+            </div>
+          ) : (
+          <>
           {/* Messages */}
           <div className="pix-messages">
             {/* Rating view */}
@@ -659,6 +734,8 @@ export default function PixWidget() {
 
           {/* Powered by */}
           <div className="pix-powered">Powered by Pixelette Technologies</div>
+          </>
+          )}
         </div>
       </div>
     </>
