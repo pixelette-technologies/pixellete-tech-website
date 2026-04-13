@@ -126,12 +126,21 @@ export async function POST(req: NextRequest) {
       }
     }
 
-    // 8. Build trigger hints
+    // 8. Build trigger hints — mutually exclusive, message 7 overrides message 3
+    const leadHasEmail = !!(conversation?.lead?.email);
     let triggerHints = '';
-    if (messageCount === 3) {
-      triggerHints = '\n\n[SYSTEM TRIGGER: This is the visitor\'s 3rd message. Naturally ask for their name and email now. Say: Before I go further, what is your name? And the best email to reach you on?]';
-    } else if (messageCount === 7) {
-      triggerHints = '\n\n[SYSTEM TRIGGER: This is the visitor\'s 7th message. Fire the deep engagement ask exactly once. Offer both info@pixelettetech.com and pixelettetech.com/contact-us as next steps.]';
+
+    if (messageCount === 7) {
+      triggerHints = `\n\n[PRIORITY INSTRUCTION — FIRES THIS MESSAGE ONLY — OVERRIDES ALL OTHER INSTRUCTIONS]
+This is the visitor's seventh message. You MUST include the deep engagement ask in this response. Include this exact content in your reply:
+"You have given me a really good picture of what you are after. To come back to you with something concrete, our team needs a bit more detail. Two easy ways to share that:
+1. Email us directly: info@pixelettetech.com
+2. Fill in our contact form: pixelettetech.com/contact-us
+Either way you will hear back within one business day."
+Do not replace this with a name and email ask. Do not skip this.`;
+    } else if (messageCount === 3 && !leadHasEmail) {
+      triggerHints = `\n\n[PRIORITY INSTRUCTION — FIRES THIS MESSAGE ONLY]
+This is the visitor's third message. You MUST ask for their name and email in this response before continuing. Weave it naturally into the conversation. Do not skip this. Say something like: "Before I go further — what is your name? And the best email to reach you on?"`;
     }
 
     // 9. Call Anthropic
