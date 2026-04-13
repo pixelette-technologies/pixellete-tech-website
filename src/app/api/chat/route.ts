@@ -161,15 +161,28 @@ This is the visitor's third message. You MUST ask for their name and email in th
       }
     }
 
-    const aiResponse = await client.messages.create({
-      model: 'claude-sonnet-4-20250514',
+    // Try primary model, fall back to alternative if overloaded
+    let aiResponse;
+    const requestBody = {
       max_tokens: 1024,
       system: SYSTEM_PROMPT + scrapedContext,
       messages: apiMessages.map((m: { role: string; content: string }) => ({
         role: m.role as 'user' | 'assistant',
         content: m.content,
       })),
-    });
+    };
+
+    try {
+      aiResponse = await client.messages.create({ model: 'claude-sonnet-4-20250514', ...requestBody });
+    } catch (primaryError: unknown) {
+      const errMsg = primaryError instanceof Error ? primaryError.message : '';
+      if (errMsg.includes('529') || errMsg.includes('overloaded') || errMsg.includes('Overloaded')) {
+        console.log('Sonnet overloaded, falling back to Haiku');
+        aiResponse = await client.messages.create({ model: 'claude-haiku-4-5-20251001', ...requestBody });
+      } else {
+        throw primaryError;
+      }
+    }
 
     const firstBlock = aiResponse.content[0];
     const rawText = firstBlock && firstBlock.type === 'text' ? firstBlock.text : '';
