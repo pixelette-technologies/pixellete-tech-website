@@ -3,6 +3,9 @@ interface CapturedFields {
   email?: string;
   company?: string;
   website?: string;
+  country?: string;
+  team_size?: string;
+  industry?: string;
 }
 
 interface Message {
@@ -21,6 +24,9 @@ export function extractFields(responseText: string): CapturedFields {
     if (parsed.email && parsed.email.trim()) fields.email = parsed.email.trim();
     if (parsed.company && parsed.company.trim()) fields.company = parsed.company.trim();
     if (parsed.website && parsed.website.trim()) fields.website = parsed.website.trim();
+    if (parsed.country && parsed.country.trim()) fields.country = parsed.country.trim();
+    if (parsed.team_size && parsed.team_size.trim()) fields.team_size = parsed.team_size.trim();
+    if (parsed.industry && parsed.industry.trim()) fields.industry = parsed.industry.trim();
     return fields;
   } catch {
     return {};

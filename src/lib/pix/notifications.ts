@@ -7,6 +7,9 @@ interface Lead {
   email?: string;
   company?: string;
   website?: string;
+  country?: string;
+  team_size?: string;
+  industry?: string;
   service_interest?: string;
   urgency?: string;
   language?: string;
@@ -99,8 +102,12 @@ export async function sendLeadEmail(lead: Lead, conversationSummary: string) {
       ${fieldRow('Email', lead.email || '', true)}
       ${fieldRow('Company', lead.company || '')}
       ${fieldRow('Website', lead.website || '')}
-      ${lead.urgency && lead.urgency !== 'unknown' ? fieldRow('Urgency', lead.urgency.charAt(0).toUpperCase() + lead.urgency.slice(1)) : ''}
-      ${lead.language && lead.language !== 'English' ? fieldRow('Language', lead.language) : ''}
+      ${fieldRow('Country', lead.country || '')}
+      ${fieldRow('Team Size', lead.team_size || '')}
+      ${fieldRow('Industry', lead.industry || '')}
+      ${fieldRow('Service', lead.service_interest || '')}
+      ${fieldRow('Urgency', lead.urgency && lead.urgency !== 'unknown' ? lead.urgency.charAt(0).toUpperCase() + lead.urgency.slice(1) : '')}
+      ${fieldRow('Language', lead.language && lead.language !== 'English' ? lead.language : '')}
     </table>
   </td></tr>
 
@@ -123,6 +130,20 @@ export async function sendLeadEmail(lead: Lead, conversationSummary: string) {
       <p style="margin:0;font-size:14px;color:#e2e8f0;line-height:1.5;">${urgencyNote}</p>
       ${lead.email ? `<table cellpadding="0" cellspacing="0" style="margin-top:14px;"><tr><td style="background:#6d28d9;border-radius:8px;padding:10px 24px;"><a href="mailto:${lead.email}?subject=Re: Your enquiry with Pixelette Technologies" style="color:#fff;text-decoration:none;font-size:13px;font-weight:600;">Reply to ${lead.name || 'Lead'}</a></td></tr></table>` : ''}
     </td></tr></table>
+  </td></tr>
+
+  <!-- Metadata -->
+  <tr><td style="padding:0 32px 20px;">
+    <table width="100%" cellpadding="0" cellspacing="0" style="background:#0a0c12;border:1px solid #1b1f2b;border-radius:8px;">
+      <tr><td style="padding:14px 16px;">
+        <p style="margin:0 0 8px;font-size:10px;font-weight:600;color:#475569;text-transform:uppercase;letter-spacing:1.5px;">Session Metadata</p>
+        <table width="100%" cellpadding="0" cellspacing="0">
+          <tr><td style="font-size:12px;color:#475569;padding:3px 0;">Session ID</td><td style="font-size:12px;color:#64748b;text-align:right;padding:3px 0;font-family:monospace;">${lead.session_id || 'N/A'}</td></tr>
+          <tr><td style="font-size:12px;color:#475569;padding:3px 0;">Messages</td><td style="font-size:12px;color:#64748b;text-align:right;padding:3px 0;">${conversationSummary.split('\n').filter(l => l.startsWith('Visitor:')).length} visitor, ${conversationSummary.split('\n').filter(l => l.startsWith('Pix:')).length} bot</td></tr>
+          <tr><td style="font-size:12px;color:#475569;padding:3px 0;">Captured at</td><td style="font-size:12px;color:#64748b;text-align:right;padding:3px 0;">${timestamp}</td></tr>
+        </table>
+      </td></tr>
+    </table>
   </td></tr>
 
   <!-- Footer -->

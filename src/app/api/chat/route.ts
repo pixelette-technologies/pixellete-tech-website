@@ -77,7 +77,7 @@ GUARDRAILS
 
 FIELD EXTRACTION — REQUIRED ON EVERY SINGLE RESPONSE
 At the very end of every response on a new line, append this block exactly. Fill in any fields captured in this specific message. Leave fields blank if not captured in this message. The UI strips this block before displaying your response to the visitor.
-[PIX_FIELDS]{"name":"","email":"","company":"","website":""}[/PIX_FIELDS]`;
+[PIX_FIELDS]{"name":"","email":"","company":"","website":"","country":"","team_size":"","industry":""}[/PIX_FIELDS]`;
 
 export async function POST(req: NextRequest) {
   try {
@@ -238,8 +238,11 @@ This is the visitor's third message. You MUST ask for their name and email in th
       .map((m: { role: string; content: string }) => `${m.role === 'user' ? 'Visitor' : 'Pix'}: ${m.content}`)
       .join('\n');
 
+    console.log('NOTIFICATION CHECK:', { hasEmail, previousHadEmail, emailJustCaptured, tierEscalated, capturedEmail: capturedFields.email, leadEmail: lead?.email, convLeadEmail: conversation?.lead?.email });
+
     // Fire email on FIRST email capture OR on tier escalation to hot/urgent
     if (emailJustCaptured || (tierEscalated && hasEmail)) {
+      console.log('FIRING LEAD EMAIL to', process.env.SALES_EMAIL);
       // Fire and forget — never block the response
       Promise.allSettled([
         sendLeadEmail(lead, summary),
