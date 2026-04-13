@@ -143,13 +143,29 @@ Do not replace this with a name and email ask. Do not skip this.`;
 This is the visitor's third message. You MUST ask for their name and email in this response before continuing. Weave it naturally into the conversation. Do not skip this. Say something like: "Before I go further — what is your name? And the best email to reach you on?"`;
     }
 
-    // 9. Call Anthropic
+    // 9. Call Anthropic — inject trigger as a system-level user instruction appended to messages
     const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
+    const apiMessages = messages.map((m: { role: string; content: string }) => ({
+      role: m.role as 'user' | 'assistant',
+      content: m.content,
+    }));
+
+    // Append trigger hint as the last user message content (invisible to visitor)
+    if (triggerHints && apiMessages.length > 0) {
+      const lastIdx = apiMessages.length - 1;
+      if (apiMessages[lastIdx].role === 'user') {
+        apiMessages[lastIdx] = {
+          ...apiMessages[lastIdx],
+          content: apiMessages[lastIdx].content + triggerHints,
+        };
+      }
+    }
+
     const aiResponse = await client.messages.create({
       model: 'claude-sonnet-4-20250514',
       max_tokens: 1024,
-      system: SYSTEM_PROMPT + scrapedContext + triggerHints,
-      messages: messages.map((m: { role: string; content: string }) => ({
+      system: SYSTEM_PROMPT + scrapedContext,
+      messages: apiMessages.map((m: { role: string; content: string }) => ({
         role: m.role as 'user' | 'assistant',
         content: m.content,
       })),
