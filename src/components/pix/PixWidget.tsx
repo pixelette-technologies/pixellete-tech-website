@@ -47,6 +47,11 @@ export default function PixWidget() {
   const [lead, setLead] = useState<LeadState>({ name: '', email: '', company: '', service: '', tier: 'cold', score: 0, language: 'English' });
   const [turnstileToken, setTurnstileToken] = useState('');
   const [historyLoaded, setHistoryLoaded] = useState(false);
+  const [awaitingName, setAwaitingName] = useState(false);
+  const [awaitingEmail, setAwaitingEmail] = useState(false);
+  const [awaitingCompany, setAwaitingCompany] = useState(false);
+  const [showPrivacyNotice, setShowPrivacyNotice] = useState(false);
+  const [leadFired, setLeadFired] = useState(false);
 
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
@@ -115,9 +120,10 @@ export default function PixWidget() {
             role: m.role,
             content: m.role === 'assistant' ? cleanDisplayText(m.content) : m.content,
           }));
-          setMessages(cleaned);
+          setMessages([...cleaned, { role: 'assistant', content: 'Welcome back. Where would you like to pick up?' }]);
           setMessageCount(data.messageCount || 0);
           setIsFirstMessage(false);
+          if (cleaned.some((m: Message) => m.role === 'user')) setLeadFired(true);
         } else {
           // Show greeting after delay
           setTimeout(() => setShowGreeting(true), 400);
@@ -161,17 +167,56 @@ export default function PixWidget() {
 
   const sendMessage = useCallback(async (text: string) => {
     if (!text.trim() || isLoading || !sessionId) return;
+    const trimmed = text.trim();
 
+    // Manual capture: awaiting name
+    if (awaitingName) {
+      setLead(prev => ({ ...prev, name: trimmed }));
+      setMessages(prev => [...prev, { role: 'user', content: trimmed }, { role: 'assistant', content: `Thanks ${trimmed}. And the best email to reach you on?` }]);
+      setAwaitingName(false);
+      setAwaitingEmail(true);
+      setShowPrivacyNotice(true);
+      setInput('');
+      return;
+    }
+
+    // Manual capture: awaiting email
+    if (awaitingEmail) {
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(trimmed)) {
+        setMessages(prev => [...prev, { role: 'user', content: trimmed }, { role: 'assistant', content: 'That does not look like a valid email. Could you check and try again?' }]);
+        setInput('');
+        return;
+      }
+      setLead(prev => ({ ...prev, email: trimmed }));
+      setMessages(prev => [...prev, { role: 'user', content: trimmed }, { role: 'assistant', content: 'Got it. And which company are you with?' }]);
+      setAwaitingEmail(false);
+      setAwaitingCompany(true);
+      setShowPrivacyNotice(false);
+      setLeadFired(true);
+      setInput('');
+      return;
+    }
+
+    // Manual capture: awaiting company
+    if (awaitingCompany) {
+      setLead(prev => ({ ...prev, company: trimmed }));
+      setMessages(prev => [...prev, { role: 'user', content: trimmed }, { role: 'assistant', content: `${trimmed}, great. Now, tell me more about what you are looking to build.` }]);
+      setAwaitingCompany(false);
+      setInput('');
+      return;
+    }
+
+    // Normal message flow
     const newCount = messageCount + 1;
     setMessageCount(newCount);
 
-    const userMessage: Message = { role: 'user', content: text.trim() };
+    const userMessage: Message = { role: 'user', content: trimmed };
     const newMessages = [...messages, userMessage];
     setMessages(newMessages);
     setInput('');
     setIsLoading(true);
 
-    // Reset textarea height
     if (textareaRef.current) textareaRef.current.style.height = 'auto';
 
     try {
@@ -206,6 +251,15 @@ export default function PixWidget() {
           if (f.email) setLead(prev => ({ ...prev, email: f.email }));
           if (f.company) setLead(prev => ({ ...prev, company: f.company }));
         }
+        // Trigger manual capture if API says needsLeadCapture and no email yet
+        if (data.meta.needsLeadCapture && !lead.email && !leadFired) {
+          if (!lead.name) {
+            setAwaitingName(true);
+          } else {
+            setAwaitingEmail(true);
+            setShowPrivacyNotice(true);
+          }
+        }
       }
 
       setMessages(prev => [...prev, { role: 'assistant', content: data.message }]);
@@ -217,7 +271,7 @@ export default function PixWidget() {
     }
 
     setIsLoading(false);
-  }, [messages, sessionId, messageCount, isFirstMessage, turnstileToken, isLoading]);
+  }, [messages, sessionId, messageCount, isFirstMessage, turnstileToken, isLoading, awaitingName, awaitingEmail, awaitingCompany, lead.email, lead.name, leadFired]);
 
   const handleKeyDown = (e: React.KeyboardEvent) => {
     if (e.key === 'Enter' && !e.shiftKey) {
@@ -365,6 +419,10 @@ export default function PixWidget() {
         }
         .pix-rating-thanks { font-size: 14px; color: #22C55E; margin-top: 8px; }
         .pix-low-rating-note { font-size: 12px; color: #6b7280; margin-top: 6px; }
+        .pix-privacy-notice {
+          background: #FEF9C3; padding: 8px 16px; font-size: 11px;
+          color: #854D0E; text-align: center; border-top: 1px solid #FDE68A;
+        }
         @media (max-width: 440px) {
           .pix-window { width: calc(100vw - 16px); right: 8px; bottom: 80px; height: calc(100vh - 100px); }
           .pix-launcher { bottom: 16px; right: 16px; }
@@ -474,6 +532,13 @@ export default function PixWidget() {
                   {qr}
                 </button>
               ))}
+            </div>
+          )}
+
+          {/* Privacy notice */}
+          {showPrivacyNotice && (
+            <div className="pix-privacy-notice">
+              Details shared are handled per our privacy policy and UK GDPR
             </div>
           )}
 
