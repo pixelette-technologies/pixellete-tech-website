@@ -159,7 +159,7 @@ export async function generateAndSendWeeklyReport() {
 </body></html>`;
 
   const recipients = [
-    process.env.WEEKLY_REPORT_EMAIL || 'asif@pixelettetech.com',
+    process.env.WEEKLY_REPORT_EMAIL || 'rana@pixelette.tech',
     process.env.SALES_EMAIL || 'sales@pixelettetech.com',
   ].filter(Boolean);
 

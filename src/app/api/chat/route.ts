@@ -213,22 +213,24 @@ This is the visitor's third message. You MUST ask for their name and email in th
     const topic = classifyTopic(question);
     await logQuestion(sessionId, question, topic, language);
 
-    // 16. Escalation check — background tasks
+    // 16. Notification triggers — background tasks
+    const hasEmail = !!(lead?.email || capturedFields.email);
+    const previousHadEmail = !!(conversation?.lead?.email);
+    const emailJustCaptured = hasEmail && !previousHadEmail && !!capturedFields.email;
     const tierEscalated = (classification === 'hot' || classification === 'urgent') &&
       previousClassification !== 'hot' && previousClassification !== 'urgent';
-    const hasEmail = !!(lead?.email || capturedFields.email);
 
-    if (tierEscalated && hasEmail) {
-      const summary = messages
-        .slice(-10)
-        .map((m: { role: string; content: string }) => `${m.role === 'user' ? 'Visitor' : 'Pix'}: ${m.content}`)
-        .join('\n');
+    const summary = messages
+      .slice(-10)
+      .map((m: { role: string; content: string }) => `${m.role === 'user' ? 'Visitor' : 'Pix'}: ${m.content}`)
+      .join('\n');
 
+    // Fire email on FIRST email capture OR on tier escalation to hot/urgent
+    if (emailJustCaptured || (tierEscalated && hasEmail)) {
       // Fire and forget — never block the response
       Promise.allSettled([
         sendLeadEmail(lead, summary),
-        sendSlackAlert(lead),
-        runQualityCheck(sessionId, messages),
+        ...(tierEscalated ? [sendSlackAlert(lead), runQualityCheck(sessionId, messages)] : []),
       ]);
     }
 
