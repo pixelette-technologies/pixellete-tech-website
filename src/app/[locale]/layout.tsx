@@ -6,8 +6,11 @@ import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, setRequestLocale } from 'next-intl/server';
 import { Outfit } from 'next/font/google';
 import { notFound } from 'next/navigation';
+import dynamic from 'next/dynamic';
 import { Suspense } from 'react';
 import '@/styles/global.css';
+
+const PixWidget = dynamic(() => import('@/components/pix/PixWidget'), { ssr: false });
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://pixelettetech.com'),
@@ -91,6 +94,7 @@ export default async function RootLayout({ children, params }: { children: React
             {children}
           </MessagesProvider>
         </Suspense>
+        <PixWidget />
       </body>
     </html>
   );
