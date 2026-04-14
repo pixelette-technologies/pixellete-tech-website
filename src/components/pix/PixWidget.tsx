@@ -18,10 +18,10 @@ interface LeadState {
 }
 
 const QUICK_REPLIES = [
-  'I need AI development',
-  'Blockchain project',
-  'Build a mobile app',
-  'Custom software',
+  'I have an AI project',
+  'I need blockchain',
+  'Build me an app',
+  'Talk to sales',
 ];
 
 const TIER_COLORS: Record<string, string> = {
@@ -226,7 +226,12 @@ export default function PixWidget() {
     const newCount = messageCount + 1;
     setMessageCount(newCount);
 
-    const userMessage: Message = { role: 'user', content: trimmed };
+    // If first message and we have intro data, prepend context so Claude knows
+    let messageContent = trimmed;
+    if (messages.length === 0 && lead.name && lead.email) {
+      messageContent = `[CONTEXT: Visitor already provided their name (${lead.name}) and email (${lead.email}) before starting the chat. Do NOT ask for name or email again. Jump straight into understanding their project.]\n\n${trimmed}`;
+    }
+    const userMessage: Message = { role: 'user', content: messageContent };
     const newMessages = [...messages, userMessage];
     setMessages(newMessages);
     setInput('');
@@ -679,7 +684,7 @@ export default function PixWidget() {
                 {/* Greeting */}
                 {showGreeting && messages.length === 0 && (
                   <div className="pix-msg pix-msg-bot">
-                    Hi, I am Pix, Pixelette's AI assistant. Tell me what you are working on and I will point you in the right direction.
+                    {lead.name ? `Hi ${lead.name}, I'm Pix. What are you building? Tell me the problem and I'll show you how we solve it.` : `Hi, I'm Pix. What are you building? Tell me the problem and I'll show you how we solve it.`}
                   </div>
                 )}
 

@@ -54,8 +54,8 @@ If the visitor asks YOU about cost say exactly: Pricing is always scoped to the 
 If pushed repeatedly on price say: I genuinely cannot give you a number without a full scope. That would be doing you a disservice. A 30-minute call with our team costs nothing and gives you an accurate picture.
 
 LEAD CAPTURE — MESSAGE 3 TRIGGER
-After the visitor's third message, naturally ask for name and email as part of the conversation flow.
-Say: Before I go further, what is your name? And the best email to reach you on?
+If the visitor's name and email appear in [CONTEXT] at the start of the first message, they were already captured via the intro form. Do NOT ask for name or email again. Instead, at message 3, ask for their company if not yet known.
+If no [CONTEXT] with name and email exists, after the visitor's third message naturally ask for name and email. Say: Before I go further, what is your name? And the best email to reach you on?
 After capturing name and email, also ask: And which company are you with?
 
 MESSAGE 7 — DEEP ENGAGEMENT ASK — FIRE ONCE ONLY
@@ -147,7 +147,8 @@ export async function POST(req: NextRequest) {
     }
 
     // 8. Build trigger hints — mutually exclusive, message 7 overrides message 3
-    const leadHasEmail = !!(conversation?.lead?.email);
+    const contextHasEmail = messages.some((m: { content: string }) => m.content.includes('[CONTEXT:') && m.content.includes('email'));
+    const leadHasEmail = !!(conversation?.lead?.email) || contextHasEmail;
     let triggerHints = '';
 
     if (messageCount === 7) {
