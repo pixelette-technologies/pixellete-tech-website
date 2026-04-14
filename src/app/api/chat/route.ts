@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import Anthropic from '@anthropic-ai/sdk';
 import { getOrCreateConversation, saveMessage, upsertLead, logQuestion } from '@/lib/pix/database';
 import { scoreLead, detectServiceLine, detectLanguage, detectUrgency } from '@/lib/pix/scoring';
-import { sendLeadEmail, sendSlackAlert } from '@/lib/pix/notifications';
+import { sendLeadEmail } from '@/lib/pix/notifications';
 import { runQualityCheck } from '@/lib/pix/qualityCheck';
 import { scrapeWebsite, extractUrlFromMessage } from '@/lib/pix/scraper';
 import { checkRateLimit, getIpFromRequest } from '@/lib/pix/rateLimit';
@@ -147,17 +147,29 @@ export async function POST(req: NextRequest) {
       }
     }
 
-    // 8. Build trigger hints — mutually exclusive, message 7 overrides message 3
-    let triggerHints = '';
+    // 8. Abuse/irrelevant detection — check last 3 user messages
+    const recentUserMsgs = messages.filter((m: { role: string }) => m.role === 'user').slice(-3).map((m: { content: string }) => m.content.toLowerCase()).join(' ');
+    const abusePatterns = /\b(fuck|shit|damn|bitch|ass|dick|idiot|stupid|scam|fraud|fake|spam)\b/i;
+    const irrelevantPatterns = /\b(what is the weather|tell me a joke|write me a poem|who is the president|play a game|sing a song|homework|essay)\b/i;
+    const isAbusive = abusePatterns.test(recentUserMsgs);
+    const isIrrelevant = irrelevantPatterns.test(recentUserMsgs);
+    const blockEmails = isAbusive || isIrrelevant;
 
-    if (messageCount === 7) {
-      triggerHints = `\n\n[PRIORITY INSTRUCTION — FIRES THIS MESSAGE ONLY — OVERRIDES ALL OTHER INSTRUCTIONS]
-This is the visitor's seventh message. You MUST include the deep engagement ask in this response. Include this exact content in your reply:
-"You have given me a really good picture of what you are after. To come back to you with something concrete, our team needs a bit more detail. Two easy ways to share that:
-1. Email us directly: sales@pixelettetech.com
-2. Fill in our contact form: pixelettetech.com/contact-us
-Either way you will hear back within one business day."
-Do not replace this with a name and email ask. Do not skip this.`;
+    // 9. Build trigger hints — mutually exclusive
+    let triggerHints = '';
+    const isCheckpoint = messageCount > 0 && messageCount % 7 === 0;
+
+    if (isAbusive) {
+      triggerHints = `\n\n[INSTRUCTION: The visitor is being abusive. Respond politely but firmly: "I am here to help with technology projects. If you have a genuine enquiry, I am happy to assist. Otherwise, you can reach our team at sales@pixelettetech.com." Do not engage further with abuse.]`;
+    } else if (isIrrelevant) {
+      triggerHints = `\n\n[INSTRUCTION: The visitor is asking about something outside our services. Politely redirect: "I specialise in AI, blockchain, and software development. Is there a tech project I can help you with?"]`;
+    } else if (isCheckpoint) {
+      triggerHints = `\n\n[PRIORITY INSTRUCTION — CHECKPOINT]
+This is message ${messageCount}. Include a checkpoint in your response. Say: "We have covered a lot of ground. Would you like to:
+1. Continue exploring your project with me
+2. Email our team directly at sales@pixelettetech.com
+3. Fill in our detailed brief at pixelettetech.com/contact-us
+What works best for you?"`;
     } else if (messageCount === 3) {
       triggerHints = `\n\n[PRIORITY INSTRUCTION — FIRES THIS MESSAGE ONLY]
 This is the visitor's third message. Do NOT ask for name or email — they were already captured. Instead ask: "Is this for an established company or a startup?"`;
@@ -262,6 +274,7 @@ This is the visitor's third message. Do NOT ask for name or email — they were 
       score,
       classification,
       signals: JSON.stringify(signals),
+      ...(blockEmails ? { status: isAbusive ? 'abusive' : 'irrelevant' } : {}),
     });
 
     // 15. Log question
@@ -292,15 +305,15 @@ This is the visitor's third message. Do NOT ask for name or email — they were 
       .filter(Boolean)
       .join('\n');
 
-    // Fire email on EVERY tier change — cold→warm, warm→hot, hot→urgent
+    // Fire email on EVERY tier change — but BLOCK if abusive or irrelevant
     const tierChanged = classification !== previousClassification;
     const isHotOrUrgent = classification === 'hot' || classification === 'urgent';
 
-    if (tierChanged && hasEmail && classification !== 'cold') {
+    if (tierChanged && hasEmail && classification !== 'cold' && !blockEmails) {
       // Fire and forget — never block the response
       Promise.allSettled([
         sendLeadEmail(lead, summary),
-        ...(isHotOrUrgent ? [sendSlackAlert(lead), runQualityCheck(sessionId, messages)] : []),
+        ...(isHotOrUrgent ? [runQualityCheck(sessionId, messages)] : []),
       ]);
     }
 
@@ -314,6 +327,7 @@ This is the visitor's third message. Do NOT ask for name or email — they were 
         score,
         service,
         needsLeadCapture: messageCount === 3,
+        isCheckpoint,
         needsDeepAsk: messageCount === 7,
         fieldsCapture: capturedFields,
       },
