@@ -52,6 +52,19 @@ export async function generateAndSendWeeklyReport() {
   const visRatings = stats.quality.filter(q => q.visitor_rating).map(q => q.visitor_rating);
   const avgVis = visRatings.length > 0 ? (visRatings.reduce((s, r) => s + r, 0) / visRatings.length).toFixed(1) : '--';
 
+  // Abandoned leads (0 messages) and early abandoned (1-2 messages)
+  const abandoned = stats.leads.filter(l => {
+    const conv = stats.conversations.find(c => c.session_id === l.session_id);
+    return !conv || (conv.message_count || 0) === 0;
+  });
+  const earlyAbandoned = stats.leads.filter(l => {
+    const conv = stats.conversations.find(c => c.session_id === l.session_id);
+    return conv && (conv.message_count || 0) >= 1 && (conv.message_count || 0) <= 2;
+  });
+
+  // Flagged leads (abusive or irrelevant)
+  const flaggedLeads = stats.leads.filter(l => l.status === 'abusive' || l.status === 'irrelevant');
+
   const now = new Date();
   const weekAgo = new Date(now.getTime() - 7 * 24 * 60 * 60 * 1000);
   const fmt = (d: Date) => d.toLocaleDateString('en-GB', { day: 'numeric', month: 'short' });
@@ -143,6 +156,29 @@ export async function generateAndSendWeeklyReport() {
     <p style="margin:0 0 10px;font-size:11px;font-weight:600;color:#475569;text-transform:uppercase;letter-spacing:1.5px;">Languages</p>
     <table width="100%" cellpadding="0" cellspacing="0">
       ${Object.entries(languages).sort((a, b) => b[1] - a[1]).map(([l, c]) => tableRow(l, c)).join('')}
+    </table>
+  </td></tr>` : ''}
+
+  <!-- Abandoned Leads -->
+  ${abandoned.length > 0 ? `<tr><td style="padding:20px 32px 0;">
+    <p style="margin:0 0 10px;font-size:11px;font-weight:600;color:#475569;text-transform:uppercase;letter-spacing:1.5px;">Abandoned (0 messages) — ${abandoned.length}</p>
+    <table width="100%" cellpadding="0" cellspacing="0">
+      ${abandoned.slice(0, 10).map(l => `<tr><td style="padding:6px 0;border-bottom:1px solid #1b1f2b;font-size:13px;color:#e2e8f0;">${l.name || 'Anonymous'}</td><td style="padding:6px 0;border-bottom:1px solid #1b1f2b;font-size:13px;color:#a78bfa;text-align:right;">${l.email || 'No email'}</td></tr>`).join('')}
+    </table>
+  </td></tr>` : ''}
+
+  ${earlyAbandoned.length > 0 ? `<tr><td style="padding:20px 32px 0;">
+    <p style="margin:0 0 10px;font-size:11px;font-weight:600;color:#475569;text-transform:uppercase;letter-spacing:1.5px;">Early Abandoned (1-2 messages) — ${earlyAbandoned.length}</p>
+    <table width="100%" cellpadding="0" cellspacing="0">
+      ${earlyAbandoned.slice(0, 10).map(l => `<tr><td style="padding:6px 0;border-bottom:1px solid #1b1f2b;font-size:13px;color:#e2e8f0;">${l.name || 'Anonymous'}</td><td style="padding:6px 0;border-bottom:1px solid #1b1f2b;font-size:13px;color:#a78bfa;text-align:right;">${l.email || 'No email'}</td></tr>`).join('')}
+    </table>
+  </td></tr>` : ''}
+
+  <!-- Flagged Leads -->
+  ${flaggedLeads.length > 0 ? `<tr><td style="padding:20px 32px 0;">
+    <p style="margin:0 0 10px;font-size:11px;font-weight:600;color:#DC2626;text-transform:uppercase;letter-spacing:1.5px;">Flagged (${flaggedLeads.length})</p>
+    <table width="100%" cellpadding="0" cellspacing="0">
+      ${flaggedLeads.slice(0, 10).map(l => `<tr><td style="padding:6px 0;border-bottom:1px solid #1b1f2b;font-size:13px;color:#e2e8f0;">${l.name || 'Anonymous'}</td><td style="padding:6px 0;border-bottom:1px solid #1b1f2b;font-size:13px;color:#DC2626;text-align:center;">${l.status}</td><td style="padding:6px 0;border-bottom:1px solid #1b1f2b;font-size:13px;color:#64748b;text-align:right;">${l.email || 'No email'}</td></tr>`).join('')}
     </table>
   </td></tr>` : ''}
 
