@@ -271,10 +271,6 @@ This is the visitor's third message. Do NOT ask for name or email — they were 
 
     // 16. Notification triggers — background tasks
     const hasEmail = !!(lead?.email || capturedFields.email);
-    const previousHadEmail = !!(conversation?.lead?.email);
-    const emailJustCaptured = hasEmail && !previousHadEmail && !!capturedFields.email;
-    const tierEscalated = (classification === 'hot' || classification === 'urgent') &&
-      previousClassification !== 'hot' && previousClassification !== 'urgent';
 
     // Build clean conversation summary — strip all internal tags
     const cleanMsg = (text: string) => text
@@ -296,13 +292,15 @@ This is the visitor's third message. Do NOT ask for name or email — they were 
       .filter(Boolean)
       .join('\n');
 
-    // Fire email when: (a) email captured AND at least 3 real messages exist, OR (b) tier escalation
-    const hasRealConversation = fullMessages.filter((m: { role: string }) => m.role === 'user').length >= 2;
-    if ((emailJustCaptured && hasRealConversation) || (tierEscalated && hasEmail)) {
+    // Fire email on EVERY tier change — cold→warm, warm→hot, hot→urgent
+    const tierChanged = classification !== previousClassification;
+    const isHotOrUrgent = classification === 'hot' || classification === 'urgent';
+
+    if (tierChanged && hasEmail && classification !== 'cold') {
       // Fire and forget — never block the response
       Promise.allSettled([
         sendLeadEmail(lead, summary),
-        ...(tierEscalated ? [sendSlackAlert(lead), runQualityCheck(sessionId, messages)] : []),
+        ...(isHotOrUrgent ? [sendSlackAlert(lead), runQualityCheck(sessionId, messages)] : []),
       ]);
     }
 
