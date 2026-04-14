@@ -87,11 +87,11 @@ export default function PixWidget() {
     return () => clearTimeout(timer);
   }, [isOpen]);
 
-  // Load Turnstile
+  // Load Turnstile — only if a valid site key is provided
   useEffect(() => {
     if (typeof window === 'undefined') return;
     const siteKey = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY;
-    if (!siteKey) return;
+    if (!siteKey || siteKey === '0x4AAA_your_site_key' || siteKey.length < 10) return;
 
     const script = document.createElement('script');
     script.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit';
