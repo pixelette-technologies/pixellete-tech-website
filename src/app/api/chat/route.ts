@@ -177,7 +177,6 @@ This is the visitor's third message. You MUST ask for their name and email in th
     } catch (primaryError: unknown) {
       const errMsg = primaryError instanceof Error ? primaryError.message : '';
       if (errMsg.includes('529') || errMsg.includes('overloaded') || errMsg.includes('Overloaded')) {
-        console.log('Sonnet overloaded, falling back to Haiku');
         aiResponse = await client.messages.create({ model: 'claude-haiku-4-5-20251001', ...requestBody });
       } else {
         throw primaryError;
@@ -238,11 +237,8 @@ This is the visitor's third message. You MUST ask for their name and email in th
       .map((m: { role: string; content: string }) => `${m.role === 'user' ? 'Visitor' : 'Pix'}: ${m.content}`)
       .join('\n');
 
-    console.log('NOTIFICATION CHECK:', { hasEmail, previousHadEmail, emailJustCaptured, tierEscalated, capturedEmail: capturedFields.email, leadEmail: lead?.email, convLeadEmail: conversation?.lead?.email });
-
     // Fire email on FIRST email capture OR on tier escalation to hot/urgent
     if (emailJustCaptured || (tierEscalated && hasEmail)) {
-      console.log('FIRING LEAD EMAIL to', process.env.SALES_EMAIL);
       // Fire and forget — never block the response
       Promise.allSettled([
         sendLeadEmail(lead, summary),
