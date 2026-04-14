@@ -25,6 +25,19 @@ const QUICK_REPLY_STAGES: Record<number, string[]> = {
   4: ['We need this urgently', 'Next quarter', 'Just exploring'],
 };
 
+// Case study recommendations based on detected service
+const SERVICE_CASE_STUDIES: Record<string, string[]> = {
+  'AI Development': ['See NEOM AI case study', 'See Lytics AI case study', 'See MindCoach AI case study'],
+  'Blockchain Development': ['See BlockGuard case study', 'See Diamond NXT case study', 'See Ragnar Token case study'],
+  'Mobile App Development': ['See Fusio case study', 'See AdWatch case study'],
+  'Web Development': ['See Sandoz case study', 'See NeuroStack case study'],
+  'Custom Software': ['See Sandoz dashboard case study', 'See Smart Contractor case study'],
+  'AR/VR Development': ['See AdWatch case study'],
+  'UI/UX Design': ['See Fusio case study', 'See Life Optimizer case study'],
+  'Quantum Computing': ['See BlockGuard security case study'],
+  'Staff Augmentation': ['See NEOM case study', 'See Sandoz case study'],
+};
+
 const SYSTEM_DOWN_REPLIES = [
   { label: 'Email sales team', action: 'mailto:sales@pixelettetech.com' },
   { label: 'Open contact form', action: 'https://pixelettetech.com/contact-us' },
@@ -751,13 +764,16 @@ export default function PixWidget() {
             )}
           </div>
 
-          {/* Dynamic quick replies — show until message 5 or visitor types detailed message */}
+          {/* Dynamic quick replies + case study recommendations */}
           {!showRating && !isLoading && messageCount <= 5 && (() => {
+            // After message 1, show case studies if service detected
+            const caseStudies = lead.service && messageCount >= 1 ? SERVICE_CASE_STUDIES[lead.service] : null;
             const stage = QUICK_REPLY_STAGES[messageCount];
-            if (!stage) return null;
+            const replies = caseStudies && messageCount >= 1 ? [...(stage || []), ...caseStudies.slice(0, 2)] : stage;
+            if (!replies || replies.length === 0) return null;
             return (
               <div className="pix-quick-replies">
-                {stage.map(qr => (
+                {replies.map(qr => (
                   <button key={qr} className="pix-quick-btn" onClick={() => sendMessage(qr)}>
                     {qr}
                   </button>
