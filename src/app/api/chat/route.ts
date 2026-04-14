@@ -203,7 +203,17 @@ This is the visitor's third message. Do NOT ask for name or email — they were 
     } catch (primaryError: unknown) {
       const errMsg = primaryError instanceof Error ? primaryError.message : '';
       if (errMsg.includes('529') || errMsg.includes('overloaded') || errMsg.includes('Overloaded')) {
-        aiResponse = await client.messages.create({ model: 'claude-haiku-4-5-20251001', ...requestBody });
+        try {
+          aiResponse = await client.messages.create({ model: 'claude-haiku-4-5-20251001', ...requestBody });
+        } catch {
+          // Tier 3: both models down — return static fallback
+          return NextResponse.json({
+            message: 'I am experiencing a technical issue right now. Please contact us directly:\n\nEmail: sales@pixelettetech.com\nContact form: pixelettetech.com/contact-us\n\nOur team will respond within one business day.',
+            sessionId,
+            conversationId: conversation?.id,
+            meta: { tier: 'cold', score: 0, service: 'Unknown', systemDown: true },
+          });
+        }
       } else {
         throw primaryError;
       }
@@ -314,8 +324,9 @@ This is the visitor's third message. Do NOT ask for name or email — they were 
     // 18. Graceful error handling
     console.error('Chat API error:', error);
     return NextResponse.json({
-      message: 'Something went wrong on my end. Please reach us at pixelettetech.com/contact-us',
+      message: 'Our systems are temporarily down. Please contact us directly:\n\nEmail: sales@pixelettetech.com\nContact form: pixelettetech.com/contact-us\n\nOur team will respond within one business day.',
       error: true,
+      meta: { systemDown: true },
     });
   }
 }

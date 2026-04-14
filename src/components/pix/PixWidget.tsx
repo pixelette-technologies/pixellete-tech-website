@@ -17,11 +17,17 @@ interface LeadState {
   language: string;
 }
 
-const QUICK_REPLIES = [
-  'I have an AI project',
-  'I need blockchain',
-  'Build me an app',
-  'Talk to sales',
+const QUICK_REPLY_STAGES: Record<number, string[]> = {
+  0: ['I have an AI project', 'I need blockchain', 'Build me an app', 'Talk to sales'],
+  1: ['Automate a process', 'Build a product', 'Improve existing system'],
+  2: ['For my team', 'For our customers', 'Both'],
+  3: ['Startup', 'Established company', 'Enterprise'],
+  4: ['We need this urgently', 'Next quarter', 'Just exploring'],
+};
+
+const SYSTEM_DOWN_REPLIES = [
+  { label: 'Email sales team', action: 'mailto:sales@pixelettetech.com' },
+  { label: 'Open contact form', action: 'https://pixelettetech.com/contact-us' },
 ];
 
 const TIER_COLORS: Record<string, string> = {
@@ -61,6 +67,7 @@ export default function PixWidget() {
   const [introName, setIntroName] = useState('');
   const [introEmail, setIntroEmail] = useState('');
   const [introError, setIntroError] = useState('');
+  const [showSystemDown, setShowSystemDown] = useState(false);
 
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
@@ -286,11 +293,17 @@ export default function PixWidget() {
       }
 
       setMessages(prev => [...prev, { role: 'assistant', content: data.message }]);
+
+      // If system is down, show contact buttons
+      if (data.meta?.systemDown) {
+        setShowSystemDown(true);
+      }
     } catch {
       setMessages(prev => [...prev, {
         role: 'assistant',
-        content: 'Something went wrong on my end. Please reach us at pixelettetech.com/contact-us',
+        content: 'Our systems are temporarily down. Please contact us directly:\n\nEmail: sales@pixelettetech.com\nContact form: pixelettetech.com/contact-us\n\nOur team will respond within one business day.',
       }]);
+      setShowSystemDown(true);
     }
 
     setIsLoading(false);
@@ -514,6 +527,16 @@ export default function PixWidget() {
           color: #fff; border-color: transparent;
           box-shadow: 0 2px 12px rgba(109, 40, 217, 0.3);
         }
+        .pix-system-down {
+          display: flex; gap: 8px; padding: 4px 16px 12px; background: #0d0f14;
+        }
+        .pix-system-down a {
+          flex: 1; text-align: center; padding: 10px 14px; border-radius: 12px;
+          font-size: 12.5px; font-weight: 600; text-decoration: none;
+          background: linear-gradient(135deg, #6d28d9, #4f46e5);
+          color: #fff; transition: all 0.2s;
+        }
+        .pix-system-down a:hover { transform: translateY(-1px); }
 
         /* Footer */
         .pix-powered {
@@ -728,13 +751,26 @@ export default function PixWidget() {
             )}
           </div>
 
-          {/* Quick replies */}
-          {showGreeting && messages.length === 0 && !showRating && (
-            <div className="pix-quick-replies">
-              {QUICK_REPLIES.map(qr => (
-                <button key={qr} className="pix-quick-btn" onClick={() => sendMessage(qr)}>
-                  {qr}
-                </button>
+          {/* Dynamic quick replies — show until message 5 or visitor types detailed message */}
+          {!showRating && !isLoading && messageCount <= 5 && (() => {
+            const stage = QUICK_REPLY_STAGES[messageCount];
+            if (!stage) return null;
+            return (
+              <div className="pix-quick-replies">
+                {stage.map(qr => (
+                  <button key={qr} className="pix-quick-btn" onClick={() => sendMessage(qr)}>
+                    {qr}
+                  </button>
+                ))}
+              </div>
+            );
+          })()}
+
+          {/* System down contact buttons */}
+          {showSystemDown && (
+            <div className="pix-system-down">
+              {SYSTEM_DOWN_REPLIES.map(r => (
+                <a key={r.label} href={r.action} target="_blank" rel="noopener noreferrer">{r.label}</a>
               ))}
             </div>
           )}
