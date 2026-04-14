@@ -95,12 +95,24 @@ export async function POST(req: NextRequest) {
 
     // 3. Parse body
     const body = await req.json();
-    const { messages, sessionId, messageCount, isFirstMessage, turnstileToken } = body;
+    const { messages: rawMessages, sessionId: rawSessionId, messageCount: rawMessageCount, isFirstMessage, turnstileToken } = body;
 
-    // 4. Validate sessionId
-    if (!sessionId) {
-      return NextResponse.json({ error: 'Session ID required' }, { status: 400 });
+    // 4. Input validation and sanitisation
+    if (!rawSessionId || !/^[a-zA-Z0-9_-]{1,100}$/.test(String(rawSessionId))) {
+      return NextResponse.json({ error: 'Invalid session.' }, { status: 400 });
     }
+    const sessionId = String(rawSessionId);
+
+    if (!Array.isArray(rawMessages) || rawMessages.length > 50) {
+      return NextResponse.json({ error: 'Conversation too long.' }, { status: 400 });
+    }
+
+    const messages = rawMessages.map((m: { role: string; content: string }) => ({
+      role: m.role,
+      content: String(m.content || '').replace(/<[^>]*>/g, '').substring(0, 2000),
+    }));
+
+    const messageCount = (typeof rawMessageCount === 'number' && rawMessageCount <= 200) ? rawMessageCount : 0;
 
     // 5. Turnstile verification on first message
     if (isFirstMessage) {
