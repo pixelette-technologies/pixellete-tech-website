@@ -305,12 +305,19 @@ This is the visitor's third message. Do NOT ask for name or email — they were 
       .filter(Boolean)
       .join('\n');
 
-    // Fire email on EVERY tier change — but BLOCK if abusive or irrelevant
+    // Email triggers — BLOCK if abusive or irrelevant
     const tierChanged = classification !== previousClassification;
     const isHotOrUrgent = classification === 'hot' || classification === 'urgent';
+    const isMessage3 = messageCount === 3;
+    const userMsgCount = messages.filter((m: { role: string }) => m.role === 'user').length;
 
-    if (tierChanged && hasEmail && classification !== 'cold' && !blockEmails) {
-      // Fire and forget — never block the response
+    // Fire at message 3 (first email, any tier) OR on tier escalation (warm→hot, hot→urgent)
+    const shouldFireEmail = !blockEmails && hasEmail && (
+      (isMessage3 && userMsgCount >= 3) ||
+      (tierChanged && classification !== 'cold')
+    );
+
+    if (shouldFireEmail) {
       Promise.allSettled([
         sendLeadEmail(lead, summary),
         ...(isHotOrUrgent ? [runQualityCheck(sessionId, messages)] : []),
