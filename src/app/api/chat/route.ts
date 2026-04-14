@@ -160,7 +160,13 @@ Either way you will hear back within one business day."
 Do not replace this with a name and email ask. Do not skip this.`;
     } else if (messageCount === 3) {
       triggerHints = `\n\n[PRIORITY INSTRUCTION — FIRES THIS MESSAGE ONLY]
-This is the visitor's third message. Do NOT ask for name or email — they were already captured. Instead ask: "Is this for an established company or a startup? And what product are you building?"`;
+This is the visitor's third message. Do NOT ask for name or email — they were already captured. Instead ask: "Is this for an established company or a startup?"`;
+    }
+
+    // Company trigger — if we have email but no company
+    const hasEmailNoCompany = !!(conversation?.lead?.email) && !conversation?.lead?.company;
+    if (!triggerHints && hasEmailNoCompany && messageCount >= 2 && messageCount <= 5) {
+      triggerHints = `\n\n[TRIGGER: Visitor has provided name and email but not their company. Naturally ask "Which company are you with?" in this response. Capture the answer in [PIX_FIELDS] company field.]`;
     }
 
     // 9. Call Anthropic — inject trigger as a system-level user instruction appended to messages

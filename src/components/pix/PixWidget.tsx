@@ -360,7 +360,7 @@ export default function PixWidget() {
         /* Launcher */
         .pix-launcher {
           position: fixed; bottom: 24px; right: 24px; z-index: 9999;
-          width: 64px; height: 64px; border-radius: 50%;
+          width: 60px; height: 60px; border-radius: 50%;
           background: linear-gradient(135deg, #0A1628 0%, #1a0a2e 60%, #2d1b4e 100%);
           border: 2px solid rgba(167, 139, 250, 0.3);
           cursor: pointer;
