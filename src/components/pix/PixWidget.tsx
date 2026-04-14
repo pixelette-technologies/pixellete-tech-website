@@ -337,7 +337,7 @@ export default function PixWidget() {
 
         /* Launcher */
         .pix-launcher {
-          position: fixed; bottom: 28px; right: 28px; z-index: 9999;
+          position: fixed; bottom: 24px; right: 24px; z-index: 9999;
           width: 64px; height: 64px; border-radius: 50%;
           background: linear-gradient(135deg, #0A1628 0%, #1a0a2e 60%, #2d1b4e 100%);
           border: 2px solid rgba(167, 139, 250, 0.3);
@@ -360,8 +360,9 @@ export default function PixWidget() {
 
         /* Window */
         .pix-window {
-          position: fixed; bottom: 104px; right: 28px; z-index: 9999;
-          width: 400px; height: 620px;
+          position: fixed; bottom: 96px; right: 24px; z-index: 9998;
+          width: 390px; max-width: calc(100vw - 48px);
+          height: 580px; max-height: calc(100vh - 120px);
           background: #0d0f14;
           border-radius: 20px;
           border: 1px solid rgba(255, 255, 255, 0.06);
@@ -573,8 +574,8 @@ export default function PixWidget() {
 
         /* Mobile */
         @media (max-width: 440px) {
-          .pix-window { width: calc(100vw - 16px); right: 8px; bottom: 88px; height: calc(100vh - 108px); }
-          .pix-launcher { bottom: 20px; right: 20px; width: 56px; height: 56px; }
+          .pix-window { width: calc(100vw - 16px); right: 8px; bottom: 80px; height: calc(100vh - 100px); max-height: none; }
+          .pix-launcher { bottom: 16px; right: 16px; width: 56px; height: 56px; }
         }
       `}</style>
 
