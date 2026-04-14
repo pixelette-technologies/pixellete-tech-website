@@ -226,14 +226,17 @@ export default function PixWidget() {
     const newCount = messageCount + 1;
     setMessageCount(newCount);
 
-    // If first message and we have intro data, prepend context so Claude knows
-    let messageContent = trimmed;
+    // Show clean message in chat, send context to API only
+    const userMessage: Message = { role: 'user', content: trimmed };
+    const displayMessages = [...messages, userMessage];
+    setMessages(displayMessages);
+
+    // Build API messages with hidden context prepended to first message
+    let apiContent = trimmed;
     if (messages.length === 0 && lead.name && lead.email) {
-      messageContent = `[CONTEXT: Visitor already provided their name (${lead.name}) and email (${lead.email}) before starting the chat. Do NOT ask for name or email again. Jump straight into understanding their project.]\n\n${trimmed}`;
+      apiContent = `[CONTEXT: Visitor name is ${lead.name}, email is ${lead.email}. Do NOT ask for name or email again.]\n\n${trimmed}`;
     }
-    const userMessage: Message = { role: 'user', content: messageContent };
-    const newMessages = [...messages, userMessage];
-    setMessages(newMessages);
+    const apiMessages = [...messages, { role: 'user' as const, content: apiContent }];
     setInput('');
     setIsLoading(true);
 
@@ -244,7 +247,7 @@ export default function PixWidget() {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          messages: newMessages,
+          messages: apiMessages,
           sessionId,
           messageCount: newCount,
           isFirstMessage,
