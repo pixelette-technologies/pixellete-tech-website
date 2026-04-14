@@ -2,6 +2,19 @@ import { Resend } from 'resend';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
+function escapeHtml(str: string): string {
+  return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#x27;');
+}
+
+function sanitize(str: string | undefined, maxLen = 200): string {
+  if (!str) return '';
+  return str.replace(/[\r\n]/g, '').replace(/<[^>]*>/g, '').substring(0, maxLen);
+}
+
+function sanitizeSlack(str: string): string {
+  return (str || '').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/&/g, '&amp;').replace(/<!channel>/gi, '').replace(/<!here>/gi, '').replace(/<@[A-Z0-9]+>/gi, '');
+}
+
 interface Lead {
   name?: string;
   email?: string;
@@ -46,13 +59,18 @@ function scoreGauge(score: number): string {
 
 function fieldRow(label: string, value: string, isLink?: boolean): string {
   if (!value) return '';
-  const display = isLink ? `<a href="mailto:${value}" style="color:#a78bfa;text-decoration:none;font-weight:500;">${value}</a>` : `<span style="color:#f1f5f9;">${value}</span>`;
+  const safe = escapeHtml(sanitize(value, 200));
+  const display = isLink ? `<a href="mailto:${safe}" style="color:#a78bfa;text-decoration:none;font-weight:500;">${safe}</a>` : `<span style="color:#f1f5f9;">${safe}</span>`;
   return `<tr><td style="padding:10px 0;border-bottom:1px solid #1a1a2e;width:130px;font-size:13px;color:#64748b;font-weight:500;">${label}</td><td style="padding:10px 0;border-bottom:1px solid #1a1a2e;font-size:14px;">${display}</td></tr>`;
 }
 
 export async function sendLeadEmail(lead: Lead, conversationSummary: string) {
   const tier = lead.classification || 'cold';
   const config = TIER_CONFIG[tier] || TIER_CONFIG.cold;
+  const safeName = sanitize(lead.name, 100) || 'Anonymous';
+  const safeCompany = sanitize(lead.company, 100);
+  const safeService = sanitize(lead.service_interest, 50) || 'General';
+  const safeSummary = escapeHtml(conversationSummary || '');
   const signals: string[] = lead.signals ? JSON.parse(lead.signals) : [];
   const now = new Date();
   const timestamp = now.toLocaleDateString('en-GB', { weekday: 'short', day: 'numeric', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit' });
@@ -81,8 +99,8 @@ export async function sendLeadEmail(lead: Lead, conversationSummary: string) {
 
   <!-- Lead name + service -->
   <tr><td style="padding:28px 32px 0;">
-    <h1 style="margin:0;font-size:24px;color:#f8fafc;font-weight:700;letter-spacing:-0.3px;">${lead.name || 'Anonymous Visitor'}</h1>
-    <p style="margin:6px 0 0;font-size:14px;color:#64748b;">${lead.service_interest || 'General Enquiry'} &middot; ${timestamp}</p>
+    <h1 style="margin:0;font-size:24px;color:#f8fafc;font-weight:700;letter-spacing:-0.3px;">${escapeHtml(safeName)}</h1>
+    <p style="margin:6px 0 0;font-size:14px;color:#64748b;">${escapeHtml(safeService)} &middot; ${timestamp}</p>
   </td></tr>
 
   <!-- Score gauge -->
@@ -120,7 +138,7 @@ export async function sendLeadEmail(lead: Lead, conversationSummary: string) {
   <!-- Chat summary -->
   <tr><td style="padding:24px 32px;">
     <p style="margin:0 0 12px;font-size:11px;font-weight:600;color:#475569;text-transform:uppercase;letter-spacing:1.5px;">Conversation</p>
-    <div style="background:#0a0c12;border:1px solid #1b1f2b;border-radius:10px;padding:18px;font-size:13px;color:#94a3b8;line-height:1.7;white-space:pre-wrap;max-height:300px;overflow:auto;">${conversationSummary}</div>
+    <div style="background:#0a0c12;border:1px solid #1b1f2b;border-radius:10px;padding:18px;font-size:13px;color:#94a3b8;line-height:1.7;white-space:pre-wrap;max-height:300px;overflow:auto;">${safeSummary}</div>
   </td></tr>
 
   <!-- Action box -->
@@ -128,7 +146,7 @@ export async function sendLeadEmail(lead: Lead, conversationSummary: string) {
     <table width="100%" cellpadding="0" cellspacing="0" style="background:linear-gradient(135deg,#0a1628,#111827);border:1px solid #1e3a5f;border-radius:10px;"><tr><td style="padding:18px 20px;">
       <p style="margin:0 0 6px;font-size:11px;font-weight:700;color:#6d28d9;text-transform:uppercase;letter-spacing:1.5px;">Action Required</p>
       <p style="margin:0;font-size:14px;color:#e2e8f0;line-height:1.5;">${urgencyNote}</p>
-      ${lead.email ? `<table cellpadding="0" cellspacing="0" style="margin-top:14px;"><tr><td style="background:#6d28d9;border-radius:8px;padding:10px 24px;"><a href="mailto:${lead.email}?subject=Re: Your enquiry with Pixelette Technologies" style="color:#fff;text-decoration:none;font-size:13px;font-weight:600;">Reply to ${lead.name || 'Lead'}</a></td></tr></table>` : ''}
+      ${lead.email ? `<table cellpadding="0" cellspacing="0" style="margin-top:14px;"><tr><td style="background:#6d28d9;border-radius:8px;padding:10px 24px;"><a href="mailto:${escapeHtml(sanitize(lead.email, 100))}?subject=Re: Your enquiry with Pixelette Technologies" style="color:#fff;text-decoration:none;font-size:13px;font-weight:600;">Reply to ${escapeHtml(safeName)}</a></td></tr></table>` : ''}
     </td></tr></table>
   </td></tr>
 
@@ -159,7 +177,7 @@ export async function sendLeadEmail(lead: Lead, conversationSummary: string) {
     from: `Pix Lead Alert <${process.env.FROM_EMAIL || 'pix@pixelettetech.com'}>`,
     to: process.env.SALES_EMAIL || 'sales@pixelettetech.com',
     replyTo: lead.email || undefined,
-    subject: `${config.icon} ${config.label} Lead: ${lead.name || 'Anonymous'} — ${lead.service_interest || 'General'} (${lead.score || 0}/100)`,
+    subject: `${config.icon} ${config.label} Lead: ${safeName} — ${safeService} (${lead.score || 0}/100)`,
     html,
   });
 }
@@ -177,14 +195,14 @@ export async function sendSlackAlert(lead: Lead) {
     blocks: [
       {
         type: 'header',
-        text: { type: 'plain_text', text: `${config.icon} ${config.label} Lead: ${lead.name || 'Anonymous'}` },
+        text: { type: 'plain_text', text: `${config.icon} ${config.label} Lead: ${sanitizeSlack(lead.name || 'Anonymous')}` },
       },
       {
         type: 'section',
         fields: [
-          { type: 'mrkdwn', text: `*Email:*\n${lead.email || 'Not captured'}` },
-          { type: 'mrkdwn', text: `*Company:*\n${lead.company || 'Unknown'}` },
-          { type: 'mrkdwn', text: `*Service:*\n${lead.service_interest || 'Unknown'}` },
+          { type: 'mrkdwn', text: `*Email:*\n${sanitizeSlack(lead.email || 'Not captured')}` },
+          { type: 'mrkdwn', text: `*Company:*\n${sanitizeSlack(lead.company || 'Unknown')}` },
+          { type: 'mrkdwn', text: `*Service:*\n${sanitizeSlack(lead.service_interest || 'Unknown')}` },
           { type: 'mrkdwn', text: `*Score:*\n${lead.score || 0}/100` },
           { type: 'mrkdwn', text: `*Language:*\n${lead.language || 'English'}` },
           { type: 'mrkdwn', text: `*Urgency:*\n${lead.urgency || 'Unknown'}` },

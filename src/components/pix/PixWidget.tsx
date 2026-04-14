@@ -70,7 +70,10 @@ export default function PixWidget() {
   useEffect(() => {
     let sid = localStorage.getItem('pix_sid');
     if (!sid) {
-      sid = `pix_${Date.now()}_${Math.random().toString(36).slice(2, 10)}`;
+      const randomBytes = new Uint8Array(16);
+      crypto.getRandomValues(randomBytes);
+      const randomPart = Array.from(randomBytes, b => b.toString(16).padStart(2, '0')).join('');
+      sid = `pix_${Date.now()}_${randomPart}`;
       localStorage.setItem('pix_sid', sid);
     }
     setSessionId(sid);

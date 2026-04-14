@@ -60,9 +60,10 @@ export function checkRateLimit(ip: string): { allowed: boolean; reason?: string;
 }
 
 export function getIpFromRequest(req: NextRequest): string {
-  return (
-    req.headers.get('x-forwarded-for')?.split(',')[0]?.trim() ||
-    req.headers.get('x-real-ip') ||
-    '127.0.0.1'
-  );
+  const forwarded = req.headers.get('x-forwarded-for');
+  if (forwarded) {
+    const parts = forwarded.split(',').map(s => s.trim());
+    return parts[parts.length - 1] || parts[0] || '127.0.0.1';
+  }
+  return req.headers.get('x-real-ip') || '127.0.0.1';
 }

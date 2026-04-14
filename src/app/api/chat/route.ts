@@ -133,7 +133,13 @@ export async function POST(req: NextRequest) {
       if (url) {
         const scraped = await scrapeWebsite(url);
         if (scraped) {
-          scrapedContext = `\n\nWEBSITE CONTEXT (scraped from ${scraped.url}):\nTitle: ${scraped.title}\nDescription: ${scraped.description}\nH1: ${scraped.h1}\nKey sections: ${scraped.h2s.join(', ')}\nContent: ${scraped.bodyText}`;
+          // Sanitise scraped content to prevent prompt injection
+          const sanitiseScraped = (s: string) => s
+            .replace(/<[^>]*>/g, '')
+            .replace(/\[SYSTEM\]|\[INST\]|\[PIX_FIELDS\]|\[PIX_META\]|\[\/PIX_FIELDS\]|\[\/PIX_META\]/gi, '')
+            .replace(/IGNORE PREVIOUS|IGNORE ALL|OVERRIDE SYSTEM/gi, '')
+            .substring(0, 500);
+          scrapedContext = `\n\nWEBSITE CONTEXT (scraped from ${sanitiseScraped(scraped.url)}):\nTitle: ${sanitiseScraped(scraped.title)}\nDescription: ${sanitiseScraped(scraped.description)}\nH1: ${sanitiseScraped(scraped.h1)}\nKey sections: ${scraped.h2s.map(h => sanitiseScraped(h)).join(', ')}\nContent: ${sanitiseScraped(scraped.bodyText)}`;
         }
       }
     }
