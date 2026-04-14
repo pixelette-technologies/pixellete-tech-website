@@ -326,11 +326,25 @@ export default function PixWidget() {
     if (!introName.trim()) { setIntroError('Please enter your name.'); return; }
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(introEmail.trim())) { setIntroError('Please enter a valid email.'); return; }
-    setLead(prev => ({ ...prev, name: introName.trim(), email: introEmail.trim() }));
+    const name = introName.trim();
+    const email = introEmail.trim();
+    setLead(prev => ({ ...prev, name, email }));
     setLeadFired(true);
     setShowIntroForm(false);
     setShowGreeting(true);
     localStorage.setItem('pix_intro_done', 'true');
+
+    // Fire lead capture to Supabase immediately
+    fetch('/api/chat', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        messages: [{ role: 'user', content: `[CONTEXT: Visitor already provided their name (${name}) and email (${email}) before starting the chat. Do NOT ask for name or email again.]` }],
+        sessionId,
+        messageCount: 0,
+        isFirstMessage: true,
+      }),
+    }).catch(() => {});
   };
 
   const showScoreBadge = lead.score > 50 && (lead.tier === 'hot' || lead.tier === 'urgent');
@@ -684,7 +698,7 @@ export default function PixWidget() {
                 {/* Greeting */}
                 {showGreeting && messages.length === 0 && (
                   <div className="pix-msg pix-msg-bot">
-                    {lead.name ? `Hi ${lead.name}, I'm Pix. What are you building? Tell me the problem and I'll show you how we solve it.` : `Hi, I'm Pix. What are you building? Tell me the problem and I'll show you how we solve it.`}
+                    {lead.name ? `Hi ${lead.name}, I'm Pix, your AI assistant. How can I help you?` : `Hi, I'm Pix, your AI assistant. How can I help you?`}
                   </div>
                 )}
 
