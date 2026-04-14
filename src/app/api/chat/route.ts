@@ -266,13 +266,29 @@ This is the visitor's third message. Do NOT ask for name or email — they were 
     const tierEscalated = (classification === 'hot' || classification === 'urgent') &&
       previousClassification !== 'hot' && previousClassification !== 'urgent';
 
-    const summary = messages
-      .slice(-10)
-      .map((m: { role: string; content: string }) => `${m.role === 'user' ? 'Visitor' : 'Pix'}: ${m.content}`)
+    // Build clean conversation summary — strip all internal tags
+    const cleanMsg = (text: string) => text
+      .replace(/\[CONTEXT:.*?\]/gs, '')
+      .replace(/\[PIX_FIELDS\].*?\[\/PIX_FIELDS\]/g, '')
+      .replace(/\[PIX_META\].*?\[\/PIX_META\]/g, '')
+      .replace(/\[PRIORITY INSTRUCTION.*?\]/gs, '')
+      .replace(/\[TRIGGER.*?\]/gs, '')
+      .trim();
+
+    // Get ALL messages from Supabase conversation, not just current request
+    const fullMessages = updatedMessages.length > messages.length ? updatedMessages : messages;
+    const summary = fullMessages
+      .map((m: { role: string; content: string }) => {
+        const clean = cleanMsg(m.content);
+        if (!clean) return null;
+        return `${m.role === 'user' ? 'Visitor' : 'Pix'}: ${clean}`;
+      })
+      .filter(Boolean)
       .join('\n');
 
-    // Fire email on FIRST email capture OR on tier escalation to hot/urgent
-    if (emailJustCaptured || (tierEscalated && hasEmail)) {
+    // Fire email when: (a) email captured AND at least 3 real messages exist, OR (b) tier escalation
+    const hasRealConversation = fullMessages.filter((m: { role: string }) => m.role === 'user').length >= 2;
+    if ((emailJustCaptured && hasRealConversation) || (tierEscalated && hasEmail)) {
       // Fire and forget — never block the response
       Promise.allSettled([
         sendLeadEmail(lead, summary),
