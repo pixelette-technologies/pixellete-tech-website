@@ -484,7 +484,9 @@ export default function PixWidget() {
           font-family: inherit; outline: none; line-height: 1.4;
           background: #161b26; color: #e2e8f0;
           transition: border-color 0.2s;
+          overflow-y: auto; scrollbar-width: none;
         }
+        .pix-textarea::-webkit-scrollbar { display: none; }
         .pix-textarea::placeholder { color: #475569; }
         .pix-textarea:focus { border-color: rgba(109, 40, 217, 0.5); }
         .pix-send {

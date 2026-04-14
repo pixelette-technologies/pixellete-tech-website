@@ -210,6 +210,14 @@ This is the visitor's third message. Do NOT ask for name or email — they were 
     const capturedFields = extractFields(rawText);
     const cleanText = cleanResponse(rawText);
 
+    // Also extract name/email from [CONTEXT] tag if present (from intro form)
+    const firstMsg = messages[0]?.content || '';
+    const contextMatch = firstMsg.match(/\[CONTEXT:.*?name is ([^,]+),.*?email is ([^\].]+)/);
+    if (contextMatch) {
+      if (!capturedFields.name && contextMatch[1]) capturedFields.name = contextMatch[1].trim();
+      if (!capturedFields.email && contextMatch[2]) capturedFields.email = contextMatch[2].trim();
+    }
+
     // 11. Save messages to Supabase
     const updatedMessages = [...messages, { role: 'assistant', content: rawText }];
     const language = detectLanguage(messages);
