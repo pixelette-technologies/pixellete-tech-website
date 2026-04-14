@@ -147,8 +147,6 @@ export async function POST(req: NextRequest) {
     }
 
     // 8. Build trigger hints — mutually exclusive, message 7 overrides message 3
-    const contextHasEmail = messages.some((m: { content: string }) => m.content.includes('[CONTEXT:') && m.content.includes('email'));
-    const leadHasEmail = !!(conversation?.lead?.email) || contextHasEmail;
     let triggerHints = '';
 
     if (messageCount === 7) {
@@ -162,7 +160,6 @@ Do not replace this with a name and email ask. Do not skip this.`;
     } else if (messageCount === 3) {
       triggerHints = `\n\n[PRIORITY INSTRUCTION — FIRES THIS MESSAGE ONLY]
 This is the visitor's third message. Do NOT ask for name or email — they were already captured. Instead ask: "Is this for an established company or a startup? And what product are you building?"`;
-    }
     }
 
     // 9. Call Anthropic — inject trigger as a system-level user instruction appended to messages
