@@ -6,6 +6,7 @@ import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, setRequestLocale } from 'next-intl/server';
 import { Outfit } from 'next/font/google';
 import { notFound } from 'next/navigation';
+import PixLoader from '@/components/pix/PixLoader';
 import { Suspense } from 'react';
 import '@/styles/global.css';
 
@@ -91,6 +92,7 @@ export default async function RootLayout({ children, params }: { children: React
             {children}
           </MessagesProvider>
         </Suspense>
+        <PixLoader />
       </body>
     </html>
   );
