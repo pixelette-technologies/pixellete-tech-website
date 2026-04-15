@@ -515,11 +515,11 @@ export default function PixWidget() {
           position: fixed; bottom: 100px; right: 28px; z-index: 9998;
           width: 390px; max-width: calc(100vw - 56px);
           height: 560px; max-height: calc(100vh - 130px);
-          background: rgba(10, 12, 22, 0.92);
-          backdrop-filter: blur(16px) saturate(150%); -webkit-backdrop-filter: blur(16px) saturate(150%);
+          background: rgba(10, 12, 25, 0.7);
+          backdrop-filter: blur(24px) saturate(180%); -webkit-backdrop-filter: blur(24px) saturate(180%);
           border-radius: 20px;
-          border: 1px solid rgba(255, 255, 255, 0.12);
-          box-shadow: 0 12px 48px rgba(0, 0, 0, 0.6), 0 0 60px rgba(109, 40, 217, 0.12), inset 0 1px 0 rgba(255,255,255,0.08);
+          border: 1px solid rgba(255, 255, 255, 0.18);
+          box-shadow: 0 12px 48px rgba(0, 0, 0, 0.5), 0 0 60px rgba(109, 40, 217, 0.15), inset 0 1px 0 rgba(255,255,255,0.1);
           display: flex; flex-direction: column;
           overflow: hidden;
           opacity: 0; transform: translateY(16px) scale(0.97);
@@ -530,7 +530,8 @@ export default function PixWidget() {
 
         /* Header */
         .pix-header {
-          background: linear-gradient(135deg, rgba(30, 17, 69, 0.95) 0%, rgba(45, 27, 105, 0.95) 50%, rgba(30, 17, 69, 0.95) 100%);
+          background: rgba(25, 15, 60, 0.7);
+          backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
           color: #fff; padding: 18px 20px;
           display: flex; align-items: center; gap: 12px;
           border-bottom: 1px solid rgba(124, 58, 237, 0.2);
@@ -695,8 +696,8 @@ export default function PixWidget() {
         .pix-intro-form {
           flex: 1; display: flex; flex-direction: column;
           justify-content: center; padding: 32px 24px;
-          background: rgba(15, 18, 30, 0.9);
-          backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+          background: rgba(15, 18, 30, 0.65);
+          backdrop-filter: blur(24px) saturate(180%); -webkit-backdrop-filter: blur(24px) saturate(180%);
           gap: 16px;
         }
         .pix-intro-form h3 {
@@ -709,11 +710,11 @@ export default function PixWidget() {
         }
         .pix-intro-input {
           width: 100%;
-          border: 1px solid rgba(255, 255, 255, 0.1);
+          border: 1px solid rgba(255, 255, 255, 0.15);
           border-radius: 14px; padding: 14px 18px;
           font-size: 14px; font-family: inherit; outline: none;
-          background: rgba(255, 255, 255, 0.08);
-          backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+          background: rgba(255, 255, 255, 0.1);
+          backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
           color: #fff;
           transition: border-color 0.2s, background 0.2s;
         }
