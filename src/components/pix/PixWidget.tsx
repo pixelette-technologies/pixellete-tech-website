@@ -81,6 +81,7 @@ export default function PixWidget() {
   const [introEmail, setIntroEmail] = useState('');
   const [introError, setIntroError] = useState('');
   const [showSystemDown, setShowSystemDown] = useState(false);
+  const [showChatBubble, setShowChatBubble] = useState(false);
 
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
@@ -99,13 +100,21 @@ export default function PixWidget() {
     setSessionId(sid);
   }, []);
 
-  // Notification dot after 8 seconds
+  // Chat bubble popup after 5 seconds with sound
   useEffect(() => {
     const timer = setTimeout(() => {
-      if (!isOpen) setShowNotifDot(true);
-    }, 8000);
+      if (!isOpen && !showChatBubble) {
+        setShowChatBubble(true);
+        // Play subtle notification sound
+        try {
+          const audio = new Audio('data:audio/mp3;base64,SUQzBAAAAAAAI1RTU0UAAAAPAAADTGF2ZjU4Ljc2LjEwMAAAAAAAAAAAAAAA/+M4wAAAAAAAAAAAAEluZm8AAAAPAAAAAwAAAbAAqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV////////////////////////////////////////////AAAAAExhdmM1OC4xMwAAAAAAAAAAAAAAACQAAAAAAAAAAAGwjRlyMgAAAAAAAAAAAAAAAAD/4zgAAAPoKAAAAAAi00YCABcMIQ8xBgDEHAOHGJBHj4PvMChJ/KMID/xAQe4gIOg+D58Hwd//+UY//KMf4PvygI');
+          audio.volume = 0.3;
+          audio.play().catch(() => {});
+        } catch { /* silent */ }
+      }
+    }, 5000);
     return () => clearTimeout(timer);
-  }, [isOpen]);
+  }, [isOpen, showChatBubble]);
 
   // Load Turnstile — only if a valid site key is provided
   useEffect(() => {
@@ -192,6 +201,7 @@ export default function PixWidget() {
   const handleOpen = () => {
     setIsOpen(true);
     setShowNotifDot(false);
+    setShowChatBubble(false);
     closedRef.current = false;
   };
 
@@ -386,25 +396,54 @@ export default function PixWidget() {
         /* Launcher */
         .pix-launcher {
           position: fixed; bottom: 24px; right: 24px; z-index: 9999;
-          width: 60px; height: 60px; border-radius: 50%;
+          width: 64px; height: 64px; border-radius: 50%;
           background: linear-gradient(135deg, #0A1628 0%, #1a0a2e 60%, #2d1b4e 100%);
-          border: 2px solid rgba(167, 139, 250, 0.3);
+          border: 2px solid rgba(167, 139, 250, 0.4);
           cursor: pointer;
           display: flex; align-items: center; justify-content: center;
-          box-shadow: 0 6px 24px rgba(10, 22, 40, 0.5), 0 0 40px rgba(109, 40, 217, 0.15);
+          box-shadow: 0 6px 24px rgba(10, 22, 40, 0.5), 0 0 40px rgba(109, 40, 217, 0.2);
           transition: transform 0.2s ease, box-shadow 0.2s ease;
+          animation: pix-glow 2.5s ease-in-out infinite;
+        }
+        @keyframes pix-glow {
+          0%, 100% { box-shadow: 0 6px 24px rgba(10,22,40,0.5), 0 0 20px rgba(109,40,217,0.2); }
+          50% { box-shadow: 0 6px 30px rgba(10,22,40,0.6), 0 0 50px rgba(109,40,217,0.4), 0 0 80px rgba(109,40,217,0.15); }
         }
         .pix-launcher:hover {
-          transform: scale(1.08);
-          box-shadow: 0 8px 32px rgba(10, 22, 40, 0.6), 0 0 60px rgba(109, 40, 217, 0.25);
+          transform: scale(1.1);
+          animation: none;
+          box-shadow: 0 8px 32px rgba(10, 22, 40, 0.6), 0 0 60px rgba(109, 40, 217, 0.35);
         }
-        .pix-notif-dot {
-          position: absolute; top: 0; right: 0;
-          width: 16px; height: 16px; border-radius: 50%;
-          background: #DC2626; border: 2.5px solid #0A1628;
-          animation: pix-pulse 2s infinite;
+        .pix-chat-bubble {
+          position: fixed; bottom: 96px; right: 24px; z-index: 9999;
+          background: #0d0f14; color: #e2e8f0;
+          padding: 14px 20px; border-radius: 16px 16px 4px 16px;
+          font-size: 14px; font-weight: 500; max-width: 240px;
+          border: 1px solid rgba(109, 40, 217, 0.3);
+          box-shadow: 0 8px 32px rgba(0,0,0,0.4), 0 0 40px rgba(109,40,217,0.1);
+          animation: pix-bubble-in 0.4s ease-out;
+          cursor: pointer; font-family: 'Outfit', sans-serif;
+          line-height: 1.4;
         }
-        @keyframes pix-pulse { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.7; transform: scale(0.9); } }
+        .pix-chat-bubble::after {
+          content: ''; position: absolute; bottom: -8px; right: 28px;
+          width: 0; height: 0;
+          border-left: 8px solid transparent; border-right: 8px solid transparent;
+          border-top: 8px solid #0d0f14;
+        }
+        .pix-bubble-close {
+          position: absolute; top: -8px; right: -8px;
+          width: 20px; height: 20px; border-radius: 50%;
+          background: #1b1f2b; border: 1px solid #2d3748;
+          color: #94a3b8; font-size: 12px; cursor: pointer;
+          display: flex; align-items: center; justify-content: center;
+          line-height: 1;
+        }
+        .pix-bubble-close:hover { background: #DC2626; color: #fff; }
+        @keyframes pix-bubble-in {
+          from { opacity: 0; transform: translateY(10px) scale(0.9); }
+          to { opacity: 1; transform: translateY(0) scale(1); }
+        }
 
         /* Window */
         .pix-window {
@@ -640,13 +679,20 @@ export default function PixWidget() {
       `}</style>
 
       <div className="pix-widget">
+        {/* Chat bubble message */}
+        {showChatBubble && !isOpen && (
+          <div className="pix-chat-bubble" onClick={handleOpen}>
+            <button className="pix-bubble-close" onClick={(e) => { e.stopPropagation(); setShowChatBubble(false); }}>&times;</button>
+            Hi, I am Pix. How can I help you today?
+          </div>
+        )}
+
         {/* Launcher */}
         {!isOpen && (
           <button className="pix-launcher" onClick={handleOpen} aria-label="Open chat">
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
             </svg>
-            {showNotifDot && <span className="pix-notif-dot" />}
           </button>
         )}
 
