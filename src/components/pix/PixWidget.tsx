@@ -1,6 +1,13 @@
 'use client';
 
 import React, { useState, useEffect, useRef, useCallback } from 'react';
+import {
+  isSpeechRecognitionSupported,
+  createSpeechRecognizer,
+  speakText,
+  stopSpeaking,
+  detectLanguageForSpeech,
+} from '@/lib/pix/voiceInput';
 
 interface Message {
   role: 'user' | 'assistant';
@@ -81,7 +88,20 @@ export default function PixWidget() {
   const [introEmail, setIntroEmail] = useState('');
   const [introError, setIntroError] = useState('');
   const [showSystemDown, setShowSystemDown] = useState(false);
+  const [isUploading, setIsUploading] = useState(false);
+  const [documentContext, setDocumentContext] = useState('');
+  const fileInputRef = useRef<HTMLInputElement>(null);
   const [showChatBubble, setShowChatBubble] = useState(false);
+  const [isListening, setIsListening] = useState(false);
+  const [interimTranscript, setInterimTranscript] = useState('');
+  const [voiceSupported, setVoiceSupported] = useState(false);
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const [isSpeaking, setIsSpeaking] = useState(false);
+  const [voiceOutputEnabled, setVoiceOutputEnabled] = useState(false);
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const recognizerRef = useRef<any>(null);
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const sendMessageRef = useRef<(text: string) => void>(null as any);
 
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
@@ -101,6 +121,11 @@ export default function PixWidget() {
       localStorage.setItem('pix_sid', sid);
     }
     setSessionId(sid);
+  }, []);
+
+  // Check voice support on mount
+  useEffect(() => {
+    setVoiceSupported(isSpeechRecognitionSupported());
   }, []);
 
   // Chime sound — three ascending tones
@@ -263,7 +288,79 @@ export default function PixWidget() {
   const handleClose = () => {
     setIsOpen(false);
     closedRef.current = true;
+    stopSpeaking();
+    setIsSpeaking(false);
+    if (recognizerRef.current) {
+      try { recognizerRef.current.stop(); } catch { /* silent */ }
+      recognizerRef.current = null;
+    }
+    setIsListening(false);
+    setInterimTranscript('');
   };
+
+  const handleVoiceStart = useCallback(() => {
+    if (isListening) {
+      if (recognizerRef.current) {
+        try { recognizerRef.current.stop(); } catch { /* silent */ }
+      }
+      setIsListening(false);
+      setInterimTranscript('');
+      return;
+    }
+
+    const lang = lead.language === 'Arabic' ? 'ar-SA' : lead.language === 'Urdu' ? 'ur-PK' : 'en-GB';
+    const recognizer = createSpeechRecognizer({ lang });
+    if (!recognizer) return;
+
+    recognizerRef.current = recognizer;
+    setIsListening(true);
+    setInterimTranscript('');
+
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    recognizer.onresult = (event: any) => {
+      let interim = '';
+      let final = '';
+      for (let i = event.resultIndex; i < event.results.length; i++) {
+        const transcript = event.results[i][0].transcript;
+        if (event.results[i].isFinal) {
+          final += transcript;
+        } else {
+          interim += transcript;
+        }
+      }
+      if (interim) setInterimTranscript(interim);
+      if (final) {
+        setInput(final);
+        setIsListening(false);
+        setInterimTranscript('');
+        setTimeout(() => {
+          if (sendMessageRef.current) sendMessageRef.current(final);
+        }, 300);
+      }
+    };
+
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    recognizer.onerror = (event: any) => {
+      setIsListening(false);
+      setInterimTranscript('');
+      if (event.error === 'not-allowed') {
+        setMessages(prev => [...prev, {
+          role: 'assistant',
+          content: 'Microphone access was denied. Please allow microphone access in your browser settings.',
+        }]);
+      }
+    };
+
+    recognizer.onend = () => {
+      setIsListening(false);
+    };
+
+    try {
+      recognizer.start();
+    } catch {
+      setIsListening(false);
+    }
+  }, [isListening, lead.language]);
 
   const sendMessage = useCallback(async (text: string) => {
     if (!text.trim() || isLoading || !sessionId) return;
@@ -337,6 +434,7 @@ export default function PixWidget() {
           messageCount: newCount,
           isFirstMessage,
           turnstileToken: isFirstMessage ? turnstileToken : undefined,
+          documentContext: documentContext || undefined,
         }),
       });
 
@@ -371,6 +469,16 @@ export default function PixWidget() {
       }
 
       setMessages(prev => [...prev, { role: 'assistant', content: data.message }]);
+
+      // Voice output
+      if (voiceOutputEnabled && isOpen && data.message) {
+        const lang = detectLanguageForSpeech(data.message);
+        speakText(data.message, { lang });
+        setIsSpeaking(true);
+        // Reset speaking state after estimated duration
+        setTimeout(() => setIsSpeaking(false), Math.max(2000, data.message.length * 60));
+      }
+
       if (!isOpen) {
         setShowNotifDot(true);
         playChime();
@@ -389,7 +497,10 @@ export default function PixWidget() {
     }
 
     setIsLoading(false);
-  }, [messages, sessionId, messageCount, isFirstMessage, turnstileToken, isLoading, awaitingName, awaitingEmail, awaitingCompany, lead.email, lead.name, leadFired]);
+  }, [messages, sessionId, messageCount, isFirstMessage, turnstileToken, isLoading, awaitingName, awaitingEmail, awaitingCompany, lead.email, lead.name, leadFired, voiceOutputEnabled, isOpen]);
+
+  // Keep ref in sync for voice callback
+  sendMessageRef.current = sendMessage;
 
   const handleKeyDown = (e: React.KeyboardEvent) => {
     if (e.key === 'Enter' && !e.shiftKey) {
@@ -443,6 +554,51 @@ export default function PixWidget() {
         isFirstMessage: true,
       }),
     }).catch(() => {});
+  };
+
+  const handleFileUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file || !sessionId) return;
+    setIsUploading(true);
+    setMessages(prev => [...prev, { role: 'user', content: `📎 ${file.name}` }]);
+
+    try {
+      const formData = new FormData();
+      formData.append('file', file);
+      formData.append('sessionId', sessionId);
+
+      const res = await fetch('/api/pix/upload', { method: 'POST', body: formData });
+      const data = await res.json();
+
+      if (!res.ok) {
+        setMessages(prev => [...prev, { role: 'assistant', content: data.error || 'Could not process the file.' }]);
+        setIsUploading(false);
+        return;
+      }
+
+      setDocumentContext(data.context || '');
+      // Send follow-up to Ada with document context
+      const chatRes = await fetch('/api/chat', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          messages: [...messages, { role: 'user', content: `I uploaded a document: ${file.name}` }],
+          sessionId,
+          messageCount: messageCount + 1,
+          isFirstMessage: false,
+          documentContext: data.context,
+        }),
+      });
+      const chatData = await chatRes.json();
+      setMessages(prev => [...prev, { role: 'assistant', content: chatData.message }]);
+      if (chatData.meta) {
+        if (chatData.meta.tier) setLead(prev => ({ ...prev, tier: chatData.meta.tier, score: chatData.meta.score || prev.score }));
+      }
+    } catch {
+      setMessages(prev => [...prev, { role: 'assistant', content: 'Failed to process the document. Please try again.' }]);
+    }
+    setIsUploading(false);
+    if (fileInputRef.current) fileInputRef.current.value = '';
   };
 
   const showScoreBadge = lead.score > 50 && (lead.tier === 'hot' || lead.tier === 'urgent');
@@ -632,6 +788,14 @@ export default function PixWidget() {
         }
         .pix-send:hover { transform: translateY(-1px); box-shadow: 0 4px 12px rgba(109, 40, 217, 0.4); }
         .pix-send:disabled { opacity: 0.3; cursor: not-allowed; transform: none; box-shadow: none; }
+        .pix-upload-btn {
+          width: 36px; height: 36px; border-radius: 10px;
+          background: transparent; border: 1px solid rgba(109,40,217,0.3);
+          cursor: pointer; display: flex; align-items: center; justify-content: center;
+          flex-shrink: 0; transition: all 0.2s; color: #a78bfa;
+        }
+        .pix-upload-btn:hover { background: rgba(109,40,217,0.15); }
+        .pix-upload-btn:disabled { opacity: 0.3; cursor: not-allowed; }
 
         /* Quick replies */
         .pix-quick-replies { display: flex; flex-wrap: wrap; gap: 8px; padding: 4px 16px 12px; background: rgba(7, 23, 41, 0.07); backdrop-filter: blur(4.9px); -webkit-backdrop-filter: blur(4.9px); }
@@ -746,6 +910,46 @@ export default function PixWidget() {
           font-size: 11px; color: rgba(255,255,255,0.3); text-align: center; line-height: 1.5;
         }
 
+        /* Voice */
+        .pix-mic-btn {
+          width: 36px; height: 36px; border-radius: 10px;
+          background: transparent; border: 1px solid rgba(109,40,217,0.3);
+          cursor: pointer; display: flex; align-items: center; justify-content: center;
+          flex-shrink: 0; transition: all 0.2s; color: #a78bfa;
+        }
+        .pix-mic-btn:hover { background: rgba(109,40,217,0.15); }
+        .pix-mic-btn.pix-mic-active {
+          background: rgba(220, 38, 38, 0.15); border-color: rgba(220, 38, 38, 0.5);
+          color: #ef4444; animation: pix-mic-pulse 1.5s ease-in-out infinite;
+        }
+        @keyframes pix-mic-pulse {
+          0%, 100% { box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.4); }
+          50% { box-shadow: 0 0 0 8px rgba(220, 38, 38, 0); }
+        }
+        .pix-interim-transcript {
+          padding: 4px 16px 2px; font-size: 12px; color: #64748b;
+          background: rgba(7, 23, 41, 0.07);
+          display: flex; align-items: center; gap: 6px;
+        }
+        .pix-interim-dots::after {
+          content: ''; display: inline-block;
+          animation: pix-dots 1.5s steps(4, end) infinite;
+        }
+        @keyframes pix-dots {
+          0% { content: ''; }
+          25% { content: '.'; }
+          50% { content: '..'; }
+          75% { content: '...'; }
+        }
+        .pix-voice-toggle {
+          background: rgba(255, 255, 255, 0.05); border: none; cursor: pointer;
+          color: #64748b; font-size: 16px; padding: 6px 8px;
+          border-radius: 8px; transition: all 0.2s;
+          display: flex; align-items: center; justify-content: center;
+        }
+        .pix-voice-toggle:hover { color: #f1f5f9; background: rgba(255, 255, 255, 0.1); }
+        .pix-voice-toggle.pix-voice-active { color: #60a5fa; }
+
         /* Privacy notice */
         .pix-privacy-notice {
           background: rgba(109, 40, 217, 0.08); padding: 8px 16px; font-size: 11px;
@@ -794,6 +998,24 @@ export default function PixWidget() {
               </div>
               <div className="pix-header-sub">Pixelette Technologies AI Assistant</div>
             </div>
+            <button
+              className={`pix-voice-toggle ${voiceOutputEnabled ? 'pix-voice-active' : ''}`}
+              onClick={() => { setVoiceOutputEnabled(v => !v); if (voiceOutputEnabled) stopSpeaking(); }}
+              aria-label="Toggle voice responses"
+              title="Toggle voice responses"
+            >
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" />
+                {voiceOutputEnabled ? (
+                  <>
+                    <path d="M15.54 8.46a5 5 0 0 1 0 7.07" />
+                    <path d="M19.07 4.93a10 10 0 0 1 0 14.14" />
+                  </>
+                ) : (
+                  <line x1="23" y1="9" x2="17" y2="15" />
+                )}
+              </svg>
+            </button>
             <button className="pix-close" onClick={handleClose} aria-label="Close chat">&times;</button>
           </div>
 
@@ -926,6 +1148,14 @@ export default function PixWidget() {
             </div>
           )}
 
+          {/* Interim transcript while listening */}
+          {isListening && interimTranscript && (
+            <div className="pix-interim-transcript" aria-live="polite">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#ef4444" strokeWidth="2"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z" /><path d="M19 10v2a7 7 0 0 1-14 0v-2" /></svg>
+              <span>{interimTranscript}<span className="pix-interim-dots" /></span>
+            </div>
+          )}
+
           {/* Input */}
           {!showRating && (
             <div className="pix-input-area">
@@ -939,6 +1169,29 @@ export default function PixWidget() {
                 onKeyDown={handleKeyDown}
                 disabled={isLoading}
               />
+              <input ref={fileInputRef} type="file" accept=".pdf,image/jpeg,image/png,image/webp" style={{ display: 'none' }} onChange={handleFileUpload} />
+              <button className="pix-upload-btn" onClick={() => fileInputRef.current?.click()} disabled={isLoading || isUploading} aria-label="Upload document">
+                {isUploading ? (
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{ animation: 'spin 1s linear infinite' }}><path d="M12 2v4m0 12v4m-7-7H2m20 0h-3m-2.5-7.5L14 8m-4 8l-2.5 2.5m11-11L16 8M8 16l-2.5 2.5" /></svg>
+                ) : (
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><path d="M21.44 11.05l-9.19 9.19a6 6 0 01-8.49-8.49l9.19-9.19a4 4 0 015.66 5.66l-9.2 9.19a2 2 0 01-2.83-2.83l8.49-8.48" /></svg>
+                )}
+              </button>
+              {voiceSupported && (
+                <button
+                  className={`pix-mic-btn ${isListening ? 'pix-mic-active' : ''}`}
+                  onClick={handleVoiceStart}
+                  disabled={isLoading}
+                  aria-label={isListening ? 'Stop listening' : 'Start voice input'}
+                >
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z" />
+                    <path d="M19 10v2a7 7 0 0 1-14 0v-2" />
+                    <line x1="12" y1="19" x2="12" y2="23" />
+                    <line x1="8" y1="23" x2="16" y2="23" />
+                  </svg>
+                </button>
+              )}
               <button className="pix-send" onClick={() => sendMessage(input)} disabled={isLoading || !input.trim()} aria-label="Send">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="#fff">
                   <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" />
