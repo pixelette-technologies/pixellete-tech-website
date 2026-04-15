@@ -100,21 +100,34 @@ export default function PixWidget() {
     setSessionId(sid);
   }, []);
 
-  // Chat bubble popup after 5 seconds with sound
+  // Play notification sound helper
+  const playNotifSound = useCallback(() => {
+    try {
+      const ctx = new (window.AudioContext || (window as unknown as { webkitAudioContext: typeof AudioContext }).webkitAudioContext)();
+      const osc = ctx.createOscillator();
+      const gain = ctx.createGain();
+      osc.connect(gain);
+      gain.connect(ctx.destination);
+      osc.frequency.setValueAtTime(830, ctx.currentTime);
+      osc.frequency.setValueAtTime(1100, ctx.currentTime + 0.08);
+      osc.frequency.setValueAtTime(830, ctx.currentTime + 0.16);
+      gain.gain.setValueAtTime(0.15, ctx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + 0.3);
+      osc.start(ctx.currentTime);
+      osc.stop(ctx.currentTime + 0.3);
+    } catch { /* silent on browsers that block audio */ }
+  }, []);
+
+  // Chat bubble popup after 3 seconds with sound
   useEffect(() => {
     const timer = setTimeout(() => {
       if (!isOpen && !showChatBubble) {
         setShowChatBubble(true);
-        // Play subtle notification sound
-        try {
-          const audio = new Audio('data:audio/mp3;base64,SUQzBAAAAAAAI1RTU0UAAAAPAAADTGF2ZjU4Ljc2LjEwMAAAAAAAAAAAAAAA/+M4wAAAAAAAAAAAAEluZm8AAAAPAAAAAwAAAbAAqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV////////////////////////////////////////////AAAAAExhdmM1OC4xMwAAAAAAAAAAAAAAACQAAAAAAAAAAAGwjRlyMgAAAAAAAAAAAAAAAAD/4zgAAAPoKAAAAAAi00YCABcMIQ8xBgDEHAOHGJBHj4PvMChJ/KMID/xAQe4gIOg+D58Hwd//+UY//KMf4PvygI');
-          audio.volume = 0.3;
-          audio.play().catch(() => {});
-        } catch { /* silent */ }
+        playNotifSound();
       }
-    }, 5000);
+    }, 3000);
     return () => clearTimeout(timer);
-  }, [isOpen, showChatBubble]);
+  }, [isOpen, showChatBubble, playNotifSound]);
 
   // Load Turnstile — only if a valid site key is provided
   useEffect(() => {
@@ -316,6 +329,7 @@ export default function PixWidget() {
       }
 
       setMessages(prev => [...prev, { role: 'assistant', content: data.message }]);
+      playNotifSound();
 
       // If system is down, show contact buttons
       if (data.meta?.systemDown) {
