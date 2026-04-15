@@ -623,12 +623,12 @@ export default function PixWidget() {
         .pix-textarea::placeholder { color: rgba(255, 255, 255, 0.6); }
         .pix-textarea:focus { border-color: rgba(109, 40, 217, 0.5); }
         .pix-send {
-          width: 38px; height: 38px; border-radius: 12px;
-          background: linear-gradient(135deg, #6d28d9, #4f46e5);
+          width: 40px; height: 40px; border-radius: 12px;
+          background: #7c3aed;
           border: none; cursor: pointer;
           display: flex; align-items: center; justify-content: center;
           flex-shrink: 0; transition: all 0.2s;
-          box-shadow: 0 2px 8px rgba(109, 40, 217, 0.3);
+          box-shadow: 0 2px 10px rgba(109, 40, 217, 0.5);
         }
         .pix-send:hover { transform: translateY(-1px); box-shadow: 0 4px 12px rgba(109, 40, 217, 0.4); }
         .pix-send:disabled { opacity: 0.3; cursor: not-allowed; transform: none; box-shadow: none; }
