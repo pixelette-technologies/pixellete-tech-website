@@ -142,6 +142,12 @@ export function scoreLead(lead: Lead, messages: Message[]): { score: number; cla
     signals.push('competitor_evaluating');
   }
 
+  // 21. Company enriched (+5) — company is real and findable
+  if (lead.industry && lead.industry !== 'Unknown') {
+    score += 5;
+    signals.push('company_enriched');
+  }
+
   // Cap at 100
   score = Math.min(score, 100);
 

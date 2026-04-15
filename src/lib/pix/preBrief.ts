@@ -49,7 +49,7 @@ export async function generatePreBrief(messages: Message[], lead: Lead): Promise
       max_tokens: 1000,
       messages: [{
         role: 'user',
-        content: `${BRIEF_PROMPT}\n\n--- CONVERSATION ---\n${conversationText}\n\n--- LEAD DATA ---\nName: ${lead.name || 'Unknown'}\nCompany: ${lead.company || 'Unknown'}\nService Interest: ${lead.service_interest || 'Unknown'}\nScore: ${lead.score || 0}/100\nOutcome: ${lead.outcome || 'Not stated'}`,
+        content: `${BRIEF_PROMPT}\n\n--- CONVERSATION ---\n${conversationText}\n\n--- LEAD DATA ---\nName: ${lead.name || 'Unknown'}\nCompany: ${lead.company || 'Unknown'}\nService Interest: ${lead.service_interest || 'Unknown'}\nScore: ${lead.score || 0}/100\nOutcome: ${lead.outcome || 'Not stated'}${lead.industry || lead.team_size ? `\n\n--- COMPANY INTELLIGENCE ---\nIndustry: ${lead.industry || 'Unknown'}\nSize: ${lead.team_size || 'Unknown'}\nCountry: ${lead.country || 'Unknown'}\nWebsite: ${lead.website || 'Unknown'}` : ''}`,
       }],
     });
 

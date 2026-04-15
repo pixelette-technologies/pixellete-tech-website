@@ -9,6 +9,7 @@ import { checkRateLimit, getIpFromRequest } from '@/lib/pix/rateLimit';
 import { verifyTurnstile } from '@/lib/pix/turnstile';
 import { extractFields, cleanResponse, extractQuestion, classifyTopic } from '@/lib/pix/extractFields';
 import { generatePreBrief, formatBriefAsHTML } from '@/lib/pix/preBrief';
+import { enrichCompany, formatCompanyContext, extractDomainFromEmail } from '@/lib/pix/companyResearch';
 
 const COMPETITOR_TRIGGERS = [
   'accenture', 'deloitte', 'mckinsey', 'pwc', 'kpmg', 'ernst', 'ey ',
@@ -184,6 +185,24 @@ export async function POST(req: NextRequest) {
       }
     }
 
+    // 7b. Company enrichment — runs silently when company is known
+    let companyContext = '';
+    try {
+      if (conversation?.lead?.company && !conversation?.lead?.enriched) {
+        const emailDomain = extractDomainFromEmail(conversation?.lead?.email || '');
+        const companyData = await enrichCompany(conversation.lead.company, emailDomain || undefined);
+        if (companyData) {
+          companyContext = formatCompanyContext(companyData);
+          await upsertLead(sessionId, {
+            industry: companyData.industry || undefined,
+            team_size: companyData.employeeRange || (companyData.employeeCount?.toString()) || undefined,
+            country: companyData.country || undefined,
+            website: companyData.domain ? `https://${companyData.domain}` : undefined,
+          });
+        }
+      }
+    } catch { /* enrichment failure must never break chat */ }
+
     // 8. Abuse/irrelevant detection — check last 3 user messages
     const recentUserMsgs = messages.filter((m: { role: string }) => m.role === 'user').slice(-3).map((m: { content: string }) => m.content.toLowerCase()).join(' ');
     const abusePatterns = /\b(fuck|shit|damn|bitch|ass|dick|idiot|stupid|scam|fraud|fake|spam)\b/i;
@@ -249,7 +268,7 @@ This is the visitor's third message. Do NOT ask for name or email — they were 
     let aiResponse;
     const requestBody = {
       max_tokens: 256,
-      system: SYSTEM_PROMPT + scrapedContext,
+      system: SYSTEM_PROMPT + scrapedContext + companyContext,
       messages: apiMessages.map((m: { role: string; content: string }) => ({
         role: m.role as 'user' | 'assistant',
         content: m.content,
