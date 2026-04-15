@@ -86,6 +86,9 @@ export default function PixWidget() {
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
   const closedRef = useRef(false);
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const audioCtxRef = useRef<any>(null);
+  const audioReadyRef = useRef(false);
 
   // Initialize session
   useEffect(() => {
@@ -100,60 +103,73 @@ export default function PixWidget() {
     setSessionId(sid);
   }, []);
 
-  // Play two-tone chime — only works after user interaction
-  const playNotifSound = useCallback(() => {
+  // Chime sound — three ascending tones
+  const playChime = useCallback(() => {
+    if (!audioReadyRef.current || !audioCtxRef.current) return;
     try {
-      const WinAudioCtx = window.AudioContext || (window as unknown as { webkitAudioContext: typeof AudioContext }).webkitAudioContext;
-      const ctx = new WinAudioCtx();
-      const frequencies = [523.25, 659.25]; // C5 and E5
-      frequencies.forEach((freq, index) => {
+      const ctx = audioCtxRef.current;
+      if (ctx.state === 'suspended') ctx.resume();
+      const now = ctx.currentTime;
+      const notes = [
+        { freq: 523.25, delay: 0.0 },
+        { freq: 659.25, delay: 0.18 },
+        { freq: 783.99, delay: 0.36 },
+      ];
+      notes.forEach(({ freq, delay }: { freq: number; delay: number }) => {
         const osc = ctx.createOscillator();
         const gain = ctx.createGain();
         osc.connect(gain);
         gain.connect(ctx.destination);
-        osc.frequency.value = freq;
         osc.type = 'sine';
-        const startTime = ctx.currentTime + (index * 0.15);
-        const endTime = startTime + 0.3;
-        gain.gain.setValueAtTime(0, startTime);
-        gain.gain.linearRampToValueAtTime(0.3, startTime + 0.05);
-        gain.gain.linearRampToValueAtTime(0, endTime);
-        osc.start(startTime);
-        osc.stop(endTime);
+        osc.frequency.value = freq;
+        const t = now + delay;
+        gain.gain.setValueAtTime(0.001, t);
+        gain.gain.linearRampToValueAtTime(0.3, t + 0.05);
+        gain.gain.exponentialRampToValueAtTime(0.001, t + 0.6);
+        osc.start(t);
+        osc.stop(t + 0.6);
       });
     } catch { /* silent */ }
   }, []);
 
-  // Chat bubble popup after 8 seconds with sound attempt
+  // Unlock audio on ANY user interaction + show bubble at 5 seconds
   useEffect(() => {
-    // Preload silent audio on any user interaction to unlock audio context
-    const unlockAudio = () => {
+    let unlocked = false;
+    const unlock = () => {
+      if (unlocked) return;
+      unlocked = true;
       try {
-        const WinAudioCtx = window.AudioContext || (window as unknown as { webkitAudioContext: typeof AudioContext }).webkitAudioContext;
-        const ctx = new WinAudioCtx();
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        const AC = (window as any).AudioContext || (window as any).webkitAudioContext;
+        if (!AC) return;
+        const ctx = new AC();
         const buf = ctx.createBuffer(1, 1, 22050);
         const src = ctx.createBufferSource();
         src.buffer = buf;
         src.connect(ctx.destination);
         src.start(0);
-        window.removeEventListener('scroll', unlockAudio);
-        window.removeEventListener('mousemove', unlockAudio);
-        window.removeEventListener('touchstart', unlockAudio);
+        src.onended = () => {
+          audioCtxRef.current = ctx;
+          audioReadyRef.current = true;
+        };
       } catch { /* silent */ }
+      events.forEach(ev => window.removeEventListener(ev, unlock));
     };
-    window.addEventListener('scroll', unlockAudio, { once: true });
-    window.addEventListener('mousemove', unlockAudio, { once: true });
-    window.addEventListener('touchstart', unlockAudio, { once: true });
+    const events = ['click', 'touchstart', 'touchend', 'mousedown', 'keydown', 'scroll', 'mousemove'];
+    events.forEach(ev => window.addEventListener(ev, unlock, { passive: true }));
 
-    const timer = setTimeout(() => {
+    const bubbleTimer = setTimeout(() => {
       if (!isOpen && !showChatBubble) {
         setShowChatBubble(true);
-        // Try to play sound — will work if user scrolled or moved mouse
-        playNotifSound();
+        setTimeout(() => { playChime(); }, 300);
       }
     }, 5000);
-    return () => clearTimeout(timer);
-  }, [isOpen, showChatBubble, playNotifSound]);
+
+    return () => {
+      events.forEach(ev => window.removeEventListener(ev, unlock));
+      clearTimeout(bubbleTimer);
+    };
+  }, [isOpen, showChatBubble, playChime]);
 
   // Load Turnstile — only if a valid site key is provided
   useEffect(() => {
@@ -355,7 +371,10 @@ export default function PixWidget() {
       }
 
       setMessages(prev => [...prev, { role: 'assistant', content: data.message }]);
-      playNotifSound();
+      if (!isOpen) {
+        setShowNotifDot(true);
+        playChime();
+      }
 
       // If system is down, show contact buttons
       if (data.meta?.systemDown) {
