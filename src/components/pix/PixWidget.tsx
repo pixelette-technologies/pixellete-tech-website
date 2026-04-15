@@ -100,34 +100,39 @@ export default function PixWidget() {
     setSessionId(sid);
   }, []);
 
-  // Play notification sound helper
+  // Play two-tone chime — only works after user interaction
   const playNotifSound = useCallback(() => {
     try {
-      const ctx = new (window.AudioContext || (window as unknown as { webkitAudioContext: typeof AudioContext }).webkitAudioContext)();
-      const osc = ctx.createOscillator();
-      const gain = ctx.createGain();
-      osc.connect(gain);
-      gain.connect(ctx.destination);
-      osc.frequency.setValueAtTime(830, ctx.currentTime);
-      osc.frequency.setValueAtTime(1100, ctx.currentTime + 0.08);
-      osc.frequency.setValueAtTime(830, ctx.currentTime + 0.16);
-      gain.gain.setValueAtTime(0.15, ctx.currentTime);
-      gain.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + 0.3);
-      osc.start(ctx.currentTime);
-      osc.stop(ctx.currentTime + 0.3);
-    } catch { /* silent on browsers that block audio */ }
+      const WinAudioCtx = window.AudioContext || (window as unknown as { webkitAudioContext: typeof AudioContext }).webkitAudioContext;
+      const ctx = new WinAudioCtx();
+      const frequencies = [523.25, 659.25]; // C5 and E5
+      frequencies.forEach((freq, index) => {
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        osc.connect(gain);
+        gain.connect(ctx.destination);
+        osc.frequency.value = freq;
+        osc.type = 'sine';
+        const startTime = ctx.currentTime + (index * 0.15);
+        const endTime = startTime + 0.3;
+        gain.gain.setValueAtTime(0, startTime);
+        gain.gain.linearRampToValueAtTime(0.3, startTime + 0.05);
+        gain.gain.linearRampToValueAtTime(0, endTime);
+        osc.start(startTime);
+        osc.stop(endTime);
+      });
+    } catch { /* silent */ }
   }, []);
 
-  // Chat bubble popup after 3 seconds with sound
+  // Chat bubble popup after 8 seconds — NO sound (browser blocks before interaction)
   useEffect(() => {
     const timer = setTimeout(() => {
       if (!isOpen && !showChatBubble) {
         setShowChatBubble(true);
-        playNotifSound();
       }
-    }, 3000);
+    }, 8000);
     return () => clearTimeout(timer);
-  }, [isOpen, showChatBubble, playNotifSound]);
+  }, [isOpen, showChatBubble]);
 
   // Load Turnstile — only if a valid site key is provided
   useEffect(() => {
@@ -434,19 +439,19 @@ export default function PixWidget() {
           box-shadow: 0 8px 36px rgba(109, 40, 217, 0.6), 0 0 70px rgba(124, 58, 237, 0.3);
         }
         .pix-chat-bubble {
-          position: fixed; bottom: 100px; right: 28px; z-index: 9999;
+          position: fixed; bottom: 96px; right: 24px; z-index: 9997;
           background: linear-gradient(135deg, #7c3aed, #5b21b6);
           color: #fff;
-          padding: 14px 20px; border-radius: 16px 16px 4px 16px;
+          padding: 12px 16px; border-radius: 12px;
           font-size: 14px; font-weight: 500; max-width: 240px;
           border: none;
-          box-shadow: 0 8px 32px rgba(109,40,217,0.4), 0 0 50px rgba(124,58,237,0.15);
+          box-shadow: 0 4px 12px rgba(0,0,0,0.2);
           animation: pix-bubble-in 0.4s ease-out;
           cursor: pointer; font-family: 'Outfit', sans-serif;
           line-height: 1.4;
         }
         .pix-chat-bubble::after {
-          content: ''; position: absolute; bottom: -8px; right: 28px;
+          content: ''; position: absolute; bottom: -8px; right: 20px;
           width: 0; height: 0;
           border-left: 8px solid transparent; border-right: 8px solid transparent;
           border-top: 8px solid #5b21b6;
