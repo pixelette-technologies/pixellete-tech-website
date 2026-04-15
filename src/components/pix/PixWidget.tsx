@@ -124,15 +124,36 @@ export default function PixWidget() {
     } catch { /* silent */ }
   }, []);
 
-  // Chat bubble popup after 8 seconds — NO sound (browser blocks before interaction)
+  // Chat bubble popup after 8 seconds with sound attempt
   useEffect(() => {
+    // Preload silent audio on any user interaction to unlock audio context
+    const unlockAudio = () => {
+      try {
+        const WinAudioCtx = window.AudioContext || (window as unknown as { webkitAudioContext: typeof AudioContext }).webkitAudioContext;
+        const ctx = new WinAudioCtx();
+        const buf = ctx.createBuffer(1, 1, 22050);
+        const src = ctx.createBufferSource();
+        src.buffer = buf;
+        src.connect(ctx.destination);
+        src.start(0);
+        window.removeEventListener('scroll', unlockAudio);
+        window.removeEventListener('mousemove', unlockAudio);
+        window.removeEventListener('touchstart', unlockAudio);
+      } catch { /* silent */ }
+    };
+    window.addEventListener('scroll', unlockAudio, { once: true });
+    window.addEventListener('mousemove', unlockAudio, { once: true });
+    window.addEventListener('touchstart', unlockAudio, { once: true });
+
     const timer = setTimeout(() => {
       if (!isOpen && !showChatBubble) {
         setShowChatBubble(true);
+        // Try to play sound — will work if user scrolled or moved mouse
+        playNotifSound();
       }
     }, 8000);
     return () => clearTimeout(timer);
-  }, [isOpen, showChatBubble]);
+  }, [isOpen, showChatBubble, playNotifSound]);
 
   // Load Turnstile — only if a valid site key is provided
   useEffect(() => {
