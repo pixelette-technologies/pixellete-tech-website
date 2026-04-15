@@ -515,10 +515,11 @@ export default function PixWidget() {
           position: fixed; bottom: 100px; right: 28px; z-index: 9998;
           width: 390px; max-width: calc(100vw - 56px);
           height: 560px; max-height: calc(100vh - 130px);
-          background: #141926;
+          background: rgba(14, 17, 28, 0.85);
+          backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px);
           border-radius: 20px;
-          border: 1px solid rgba(124, 58, 237, 0.25);
-          box-shadow: 0 12px 48px rgba(0, 0, 0, 0.6), 0 0 60px rgba(109, 40, 217, 0.15), 0 0 120px rgba(109, 40, 217, 0.05);
+          border: 1px solid rgba(124, 58, 237, 0.2);
+          box-shadow: 0 12px 48px rgba(0, 0, 0, 0.6), 0 0 60px rgba(109, 40, 217, 0.12);
           display: flex; flex-direction: column;
           overflow: hidden;
           opacity: 0; transform: translateY(16px) scale(0.97);
@@ -529,10 +530,11 @@ export default function PixWidget() {
 
         /* Header */
         .pix-header {
-          background: linear-gradient(135deg, #1e1145 0%, #2d1b69 50%, #1e1145 100%);
+          background: linear-gradient(135deg, rgba(30, 17, 69, 0.9) 0%, rgba(45, 27, 105, 0.9) 50%, rgba(30, 17, 69, 0.9) 100%);
+          backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
           color: #fff; padding: 18px 20px;
           display: flex; align-items: center; gap: 12px;
-          border-bottom: 1px solid rgba(124, 58, 237, 0.3);
+          border-bottom: 1px solid rgba(124, 58, 237, 0.2);
         }
         .pix-avatar {
           width: 40px; height: 40px; border-radius: 12px;
@@ -694,39 +696,52 @@ export default function PixWidget() {
         .pix-intro-form {
           flex: 1; display: flex; flex-direction: column;
           justify-content: center; padding: 32px 24px;
-          background: #141926; gap: 16px;
+          background: rgba(20, 25, 38, 0.6);
+          backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+          gap: 16px;
         }
         .pix-intro-form h3 {
-          font-size: 18px; font-weight: 600; color: #f1f5f9;
-          margin-bottom: 4px;
+          font-size: 20px; font-weight: 700; color: #fff;
+          margin-bottom: 4px; letter-spacing: -0.3px;
         }
         .pix-intro-form p {
-          font-size: 13px; color: #64748b; line-height: 1.5;
+          font-size: 13px; color: rgba(255,255,255,0.5); line-height: 1.5;
           margin-bottom: 8px;
         }
         .pix-intro-input {
-          width: 100%; border: 1px solid rgba(255, 255, 255, 0.08);
-          border-radius: 12px; padding: 12px 16px;
+          width: 100%;
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          border-radius: 14px; padding: 14px 18px;
           font-size: 14px; font-family: inherit; outline: none;
-          background: #1a2133; color: #e2e8f0;
-          transition: border-color 0.2s;
+          background: rgba(255, 255, 255, 0.06);
+          backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+          color: #fff;
+          transition: border-color 0.2s, background 0.2s;
         }
-        .pix-intro-input::placeholder { color: #475569; }
-        .pix-intro-input:focus { border-color: rgba(109, 40, 217, 0.5); }
+        .pix-intro-input::placeholder { color: rgba(255,255,255,0.3); }
+        .pix-intro-input:focus {
+          border-color: rgba(124, 58, 237, 0.6);
+          background: rgba(255, 255, 255, 0.1);
+          box-shadow: 0 0 20px rgba(109, 40, 217, 0.15);
+        }
         .pix-intro-submit {
-          width: 100%; padding: 12px; border-radius: 12px;
-          background: linear-gradient(135deg, #6d28d9, #4f46e5);
+          width: 100%; padding: 14px; border-radius: 14px;
+          background: linear-gradient(135deg, #7c3aed, #6d28d9);
           color: #fff; border: none; cursor: pointer;
-          font-size: 14px; font-weight: 600; transition: all 0.2s;
-          box-shadow: 0 2px 12px rgba(109, 40, 217, 0.3);
-          margin-top: 4px;
+          font-size: 15px; font-weight: 600; transition: all 0.2s;
+          box-shadow: 0 4px 20px rgba(109, 40, 217, 0.4);
+          margin-top: 4px; letter-spacing: 0.3px;
         }
-        .pix-intro-submit:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(109, 40, 217, 0.4); }
+        .pix-intro-submit:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 6px 28px rgba(109, 40, 217, 0.5);
+          background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+        }
         .pix-intro-error {
           font-size: 12px; color: #ef4444; text-align: center;
         }
         .pix-intro-privacy {
-          font-size: 11px; color: #475569; text-align: center; line-height: 1.5;
+          font-size: 11px; color: rgba(255,255,255,0.3); text-align: center; line-height: 1.5;
         }
 
         /* Privacy notice */
