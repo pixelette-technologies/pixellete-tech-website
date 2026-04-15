@@ -637,9 +637,8 @@ export default function PixWidget() {
         .pix-quick-replies { display: flex; flex-wrap: wrap; gap: 8px; padding: 4px 16px 12px; background: rgba(7, 23, 41, 0.07); backdrop-filter: blur(4.9px); -webkit-backdrop-filter: blur(4.9px); }
         .pix-quick-btn {
           padding: 8px 16px; border-radius: 20px;
-          border: 1px solid rgba(7, 23, 41, 0.3);
-          background: rgba(7, 23, 41, 0.07);
-          backdrop-filter: blur(4.9px); -webkit-backdrop-filter: blur(4.9px);
+          border: 1px solid rgba(109, 40, 217, 0.4);
+          background: rgba(109, 40, 217, 0.15);
           font-size: 12.5px; cursor: pointer; color: #a78bfa;
           transition: all 0.2s; font-weight: 500;
         }
