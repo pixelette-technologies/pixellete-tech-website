@@ -151,7 +151,7 @@ export default function PixWidget() {
         // Try to play sound — will work if user scrolled or moved mouse
         playNotifSound();
       }
-    }, 8000);
+    }, 5000);
     return () => clearTimeout(timer);
   }, [isOpen, showChatBubble, playNotifSound]);
 
