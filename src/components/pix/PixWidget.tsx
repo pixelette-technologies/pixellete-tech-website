@@ -395,7 +395,7 @@ export default function PixWidget() {
 
         /* Launcher */
         .pix-launcher {
-          position: fixed; bottom: 24px; right: 24px; z-index: 9999;
+          position: fixed; bottom: 28px; right: 28px; z-index: 9999;
           width: 64px; height: 64px; border-radius: 50%;
           background: linear-gradient(135deg, #0A1628 0%, #1a0a2e 60%, #2d1b4e 100%);
           border: 2px solid rgba(167, 139, 250, 0.4);
@@ -415,7 +415,7 @@ export default function PixWidget() {
           box-shadow: 0 8px 32px rgba(10, 22, 40, 0.6), 0 0 60px rgba(109, 40, 217, 0.35);
         }
         .pix-chat-bubble {
-          position: fixed; bottom: 96px; right: 24px; z-index: 9999;
+          position: fixed; bottom: 100px; right: 28px; z-index: 9999;
           background: #141926; color: #e2e8f0;
           padding: 14px 20px; border-radius: 16px 16px 4px 16px;
           font-size: 14px; font-weight: 500; max-width: 240px;
@@ -447,9 +447,9 @@ export default function PixWidget() {
 
         /* Window */
         .pix-window {
-          position: fixed; bottom: 96px; right: 24px; z-index: 9998;
-          width: 390px; max-width: calc(100vw - 48px);
-          height: 580px; max-height: calc(100vh - 120px);
+          position: fixed; bottom: 100px; right: 28px; z-index: 9998;
+          width: 390px; max-width: calc(100vw - 56px);
+          height: 560px; max-height: calc(100vh - 130px);
           background: #141926;
           border-radius: 20px;
           border: 1px solid rgba(109, 40, 217, 0.2);
