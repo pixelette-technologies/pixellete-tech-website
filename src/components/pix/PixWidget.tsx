@@ -620,7 +620,7 @@ export default function PixWidget() {
           overflow-y: auto; scrollbar-width: none;
         }
         .pix-textarea::-webkit-scrollbar { display: none; }
-        .pix-textarea::placeholder { color: #475569; }
+        .pix-textarea::placeholder { color: rgba(255, 255, 255, 0.6); }
         .pix-textarea:focus { border-color: rgba(109, 40, 217, 0.5); }
         .pix-send {
           width: 38px; height: 38px; border-radius: 12px;
@@ -661,7 +661,7 @@ export default function PixWidget() {
         /* Footer */
         .pix-powered {
           text-align: center; padding: 8px; font-size: 10px;
-          color: #334155; background: rgba(7, 23, 41, 0.07);
+          color: rgba(255, 255, 255, 0.7); background: rgba(7, 23, 41, 0.07);
           backdrop-filter: blur(4.9px); -webkit-backdrop-filter: blur(4.9px);
           border-top: 1px solid rgba(7, 23, 41, 0.3);
           letter-spacing: 0.3px;
