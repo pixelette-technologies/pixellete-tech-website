@@ -515,8 +515,8 @@ export default function PixWidget() {
           position: fixed; bottom: 100px; right: 28px; z-index: 9998;
           width: 390px; max-width: calc(100vw - 56px);
           height: 560px; max-height: calc(100vh - 130px);
-          background: rgba(14, 17, 28, 0.55);
-          backdrop-filter: blur(20px) saturate(180%); -webkit-backdrop-filter: blur(20px) saturate(180%);
+          background: rgba(10, 12, 22, 0.92);
+          backdrop-filter: blur(16px) saturate(150%); -webkit-backdrop-filter: blur(16px) saturate(150%);
           border-radius: 20px;
           border: 1px solid rgba(255, 255, 255, 0.12);
           box-shadow: 0 12px 48px rgba(0, 0, 0, 0.6), 0 0 60px rgba(109, 40, 217, 0.12), inset 0 1px 0 rgba(255,255,255,0.08);
@@ -530,8 +530,7 @@ export default function PixWidget() {
 
         /* Header */
         .pix-header {
-          background: linear-gradient(135deg, rgba(30, 17, 69, 0.6) 0%, rgba(45, 27, 105, 0.6) 50%, rgba(30, 17, 69, 0.6) 100%);
-          backdrop-filter: blur(16px) saturate(180%); -webkit-backdrop-filter: blur(16px) saturate(180%);
+          background: linear-gradient(135deg, rgba(30, 17, 69, 0.95) 0%, rgba(45, 27, 105, 0.95) 50%, rgba(30, 17, 69, 0.95) 100%);
           color: #fff; padding: 18px 20px;
           display: flex; align-items: center; gap: 12px;
           border-bottom: 1px solid rgba(124, 58, 237, 0.2);
@@ -696,8 +695,8 @@ export default function PixWidget() {
         .pix-intro-form {
           flex: 1; display: flex; flex-direction: column;
           justify-content: center; padding: 32px 24px;
-          background: rgba(20, 25, 38, 0.4);
-          backdrop-filter: blur(20px) saturate(180%); -webkit-backdrop-filter: blur(20px) saturate(180%);
+          background: rgba(15, 18, 30, 0.9);
+          backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
           gap: 16px;
         }
         .pix-intro-form h3 {
