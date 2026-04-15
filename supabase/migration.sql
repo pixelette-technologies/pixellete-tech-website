@@ -56,3 +56,10 @@ DROP TRIGGER IF EXISTS leads_updated_at ON leads;
 CREATE TRIGGER leads_updated_at
   BEFORE UPDATE ON leads
   FOR EACH ROW EXECUTE FUNCTION update_updated_at();
+
+-- Phase 2: Outcome-based qualification columns
+ALTER TABLE leads ADD COLUMN IF NOT EXISTS outcome text;
+ALTER TABLE leads ADD COLUMN IF NOT EXISTS success_metric text;
+ALTER TABLE leads ADD COLUMN IF NOT EXISTS main_blocker text;
+ALTER TABLE leads ADD COLUMN IF NOT EXISTS block_emails boolean DEFAULT false;
+ALTER TABLE leads ADD COLUMN IF NOT EXISTS status_reason text;

@@ -23,6 +23,11 @@ interface Lead {
   status?: string;
   notes?: string;
   signals?: string;
+  outcome?: string;
+  success_metric?: string;
+  main_blocker?: string;
+  block_emails?: boolean;
+  status_reason?: string;
 }
 
 export async function getOrCreateConversation(sessionId: string) {

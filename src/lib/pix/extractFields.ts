@@ -6,6 +6,7 @@ interface CapturedFields {
   country?: string;
   team_size?: string;
   industry?: string;
+  outcome?: string;
 }
 
 interface Message {
@@ -27,6 +28,7 @@ export function extractFields(responseText: string): CapturedFields {
     if (parsed.country && parsed.country.trim()) fields.country = parsed.country.trim();
     if (parsed.team_size && parsed.team_size.trim()) fields.team_size = parsed.team_size.trim();
     if (parsed.industry && parsed.industry.trim()) fields.industry = parsed.industry.trim();
+    if (parsed.outcome && parsed.outcome.trim()) fields.outcome = parsed.outcome.trim();
     return fields;
   } catch {
     return {};

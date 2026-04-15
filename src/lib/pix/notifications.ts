@@ -135,6 +135,14 @@ export async function sendLeadEmail(lead: Lead, conversationSummary: string) {
     <div style="line-height:2.2;">${signals.map(s => `<span style="display:inline-block;background:rgba(109,40,217,0.12);color:#c4b5fd;padding:4px 14px;border-radius:20px;font-size:12px;font-weight:500;margin:0 6px 6px 0;border:1px solid rgba(109,40,217,0.2);">${s.replace(/_/g, ' ')}</span>`).join('')}</div>
   </td></tr>` : ''}
 
+  <!-- Stated outcome -->
+  ${lead.outcome ? `<tr><td style="padding:20px 32px 0;">
+    <p style="margin:0 0 12px;font-size:11px;font-weight:600;color:#475569;text-transform:uppercase;letter-spacing:1.5px;">Stated Outcome</p>
+    <div style="background:rgba(124,58,237,0.08);border-left:4px solid #7c3aed;padding:14px 16px;border-radius:0 8px 8px 0;font-size:14px;color:#e2e8f0;line-height:1.6;">
+      ${escapeHtml(sanitize(lead.outcome, 500))}
+    </div>
+  </td></tr>` : ''}
+
   <!-- Chat summary -->
   <tr><td style="padding:24px 32px;">
     <p style="margin:0 0 12px;font-size:11px;font-weight:600;color:#475569;text-transform:uppercase;letter-spacing:1.5px;">Conversation</p>

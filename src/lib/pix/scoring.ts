@@ -123,6 +123,18 @@ export function scoreLead(lead: Lead, messages: Message[]): { score: number; cla
     signals.push('meeting_requested');
   }
 
+  // 18. Outcome stated (+8)
+  if (lead.outcome) {
+    score += 8;
+    signals.push('outcome_stated');
+  }
+
+  // 19. Blocker identified (+6)
+  if (/\b(blocked|struggling|failing|problem is|issue is|challenge is|bottleneck|pain point|obstacle|limitation)\b/i.test(allUserText)) {
+    score += 6;
+    signals.push('blocker_identified');
+  }
+
   // Cap at 100
   score = Math.min(score, 100);
 

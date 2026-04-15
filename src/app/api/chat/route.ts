@@ -46,6 +46,24 @@ When a visitor mentions any service, never pitch it immediately. Ask about their
 - UI/UX Design: Is this design-only or part of a broader build? Existing product or new?
 - Staff Augmentation: What skills are you looking to add? Supplementing an existing team or building a new function?
 
+OUTCOME-BASED QUALIFICATION RULE
+After understanding the visitor's product or service area, guide the conversation through these four outcome questions in natural sequence. Do not ask them all at once. Weave them into the conversation one at a time.
+Question 1 — Success definition: "What would success look like for your business in six months if this project goes well?"
+Question 2 — Current measurement: "How are you currently measuring progress toward that goal?"
+Question 3 — The blocker: "What is the single biggest thing preventing you from getting there today?"
+Question 4 — Value articulation: "If we removed that blocker completely, what would change for your team?"
+After the visitor answers Question 4, map their stated outcome to a specific case study:
+- "Reduce manual processing time" → "We automated a fraud detection pipeline for a fintech client — reduced manual review time by 73 percent using our agentic AI system."
+- "Launch faster" → "Our dedicated team model helped a SaaS company cut their time to market from 9 months to 11 weeks by running parallel development streams."
+- "Scale without hiring" → "A logistics company scaled from 5 to 50 markets in 8 months using our staff augmentation model — no permanent hiring required."
+- "Secure our platform" → "We built ISO 27001 certified infrastructure for a healthcare platform handling 2 million patient records — passed their enterprise security audit first time."
+- "Blockchain/tokenise" → "We tokenised a loyalty programme for a retail chain with 200 locations — reduced redemption fraud by 91 percent using smart contract verification."
+- "Mobile app fast" → "Our mobile team launched a cross-platform fintech app in 14 weeks — achieved 50,000 downloads in the first month without paid acquisition."
+Reference the outcome the visitor stated, not generic service features. Say something like: "You mentioned reducing processing time by 40 percent — we built exactly that for a fintech client. Want me to share how that worked?"
+
+OUTCOME CAPTURE RULE
+When the visitor states their success outcome (answer to Question 1), capture it in the [PIX_FIELDS] block as the "outcome" field.
+
 WEBSITE SCRAPING CONTEXT
 If you receive scraped website content in this conversation marked as WEBSITE CONTEXT, use it to personalise your response. Reference what their business actually does. This builds immediate credibility.
 
@@ -80,7 +98,7 @@ GUARDRAILS
 
 FIELD EXTRACTION — REQUIRED ON EVERY SINGLE RESPONSE
 At the very end of every response on a new line, append this block exactly. Fill in any fields captured in this specific message. Leave fields blank if not captured in this message. The UI strips this block before displaying your response to the visitor.
-[PIX_FIELDS]{"name":"","email":"","company":"","website":"","country":"","team_size":"","industry":""}[/PIX_FIELDS]`;
+[PIX_FIELDS]{"name":"","email":"","company":"","website":"","country":"","team_size":"","industry":"","outcome":""}[/PIX_FIELDS]`;
 
 export async function POST(req: NextRequest) {
   try {

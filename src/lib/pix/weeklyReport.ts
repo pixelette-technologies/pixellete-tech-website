@@ -145,6 +145,19 @@ export async function generateAndSendWeeklyReport() {
     </tr></table>
   </td></tr>
 
+  <!-- Top Outcomes -->
+  ${(() => {
+    const outcomes = stats.leads.filter(l => l.outcome).map(l => l.outcome);
+    if (outcomes.length === 0) return '';
+    const uniqueOutcomes = [...new Set(outcomes)].slice(0, 5);
+    return `<tr><td style="padding:24px 32px 0;">
+      <p style="margin:0 0 10px;font-size:11px;font-weight:600;color:#475569;text-transform:uppercase;letter-spacing:1.5px;">Top Visitor Outcomes This Week</p>
+      <table width="100%" cellpadding="0" cellspacing="0">
+        ${uniqueOutcomes.map(o => `<tr><td style="padding:8px 0;border-bottom:1px solid #1b1f2b;font-size:13px;color:#e2e8f0;border-left:3px solid #7c3aed;padding-left:12px;">${o}</td></tr>`).join('')}
+      </table>
+    </td></tr>`;
+  })()}
+
   <!-- Topics -->
   ${topTopics.length > 0 ? `<tr><td style="padding:24px 32px 0;">
     <p style="margin:0 0 10px;font-size:11px;font-weight:600;color:#475569;text-transform:uppercase;letter-spacing:1.5px;">Top Question Topics</p>
