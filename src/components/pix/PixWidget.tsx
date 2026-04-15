@@ -416,7 +416,7 @@ export default function PixWidget() {
         }
         .pix-chat-bubble {
           position: fixed; bottom: 96px; right: 24px; z-index: 9999;
-          background: #0d0f14; color: #e2e8f0;
+          background: #141926; color: #e2e8f0;
           padding: 14px 20px; border-radius: 16px 16px 4px 16px;
           font-size: 14px; font-weight: 500; max-width: 240px;
           border: 1px solid rgba(109, 40, 217, 0.3);
@@ -429,7 +429,7 @@ export default function PixWidget() {
           content: ''; position: absolute; bottom: -8px; right: 28px;
           width: 0; height: 0;
           border-left: 8px solid transparent; border-right: 8px solid transparent;
-          border-top: 8px solid #0d0f14;
+          border-top: 8px solid #141926;
         }
         .pix-bubble-close {
           position: absolute; top: -8px; right: -8px;
@@ -450,9 +450,9 @@ export default function PixWidget() {
           position: fixed; bottom: 96px; right: 24px; z-index: 9998;
           width: 390px; max-width: calc(100vw - 48px);
           height: 580px; max-height: calc(100vh - 120px);
-          background: #0d0f14;
+          background: #141926;
           border-radius: 20px;
-          border: 1px solid rgba(255, 255, 255, 0.06);
+          border: 1px solid rgba(109, 40, 217, 0.2);
           box-shadow: 0 12px 48px rgba(0, 0, 0, 0.5), 0 0 80px rgba(109, 40, 217, 0.08);
           display: flex; flex-direction: column;
           overflow: hidden;
@@ -467,7 +467,7 @@ export default function PixWidget() {
           background: linear-gradient(135deg, #0A1628 0%, #111827 100%);
           color: #fff; padding: 18px 20px;
           display: flex; align-items: center; gap: 12px;
-          border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+          border-bottom: 1px solid rgba(109, 40, 217, 0.2);
         }
         .pix-avatar {
           width: 40px; height: 40px; border-radius: 12px;
@@ -495,8 +495,8 @@ export default function PixWidget() {
         .pix-messages {
           flex: 1; overflow-y: auto; padding: 20px 16px; display: flex;
           flex-direction: column; gap: 10px;
-          background: #0d0f14;
-          scrollbar-width: thin; scrollbar-color: #1e293b #0d0f14;
+          background: #141926;
+          scrollbar-width: thin; scrollbar-color: #1e293b #141926;
         }
         .pix-messages::-webkit-scrollbar { width: 4px; }
         .pix-messages::-webkit-scrollbar-track { background: transparent; }
@@ -510,7 +510,7 @@ export default function PixWidget() {
         }
         @keyframes pix-fadeIn { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: translateY(0); } }
         .pix-msg-bot {
-          background: #161b26; color: #cbd5e1;
+          background: #1a2133; color: #cbd5e1;
           align-self: flex-start;
           border-radius: 2px 16px 16px 16px;
           border: 1px solid rgba(255, 255, 255, 0.04);
@@ -525,7 +525,7 @@ export default function PixWidget() {
         /* Typing indicator */
         .pix-typing {
           display: flex; gap: 5px; padding: 12px 16px; align-self: flex-start;
-          background: #161b26; border-radius: 2px 16px 16px 16px;
+          background: #1a2133; border-radius: 2px 16px 16px 16px;
           border: 1px solid rgba(255, 255, 255, 0.04);
         }
         .pix-typing-dot {
@@ -538,7 +538,7 @@ export default function PixWidget() {
 
         /* Input area */
         .pix-input-area {
-          padding: 14px 16px; border-top: 1px solid rgba(255, 255, 255, 0.06);
+          padding: 14px 16px; border-top: 1px solid rgba(109, 40, 217, 0.2);
           display: flex; align-items: flex-end; gap: 10px;
           background: #111318;
         }
@@ -547,7 +547,7 @@ export default function PixWidget() {
           border-radius: 14px; padding: 10px 16px;
           font-size: 13.5px; resize: none; max-height: 100px;
           font-family: inherit; outline: none; line-height: 1.4;
-          background: #161b26; color: #e2e8f0;
+          background: #1a2133; color: #e2e8f0;
           transition: border-color 0.2s;
           overflow-y: auto; scrollbar-width: none;
         }
@@ -566,7 +566,7 @@ export default function PixWidget() {
         .pix-send:disabled { opacity: 0.3; cursor: not-allowed; transform: none; box-shadow: none; }
 
         /* Quick replies */
-        .pix-quick-replies { display: flex; flex-wrap: wrap; gap: 8px; padding: 4px 16px 12px; background: #0d0f14; }
+        .pix-quick-replies { display: flex; flex-wrap: wrap; gap: 8px; padding: 4px 16px 12px; background: #141926; }
         .pix-quick-btn {
           padding: 8px 16px; border-radius: 20px;
           border: 1px solid rgba(109, 40, 217, 0.3);
@@ -580,7 +580,7 @@ export default function PixWidget() {
           box-shadow: 0 2px 12px rgba(109, 40, 217, 0.3);
         }
         .pix-system-down {
-          display: flex; gap: 8px; padding: 4px 16px 12px; background: #0d0f14;
+          display: flex; gap: 8px; padding: 4px 16px 12px; background: #141926;
         }
         .pix-system-down a {
           flex: 1; text-align: center; padding: 10px 14px; border-radius: 12px;
@@ -593,13 +593,13 @@ export default function PixWidget() {
         /* Footer */
         .pix-powered {
           text-align: center; padding: 8px; font-size: 10px;
-          color: #334155; background: #0d0f14;
+          color: #334155; background: #141926;
           border-top: 1px solid rgba(255, 255, 255, 0.03);
           letter-spacing: 0.3px;
         }
 
         /* Rating */
-        .pix-rating-card { padding: 24px; text-align: center; background: #0d0f14; }
+        .pix-rating-card { padding: 24px; text-align: center; background: #141926; }
         .pix-rating-card h4 { font-size: 15px; color: #e2e8f0; margin-bottom: 16px; font-weight: 500; }
         .pix-stars { display: flex; justify-content: center; gap: 10px; margin-bottom: 16px; }
         .pix-star {
@@ -611,7 +611,7 @@ export default function PixWidget() {
           width: 100%; border: 1px solid rgba(255, 255, 255, 0.08);
           border-radius: 12px; padding: 10px 14px; font-size: 13px;
           resize: none; margin-bottom: 12px; font-family: inherit;
-          background: #161b26; color: #e2e8f0; outline: none;
+          background: #1a2133; color: #e2e8f0; outline: none;
         }
         .pix-rating-comment::placeholder { color: #475569; }
         .pix-rating-submit {
@@ -629,7 +629,7 @@ export default function PixWidget() {
         .pix-intro-form {
           flex: 1; display: flex; flex-direction: column;
           justify-content: center; padding: 32px 24px;
-          background: #0d0f14; gap: 16px;
+          background: #141926; gap: 16px;
         }
         .pix-intro-form h3 {
           font-size: 18px; font-weight: 600; color: #f1f5f9;
@@ -643,7 +643,7 @@ export default function PixWidget() {
           width: 100%; border: 1px solid rgba(255, 255, 255, 0.08);
           border-radius: 12px; padding: 12px 16px;
           font-size: 14px; font-family: inherit; outline: none;
-          background: #161b26; color: #e2e8f0;
+          background: #1a2133; color: #e2e8f0;
           transition: border-color 0.2s;
         }
         .pix-intro-input::placeholder { color: #475569; }
@@ -683,7 +683,7 @@ export default function PixWidget() {
         {showChatBubble && !isOpen && (
           <div className="pix-chat-bubble" onClick={handleOpen}>
             <button className="pix-bubble-close" onClick={(e) => { e.stopPropagation(); setShowChatBubble(false); }}>&times;</button>
-            Hi, I am Pix. How can I help you today?
+            Hi, I am Ada. How can I help you today?
           </div>
         )}
 
@@ -700,10 +700,10 @@ export default function PixWidget() {
         <div className={`pix-window ${isOpen ? 'pix-open' : ''}`}>
           {/* Header */}
           <div className="pix-header">
-            <div className="pix-avatar">P</div>
+            <div className="pix-avatar">A</div>
             <div className="pix-header-info">
               <div className="pix-header-name">
-                Pix <span className="pix-online-dot" />
+                Ada <span className="pix-online-dot" />
                 {showScoreBadge && (
                   <span className="pix-score-badge" style={{ background: TIER_COLORS[lead.tier] || '#DC2626' }}>
                     {lead.tier.toUpperCase()}
@@ -719,7 +719,7 @@ export default function PixWidget() {
           {showIntroForm ? (
             <div className="pix-intro-form">
               <h3>Welcome to Pixelette</h3>
-              <p>Enter your details to start chatting with Pix, our AI assistant.</p>
+              <p>Enter your details to start chatting with Ada, our AI assistant.</p>
               {introError && <p className="pix-intro-error">{introError}</p>}
               <input
                 className="pix-intro-input"
@@ -750,7 +750,7 @@ export default function PixWidget() {
             {/* Rating view */}
             {showRating && !ratingSubmitted ? (
               <div className="pix-rating-card">
-                <h4>How was your experience with Pix?</h4>
+                <h4>How was your experience with Ada?</h4>
                 <div className="pix-stars">
                   {[1, 2, 3, 4, 5].map(star => (
                     <button key={star} className="pix-star" onClick={() => setSelectedRating(star)}>
@@ -785,7 +785,7 @@ export default function PixWidget() {
                 {/* Greeting */}
                 {showGreeting && messages.length === 0 && (
                   <div className="pix-msg pix-msg-bot">
-                    {lead.name ? `Hi ${lead.name}, I'm Pix, your AI assistant. How can I help you?` : `Hi, I'm Pix, your AI assistant. How can I help you?`}
+                    {lead.name ? `Hi ${lead.name}, I'm Ada, your AI assistant. How can I help you?` : `Hi, I'm Ada, your AI assistant. How can I help you?`}
                   </div>
                 )}
 
