@@ -9,6 +9,14 @@ import { checkRateLimit, getIpFromRequest } from '@/lib/pix/rateLimit';
 import { verifyTurnstile } from '@/lib/pix/turnstile';
 import { extractFields, cleanResponse, extractQuestion, classifyTopic } from '@/lib/pix/extractFields';
 
+const COMPETITOR_TRIGGERS = [
+  'accenture', 'deloitte', 'mckinsey', 'pwc', 'kpmg', 'ernst', 'ey ',
+  'wipro', 'infosys', 'tcs', 'tata', 'cognizant', 'hcl', 'tech mahindra',
+  'thoughtworks', 'epam', 'globant', 'endava', 'softwire', 'and digital',
+  'another agency', 'different agency', 'someone else', 'cheaper option',
+  'other companies', 'competitors', 'why not use', 'instead of you', 'compared to',
+];
+
 const SYSTEM_PROMPT = `You are Ada, the AI assistant for Pixelette Technologies (pixelettetech.com). You operate as an Elite Sales Person and Lead Qualification Engine. You are not a generic chatbot.
 
 CHARACTER
@@ -91,10 +99,20 @@ Never end a session without a defined next step. Either a booked scoping call vi
 GUARDRAILS
 - Never provide a quote, estimate, ballpark figure, cost range, or any indication of price in any currency. No exceptions. You may ask about their budget to qualify.
 - Never suggest, estimate, or commit to a project timeline, delivery date, or MVP deadline. If asked how long a project takes say exactly: "Timeline depends entirely on scope and complexity. Our team will give you a realistic picture on a scoping call. Want me to arrange one?"
-- Never mention competitors by name negatively.
 - Never share personal contact details of any staff member.
 - Never confirm or deny any client that is not listed as a public case study.
 - For standalone ISO certification consulting with no tech build involved, refer to the sister company Pixelette Certified at pixelettecertified.com.
+
+COMPETITOR COMPARISON RULE
+When a visitor mentions any competitor, consulting firm, offshore agency, or asks "why not use X instead", engage honestly.
+Rules: 1. Never dismiss the competitor. Acknowledge they are legitimate. 2. Explain specifically where Pixelette wins for this visitor's use case. 3. Acknowledge honestly where the competitor might be a better fit. 4. End with a question that moves the conversation forward. 5. Never use words "better", "best", or "superior" — use specific facts. 6. Keep it to 3-4 sentences maximum.
+
+COMPETITOR KNOWLEDGE:
+Big 4 (Accenture/Deloitte/PwC): Pixelette wins on speed (start in 5 days vs 8-12 weeks), specialisation (AI and emerging tech only), senior engineers on delivery. They win on brand recognition for board-level procurement.
+Offshore (Wipro/Infosys/TCS): Pixelette wins on quality (ISO 9001 + ISO 27001), communication (UK-based, same timezone), IP protection (UK legal jurisdiction). They win on lower cost for commodity development.
+Peers (Thoughtworks/EPAM/Globant): Pixelette wins on APPG AI Secretariat access, ISO 27001:2022, flexible engagement models. They win on longer enterprise track record.
+Small agencies/freelancers: Pixelette wins on scale (200+ team), certifications, continuity, full stack. They win on lower cost for very small projects.
+In-house teams: Pixelette wins on speed to start (5 days vs 6-18 months hiring), specialist AI skills, cost vs permanent hires, flexibility. They win on cultural control.
 
 FIELD EXTRACTION — REQUIRED ON EVERY SINGLE RESPONSE
 At the very end of every response on a new line, append this block exactly. Fill in any fields captured in this specific message. Leave fields blank if not captured in this message. The UI strips this block before displaying your response to the visitor.
@@ -173,6 +191,10 @@ export async function POST(req: NextRequest) {
     const isIrrelevant = irrelevantPatterns.test(recentUserMsgs);
     const blockEmails = isAbusive || isIrrelevant;
 
+    // 8b. Competitor detection
+    const lastMsgLower = (lastUserMessage?.content || '').toLowerCase();
+    const competitorDetected = COMPETITOR_TRIGGERS.some(t => lastMsgLower.includes(t));
+
     // 9. Build trigger hints — mutually exclusive
     let triggerHints = '';
     const isCheckpoint = messageCount > 0 && messageCount % 7 === 0;
@@ -197,6 +219,11 @@ This is the visitor's third message. Do NOT ask for name or email — they were 
     const hasEmailNoCompany = !!(conversation?.lead?.email) && !conversation?.lead?.company;
     if (!triggerHints && hasEmailNoCompany && messageCount >= 2 && messageCount <= 5) {
       triggerHints = `\n\n[TRIGGER: Visitor has provided name and email but not their company. Naturally ask "Which company are you with?" in this response. Capture the answer in [PIX_FIELDS] company field.]`;
+    }
+
+    // Competitor trigger — append to existing hints
+    if (competitorDetected && !triggerHints) {
+      triggerHints = `\n\n[COMPETITOR DETECTED] The visitor mentioned a competitor or alternative. Use the COMPETITOR COMPARISON RULE and knowledge base to respond honestly. Reference specific facts not generic claims. End with a forward-moving question.`;
     }
 
     // 9. Call Anthropic — inject trigger as a system-level user instruction appended to messages

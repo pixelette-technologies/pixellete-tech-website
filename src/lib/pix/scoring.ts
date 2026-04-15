@@ -135,6 +135,13 @@ export function scoreLead(lead: Lead, messages: Message[]): { score: number; cla
     signals.push('blocker_identified');
   }
 
+  // 20. Competitor evaluating (+4) — comparing options means further in buying process
+  const competitorWords = ['accenture', 'deloitte', 'wipro', 'infosys', 'tcs', 'thoughtworks', 'epam', 'globant', 'another agency', 'other companies', 'compared to', 'instead of', 'why not use'];
+  if (competitorWords.some(w => allUserText.includes(w))) {
+    score += 4;
+    signals.push('competitor_evaluating');
+  }
+
   // Cap at 100
   score = Math.min(score, 100);
 

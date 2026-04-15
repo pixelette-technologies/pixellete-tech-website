@@ -57,6 +57,7 @@ export function classifyTopic(question: string): string {
     web: ['website', 'web app', 'frontend', 'backend', 'next.js', 'react', 'web development'],
     quantum: ['quantum', 'qubit'],
     ar_vr: ['ar', 'vr', 'augmented', 'virtual reality', 'metaverse'],
+    competitor_mention: ['accenture', 'deloitte', 'wipro', 'infosys', 'tcs', 'thoughtworks', 'epam', 'globant', 'another agency', 'compared to', 'instead of you', 'why not use'],
     compliance: ['iso', 'certification', 'compliance', 'security', 'gdpr'],
     staffing: ['staff', 'augmentation', 'outsourc', 'dedicated team', 'hire', 'developers'],
     process: ['how do you work', 'process', 'methodology', 'agile', 'timeline', 'how long'],

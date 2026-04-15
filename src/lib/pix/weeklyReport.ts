@@ -164,6 +164,18 @@ export async function generateAndSendWeeklyReport() {
     <div style="line-height:2.2;">${topTopics.map(([t, c]) => `<span style="display:inline-block;background:rgba(109,40,217,0.12);color:#c4b5fd;padding:4px 14px;border-radius:20px;font-size:12px;font-weight:500;margin:0 6px 6px 0;border:1px solid rgba(109,40,217,0.2);">${t} (${c})</span>`).join('')}</div>
   </td></tr>` : ''}
 
+  <!-- Competitor Mentions -->
+  ${(() => {
+    const competitorQs = stats.questions.filter(q => q.topic === 'competitor_mention');
+    if (competitorQs.length === 0) return '';
+    return `<tr><td style="padding:20px 32px 0;">
+      <p style="margin:0 0 10px;font-size:11px;font-weight:600;color:#D97706;text-transform:uppercase;letter-spacing:1.5px;">Competitor Mentions This Week — ${competitorQs.length}</p>
+      <table width="100%" cellpadding="0" cellspacing="0">
+        ${competitorQs.slice(0, 8).map(q => `<tr><td style="padding:6px 0;border-bottom:1px solid #1b1f2b;font-size:13px;color:#e2e8f0;">${(q.question || '').substring(0, 100)}</td></tr>`).join('')}
+      </table>
+    </td></tr>`;
+  })()}
+
   <!-- Languages -->
   ${Object.keys(languages).length > 1 ? `<tr><td style="padding:20px 32px 0;">
     <p style="margin:0 0 10px;font-size:11px;font-weight:600;color:#475569;text-transform:uppercase;letter-spacing:1.5px;">Languages</p>
