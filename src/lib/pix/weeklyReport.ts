@@ -89,7 +89,7 @@ export async function generateAndSendWeeklyReport() {
 
   <!-- Title -->
   <tr><td style="padding:28px 32px 8px;">
-    <h1 style="margin:0;font-size:22px;color:#f8fafc;font-weight:700;">Pix Performance Report</h1>
+    <h1 style="margin:0;font-size:22px;color:#f8fafc;font-weight:700;">Ada Performance Report</h1>
     <p style="margin:6px 0 0;font-size:14px;color:#64748b;">${dateRange} &middot; ${totalLeads} lead${totalLeads !== 1 ? 's' : ''} captured</p>
   </td></tr>
 
@@ -187,7 +187,7 @@ export async function generateAndSendWeeklyReport() {
 
   <!-- Footer -->
   <tr><td style="background:#080a0f;padding:16px 32px;text-align:center;border-top:1px solid #1b1f2b;">
-    <p style="margin:0;font-size:11px;color:#475569;">Pix Weekly Intelligence &middot; <a href="https://pixelettetech.com" style="color:#6d28d9;text-decoration:none;">pixelettetech.com</a></p>
+    <p style="margin:0;font-size:11px;color:#475569;">Ada Weekly Intelligence &middot; <a href="https://pixelettetech.com" style="color:#6d28d9;text-decoration:none;">pixelettetech.com</a></p>
   </td></tr>
 
 </table>
@@ -200,9 +200,9 @@ export async function generateAndSendWeeklyReport() {
   ].filter(Boolean);
 
   await resend.emails.send({
-    from: `Pix Reports <${process.env.FROM_EMAIL || 'pix@pixelettetech.com'}>`,
+    from: `Ada Reports <${process.env.FROM_EMAIL || 'pix@pixelettetech.com'}>`,
     to: recipients,
-    subject: `Pix Weekly Report — ${dateRange} — ${totalLeads} leads (${hotUrgentCount} hot/urgent)`,
+    subject: `Ada Weekly Report — ${dateRange} — ${totalLeads} leads (${hotUrgentCount} hot/urgent)`,
     html,
   });
 

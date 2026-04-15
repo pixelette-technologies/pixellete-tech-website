@@ -11,7 +11,7 @@ export async function runQualityCheck(sessionId: string, messages: Message[]) {
     const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
 
     const conversationText = messages
-      .map(m => `${m.role === 'user' ? 'Visitor' : 'Pix'}: ${m.content}`)
+      .map(m => `${m.role === 'user' ? 'Visitor' : 'Ada'}: ${m.content}`)
       .join('\n');
 
     const response = await client.messages.create({
@@ -21,12 +21,12 @@ export async function runQualityCheck(sessionId: string, messages: Message[]) {
         {
           role: 'user',
           content: `Rate this sales conversation quality from 1-10. Criteria:
-1. Did Pix learn about the visitor before pitching?
-2. Did Pix avoid discussing money/pricing?
-3. Did Pix attempt to capture email by message 3?
-4. Did Pix identify the correct service line?
-5. Did Pix maintain a professional, curious tone?
-6. Did Pix attempt to advance toward a booking or next step?
+1. Did Ada learn about the visitor before pitching?
+2. Did Ada avoid discussing money/pricing?
+3. Did Ada attempt to capture email by message 3?
+4. Did Ada identify the correct service line?
+5. Did Ada maintain a professional, curious tone?
+6. Did Ada attempt to advance toward a booking or next step?
 
 Conversation:
 ${conversationText}

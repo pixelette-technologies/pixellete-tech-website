@@ -157,7 +157,7 @@ export async function sendLeadEmail(lead: Lead, conversationSummary: string) {
         <p style="margin:0 0 8px;font-size:10px;font-weight:600;color:#475569;text-transform:uppercase;letter-spacing:1.5px;">Session Metadata</p>
         <table width="100%" cellpadding="0" cellspacing="0">
           <tr><td style="font-size:12px;color:#475569;padding:3px 0;">Session ID</td><td style="font-size:12px;color:#64748b;text-align:right;padding:3px 0;font-family:monospace;">${lead.session_id || 'N/A'}</td></tr>
-          <tr><td style="font-size:12px;color:#475569;padding:3px 0;">Messages</td><td style="font-size:12px;color:#64748b;text-align:right;padding:3px 0;">${conversationSummary.split('\n').filter(l => l.startsWith('Visitor:')).length} visitor, ${conversationSummary.split('\n').filter(l => l.startsWith('Pix:')).length} bot</td></tr>
+          <tr><td style="font-size:12px;color:#475569;padding:3px 0;">Messages</td><td style="font-size:12px;color:#64748b;text-align:right;padding:3px 0;">${conversationSummary.split('\n').filter(l => l.startsWith('Visitor:')).length} visitor, ${conversationSummary.split('\n').filter(l => l.startsWith('Ada:')).length} bot</td></tr>
           <tr><td style="font-size:12px;color:#475569;padding:3px 0;">Captured at</td><td style="font-size:12px;color:#64748b;text-align:right;padding:3px 0;">${timestamp}</td></tr>
         </table>
       </td></tr>
@@ -166,7 +166,7 @@ export async function sendLeadEmail(lead: Lead, conversationSummary: string) {
 
   <!-- Footer -->
   <tr><td style="background:#080a0f;padding:16px 32px;text-align:center;border-top:1px solid #1b1f2b;">
-    <p style="margin:0;font-size:11px;color:#475569;">Pix Lead Intelligence &middot; <a href="https://pixelettetech.com" style="color:#6d28d9;text-decoration:none;">pixelettetech.com</a></p>
+    <p style="margin:0;font-size:11px;color:#475569;">Ada Lead Intelligence &middot; <a href="https://pixelettetech.com" style="color:#6d28d9;text-decoration:none;">pixelettetech.com</a></p>
   </td></tr>
 
 </table>
@@ -174,7 +174,7 @@ export async function sendLeadEmail(lead: Lead, conversationSummary: string) {
 </body></html>`;
 
   await resend.emails.send({
-    from: `Pix Lead Alert <${process.env.FROM_EMAIL || 'pix@pixelettetech.com'}>`,
+    from: `Ada Lead Alert <${process.env.FROM_EMAIL || 'pix@pixelettetech.com'}>`,
     to: process.env.SALES_EMAIL || 'sales@pixelettetech.com',
     replyTo: lead.email || undefined,
     subject: `${config.icon} ${config.label} Lead: ${safeName} — ${safeService} (${lead.score || 0}/100)`,
