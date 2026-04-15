@@ -411,36 +411,36 @@ export default function PixWidget() {
         .pix-launcher {
           position: fixed; bottom: 28px; right: 28px; z-index: 9999;
           width: 64px; height: 64px; border-radius: 50%;
-          background: linear-gradient(135deg, #0A1628 0%, #1a0a2e 60%, #2d1b4e 100%);
-          border: 2px solid rgba(167, 139, 250, 0.4);
+          background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 50%, #5b21b6 100%);
+          border: none;
           cursor: pointer;
           display: flex; align-items: center; justify-content: center;
-          box-shadow: 0 6px 24px rgba(10, 22, 40, 0.5), 0 0 40px rgba(109, 40, 217, 0.2);
+          box-shadow: 0 8px 30px rgba(109, 40, 217, 0.5), 0 0 50px rgba(109, 40, 217, 0.2);
           transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
         .pix-launcher::before, .pix-launcher::after {
           content: ''; position: absolute;
           width: 100%; height: 100%; border-radius: 50%;
-          border: 2px solid rgba(109, 40, 217, 0.6);
+          border: 2.5px solid rgba(124, 58, 237, 0.7);
           animation: pix-ring-pulse 2s ease-out infinite;
         }
         .pix-launcher::after { animation-delay: 1s; }
         @keyframes pix-ring-pulse {
-          0% { transform: scale(1); opacity: 0.8; }
-          100% { transform: scale(2.2); opacity: 0; }
+          0% { transform: scale(1); opacity: 0.9; }
+          100% { transform: scale(2.4); opacity: 0; }
         }
         .pix-launcher:hover {
-          transform: scale(1.1);
-          animation: none;
-          box-shadow: 0 8px 32px rgba(10, 22, 40, 0.6), 0 0 60px rgba(109, 40, 217, 0.35);
+          transform: scale(1.12);
+          box-shadow: 0 8px 36px rgba(109, 40, 217, 0.6), 0 0 70px rgba(124, 58, 237, 0.3);
         }
         .pix-chat-bubble {
           position: fixed; bottom: 100px; right: 28px; z-index: 9999;
-          background: #141926; color: #e2e8f0;
+          background: linear-gradient(135deg, #7c3aed, #5b21b6);
+          color: #fff;
           padding: 14px 20px; border-radius: 16px 16px 4px 16px;
           font-size: 14px; font-weight: 500; max-width: 240px;
-          border: 1px solid rgba(109, 40, 217, 0.3);
-          box-shadow: 0 8px 32px rgba(0,0,0,0.4), 0 0 40px rgba(109,40,217,0.1);
+          border: none;
+          box-shadow: 0 8px 32px rgba(109,40,217,0.4), 0 0 50px rgba(124,58,237,0.15);
           animation: pix-bubble-in 0.4s ease-out;
           cursor: pointer; font-family: 'Outfit', sans-serif;
           line-height: 1.4;
@@ -449,13 +449,13 @@ export default function PixWidget() {
           content: ''; position: absolute; bottom: -8px; right: 28px;
           width: 0; height: 0;
           border-left: 8px solid transparent; border-right: 8px solid transparent;
-          border-top: 8px solid #141926;
+          border-top: 8px solid #5b21b6;
         }
         .pix-bubble-close {
           position: absolute; top: -8px; right: -8px;
           width: 20px; height: 20px; border-radius: 50%;
-          background: #1b1f2b; border: 1px solid #2d3748;
-          color: #94a3b8; font-size: 12px; cursor: pointer;
+          background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.2);
+          color: #fff; font-size: 12px; cursor: pointer;
           display: flex; align-items: center; justify-content: center;
           line-height: 1;
         }
@@ -472,8 +472,8 @@ export default function PixWidget() {
           height: 560px; max-height: calc(100vh - 130px);
           background: #141926;
           border-radius: 20px;
-          border: 1px solid rgba(109, 40, 217, 0.2);
-          box-shadow: 0 12px 48px rgba(0, 0, 0, 0.5), 0 0 80px rgba(109, 40, 217, 0.08);
+          border: 1px solid rgba(124, 58, 237, 0.25);
+          box-shadow: 0 12px 48px rgba(0, 0, 0, 0.6), 0 0 60px rgba(109, 40, 217, 0.15), 0 0 120px rgba(109, 40, 217, 0.05);
           display: flex; flex-direction: column;
           overflow: hidden;
           opacity: 0; transform: translateY(16px) scale(0.97);
@@ -484,10 +484,10 @@ export default function PixWidget() {
 
         /* Header */
         .pix-header {
-          background: linear-gradient(135deg, #0A1628 0%, #111827 100%);
+          background: linear-gradient(135deg, #1e1145 0%, #2d1b69 50%, #1e1145 100%);
           color: #fff; padding: 18px 20px;
           display: flex; align-items: center; gap: 12px;
-          border-bottom: 1px solid rgba(109, 40, 217, 0.2);
+          border-bottom: 1px solid rgba(124, 58, 237, 0.3);
         }
         .pix-avatar {
           width: 40px; height: 40px; border-radius: 12px;
