@@ -515,10 +515,10 @@ export default function PixWidget() {
           position: fixed; bottom: 100px; right: 28px; z-index: 9998;
           width: 390px; max-width: calc(100vw - 56px);
           height: 560px; max-height: calc(100vh - 130px);
-          background: rgba(7, 23, 41, 0.75);
+          background: rgba(7, 23, 41, 0.88);
           border-radius: 16px;
           box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-          backdrop-filter: blur(9.3px); -webkit-backdrop-filter: blur(9.3px);
+          backdrop-filter: blur(5px); -webkit-backdrop-filter: blur(5px);
           border: 1px solid rgba(12, 12, 33, 0.4);
           display: flex; flex-direction: column;
           overflow: hidden;
@@ -530,8 +530,8 @@ export default function PixWidget() {
 
         /* Header */
         .pix-header {
-          background: rgba(12, 12, 33, 0.8);
-          backdrop-filter: blur(9.3px); -webkit-backdrop-filter: blur(9.3px);
+          background: rgba(12, 12, 33, 0.88);
+          backdrop-filter: blur(5px); -webkit-backdrop-filter: blur(5px);
           color: #fff; padding: 18px 20px;
           display: flex; align-items: center; gap: 12px;
           border-bottom: 1px solid rgba(124, 58, 237, 0.2);
@@ -562,7 +562,7 @@ export default function PixWidget() {
         .pix-messages {
           flex: 1; overflow-y: auto; padding: 20px 16px; display: flex;
           flex-direction: column; gap: 10px;
-          background: rgba(7, 23, 41, 0.5);
+          background: rgba(7, 23, 41, 0.88);
           scrollbar-width: thin; scrollbar-color: #1e293b transparent;
         }
         .pix-messages::-webkit-scrollbar { width: 4px; }
@@ -607,14 +607,14 @@ export default function PixWidget() {
         .pix-input-area {
           padding: 14px 16px; border-top: 1px solid rgba(12, 12, 33, 0.4);
           display: flex; align-items: flex-end; gap: 10px;
-          background: rgba(7, 23, 41, 0.6);
+          background: rgba(7, 23, 41, 0.88);
         }
         .pix-textarea {
           flex: 1; border: 1px solid rgba(12, 12, 33, 0.3);
           border-radius: 12px; padding: 10px 16px;
           font-size: 13.5px; resize: none; max-height: 100px;
           font-family: inherit; outline: none; line-height: 1.4;
-          background: rgba(7, 23, 41, 0.5); color: #e2e8f0;
+          background: rgba(7, 23, 41, 0.88); color: #e2e8f0;
           transition: border-color 0.2s;
           overflow-y: auto; scrollbar-width: none;
         }
@@ -696,8 +696,8 @@ export default function PixWidget() {
         .pix-intro-form {
           flex: 1; display: flex; flex-direction: column;
           justify-content: center; padding: 32px 24px;
-          background: rgba(7, 23, 41, 0.7);
-          backdrop-filter: blur(9.3px); -webkit-backdrop-filter: blur(9.3px);
+          background: rgba(7, 23, 41, 0.88);
+          backdrop-filter: blur(5px); -webkit-backdrop-filter: blur(5px);
           gap: 16px;
         }
         .pix-intro-form h3 {
@@ -713,8 +713,8 @@ export default function PixWidget() {
           border: 1px solid rgba(12, 12, 33, 0.3);
           border-radius: 12px; padding: 14px 18px;
           font-size: 14px; font-family: inherit; outline: none;
-          background: rgba(7, 23, 41, 0.5);
-          backdrop-filter: blur(9.3px); -webkit-backdrop-filter: blur(9.3px);
+          background: rgba(7, 23, 41, 0.88);
+          backdrop-filter: blur(5px); -webkit-backdrop-filter: blur(5px);
           color: #fff;
           transition: border-color 0.2s, background 0.2s;
         }
