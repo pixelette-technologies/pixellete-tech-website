@@ -403,11 +403,17 @@ export default function PixWidget() {
           display: flex; align-items: center; justify-content: center;
           box-shadow: 0 6px 24px rgba(10, 22, 40, 0.5), 0 0 40px rgba(109, 40, 217, 0.2);
           transition: transform 0.2s ease, box-shadow 0.2s ease;
-          animation: pix-glow 2.5s ease-in-out infinite;
         }
-        @keyframes pix-glow {
-          0%, 100% { box-shadow: 0 6px 24px rgba(10,22,40,0.5), 0 0 20px rgba(109,40,217,0.2); }
-          50% { box-shadow: 0 6px 30px rgba(10,22,40,0.6), 0 0 50px rgba(109,40,217,0.4), 0 0 80px rgba(109,40,217,0.15); }
+        .pix-launcher::before, .pix-launcher::after {
+          content: ''; position: absolute;
+          width: 100%; height: 100%; border-radius: 50%;
+          border: 2px solid rgba(109, 40, 217, 0.6);
+          animation: pix-ring-pulse 2s ease-out infinite;
+        }
+        .pix-launcher::after { animation-delay: 1s; }
+        @keyframes pix-ring-pulse {
+          0% { transform: scale(1); opacity: 0.8; }
+          100% { transform: scale(2.2); opacity: 0; }
         }
         .pix-launcher:hover {
           transform: scale(1.1);
