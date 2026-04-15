@@ -8,6 +8,7 @@ import { scrapeWebsite, extractUrlFromMessage } from '@/lib/pix/scraper';
 import { checkRateLimit, getIpFromRequest } from '@/lib/pix/rateLimit';
 import { verifyTurnstile } from '@/lib/pix/turnstile';
 import { extractFields, cleanResponse, extractQuestion, classifyTopic } from '@/lib/pix/extractFields';
+import { generatePreBrief, formatBriefAsHTML } from '@/lib/pix/preBrief';
 
 const COMPETITOR_TRIGGERS = [
   'accenture', 'deloitte', 'mckinsey', 'pwc', 'kpmg', 'ernst', 'ey ',
@@ -363,10 +364,20 @@ This is the visitor's third message. Do NOT ask for name or email — they were 
     );
 
     if (shouldFireEmail) {
-      Promise.allSettled([
-        sendLeadEmail(lead, summary),
-        ...(isHotOrUrgent ? [runQualityCheck(sessionId, messages)] : []),
-      ]);
+      if (isHotOrUrgent) {
+        // Generate pre-brief for hot/urgent leads, then send email with it
+        Promise.allSettled([
+          (async () => {
+            const brief = await generatePreBrief(fullMessages, lead);
+            const briefHTML = formatBriefAsHTML(brief, lead);
+            await sendLeadEmail(lead, summary, briefHTML);
+          })(),
+          runQualityCheck(sessionId, messages),
+        ]);
+      } else {
+        // Regular email without brief for warm/cold
+        Promise.allSettled([sendLeadEmail(lead, summary)]);
+      }
     }
 
     // 17. Return response

@@ -64,7 +64,7 @@ function fieldRow(label: string, value: string, isLink?: boolean): string {
   return `<tr><td style="padding:10px 0;border-bottom:1px solid #1a1a2e;width:130px;font-size:13px;color:#64748b;font-weight:500;">${label}</td><td style="padding:10px 0;border-bottom:1px solid #1a1a2e;font-size:14px;">${display}</td></tr>`;
 }
 
-export async function sendLeadEmail(lead: Lead, conversationSummary: string) {
+export async function sendLeadEmail(lead: Lead, conversationSummary: string, briefHTML?: string) {
   const tier = lead.classification || 'cold';
   const config = TIER_CONFIG[tier] || TIER_CONFIG.cold;
   const safeName = sanitize(lead.name, 100) || 'Anonymous';
@@ -157,6 +157,9 @@ export async function sendLeadEmail(lead: Lead, conversationSummary: string) {
       ${lead.email ? `<table cellpadding="0" cellspacing="0" style="margin-top:14px;"><tr><td style="background:#6d28d9;border-radius:8px;padding:10px 24px;"><a href="mailto:${escapeHtml(sanitize(lead.email, 100))}?subject=Re: Your enquiry with Pixelette Technologies" style="color:#fff;text-decoration:none;font-size:13px;font-weight:600;">Reply to ${escapeHtml(safeName)}</a></td></tr></table>` : ''}
     </td></tr></table>
   </td></tr>
+
+  <!-- Pre-call brief -->
+  ${briefHTML ? `<tr><td style="padding:0 32px 20px;">${briefHTML}</td></tr>` : ''}
 
   <!-- Metadata -->
   <tr><td style="padding:0 32px 20px;">

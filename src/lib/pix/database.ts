@@ -118,7 +118,7 @@ export async function upsertLead(sessionId: string, fields: Partial<Lead>) {
   return { lead, previousClassification };
 }
 
-export async function saveQualityCheck(sessionId: string, aiRating: number, aiNotes: string) {
+export async function saveQualityCheck(sessionId: string, aiRating: number, aiNotes: string, preBrief?: unknown) {
   const { data: conv } = await supabaseAdmin
     .from('conversations')
     .select('id')
@@ -133,6 +133,7 @@ export async function saveQualityCheck(sessionId: string, aiRating: number, aiNo
       conversation_id: conv.id,
       ai_rating: aiRating,
       ai_notes: aiNotes,
+      ...(preBrief ? { pre_brief: preBrief } : {}),
     });
 }
 

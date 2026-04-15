@@ -63,3 +63,6 @@ ALTER TABLE leads ADD COLUMN IF NOT EXISTS success_metric text;
 ALTER TABLE leads ADD COLUMN IF NOT EXISTS main_blocker text;
 ALTER TABLE leads ADD COLUMN IF NOT EXISTS block_emails boolean DEFAULT false;
 ALTER TABLE leads ADD COLUMN IF NOT EXISTS status_reason text;
+
+-- Phase 2: Pre-brief storage
+ALTER TABLE quality_checks ADD COLUMN IF NOT EXISTS pre_brief jsonb;
