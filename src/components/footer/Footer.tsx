@@ -179,7 +179,7 @@ export const Footer: React.FC = () => {
               },
               {
                 Icon: HiLocationMarker,
-                text: '6305 Naples Blvd Naples, FL 34109, USA (Headquarter)',
+                text: '6305 Naples Blvd Naples, FL 34109, USA',
               },
             ].map((contact, index) => (
               <div key={index}>
