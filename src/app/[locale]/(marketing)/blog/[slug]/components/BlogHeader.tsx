@@ -8,7 +8,7 @@ type BlogHeaderProps = {
 };
 
 export const BlogHeader: React.FC<BlogHeaderProps> = ({ title, author, updatedAt }) => {
-  const authorName = author?.fields?.name as string || 'Unknown Author';
+  const authorName = author?.fields?.name as string || 'Pixelette Team';
 
   return (
     <div>
