@@ -33,6 +33,12 @@ withNextIntl({
   async redirects() {
     return [
       {
+        source: '/:path*',
+        has: [{ type: 'host', value: 'www.pixelettetech.com' }],
+        destination: 'https://pixelettetech.com/:path*',
+        permanent: true,
+      },
+      {
         source: '/deliver',
         destination: '/it-outsourcing-services',
         permanent: true,
