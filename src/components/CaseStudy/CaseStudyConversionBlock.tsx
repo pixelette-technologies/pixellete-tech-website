@@ -211,7 +211,7 @@ export default function CaseStudyConversionBlock({
           />
           <Image
             src="/images/home/appg.png"
-            alt="APPG AI Secretariat"
+            alt="APPG AI — strategic stake in Big Innovation Centre, the Secretariat"
             width={80}
             height={40}
             className={styles.trustBadge}

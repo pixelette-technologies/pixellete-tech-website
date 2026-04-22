@@ -27,10 +27,10 @@ export const HeroSection: React.FC<HeroSectionProps> = () => {
             {Array.from({ length: 6 }).map((_, idx) => (
               <img
                 key={idx}
-                src={`/images/home/hero/box_${idx + 1}.svg`} // Static path for box images
+                src={`/images/home/hero/box_${idx + 1}.svg`}
                 alt={`box ${idx + 1}`}
-                loading="lazy"
-                // className={`${styles.boxImage} ${styles[`.box${idx + 1}`]}`}
+                loading="eager"
+                decoding="async"
               />
             ))}
           </blockquote>

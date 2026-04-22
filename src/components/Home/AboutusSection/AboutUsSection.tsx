@@ -214,7 +214,7 @@ const AboutUsSection: React.FC = () => {
                   />
                 </div>
                 <p className="certificate-text">
-                  Official Secretariat of the British Government's AI policy body (APPG AI)
+                  BIC, secretariat to the UK Parliament&rsquo;s APPG on AI
                 </p>
               </div>
 

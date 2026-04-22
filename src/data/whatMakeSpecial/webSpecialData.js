@@ -1,7 +1,7 @@
 export const webSpecialData = [
   {
     heading: 'Government and Industry Recognition',
-    text: 'Recognised by industry leaders and government bodies for excellence in web development, official secretariat for the prestigious All Party Parliamentary Groups on AI and Blockchain in the UK.',
+    text: 'Recognised by industry leaders and government bodies for excellence in web development, with a strategic equity stake in Big Innovation Centre, the Secretariat to the UK Parliament’s APPG on AI, and earlier involvement with the APPG on Blockchain.',
   },
   {
     heading: 'World-Class Development Team',

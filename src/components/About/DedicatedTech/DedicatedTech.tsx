@@ -29,7 +29,7 @@ const cards: Card[] = [
   {
     title: 'Impact Creation',
     content: [
-      'Official Secretariat of the British Government’s AI policy body (APPG AI)',
+      'Strategic equity stake in Big Innovation Centre, the Secretariat to the UK Parliament’s APPG on AI',
       'Awarded ‘Best AI Agency UK’ three times by the Scotland Business Awards',
       '200+ successful projects with over 100+ million project views',
     ],

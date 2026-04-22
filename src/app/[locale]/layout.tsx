@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     default: 'Pixelette Technologies | Enterprise AI & Blockchain Development',
     template: '%s | Pixelette Technologies',
   },
-  description: 'APPG AI Secretariat. ISO 9001 & ISO 27001 certified. 200+ products shipped across 13 countries. Enterprise AI, blockchain and custom software development.',
+  description: 'Strategic stake in the Secretariat to the UK Parliament\'s APPG on AI. ISO 9001 & ISO 27001 certified. 200+ products shipped across 13 countries. Enterprise AI, blockchain and custom software development.',
   openGraph: {
     siteName: 'Pixelette Technologies',
     locale: 'en_GB',
@@ -45,7 +45,7 @@ export function generateStaticParams() {
 }
 
 const outfit = Outfit({
-  weight: ['100', '300', '400', '600', '900'],
+  weight: ['300', '400', '600', '900'],
   subsets: ['latin'],
   variable: '--font-outfit',
   display: 'swap',

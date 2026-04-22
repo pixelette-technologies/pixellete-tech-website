@@ -1,7 +1,7 @@
 export const homeSpecialData = [
   {
     heading: 'Government Endorsement',
-    text: 'Recognised by key government bodies, such as the prestigious APPG AI and APPG Blockchain, showcasing our trusted expertise and leadership in technology.',
+    text: 'Connected to the UK Parliament’s APPG on AI and APPG on Blockchain through our founder’s strategic equity stake in Big Innovation Centre, the APPG AI Secretariat.',
   },
   {
     heading: 'World-Class Team',

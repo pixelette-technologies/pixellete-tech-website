@@ -134,7 +134,7 @@ export async function generateMetadata(props: IIndexProps) {
     },
     openGraph: {
       title: 'Pixelette Technologies | Enterprise AI & Blockchain Development',
-      description: 'APPG AI Secretariat. ISO 9001 & ISO 27001 certified. 200+ products shipped across 13 countries.',
+      description: 'Strategic stake in the Secretariat to the UK Parliament\'s APPG on AI. ISO 9001 & ISO 27001 certified. 200+ products shipped across 13 countries.',
       url: 'https://pixelettetech.com',
       type: 'website',
       images: [{
@@ -147,7 +147,7 @@ export async function generateMetadata(props: IIndexProps) {
     twitter: {
       card: 'summary_large_image',
       title: 'Pixelette Technologies | Enterprise AI & Blockchain Development',
-      description: 'APPG AI Secretariat. ISO 9001 & ISO 27001 certified. 200+ products shipped across 13 countries.',
+      description: 'Strategic stake in the Secretariat to the UK Parliament\'s APPG on AI. ISO 9001 & ISO 27001 certified. 200+ products shipped across 13 countries.',
       images: ['/og/homepage.png'],
     },
   };
@@ -183,7 +183,7 @@ export default async function Index(props: IIndexProps) {
         'https://www.facebook.com/pixelette.technologies',
         'https://www.instagram.com/pixelettetechnologies/',
         'https://find-and-update.company-information.service.gov.uk/company/11716825',
-        'https://appg-ai.org',
+        'https://www.biginnovationcentre.com/',
       ],
     };
   };
@@ -191,15 +191,7 @@ export default async function Index(props: IIndexProps) {
     <>
       {/* <div className="main-content"></div> */}
 
-      <AnimatedSection
-        animation="fadeIn"
-        delay={0}
-        gradientColors={['transparent', 'rgba(0, 0, 0, 0.7)']}
-        gradientHeight="200px"
-        gradientBlurAmount={15}
-      >
-        <HeroSection />
-      </AnimatedSection>
+      <HeroSection />
 
       <AnimatedSection
         animation="fadeUp"

@@ -1,7 +1,7 @@
 export const mobileSpecialData = [
   {
     heading: 'Government Trust and Recognition:',
-    text: 'Endorsed by governments, including as chairs of the UK Government’s APPGs, our development practices are trusted at the highest levels for security and innovation.',
+    text: 'Endorsed by governments, with a strategic equity stake in Big Innovation Centre, the Secretariat to the UK Parliament’s APPG on AI. Our development practices are trusted at the highest levels for security and innovation.',
   },
   {
     heading: 'Award-Winning Excellence:',

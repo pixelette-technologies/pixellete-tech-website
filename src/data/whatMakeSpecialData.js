@@ -1,7 +1,7 @@
 export const whatMakeSpecialData = [
   {
     heading: 'Government Endorsement',
-    text: 'AI leaders by decree: Chairs of the UK Government’s AI Task Force – APPG AI. Also working with 7 other governments worldwide',
+    text: 'Connected to the APPG on AI and APPG on Blockchain through our founder’s strategic equity stake in Big Innovation Centre, the APPG AI Secretariat. Also working with 7 other governments worldwide',
   },
   {
     heading: 'World-Class Team',

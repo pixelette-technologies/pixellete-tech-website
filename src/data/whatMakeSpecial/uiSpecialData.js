@@ -1,7 +1,7 @@
 export const uiSpecialData = [
   {
     heading: 'Government Trust and Recognition:',
-    text: 'Endorsed by industry and governments for excellence, exclusively chair UK’s leading APPGs.',
+    text: 'Endorsed by industry and governments, with a strategic equity stake in Big Innovation Centre, the Secretariat to the UK Parliament’s APPG on AI.',
   },
   {
     heading: 'World-Class Design Team: ',
