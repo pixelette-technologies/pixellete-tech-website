@@ -47,5 +47,21 @@ yarn-error.log*
 # local folder
 local
 
+# audit script output (may contain sensitive CMS data)
+/output
+
+# content import drafts (contains unreleased blog copy)
+/drafts
+
+# Claude Code workspace (local only)
+.claude/
+
+# Reference docs (not project artefacts)
+*.docx
+
+# Ad-hoc test scripts
+test_*.js
+test_*.txt
+
 # vercel
 .vercel
