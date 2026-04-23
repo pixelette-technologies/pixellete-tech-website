@@ -1,6 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import matter from 'gray-matter';
+import type { MDXRemoteSerializeResult } from 'next-mdx-remote';
 import readingTime from 'reading-time';
 import type { Blog, BlogFrontmatter } from '@/types/blog';
 
@@ -55,4 +56,18 @@ export function getAllBlogs(): Blog[] {
 
 export function getRecentBlogs(count: number): Blog[] {
   return getAllBlogs().slice(0, count);
+}
+
+export async function getBlogBySlugWithMDX(
+  slug: string,
+): Promise<(Blog & { mdxSource: MDXRemoteSerializeResult }) | null> {
+  const blog = getBlogBySlug(slug);
+  if (!blog) return null;
+  // Dynamic import: next-mdx-remote pulls in pure-ESM packages (estree-walker etc)
+  // that cannot be loaded via Node CJS. Lazy-loading keeps synchronous helpers
+  // (getBlogBySlug, getAllBlogs) accessible to simple Node scripts like tsx tests.
+  // Next.js bundler handles the resolution at build time for runtime pages.
+  const { serializeBlogContent } = await import('./blog-mdx');
+  const mdxSource = await serializeBlogContent(blog.content);
+  return { ...blog, mdxSource };
 }
