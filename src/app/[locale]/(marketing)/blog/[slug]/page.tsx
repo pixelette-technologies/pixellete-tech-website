@@ -1,19 +1,64 @@
-import { fetchAllBlogSlugs, fetchBlogMetadata } from '@/libs/contentful';
+import type { Metadata } from 'next';
+import { notFound } from 'next/navigation';
+import { getBlogBySlug, getBlogSlugs } from '@/lib/blog';
 import BlogDetail from './BlogDetail';
 
-export async function generateStaticParams() {
-  const slugs = await fetchAllBlogSlugs(); // Fetch all blog slugs from Contentful
-  return slugs.map(({ slug }) => ({
-    // locale: 'en', // or dynamically add locales if needed
-    slug, // Now guaranteed to be a string
-  }));
+type RouteParams = {
+  slug: string;
+};
+
+type PageProps = {
+  params: Promise<RouteParams>;
+};
+
+export async function generateStaticParams(): Promise<RouteParams[]> {
+  return getBlogSlugs().map(slug => ({ slug }));
 }
 
-export async function generateMetadata({ params }: { params: { slug: string } }) {
-  const metadata = await fetchBlogMetadata(params.slug);
-  return metadata || { title: 'Blockchain Experts', description: 'Read more about blockchain topics.' };
+export async function generateMetadata(
+  { params }: PageProps,
+): Promise<Metadata> {
+  const { slug } = await params;
+  const blog = getBlogBySlug(slug);
+
+  if (!blog) {
+    return {
+      title: 'Blog Not Found | Pixelette Technologies',
+      description: 'The blog post you are looking for could not be found.',
+    };
+  }
+
+  const { frontmatter } = blog;
+
+  return {
+    title: frontmatter.title,
+    description: frontmatter.description,
+    openGraph: {
+      title: frontmatter.title,
+      description: frontmatter.description,
+      type: 'article',
+      publishedTime: frontmatter.publishDate,
+      modifiedTime: frontmatter.updatedDate ?? frontmatter.publishDate,
+      images: frontmatter.thumbnailImage
+        ? [{ url: frontmatter.thumbnailImage }]
+        : [],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: frontmatter.title,
+      description: frontmatter.description,
+      images: frontmatter.thumbnailImage ? [frontmatter.thumbnailImage] : [],
+    },
+  };
 }
 
-export default function BlogDetailPage({ params }: { params: { slug: string } }) {
-  return <BlogDetail params={params} />;
+export default async function BlogDetailPage({ params }: PageProps) {
+  const { slug } = await params;
+  const blog = getBlogBySlug(slug);
+
+  if (!blog) {
+    notFound();
+  }
+
+  return <BlogDetail params={{ slug }} />;
 }
