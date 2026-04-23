@@ -1,7 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import matter from 'gray-matter';
-import type { MDXRemoteSerializeResult } from 'next-mdx-remote';
 import readingTime from 'reading-time';
 import type { Blog, BlogFrontmatter } from '@/types/blog';
 
@@ -126,17 +125,17 @@ export function extractTableOfContents(markdown: string): TOCItem[] {
   return headings;
 }
 
+/**
+ * Fetch a blog plus its derived Table of Contents.
+ * The raw markdown body is returned on `content` — the RSC MDXRemote renderer
+ * in BlogContent.tsx compiles it server-side on render. No separate serialize
+ * step is needed on the Next.js 15 / React 19 stack.
+ */
 export async function getBlogBySlugWithMDX(
   slug: string,
-): Promise<(Blog & { mdxSource: MDXRemoteSerializeResult; toc: TOCItem[] }) | null> {
+): Promise<(Blog & { toc: TOCItem[] }) | null> {
   const blog = getBlogBySlug(slug);
   if (!blog) return null;
-  // Dynamic import: next-mdx-remote pulls in pure-ESM packages (estree-walker etc)
-  // that cannot be loaded via Node CJS. Lazy-loading keeps synchronous helpers
-  // (getBlogBySlug, getAllBlogs) accessible to simple Node scripts like tsx tests.
-  // Next.js bundler handles the resolution at build time for runtime pages.
-  const { serializeBlogContent } = await import('./blog-mdx');
-  const mdxSource = await serializeBlogContent(blog.content);
   const toc = extractTableOfContents(blog.content);
-  return { ...blog, mdxSource, toc };
+  return { ...blog, toc };
 }
