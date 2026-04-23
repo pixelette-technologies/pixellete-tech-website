@@ -1,69 +1,85 @@
 'use client';
+
 import Image from 'next/image';
 import React, { useState } from 'react';
 
 type BlogMediaProps = {
-  thumbnailImage: {
-    fields: {
-      file: {
-        contentType: string;
-        url: string;
-      };
-    };
-  };
+  thumbnailImage: string;
+  title: string;
+  isVideo?: boolean;
 };
 
-export const BlogMedia: React.FC<BlogMediaProps> = ({ thumbnailImage }) => {
+export const BlogMedia: React.FC<BlogMediaProps> = ({
+  thumbnailImage,
+  title,
+  isVideo = false,
+}) => {
   const [playVideo, setPlayVideo] = useState(false);
 
-  if (!thumbnailImage?.fields?.file) {
+  if (!thumbnailImage) {
     return null;
   }
 
-  const contentType = thumbnailImage.fields.file.contentType.split('/')[0];
-
-  if (contentType === 'video') {
+  if (isVideo) {
     return (
-      <div>
+      <div className="videoCard" style={{ position: 'relative', marginBottom: '2rem' }}>
         {playVideo
           ? (
-              <div className="videoCard">
-                <video
-                  width="320"
-                  height="240"
-                  controls
-                  preload="none"
-                  autoPlay
-                  onEnded={() => setPlayVideo(false)}
-                >
-                  <source src={`https:${thumbnailImage.fields.file.url}`} type="video/mp4" />
-                </video>
-              </div>
+              <video controls autoPlay style={{ maxWidth: '100%', width: '100%', height: 'auto' }}>
+                <source src={thumbnailImage} />
+                Your browser does not support the video tag.
+              </video>
             )
           : (
-              <div className="videoCard">
-                <button type="button" className="playBtn" onClick={() => setPlayVideo(true)}>
-                  <Image src="/images/playIcon.svg" width="30" height="30" alt="Play" />
-                </button>
-              </div>
+              <button
+                type="button"
+                onClick={() => setPlayVideo(true)}
+                aria-label={`Play video: ${title}`}
+                style={{
+                  position: 'relative',
+                  display: 'block',
+                  width: '100%',
+                  border: 'none',
+                  padding: 0,
+                  cursor: 'pointer',
+                  background: 'transparent',
+                }}
+              >
+                <video
+                  style={{ maxWidth: '100%', width: '100%', height: 'auto' }}
+                  preload="metadata"
+                >
+                  <source src={thumbnailImage} />
+                </video>
+                <span
+                  aria-hidden="true"
+                  style={{
+                    position: 'absolute',
+                    top: '50%',
+                    left: '50%',
+                    transform: 'translate(-50%, -50%)',
+                    fontSize: '4rem',
+                    color: 'white',
+                    textShadow: '0 0 20px rgba(0,0,0,0.6)',
+                  }}
+                >
+                  ▶
+                </span>
+              </button>
             )}
       </div>
     );
   }
 
-  if (contentType === 'image') {
-    return (
-      <div className="blogDetailBanner">
-        <Image
-          src={`https:${thumbnailImage.fields.file.url}`}
-          quality={100}
-          width={1000}
-          height={250}
-          alt="blog-img"
-        />
-      </div>
-    );
-  }
-
-  return null;
+  return (
+    <div className="blogDetailBanner">
+      <Image
+        src={thumbnailImage}
+        quality={100}
+        width={1000}
+        height={250}
+        alt={title}
+      />
+    </div>
+  );
 };
