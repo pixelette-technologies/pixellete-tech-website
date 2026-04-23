@@ -12,16 +12,12 @@ import rehypeAutolinkHeadings from 'rehype-autolink-headings';
  *
  * Edit this file to change how all blog content renders.
  *
- * Type note: next-mdx-remote v6 does not re-export SerializeOptions from its
- * main entry, and the /dist/types subpath is not exported. We use a structural
- * type that accepts the plugins array shapes unified across remark/rehype.
+ * Type note: next-mdx-remote's SerializeOptions is not re-exported from its
+ * main entry, and mdx/types is not installed. TypeScript infers the exact
+ * plugin tuple types from the values below, which satisfies the stricter
+ * CompileOptions shape expected by MDXRemote in BlogContent.tsx.
  */
-type MdxOptions = {
-  remarkPlugins?: unknown[];
-  rehypePlugins?: unknown[];
-};
-
-export const mdxOptions: MdxOptions = {
+export const mdxOptions = {
   remarkPlugins: [remarkGfm],
   rehypePlugins: [
     rehypeSlug,
