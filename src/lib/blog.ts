@@ -58,9 +58,77 @@ export function getRecentBlogs(count: number): Blog[] {
   return getAllBlogs().slice(0, count);
 }
 
+export type TOCItem = {
+  id: string;
+  text: string;
+};
+
+/**
+ * Extract H2 headings from a Markdown body to build a table of contents.
+ * IDs must match what rehype-slug generates in the rendered HTML so anchor
+ * links from the TOC actually scroll to the matching heading.
+ *
+ * rehype-slug uses github-slugger internally. This regex-based implementation
+ * replicates its behaviour for ASCII input: lowercase, non-word stripping,
+ * whitespace-to-hyphen, and numeric suffixes for duplicates.
+ *
+ * Edge case: non-ASCII / unicode headings (e.g. Arabic, French accents) may
+ * produce slugs that diverge slightly from github-slugger. All 36 current
+ * blogs are English, so acceptable. If this becomes a problem later, switch
+ * to importing github-slugger directly.
+ */
+export function extractTableOfContents(markdown: string): TOCItem[] {
+  const headings: TOCItem[] = [];
+  const seen = new Map<string, number>();
+
+  const lines = markdown.split('\n');
+  let inCodeBlock = false;
+
+  for (const line of lines) {
+    if (line.trim().startsWith('```')) {
+      inCodeBlock = !inCodeBlock;
+      continue;
+    }
+    if (inCodeBlock) continue;
+
+    const match = /^##\s+(.+?)\s*$/.exec(line);
+    if (!match) continue;
+
+    const text = match[1]!.trim();
+    // Strip markdown inline syntax for clean display text
+    const cleanText = text
+      .replace(/\*\*(.*?)\*\*/g, '$1')
+      .replace(/\*(.*?)\*/g, '$1')
+      .replace(/`(.*?)`/g, '$1')
+      .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1');
+
+    // Match rehype-slug / github-slugger behaviour for ASCII
+    let slug = cleanText
+      .toLowerCase()
+      .replace(/[^\w\s-]/g, '')
+      .replace(/\s+/g, '-')
+      .replace(/-+/g, '-')
+      .replace(/^-+|-+$/g, '');
+
+    // Duplicate handling: first occurrence is bare, subsequent get -1, -2, ...
+    const count = seen.get(slug) ?? 0;
+    if (count > 0) {
+      const uniqueSlug = `${slug}-${count}`;
+      seen.set(slug, count + 1);
+      slug = uniqueSlug;
+    } else {
+      seen.set(slug, 1);
+    }
+
+    headings.push({ id: slug, text: cleanText });
+  }
+
+  return headings;
+}
+
 export async function getBlogBySlugWithMDX(
   slug: string,
-): Promise<(Blog & { mdxSource: MDXRemoteSerializeResult }) | null> {
+): Promise<(Blog & { mdxSource: MDXRemoteSerializeResult; toc: TOCItem[] }) | null> {
   const blog = getBlogBySlug(slug);
   if (!blog) return null;
   // Dynamic import: next-mdx-remote pulls in pure-ESM packages (estree-walker etc)
@@ -69,5 +137,6 @@ export async function getBlogBySlugWithMDX(
   // Next.js bundler handles the resolution at build time for runtime pages.
   const { serializeBlogContent } = await import('./blog-mdx');
   const mdxSource = await serializeBlogContent(blog.content);
-  return { ...blog, mdxSource };
+  const toc = extractTableOfContents(blog.content);
+  return { ...blog, mdxSource, toc };
 }
