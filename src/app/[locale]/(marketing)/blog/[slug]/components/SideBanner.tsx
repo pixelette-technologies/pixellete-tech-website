@@ -1,69 +1,14 @@
-import type { Text } from '@contentful/rich-text-types';
-import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
-import { BLOCKS } from '@contentful/rich-text-types';
+import Link from 'next/link';
+import Image from 'next/image';
 import React from 'react';
+import type { BlogBanner } from '@/types/blog';
 
 type SideBannerProps = {
-  sideBannerAd: any;
-  resolvedAssets: any[];
+  banner: BlogBanner | null;
 };
 
-export const SideBanner: React.FC<SideBannerProps> = ({ sideBannerAd, resolvedAssets }) => {
-  const getTextContent = (node: any): string => {
-    const textNode = node.content?.find((child: any) => 'value' in child) as Text | undefined;
-    return textNode?.value || '';
-  };
-
-  const renderOptions = {
-    renderNode: {
-      [BLOCKS.HEADING_2]: (node: any, children: React.ReactNode) => {
-        const textContent = getTextContent(node);
-        const id = textContent.replace(/\s+/g, '-').toLowerCase();
-        return <h2 id={id}>{children}</h2>;
-      },
-      [BLOCKS.HEADING_3]: (node: any, children: React.ReactNode) => {
-        const textContent = getTextContent(node);
-        const id = textContent.replace(/\s+/g, '-').toLowerCase();
-        return <h3 id={id}>{children}</h3>;
-      },
-      [BLOCKS.HEADING_4]: (node: any, children: React.ReactNode) => {
-        const textContent = getTextContent(node);
-        const id = textContent.replace(/\s+/g, '-').toLowerCase();
-        return <h4 id={id} style={{ fontSize: '24px' }}>{children}</h4>;
-      },
-      [BLOCKS.EMBEDDED_ASSET]: (node: any) => {
-        const assetId = node.data.target.sys.id;
-        const asset = resolvedAssets.find((item: any) => item.sys.id === assetId);
-
-        if (!asset) {
-          return null;
-        }
-
-        const { file, title } = asset.fields;
-        const contentType = file.contentType.split('/')[0];
-
-        if (contentType === 'image') {
-          return (
-            <img
-              src={`https:${file.url}`}
-              alt={title}
-              style={{ maxWidth: '60%', height: 'auto', paddingBottom: '10px' }}
-            />
-          );
-        }
-
-        if (contentType === 'video') {
-          return (
-            <video controls style={{ maxWidth: '100%' }}>
-              <source src={`https:${file.url}`} type={file.contentType} />
-            </video>
-          );
-        }
-
-        return <span>Unsupported asset type</span>;
-      },
-    },
-  };
+export const SideBanner: React.FC<SideBannerProps> = ({ banner }) => {
+  if (!banner) return null;
 
   return (
     <div
@@ -79,9 +24,44 @@ export const SideBanner: React.FC<SideBannerProps> = ({ sideBannerAd, resolvedAs
         zIndex: 10,
       }}
     >
-      <div>
-        {sideBannerAd && documentToReactComponents(sideBannerAd.fields.sideAdbanner, renderOptions)}
-      </div>
+      {banner.image
+        ? (
+            <div style={{ marginBottom: '1.5rem' }}>
+              <Image
+                src={banner.image}
+                alt={banner.headline}
+                width={400}
+                height={200}
+                style={{ maxWidth: '100%', height: 'auto', borderRadius: '8px' }}
+              />
+            </div>
+          )
+        : null}
+
+      <h2 style={{ marginTop: 0, marginBottom: '1rem' }}>{banner.headline}</h2>
+
+      {banner.body
+        ? (
+            <p style={{ marginBottom: '1.5rem', opacity: 0.9 }}>{banner.body}</p>
+          )
+        : null}
+
+      <Link
+        href={banner.ctaLink}
+        style={{
+          display: 'inline-block',
+          padding: '0.875rem 1.75rem',
+          borderRadius: '8px',
+          background: '#ffffff',
+          color: '#0a0a1e',
+          textDecoration: 'none',
+          fontWeight: 600,
+          width: '100%',
+          textAlign: 'center',
+        }}
+      >
+        {banner.ctaText}
+      </Link>
     </div>
   );
 };
