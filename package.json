@@ -119,6 +119,7 @@
     "autoprefixer": "^10.4.20",
     "checkly": "^4.14.0",
     "commitizen": "^4.3.1",
+    "contentful-management": "^12.3.1",
     "cross-env": "^7.0.3",
     "cssnano": "^7.0.6",
     "dotenv-cli": "^7.4.4",
