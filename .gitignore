@@ -63,5 +63,9 @@ local
 test_*.js
 test_*.txt
 
+# next-sitemap output (regenerated every build)
+/public/sitemap.xml
+/public/sitemap-0.xml
+
 # vercel
 .vercel
