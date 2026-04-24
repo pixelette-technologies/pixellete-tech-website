@@ -22,33 +22,6 @@ type CaseStudiesProps = {
 };
 
 export const CaseStudies = ({ heading, initialData }: CaseStudiesProps) => {
-  // const [caseStudyData, setCaseStudyData] = useState<CaseStudy[]>(initialData);
-
-  // useEffect(() => {
-  //   const fetchCaseStudies = async () => {
-  //     try {
-  //       const client = createClient({
-  //         space: 'ggtsbq0gqfii',
-  //         accessToken: 'VZvVye8dMIc497wF-1pNt5rdYUG-h4E30uX58AcGVUo',
-  //         // space: process.env.CONTENTFUL_SPACE_ID || '',
-  //         // accessToken: process.env.CONTENTFUL_ACCESS_TOKEN || '',
-  //       });
-
-  //       const response: EntryCollection<CaseStudy> = await client.getEntries({
-  //         content_type: 'caseStudies',
-  //       });
-
-  //       setCaseStudyData(response.items);
-  //     } catch (error) {
-  //       console.error('Error fetching data:', error);
-  //     }
-  //   };
-
-  //   if (!initialData) {
-  //     fetchCaseStudies();
-  //   }
-  // }, [initialData]);
-
   return (
     <>
       <Container className={styles.main}>
@@ -88,32 +61,5 @@ export const CaseStudies = ({ heading, initialData }: CaseStudiesProps) => {
     </>
   );
 };
-
-// export const getServerSideProps = async () => {
-//   try {
-//     const client = createClient({
-//       space: process.env.CONTENTFUL_SPACE_ID || '',
-//       accessToken: process.env.CONTENTFUL_ACCESS_TOKEN || '',
-//     });
-
-//     const response: EntryCollection<CaseStudy> = await client.getEntries({
-//       content_type: 'caseStudies',
-//     });
-
-//     return {
-//       props: {
-//         initialData: response.items,
-//       },
-//     };
-//   } catch (error) {
-//     console.error('Error fetching data on the server:', error);
-
-//     return {
-//       props: {
-//         initialData: [],
-//       },
-//     };
-//   }
-// };
 
 export default CaseStudies;

@@ -30,20 +30,6 @@ export const ProjectSection: React.FC = () => {
   // const slider = useRef<Slider | null>(null);
 
   // useEffect(() => {
-  //   const client = createClient({
-  //     space: 'ggtsbq0gqfii',
-  //     accessToken: 'VZvVye8dMIc497wF-1pNt5rdYUG-h4E30uX58AcGVUo',
-  //   });
-
-  //   client
-  //     .getEntries<CaseStudyFields>({ content_type: 'caseStudies' })
-  //     .then((response) => {
-  //       setBlogData(response.items);
-  //     })
-  //     .catch(error => console.error('Error fetching data:', error));
-  // }, []);
-
-  // useEffect(() => {
   //   if (blogData.length > 0) {
   //     setFilteredData(
   //       blogData.filter(caseStudy =>
