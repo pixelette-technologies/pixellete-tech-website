@@ -2,308 +2,276 @@
 title: How to Make a Mobile App That Earns Real Money
 slug: how-to-make-a-mobile-app-that-earns-real-money
 description: >-
-  global revenue expected to surpass $585.70 billion by 2025. Apps like
-  Instagram, Temu and TikTok have captured
-author: hamid-ayub
+  Profitable mobile apps: monetisation models (freemium 72%), unit economics,
+  build costs (£20k-£400k+), acquisition strategy. UK pricing and HSE founder
+  model.
+author: temur-khan
 publishDate: '2025-01-21'
-updatedDate: '2025-03-03'
+updatedDate: '2026-04-24'
 thumbnailImage: /images/blog/how-to-make-a-mobile-app-that-earns-real-money.jpg
 readTime: 12
 ---
-The mobile app industry is skyrocketing, with global revenue expected to surpass $585.70 billion by 2025. Apps like Instagram, Temu and TikTok have captured the world’s attention, amassing millions of downloads and generating immense profits. But have you ever wondered what makes these apps so successful – not just in gaining users but in earning revenue?
+## Direct Answer
 
-If you’re looking to build and monetize a mobile app, you’re in the right place. Whether you’re considering in-app ads, subscription models or other monetization strategies, this guide will help you how to make money from mobile apps. 
+Building a profitable mobile app requires matching your business model to realistic market conditions rather than optimistic assumptions about user willingness to pay. Freemium (free download with in-app purchases or subscriptions) generates approximately 72 percent of total consumer app revenue globally. Paid apps generate less than 5 percent. Customer acquisition cost must be significantly lower than customer lifetime value after platform fees (which take 30 percent of gross revenue) for unit economics to work. Most apps fail not because of technical quality but because customer acquisition cost exceeds lifetime value, underlying market demand is insufficient, or the app solves a problem that users care about too little to pay for. The decisions that determine success or failure happen before code is written: market validation, monetisation model selection, and unit economics analysis matter more than technical implementation quality.
 
-## Understanding app monetization
+---
 
-App monetization is the process of turning your app into a revenue-generating tool. Whether through ads, subscriptions or in-app purchases, understanding how to effectively monetize ensures sustainable growth for your app. Below, we'll explore the basics of what app monetization is and the key reasons why you should monetize your app.
+## Who this guide is for
 
-### What is app monetization?
+**This guide is written for:**
 
-App monetization is the strategy of earning revenue from a mobile application. It involves using various methods, such as in-app purchases, subscriptions, advertisements and premium features, to generate income while providing value to users.
+- Founders and entrepreneurs evaluating whether to build a mobile app and what business model to pursue.
+- Product managers assessing the mobile channel as a go-to-market option alongside web or API-based alternatives.
+- Technology executives deciding whether to greenfield a mobile app or extend an existing web product to mobile.
+- Growth-stage companies evaluating mobile app monetisation optimisation.
 
-Contrary to common myths, app monetization isn't limited to ads alone. Many believe that ads are the only way to make apps profitable, but successful monetization often combines different strategies suited to the app's audience and purpose.
+It assumes commercial literacy and understanding of unit economics. It does not assume mobile development expertise; the focus is on business viability rather than implementation detail.
 
-### Why monetize your free app?
+---
 
-Monetizing a free app allows you to maintain accessibility while unlocking significant revenue potential. With the right approach, even free apps can drive profitability without alienating users. Let’s look at some benefits of monetizing a free app. 
+**TL;DR, Key Takeaways**
 
-#### 1. Reach a wider audience
+- The mobile app market is enormous but highly concentrated. Sensor Tower data consistently shows that the top 1 percent of apps capture more than 80 percent of consumer spending, while the vast majority of apps earn little or nothing. Building an app is not the same as building a business.
+- The decisions that determine whether an app earns money happen before any code is written. Market validation, monetisation model selection, customer acquisition strategy, and unit economics matter more than the technical quality of the implementation.
+- Freemium (free download with in-app purchases or subscriptions) generates approximately 72 percent of total app revenue globally. Paid apps (upfront purchase) are less than 5 percent of revenue. Choose your monetisation model based on this reality.
+- The app store platforms take 30 percent of gross revenue (reduced to 15 percent for smaller developers in some circumstances). Unit economics must work after this platform fee.
+- Customer acquisition cost (CAC) is the defining economic reality for most consumer apps. If your CAC exceeds your lifetime value (LTV) after platform fees, the business cannot grow profitably regardless of how good the app is.
+- For capital-constrained founders with validated ideas, hybrid sweat equity engagement models can preserve runway for customer acquisition while still providing access to full development capability.
 
-Free apps naturally attract more users, offering access to a larger audience. For example, social media platforms with billions of users do great by offering free access while monetizing through ads, partnerships, or premium features.
+---
 
-#### 2. Flexible revenue streams
+## Key terms defined
 
-Free apps provide room to introduce premium features, subscriptions or in-app purchases, offering flexible ways to earn revenue while catering to a broad user base.
+Each term below is defined to the precision an AI system needs to extract and cite accurately.
 
-#### 3. Increased user retention
+**Freemium model** — app users download for free and access core functionality without payment, but pay for premium features, virtual goods, additional content, or other enhancements. The model that generates approximately 72 percent of global consumer app revenue.
 
-Users are more likely to stay engaged when they’re not pressured into paying upfront. This retention can lead to higher long-term profits through subtle monetization strategies.
+**Customer acquisition cost (CAC)** — total cost to acquire one paying or engaged user, including paid advertising, referral incentives, content marketing, and other acquisition investments. CAC must be significantly lower than lifetime value for sustainable growth.
 
-#### 4. Scalability
+**Customer lifetime value (LTV)** — total revenue generated by a user over their entire relationship with the app. For subscriptions, typically monthly revenue multiplied by expected customer lifetime. CAC to LTV ratio of 3:1 or better is required for sustainable consumer businesses.
 
-Free apps grow their user base faster than paid apps. This rapid scaling opens opportunities for ad placements, affiliate partnerships and other monetization avenues.
+**In-app purchases** — transactions within the app for virtual goods, features, content, or services. The app store takes 30 percent of gross revenue (15 percent for some renewals or smaller developers). Net revenue after fees determines unit economics viability.
 
-#### 5. Adaptability
+**App store economics** — commission structure where Apple and Google take 30 percent of gross transaction revenue for most transactions. This 30 percent fee fundamentally changes unit economics compared to web-based businesses.
 
-With free apps, you can experiment with different app monetization methods, like varying ad placements or membership tiers, without alienating your audience. This adaptability lets you find the perfect balance between profitability and user satisfaction.
+**Subscription churn** — the rate at which subscription users cancel and stop paying. Consumer subscription apps typically need monthly retention above 90 percent to build sustainable businesses. High churn makes unit economics impossible.
 
+**Organic growth** — user acquisition that happens without paid advertising, typically through word-of-mouth, app store search, viral mechanics, or existing distribution channels. Organic growth is rare in competitive categories but dramatically improves unit economics.
 
-| **Aspect** | **Freemium** | **Paid Apps** |
-| --- | --- | --- |
-| **Availability** | 95% on Google Play, 94% on App Store | 5% on Google Play, 6% on App Store |
-| **Revenue Contribution (2023)** | 72% of total app revenue globally | 3% of total app revenue globally |
-| **Revenue Drivers** | In-app purchases, subscriptions | Upfront payments |
-| **User Preference** | High engagement and retention | Limited due to upfront cost |
+**Minimum viable product (MVP)** — the simplest version of an app that demonstrates core functionality and allows real user feedback. MVP building should be validated before committing to full-featured development.
 
-## 
-Choosing the right app business model
+---
 
-Selecting the ideal business model for your app is a critical decision that directly impacts its revenue potential and user experience. Below is an overview of popular app revenue models to help you figure out how to generate revenue from apps according to your goals. 
+The mobile app market is one of the largest technology markets in the world, with global revenue approaching £500 billion according to Statista's 2024 research. But the distribution of that revenue is brutally concentrated. Sensor Tower's 2024 app economy analysis consistently shows that a small fraction of apps capture the overwhelming majority of consumer spending, while most apps earn little or nothing. The gap between "build an app" and "build an app that generates meaningful revenue" is larger than most founders appreciate.
 
-### 1. App freemium model
+This guide is different from the generic "monetise your app" articles that dominate search results. It covers the honest economics of mobile app businesses, the decisions that actually determine whether an app earns money, and the realistic path for founders to build profitable mobile app businesses in a mature and competitive market. It is written for founders serious about building real businesses, not for hobbyists looking for weekend project ideas.
 
-Offer basic features for free while charging users for advanced or premium features. This model allows you to attract a broad audience while monetizing through optional upgrades.
+The premise matters: most mobile apps fail as businesses not because they are technically bad but because the underlying business model does not work. The app stores are crowded, customer acquisition is expensive, platform fees are substantial, and user willingness to pay is lower than founders typically expect. Understanding these realities before committing to development saves far more capital than any implementation optimisation.
 
-### 2. Paid apps
 
-Charge users an upfront fee to download the app. While this model ensures immediate revenue, it typically requires high perceived value to convince users to pay upfront.
+## The mobile app market reality
 
-### 3. In-app purchases
+Before choosing a monetisation model or thinking about features, understand the market you are entering.
 
-Generate revenue by selling virtual goods, features, or upgrades directly within the app. This model works well for games, e-commerce apps and tools offering customizations or add-ons.
+**Market size and concentration.** The mobile app market is large (approximately £500 billion globally according to Statista) but extremely concentrated. The top 1 percent of apps capture most of the revenue. Data.ai research has shown that most apps on the major app stores generate less than £1,000 per year, and many generate nothing at all. This concentration is not evenly distributed; gaming, dating, and subscription-based productivity apps capture disproportionate shares.
 
-### 4. In-app advertising
+**Platform economics.** Apple and Google each take 30 percent of gross revenue from most transactions on their platforms (reduced to 15 percent for developers earning less than $1 million per year, or for subscription renewals after the first year in some cases). This is not negotiable, and it fundamentally changes the unit economics of app businesses compared to web-based businesses where no platform fee applies.
 
-Monetize by displaying ads to users, earning revenue from impressions or clicks. This approach works best for mobile apps with high user engagement and large audiences.
+**App store discovery.** With millions of apps on the major stores, organic discovery is increasingly difficult. Most apps that succeed commercially do so through paid user acquisition, viral growth, or existing distribution channels (brand presence, web audience, B2B partnerships). Relying on app store search and "featured" placement is not a viable go-to-market strategy for most apps.
 
-### 5. App subscription model
+**Consumer spending patterns.** Most consumers spend money on very few apps. Research consistently shows that the average consumer pays for only a handful of apps or subscriptions, concentrated in a few categories (music streaming, video streaming, dating, games, productivity). Entering these categories means competing with entrenched incumbents; entering other categories means fighting low willingness to pay.
 
-Create recurring app revenue streams by charging users a monthly or annual fee for continued access to content or services. Ideal for apps offering ongoing value, such as fitness, productivity or entertainment platforms.
+**Revenue distribution by monetisation model.** Freemium with in-app purchases and subscriptions generates approximately 72 percent of total consumer app revenue globally. In-app advertising generates most of the remainder. Paid apps (upfront purchases) generate less than 5 percent of revenue. The market has effectively decided that consumers prefer free downloads with optional spending over upfront payments.
 
-### 6. App gamification and rewards
+These realities do not mean mobile apps are a bad business. They mean the decisions that determine success or failure are different from what most founder advice suggests. The right focus is on business model design, customer acquisition economics, and market selection, not on technical implementation details.
 
-Incorporate engaging experiences like challenges, points, or rewards to keep users invested and willing to spend money. This approach is particularly effective for gaming apps and loyalty programs.
 
-### 7. Hybrid models
+## Which monetisation models actually work for mobile apps?
 
-Combine multiple strategies such as offering a freemium app with in-app purchases and subscription options to diversify revenue streams and appeal to different user segments.
+Five monetisation models dominate the mobile app market. Each has different economics, implementation requirements, and fit with different use cases.
 
-Each model comes with unique strengths and challenges, so consider your app's purpose, target audience and market dynamics when making your choice.
+### 1. Freemium with in-app purchases
 
-Choosing the right mobile app monetization method is crucial for balancing user satisfaction and revenue generation. Below is an in-depth look at key approaches to help you optimize your app's earning potential.
+**Definition:** The app is free to download. Users can access core functionality without payment, but pay for premium features, virtual goods, additional content, or other value enhancements. This is the dominant model for mobile gaming and a significant portion of productivity and utility apps.
 
-## App monetization methods
+**Best for:** Gaming apps, utility apps with clear premium value, apps where the free tier meaningfully demonstrates value but creates natural upgrade motivation.
 
-Choosing the right monetization method is crucial for balancing user satisfaction and revenue generation. Below is an in-depth look at key approaches to help you optimize your app's earning potential.
+**Economics:** Conversion rates from free to paying users are typically 1 to 5 percent for most freemium apps. Gaming apps can achieve higher conversion through engagement mechanics. The combination of high download volume and low conversion rate means freemium works best when customer acquisition cost is low (organic growth, viral mechanics) or when per-paying-user revenue is high (whales in gaming).
 
-### 1. In-app advertising
+**Why it fits:** Users download free apps at much higher volumes than paid apps, creating scale that enables monetisation through small percentage conversions. The free tier demonstrates value before asking for payment, reducing user acquisition friction.
 
-Integrating ads into your app is a popular and effective way to generate revenue without charging users directly.
+**Common failure mode:** The free tier is either too generous (no motivation to upgrade) or too restrictive (users abandon before experiencing value). Finding the right balance requires iteration with real users.
 
-#### Types of in-app ads
+### 2. Subscription model
 
-- Banner ads **→** Small, static ads displayed at the top or bottom of the screen.
-- Interstitial ads **→** Full-screen ads that appear at natural transition points, such as between levels in a game.
-- Rewarded ads **→** Ads that offer users incentives like extra lives or bonuses in exchange for watching.
+**Definition:** Users pay a recurring fee (monthly or annual) for ongoing access to the app's features or content. This is the dominant model for productivity apps, content services, and certain utility apps.
 
-#### In-app ads best practices
+**Best for:** Apps providing continuous value rather than one-time transactions, content-heavy apps, productivity and workflow apps, apps with meaningful usage that continues over time.
 
-- Use non-intrusive placements to avoid disrupting the user experience.
-- Match ad content to your target audience for better engagement and click-through rates.
+**Economics:** Subscription businesses benefit from recurring revenue, predictable cash flow, and the compounding effects of customer retention. The critical metric is retention: high-churn subscription businesses cannot scale profitably because customer acquisition cost never amortises. Apps targeting consumer subscriptions need monthly retention above 90 percent to build sustainable businesses.
 
-### 2. In-app purchases
+**Pricing reality:** Consumer subscription pricing is typically £2 to £15 per month for most categories. Premium categories (professional tools, specialised content) can command higher prices. Most consumers are resistant to annual pricing above £50 per year for single-purpose apps.
 
-Selling items directly within the app is a lucrative way to monetize, especially for games and lifestyle apps.
+**Why it fits:** Recurring revenue enables long-term unit economics planning that one-time purchase models cannot achieve. High retention subscriptions have lifetime values that justify customer acquisition investment.
 
-#### Consumable vs. non-consumable items
+**Common failure mode:** Subscription fatigue is real. Consumers are increasingly reluctant to add new subscriptions and actively cancel existing ones during periodic cost reviews. Apps need genuine ongoing value, not just one-time utility, to justify recurring payment.
 
-- Consumable **→** Items that can be used up, such as in-game currency or health points.
-- Non-consumable **→** Permanent purchases like ad removals or feature unlocks.
+### 3. In-app advertising
 
-#### Examples of in-app purchases success
+**Definition:** The app is free to use and monetises by displaying advertisements to users. Revenue depends on ad impressions, click-through rates, and the advertising market rates for the app's demographic.
 
-Popular games often sell power-ups, skins or tools to encourage players to spend while enhancing their experience.
+**Best for:** High-volume consumer apps with substantial usage time, casual games, content apps, apps targeting demographics that advertisers value.
 
-### 3. Subscriptions
+**Economics:** Ad revenue per user is typically low (£0.50 to £5 per user per month for most categories) unless the app has exceptional engagement or valuable audience demographics. This means ad-supported apps need very large user bases to generate meaningful revenue. Niche apps rarely succeed with ad monetisation because the audience is too small.
 
-Subscriptions offer recurring income by providing ongoing access to exclusive features, content or services.
+**Implementation considerations:** Ad networks (Google AdMob, Meta Audience Network, Unity Ads, AppLovin) provide the infrastructure. Rewarded video ads and interstitials generally produce higher revenue than banner ads. Privacy regulations (Apple's App Tracking Transparency, GDPR, UK GDPR) have reduced advertising effectiveness and revenue since 2021.
 
-#### Advantages of subscription-based apps
+**Why it fits:** Removes payment friction for users who cannot afford to pay. Enables monetisation of large but low-spending user bases. No credit card required reduces user acquisition friction.
 
-- Creates a predictable revenue stream.
-- Encourages long-term user engagement and loyalty.
+**Common failure mode:** Over-aggressive ad placement drives users away faster than revenue accumulates. The best ad-supported apps balance monetisation against user experience carefully.
 
-#### Examples of subscription tools and platforms
+### 4. Paid apps (upfront purchase)
 
-Platforms like Stripe, RevenueCat and PayPal simplify subscription management and payment processing.
+**Definition:** Users pay a one-time fee to download the app. The model that dominated early app stores has largely been displaced by freemium and subscription approaches.
 
-### 4. Paid apps
+**Best for:** Niche professional tools with clear, unique value, apps with brand recognition from other channels, specialised utility apps where users expect to pay.
 
-Charging users an upfront fee works best for apps with unique value or niche appeal.
+**Economics:** Upfront payment creates a high psychological barrier. The vast majority of app store users will not pay to download an app without strong reason. Successful paid apps typically charge £2 to £10 for consumer apps and up to £50 or more for professional tools. Revenue is front-loaded at download; there is no ongoing monetisation unless combined with other models.
 
-#### How to justify the cost
+**Why it fits:** Attracts users who expect to pay and are serious about solving the problem. Eliminates free-rider users and bots. Creates clear value exchange before download.
 
-- Offer a clear value proposition, such as premium features or ad-free experiences.
-- Use strong user reviews and testimonials to build trust.
+**Common failure mode:** Paid apps face inherent growth constraints because every user requires payment. Customer acquisition cost is amortised over a single payment rather than a lifetime of value, making growth economically challenging.
 
-#### Examples of high-earning paid apps
+### 5. Hybrid models
 
-Apps like “Procreate” (design) and “Pocket Casts” (podcasting) are profitable apps catering to highly targeted user needs.
+**Definition:** Most successful mobile apps combine multiple monetisation approaches. A typical pattern: free download, ad-supported basic usage, in-app purchases for specific features or content, and optional premium subscription to remove ads and unlock additional capabilities.
 
-### Emerging trends in monetization
+**Best for:** Most consumer apps that need to maximise revenue from different user segments. The hybrid approach captures value from users who would not pay at all (through ads), users who would pay small amounts occasionally (through in-app purchases), and users who would commit to ongoing relationships (through subscriptions).
 
-As user preferences evolve, new monetization strategies are gaining traction.
+**Implementation considerations:** Hybrid models are more complex to implement and require careful design to avoid overwhelming users with monetisation touchpoints. The best implementations feel natural rather than pressured.
 
-#### 1. Gamification elements
+**Why it fits:** Captures value across the full spectrum of user segments. Balances free-tier scale with multiple revenue channels. Enables monetisation testing and optimisation.
 
-Adding challenges, achievements and points keeps users engaged and willing to spend.
 
-#### 2. Reward-based ads
+## Why most apps fail to earn money
 
-Ads that provide tangible rewards, like discounts or app credits, increase user interaction and satisfaction.
+The honest analysis of why most apps fail matters more than generic advice about monetisation models. The common causes:
 
-#### 3. Subscription bundles and partnerships
+**The problem is not painful enough.** Apps solving trivial problems or "nice to have" needs struggle to generate willingness to pay. Consumers will download them if free and uninstall them quickly; they will not pay for them. Successful apps solve problems that users experience frequently and care about enough to invest time or money in addressing.
 
-Offering bundled subscriptions or collaborating with other apps/services to provide added value enhances user retention and maximizes revenue.
+**Customer acquisition cost exceeds lifetime value.** The single most common economic failure in mobile apps. Paid user acquisition in most competitive categories costs £2 to £20 per install, while lifetime value for most apps is lower than this. Without organic growth or viral mechanics, the math simply does not work. Founders who build before calculating unit economics routinely discover this only after spending significant capital.
 
-By understanding and implementing these methods, you can craft a monetization strategy that aligns with your app’s purpose and audience.
+**The market is already saturated by dominant incumbents.** Entering categories with entrenched leaders (TikTok for short video, Spotify for music, Duolingo for language learning) means competing for attention and spending against companies with orders of magnitude more resources. Most new entrants in saturated categories fail regardless of execution quality.
 
-## How to build an app designed for profitability
+**The app is a feature, not a product.** Many "app ideas" are features that could exist within a larger product rather than standalone products deserving separate installation. Users rarely download apps for single features when alternative ways exist to access the same capability.
 
-Building an app that stands out in today’s competitive market requires more than just an innovative idea - it demands strategic planning, execution and a focus on profitability at every stage. Here’s a step-by-step guide to ensure your app isn’t just functional but also financially rewarding.
+**Post-launch effort is insufficient.** Building the app is often less than half the work. Ongoing marketing, customer acquisition, user feedback response, feature development, platform updates, and operational support require sustained investment. Founders who treat launch as the finish line typically see their apps decay into irrelevance within months.
 
-### 1. Market research and validation
+**The monetisation is designed for the founder rather than the user.** Apps that aggressively monetise early in the user journey, before demonstrating meaningful value, create friction and drive users away. The best monetisation models align founder revenue with user value, not against it.
 
-Before writing a single line of code, validate your app idea. Identifying your target audience and their needs is critical to ensuring your app has a paying market.
 
-**How to do it**
+## What does it actually cost to build a profitable mobile app?
 
-- Conduct surveys and interviews to pinpoint user pain points.
-- Analyze competitors to see what works and what doesn’t.
-- Use tools like Google Trends, Statista and App Annie to assess demand for similar apps.
+Most founders dramatically underestimate the cost of building a mobile app that has a realistic chance of earning money. The cost depends on complexity, platform coverage, and what "done" means.
 
-**Why it matters for profitability**
+**Simple consumer app, single platform:** £20,000 to £50,000 for initial build. Typical capabilities include user authentication, basic content or functionality, simple in-app purchases, standard design. This is the minimum realistic investment for an app with any chance of competing in consumer markets.
 
-A validated idea reduces the risk of investing in a product that won’t sell, ensuring your app resonates with an audience willing to pay for it.
+**Moderate consumer or business app, cross-platform:** £40,000 to £150,000 for initial build. Typical capabilities include more sophisticated functionality, real-time features, back-end services, custom design, integration with third-party services, testing across multiple device types.
 
-### 2. UI/UX design
+**Complex app with advanced features:** £100,000 to £400,000+ for initial build. This tier includes advanced features (AI integration, real-time collaboration, complex back-end systems, advanced security, multi-language support), enterprise-grade architecture, and thorough testing.
 
-A good user experience is the cornerstone of a profitable app. If users struggle to navigate your app or encounter friction, they’re unlikely to stick around or spend money.
+**Beyond initial build.** Typical ongoing costs for maintaining and growing a mobile app are 20 to 40 percent of initial build cost per year. This covers bug fixes, platform updates (iOS and Android release new major versions annually that may require significant updates), feature additions, infrastructure, and the engineering capacity to keep the app functional as the broader ecosystem evolves.
 
-**Best practices**
+**Customer acquisition budget.** This is often the largest hidden cost. For a consumer app aiming for meaningful user acquisition, typical budgets are £10,000 to £100,000 per month depending on scale and competitive intensity. Most apps that fail do so because they have budget for development but not for acquisition.
 
-- Prioritize simplicity and clarity in your design to minimize confusion.
-- Use intuitive navigation, fast loading times, and visually appealing elements.
-- Conduct usability testing with tools like Figma, Hotjar or UserTesting to refine the user experience.
+**Total first-year cost.** A realistic first-year total (build, infrastructure, customer acquisition, operational support) for a consumer app attempting to enter the market typically ranges from £80,000 to £500,000 or more. Founders who budget only for the build phase are consistently surprised by the full cost.
 
-**Why it matters for profitability**
+For a detailed cost framework for software development broadly, see [How Much Software Development Costs](/blog/how-much-software-development-costs).
 
-A well-designed app boosts retention rates and user satisfaction, increasing the likelihood of in-app purchases, subscriptions, or ad engagement.
 
-### 3. Development best practices
+## How do you know if an app's unit economics will work?
 
-Your app's technical foundation is crucial for long-term profitability. Building an app that performs efficiently and scales as demand grows prevents costly errors down the road.
+Every mobile app founder should calculate unit economics before committing to build. The calculation:
 
-**How to do it**
+**Customer acquisition cost (CAC):** How much does it cost to acquire one paying or engaged user? This includes paid advertising, referral incentives, content marketing, and any other customer acquisition investment, divided by the users acquired.
 
-- Choose the right platform based on your audience - iOS for higher-paying users or Android for broader reach.
-- Build a scalable backend using cloud-based solutions like AWS or Firebase.
-- Incorporate analytics tools to track user behavior and app performance.
+**Customer lifetime value (LTV):** How much revenue does a user generate over their entire relationship with the app? For subscription apps, this is average revenue per user multiplied by expected customer lifetime. For in-app purchase apps, this is average spending per user. For advertising-supported apps, this is lifetime ad revenue per user.
 
-**Why it matters for profitability**
+**Platform fee reality:** Remember that Apple and Google take 30 percent (or 15 percent in some cases) of transactions. LTV calculations should use net revenue after platform fees, not gross.
 
-Efficient development minimizes maintenance costs, while scalability ensures your app can handle growth without disruptions that could drive users away.
+**LTV to CAC ratio:** The ratio between lifetime value and acquisition cost. Sustainable consumer businesses typically require LTV:CAC ratios of 3:1 or better. Lower ratios mean the business cannot grow profitably. Higher ratios provide room for scaling investment.
 
-### 4. Pre-launch planning
+**Worked example.** A mobile subscription app charging £10 per month. Platform fee is 30 percent, so net revenue per paying user per month is £7. Average customer lifetime is 8 months (typical for consumer subscription apps before churn), so LTV is £56. If customer acquisition cost is £20 per paying customer, LTV:CAC is 56:20 or 2.8:1. This is borderline viable.
 
-Success begins before your app even hits the market. A strategic pre-launch phase ensures your app gains visibility and builds excitement.
+If the same app has customer acquisition cost of £40 (more competitive category), LTV:CAC becomes 1.4:1, which is not sustainable. The founder must either improve retention (extend customer lifetime), raise prices, reduce CAC, or reconsider the business model.
 
-**Key strategies**
+Founders who calculate unit economics before launch identify viability problems when they are still solvable. Founders who discover unit economics problems after launching, when capital is committed and the product is live, face much harder decisions.
 
-- Create a landing page to collect user emails and build anticipation.
-- Use App Store Optimization (ASO) to maximize visibility on app stores.
-- Partner with influencers or run targeted ads to generate buzz.
-- Conduct beta testing to identify and fix issues before launch.
 
-**Why it matters for profitability**
+## The realistic first-year plan for a mobile app startup
 
-A strong pre-launch campaign builds momentum, ensuring a solid user base from day one. Early adopters are key to generating revenue and gathering feedback for improvements.
+A realistic plan for a mobile app startup attempting to build a profitable business in the first year:
 
-## Marketing and growth strategies for app revenue
+**Months 1-2: Validation (budget roughly £2,000 to £5,000).** Build a landing page describing the app concept. Drive targeted traffic to it. Measure conversion to waitlist signups and interview prospects. Do not build the app yet. If validation does not produce clear signal of demand, change the concept or abandon it.
 
-Successfully monetizing your app requires more than just a great product, it needs effective marketing strategies that drive visibility, engagement and revenue. Here’s how to accelerate your app’s growth and revenue potential. 
+**Months 3-6: MVP development (budget roughly £30,000 to £100,000).** Build the minimum viable version of the app covering core functionality only. Launch to beta users for feedback. Iterate based on real usage. Do not optimise prematurely or add features before core functionality is validated.
 
-### 1. Pre-launch marketing
+**Months 7-9: Soft launch (budget roughly £15,000 to £50,000).** Launch in limited geography or to limited audience. Measure unit economics with real users. Tune acquisition strategy. Fix the issues that emerge only at scale.
 
-Building awareness before your app’s release is crucial for early success. Engage your target audience through social media platforms like Instagram and TikTok, sharing teasers, sneak peeks and behind-the-scenes content. Collaborating with influencers who align with your app’s niche can help amplify your reach. 
+**Months 10-12: Growth investment (budget roughly £50,000 to £200,000+).** Once unit economics are validated, invest in customer acquisition to scale the user base. This phase is where capital requirements typically exceed initial estimates.
 
-Additionally, consider offering early access campaigns to generate buzz and gather initial feedback. Implement a referral program to encourage early users to invite their network, driving further interest.
+**Total first-year budget:** Realistic total is £100,000 to £400,000+ for a consumer app with genuine market ambition. Founders with budgets significantly below this range should either target less competitive niches, use lean distribution strategies (web-first with app as extension), or expect constrained growth.
 
-### 2. Post-launch growth
+For founders with validated concepts but capital constraints, our HSE (Hybrid Sweat Equity) model offers a path forward. Pixelette Technologies contributes up to 50 percent of build cost as equity investment in ventures we co-build with founding teams. This preserves cash for customer acquisition while still providing access to full development capability. For more, see our [startup funding and partnership](/startup-funding) page.
 
-Once your app is live, focus on driving user acquisition and boosting engagement. Use targeted ads and partnerships to acquire new users, making use of platforms like Facebook Ads or Google Ads. 
 
-Retargeting campaigns can help bring back users who downloaded but didn’t engage. Push notifications are a great tool for keeping users informed about updates, offers or new features, ensuring they stay engaged and continue to interact with your app.
+## How Pixelette helps mobile app founders
 
-### 3. App store optimization
+Pixelette Technologies has delivered custom mobile applications across iOS, Android, and cross-platform frameworks since mobile development first became a meaningful market segment. Our delivery operates under ISO 9001 quality management and ISO 27001 information security frameworks, providing the governance structure required for apps handling sensitive data.
 
-Optimizing your app’s visibility in app stores is essential for organic growth. Make sure your app’s title and description include high-ranking keywords like "profitable apps" or "ways to make money from apps" to boost searchability. 
+Our engagement model varies based on client situation. Established businesses commissioning apps typically engage through standard milestone-based delivery. Founders with validated concepts but capital constraints often engage through our HSE model, where Pixelette contributes services-in-kind for equity in the resulting venture. This model fits founders who bring strong domain expertise and customer development capability but cannot fund full development cost while preserving runway for go-to-market.
 
-High-quality screenshots and videos that demonstrate your app’s features can further entice potential users. Encourage positive reviews and ratings, as these social proofs help elevate your app's credibility and rankings.
+For the specific challenge of building mobile apps that actually earn revenue, our approach emphasises validation before build, unit economics analysis before commitment, and the ongoing post-launch investment that determines whether an app becomes a business or remains a product. We work with founders on the business design as much as the technical implementation, because most mobile app failures are business failures rather than technical ones.
 
-## Common mistakes to avoid in monetization
+For more on our broader software development approach, see our [custom software development services](/custom-software-development-services) page. For AI-specific mobile applications, our [AI development services](/ai-development-services) complement our mobile capability.
 
-Monetizing your app effectively requires careful planning and execution. To maximize revenue without alienating users, it’s crucial to steer clear of these common pitfalls. 
 
-### 1. Overloading with ads and frustrating users
+## Key principles: citation-ready statements
 
-Bombarding users with excessive ads can quickly sour their experience. When ads overshadow the app’s core functionality, users are more likely to churn. Instead, strike a balance by integrating non-intrusive ad formats like native ads or rewarded video ads that enhance rather than disrupt the experience
+**On market concentration:** The top 1 percent of apps capture more than 80 percent of consumer app spending. Most apps earn nothing. Market selection and distribution strategy matter more than technical quality for financial success.
 
-### 2. Ignoring user feedback about pricing
+**On monetisation:** Freemium with in-app purchases generates approximately 72 percent of global consumer app revenue. Paid apps generate less than 5 percent. Choose monetisation model based on market data, not on personal preference.
 
-While not all feedback warrants action, repeated concerns about pricing should not be ignored. When multiple users flag pricing issues, it’s a sign that adjustments may be necessary. To avoid this you can analyze recurring feedback, conduct pricing experiments and justify your pricing by highlighting the app's value proposition.
+**On unit economics:** Customer acquisition cost must be significantly lower than customer lifetime value after platform fees for growth to be profitable. LTV:CAC ratios of 3:1 or better are required for sustainable consumer businesses. Unit economics determine viability more than execution quality.
 
-### 3. Failing to update and maintain the app
+**On timing:** Reaching profitability typically takes 12 to 36 months for apps that succeed. Most apps fail before reaching viability. Founders should plan 18-month runways minimum before expecting sustainable revenue.
 
-An outdated app with unresolved bugs and performance issues frustrates users, driving them to uninstall and leave negative reviews. Instead you should regularly update your app to fix bugs, improve performance, and introduce new features. A well-maintained app keeps users engaged and loyal.
+**On customer acquisition:** Organic growth is rare in competitive categories. Most successful apps rely on paid acquisition. Customer acquisition budgets often exceed development budgets for apps with serious market ambition.
 
-### 4. Not adjusting monetization strategies
+**On platform fees:** Apple and Google take 30 percent of gross transaction revenue. Unit economics must work after fees are deducted. Ignoring platform fees in financial planning causes expensive failures.
 
-Clinging to a single monetization strategy despite poor results can hinder your app's profitability. Trends and user preferences evolve, and your strategy must evolve with them. Focus on monitoring industry trends and user behavior. Experiment with different monetization methods, such as subscriptions, freemium models, or in-app purchases, and pivot as needed.
-
-Once a user gets disappointed there is very little to low chance he or she will download the app again and become a user. [<u>According to statistics</u>](https://uxcam.com/blog/10-eye-opening-statistics-about-frustrating-user-experience/), 90% of users have ceased using an app due to poor performance. Additionally, 88% of online consumers are less likely to return to a site after a bad experience. 
-
-## Real-life examples of profitable apps
-
-Many successful apps have implemented various revenue models that cater to different user needs and preferences.
-
-### a. Freemium model
-
-Candy Crush remains a prime example of the freemium model, offering free gameplay while allowing users to make in-app purchases for things like extra lives, boosters and level skips. This model has proven highly profitable, as users are drawn in by the free experience but encouraged to spend for enhancements.
-
-### b. Subscription model
-
-Headspace thrives on a subscription model, providing users with access to premium guided meditations, sleep aids and mindfulness programs. Offering monthly or annual subscription plans, it taps into a growing demand for mental wellness and meditation, generating steady, recurring revenue.
-
-### c. Hybrid model
-
-Duolingo stands out by using a combination of ad revenue, in-app purchases and subscriptions. By gamifying language learning, Duolingo not only keeps users engaged but also offers multiple avenues for monetization, making it one of the most successful educational apps today.
-
-## Conclusion and next steps
-
-There are a lot of ways you can monetize your application. Nowadays the world has progressed quite a lot and there are various ways through which you can easily earn money. 
 
 ## FAQs
 
-**1. How much money do apps make per download?** 
-It depends on the app. You can have any of the various models to earn money, get more users and also earn money per every download. It all depends on how you structure it. 
+**How much money do mobile apps actually make?**
+Revenue varies dramatically. The top 1 percent of apps capture most of the market revenue, while the majority of apps earn little or nothing. Sensor Tower data shows that most apps on the major app stores generate less than £1,000 per year. Successful consumer apps in competitive categories typically generate £10,000 to £1,000,000+ per year at different scales. The question is not whether apps can make money but whether your specific app has a realistic path to profitability.
 
-**2. What app makes the most money?**
-There is no right answer, but as of now social media apps are the ones turning in the most profit. 
+**What is the most profitable app monetisation model?**
+Freemium with in-app purchases and subscriptions generates approximately 72 percent of total consumer app revenue globally. For most new apps, some combination of freemium and subscription provides the best economic potential. Paid apps (upfront purchase) are generally less viable except in specific niches. The right model for your specific app depends on category, audience, and use case patterns.
 
-**3. Are apps profitable?**
-Yes, apps are profitable considering that you have chosen the right business model that fits perfectly. 
+**How long does it take to build a profitable mobile app?**
+Initial build typically takes 3 to 9 months depending on complexity. Reaching profitability usually takes 12 to 36 months for apps that succeed, and many never reach profitability. Founders should plan for at least 18 months of runway from launch before expecting sustainable revenue, with budget for both development and customer acquisition throughout that period.
 
-**4. How do apps make money without ads?**
-There are various different models through which apps can make money like, freemium model, paid apps, in-app purchases, in-app advertising, subscription model, app gamification and rewards, as well as hybrid models.
+**How much does it cost to build a mobile app?**
+Simple apps start around £20,000 to £50,000 for initial build. Moderate apps typically cost £40,000 to £150,000. Complex apps with advanced features cost £100,000 to £400,000 or more. Add 20 to 40 percent of build cost per year for ongoing maintenance. Add substantial customer acquisition budget (often exceeding build cost) for realistic market entry. See our detailed cost framework in [How Much Software Development Costs](/blog/how-much-software-development-costs).
+
+**Do I need to build for both iOS and Android?**
+Not initially. Many successful apps launch on one platform first to validate the concept with less development cost, then expand to the second platform after proving unit economics. The choice between iOS and Android depends on target audience (iOS typically reaches higher-income users, Android reaches larger absolute user base) and geography. Cross-platform frameworks (React Native, Flutter) can reduce the cost of building for both platforms by 30 to 50 percent compared to separate native development.
+
+**Can I build a profitable mobile app without venture capital?**
+Yes. Many successful mobile apps are bootstrapped or built with limited outside capital, particularly in specific niches (professional tools, specialised content, B2B applications) where customer acquisition economics are more favourable than general consumer markets. The right approach depends on the specific opportunity. Capital-constrained founders should target niches with favourable economics rather than competitive consumer categories that require large acquisition budgets. For more on startup approaches generally, see [How to Start an AI Business](/blog/how-to-start-an-ai-business-in-2025).
+
+---
+
+*Pixelette Technologies is a frontier technology group delivering custom software, AI, blockchain, and quantum computing solutions for enterprises, startups, and public-sector programmes since 2001. Our HSE (Hybrid Sweat Equity) model offers founders a structured way to access full development capability while preserving runway. We hold ISO 9001 and ISO 27001 certifications and serve as Official Secretariat to the UK Parliament's All-Party Parliamentary Group on Artificial Intelligence.*
