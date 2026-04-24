@@ -6,48 +6,43 @@ import { Container } from '@/components/Feature/Container/Container';
 import Image from 'next/image';
 import Link from 'next/link';
 import React, { useState } from 'react';
-import { v4 as uuidv4 } from 'uuid';
+import type { Blog } from '@/types/blog';
 import styles from './BlogGridWithBanner.module.css';
 
-export const BlogGridWithBanner = ({ data, singleView = false }) => {
+type BlogGridWithBannerProps = {
+  data: Blog[];
+  singleView?: boolean;
+};
+
+export const BlogGridWithBanner: React.FC<BlogGridWithBannerProps> = ({
+  data,
+  singleView = false,
+}) => {
   const [visibleCount, setVisibleCount] = useState(3);
 
   if (!data.length) {
     return <div>No blogs available.</div>;
   }
-  // console.log(data);
-  const blogCardsMain = data[0] || {};
-  const blogCardsData = data.slice(1, visibleCount + 1);
+
+  const hero = data[0]!;
+  const visibleCards = data.slice(1, visibleCount + 1);
 
   const handleLoadMore = () => {
-    setVisibleCount(prevCount => prevCount + 3);
+    setVisibleCount(prev => prev + 3);
   };
 
-  const resolveUrl = (url) => {
-    if (url?.startsWith('//')) {
-      return `https:${url}`; // Convert protocol-relative URLs to absolute URLs
-    }
-    return url || '/default-image.jpg'; // Fallback to a default image if the URL is undefined
-  };
-
-  const renderBlogCard = (el, index) => {
-    if (!el.fields) {
-      return <div key={uuidv4()}>Missing data for this blog card</div>;
-    }
-
-    return (
-      <BlogCard
-        key={el.sys?.id || uuidv4()}
-        image={resolveUrl(el.fields.thumbnailImage?.fields?.file?.url)}
-        date={el.sys?.updatedAt || 'No date available'}
-        heading={el.fields.title || 'No title available'}
-        description={el.fields.description || 'No description available'}
-        to={`${el.fields.slug}`}
-        duration={`${index + 2}00`}
-        animation="fade-up"
-      />
-    );
-  };
+  const renderBlogCard = (blog: Blog, index: number) => (
+    <BlogCard
+      key={blog.frontmatter.slug}
+      image={blog.frontmatter.thumbnailImage}
+      date={blog.frontmatter.updatedDate ?? blog.frontmatter.publishDate}
+      heading={blog.frontmatter.title}
+      description={blog.frontmatter.description}
+      to={blog.frontmatter.slug}
+      duration={`${index + 2}00`}
+      animation="fade-up"
+    />
+  );
 
   return (
     <div className={styles.blogGridWithBanner}>
@@ -55,61 +50,53 @@ export const BlogGridWithBanner = ({ data, singleView = false }) => {
         <div>
           {/* Hero Blog Section */}
           <header className={styles.heroBlog}>
-            {blogCardsMain && blogCardsMain.fields?.thumbnailImage?.fields?.file?.url && (
-              <figure className={styles.heroImage}>
-                <Image
-                  src={resolveUrl(blogCardsMain.fields.thumbnailImage.fields.file.url)}
-                  alt={blogCardsMain.fields.name || 'Blog Hero Image'}
-                  data-aos="fade-up"
-                  data-aos-duration="800"
-                  width={1000}
-                  height={1000}
-                />
-              </figure>
-            )}
+            {hero.frontmatter.thumbnailImage
+              ? (
+                  <figure className={styles.heroImage}>
+                    <Image
+                      src={hero.frontmatter.thumbnailImage}
+                      alt={hero.frontmatter.title}
+                      width={1000}
+                      height={1000}
+                    />
+                  </figure>
+                )
+              : null}
             <div className={styles.heroContent}>
-
-              <p>
-                {blogCardsMain.sys?.updatedAt || 'No date available'}
-              </p>
-              <h3>
-                {blogCardsMain.fields?.title || 'No title available'}
-              </h3>
-
-              <p>
-                {blogCardsMain.fields?.description || 'No description available'}
-              </p>
-
+              <p>{hero.frontmatter.updatedDate ?? hero.frontmatter.publishDate}</p>
+              <h3>{hero.frontmatter.title}</h3>
+              <p>{hero.frontmatter.description}</p>
               <div className={styles.readMoreButton}>
-                <Link href={`/blog/${blogCardsMain.fields?.slug}`} passHref>
-                  <Button className="primary">
-                    Read More
-                  </Button>
+                <Link href={`/blog/${hero.frontmatter.slug}`} passHref>
+                  <Button className="primary">Read More</Button>
                 </Link>
               </div>
             </div>
           </header>
 
-          {/* Blog Cards Section */}
+          {/* Blog Cards Grid */}
           <div className={styles.blogCards}>
-            {blogCardsData && blogCardsData.map(renderBlogCard)}
-
-            {visibleCount < data.length - 1 && (
-              <div className={styles.loadMoreContainer}>
-                <Button className="primary" onClick={handleLoadMore}>
-                  Load More
-                </Button>
-              </div>
-            )}
+            {visibleCards.map(renderBlogCard)}
+            {visibleCount < data.length - 1
+              ? (
+                  <div className={styles.loadMoreContainer}>
+                    <Button className="primary" onClick={handleLoadMore}>
+                      Load More
+                    </Button>
+                  </div>
+                )
+              : null}
           </div>
         </div>
 
-        {/* Single View Section */}
-        {singleView && (
-          <section className={styles.singleViewSection}>
-            {data.map(renderBlogCard)}
-          </section>
-        )}
+        {/* Single View Section (rendered only on /blog, not on home) */}
+        {singleView
+          ? (
+              <section className={styles.singleViewSection}>
+                {data.map(renderBlogCard)}
+              </section>
+            )
+          : null}
       </Container>
     </div>
   );
