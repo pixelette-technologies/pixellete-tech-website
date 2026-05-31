@@ -22,6 +22,9 @@ export async function generateMetadata(props: IDeliverProps) {
     title: t('meta_title'),
     description: t('meta_description'),
     keywords: t('meta_keywords'),
+    alternates: {
+      canonical: '/it-outsourcing-services',
+    },
   };
 }
 

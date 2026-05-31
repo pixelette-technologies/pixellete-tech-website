@@ -16,6 +16,9 @@ export async function generateMetadata(props: IBlogProps) {
   return {
     title: t('meta_title'),
     description: t('meta_description'),
+    alternates: {
+      canonical: '/blog',
+    },
   };
 }
 
