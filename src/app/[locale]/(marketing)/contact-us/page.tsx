@@ -44,6 +44,9 @@ export async function generateMetadata(props: IAboutProps) {
   return {
     title: t('meta_title'),
     description: t('meta_description'),
+    alternates: {
+      canonical: '/contact-us',
+    },
   };
 }
 

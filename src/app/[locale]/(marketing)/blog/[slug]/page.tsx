@@ -11,7 +11,10 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: { params: { slug: string } }) {
   const metadata = await fetchBlogMetadata(params.slug);
-  return metadata || { title: 'Blockchain Experts', description: 'Read more about blockchain topics.' };
+  const canonical = `/blog/${params.slug}`;
+  return metadata
+    ? { ...metadata, alternates: { canonical } }
+    : { title: 'Blockchain Experts', description: 'Read more about blockchain topics.', alternates: { canonical } };
 }
 
 export default function BlogDetailPage({ params }: { params: { slug: string } }) {
