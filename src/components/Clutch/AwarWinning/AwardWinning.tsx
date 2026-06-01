@@ -15,8 +15,9 @@ const AwardWinning = () => {
         <Container className="main margins">
           <section>
             <div className="award-text">
-              <h1
+              <h2
                 id="h_ani"
+                className="display-h1"
               >
                 <>
                   Bagged awards,
@@ -40,7 +41,7 @@ const AwardWinning = () => {
                     satisfaction and quality standards.
                   </p>
                 </>
-              </h1>
+              </h2>
               {/* <div>
                 {(data || []).map((el, index) => (
                   <Item key={index} heading={el.heading} text={el.text} />

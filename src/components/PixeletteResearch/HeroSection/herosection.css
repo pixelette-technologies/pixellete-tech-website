@@ -61,7 +61,7 @@
   margin-top: 14rem;
 }
 
-.heroSectionResearch > div > section > h1 {
+.heroSectionResearch > div > section > h2 {
   margin-bottom: 4.8rem;
 }
 
@@ -69,7 +69,7 @@
   .heroSectionResearch > div > section {
     margin-top: 7rem;
   }
-  .heroSectionResearch > div > section > h1 {
+  .heroSectionResearch > div > section > h2 {
     margin-bottom: 3rem;
   }
 }

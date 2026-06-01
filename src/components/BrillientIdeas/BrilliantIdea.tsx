@@ -13,8 +13,9 @@ const BrilliantIdea: React.FC = () => {
         <Container className="main margins">
           <section id="sideMargin">
             <div className="award-text">
-              <h1
+              <h2
                 id="h_ani"
+                className="display-h1"
               >
                 <>
                   Shipped 200+
@@ -25,7 +26,7 @@ const BrilliantIdea: React.FC = () => {
                   {' '}
                   counting
                 </>
-              </h1>
+              </h2>
               <br />
               {' '}
               <br />

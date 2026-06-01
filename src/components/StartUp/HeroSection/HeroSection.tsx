@@ -44,9 +44,9 @@ export const HeroSection = () => {
           <section id="sideMargin">
             {/* Section 1 */}
             <div>
-              <h1 className="policyHeading">
+              <h2 className="policyHeading display-h1">
                 Our commitment to innovation
-              </h1>
+              </h2>
               <p>
                 Pixelette Technologies recognizes the scarcity of innovative
                 thinkers and the challenges they face in accessing funding. We
@@ -62,9 +62,9 @@ export const HeroSection = () => {
 
             {/* Section 2 */}
             <div>
-              <h1 className="policyHeading">
+              <h2 className="policyHeading display-h1">
                 Kickstart your journey
-              </h1>
+              </h2>
               <p>
                 Pixelette Technologies offers start-ups access to a seasoned
                 team of experts deeply ingrained in the start-up ecosystem,

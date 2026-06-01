@@ -9,7 +9,7 @@ const NoDeveloperReq = (props) => {
       <Container className="main margins">
         <div className="unlockBussinessClutch">
           <div style={{ maxWidth: '100%' }}>
-            <h1>{props.heading}</h1>
+            <h2 className="display-h1">{props.heading}</h2>
             <p>{props.text}</p>
             <Link href="/contact-us">
               <Button

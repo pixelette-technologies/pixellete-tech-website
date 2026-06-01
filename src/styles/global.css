@@ -118,6 +118,14 @@ h1 {
   margin-bottom: 1rem;
 }
 
+/* Preserves the visual size of section headings that were demoted from <h1> to a
+   lower level for single-<h1>-per-page SEO compliance. Purely presentational. */
+.display-h1 {
+  font-size: clamp(3rem, 5vw, 6rem);
+  font-weight: 800;
+  line-height: 1.2;
+}
+
 h2 {
   font-size: clamp(2.5rem, 4vw, 4.5rem);
   font-weight: 700;

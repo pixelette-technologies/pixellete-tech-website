@@ -98,7 +98,7 @@ const AboutUsSection: React.FC = () => {
         }));
 
         if (isIntersecting) {
-          const element = entry.target.querySelector<HTMLHeadingElement>('h1');
+          const element = entry.target.querySelector<HTMLElement>('[data-end]');
           if (element) {
             const prefix = element.getAttribute('data-prefix') || '';
             const midfix = element.getAttribute('data-midfix') || '';
@@ -171,14 +171,15 @@ const AboutUsSection: React.FC = () => {
                     id={`counter-section-${index + 1}`}
                     key={`counter-section-${index + 1}`}
                   >
-                    <h1
+                    <p
+                      className="counter-value"
                       data-end={value.end}
                       data-prefix={value.prefix}
                       data-midfix={value.midfix}
                       data-suffix={value.suffix}
                     >
                       {`${value.prefix}${value.end}${value.midfix}${value.suffix}`}
-                    </h1>
+                    </p>
                     <div>
                       <p>
                         {
