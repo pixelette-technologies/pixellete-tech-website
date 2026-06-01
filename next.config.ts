@@ -104,11 +104,6 @@ withNextIntl({
         permanent: true,
       },
       {
-        source: '/food-delivery-app-case-study',
-        destination: '/case-studies',
-        permanent: true,
-      },
-      {
         source: '/case-study/3eKvdUcg042cCmUYqEm2XF',
         destination: '/case-studies',
         permanent: true,
@@ -235,7 +230,7 @@ withNextIntl({
       },
       {
         source: '/refund-policy',
-        destination: '/cancelation-refund-policy',
+        destination: '/cancellation-refund-policy',
         permanent: true,
       },
       {
