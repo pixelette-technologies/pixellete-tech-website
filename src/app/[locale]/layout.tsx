@@ -72,10 +72,34 @@ export default async function RootLayout({ children, params }: { children: React
 
   setRequestLocale(locale);
 
+  // Organization structured data (SEOMATE audit P6-19): site-wide entity schema
+  // so search + LLMs resolve the brand. NAP from the verified Google Business
+  // Profile; sameAs left for the team to extend with social profiles.
+  const organizationSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    'name': 'Pixelette Technologies',
+    'url': 'https://pixelettetech.com',
+    'logo': 'https://pixelettetech.com/images/logo/short-logo-purple.png',
+    'description': 'Enterprise AI, blockchain and custom software development. APPG AI Secretariat; ISO 9001 & ISO 27001 certified.',
+    'address': {
+      '@type': 'PostalAddress',
+      'streetAddress': '71-75 Shelton Street',
+      'addressLocality': 'London',
+      'postalCode': 'WC2H 9JQ',
+      'addressCountry': 'GB',
+    },
+    'telephone': '+44 20 4518 8226',
+  };
+
   return (
     <html lang={locale} data-theme="dark">
       <head>
         <GoogleTagManager gtmId="GTM-KXC3K4RL" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
       </head>
       <body className={`${outfit.className}`} style={{ overflowX: 'hidden', overflowY: 'auto' }}>
         <Suspense fallback={(

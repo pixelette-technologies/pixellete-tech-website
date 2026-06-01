@@ -1,0 +1,28 @@
+# Pixelette Technologies
+
+> Enterprise AI, blockchain, and custom software development company in the UK and USA. APPG AI Secretariat; ISO 9001 & ISO 27001 certified; 200+ products shipped across 13 countries.
+
+## Services
+
+- [AI Development Services](https://pixelettetech.com/ai-development-services)
+- [Blockchain Development Services](https://pixelettetech.com/blockchain-development-services)
+- [Custom Software Development Services](https://pixelettetech.com/custom-software-development-services)
+- [AR/VR Development Services](https://pixelettetech.com/ar-vr-development-services)
+- [Web Development Services](https://pixelettetech.com/web-development-services)
+- [Mobile App Development Services](https://pixelettetech.com/mobile-app-development-services)
+- [UI/UX Design Services](https://pixelettetech.com/ui-ux-design-services)
+- [Quantum Development Services](https://pixelettetech.com/quantum-development-services)
+
+## Engagement models
+
+- [Dedicated Team Services](https://pixelettetech.com/dedicated-team-services)
+- [IT Outsourcing Services](https://pixelettetech.com/it-outsourcing-services)
+- [Staff Augmentation Services](https://pixelettetech.com/staff-augmentation-services)
+
+## Company
+
+- [About Us](https://pixelettetech.com/about-us)
+- [Case Studies](https://pixelettetech.com/case-studies)
+- [Pixelette Research](https://pixelettetech.com/pixelette-research)
+- [Blog](https://pixelettetech.com/blog)
+- [Contact Us](https://pixelettetech.com/contact-us)
