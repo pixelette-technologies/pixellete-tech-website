@@ -1,4 +1,5 @@
 import { Container } from '../Feature/Container/Container';
+import Image from 'next/image';
 import './brillientideas.css';
 
 const BrilliantIdea: React.FC = () => {
@@ -40,7 +41,7 @@ const BrilliantIdea: React.FC = () => {
               </>
 
             </div>
-            <img src="/images/Clutch/mind.png" alt="Mind Map" />
+            <Image src="/images/Clutch/mind.png" alt="Mind Map" width={566} height={503} style={{ height: 'auto' }} />
           </section>
         </Container>
       </div>
