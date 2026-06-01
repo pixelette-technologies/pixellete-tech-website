@@ -1,6 +1,7 @@
 'use client';
 
 import { Container } from '@/components/Feature/Container/Container';
+import { sendGTMEvent } from '@next/third-parties/google';
 import Image from 'next/image';
 import React, { useState } from 'react';
 import './contactusform.css';
@@ -80,6 +81,15 @@ export const ContactUsForm: React.FC<ContactUsProps> = (props) => {
       }
 
       setStatus('success');
+
+      // Lead conversion for GA4 (via GTM). No PII in the payload - GA must not
+      // receive name/email/phone. Only non-identifying context is sent.
+      sendGTMEvent({
+        event: 'generate_lead',
+        lead_source: props.pageName || 'Contact Page',
+        project_type: formData.projectType || 'unspecified',
+        heard_from: formData.heardFrom || 'unspecified',
+      });
     } catch {
       setErrorMessage('Something went wrong. Please try again.');
       setStatus('error');

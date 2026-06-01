@@ -5,6 +5,7 @@ import type { Settings } from 'react-slick';
 import { Button } from '@/components/Feature/Button/Button';
 import { TestimonialCard } from '@/components/Feature/Cards/TestimonialCard';
 import { Container } from '@/components/Feature/Container/Container';
+import { clutchStats } from '@/data/clutchStats';
 import { testimonialData } from '@/data/testimonialData';
 import Image from 'next/image';
 import { useRef } from 'react';
@@ -107,8 +108,8 @@ export const Testimonial: FC<TestimonialProps> = ({ background }) => {
           })),
           'aggregateRating': {
             '@type': 'AggregateRating',
-            'ratingValue': '4.9',
-            'reviewCount': '23',
+            'ratingValue': clutchStats.ratingValue.toFixed(1),
+            'reviewCount': String(clutchStats.reviewCount),
             'bestRating': '5',
             'worstRating': '3',
           },
@@ -142,7 +143,7 @@ export const Testimonial: FC<TestimonialProps> = ({ background }) => {
             </h2>
             <div // data-aos-duration="500" data-aos="fade-up"
             >
-              <p>4.9</p>
+              <p>{clutchStats.ratingValue.toFixed(1)}</p>
               <Image
                 src="/images/home/stars.svg"
                 alt="Rating Stars"
@@ -150,7 +151,7 @@ export const Testimonial: FC<TestimonialProps> = ({ background }) => {
                 height={100}
               />
               <Button className="primary">
-                23 Reviews
+                {`${clutchStats.reviewCount} Reviews`}
                 <FiExternalLink />
               </Button>
             </div>

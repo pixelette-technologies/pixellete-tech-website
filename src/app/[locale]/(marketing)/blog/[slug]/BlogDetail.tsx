@@ -17,6 +17,36 @@ export default async function BlogDetail({ params }: { params: { slug: string } 
 
   const { blog, content, resolvedAuthor, resolvedAssets, preContent, tableOfContents } = data;
 
+  // Article structured data (JSON-LD), emitted server-side so search engines and
+  // AI answer engines can read it. Addresses the blog's missing schema and the
+  // E-E-A-T date/author signals (audit P1-21 / P4-03 / P6-19).
+  const thumbnailUrl = (blog?.fields?.thumbnailImage as any)?.fields?.file?.url as string | undefined;
+  const authorName = resolvedAuthor?.fields?.name as string | undefined;
+  const articleSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    'headline': blog?.fields?.title,
+    'description': blog?.fields?.description,
+    'datePublished': blog?.sys?.createdAt,
+    'dateModified': blog?.sys?.updatedAt,
+    'author': authorName
+      ? { '@type': 'Person', 'name': authorName }
+      : { '@type': 'Organization', 'name': 'Pixelette Technologies' },
+    'publisher': {
+      '@type': 'Organization',
+      'name': 'Pixelette Technologies',
+      'logo': {
+        '@type': 'ImageObject',
+        'url': 'https://pixelettetech.com/assets/common/logo.png',
+      },
+    },
+    'mainEntityOfPage': {
+      '@type': 'WebPage',
+      '@id': `https://pixelettetech.com/blog/${params.slug}`,
+    },
+    ...(thumbnailUrl ? { image: [`https:${thumbnailUrl}`] } : {}),
+  };
+
   const breadcrumbItems = [
     { label: 'Home', href: '/' },
     { label: 'Blog', href: '/blog' },
@@ -25,6 +55,10 @@ export default async function BlogDetail({ params }: { params: { slug: string } 
 
   return (
     <div className="blog_detail">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
       <Container className="main">
         <div className="cardSectionBackground">
           <img src="/images/aiServices/serviceSectionBackground.svg" alt="Background" />

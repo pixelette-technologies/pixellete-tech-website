@@ -29,6 +29,7 @@ withNextIntl({
     domains: ['images.ctfassets.net', 'ui-avatars.com'], // Add domains you're using images from
     deviceSizes: [320, 420, 768, 1024, 1200, 640, 750, 1080, 1920], // Define appropriate device sizes
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 512], // Image sizes for optimization
+    formats: ['image/avif', 'image/webp'], // Serve AVIF (then WebP) for next/image - smaller files (audit P2-31)
   },
   async redirects() {
     return [
@@ -95,11 +96,6 @@ withNextIntl({
       {
         source: '/ui-ux-design',
         destination: '/ui-ux-design-services',
-        permanent: true,
-      },
-      {
-        source: '/food-delivery-app-case-study',
-        destination: '/case-studies',
         permanent: true,
       },
       {
@@ -234,7 +230,7 @@ withNextIntl({
       },
       {
         source: '/refund-policy',
-        destination: '/cancelation-refund-policy',
+        destination: '/cancellation-refund-policy',
         permanent: true,
       },
       {
