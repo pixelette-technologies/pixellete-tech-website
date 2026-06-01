@@ -20,7 +20,7 @@ export default async function BlogDetail({ params }: { params: { slug: string } 
   // Article structured data (JSON-LD), emitted server-side so search engines and
   // AI answer engines can read it. Addresses the blog's missing schema and the
   // E-E-A-T date/author signals (audit P1-21 / P4-03 / P6-19).
-  const thumbnailUrl = blog?.fields?.thumbnailImage?.fields?.file?.url as string | undefined;
+  const thumbnailUrl = (blog?.fields?.thumbnailImage as any)?.fields?.file?.url as string | undefined;
   const authorName = resolvedAuthor?.fields?.name as string | undefined;
   const articleSchema = {
     '@context': 'https://schema.org',
