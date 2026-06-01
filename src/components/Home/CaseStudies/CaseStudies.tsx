@@ -68,7 +68,7 @@ export const CaseStudies: React.FC<CaseStudiesProps> = () => {
               <p>{clutchStats.ratingValue.toFixed(1)}</p>
               <Image src="/images/home/stars.svg" alt="Rating Stars" width={100} height={100} />
               <Button className="primary">
-                {clutchStats.reviewCount} Reviews
+                {`${clutchStats.reviewCount} Reviews`}
                 <FiExternalLink />
               </Button>
             </div>

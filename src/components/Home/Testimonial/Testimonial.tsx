@@ -151,7 +151,7 @@ export const Testimonial: FC<TestimonialProps> = ({ background }) => {
                 height={100}
               />
               <Button className="primary">
-                {clutchStats.reviewCount} Reviews
+                {`${clutchStats.reviewCount} Reviews`}
                 <FiExternalLink />
               </Button>
             </div>
