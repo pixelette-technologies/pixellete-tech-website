@@ -31,8 +31,8 @@
     "count": "Count: {count}"
   },
   "About": {
-    "meta_title": "About",
-    "meta_description": "About page description",
+    "meta_title": "About Pixelette Technologies | AI, Blockchain & Software",
+    "meta_description": "Pixelette Technologies is a London-based software development company engineering AI, blockchain, quantum and custom software for businesses worldwide.",
     "about_paragraph": "Welcome to our About page! We are a team of passionate individuals dedicated to creating amazing software.",
     "translation_powered_by": "Translation powered by"
   },
@@ -78,8 +78,8 @@
   },
   "ContactUs": {
     "_comment": "Add Contact us content here",
-    "meta_title": "Contact Us",
-    "meta_description": "About page description",
+    "meta_title": "Contact Pixelette Technologies | Start Your Project",
+    "meta_description": "Contact Pixelette Technologies to discuss your AI, blockchain, quantum or custom software project. Tell our London team what you need and we'll reply promptly.",
     "about_paragraph": "Welcome to our About page! We are a team of passionate individuals dedicated to creating amazing software.",
     "translation_powered_by": "Translation powered by"
   },

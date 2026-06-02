@@ -141,6 +141,7 @@ export default async function ARVR(props: IARVRProps) {
       />
       <HeroSection
         heading={aiHeroHeading}
+        serviceName="AR/VR Development Services"
         description={aiHeroDescription}
         buttonText={aiHeroButtonText}
         buttonLink={aiHeroButtonLink}

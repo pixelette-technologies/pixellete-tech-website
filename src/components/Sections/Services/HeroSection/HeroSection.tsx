@@ -13,6 +13,7 @@ type HeroSectionProps = {
   buttonLink: string;
   backgroundImage: string;
   images: { src: string; alt: string }[];
+  serviceName?: string;
 };
 
 // Helper function to check if the file is a video based on extension
@@ -30,11 +31,30 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
   buttonLink,
   backgroundImage,
   images,
+  serviceName,
 }) => {
   const isVideo = isVideoFile(backgroundImage);
 
+  // Service structured data for the service this page sells (server-rendered).
+  const serviceSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    'name': (serviceName ?? heading).replace(/\s+/g, ' ').replace(/[,;]\s*$/, '').trim(),
+    'description': description.replace(/\s+/g, ' ').trim(),
+    'provider': {
+      '@type': 'Organization',
+      'name': 'Pixelette Technologies',
+      'url': 'https://pixelettetech.com',
+    },
+    'areaServed': 'Worldwide',
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
 
       <div className="heroSection-background">
         {isVideo
