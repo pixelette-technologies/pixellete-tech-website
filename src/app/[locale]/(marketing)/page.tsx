@@ -194,6 +194,7 @@ export default async function Index(props: IIndexProps) {
       <AnimatedSection
         animation="fadeIn"
         delay={0}
+        immediate
         gradientColors={['transparent', 'rgba(0, 0, 0, 0.7)']}
         gradientHeight="200px"
         gradientBlurAmount={15}
