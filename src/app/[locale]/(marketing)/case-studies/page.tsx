@@ -33,6 +33,8 @@ export default async function About(props: IAboutProps) {
 
   return (
     <>
+      {/* BreadcrumbList JSON-LD (server-rendered), audit P1-47/P6-19 */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://pixelettetech.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Case Studies\",\"item\":\"https://pixelettetech.com/case-studies\"}]}" }} />
       <HeroSection />
       <ProjectSection />
       <EvaluateBusiness
