@@ -1,12 +1,11 @@
 import type { Metadata } from 'next';
-import Breadcrumb from '@/components/SEO/Breadcrumb';
+import PixLoader from '@/components/pix/PixLoader';
 import { routing } from '@/libs/i18nNavigation';
 import { GoogleTagManager } from '@next/third-parties/google';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, setRequestLocale } from 'next-intl/server';
 import { Outfit } from 'next/font/google';
 import { notFound } from 'next/navigation';
-import PixLoader from '@/components/pix/PixLoader';
 import { Suspense } from 'react';
 import '@/styles/global.css';
 
@@ -57,7 +56,6 @@ async function MessagesProvider({ locale, children }: { locale: string; children
 
   return (
     <NextIntlClientProvider locale={locale} messages={messages}>
-      <Breadcrumb siteUrl={process.env.NEXT_PUBLIC_SITE_URL || 'https://pixelettetech.com'} />
       {children}
     </NextIntlClientProvider>
   );

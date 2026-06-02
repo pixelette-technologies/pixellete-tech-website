@@ -86,11 +86,25 @@ export default async function ItOutsourcingServices(props: IDeliverProps) {
       },
     })),
   };
+  // BreadcrumbList JSON-LD (server-rendered), audit P1-47 / P6-19.
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    'itemListElement': [
+      { '@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': 'https://pixelettetech.com/' },
+      { '@type': 'ListItem', 'position': 2, 'name': 'IT Outsourcing Services', 'item': 'https://pixelettetech.com/it-outsourcing-services' },
+    ],
+  };
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       <HowItWorksHeroSection {...deliverHeroData} />
       <DeliverBenefits {...benefitData} />

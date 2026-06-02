@@ -53,11 +53,29 @@ export default async function BlogDetail({ params }: { params: { slug: string } 
     { label: blog?.fields?.title || 'Blog Post', href: `/blog/${params.slug}` },
   ];
 
+  // BreadcrumbList JSON-LD (server-rendered) from the same trail as the visible
+  // breadcrumb, so search + LLMs see a real per-page trail. Addresses the audit's
+  // P1-47 / P6-19 gap: blog posts had a visible breadcrumb but no schema.
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    'itemListElement': breadcrumbItems.map((item, index) => ({
+      '@type': 'ListItem',
+      'position': index + 1,
+      'name': item.label,
+      'item': `https://pixelettetech.com${item.href}`,
+    })),
+  };
+
   return (
     <div className="blog_detail">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       <Container className="main">
         <div className="cardSectionBackground">
