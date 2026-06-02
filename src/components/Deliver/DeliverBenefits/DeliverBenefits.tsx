@@ -43,7 +43,7 @@ const Cards: React.FC<{ cards: CardData[] }> = ({ cards }) => {
       <div className="benifitsCard">
         {cards.map((card, index) => (
           <div key={index}>
-            <h1>{card.title}</h1>
+            <h3>{card.title}</h3>
             <p>{card.description}</p>
           </div>
         ))}
@@ -57,9 +57,9 @@ const DeliverBenefits: React.FC<DeliverBenefitsProps> = ({ heading, cards }) => 
       <Container className="main">
         <center // data-aos-duration="700" data-aos="fade-up"
         >
-          <h1 id="h_ani">
+          <h2 id="h_ani" className="display-h1">
             {heading}
-          </h1>
+          </h2>
         </center>
         <div // data-aos-duration="500" data-aos="fade-up"
         >

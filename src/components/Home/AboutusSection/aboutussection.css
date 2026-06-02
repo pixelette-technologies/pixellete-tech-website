@@ -88,12 +88,13 @@
   justify-self: center;
 }
 
-.aboutUsSection > div > section > *:last-child > section > h1,
-.aboutUsSection > div > section > *:last-child > div > h1 {
+.aboutUsSection > div > section > *:last-child > section > p.counter-value,
+.aboutUsSection > div > section > *:last-child > div > p.counter-value {
   font-size: 4.5rem;
   line-height: 6.5rem;
   font-weight: 700;
-  margin-right: 0.8rem;
+  /* margin-block 0.67em preserves the prior <h1> default vertical spacing after demotion to <p> */
+  margin: 0.67em 0.8rem 0.67em 0;
 }
 
 .aboutUsSection > div > section > *:last-child > section > div > p,

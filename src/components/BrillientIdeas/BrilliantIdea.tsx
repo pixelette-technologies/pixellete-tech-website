@@ -1,4 +1,5 @@
 import { Container } from '../Feature/Container/Container';
+import Image from 'next/image';
 import './brillientideas.css';
 
 const BrilliantIdea: React.FC = () => {
@@ -13,8 +14,9 @@ const BrilliantIdea: React.FC = () => {
         <Container className="main margins">
           <section id="sideMargin">
             <div className="award-text">
-              <h1
+              <h2
                 id="h_ani"
+                className="display-h1"
               >
                 <>
                   Shipped 200+
@@ -25,7 +27,7 @@ const BrilliantIdea: React.FC = () => {
                   {' '}
                   counting
                 </>
-              </h1>
+              </h2>
               <br />
               {' '}
               <br />
@@ -39,7 +41,7 @@ const BrilliantIdea: React.FC = () => {
               </>
 
             </div>
-            <img src="/images/Clutch/mind.png" alt="Mind Map" />
+            <Image src="/images/Clutch/mind.png" alt="Mind Map" width={566} height={503} style={{ height: 'auto' }} />
           </section>
         </Container>
       </div>

@@ -1,4 +1,5 @@
 import { Container } from '@/components/Feature/Container/Container';
+import Image from 'next/image';
 import React from 'react';
 import './techstack.css';
 
@@ -45,7 +46,7 @@ export const TechStack: React.FC<TechStackProps> = (props: TechStackProps) => {
                 height: '100%',
               }}
             >
-              <img src="/images/aiServices/techStackImg.png" alt="" style={{ height: 'auto' }} />
+              <Image src="/images/aiServices/techStackImg.png" alt="" width={876} height={512} style={{ height: 'auto' }} />
               <span style={{ position: 'absolute', textAlign: 'center' }}>
                 <p
                   style={{

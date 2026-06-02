@@ -15,8 +15,10 @@
 }
 
 /* Styling for headers and paragraphs */
-.benifitsCard h1 {
+.benifitsCard h3 {
   font-size: 2em; /* Adjust font size as needed */
+  font-weight: 800;
+  line-height: 1.2;
   margin-bottom: 8px;
 }
 
@@ -47,7 +49,7 @@
     align-items: center;
     gap: 10px;
   }
-  .benifitsCard > div > h1 {
+  .benifitsCard > div > h3 {
     width: 100%;
   }
   .benifitsCard > div > p {

@@ -24,8 +24,9 @@ const StartupStats: React.FC<StartupStatsProps> = () => {
             <div className="award-text-wrapper">
               <div className="vertical-bar"></div>
               <div className="award-text">
-                <h1
+                <h2
                   id="h_ani"
+                  className="display-h1"
                 >
                   <>
                     <span className="percentage">95%</span>
@@ -42,7 +43,7 @@ const StartupStats: React.FC<StartupStatsProps> = () => {
                     {' '}
                     market
                   </>
-                </h1>
+                </h2>
               </div>
             </div>
             <>

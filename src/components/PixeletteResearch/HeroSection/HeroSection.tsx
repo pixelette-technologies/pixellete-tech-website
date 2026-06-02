@@ -60,9 +60,9 @@ const HeroSection: React.FC = () => {
             {/* Description Section */}
             <div className="description">
               <section>
-                <h1>
+                <h2 className="display-h1">
                   About Pixelette Research
-                </h1>
+                </h2>
                 <p>
                   Welcome to Pixelette Research, a dynamic research arm driving
                   growth and transformation across industries.
@@ -90,9 +90,9 @@ const HeroSection: React.FC = () => {
 
           {/* Featured Whitepapers */}
           <section id="sideMargin">
-            <h1>
+            <h2 className="display-h1">
               Featured Whitepapers
-            </h1>
+            </h2>
 
             <div data-aos="fade-up" data-aos-duration="2500">
               <div>
