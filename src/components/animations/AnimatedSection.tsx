@@ -17,6 +17,11 @@ type AnimatedSectionProps = {
   gradientBlurAmount?: number;
   gradientOpacity?: number;
   hasGradient?: boolean;
+  /** Render at the final (visible) state on mount instead of animating in.
+   *  Use for above-the-fold content (e.g. the hero) so it is painted on the
+   *  server immediately rather than starting at opacity 0 until hydration,
+   *  which otherwise delays Largest Contentful Paint. */
+  immediate?: boolean;
 };
 
 const animations = {
@@ -58,11 +63,12 @@ export default function AnimatedSection({
   gradientBlurAmount = 10,
   gradientOpacity = 1,
   hasGradient = true,
+  immediate = false,
 }: AnimatedSectionProps) {
   return (
     <div className={`relative ${className}`}>
       <motion.div
-        initial={animations[animation].initial}
+        initial={immediate ? false : animations[animation].initial}
         animate={animations[animation].animate}
         transition={{
           duration,
