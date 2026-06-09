@@ -1,28 +1,77 @@
-# Pixelette Technologies
+# Pixelette Technologies — LLM Crawler Guide
+# https://pixelettetech.com
+# Last updated: 2026-06-09
 
-> Enterprise AI, blockchain, and custom software development company in the UK and USA. APPG AI Secretariat; ISO 9001 & ISO 27001 certified; 200+ products shipped across 13 countries.
+## About
+
+Pixelette Technologies is a frontier innovation group founded in 2018, headquartered in London, UK (77 Fulham Palace Road, W6 8JA) with a US office in Naples, Florida. The company delivers blockchain, agentic AI, quantum computing, and decentralised technology solutions for enterprises, startups, and public sector programmes worldwide.
+
+Legal name: Pixelette Technologies Ltd
+Contact: sales@pixelettetech.com
+UK: +44 2045188226 | US: +1 7732709034
 
 ## Services
 
-- [AI Development Services](https://pixelettetech.com/ai-development-services)
-- [Blockchain Development Services](https://pixelettetech.com/blockchain-development-services)
-- [Custom Software Development Services](https://pixelettetech.com/custom-software-development-services)
-- [AR/VR Development Services](https://pixelettetech.com/ar-vr-development-services)
-- [Web Development Services](https://pixelettetech.com/web-development-services)
-- [Mobile App Development Services](https://pixelettetech.com/mobile-app-development-services)
-- [UI/UX Design Services](https://pixelettetech.com/ui-ux-design-services)
-- [Quantum Development Services](https://pixelettetech.com/quantum-development-services)
+- AI Development Services: https://pixelettetech.com/ai-development-services
+  Custom AI models, intelligent agents, generative AI, NLP, and full-stack machine learning.
 
-## Engagement models
+- Blockchain Development Services: https://pixelettetech.com/blockchain-development-services
+  Smart contracts, decentralised applications, tokenisation, quantum-safe blockchain architectures.
 
-- [Dedicated Team Services](https://pixelettetech.com/dedicated-team-services)
-- [IT Outsourcing Services](https://pixelettetech.com/it-outsourcing-services)
-- [Staff Augmentation Services](https://pixelettetech.com/staff-augmentation-services)
+- Quantum Computing Development: https://pixelettetech.com/quantum-development-services
+  Hybrid quantum-classical systems, quantum-ready architectures, post-quantum cryptography.
 
-## Company
+- Web Development Services: https://pixelettetech.com/web-development-services
+  Scalable web applications, website redesign, e-commerce platforms.
 
-- [About Us](https://pixelettetech.com/about-us)
-- [Case Studies](https://pixelettetech.com/case-studies)
-- [Pixelette Research](https://pixelettetech.com/pixelette-research)
-- [Blog](https://pixelettetech.com/blog)
-- [Contact Us](https://pixelettetech.com/contact-us)
+- Mobile App Development: https://pixelettetech.com/mobile-app-development-services
+  iOS, Android, and cross-platform mobile applications. 100+ apps shipped since 2018.
+
+- UI/UX Design Services: https://pixelettetech.com/ui-ux-design-services
+  User research, wireframing, prototyping, and design-system implementation.
+
+- AR/VR Development Services: https://pixelettetech.com/ar-vr-development-services
+  Immersive simulations, AR product visualisation, VR training environments.
+
+- Custom Software Development: https://pixelettetech.com/custom-software-development-services
+  ERP, CRM, HRMS, and bespoke enterprise applications.
+
+## Delivery Models
+
+- IT Outsourcing Services: https://pixelettetech.com/it-outsourcing-services
+- Staff Augmentation Services: https://pixelettetech.com/staff-augmentation-services
+- Dedicated Team Services: https://pixelettetech.com/dedicated-team-services
+
+## Key Pages
+
+- Homepage: https://pixelettetech.com
+- About: https://pixelettetech.com/about-us
+- Case Studies: https://pixelettetech.com/case-studies
+- Blog: https://pixelettetech.com/blog
+- Contact: https://pixelettetech.com/contact-us
+- Startup Funding Programme: https://pixelettetech.com/startup-funding
+- Pixelette Research: https://pixelettetech.com/pixelette-research
+
+## Credentials and Recognition
+
+- Clutch Rated: Top AI company, Top Blockchain company, Top Smart Contract development company (2025)
+- ISO-certified processes
+- Founded: 2018
+- Projects delivered: 200+
+- Development hours: 35,000+
+- Clutch profile: https://clutch.co/profile/pixelette-technologies
+
+## Social Profiles
+
+- LinkedIn: https://www.linkedin.com/company/pixelettetechnologies/
+- Twitter/X: https://x.com/Pixelette__Tech
+- Facebook: https://www.facebook.com/pixelette.technologies
+- Instagram: https://www.instagram.com/pixelettetechnologies/
+- YouTube: https://www.youtube.com/channel/UCikfbjKTZ22-J4utsb9pzNg
+
+## Content
+
+The Pixelette Technologies blog publishes expert articles on AI, blockchain, quantum computing, web3, and software development:
+https://pixelettetech.com/blog
+
+Sitemap: https://pixelettetech.com/sitemap.xml

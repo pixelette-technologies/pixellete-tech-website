@@ -1,5 +1,6 @@
 import HeroSection from '@/components/CaseStudies/HeroSection/HeroSection';
 import { EvaluateBusiness } from '@/components/Sections/EvaluateBusiness/EvaluateBusiness';
+import { buildLocalBusinessSchema } from '@/utils/schema-helpers';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 
 type IAboutProps = {
@@ -58,8 +59,14 @@ export default async function About(props: IAboutProps) {
   //   namespace: 'About',
   // });
 
+  const localBusinessSchema = buildLocalBusinessSchema();
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+      />
       <HeroSection
         heading="Let’s turn your ideas into successful outcomes"
         description={(

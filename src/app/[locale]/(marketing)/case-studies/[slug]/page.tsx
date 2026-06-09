@@ -7,8 +7,10 @@ import Image from 'next/image';
 import React from 'react';
 import './casestudydetail.css';
 
-export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
-  const { slug } = params;
+type CaseStudyPageProps = { params: Promise<{ slug: string }> };
+
+export async function generateMetadata(props: CaseStudyPageProps): Promise<Metadata> {
+  const { slug } = await props.params;
   const caseStudy = caseStudiesData.find(study => study.slug === slug);
 
   if (!caseStudy) {
@@ -44,8 +46,8 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   };
 }
 
-const CaseStudieDetail = async ({ params }: { params: { slug: string } }) => {
-  const { slug } = params;
+const CaseStudieDetail = async (props: CaseStudyPageProps) => {
+  const { slug } = await props.params;
 
   // Find the case study data based on the slug
   const caseStudy = caseStudiesData.find(study => study.slug === slug);
@@ -114,7 +116,7 @@ const CaseStudieDetail = async ({ params }: { params: { slug: string } }) => {
               <img
                 // src={blogData.fields.image?.fields.file.url}
                 src={caseStudy.bannerImage || '/images/casestudies/aia/aia-header-image.svg'}
-                alt="Cover Image"
+                alt={`${caseStudy.title} case study banner`}
               />
             </figure>
 

@@ -39,14 +39,15 @@ export async function fetchBlogMetadata(slug: string): Promise<{ title: string; 
       'fields.slug': slug,
     });
 
-    if (!response.items.length) {
+    const firstItem = response.items?.[0];
+    if (!firstItem) {
       return null;
     }
 
-    const blog = response.items[0].fields;
+    const blog = firstItem.fields as Record<string, unknown>;
     return {
-      title: blog.title || 'Blockchain Experts',
-      description: blog.description || 'Read more about blockchain topics.',
+      title: (blog.title as string) || 'Blockchain Experts',
+      description: (blog.description as string) || 'Read more about blockchain topics.',
     };
   } catch (error) {
     console.error('Error fetching blog metadata:', error);
@@ -58,12 +59,26 @@ export async function fetchAllBlogSlugs(): Promise<{ slug: string }[]> {
   try {
     const response = await client.getEntries({
       content_type: 'blogsPage',
-      select: 'fields.slug',
+      select: ['fields.slug'] as any,
     });
 
     return response.items.map(item => ({ slug: String(item.fields.slug) }));
   } catch (error) {
     console.error('Error fetching slugs:', error);
+    return [];
+  }
+}
+
+export async function fetchBlogsBySlugList(slugs: string[]): Promise<Entry<any>[]> {
+  try {
+    const response = await (client.getEntries as any)({
+      'content_type': 'blogsPage',
+      'fields.slug[in]': slugs.join(','),
+      'limit': slugs.length,
+    });
+    return (response?.items ?? []) as Entry<any>[];
+  } catch (error) {
+    console.error('Error fetching blogs by slug list:', error);
     return [];
   }
 }
