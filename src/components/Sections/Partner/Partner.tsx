@@ -26,13 +26,13 @@ export const Partner = () => {
           <div className="partners-scroll">
             {partnerLogos.map((logo, index) => (
               <div className="partners-image" key={index}>
-                <img src={logo} alt={`Partner ${index + 1}`} />
+                <img loading="lazy" src={logo} alt={`Partner ${index + 1}`} />
               </div>
             ))}
             {partnerLogos.map((logo, index) => (
               // Duplicate for seamless scrolling
               <div className="partners-image" key={`dup-${index}`}>
-                <img src={logo} alt={`Partner ${index + 1}`} />
+                <img loading="lazy" src={logo} alt={`Partner ${index + 1}`} />
               </div>
             ))}
           </div>

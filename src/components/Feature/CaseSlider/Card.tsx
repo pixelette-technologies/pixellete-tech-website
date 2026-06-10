@@ -33,7 +33,7 @@ export const Card: FC<CardProps> = ({ id, image, blockChainLink, name, descripti
             quality={100}
           />
 
-          {/* <img src={image} alt="slider hero" /> */}
+          {/* <img loading="lazy" src={image} alt="slider hero" /> */}
         </div>
         {/* <div>
           <div>

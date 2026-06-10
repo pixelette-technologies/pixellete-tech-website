@@ -37,7 +37,7 @@ const OurServicesSection: React.FC = () => {
               // data-aos="fade-up"
               // data-aos-duration={600}
               >
-                <img src={item.icon} alt="icon" />
+                <img loading="lazy" src={item.icon} alt="icon" />
                 <h4
                   style={{
                     fontSize: '20px',

@@ -39,7 +39,7 @@ const TechnologiesUsed: React.FC<TechnologiesUsedProps> = ({ technologies, title
 
       <Container className={styles.main}>
         <div className={styles.cardSectionBackground}>
-          <img src={redBackground} alt="Background" />
+          <img loading="lazy" src={redBackground} alt="Background" />
         </div>
       </Container>
       <div className={styles.technologiesMain} id="sideMargin">

@@ -40,19 +40,19 @@ const Map: React.FC = () => {
               <div>
                 {hoveredIndex === index && (
                   <div className="hide-section show">
-                    <img src="/images/about/curve.svg" alt="curve" />
+                    <img loading="lazy" src="/images/about/curve.svg" alt="curve" />
                     <section>
                       <p>{el.city}</p>
                       <div>
-                        <img src="/images/about/phone.svg" alt="phone" />
+                        <img loading="lazy" src="/images/about/phone.svg" alt="phone" />
                         <p>{el.phone}</p>
                       </div>
                       <div>
-                        <img src="/images/about/mail.svg" alt="mail" />
+                        <img loading="lazy" src="/images/about/mail.svg" alt="mail" />
                         <p>{el.mail}</p>
                       </div>
                       <div>
-                        <img src="/images/about/pin.svg" alt="pin" />
+                        <img loading="lazy" src="/images/about/pin.svg" alt="pin" />
                         <p>{el.address}</p>
                       </div>
                     </section>
@@ -77,7 +77,7 @@ const Map: React.FC = () => {
           ))}
 
           <section>
-            <img src="/images/about/map.svg" alt="map" />
+            <img loading="lazy" src="/images/about/map.svg" alt="map" />
           </section>
         </div>
       </div>

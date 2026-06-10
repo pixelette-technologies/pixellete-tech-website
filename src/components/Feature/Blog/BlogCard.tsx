@@ -26,7 +26,7 @@ export const BlogCard: FC<BlogCardProps> = ({
   return (
     <div className="blogCard" data-aos={animation} data-aos-duration={duration}>
       <figure>
-        <img src={image} alt="Blog-Profile" />
+        <img loading="lazy" src={image} alt="Blog-Profile" />
       </figure>
       <p>{date}</p>
       <h3 className="blogCardHeading">{heading}</h3>

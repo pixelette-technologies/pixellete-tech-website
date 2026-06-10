@@ -12,7 +12,7 @@ const StartupStats: React.FC<StartupStatsProps> = () => {
     <>
       <Container className="main">
         <div className="specialSection-background">
-          <img
+          <img loading="lazy"
             src="/images/Clutch/howWeWorkBackground.svg"
             alt="background"
           />

@@ -7,7 +7,7 @@ const BrilliantIdea: React.FC = () => {
     <>
       <Container className="main">
         <div className="specialSection-background">
-          <img src="/images/Clutch/howWeWorkBackground.svg" alt="background" />
+          <img loading="lazy" src="/images/Clutch/howWeWorkBackground.svg" alt="background" />
         </div>
       </Container>
       <div className="specialSection">

@@ -118,7 +118,7 @@ export const Testimonial: FC<TestimonialProps> = ({ background }) => {
 
       {/* <Container> */}
       {/* <div className={styles.testimonialSectionBackground}>
-          <img
+          <img loading="lazy"
             src="/images/home/testimonials/testimonialBackground.svg"
             alt="Testimonial Background"
             className={styles.backgroundImage}

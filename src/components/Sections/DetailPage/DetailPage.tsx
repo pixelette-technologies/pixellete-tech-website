@@ -194,7 +194,7 @@ const DetailsNavigate: React.FC<DetailsNavigateProps> = (props): ReactElement =>
                 </h1>
               )}
               {singleBlogDetail?.fields?.images?.fields?.file?.url && (
-                <img
+                <img loading="lazy"
                   src={singleBlogDetail.fields.images.fields.file.url}
                   alt="Blog-Hero-Main-Image"
                   data-aos="fade-up"

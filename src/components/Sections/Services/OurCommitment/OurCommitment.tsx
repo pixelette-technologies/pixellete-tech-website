@@ -39,7 +39,7 @@ export const OurCommitment: React.FC<OurCommitmentProps> = ({
             {commitmentData.map((el, index) => (
               <Link href={el.link && el.link ? el.link : '/#'}>
                 <div style={{ margin: '0 1rem' }} key={index}>
-                  <img src={el.img} alt={`Commitment ${index + 1}`} />
+                  <img loading="lazy" src={el.img} alt={`Commitment ${index + 1}`} />
                   <div style={{ display: 'flex' }}>
                     <div>
                       <p className={styles.valueText}>{el.value1}</p>

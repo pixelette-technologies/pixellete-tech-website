@@ -40,7 +40,7 @@ export const BlogContent: React.FC<BlogContentProps> = ({ content, resolvedAsset
 
         if (contentType === 'image') {
           return (
-            <img
+            <img loading="lazy"
               src={`https:${file.url}`}
               alt={title}
               style={{ maxWidth: '100%', height: 'auto' }}

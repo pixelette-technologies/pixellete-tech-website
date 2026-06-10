@@ -8,8 +8,8 @@ const WhatMakeUsSpecialHome: React.FC = () => {
       <Container className="main">
         <div style={{ position: 'relative' }}>
           <div className="red-background-border"></div>
-          {/* <img src='/images/home' alt="background" /> */}
-          {/* <img src={assets.home.aboutRightBackground} alt="background" /> */}
+          {/* <img loading="lazy" src='/images/home' alt="background" /> */}
+          {/* <img loading="lazy" src={assets.home.aboutRightBackground} alt="background" /> */}
         </div>
       </Container>
       <Container className="main margins">
