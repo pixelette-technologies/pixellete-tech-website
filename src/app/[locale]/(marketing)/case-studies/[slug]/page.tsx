@@ -3,11 +3,23 @@ import MillstoneList from '@/components/CaseStudies/MilestoneList/MillstoneList'
 import CaseStudyConversionBlock from '@/components/CaseStudy/CaseStudyConversionBlock';
 import { Container } from '@/components/Feature/Container/Container';
 import caseStudiesData from '@/data/caseStudies/caseStudiesData'; // Import case studies data
+import { buildArticleSchema, buildBreadcrumbSchema } from '@/utils/schema-helpers';
 import Image from 'next/image';
 import React from 'react';
 import './casestudydetail.css';
 
 type CaseStudyPageProps = { params: Promise<{ slug: string }> };
+
+// Clamp the rendered title to <=60 chars on a word boundary and return it as an
+// `absolute` title so the layout brand-suffix template does not push it over the
+// 50-60 target (audit P1-02).
+function clampTitle(raw: string): string {
+  if (raw.length <= 60) {
+    return raw;
+  }
+  const cut = raw.slice(0, raw.lastIndexOf(' ', 58)).trimEnd();
+  return `${cut}…`;
+}
 
 export async function generateMetadata(props: CaseStudyPageProps): Promise<Metadata> {
   const { slug } = await props.params;
@@ -15,18 +27,19 @@ export async function generateMetadata(props: CaseStudyPageProps): Promise<Metad
 
   if (!caseStudy) {
     return {
-      title: 'Case Study Not Found',
+      title: { absolute: 'Case Study Not Found | Pixelette Technologies' },
       description: 'This case study does not exist.',
     };
   }
 
   return {
-    title: `${caseStudy.title} | Case Study`,
+    title: { absolute: clampTitle(`${caseStudy.title} | Case Study`) },
     description: caseStudy.description,
+    alternates: { canonical: `/case-studies/${slug}` },
     openGraph: {
       title: caseStudy.title,
       description: caseStudy.description,
-      type: 'website',
+      type: 'article',
       url: `https://pixelettetech.com/case-studies/${slug}`,
       images: [
         {
@@ -71,8 +84,34 @@ const CaseStudieDetail = async (props: CaseStudyPageProps) => {
     process,
   } = caseStudy;
 
+  // Structured data: case-study detail pages previously carried no JSON-LD.
+  // Article + BreadcrumbList deepen sitewide schema coverage (audit P6-19 /
+  // P1-22 / P1-47).
+  const bannerUrl = caseStudy.bannerImage
+    ? `https://pixelettetech.com${caseStudy.bannerImage}`
+    : undefined;
+  const articleSchema = buildArticleSchema({
+    path: `/case-studies/${slug}`,
+    title,
+    description,
+    imageUrl: bannerUrl,
+  });
+  const breadcrumbSchema = buildBreadcrumbSchema([
+    { name: 'Home', path: '/' },
+    { name: 'Case Studies', path: '/case-studies' },
+    { name: title, path: `/case-studies/${slug}` },
+  ]);
+
   return (
     <div className="caseStudieDetail">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <Container className="main">
         <div className="caseStudieDetail-background">
           <Image
