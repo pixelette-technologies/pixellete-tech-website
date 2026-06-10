@@ -6,6 +6,7 @@ import { OurClients } from '@/components/Home/OurClients/OurClients';
 import { EvaluateBusiness } from '@/components/Sections/EvaluateBusiness/EvaluateBusiness';
 import { OurTeam } from '@/components/Sections/OurTeam/OurTeam';
 import { HowWeWork } from '@/components/Sections/Services/HowWeWork/HowWeWork';
+import BreadcrumbJsonLd from '@/components/SEO/BreadcrumbJsonLd';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 
 type IAboutProps = {
@@ -25,6 +26,9 @@ export async function generateMetadata(props: IAboutProps) {
     alternates: {
       canonical: `https://pixelettetech.com/about-us`,
     },
+    openGraph: {
+      url: 'https://pixelettetech.com/about-us',
+    },
   };
 }
 
@@ -38,6 +42,12 @@ export default async function About(props: IAboutProps) {
 
   return (
     <>
+      <BreadcrumbJsonLd
+        items={[
+          { name: 'Home', path: '/' },
+          { name: 'About Us', path: '/about-us' },
+        ]}
+      />
       <HeroSectionAbout />
       <DedicatedTech />
       <OurClients />

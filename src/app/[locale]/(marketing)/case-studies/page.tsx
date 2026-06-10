@@ -1,6 +1,7 @@
 import HeroSection from '@/components/CaseStudies/HeroSection/HeroSection';
 import { ProjectSection } from '@/components/CaseStudies/ProjectSection/ProjectSection';
 import { EvaluateBusiness } from '@/components/Sections/EvaluateBusiness/EvaluateBusiness';
+import BreadcrumbJsonLd from '@/components/SEO/BreadcrumbJsonLd';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 
 type IAboutProps = {
@@ -20,6 +21,9 @@ export async function generateMetadata(props: IAboutProps) {
     alternates: {
       canonical: '/case-studies',
     },
+    openGraph: {
+      url: 'https://pixelettetech.com/case-studies',
+    },
   };
 }
 
@@ -33,6 +37,12 @@ export default async function About(props: IAboutProps) {
 
   return (
     <>
+      <BreadcrumbJsonLd
+        items={[
+          { name: 'Home', path: '/' },
+          { name: 'Case Studies', path: '/case-studies' },
+        ]}
+      />
       <HeroSection />
       <ProjectSection />
       <EvaluateBusiness

@@ -1,6 +1,7 @@
 import { Container } from '@/components/Feature/Container/Container';
 import DetailsNavigate from '@/components/Policies/DetailNavigate/DetailsNavigate';
 import { EvaluateBusiness } from '@/components/Sections/EvaluateBusiness/EvaluateBusiness';
+import BreadcrumbJsonLd from '@/components/SEO/BreadcrumbJsonLd';
 import { termAndConditions } from '@/data/policies/termAndConditions';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import './index.css';
@@ -22,6 +23,9 @@ export async function generateMetadata(props: IAIservicesProps) {
     alternates: {
       canonical: '/terms-conditions',
     },
+    openGraph: {
+      url: 'https://pixelettetech.com/terms-conditions',
+    },
   };
 }
 
@@ -31,6 +35,12 @@ export default async function PrivacyPolicy(props: IAIservicesProps) {
 
   return (
     <>
+      <BreadcrumbJsonLd
+        items={[
+          { name: 'Home', path: '/' },
+          { name: 'Terms & Conditions', path: '/terms-conditions' },
+        ]}
+      />
       <Container className="main">
         <div className="privacyPolicy-background">
           <img loading="lazy"

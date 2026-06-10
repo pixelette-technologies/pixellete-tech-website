@@ -5,6 +5,7 @@ import { AiServiceTable } from '@/components/Sections/Services/AiServiceTable/Ai
 import FaqsSection from '@/components/Sections/Services/FAQs/FaqsSection';
 
 import { HowWeWork } from '@/components/Sections/Services/HowWeWork/HowWeWork';
+import BreadcrumbJsonLd from '@/components/SEO/BreadcrumbJsonLd';
 import { deliverFaqs } from '@/data/faqs/deliverFaqs';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 
@@ -26,6 +27,9 @@ export async function generateMetadata(props: IDeliverProps) {
     alternates: {
       canonical: '/dedicated-team-services',
     },
+    openGraph: {
+      url: 'https://pixelettetech.com/dedicated-team-services',
+    },
   };
 }
 
@@ -36,19 +40,6 @@ export default async function DedicatedTeamServices(props: IDeliverProps) {
   //   locale,
   //   namespace: 'About',
   // });
-
-  const faqSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    'mainEntity': deliverFaqs.map(faq => ({
-      '@type': 'Question',
-      'name': faq.question,
-      'acceptedAnswer': {
-        '@type': 'Answer',
-        'text': faq.answer,
-      },
-    })),
-  };
 
   const deliverHeroData = {
     backgroundImage: '/images/aiServices/heroSectionBackground.svg',
@@ -91,9 +82,11 @@ export default async function DedicatedTeamServices(props: IDeliverProps) {
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      <BreadcrumbJsonLd
+        items={[
+          { name: 'Home', path: '/' },
+          { name: 'Dedicated Team Services', path: '/dedicated-team-services' },
+        ]}
       />
       <HowItWorksHeroSection {...deliverHeroData} />
       <DeliverBenefits {...benefitData} />

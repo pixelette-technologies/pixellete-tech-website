@@ -33,6 +33,7 @@ import {
   vrTechnologies,
 } from '@/data/services/arVR';
 import { arVrVideoShowcaseData } from '@/data/services/videoShowcaseData';
+import { buildBreadcrumbSchema } from '@/utils/schema-helpers';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 
 // Use the imported objects as needed in your component
@@ -55,6 +56,9 @@ export async function generateMetadata(props: IARVRProps) {
     alternates: {
       canonical: `/ar-vr-development-services`,
     },
+    openGraph: {
+      url: 'https://pixelettetech.com/ar-vr-development-services',
+    },
   };
 }
 
@@ -65,40 +69,10 @@ export default async function ARVR(props: IARVRProps) {
   //   locale,
   //   namespace: 'About',
   // });
-  const faqSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    'mainEntity': arFaqs.map(faq => ({
-      '@type': 'Question',
-      'name': faq.question,
-      'acceptedAnswer': {
-        '@type': 'Answer',
-        'text': faq.answer,
-      },
-    })),
-  };
-  const breadcrumbSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    'itemListElement': [
-      {
-        '@type': 'ListItem',
-        'position': 1,
-        'name': 'Home',
-        'item': `/`,
-      },
-      {
-        '@type': 'ListItem',
-        'position': 2,
-        'name': 'AR/VR Development Services',
-        'item': `/ar-vr-development-services`,
-      },
-    ],
-  };
-  // <script
-  //       type="application/ld+json"
-  //       dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-  //     />
+  const breadcrumbSchema = buildBreadcrumbSchema([
+    { name: 'Home', path: '/' },
+    { name: 'AR/VR Development Services', path: '/ar-vr-development-services' },
+  ]);
   const formattedFaqs = arFaqs.map(faq => ({
     ...faq,
     list: (faq as { list?: string[] }).list ?? [],
@@ -131,10 +105,6 @@ export default async function ARVR(props: IARVRProps) {
   ];
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}

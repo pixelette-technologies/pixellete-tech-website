@@ -55,6 +55,9 @@ export async function generateMetadata(props: IBlockchainDevelopmentProps) {
     alternates: {
       canonical: `https://pixelettetech.com/blockchain-development-services`,
     },
+    openGraph: {
+      url: 'https://pixelettetech.com/blockchain-development-services',
+    },
   };
 }
 
@@ -113,24 +116,8 @@ export default async function BlockchainDevelopment(props: IBlockchainDevelopmen
   //   locale,
   //   namespace: 'About',
   // });
-  const faqSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    'mainEntity': blockFaqs.map(faq => ({
-      '@type': 'Question',
-      'name': faq.question,
-      'acceptedAnswer': {
-        '@type': 'Answer',
-        'text': faq.answer,
-      },
-    })),
-  };
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}

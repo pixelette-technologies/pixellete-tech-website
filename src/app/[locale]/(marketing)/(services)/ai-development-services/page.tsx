@@ -82,6 +82,9 @@ export async function generateMetadata(props: IAIservicesProps) {
     alternates: {
       canonical: `https://pixelettetech.com/ai-development-services`,
     },
+    openGraph: {
+      url: 'https://pixelettetech.com/ai-development-services',
+    },
   };
 }
 const breadcrumbSchema = {
@@ -110,26 +113,8 @@ export default async function AIservices(props: IAIservicesProps) {
   //   namespace: 'About',
   // });
 
-  const faqSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    'mainEntity': aiFaq.map(faq => ({
-      '@type': 'Question',
-      'name': faq.question,
-      'acceptedAnswer': {
-        '@type': 'Answer',
-        'text': faq.answer,
-      },
-    })),
-  };
-
   return (
     <>
-
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}

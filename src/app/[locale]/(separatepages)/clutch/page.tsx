@@ -8,6 +8,7 @@ import { Footer } from '@/components/footer/Footer';
 import { OurClients } from '@/components/Home/OurClients/OurClients';
 import { Testimonial } from '@/components/Home/Testimonial/Testimonial';
 import FaqsSection from '@/components/Sections/Services/FAQs/FaqsSection';
+import BreadcrumbJsonLd from '@/components/SEO/BreadcrumbJsonLd';
 import { clFaqs } from '@/data/faqs/clFaqs';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import Link from 'next/link';
@@ -40,6 +41,12 @@ export default async function Clutch(props: IAIservicesProps) {
 
   return (
     <>
+      <BreadcrumbJsonLd
+        items={[
+          { name: 'Home', path: '/' },
+          { name: 'Clutch Reviews', path: '/clutch' },
+        ]}
+      />
       <div className="specialSection-backgroundd">
         {/* <img loading="lazy" src="/images/Clutch/background.webp" alt="background" /> */}
       </div>

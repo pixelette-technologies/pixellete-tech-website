@@ -29,6 +29,7 @@ import {
   webDevelopmentServices,
   webDevelopmentTechnologies,
 } from '@/data/services/webDevelopment';
+import { buildBreadcrumbSchema } from '@/utils/schema-helpers';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 
 // Use the imported objects as needed in your component
@@ -51,6 +52,9 @@ export async function generateMetadata(props: IWebDevelopmentProps) {
     alternates: {
       canonical: `/web-development-services`,
     },
+    openGraph: {
+      url: 'https://pixelettetech.com/web-development-services',
+    },
   };
 }
 
@@ -61,42 +65,12 @@ export default async function WebDevelopment(props: IWebDevelopmentProps) {
   //   locale,
   //   namespace: 'About',
   // });
-  const faqSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    'mainEntity': webFaqs.map(faq => ({
-      '@type': 'Question',
-      'name': faq.question,
-      'acceptedAnswer': {
-        '@type': 'Answer',
-        'text': faq.answer,
-      },
-    })),
-  };
-  const breadcrumbSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    'itemListElement': [
-      {
-        '@type': 'ListItem',
-        'position': 1,
-        'name': 'Home',
-        'item': `/`,
-      },
-      {
-        '@type': 'ListItem',
-        'position': 2,
-        'name': 'Web development Services',
-        'item': `/web-development-services`,
-      },
-    ],
-  };
+  const breadcrumbSchema = buildBreadcrumbSchema([
+    { name: 'Home', path: '/' },
+    { name: 'Web Development Services', path: '/web-development-services' },
+  ]);
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}

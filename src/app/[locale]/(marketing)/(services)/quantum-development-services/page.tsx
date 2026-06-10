@@ -8,7 +8,6 @@ import { QuantumCommitment } from '@/components/Sections/Services/QuantumCommitm
 import { QuantumExpertise } from '@/components/Sections/Services/QuantumExpertise/QuantumExpertise';
 import { QuantumPlans } from '@/components/Sections/Services/QuantumPlans/QuantumPlans';
 import { QuantumTechStack } from '@/components/Sections/Services/QuantumTechStack/QuantumTechStack';
-import { aiFaq } from '@/data/faqs/aiFaqs';
 import {
   quantumHeroBackgroundImage,
   quantumHeroButtonLink,
@@ -43,6 +42,9 @@ export async function generateMetadata(props: IQuantumServicesProps) {
     alternates: {
       canonical: `https://pixelettetech.com/quantum-development-services`,
     },
+    openGraph: {
+      url: 'https://pixelettetech.com/quantum-development-services',
+    },
   };
 }
 
@@ -69,18 +71,6 @@ export default async function QuantumServices(props: IQuantumServicesProps) {
   const { locale } = await props.params;
   setRequestLocale(locale);
 
-  const faqSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    'mainEntity': aiFaq.map(faq => ({
-      '@type': 'Question',
-      'name': faq.question,
-      'acceptedAnswer': {
-        '@type': 'Answer',
-        'text': faq.answer,
-      },
-    })),
-  };
   const clutchLogos = [
     {
       src: '/images/Clutch/clutch-badges/ai/most-reviewed-ai-company.png',
@@ -109,10 +99,6 @@ export default async function QuantumServices(props: IQuantumServicesProps) {
   ];
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}

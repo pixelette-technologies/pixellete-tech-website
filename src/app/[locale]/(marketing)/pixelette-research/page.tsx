@@ -1,4 +1,5 @@
 import HeroSection from '@/components/PixeletteResearch/HeroSection/HeroSection';
+import BreadcrumbJsonLd from '@/components/SEO/BreadcrumbJsonLd';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 
 type IAboutProps = {
@@ -19,6 +20,9 @@ export async function generateMetadata(props: IAboutProps) {
     alternates: {
       canonical: '/pixelette-research',
     },
+    openGraph: {
+      url: 'https://pixelettetech.com/pixelette-research',
+    },
   };
 }
 
@@ -32,6 +36,12 @@ export default async function About(props: IAboutProps) {
 
   return (
     <>
+      <BreadcrumbJsonLd
+        items={[
+          { name: 'Home', path: '/' },
+          { name: 'Pixelette Research', path: '/pixelette-research' },
+        ]}
+      />
       <HeroSection />
       {/* <p>{t('about_paragraph')}</p>
 
