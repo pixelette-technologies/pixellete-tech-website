@@ -30,6 +30,7 @@ import {
   uiuxServices,
   uiuxTechnologies,
 } from '@/data/services/uiUX';
+import { buildBreadcrumbSchema } from '@/utils/schema-helpers';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 
 // Use the imported objects as needed in your component
@@ -52,6 +53,9 @@ export async function generateMetadata(props: IUIUXProps) {
     alternates: {
       canonical: `/ui-ux-design-services`,
     },
+    openGraph: {
+      url: 'https://pixelettetech.com/ui-ux-design-services',
+    },
   };
 }
 
@@ -63,42 +67,12 @@ export default async function UIUX(props: IUIUXProps) {
   //   namespace: 'About',
   // });
 
-  const faqSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    'mainEntity': uiFaqs.map(faq => ({
-      '@type': 'Question',
-      'name': faq.question,
-      'acceptedAnswer': {
-        '@type': 'Answer',
-        'text': faq.answer,
-      },
-    })),
-  };
-  const breadcrumbSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    'itemListElement': [
-      {
-        '@type': 'ListItem',
-        'position': 1,
-        'name': 'Home',
-        'item': `/`,
-      },
-      {
-        '@type': 'ListItem',
-        'position': 2,
-        'name': 'UI/UX design Services',
-        'item': `/ui-ux-design-services`,
-      },
-    ],
-  };
+  const breadcrumbSchema = buildBreadcrumbSchema([
+    { name: 'Home', path: '/' },
+    { name: 'UI/UX Design Services', path: '/ui-ux-design-services' },
+  ]);
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}

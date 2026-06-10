@@ -1,5 +1,6 @@
 import HeroSection from '@/components/CaseStudies/HeroSection/HeroSection';
 import { EvaluateBusiness } from '@/components/Sections/EvaluateBusiness/EvaluateBusiness';
+import BreadcrumbJsonLd from '@/components/SEO/BreadcrumbJsonLd';
 import { buildLocalBusinessSchema } from '@/utils/schema-helpers';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 
@@ -48,6 +49,9 @@ export async function generateMetadata(props: IAboutProps) {
     alternates: {
       canonical: '/contact-us',
     },
+    openGraph: {
+      url: 'https://pixelettetech.com/contact-us',
+    },
   };
 }
 
@@ -63,6 +67,12 @@ export default async function About(props: IAboutProps) {
 
   return (
     <>
+      <BreadcrumbJsonLd
+        items={[
+          { name: 'Home', path: '/' },
+          { name: 'Contact Us', path: '/contact-us' },
+        ]}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}

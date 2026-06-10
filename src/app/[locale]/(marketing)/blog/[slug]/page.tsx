@@ -45,6 +45,7 @@ export async function generateMetadata(props: BlogPageProps) {
       description: metadata.description,
       type: 'article',
       url,
+      images: [{ url: 'https://pixelettetech.com/og/homepage.png', width: 1200, height: 630, alt: title }],
     },
     twitter: {
       card: 'summary_large_image',

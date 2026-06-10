@@ -1,4 +1,5 @@
 import { Blog } from '@/components/Blogging/Blog/Blog';
+import BreadcrumbJsonLd from '@/components/SEO/BreadcrumbJsonLd';
 import { createClient } from 'contentful';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 
@@ -18,6 +19,9 @@ export async function generateMetadata(props: IBlogProps) {
     description: t('meta_description'),
     alternates: {
       canonical: '/blog',
+    },
+    openGraph: {
+      url: 'https://pixelettetech.com/blog',
     },
   };
 }
@@ -67,6 +71,12 @@ export default async function Blogs(props: IBlogProps) {
   const blogData = await getBlogs();
   return (
     <>
+      <BreadcrumbJsonLd
+        items={[
+          { name: 'Home', path: '/' },
+          { name: 'Blog', path: '/blog' },
+        ]}
+      />
       <Blog blogdata={blogData} />
       {/* <p>{t('about_paragraph')}</p>
 

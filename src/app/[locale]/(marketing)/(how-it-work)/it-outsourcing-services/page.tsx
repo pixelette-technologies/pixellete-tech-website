@@ -4,6 +4,7 @@ import { EvaluateBusiness } from '@/components/Sections/EvaluateBusiness/Evaluat
 import { AiServiceTable } from '@/components/Sections/Services/AiServiceTable/AiServiceTable';
 import FaqsSection from '@/components/Sections/Services/FAQs/FaqsSection';
 import { HowWeWork } from '@/components/Sections/Services/HowWeWork/HowWeWork';
+import BreadcrumbJsonLd from '@/components/SEO/BreadcrumbJsonLd';
 import { deliverFaqs } from '@/data/faqs/deliverFaqs';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 
@@ -24,6 +25,9 @@ export async function generateMetadata(props: IDeliverProps) {
     keywords: t('meta_keywords'),
     alternates: {
       canonical: '/it-outsourcing-services',
+    },
+    openGraph: {
+      url: 'https://pixelettetech.com/it-outsourcing-services',
     },
   };
 }
@@ -74,23 +78,13 @@ export default async function ItOutsourcingServices(props: IDeliverProps) {
       },
     ],
   };
-  const faqSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    'mainEntity': deliverFaqs.map(faq => ({
-      '@type': 'Question',
-      'name': faq.question,
-      'acceptedAnswer': {
-        '@type': 'Answer',
-        'text': faq.answer,
-      },
-    })),
-  };
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      <BreadcrumbJsonLd
+        items={[
+          { name: 'Home', path: '/' },
+          { name: 'IT Outsourcing Services', path: '/it-outsourcing-services' },
+        ]}
       />
       <HowItWorksHeroSection {...deliverHeroData} />
       <DeliverBenefits {...benefitData} />

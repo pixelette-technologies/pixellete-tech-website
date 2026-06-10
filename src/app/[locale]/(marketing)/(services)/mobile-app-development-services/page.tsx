@@ -33,6 +33,7 @@ import {
   tgExpertiseData,
   tgheading,
 } from '@/data/services/mobileDevelopment';
+import { buildBreadcrumbSchema } from '@/utils/schema-helpers';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 
 // Use the imported objects as needed in your component
@@ -55,6 +56,9 @@ export async function generateMetadata(props: IMobileDevelopmentProps) {
     alternates: {
       canonical: `/mobile-app-development-services`,
     },
+    openGraph: {
+      url: 'https://pixelettetech.com/mobile-app-development-services',
+    },
   };
 }
 
@@ -66,42 +70,12 @@ export default async function MobileDevelopment(props: IMobileDevelopmentProps) 
   //   namespace: 'About',
   // });
 
-  const faqSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    'mainEntity': mobileFaqs.map(faq => ({
-      '@type': 'Question',
-      'name': faq.question,
-      'acceptedAnswer': {
-        '@type': 'Answer',
-        'text': faq.answer,
-      },
-    })),
-  };
-  const breadcrumbSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    'itemListElement': [
-      {
-        '@type': 'ListItem',
-        'position': 1,
-        'name': 'Home',
-        'item': `/`,
-      },
-      {
-        '@type': 'ListItem',
-        'position': 2,
-        'name': 'Mobile App Development Services',
-        'item': `/mobile-app-development-services`,
-      },
-    ],
-  };
+  const breadcrumbSchema = buildBreadcrumbSchema([
+    { name: 'Home', path: '/' },
+    { name: 'Mobile App Development Services', path: '/mobile-app-development-services' },
+  ]);
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}

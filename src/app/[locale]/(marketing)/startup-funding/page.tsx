@@ -1,3 +1,4 @@
+import BreadcrumbJsonLd from '@/components/SEO/BreadcrumbJsonLd';
 import { HeroSection } from '@/components/StartUp/HeroSection/HeroSection';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 
@@ -18,6 +19,9 @@ export async function generateMetadata(props: IAboutProps) {
     alternates: {
       canonical: '/startup-funding',
     },
+    openGraph: {
+      url: 'https://pixelettetech.com/startup-funding',
+    },
   };
 }
 
@@ -31,7 +35,12 @@ export default async function About(props: IAboutProps) {
 
   return (
     <>
-
+      <BreadcrumbJsonLd
+        items={[
+          { name: 'Home', path: '/' },
+          { name: 'Startup Funding', path: '/startup-funding' },
+        ]}
+      />
       <HeroSection />
       {/* <p>{t('about_paragraph')}</p>
 

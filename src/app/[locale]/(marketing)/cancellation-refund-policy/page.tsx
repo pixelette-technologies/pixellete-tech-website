@@ -1,6 +1,7 @@
 import { Container } from '@/components/Feature/Container/Container';
 import DetailsNavigate from '@/components/Policies/DetailNavigate/DetailsNavigate';
 import { EvaluateBusiness } from '@/components/Sections/EvaluateBusiness/EvaluateBusiness';
+import BreadcrumbJsonLd from '@/components/SEO/BreadcrumbJsonLd';
 import { refundPolicy } from '@/data/policies/refundPolicy';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import './index.css';
@@ -22,6 +23,9 @@ export async function generateMetadata(props: IAIservicesProps) {
     alternates: {
       canonical: '/cancellation-refund-policy',
     },
+    openGraph: {
+      url: 'https://pixelettetech.com/cancellation-refund-policy',
+    },
   };
 }
 
@@ -31,6 +35,12 @@ export default async function PrivacyPolicy(props: IAIservicesProps) {
 
   return (
     <>
+      <BreadcrumbJsonLd
+        items={[
+          { name: 'Home', path: '/' },
+          { name: 'Cancellation & Refund Policy', path: '/cancellation-refund-policy' },
+        ]}
+      />
       <Container className="main">
         <div className="privacyPolicy-background">
           <img loading="lazy"
