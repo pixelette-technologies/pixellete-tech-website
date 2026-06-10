@@ -58,7 +58,7 @@ export default async function BlogDetail({ params }: { params: { slug: string } 
       />
       <Container className="main">
         <div className="cardSectionBackground">
-          <img src="/images/aiServices/serviceSectionBackground.svg" alt="Background" />
+          <img loading="lazy" src="/images/aiServices/serviceSectionBackground.svg" alt="Background" />
         </div>
       </Container>
       <div style={{ padding: '0 5rem' }} className="main margins">

@@ -13,7 +13,7 @@ export const TechStack: React.FC<TechStackProps> = (props: TechStackProps) => {
     <div>
       <Container className="main">
         <div className="cardSectionBackground">
-          <img
+          <img loading="lazy"
             src="/images/aiServices/serviceSectionBackground.svg"
           />
         </div>

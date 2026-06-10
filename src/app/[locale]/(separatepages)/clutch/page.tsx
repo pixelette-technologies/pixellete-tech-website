@@ -41,16 +41,16 @@ export default async function Clutch(props: IAIservicesProps) {
   return (
     <>
       <div className="specialSection-backgroundd">
-        {/* <img src="/images/Clutch/background.webp" alt="background" /> */}
+        {/* <img loading="lazy" src="/images/Clutch/background.webp" alt="background" /> */}
       </div>
       <div className="clutch-container">
         <div className="heroSectionAiServices-background">
-          {/* <img src="/images/aiServices/heroSectionBackground.svg" alt="background" /> */}
+          {/* <img loading="lazy" src="/images/aiServices/heroSectionBackground.svg" alt="background" /> */}
           <div className="pixelate-logo" id="sideMargin">
             <Container className="main margins">
               <Link href="/" className="logo-link">
                 <span>
-                  <img src="/images/Clutch/logo.svg" alt="" />
+                  <img loading="lazy" src="/images/Clutch/logo.svg" alt="" />
                 </span>
               </Link>
             </Container>

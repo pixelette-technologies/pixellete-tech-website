@@ -8,7 +8,7 @@ const AwardWinning = () => {
     <>
       <Container className="main">
         <div className="specialSection-background">
-          <img src="/images/Clutch/howWeWorkBackground.svg" alt="background" />
+          <img loading="lazy" src="/images/Clutch/howWeWorkBackground.svg" alt="background" />
         </div>
       </Container>
       <div className="specialSection" id="sideMargin">
@@ -81,7 +81,7 @@ const Item = ({ heading, text }) => {
     <>
       <div>
         <section>
-          <img src="/images/Clutch/dot.svg" alt="dot" />
+          <img loading="lazy" src="/images/Clutch/dot.svg" alt="dot" />
         </section>
         <div>
           <p>{heading}</p>

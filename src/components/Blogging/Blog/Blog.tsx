@@ -38,7 +38,7 @@ export const Blog = ({ blogdata }: BlogProps) => {
       <div className="blogsPage">
         <Container className="main">
           <div className="blogsPage-background">
-            <img
+            <img loading="lazy"
               src="/images/blogs/blogsMainBackground.svg"
               alt="background"
             />

@@ -7,12 +7,12 @@ const AwardCards = () => {
         <div className="award-cards">
           {awardsData.map(award => (
             <div key={award.id} className="award-card">
-              <img src={award.src} alt={award.alt} />
+              <img loading="lazy" src={award.src} alt={award.alt} />
             </div>
           ))}
         </div>
         <div>
-          <img src="/images/Clutch/portfolio-marketing.svg" alt="Clutch award badge" />
+          <img loading="lazy" src="/images/Clutch/portfolio-marketing.svg" alt="Clutch award badge" />
         </div>
       </div>
     </>

@@ -208,7 +208,7 @@ const AboutUsSection: React.FC = () => {
               {/* APPG Section */}
               <div className="certificate-item">
                 <div className="certificate-logos">
-                  <img
+                  <img loading="lazy"
                     src="/images/home/appg.png"
                     alt="APPG Logo"
                     className="certificate-logo"
@@ -227,7 +227,7 @@ const AboutUsSection: React.FC = () => {
                 className="certificate-item certificate-item-link"
               >
                 <div className="certificate-logos">
-                  <img
+                  <img loading="lazy"
                     src="/images/home/IsoCertificate.svg"
                     alt="ISO Certificate"
                     className="certificate-logo iso-logo"
@@ -241,7 +241,7 @@ const AboutUsSection: React.FC = () => {
               {/* ISO 27001 Section */}
               <div className="certificate-item">
                 <div className="certificate-logos">
-                  <img
+                  <img loading="lazy"
                     src="/images/home/Iso27001.png"
                     alt="ISO 27001:2022 Certified Company"
                     className="certificate-logo iso-logo"
@@ -255,7 +255,7 @@ const AboutUsSection: React.FC = () => {
               {/* Scotland Section */}
               <div className="certificate-item">
                 <div className="certificate-logos">
-                  <img
+                  <img loading="lazy"
                     src="/images/home/Scotland.png"
                     alt="Scotland Logo"
                     className="certificate-logo"

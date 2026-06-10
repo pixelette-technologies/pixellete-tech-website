@@ -171,7 +171,7 @@ const DetailsNavigate = (props) => {
                 </h1>
               )}
               {singleBlogDetail.fields?.images?.fields?.file?.url && (
-                <img
+                <img loading="lazy"
                   src={singleBlogDetail.fields?.images?.fields?.file?.url}
                   alt="Blog-Hero-Main-Image"
                   // data-aos="fade-up"
@@ -240,21 +240,21 @@ const DetailsNavigate = (props) => {
                   <blockquote>
                     <div // data-aos="fade-up" data-aos-duration="500"
                     >
-                      <img src={assets.commonAssests.mail} alt="Email contact" />
+                      <img loading="lazy" src={assets.commonAssests.mail} alt="Email contact" />
                       <p>
                         sales@pixelettetech.com
                       </p>
                     </div>
                     <div // data-aos="fade-up" data-aos-duration="500"
                     >
-                      <img src={assets.commonAssests.mapIcon} alt="Office location" />
+                      <img loading="lazy" src={assets.commonAssests.mapIcon} alt="Office location" />
                       <p>
                         https://www.pixelettetech.com/contact-us/
                       </p>
                     </div>
                     <div // data-aos="fade-up" data-aos-duration="500"
                     >
-                      <img src={assets.commonAssests.phone} alt="Phone contact" />
+                      <img loading="lazy" src={assets.commonAssests.phone} alt="Phone contact" />
                       <p>
                         +44 2045188226
                       </p>

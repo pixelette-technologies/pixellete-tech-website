@@ -8,7 +8,7 @@ const OurMission: React.FC = () => {
     <div>
       <Container className="main">
         <div className="cardSectionBackground">
-          <img
+          <img loading="lazy"
             src="/images/aiServices/serviceSectionBackground.svg"
             alt="aiServices"
           />
@@ -17,7 +17,7 @@ const OurMission: React.FC = () => {
       <Container className="main margins">
         <div className="main-container">
           <div className="section">
-            <img
+            <img loading="lazy"
               className="image"
               src="/images/about/OurMissionImage1.png"
               alt="Our mission"
@@ -34,7 +34,7 @@ const OurMission: React.FC = () => {
           </div>
 
           <div className="section reverse">
-            <img
+            <img loading="lazy"
               className="image"
               src="/images/about/OurMissionImage2.png"
               alt="Our vision"
@@ -52,7 +52,7 @@ const OurMission: React.FC = () => {
           </div>
 
           <div className="section">
-            <img
+            <img loading="lazy"
               className="image"
               src="/images/about/OurMissionImage3.png"
               alt="Our core values"

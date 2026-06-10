@@ -61,7 +61,7 @@ export const QuantumFeatures: React.FC<QuantumFeaturesProps> = ({
               <div className="quantumFeatureIcon">
                 {feature.icon
                   ? (
-                      <img src={feature.icon} alt={feature.title} />
+                      <img loading="lazy" src={feature.icon} alt={feature.title} />
                     )
                   : (
                       <div className="quantumFeatureIconPlaceholder">

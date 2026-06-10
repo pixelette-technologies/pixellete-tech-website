@@ -32,7 +32,7 @@ const BlogDetail = () => {
       <div className="blogDetail">
         <Container className="main">
           <div className="blogDetail-background">
-            <img src="/images/blogs/singleBlogBackground.svg" alt="blog" />
+            <img loading="lazy" src="/images/blogs/singleBlogBackground.svg" alt="blog" />
           </div>
         </Container>
         <section>

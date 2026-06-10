@@ -33,7 +33,7 @@ export default async function PrivacyPolicy(props: IAIservicesProps) {
     <>
       <Container className="main">
         <div className="privacyPolicy-background">
-          <img
+          <img loading="lazy"
             src="/images/policies/privacyPoliciesBackGround.svg"
             alt="background"
           />

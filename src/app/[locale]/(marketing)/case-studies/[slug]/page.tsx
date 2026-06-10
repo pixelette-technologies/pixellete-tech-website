@@ -152,7 +152,7 @@ const CaseStudieDetail = async (props: CaseStudyPageProps) => {
               </div>
             </div>
             <figure>
-              <img
+              <img loading="lazy"
                 // src={blogData.fields.image?.fields.file.url}
                 src={caseStudy.bannerImage || '/images/casestudies/aia/aia-header-image.svg'}
                 alt={`${caseStudy.title} case study banner`}
@@ -198,7 +198,7 @@ const CaseStudieDetail = async (props: CaseStudyPageProps) => {
               }}
             >
               {techStack.map((tech, index) => (
-                <img key={index} style={{ width: '50%', borderRadius: '1.5rem' }} src={tech.icon} alt={tech.name} />
+                <img loading="lazy" key={index} style={{ width: '50%', borderRadius: '1.5rem' }} src={tech.icon} alt={tech.name} />
               ))}
             </span>
           </section>

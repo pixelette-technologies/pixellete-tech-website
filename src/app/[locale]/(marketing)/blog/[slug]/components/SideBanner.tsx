@@ -44,7 +44,7 @@ export const SideBanner: React.FC<SideBannerProps> = ({ sideBannerAd, resolvedAs
 
         if (contentType === 'image') {
           return (
-            <img
+            <img loading="lazy"
               src={`https:${file.url}`}
               alt={title}
               style={{ maxWidth: '60%', height: 'auto', paddingBottom: '10px' }}

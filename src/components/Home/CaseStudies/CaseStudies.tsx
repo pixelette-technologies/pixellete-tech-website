@@ -47,7 +47,7 @@ export const CaseStudies: React.FC<CaseStudiesProps> = () => {
     <>
       <Container className="main margins">
         <div className="testimonialSection-background">
-          <img
+          <img loading="lazy"
             src="/images/home/testimonials/testimonialBackground.svg"
             alt="Testimonial Background"
           />
@@ -57,7 +57,7 @@ export const CaseStudies: React.FC<CaseStudiesProps> = () => {
       <div className="testimonialSection">
         <Container className="main">
           <blockquote>
-            <img src="/images/home/testimonials/box_16.svg" alt="Decorative Box" />
+            <img loading="lazy" src="/images/home/testimonials/box_16.svg" alt="Decorative Box" />
           </blockquote>
 
           <center>

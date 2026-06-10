@@ -54,7 +54,7 @@ export const CaseStudies = ({ heading, initialData }: CaseStudiesProps) => {
       <Container className={styles.main}>
 
         {/* <div className={styles.testimonialSectionBackground}>
-          <img
+          <img loading="lazy"
             src="/images/home/testimonials/testimonialBackground.svg"
             alt="Testimonial Background"
             className={styles.backgroundImage}
