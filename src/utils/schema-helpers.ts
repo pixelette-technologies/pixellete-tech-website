@@ -205,7 +205,7 @@ export function buildAuthorSchema(input: AuthorSchemaInput) {
 export function buildLocalBusinessSchema() {
   return {
     '@context': 'https://schema.org',
-    '@type': 'ProfessionalService',
+    '@type': 'LocalBusiness',
     '@id': `${SEO_CONFIG.siteUrl}/#localbusiness`,
     'name': SEO_CONFIG.organisation.name,
     'legalName': SEO_CONFIG.organisation.legalName,

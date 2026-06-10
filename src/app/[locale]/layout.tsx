@@ -78,6 +78,7 @@ export default async function RootLayout({ children, params }: { children: React
   const organizationSchema = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
+    '@id': 'https://pixelettetech.com/#organization',
     'name': 'Pixelette Technologies',
     'url': 'https://pixelettetech.com',
     'logo': 'https://pixelettetech.com/images/logo/short-logo-purple.png',
@@ -90,6 +91,13 @@ export default async function RootLayout({ children, params }: { children: React
       'addressCountry': 'GB',
     },
     'telephone': '+44 20 4518 8226',
+    'sameAs': [
+      'https://www.linkedin.com/company/pixelettetechnologies/',
+      'https://x.com/Pixelette__Tech',
+      'https://www.facebook.com/pixelette.technologies',
+      'https://www.instagram.com/pixelettetechnologies/',
+      'https://www.youtube.com/channel/UCikfbjKTZ22-J4utsb9pzNg',
+    ],
   };
 
   return (
