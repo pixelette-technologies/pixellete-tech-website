@@ -33,6 +33,7 @@ export const Navbar = () => {
               alt="logo"
               width={100}
               height={50}
+              priority
               data-aos="flip-left"
               data-aos-duration="1000"
             />

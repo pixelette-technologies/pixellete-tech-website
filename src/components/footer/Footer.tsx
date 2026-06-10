@@ -134,6 +134,11 @@ export const Footer: React.FC = () => {
               { href: 'pixelette-research', text: 'Pixelette Research' },
               { href: 'startup-funding', text: 'Startups' },
               { href: 'blog', text: 'Blogs' },
+              { href: 'clutch', text: 'Clutch Reviews' },
+              { href: 'blog/category/artificial-intelligence', text: 'AI Articles' },
+              { href: 'blog/category/blockchain-web3', text: 'Blockchain Articles' },
+              { href: 'blog/category/software-development', text: 'Software Articles' },
+              { href: 'blog/category/mobile-web-design', text: 'Mobile & Web Articles' },
               // { href: 'cancellation-refund-policy', text: 'Cancellation & Refund Policy' },
             ].map((item, index) => (
               <p

@@ -88,9 +88,14 @@ export const Testimonial: FC<TestimonialProps> = ({ background }) => {
       <script type="application/ld+json">
         {JSON.stringify({
           '@context': 'https://schema.org',
-          '@type': 'Product',
+          '@type': 'Service',
           'name': 'Software Development',
           'description': 'software development services offered by Pixelette Technologies.',
+          'provider': {
+            '@type': 'Organization',
+            '@id': 'https://pixelettetech.com/#organization',
+            'name': 'Pixelette Technologies',
+          },
           'review': testimonialData.map(el => ({
             '@type': 'Review',
             'author': {
