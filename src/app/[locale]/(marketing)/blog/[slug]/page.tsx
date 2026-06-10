@@ -9,14 +9,23 @@ export async function generateStaticParams() {
   }));
 }
 
-export async function generateMetadata({ params }: { params: { slug: string } }) {
-  const metadata = await fetchBlogMetadata(params.slug);
-  const canonical = `/blog/${params.slug}`;
-  return metadata
-    ? { ...metadata, alternates: { canonical } }
-    : { title: 'Blockchain Experts', description: 'Read more about blockchain topics.', alternates: { canonical } };
+type BlogPageProps = { params: Promise<{ slug: string }> };
+
+export async function generateMetadata(props: BlogPageProps) {
+  const { slug } = await props.params;
+  const metadata = await fetchBlogMetadata(slug);
+  const canonical = `/blog/${slug}`;
+  if (!metadata) {
+    return { title: 'Blockchain Experts', description: 'Read more about blockchain topics.', alternates: { canonical } };
+  }
+  const rawTitle = metadata.title;
+  const title = rawTitle.length <= 60
+    ? rawTitle
+    : `${rawTitle.slice(0, rawTitle.lastIndexOf(' ', 57))}…`;
+  return { ...metadata, title, alternates: { canonical } };
 }
 
-export default function BlogDetailPage({ params }: { params: { slug: string } }) {
+export default async function BlogDetailPage(props: BlogPageProps) {
+  const params = await props.params;
   return <BlogDetail params={params} />;
 }

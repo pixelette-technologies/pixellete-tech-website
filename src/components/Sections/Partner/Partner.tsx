@@ -18,9 +18,9 @@ export const Partner = () => {
     <div className="partners" data-aos="fade-up" data-aos-duration="600">
       <Container className="main margins">
         <center>
-          <h1 id="h_ani">
+          <h2 id="h_ani">
             Industry Partnerships and Accreditation
-          </h1>
+          </h2>
         </center>
         <div className="partners-scroll-container">
           <div className="partners-scroll">

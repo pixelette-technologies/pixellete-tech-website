@@ -46,11 +46,11 @@ export const WhatMakeUsSpecial = ({ heading, text, data: propsData }: WhatMakeUs
       </Container>
       <div className="specialSection">
         <center>
-          <h1
+          <h2
             id="h_ani"
           >
             {heading || 'What Makes Us Special?'}
-          </h1>
+          </h2>
           <p>
             {text
             || 'At Pixelette Technologies, our commitment to innovation and excellence sets us apart. Here’s why clients choose us:'}
