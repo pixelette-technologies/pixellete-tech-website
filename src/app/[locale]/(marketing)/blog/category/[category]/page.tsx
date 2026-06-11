@@ -34,7 +34,7 @@ export async function generateMetadata(props: Props) {
     return {};
   }
   return {
-    title: `${category.name} Articles | Pixelette Technologies`,
+    title: { absolute: `${category.name} Articles | Pixelette Technologies` },
     description: category.description,
     alternates: { canonical: `https://pixelettetech.com/blog/category/${categorySlug}` },
     robots: { index: true, follow: true },
