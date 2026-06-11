@@ -4,7 +4,7 @@ export function GET() {
   const baseUrl = 'https://pixelettetech.com';
 
   return new Response(
-    `User-agent: *\nAllow: /\nDisallow: /api/\n\nSitemap: ${baseUrl}/sitemap.xml`,
+    `User-agent: *\nAllow: /\nDisallow: /api/\n\nSitemap: ${baseUrl}/sitemap.xml\nIndexNow: ${baseUrl}/indexnow.txt`,
     {
       headers: {
         'Content-Type': 'text/plain',
