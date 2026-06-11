@@ -14,7 +14,7 @@ type IIndexProps = {
 const OurClients = dynamic(() => import('@/components/Home/OurClients/OurClients').then(mod => mod.OurClients), {
   loading: () => (
     <div className="flex min-h-[200px] items-center justify-center">
-      <img loading="lazy" src="/images/logo/shortLogo.svg" alt="Loading..." className="size-12 animate-pulse" />
+      <img src="/images/logo/shortLogo.svg" alt="Loading..." className="size-12 animate-pulse" />
     </div>
   ),
   ssr: true,
@@ -23,7 +23,7 @@ const OurClients = dynamic(() => import('@/components/Home/OurClients/OurClients
 const AboutUsSection = dynamic(() => import('@/components/Home/AboutusSection/AboutUsSection'), {
   loading: () => (
     <div className="flex min-h-[200px] items-center justify-center">
-      <img loading="lazy" src="/images/logo/shortLogo.svg" alt="Loading..." className="size-12 animate-pulse" />
+      <img src="/images/logo/shortLogo.svg" alt="Loading..." className="size-12 animate-pulse" />
     </div>
   ),
   ssr: true,
@@ -32,7 +32,7 @@ const AboutUsSection = dynamic(() => import('@/components/Home/AboutusSection/Ab
 const WhatMakeUsSpecialHome = dynamic(() => import('@/components/Home/WhatMakeUsSpecial/WhatMakeUsSpecial'), {
   loading: () => (
     <div className="flex min-h-[200px] items-center justify-center">
-      <img loading="lazy" src="/images/logo/shortLogo.svg" alt="Loading..." className="size-12 animate-pulse" />
+      <img src="/images/logo/shortLogo.svg" alt="Loading..." className="size-12 animate-pulse" />
     </div>
   ),
   ssr: true,
@@ -41,7 +41,7 @@ const WhatMakeUsSpecialHome = dynamic(() => import('@/components/Home/WhatMakeUs
 const OurServicesSection = dynamic(() => import('@/components/Home/OurServicesSection/OurServicesSection'), {
   loading: () => (
     <div className="flex min-h-[200px] items-center justify-center">
-      <img loading="lazy" src="/images/logo/shortLogo.svg" alt="Loading..." className="size-12 animate-pulse" />
+      <img src="/images/logo/shortLogo.svg" alt="Loading..." className="size-12 animate-pulse" />
     </div>
   ),
   ssr: true,
@@ -50,7 +50,7 @@ const OurServicesSection = dynamic(() => import('@/components/Home/OurServicesSe
 const YourPlan = dynamic(() => import('@/components/Home/YourPlan/YourPlan').then(mod => mod.YourPlan), {
   loading: () => (
     <div className="flex min-h-[200px] items-center justify-center">
-      <img loading="lazy" src="/images/logo/shortLogo.svg" alt="Loading..." className="size-12 animate-pulse" />
+      <img src="/images/logo/shortLogo.svg" alt="Loading..." className="size-12 animate-pulse" />
     </div>
   ),
   ssr: true,
@@ -59,7 +59,7 @@ const YourPlan = dynamic(() => import('@/components/Home/YourPlan/YourPlan').the
 const TechnologiesUsed = dynamic(() => import('@/components/Sections/TechnologyUsed/TechnologiesUsed'), {
   loading: () => (
     <div className="flex min-h-[200px] items-center justify-center">
-      <img loading="lazy" src="/images/logo/shortLogo.svg" alt="Loading..." className="size-12 animate-pulse" />
+      <img src="/images/logo/shortLogo.svg" alt="Loading..." className="size-12 animate-pulse" />
     </div>
   ),
   ssr: true,
@@ -68,7 +68,7 @@ const TechnologiesUsed = dynamic(() => import('@/components/Sections/TechnologyU
 const CaseStudies = dynamic(() => import('@/components/Home/CaseStudiesSection/CaseStudies'), {
   loading: () => (
     <div className="flex min-h-[200px] items-center justify-center">
-      <img loading="lazy" src="/images/logo/shortLogo.svg" alt="Loading..." className="size-12 animate-pulse" />
+      <img src="/images/logo/shortLogo.svg" alt="Loading..." className="size-12 animate-pulse" />
     </div>
   ),
   ssr: true,
@@ -77,7 +77,7 @@ const CaseStudies = dynamic(() => import('@/components/Home/CaseStudiesSection/C
 const Testimonial = dynamic(() => import('@/components/Home/Testimonial/Testimonial'), {
   loading: () => (
     <div className="flex min-h-[200px] items-center justify-center">
-      <img loading="lazy" src="/images/logo/shortLogo.svg" alt="Loading..." className="size-12 animate-pulse" />
+      <img src="/images/logo/shortLogo.svg" alt="Loading..." className="size-12 animate-pulse" />
     </div>
   ),
   ssr: true,
@@ -86,7 +86,7 @@ const Testimonial = dynamic(() => import('@/components/Home/Testimonial/Testimon
 const EvaluateBusiness = dynamic(() => import('@/components/Sections/EvaluateBusiness/EvaluateBusiness').then(mod => mod.EvaluateBusiness), {
   loading: () => (
     <div className="flex min-h-[200px] items-center justify-center">
-      <img loading="lazy" src="/images/logo/shortLogo.svg" alt="Loading..." className="size-12 animate-pulse" />
+      <img src="/images/logo/shortLogo.svg" alt="Loading..." className="size-12 animate-pulse" />
     </div>
   ),
   ssr: true,
