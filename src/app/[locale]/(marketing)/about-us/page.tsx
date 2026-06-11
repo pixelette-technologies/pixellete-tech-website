@@ -7,6 +7,7 @@ import { EvaluateBusiness } from '@/components/Sections/EvaluateBusiness/Evaluat
 import { OurTeam } from '@/components/Sections/OurTeam/OurTeam';
 import { HowWeWork } from '@/components/Sections/Services/HowWeWork/HowWeWork';
 import BreadcrumbJsonLd from '@/components/SEO/BreadcrumbJsonLd';
+import { pageOpenGraph } from '@/utils/og';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 
 type IAboutProps = {
@@ -26,9 +27,7 @@ export async function generateMetadata(props: IAboutProps) {
     alternates: {
       canonical: `https://pixelettetech.com/about-us`,
     },
-    openGraph: {
-      url: 'https://pixelettetech.com/about-us',
-    },
+    openGraph: pageOpenGraph('/about-us'),
   };
 }
 

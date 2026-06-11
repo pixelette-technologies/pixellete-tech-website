@@ -3,6 +3,7 @@ import DetailsNavigate from '@/components/Policies/DetailNavigate/DetailsNavigat
 import { EvaluateBusiness } from '@/components/Sections/EvaluateBusiness/EvaluateBusiness';
 import BreadcrumbJsonLd from '@/components/SEO/BreadcrumbJsonLd';
 import { refundPolicy } from '@/data/policies/refundPolicy';
+import { pageOpenGraph } from '@/utils/og';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import './index.css';
 
@@ -23,9 +24,7 @@ export async function generateMetadata(props: IAIservicesProps) {
     alternates: {
       canonical: '/cancellation-refund-policy',
     },
-    openGraph: {
-      url: 'https://pixelettetech.com/cancellation-refund-policy',
-    },
+    openGraph: pageOpenGraph('/cancellation-refund-policy'),
   };
 }
 

@@ -1,5 +1,6 @@
 import BreadcrumbJsonLd from '@/components/SEO/BreadcrumbJsonLd';
 import { HeroSection } from '@/components/StartUp/HeroSection/HeroSection';
+import { pageOpenGraph } from '@/utils/og';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 
 type IAboutProps = {
@@ -19,9 +20,7 @@ export async function generateMetadata(props: IAboutProps) {
     alternates: {
       canonical: '/startup-funding',
     },
-    openGraph: {
-      url: 'https://pixelettetech.com/startup-funding',
-    },
+    openGraph: pageOpenGraph('/startup-funding'),
   };
 }
 

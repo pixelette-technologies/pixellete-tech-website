@@ -10,6 +10,7 @@ import { Testimonial } from '@/components/Home/Testimonial/Testimonial';
 import FaqsSection from '@/components/Sections/Services/FAQs/FaqsSection';
 import BreadcrumbJsonLd from '@/components/SEO/BreadcrumbJsonLd';
 import { clFaqs } from '@/data/faqs/clFaqs';
+import { pageOpenGraph } from '@/utils/og';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import Link from 'next/link';
 import './index.css';
@@ -32,6 +33,7 @@ export async function generateMetadata(props: IAIservicesProps) {
     alternates: {
       canonical: '/clutch',
     },
+    openGraph: pageOpenGraph('/clutch'),
   };
 }
 

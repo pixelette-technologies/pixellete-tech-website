@@ -25,6 +25,7 @@ import {
   tgexpertiseAreas,
   tgheading,
 } from '@/data/services/customSoftwareDevelopment';
+import { pageOpenGraph } from '@/utils/og';
 import { buildBreadcrumbSchema } from '@/utils/schema-helpers';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 
@@ -49,9 +50,7 @@ export async function generateMetadata(props: ICustomSoftwareDevelopmentProps) {
     alternates: {
       canonical: `/custom-software-development-services`,
     },
-    openGraph: {
-      url: 'https://pixelettetech.com/custom-software-development-services',
-    },
+    openGraph: pageOpenGraph('/custom-software-development-services'),
   };
 }
 

@@ -1,5 +1,6 @@
 import { Blog } from '@/components/Blogging/Blog/Blog';
 import BreadcrumbJsonLd from '@/components/SEO/BreadcrumbJsonLd';
+import { pageOpenGraph } from '@/utils/og';
 import { createClient } from 'contentful';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 
@@ -20,9 +21,7 @@ export async function generateMetadata(props: IBlogProps) {
     alternates: {
       canonical: '/blog',
     },
-    openGraph: {
-      url: 'https://pixelettetech.com/blog',
-    },
+    openGraph: pageOpenGraph('/blog'),
   };
 }
 

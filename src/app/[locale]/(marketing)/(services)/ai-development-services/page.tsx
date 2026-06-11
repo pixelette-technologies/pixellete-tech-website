@@ -33,6 +33,7 @@ import {
   tgexpertiseAreas,
   tgheading,
 } from '@/data/services/aiServices';
+import { pageOpenGraph } from '@/utils/og';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 
 // Use the imported objects as needed in your component
@@ -82,9 +83,7 @@ export async function generateMetadata(props: IAIservicesProps) {
     alternates: {
       canonical: `https://pixelettetech.com/ai-development-services`,
     },
-    openGraph: {
-      url: 'https://pixelettetech.com/ai-development-services',
-    },
+    openGraph: pageOpenGraph('/ai-development-services'),
   };
 }
 const breadcrumbSchema = {

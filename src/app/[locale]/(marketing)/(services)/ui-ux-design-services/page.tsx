@@ -30,6 +30,7 @@ import {
   uiuxServices,
   uiuxTechnologies,
 } from '@/data/services/uiUX';
+import { pageOpenGraph } from '@/utils/og';
 import { buildBreadcrumbSchema } from '@/utils/schema-helpers';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 
@@ -53,9 +54,7 @@ export async function generateMetadata(props: IUIUXProps) {
     alternates: {
       canonical: `/ui-ux-design-services`,
     },
-    openGraph: {
-      url: 'https://pixelettetech.com/ui-ux-design-services',
-    },
+    openGraph: pageOpenGraph('/ui-ux-design-services'),
   };
 }
 

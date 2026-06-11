@@ -33,6 +33,7 @@ import {
   tgExpertiseData,
   tgheading,
 } from '@/data/services/blockchainDevelopment';
+import { pageOpenGraph } from '@/utils/og';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 
 // Use the imported objects as needed in your component
@@ -55,9 +56,7 @@ export async function generateMetadata(props: IBlockchainDevelopmentProps) {
     alternates: {
       canonical: `https://pixelettetech.com/blockchain-development-services`,
     },
-    openGraph: {
-      url: 'https://pixelettetech.com/blockchain-development-services',
-    },
+    openGraph: pageOpenGraph('/blockchain-development-services'),
   };
 }
 

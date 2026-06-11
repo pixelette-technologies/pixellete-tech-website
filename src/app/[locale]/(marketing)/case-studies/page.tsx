@@ -2,6 +2,7 @@ import HeroSection from '@/components/CaseStudies/HeroSection/HeroSection';
 import { ProjectSection } from '@/components/CaseStudies/ProjectSection/ProjectSection';
 import { EvaluateBusiness } from '@/components/Sections/EvaluateBusiness/EvaluateBusiness';
 import BreadcrumbJsonLd from '@/components/SEO/BreadcrumbJsonLd';
+import { pageOpenGraph } from '@/utils/og';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 
 type IAboutProps = {
@@ -21,9 +22,7 @@ export async function generateMetadata(props: IAboutProps) {
     alternates: {
       canonical: '/case-studies',
     },
-    openGraph: {
-      url: 'https://pixelettetech.com/case-studies',
-    },
+    openGraph: pageOpenGraph('/case-studies'),
   };
 }
 

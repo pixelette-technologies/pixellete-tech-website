@@ -33,6 +33,7 @@ import {
   tgExpertiseData,
   tgheading,
 } from '@/data/services/mobileDevelopment';
+import { pageOpenGraph } from '@/utils/og';
 import { buildBreadcrumbSchema } from '@/utils/schema-helpers';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 
@@ -56,9 +57,7 @@ export async function generateMetadata(props: IMobileDevelopmentProps) {
     alternates: {
       canonical: `/mobile-app-development-services`,
     },
-    openGraph: {
-      url: 'https://pixelettetech.com/mobile-app-development-services',
-    },
+    openGraph: pageOpenGraph('/mobile-app-development-services'),
   };
 }
 

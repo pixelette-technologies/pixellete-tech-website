@@ -6,6 +6,7 @@ import FaqsSection from '@/components/Sections/Services/FAQs/FaqsSection';
 import { HowWeWork } from '@/components/Sections/Services/HowWeWork/HowWeWork';
 import BreadcrumbJsonLd from '@/components/SEO/BreadcrumbJsonLd';
 import { deliverFaqs } from '@/data/faqs/deliverFaqs';
+import { pageOpenGraph } from '@/utils/og';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 
 type IDeliverProps = {
@@ -26,9 +27,7 @@ export async function generateMetadata(props: IDeliverProps) {
     alternates: {
       canonical: '/it-outsourcing-services',
     },
-    openGraph: {
-      url: 'https://pixelettetech.com/it-outsourcing-services',
-    },
+    openGraph: pageOpenGraph('/it-outsourcing-services'),
   };
 }
 
