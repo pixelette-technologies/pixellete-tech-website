@@ -3,6 +3,7 @@ import DetailsNavigate from '@/components/Policies/DetailNavigate/DetailsNavigat
 import { EvaluateBusiness } from '@/components/Sections/EvaluateBusiness/EvaluateBusiness';
 import BreadcrumbJsonLd from '@/components/SEO/BreadcrumbJsonLd';
 import { termAndConditions } from '@/data/policies/termAndConditions';
+import { pageOpenGraph } from '@/utils/og';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import './index.css';
 
@@ -23,9 +24,7 @@ export async function generateMetadata(props: IAIservicesProps) {
     alternates: {
       canonical: '/terms-conditions',
     },
-    openGraph: {
-      url: 'https://pixelettetech.com/terms-conditions',
-    },
+    openGraph: pageOpenGraph('/terms-conditions'),
   };
 }
 

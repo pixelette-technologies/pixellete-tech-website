@@ -1,5 +1,6 @@
 import HeroSection from '@/components/PixeletteResearch/HeroSection/HeroSection';
 import BreadcrumbJsonLd from '@/components/SEO/BreadcrumbJsonLd';
+import { pageOpenGraph } from '@/utils/og';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 
 type IAboutProps = {
@@ -20,9 +21,7 @@ export async function generateMetadata(props: IAboutProps) {
     alternates: {
       canonical: '/pixelette-research',
     },
-    openGraph: {
-      url: 'https://pixelettetech.com/pixelette-research',
-    },
+    openGraph: pageOpenGraph('/pixelette-research'),
   };
 }
 

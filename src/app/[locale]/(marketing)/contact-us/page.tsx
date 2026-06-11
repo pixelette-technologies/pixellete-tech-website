@@ -1,6 +1,7 @@
 import HeroSection from '@/components/CaseStudies/HeroSection/HeroSection';
 import { EvaluateBusiness } from '@/components/Sections/EvaluateBusiness/EvaluateBusiness';
 import BreadcrumbJsonLd from '@/components/SEO/BreadcrumbJsonLd';
+import { pageOpenGraph } from '@/utils/og';
 import { buildLocalBusinessSchema } from '@/utils/schema-helpers';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 
@@ -49,9 +50,7 @@ export async function generateMetadata(props: IAboutProps) {
     alternates: {
       canonical: '/contact-us',
     },
-    openGraph: {
-      url: 'https://pixelettetech.com/contact-us',
-    },
+    openGraph: pageOpenGraph('/contact-us'),
   };
 }
 

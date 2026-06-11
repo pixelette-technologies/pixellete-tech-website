@@ -22,6 +22,7 @@ import {
   quantumServicesDescription,
   quantumServicesHeading,
 } from '@/data/services/quantumServices';
+import { pageOpenGraph } from '@/utils/og';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 
 type IQuantumServicesProps = {
@@ -42,9 +43,7 @@ export async function generateMetadata(props: IQuantumServicesProps) {
     alternates: {
       canonical: `https://pixelettetech.com/quantum-development-services`,
     },
-    openGraph: {
-      url: 'https://pixelettetech.com/quantum-development-services',
-    },
+    openGraph: pageOpenGraph('/quantum-development-services'),
   };
 }
 

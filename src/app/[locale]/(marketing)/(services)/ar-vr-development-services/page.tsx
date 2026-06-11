@@ -33,6 +33,7 @@ import {
   vrTechnologies,
 } from '@/data/services/arVR';
 import { arVrVideoShowcaseData } from '@/data/services/videoShowcaseData';
+import { pageOpenGraph } from '@/utils/og';
 import { buildBreadcrumbSchema } from '@/utils/schema-helpers';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 
@@ -56,9 +57,7 @@ export async function generateMetadata(props: IARVRProps) {
     alternates: {
       canonical: `/ar-vr-development-services`,
     },
-    openGraph: {
-      url: 'https://pixelettetech.com/ar-vr-development-services',
-    },
+    openGraph: pageOpenGraph('/ar-vr-development-services'),
   };
 }
 

@@ -29,6 +29,7 @@ import {
   webDevelopmentServices,
   webDevelopmentTechnologies,
 } from '@/data/services/webDevelopment';
+import { pageOpenGraph } from '@/utils/og';
 import { buildBreadcrumbSchema } from '@/utils/schema-helpers';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 
@@ -52,9 +53,7 @@ export async function generateMetadata(props: IWebDevelopmentProps) {
     alternates: {
       canonical: `/web-development-services`,
     },
-    openGraph: {
-      url: 'https://pixelettetech.com/web-development-services',
-    },
+    openGraph: pageOpenGraph('/web-development-services'),
   };
 }
 

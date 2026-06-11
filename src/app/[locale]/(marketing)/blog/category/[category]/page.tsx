@@ -1,6 +1,7 @@
 import { Blog } from '@/components/Blogging/Blog/Blog';
 import { BLOG_CATEGORIES, getCategoryBySlug } from '@/data/seo/blog-categories';
 import { fetchBlogsBySlugList } from '@/libs/contentful';
+import { pageOpenGraph } from '@/utils/og';
 import { buildBreadcrumbSchema } from '@/utils/schema-helpers';
 import { buildCanonicalUrl, SEO_CONFIG } from '@/utils/seo-config';
 import { setRequestLocale } from 'next-intl/server';
@@ -37,6 +38,7 @@ export async function generateMetadata(props: Props) {
     description: category.description,
     alternates: { canonical: `https://pixelettetech.com/blog/category/${categorySlug}` },
     robots: { index: true, follow: true },
+    openGraph: pageOpenGraph(`/blog/category/${categorySlug}`),
   };
 }
 
