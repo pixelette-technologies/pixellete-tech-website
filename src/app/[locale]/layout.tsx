@@ -112,7 +112,7 @@ export default async function RootLayout({ children, params }: { children: React
       <body className={`${outfit.className}`} style={{ overflowX: 'hidden', overflowY: 'auto' }}>
         <Suspense fallback={(
           <div className="flex min-h-screen items-center justify-center">
-            <img loading="lazy"
+            <img
               src="/images/logo/shortLogo.svg"
               alt="Loading..."
               className="size-16 animate-pulse"

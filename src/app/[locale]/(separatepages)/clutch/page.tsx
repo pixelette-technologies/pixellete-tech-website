@@ -57,7 +57,7 @@ export default async function Clutch(props: IAIservicesProps) {
             <Container className="main margins">
               <Link href="/" className="logo-link">
                 <span>
-                  <img loading="lazy" src="/images/Clutch/logo.svg" alt="" />
+                  <img src="/images/Clutch/logo.svg" alt="Clutch" />
                 </span>
               </Link>
             </Container>
