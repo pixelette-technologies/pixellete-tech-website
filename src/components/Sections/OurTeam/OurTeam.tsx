@@ -1,10 +1,8 @@
 'use client';
 
-import { Button } from '@/components/Feature/Button/Button';
 import { Container } from '@/components/Feature/Container/Container';
-import { teamData } from '@/data/teamData';
+import { agentsData, teamData } from '@/data/teamData';
 import Image from 'next/image';
-import { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import './ourteam.css';
 
@@ -17,11 +15,24 @@ type TeamCardProps = {
   linkedin?: string;
 };
 
+const LinkedInIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+  </svg>
+);
+
 const TeamCard = ({ image, role, name, animation, duration, linkedin }: TeamCardProps) => {
   return (
     <div data-aos={animation} data-aos-duration={duration} className="team-card">
-      <div className="image-container">
-        <Image src={image} alt={`${name}'s profile`} width={100} height={100} quality={100} />
+      <div className="team-portrait">
+        <Image
+          src={image}
+          alt={`${name} — ${role}`}
+          width={276}
+          height={325}
+          quality={90}
+          loading="lazy"
+        />
       </div>
       <div className="team-info">
         <h3>{name}</h3>
@@ -34,9 +45,7 @@ const TeamCard = ({ image, role, name, animation, duration, linkedin }: TeamCard
             className="linkedin-link"
             aria-label={`${name}'s LinkedIn profile`}
           >
-            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-            </svg>
+            <LinkedInIcon />
           </a>
         )}
       </div>
@@ -45,11 +54,6 @@ const TeamCard = ({ image, role, name, animation, duration, linkedin }: TeamCard
 };
 
 export const OurTeam = () => {
-  const [visibleCards, setVisibleCards] = useState(12);
-
-  const handleLoadMore = () => {
-    setVisibleCards(prev => prev + 8);
-  };
   const generateSchema = () => {
     const peopleSchema = teamData.map(el => ({
       '@type': 'Person',
@@ -75,13 +79,12 @@ export const OurTeam = () => {
       })),
     };
   };
+
   return (
     <div className="ourTeamSection">
       <Container className="main margins">
         <center>
-          <h2
-            id="h_ani"
-          >
+          <h2 id="h_ani">
             Our Team
           </h2>
         </center>
@@ -95,26 +98,44 @@ export const OurTeam = () => {
         </p>
 
         <section>
-          {teamData.slice(0, visibleCards).map((el, index) => (
+          {teamData.map((el, index) => (
             <TeamCard
               image={el.image}
               role={el.role}
               name={el.name}
               key={uuidv4()}
               animation="fade-up"
-              duration={`${index + 3}00`}
+              duration={`${(index % 4) + 3}00`}
               linkedin={el.linkedin}
             />
           ))}
         </section>
-        {visibleCards < teamData.length && (
-          <div>
-            <center style={{ marginTop: '4.8rem' }}>
-              <Button className="primary" onClick={handleLoadMore}>
-                Load More
-              </Button>
+
+        {agentsData.length > 0 && (
+          <>
+            <center>
+              <h2 id="h_ani" className="team-agents-heading">
+                Meet Our AI Agents
+              </h2>
             </center>
-          </div>
+
+            <p>
+              Specialised AI agents that work alongside our team to accelerate delivery.
+            </p>
+
+            <section>
+              {agentsData.map((el, index) => (
+                <TeamCard
+                  image={el.image}
+                  role={el.role}
+                  name={el.name}
+                  key={uuidv4()}
+                  animation="fade-up"
+                  duration={`${(index % 4) + 3}00`}
+                />
+              ))}
+            </section>
+          </>
         )}
       </Container>
       {/* JSON-LD Script for People Schema */}
