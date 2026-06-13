@@ -49,15 +49,15 @@ export const teamData = [
     linkedin: COMPANY_LINKEDIN,
   },
   {
-    image: '/images/team/asid-hussain.jpg',
-    name: 'Asid Hussain',
-    role: 'Head of Growth & Strategic Partnerships',
-    linkedin: COMPANY_LINKEDIN,
-  },
-  {
     image: '/images/team/daniel-tschinkel.jpg',
     name: 'Daniel C. Tschinkel',
     role: 'Head of Operations (DACH)',
+    linkedin: COMPANY_LINKEDIN,
+  },
+  {
+    image: '/images/team/syed-bilal-rashid.jpg',
+    name: 'Syed Bilal Rashid',
+    role: 'Blockchain Solutions Architect',
     linkedin: COMPANY_LINKEDIN,
   },
 ];
