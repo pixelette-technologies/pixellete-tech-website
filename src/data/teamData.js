@@ -63,7 +63,69 @@ export const teamData = [
 ];
 
 // AI-agent persona cards. No LinkedIn — these are not people.
-// Hidden until the 12 agent portraits are exported from Figma; the component
-// skips the agents section when this array is empty. Repopulate with
-// { image: '/images/team/agent-<name>.jpg', name, role } to enable.
-export const agentsData = [];
+// Portraits exported from the Figma "Our Team + AI Agents" design (photo +
+// gradient glow, no text) and live in /public/images/team/agent-*.jpg.
+// Order matches the Figma grid (left-to-right, top-to-bottom). The component
+// renders the agents section only when this array is non-empty.
+export const agentsData = [
+  {
+    image: '/images/team/agent-nova.jpg',
+    name: 'Nova',
+    role: 'AI Strategist',
+  },
+  {
+    image: '/images/team/agent-atlas.jpg',
+    name: 'Atlas',
+    role: 'Solution Architect',
+  },
+  {
+    image: '/images/team/agent-forge.jpg',
+    name: 'Forge',
+    role: 'Development Agent',
+  },
+  {
+    image: '/images/team/agent-cipher.jpg',
+    name: 'Cipher',
+    role: 'Blockchain Agent',
+  },
+  {
+    image: '/images/team/agent-sentinel.jpg',
+    name: 'Sentinel',
+    role: 'Cybersecurity Agent',
+  },
+  {
+    image: '/images/team/agent-vision.jpg',
+    name: 'Vision',
+    role: 'UX & Product Agent',
+  },
+  {
+    image: '/images/team/agent-orion.jpg',
+    name: 'Orion',
+    role: 'Cloud & DevOps Agent',
+  },
+  {
+    image: '/images/team/agent-echo.jpg',
+    name: 'Echo',
+    role: 'Automation Agent',
+  },
+  {
+    image: '/images/team/agent-cortex.jpg',
+    name: 'Cortex',
+    role: 'Data Intelligence Agent',
+  },
+  {
+    image: '/images/team/agent-helix.jpg',
+    name: 'Helix',
+    role: 'Machine Learning Agent',
+  },
+  {
+    image: '/images/team/agent-pulse.jpg',
+    name: 'Pulse',
+    role: 'Growth & Marketing Agent',
+  },
+  {
+    image: '/images/team/agent-aria.jpg',
+    name: 'Aria',
+    role: 'Conversational AI Agent',
+  },
+];
