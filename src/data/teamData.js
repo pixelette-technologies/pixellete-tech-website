@@ -31,6 +31,18 @@ export const teamData = [
     linkedin: COMPANY_LINKEDIN,
   },
   {
+    image: '/images/team/eric-smithers.jpg',
+    name: 'Eric R. Smithers',
+    role: 'Managing Director (USA)',
+    linkedin: COMPANY_LINKEDIN,
+  },
+  {
+    image: '/images/team/barry-perkins.jpg',
+    name: 'Barry Perkins',
+    role: 'Managing Director (USA)',
+    linkedin: COMPANY_LINKEDIN,
+  },
+  {
     image: '/images/team/ayisha-khan.jpg',
     name: 'Ayisha Khan',
     role: 'Head of Client Success & Operations',
@@ -46,18 +58,6 @@ export const teamData = [
     image: '/images/team/daniel-tschinkel.jpg',
     name: 'Daniel C. Tschinkel',
     role: 'Head of Operations (DACH)',
-    linkedin: COMPANY_LINKEDIN,
-  },
-  {
-    image: '/images/team/eric-smithers.jpg',
-    name: 'Eric R. Smithers',
-    role: 'Managing Director (USA)',
-    linkedin: COMPANY_LINKEDIN,
-  },
-  {
-    image: '/images/team/barry-perkins.jpg',
-    name: 'Barry Perkins',
-    role: 'Managing Director (USA)',
     linkedin: COMPANY_LINKEDIN,
   },
 ];
