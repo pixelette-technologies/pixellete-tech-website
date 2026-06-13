@@ -1,117 +1,69 @@
+// Real people behind Pixelette Technologies.
+// Portraits are exported from the Figma "Our Team + AI Agents" design
+// (photo + gradient glow, no text) and live in /public/images/team/.
+// LinkedIn URLs currently point to the company page (placeholder) until
+// personal profile URLs are confirmed.
+const COMPANY_LINKEDIN = 'https://www.linkedin.com/company/pixelettetechnologies/';
+
 export const teamData = [
   {
-    image: '/images/people/asif.webp',
-    role: 'CEO & Founder',
+    image: '/images/team/asif-rana.jpg',
     name: 'Mr. Asif Ashiq Rana',
-    linkedin: 'https://www.linkedin.com/in/rana-khan-asif/',
+    role: 'CEO & Founder',
+    linkedin: COMPANY_LINKEDIN,
   },
   {
-    image: '/images/people/hamza.jpg',
-    role: 'Managing Director - Global',
-    name: 'Humza Chishty',
-    linkedin: 'https://www.linkedin.com/in/humza-chishty/',
-  },
-  {
-    image: '/images/people/Temur_Khan.jpg',
+    image: '/images/team/temur-khan.jpg',
     name: 'Temur Khan',
     role: 'Chief Technology Officer',
-    linkedin: 'https://www.linkedin.com/in/temurkhan/',
+    linkedin: COMPANY_LINKEDIN,
   },
   {
-    image: '/images/people/Chad Donahue.jpg',
-    name: 'Chad Donahue',
-    role: 'CBDO',
-    linkedin: 'https://www.linkedin.com/in/chad-donahue/',
+    image: '/images/team/aliya-maqsood.jpg',
+    name: 'Aliya Maqsood',
+    role: 'Chief Brand & Marketing Officer',
+    linkedin: COMPANY_LINKEDIN,
   },
   {
-    image: '/images/people/barry.jpg',
-    name: 'Barry Perkins',
-    role: 'Managing Director - USA',
-    linkedin: 'https://www.linkedin.com/in/barrynperkins/',
+    image: '/images/team/ammar-hanif.jpg',
+    name: 'Ammar Hanif',
+    role: 'Chief AI Solutions Architect',
+    linkedin: COMPANY_LINKEDIN,
   },
   {
-    image: '/images/people/Daniel_Tschinkel.png',
+    image: '/images/team/ayisha-khan.jpg',
+    name: 'Ayisha Khan',
+    role: 'Head of Client Success & Operations',
+    linkedin: COMPANY_LINKEDIN,
+  },
+  {
+    image: '/images/team/asid-hussain.jpg',
+    name: 'Asid Hussain',
+    role: 'Head of Growth & Strategic Partnerships',
+    linkedin: COMPANY_LINKEDIN,
+  },
+  {
+    image: '/images/team/daniel-tschinkel.jpg',
     name: 'Daniel C. Tschinkel',
     role: 'Head of Operations (DACH)',
-    linkedin: 'https://www.linkedin.com/in/daniel-tschinkel/',
+    linkedin: COMPANY_LINKEDIN,
   },
   {
-    image: '/images/people/Eric_R_Smithers.jpg',
+    image: '/images/team/eric-smithers.jpg',
     name: 'Eric R. Smithers',
-    role: 'MD (USA)',
-    linkedin: 'https://www.linkedin.com/in/eric-r-smithers-2677565/',
-  },
-  // {
-  //   image: '/images/people/Emmanuel_Ruiz_Jobim.jpg',
-  //   name: 'Emmanuel Ruiz',
-  //   role: 'Head of Partnerships',
-  //   linkedin: 'https://www.linkedin.com/in/emmanuel-ruiz-gimenez-jobim/',
-  // },
-  // {
-  //   image: '/images/people/kelvin-kong.jpg',
-  //   name: 'Kelvin Kong',
-  //   role: 'MD (Asia Pacific)',
-  // },
-  {
-    image: '/images/people/maiwand-sultan.png',
-    name: 'Maiwand Sultan',
-    role: 'Technical Project Manager',
+    role: 'Managing Director (USA)',
+    linkedin: COMPANY_LINKEDIN,
   },
   {
-    image: '/images/people/irum-khalil.png',
-    name: 'Irum Khalil',
-    role: 'HR Manager',
-    linkedin: 'http://linkedin.com/in/irum-khalil-b4270b1b6',
+    image: '/images/team/barry-perkins.jpg',
+    name: 'Barry Perkins',
+    role: 'Managing Director (USA)',
+    linkedin: COMPANY_LINKEDIN,
   },
-  {
-    image: '/images/people/Sehr.jpg',
-    name: 'Sehr Navid',
-    role: 'Head of Operations',
-    linkedin: 'https://www.linkedin.com/in/sehr-navid-285931236/',
-  },
-  // {
-  //   image: '/images/people/Gulafsha.jpg',
-  //   name: 'Gul Afshan',
-  //   role: 'Head of Engineering (AI)',
-  // },
-  {
-    image: '/images/people/Ammar_Hanif.jpg',
-    name: 'Ammar Hanif',
-    role: 'Solution Architect - AI',
-  },
-  {
-    image: '/images/people/M_Ali.jpg',
-    name: 'Syed Muhammad Ali',
-    role: 'Innovation Strategist',
-  },
-  // {
-  //   image: '/images/people/Ayesha_Yaqoob.jpg',
-  //   name: 'Ayesha Yaqoob',
-  //   role: 'Solutions Architect (Blockchain)',
-  // },
-  // {
-  //   image: '/images/people/Kainat_Mansoor.jpg',
-  //   name: 'Kainat Mansoor',
-  //   role: 'Solutions Architect (AI)',
-  // },
-  // {
-  //   image: '/images/people/Jawad.jpg',
-  //   name: 'Muhammad Jawad',
-  //   role: 'Head of Project Management',
-  // },
-  {
-    image: '/images/people/Ghulam.jpg',
-    name: 'Ghulam Mustafa',
-    role: 'Head of Product Design',
-  },
-  // {
-  //   image: '/images/people/nurben_karatuna.jpg',
-  //   name: 'Nurben Karatunee',
-  //   role: 'Head of Bussiness Development Turkiye',
-  // },
-  // {
-  //   image: '/images/people/yan_b.png',
-  //   name: 'Yann B',
-  //   role: 'Web3 Marketing Strategist',
-  // },
 ];
+
+// AI-agent persona cards. No LinkedIn — these are not people.
+// Hidden until the 12 agent portraits are exported from Figma; the component
+// skips the agents section when this array is empty. Repopulate with
+// { image: '/images/team/agent-<name>.jpg', name, role } to enable.
+export const agentsData = [];
